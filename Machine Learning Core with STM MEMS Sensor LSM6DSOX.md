@@ -1,25 +1,25 @@
 
-# Machine Learning Core with STM MEMS Sensor LSM6DSOX
+# <p align="center">Machine Learning Core with STM MEMS Sensor LSM6DSOX</p>
 
 ­­
 
-**Machine Learning Core with STM MEMS**
+**<p align="center">Machine Learning Core with STM MEMS</p>**
 
-**Sensor LSM6DSOX**
+**<p align="center">Sensor LSM6DSOX</p>**
 
-Author: Harry Koutsourelakis
+<p align="center">Author: Harry Koutsourelakis
+<p align="center">Intelligent Systems & Computer Architecture Laboratory 
+<p align="center">(ISCA Lab)
 
-V9.0
+<p align="center">V9.0
 
-14 Sep 2022
+<p align="center">14 Sep 2022
 
-**Abstract**
+### Abstract
 
 This work presents the methodology to develop AI-based applications for Internet-of-Things environments, such as detection of a falling object by using the machine learning core inside the STM Mems Sensor LSM6DSOX and the toolchain Unico, Unicleo and WEKA.
 
-# Table of Contents
-
-[**Abstract**](#_Toc119493230)
+### Table of Contents
 
 [1 **Equipment** 4](#_Toc119493231)
 
@@ -89,7 +89,7 @@ This work presents the methodology to develop AI-based applications for Internet
 
 # 1 **Equipment**
 
-The equipment used in this project consists of the board [B-L072Z-LRWAN1](https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html), the [X-NUCLEO-IKS01A3 extender and the STEVAL-MKI197V1. The IKS01A3 is the extension board that provides the DIL24 socket that the MKI197V1 (Machine Learning Core LSM6DOX) connects to in order to communicate with the board.](https://www.st.com/en/ecosystems/x-nucleo-iks01a3.html)
+The equipment used in this project consists of the board [B-L072Z-LRWAN1](https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html), the [X-NUCLEO-IKS01A3](https://www.st.com/en/ecosystems/x-nucleo-iks01a3.html) extender and the [STEVAL-MKI197V1](https://www.st.com/en/evaluation-tools/steval-mki197v1.html). The IKS01A3 is the extension board that provides the DIL24 socket that the MKI197V1 (Machine Learning Core LSM6DOX) connects to in order to communicate with the board.
 
 ## 1.1 **B-L072Z-LRWAN1**
 
@@ -205,7 +205,7 @@ Next, the **STEVAL-MKI197V1** must be connected on the **DIL24 Socket** of the *
 
 ## 2.3 ![Shape8](RackMultipart20230414-1-bpee3o_html_c6a4cdcc9ba1e860.gif) **LSM6DSOX Sensor Initialization**
 
-The **LSM6DSOX** (Machine Learning Core) sensor on the **MKI197V1** does not communicate out of the box with the **IKS01A3**. The **LSM6DSOX** sensor starts in **I3C** [[4]](#_References) mode (also known as SenseWire) because of a level shifter on the **IKS01A3** that keeps the INT1 of the **LSM6DSOX** high, this results to **I3C** initialization by default (as described in theDatasheet).
+The **LSM6DSOX** (Machine Learning Core) sensor on the **MKI197V1** does not communicate out of the box with the **IKS01A3**. The **LSM6DSOX** sensor starts in **I3C** [[4]](#_References) mode (also known as SenseWire) because of a level shifter on the **IKS01A3** that keeps the INT1 of the **LSM6DSOX** high, which results to **I3C** initialization by default (as described in theDatasheet).
 
 The only solution that was found was to bypass the INT1 and route the INT2 in its place. That can be done by connecting the A5 pin of the IKS01A3 to GND with a wire and also change the JP6 Jumper from the default 5-6 to 13-14. The change of the Jumper supposedly setsthe M\_INT2\_0 on pin D2, in case a change needs to be made in the schematic.
 
