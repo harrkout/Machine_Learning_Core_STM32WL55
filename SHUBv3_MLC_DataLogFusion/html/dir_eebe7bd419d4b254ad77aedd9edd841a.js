@@ -1,0 +1,25 @@
+var dir_eebe7bd419d4b254ad77aedd9edd841a =
+[
+    [ "bsp_ip_conf.h", "bsp__ip__conf_8h.html", "bsp__ip__conf_8h" ],
+    [ "com.c", "com_8c.html", "com_8c" ],
+    [ "com.h", "com_8h.html", "com_8h" ],
+    [ "custom_mems_conf.h", "custom__mems__conf_8h.html", "custom__mems__conf_8h" ],
+    [ "custom_mems_conf_app.h", "custom__mems__conf__app_8h.html", null ],
+    [ "custom_mems_control.c", "custom__mems__control_8c.html", "custom__mems__control_8c" ],
+    [ "custom_mems_control.h", "custom__mems__control_8h.html", "custom__mems__control_8h" ],
+    [ "custom_mems_control_ex.c", "custom__mems__control__ex_8c.html", "custom__mems__control__ex_8c" ],
+    [ "custom_mems_control_ex.h", "custom__mems__control__ex_8h.html", "custom__mems__control__ex_8h" ],
+    [ "custom_motion_sensors.c", "custom__motion__sensors_8c.html", "custom__motion__sensors_8c" ],
+    [ "custom_motion_sensors.h", "custom__motion__sensors_8h.html", "custom__motion__sensors_8h" ],
+    [ "custom_motion_sensors_ex.c", "custom__motion__sensors__ex_8c.html", "custom__motion__sensors__ex_8c" ],
+    [ "custom_motion_sensors_ex.h", "custom__motion__sensors__ex_8h.html", "custom__motion__sensors__ex_8h" ],
+    [ "demo_serial.c", "demo__serial_8c.html", "demo__serial_8c" ],
+    [ "demo_serial.h", "demo__serial_8h.html", "demo__serial_8h" ],
+    [ "fw_version.h", "fw__version_8h.html", "fw__version_8h" ],
+    [ "motion_fx_manager.c", "motion__fx__manager_8c.html", "motion__fx__manager_8c" ],
+    [ "motion_fx_manager.h", "motion__fx__manager_8h.html", "motion__fx__manager_8h" ],
+    [ "sensor_unicleo_id.h", "sensor__unicleo__id_8h.html", "sensor__unicleo__id_8h" ],
+    [ "serial_cmd.h", "serial__cmd_8h.html", "serial__cmd_8h" ],
+    [ "serial_protocol.c", "serial__protocol_8c.html", "serial__protocol_8c" ],
+    [ "serial_protocol.h", "serial__protocol_8h.html", "serial__protocol_8h" ]
+];

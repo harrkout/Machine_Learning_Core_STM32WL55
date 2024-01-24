@@ -1,0 +1,1250 @@
+\doxysection{LSM6\+DSOX\+\_\+fifo}
+\hypertarget{group__LSM6DSOX__fifo}{}\label{group__LSM6DSOX__fifo}\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+
+
+This section group all the functions concerning the fifo usage.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga531f78f5822451a8241ba53c368b0fac}{lsm6dsox\+\_\+fifo\+\_\+watermark\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FIFO watermark level selection.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gac8286bd19b59695f7903d66aa85223c8}{lsm6dsox\+\_\+fifo\+\_\+watermark\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO watermark level selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga40ffc2448ff8de0b861e7b7db5af108d}{lsm6dsox\+\_\+compression\+\_\+algo\+\_\+init\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FIFO compression feature initialization request \mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga212ea0e4d330d0fde6dcbb390ec420f7}{lsm6dsox\+\_\+compression\+\_\+algo\+\_\+init\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO compression feature initialization request \mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gacb6fb8a4fc440410ef0b9f0d7f35d827}{lsm6dsox\+\_\+compression\+\_\+algo\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga22f1ee3ee6c4044cfccbe1ca7ed04228}{lsm6dsox\+\_\+uncoptr\+\_\+rate\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Enable and configure compression algo.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gaa8eb90f1965a8cd9b3e35b1271968e71}{lsm6dsox\+\_\+compression\+\_\+algo\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga22f1ee3ee6c4044cfccbe1ca7ed04228}{lsm6dsox\+\_\+uncoptr\+\_\+rate\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable and configure compression algo.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gaf2cb38ba986525a3413e5ee84da8af03}{lsm6dsox\+\_\+fifo\+\_\+virtual\+\_\+sens\+\_\+odr\+\_\+chg\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables ODR CHANGE virtual sensor to be batched in FIFO.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga18f147fe702179dcde25b013461f5303}{lsm6dsox\+\_\+fifo\+\_\+virtual\+\_\+sens\+\_\+odr\+\_\+chg\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables ODR CHANGE virtual sensor to be batched in FIFO.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gadccc80b9e8e74300feae47425d512404}{lsm6dsox\+\_\+compression\+\_\+algo\+\_\+real\+\_\+time\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables/\+Disables compression algorithm runtime.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gad7ce82c64e6b699aa9db3c17089d1acc}{lsm6dsox\+\_\+compression\+\_\+algo\+\_\+real\+\_\+time\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables/\+Disables compression algorithm runtime. \mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga57904c81a453a419b116feb4ae8affa1}{lsm6dsox\+\_\+fifo\+\_\+stop\+\_\+on\+\_\+wtm\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sensing chain FIFO stop values memorization at threshold level.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gac4c73c9d2450743f5cf60162840175ba}{lsm6dsox\+\_\+fifo\+\_\+stop\+\_\+on\+\_\+wtm\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensing chain FIFO stop values memorization at threshold level.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gad33f377f5c4182617170dd02526a621c}{lsm6dsox\+\_\+fifo\+\_\+xl\+\_\+batch\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gacbb0309e7580a0a3706734999076eb97}{lsm6dsox\+\_\+bdr\+\_\+xl\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for accelerometer data.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga75b9d55c4e2cdbb12a09316eb6477f73}{lsm6dsox\+\_\+fifo\+\_\+xl\+\_\+batch\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gacbb0309e7580a0a3706734999076eb97}{lsm6dsox\+\_\+bdr\+\_\+xl\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for accelerometer data.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gaf8b24cea7389d47408c45c8ef686a06d}{lsm6dsox\+\_\+fifo\+\_\+gy\+\_\+batch\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga34409f3b0fc4298313e002b063cd590f}{lsm6dsox\+\_\+bdr\+\_\+gy\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for gyroscope data.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gac5b7dc090b9f7ba9a9caeb3ca1e5ef0f}{lsm6dsox\+\_\+fifo\+\_\+gy\+\_\+batch\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga34409f3b0fc4298313e002b063cd590f}{lsm6dsox\+\_\+bdr\+\_\+gy\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for gyroscope data.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gab3616dc14ab529e5269a3c4826bf15ff}{lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga8d04f6f6893760988fb6a74c75bccb20}{lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em FIFO mode selection.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga6cc8e079c977405d11cfe542faa6592c}{lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga8d04f6f6893760988fb6a74c75bccb20}{lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO mode selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga3687250087dccfaf7d5619091b254360}{lsm6dsox\+\_\+fifo\+\_\+temp\+\_\+batch\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0a39d72304c2decd37c2da09e9b67b23}{lsm6dsox\+\_\+odr\+\_\+t\+\_\+batch\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for temperature data.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga72d6d3655a9c2ad41b510816dc58c779}{lsm6dsox\+\_\+fifo\+\_\+temp\+\_\+batch\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0a39d72304c2decd37c2da09e9b67b23}{lsm6dsox\+\_\+odr\+\_\+t\+\_\+batch\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for temperature data.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga1ddbeed5849740dd3c71903b2f20c0ad}{lsm6dsox\+\_\+fifo\+\_\+timestamp\+\_\+decimation\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga28a10082f639384783afe167808fc9fa}{lsm6dsox\+\_\+odr\+\_\+ts\+\_\+batch\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects decimation for timestamp batching in FIFO. Writing rate will be the maximum rate between XL and GYRO BDR divided by decimation decoder.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga04f1d59119dfad6a9a0bf2eaa6fda075}{lsm6dsox\+\_\+fifo\+\_\+timestamp\+\_\+decimation\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga28a10082f639384783afe167808fc9fa}{lsm6dsox\+\_\+odr\+\_\+ts\+\_\+batch\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects decimation for timestamp batching in FIFO. Writing rate will be the maximum rate between XL and GYRO BDR divided by decimation decoder.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gacaa846b0fa68cea4514a7b8bfec098fc}{lsm6dsox\+\_\+fifo\+\_\+cnt\+\_\+event\+\_\+batch\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga18ae9ad8902478eb1d77996d1e72e891}{lsm6dsox\+\_\+trig\+\_\+counter\+\_\+bdr\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects the trigger for the internal counter of batching events between XL and gyro.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gae5ee0068ff8bc2eb1a8a13420594eeb6}{lsm6dsox\+\_\+fifo\+\_\+cnt\+\_\+event\+\_\+batch\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga18ae9ad8902478eb1d77996d1e72e891}{lsm6dsox\+\_\+trig\+\_\+counter\+\_\+bdr\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects the trigger for the internal counter of batching events between XL and gyro.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga0172634051cabe2ecd05cb36bfb135b1}{lsm6dsox\+\_\+rst\+\_\+batch\+\_\+counter\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Resets the internal counter of batching vents for a single sensor. This bit is automatically reset to zero if it was set to \textquotesingle{}1\textquotesingle{}.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga9ff28e299fe39841d9d9df36cf166b2d}{lsm6dsox\+\_\+rst\+\_\+batch\+\_\+counter\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Resets the internal counter of batching events for a single sensor. This bit is automatically reset to zero if it was set to \textquotesingle{}1\textquotesingle{}.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga27ed2664886b56cedcfff818d23a30e6}{lsm6dsox\+\_\+batch\+\_\+counter\+\_\+threshold\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Batch data rate counter.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga38a1215d3ecfec29964051d3104b40f9}{lsm6dsox\+\_\+batch\+\_\+counter\+\_\+threshold\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Batch data rate counter.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga188571527176f0a1755a0dd9738e7e11}{lsm6dsox\+\_\+fifo\+\_\+data\+\_\+level\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Number of unread sensor data(TAG + 6 bytes) stored in FIFO.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga9cb700685f5c73f019903a2177de05e0}{lsm6dsox\+\_\+fifo\+\_\+status\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__fifo__status2__t}{lsm6dsox\+\_\+fifo\+\_\+status2\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO status.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gade6d962510e903de4fc2c0a52d12c5d6}{lsm6dsox\+\_\+fifo\+\_\+full\+\_\+flag\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Smart FIFO full status.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga1e38a6b21132156b3c5ae8b8b32a14de}{lsm6dsox\+\_\+fifo\+\_\+ovr\+\_\+flag\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO overrun status.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga6ca8793b1b896ba62fd48ba049761791}{lsm6dsox\+\_\+fifo\+\_\+wtm\+\_\+flag\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO watermark status.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga44cc057aa5947ae0216b103417d0b6dd}{lsm6dsox\+\_\+fifo\+\_\+sensor\+\_\+tag\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga16448832c3bff928781862f228a8f557}{lsm6dsox\+\_\+fifo\+\_\+tag\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Identifies the sensor in FIFO\+\_\+\+DATA\+\_\+\+OUT.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga6610eec9bbd118b7e35516042ffa32c7}{lsm6dsox\+\_\+fifo\+\_\+pedo\+\_\+batch\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em \+: Enable FIFO batching of pedometer embedded function values.\mbox{[}set\mbox{]} \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga3215a1d0914a1f2233b95507d57aad7f}{lsm6dsox\+\_\+fifo\+\_\+pedo\+\_\+batch\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching of pedometer embedded function values.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga4cfb37cc463a0346c543d1d79c50530f}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+0\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of first slave.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga984973049c06017ecd1b557a99ae2629}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+0\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of first slave.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga7f06f1a78598801b5ff15c5f8ca1840a}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+1\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of second slave.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga10513c429c6a4722c0dba5848d94d685}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+1\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of second slave.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga601a8313248f3792b7c013cf977682b2}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+2\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of third slave.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga8e99c3319da3fb70c2e8a45a8fad95df}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+2\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of third slave.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_gaf7e9a946802ccc971b0b89e2ae4d1a3c}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+3\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of fourth slave.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__fifo_ga07bf57c8b6f929687843823f9cc08605}{lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+3\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of fourth slave.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section group all the functions concerning the fifo usage. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__fifo_ga38a1215d3ecfec29964051d3104b40f9}\label{group__LSM6DSOX__fifo_ga38a1215d3ecfec29964051d3104b40f9} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_batch\_counter\_threshold\_get@{lsm6dsox\_batch\_counter\_threshold\_get}}
+\index{lsm6dsox\_batch\_counter\_threshold\_get@{lsm6dsox\_batch\_counter\_threshold\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_batch\_counter\_threshold\_get()}{lsm6dsox\_batch\_counter\_threshold\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+batch\+\_\+counter\+\_\+threshold\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Batch data rate counter.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of cnt\+\_\+bdr\+\_\+th in reg COUNTER\+\_\+\+BDR\+\_\+\+REG2 and COUNTER\+\_\+\+BDR\+\_\+\+REG1. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07350}{7350}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga27ed2664886b56cedcfff818d23a30e6}\label{group__LSM6DSOX__fifo_ga27ed2664886b56cedcfff818d23a30e6} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_batch\_counter\_threshold\_set@{lsm6dsox\_batch\_counter\_threshold\_set}}
+\index{lsm6dsox\_batch\_counter\_threshold\_set@{lsm6dsox\_batch\_counter\_threshold\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_batch\_counter\_threshold\_set()}{lsm6dsox\_batch\_counter\_threshold\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+batch\+\_\+counter\+\_\+threshold\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Batch data rate counter.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of cnt\+\_\+bdr\+\_\+th in reg COUNTER\+\_\+\+BDR\+\_\+\+REG2 and COUNTER\+\_\+\+BDR\+\_\+\+REG1. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07314}{7314}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gaa8eb90f1965a8cd9b3e35b1271968e71}\label{group__LSM6DSOX__fifo_gaa8eb90f1965a8cd9b3e35b1271968e71} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_compression\_algo\_get@{lsm6dsox\_compression\_algo\_get}}
+\index{lsm6dsox\_compression\_algo\_get@{lsm6dsox\_compression\_algo\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_compression\_algo\_get()}{lsm6dsox\_compression\_algo\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+compression\+\_\+algo\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga22f1ee3ee6c4044cfccbe1ca7ed04228}{lsm6dsox\+\_\+uncoptr\+\_\+rate\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable and configure compression algo.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of uncoptr\+\_\+rate in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06597}{6597}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga212ea0e4d330d0fde6dcbb390ec420f7}\label{group__LSM6DSOX__fifo_ga212ea0e4d330d0fde6dcbb390ec420f7} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_compression\_algo\_init\_get@{lsm6dsox\_compression\_algo\_init\_get}}
+\index{lsm6dsox\_compression\_algo\_init\_get@{lsm6dsox\_compression\_algo\_init\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_compression\_algo\_init\_get()}{lsm6dsox\_compression\_algo\_init\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+compression\+\_\+algo\+\_\+init\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO compression feature initialization request \mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of FIFO\+\_\+\+COMPR\+\_\+\+INIT in reg EMB\+\_\+\+FUNC\+\_\+\+INIT\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06536}{6536}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga40ffc2448ff8de0b861e7b7db5af108d}\label{group__LSM6DSOX__fifo_ga40ffc2448ff8de0b861e7b7db5af108d} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_compression\_algo\_init\_set@{lsm6dsox\_compression\_algo\_init\_set}}
+\index{lsm6dsox\_compression\_algo\_init\_set@{lsm6dsox\_compression\_algo\_init\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_compression\_algo\_init\_set()}{lsm6dsox\_compression\_algo\_init\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+compression\+\_\+algo\+\_\+init\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO compression feature initialization request \mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of FIFO\+\_\+\+COMPR\+\_\+\+INIT in reg EMB\+\_\+\+FUNC\+\_\+\+INIT\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06498}{6498}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gad7ce82c64e6b699aa9db3c17089d1acc}\label{group__LSM6DSOX__fifo_gad7ce82c64e6b699aa9db3c17089d1acc} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_compression\_algo\_real\_time\_get@{lsm6dsox\_compression\_algo\_real\_time\_get}}
+\index{lsm6dsox\_compression\_algo\_real\_time\_get@{lsm6dsox\_compression\_algo\_real\_time\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_compression\_algo\_real\_time\_get()}{lsm6dsox\_compression\_algo\_real\_time\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+compression\+\_\+algo\+\_\+real\+\_\+time\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables/\+Disables compression algorithm runtime. \mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fifo\+\_\+compr\+\_\+rt\+\_\+en in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06714}{6714}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gadccc80b9e8e74300feae47425d512404}\label{group__LSM6DSOX__fifo_gadccc80b9e8e74300feae47425d512404} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_compression\_algo\_real\_time\_set@{lsm6dsox\_compression\_algo\_real\_time\_set}}
+\index{lsm6dsox\_compression\_algo\_real\_time\_set@{lsm6dsox\_compression\_algo\_real\_time\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_compression\_algo\_real\_time\_set()}{lsm6dsox\_compression\_algo\_real\_time\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+compression\+\_\+algo\+\_\+real\+\_\+time\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables/\+Disables compression algorithm runtime.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fifo\+\_\+compr\+\_\+rt\+\_\+en in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06689}{6689}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gacb6fb8a4fc440410ef0b9f0d7f35d827}\label{group__LSM6DSOX__fifo_gacb6fb8a4fc440410ef0b9f0d7f35d827} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_compression\_algo\_set@{lsm6dsox\_compression\_algo\_set}}
+\index{lsm6dsox\_compression\_algo\_set@{lsm6dsox\_compression\_algo\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_compression\_algo\_set()}{lsm6dsox\_compression\_algo\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+compression\+\_\+algo\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga22f1ee3ee6c4044cfccbe1ca7ed04228}{lsm6dsox\+\_\+uncoptr\+\_\+rate\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable and configure compression algo.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of uncoptr\+\_\+rate in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06568}{6568}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gae5ee0068ff8bc2eb1a8a13420594eeb6}\label{group__LSM6DSOX__fifo_gae5ee0068ff8bc2eb1a8a13420594eeb6} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_cnt\_event\_batch\_get@{lsm6dsox\_fifo\_cnt\_event\_batch\_get}}
+\index{lsm6dsox\_fifo\_cnt\_event\_batch\_get@{lsm6dsox\_fifo\_cnt\_event\_batch\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_cnt\_event\_batch\_get()}{lsm6dsox\_fifo\_cnt\_event\_batch\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+cnt\+\_\+event\+\_\+batch\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga18ae9ad8902478eb1d77996d1e72e891}{lsm6dsox\+\_\+trig\+\_\+counter\+\_\+bdr\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects the trigger for the internal counter of batching events between XL and gyro.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of trig\+\_\+counter\+\_\+bdr in reg COUNTER\+\_\+\+BDR\+\_\+\+REG1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07227}{7227}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gacaa846b0fa68cea4514a7b8bfec098fc}\label{group__LSM6DSOX__fifo_gacaa846b0fa68cea4514a7b8bfec098fc} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_cnt\_event\_batch\_set@{lsm6dsox\_fifo\_cnt\_event\_batch\_set}}
+\index{lsm6dsox\_fifo\_cnt\_event\_batch\_set@{lsm6dsox\_fifo\_cnt\_event\_batch\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_cnt\_event\_batch\_set()}{lsm6dsox\_fifo\_cnt\_event\_batch\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+cnt\+\_\+event\+\_\+batch\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga18ae9ad8902478eb1d77996d1e72e891}{lsm6dsox\+\_\+trig\+\_\+counter\+\_\+bdr\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects the trigger for the internal counter of batching events between XL and gyro.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of trig\+\_\+counter\+\_\+bdr in reg COUNTER\+\_\+\+BDR\+\_\+\+REG1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07198}{7198}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga188571527176f0a1755a0dd9738e7e11}\label{group__LSM6DSOX__fifo_ga188571527176f0a1755a0dd9738e7e11} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_data\_level\_get@{lsm6dsox\_fifo\_data\_level\_get}}
+\index{lsm6dsox\_fifo\_data\_level\_get@{lsm6dsox\_fifo\_data\_level\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_data\_level\_get()}{lsm6dsox\_fifo\_data\_level\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+data\+\_\+level\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Number of unread sensor data(TAG + 6 bytes) stored in FIFO.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of diff\+\_\+fifo in reg FIFO\+\_\+\+STATUS1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07379}{7379}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gade6d962510e903de4fc2c0a52d12c5d6}\label{group__LSM6DSOX__fifo_gade6d962510e903de4fc2c0a52d12c5d6} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_full\_flag\_get@{lsm6dsox\_fifo\_full\_flag\_get}}
+\index{lsm6dsox\_fifo\_full\_flag\_get@{lsm6dsox\_fifo\_full\_flag\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_full\_flag\_get()}{lsm6dsox\_fifo\_full\_flag\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+full\+\_\+flag\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Smart FIFO full status.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fifo\+\_\+full\+\_\+ia in reg FIFO\+\_\+\+STATUS2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07425}{7425}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gac5b7dc090b9f7ba9a9caeb3ca1e5ef0f}\label{group__LSM6DSOX__fifo_gac5b7dc090b9f7ba9a9caeb3ca1e5ef0f} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_gy\_batch\_get@{lsm6dsox\_fifo\_gy\_batch\_get}}
+\index{lsm6dsox\_fifo\_gy\_batch\_get@{lsm6dsox\_fifo\_gy\_batch\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_gy\_batch\_get()}{lsm6dsox\_fifo\_gy\_batch\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+gy\+\_\+batch\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga34409f3b0fc4298313e002b063cd590f}{lsm6dsox\+\_\+bdr\+\_\+gy\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects Batching Data Rate (writing frequency in FIFO) for gyroscope data.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of bdr\+\_\+gy in reg FIFO\+\_\+\+CTRL3 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06907}{6907}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gaf8b24cea7389d47408c45c8ef686a06d}\label{group__LSM6DSOX__fifo_gaf8b24cea7389d47408c45c8ef686a06d} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_gy\_batch\_set@{lsm6dsox\_fifo\_gy\_batch\_set}}
+\index{lsm6dsox\_fifo\_gy\_batch\_set@{lsm6dsox\_fifo\_gy\_batch\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_gy\_batch\_set()}{lsm6dsox\_fifo\_gy\_batch\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+gy\+\_\+batch\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga34409f3b0fc4298313e002b063cd590f}{lsm6dsox\+\_\+bdr\+\_\+gy\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects Batching Data Rate (writing frequency in FIFO) for gyroscope data.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of bdr\+\_\+gy in reg FIFO\+\_\+\+CTRL3 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06881}{6881}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga6cc8e079c977405d11cfe542faa6592c}\label{group__LSM6DSOX__fifo_ga6cc8e079c977405d11cfe542faa6592c} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_mode\_get@{lsm6dsox\_fifo\_mode\_get}}
+\index{lsm6dsox\_fifo\_mode\_get@{lsm6dsox\_fifo\_mode\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_mode\_get()}{lsm6dsox\_fifo\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga8d04f6f6893760988fb6a74c75bccb20}{lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO mode selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of fifo\+\_\+mode in reg FIFO\+\_\+\+CTRL4 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07006}{7006}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gab3616dc14ab529e5269a3c4826bf15ff}\label{group__LSM6DSOX__fifo_gab3616dc14ab529e5269a3c4826bf15ff} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_mode\_set@{lsm6dsox\_fifo\_mode\_set}}
+\index{lsm6dsox\_fifo\_mode\_set@{lsm6dsox\_fifo\_mode\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_mode\_set()}{lsm6dsox\_fifo\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga8d04f6f6893760988fb6a74c75bccb20}{lsm6dsox\+\_\+fifo\+\_\+mode\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO mode selection.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fifo\+\_\+mode in reg FIFO\+\_\+\+CTRL4 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06981}{6981}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga1e38a6b21132156b3c5ae8b8b32a14de}\label{group__LSM6DSOX__fifo_ga1e38a6b21132156b3c5ae8b8b32a14de} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_ovr\_flag\_get@{lsm6dsox\_fifo\_ovr\_flag\_get}}
+\index{lsm6dsox\_fifo\_ovr\_flag\_get@{lsm6dsox\_fifo\_ovr\_flag\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_ovr\_flag\_get()}{lsm6dsox\_fifo\_ovr\_flag\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+ovr\+\_\+flag\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO overrun status.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fifo\+\_\+over\+\_\+run\+\_\+latched in reg FIFO\+\_\+\+STATUS2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07445}{7445}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga3215a1d0914a1f2233b95507d57aad7f}\label{group__LSM6DSOX__fifo_ga3215a1d0914a1f2233b95507d57aad7f} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_pedo\_batch\_get@{lsm6dsox\_fifo\_pedo\_batch\_get}}
+\index{lsm6dsox\_fifo\_pedo\_batch\_get@{lsm6dsox\_fifo\_pedo\_batch\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_pedo\_batch\_get()}{lsm6dsox\_fifo\_pedo\_batch\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+pedo\+\_\+batch\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching of pedometer embedded function values.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of pedo\+\_\+fifo\+\_\+en in reg LSM6\+DSOX\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+FIFO\+\_\+\+CFG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07637}{7637}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga6610eec9bbd118b7e35516042ffa32c7}\label{group__LSM6DSOX__fifo_ga6610eec9bbd118b7e35516042ffa32c7} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_pedo\_batch\_set@{lsm6dsox\_fifo\_pedo\_batch\_set}}
+\index{lsm6dsox\_fifo\_pedo\_batch\_set@{lsm6dsox\_fifo\_pedo\_batch\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_pedo\_batch\_set()}{lsm6dsox\_fifo\_pedo\_batch\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+pedo\+\_\+batch\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+\+: Enable FIFO batching of pedometer embedded function values.\mbox{[}set\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of gbias\+\_\+fifo\+\_\+en in reg LSM6\+DSOX\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+FIFO\+\_\+\+CFG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07600}{7600}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga44cc057aa5947ae0216b103417d0b6dd}\label{group__LSM6DSOX__fifo_ga44cc057aa5947ae0216b103417d0b6dd} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_sensor\_tag\_get@{lsm6dsox\_fifo\_sensor\_tag\_get}}
+\index{lsm6dsox\_fifo\_sensor\_tag\_get@{lsm6dsox\_fifo\_sensor\_tag\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_sensor\_tag\_get()}{lsm6dsox\_fifo\_sensor\_tag\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+sensor\+\_\+tag\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga16448832c3bff928781862f228a8f557}{lsm6dsox\+\_\+fifo\+\_\+tag\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Identifies the sensor in FIFO\+\_\+\+DATA\+\_\+\+OUT.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of tag\+\_\+sensor in reg FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+TAG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07483}{7483}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga9cb700685f5c73f019903a2177de05e0}\label{group__LSM6DSOX__fifo_ga9cb700685f5c73f019903a2177de05e0} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_status\_get@{lsm6dsox\_fifo\_status\_get}}
+\index{lsm6dsox\_fifo\_status\_get@{lsm6dsox\_fifo\_status\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_status\_get()}{lsm6dsox\_fifo\_status\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+status\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__fifo__status2__t}{lsm6dsox\+\_\+fifo\+\_\+status2\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO status.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & registers FIFO\+\_\+\+STATUS2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07407}{7407}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gac4c73c9d2450743f5cf60162840175ba}\label{group__LSM6DSOX__fifo_gac4c73c9d2450743f5cf60162840175ba} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_stop\_on\_wtm\_get@{lsm6dsox\_fifo\_stop\_on\_wtm\_get}}
+\index{lsm6dsox\_fifo\_stop\_on\_wtm\_get@{lsm6dsox\_fifo\_stop\_on\_wtm\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_stop\_on\_wtm\_get()}{lsm6dsox\_fifo\_stop\_on\_wtm\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+stop\+\_\+on\+\_\+wtm\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensing chain FIFO stop values memorization at threshold level.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of stop\+\_\+on\+\_\+wtm in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06760}{6760}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga57904c81a453a419b116feb4ae8affa1}\label{group__LSM6DSOX__fifo_ga57904c81a453a419b116feb4ae8affa1} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_stop\_on\_wtm\_set@{lsm6dsox\_fifo\_stop\_on\_wtm\_set}}
+\index{lsm6dsox\_fifo\_stop\_on\_wtm\_set@{lsm6dsox\_fifo\_stop\_on\_wtm\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_stop\_on\_wtm\_set()}{lsm6dsox\_fifo\_stop\_on\_wtm\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+stop\+\_\+on\+\_\+wtm\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensing chain FIFO stop values memorization at threshold level.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of stop\+\_\+on\+\_\+wtm in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06735}{6735}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga72d6d3655a9c2ad41b510816dc58c779}\label{group__LSM6DSOX__fifo_ga72d6d3655a9c2ad41b510816dc58c779} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_temp\_batch\_get@{lsm6dsox\_fifo\_temp\_batch\_get}}
+\index{lsm6dsox\_fifo\_temp\_batch\_get@{lsm6dsox\_fifo\_temp\_batch\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_temp\_batch\_get()}{lsm6dsox\_fifo\_temp\_batch\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+temp\+\_\+batch\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0a39d72304c2decd37c2da09e9b67b23}{lsm6dsox\+\_\+odr\+\_\+t\+\_\+batch\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects Batching Data Rate (writing frequency in FIFO) for temperature data.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of odr\+\_\+t\+\_\+batch in reg FIFO\+\_\+\+CTRL4 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07083}{7083}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga3687250087dccfaf7d5619091b254360}\label{group__LSM6DSOX__fifo_ga3687250087dccfaf7d5619091b254360} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_temp\_batch\_set@{lsm6dsox\_fifo\_temp\_batch\_set}}
+\index{lsm6dsox\_fifo\_temp\_batch\_set@{lsm6dsox\_fifo\_temp\_batch\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_temp\_batch\_set()}{lsm6dsox\_fifo\_temp\_batch\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+temp\+\_\+batch\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0a39d72304c2decd37c2da09e9b67b23}{lsm6dsox\+\_\+odr\+\_\+t\+\_\+batch\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects Batching Data Rate (writing frequency in FIFO) for temperature data.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of odr\+\_\+t\+\_\+batch in reg FIFO\+\_\+\+CTRL4 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07057}{7057}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga04f1d59119dfad6a9a0bf2eaa6fda075}\label{group__LSM6DSOX__fifo_ga04f1d59119dfad6a9a0bf2eaa6fda075} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_timestamp\_decimation\_get@{lsm6dsox\_fifo\_timestamp\_decimation\_get}}
+\index{lsm6dsox\_fifo\_timestamp\_decimation\_get@{lsm6dsox\_fifo\_timestamp\_decimation\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_timestamp\_decimation\_get()}{lsm6dsox\_fifo\_timestamp\_decimation\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+timestamp\+\_\+decimation\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga28a10082f639384783afe167808fc9fa}{lsm6dsox\+\_\+odr\+\_\+ts\+\_\+batch\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects decimation for timestamp batching in FIFO. Writing rate will be the maximum rate between XL and GYRO BDR divided by decimation decoder.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of odr\+\_\+ts\+\_\+batch in reg FIFO\+\_\+\+CTRL4 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07154}{7154}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga1ddbeed5849740dd3c71903b2f20c0ad}\label{group__LSM6DSOX__fifo_ga1ddbeed5849740dd3c71903b2f20c0ad} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_timestamp\_decimation\_set@{lsm6dsox\_fifo\_timestamp\_decimation\_set}}
+\index{lsm6dsox\_fifo\_timestamp\_decimation\_set@{lsm6dsox\_fifo\_timestamp\_decimation\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_timestamp\_decimation\_set()}{lsm6dsox\_fifo\_timestamp\_decimation\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+timestamp\+\_\+decimation\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga28a10082f639384783afe167808fc9fa}{lsm6dsox\+\_\+odr\+\_\+ts\+\_\+batch\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects decimation for timestamp batching in FIFO. Writing rate will be the maximum rate between XL and GYRO BDR divided by decimation decoder.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of odr\+\_\+ts\+\_\+batch in reg FIFO\+\_\+\+CTRL4 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07127}{7127}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga18f147fe702179dcde25b013461f5303}\label{group__LSM6DSOX__fifo_ga18f147fe702179dcde25b013461f5303} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_get@{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_get}}
+\index{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_get@{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_get()}{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+virtual\+\_\+sens\+\_\+odr\+\_\+chg\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables ODR CHANGE virtual sensor to be batched in FIFO.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of odrchg\+\_\+en in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06668}{6668}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gaf2cb38ba986525a3413e5ee84da8af03}\label{group__LSM6DSOX__fifo_gaf2cb38ba986525a3413e5ee84da8af03} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_set@{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_set}}
+\index{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_set@{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_set()}{lsm6dsox\_fifo\_virtual\_sens\_odr\_chg\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+virtual\+\_\+sens\+\_\+odr\+\_\+chg\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables ODR CHANGE virtual sensor to be batched in FIFO.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of odrchg\+\_\+en in reg FIFO\+\_\+\+CTRL2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06643}{6643}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gac8286bd19b59695f7903d66aa85223c8}\label{group__LSM6DSOX__fifo_gac8286bd19b59695f7903d66aa85223c8} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_watermark\_get@{lsm6dsox\_fifo\_watermark\_get}}
+\index{lsm6dsox\_fifo\_watermark\_get@{lsm6dsox\_fifo\_watermark\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_watermark\_get()}{lsm6dsox\_fifo\_watermark\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+watermark\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO watermark level selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of wtm in reg FIFO\+\_\+\+CTRL1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06470}{6470}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga531f78f5822451a8241ba53c368b0fac}\label{group__LSM6DSOX__fifo_ga531f78f5822451a8241ba53c368b0fac} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_watermark\_set@{lsm6dsox\_fifo\_watermark\_set}}
+\index{lsm6dsox\_fifo\_watermark\_set@{lsm6dsox\_fifo\_watermark\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_watermark\_set()}{lsm6dsox\_fifo\_watermark\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+watermark\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO watermark level selection.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of wtm in reg FIFO\+\_\+\+CTRL1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06436}{6436}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga6ca8793b1b896ba62fd48ba049761791}\label{group__LSM6DSOX__fifo_ga6ca8793b1b896ba62fd48ba049761791} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_wtm\_flag\_get@{lsm6dsox\_fifo\_wtm\_flag\_get}}
+\index{lsm6dsox\_fifo\_wtm\_flag\_get@{lsm6dsox\_fifo\_wtm\_flag\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_wtm\_flag\_get()}{lsm6dsox\_fifo\_wtm\_flag\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+wtm\+\_\+flag\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FIFO watermark status.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fifo\+\_\+wtm\+\_\+ia in reg FIFO\+\_\+\+STATUS2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07464}{7464}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga75b9d55c4e2cdbb12a09316eb6477f73}\label{group__LSM6DSOX__fifo_ga75b9d55c4e2cdbb12a09316eb6477f73} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_xl\_batch\_get@{lsm6dsox\_fifo\_xl\_batch\_get}}
+\index{lsm6dsox\_fifo\_xl\_batch\_get@{lsm6dsox\_fifo\_xl\_batch\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_xl\_batch\_get()}{lsm6dsox\_fifo\_xl\_batch\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+xl\+\_\+batch\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gacbb0309e7580a0a3706734999076eb97}{lsm6dsox\+\_\+bdr\+\_\+xl\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects Batching Data Rate (writing frequency in FIFO) for accelerometer data.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of bdr\+\_\+xl in reg FIFO\+\_\+\+CTRL3 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06806}{6806}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gad33f377f5c4182617170dd02526a621c}\label{group__LSM6DSOX__fifo_gad33f377f5c4182617170dd02526a621c} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_fifo\_xl\_batch\_set@{lsm6dsox\_fifo\_xl\_batch\_set}}
+\index{lsm6dsox\_fifo\_xl\_batch\_set@{lsm6dsox\_fifo\_xl\_batch\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_xl\_batch\_set()}{lsm6dsox\_fifo\_xl\_batch\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+xl\+\_\+batch\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gacbb0309e7580a0a3706734999076eb97}{lsm6dsox\+\_\+bdr\+\_\+xl\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects Batching Data Rate (writing frequency in FIFO) for accelerometer data.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of bdr\+\_\+xl in reg FIFO\+\_\+\+CTRL3 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06780}{6780}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga9ff28e299fe39841d9d9df36cf166b2d}\label{group__LSM6DSOX__fifo_ga9ff28e299fe39841d9d9df36cf166b2d} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_rst\_batch\_counter\_get@{lsm6dsox\_rst\_batch\_counter\_get}}
+\index{lsm6dsox\_rst\_batch\_counter\_get@{lsm6dsox\_rst\_batch\_counter\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_rst\_batch\_counter\_get()}{lsm6dsox\_rst\_batch\_counter\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+rst\+\_\+batch\+\_\+counter\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Resets the internal counter of batching events for a single sensor. This bit is automatically reset to zero if it was set to \textquotesingle{}1\textquotesingle{}.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of rst\+\_\+counter\+\_\+bdr in reg COUNTER\+\_\+\+BDR\+\_\+\+REG1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07292}{7292}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga0172634051cabe2ecd05cb36bfb135b1}\label{group__LSM6DSOX__fifo_ga0172634051cabe2ecd05cb36bfb135b1} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_rst\_batch\_counter\_set@{lsm6dsox\_rst\_batch\_counter\_set}}
+\index{lsm6dsox\_rst\_batch\_counter\_set@{lsm6dsox\_rst\_batch\_counter\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_rst\_batch\_counter\_set()}{lsm6dsox\_rst\_batch\_counter\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+rst\+\_\+batch\+\_\+counter\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Resets the internal counter of batching vents for a single sensor. This bit is automatically reset to zero if it was set to \textquotesingle{}1\textquotesingle{}.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of rst\+\_\+counter\+\_\+bdr in reg COUNTER\+\_\+\+BDR\+\_\+\+REG1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07264}{7264}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga984973049c06017ecd1b557a99ae2629}\label{group__LSM6DSOX__fifo_ga984973049c06017ecd1b557a99ae2629} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_0\_get@{lsm6dsox\_sh\_batch\_slave\_0\_get}}
+\index{lsm6dsox\_sh\_batch\_slave\_0\_get@{lsm6dsox\_sh\_batch\_slave\_0\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_0\_get()}{lsm6dsox\_sh\_batch\_slave\_0\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+0\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of first slave.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+0\+\_\+en in reg SLV0\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07703}{7703}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga4cfb37cc463a0346c543d1d79c50530f}\label{group__LSM6DSOX__fifo_ga4cfb37cc463a0346c543d1d79c50530f} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_0\_set@{lsm6dsox\_sh\_batch\_slave\_0\_set}}
+\index{lsm6dsox\_sh\_batch\_slave\_0\_set@{lsm6dsox\_sh\_batch\_slave\_0\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_0\_set()}{lsm6dsox\_sh\_batch\_slave\_0\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+0\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of first slave.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+0\+\_\+en in reg SLV0\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07668}{7668}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga10513c429c6a4722c0dba5848d94d685}\label{group__LSM6DSOX__fifo_ga10513c429c6a4722c0dba5848d94d685} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_1\_get@{lsm6dsox\_sh\_batch\_slave\_1\_get}}
+\index{lsm6dsox\_sh\_batch\_slave\_1\_get@{lsm6dsox\_sh\_batch\_slave\_1\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_1\_get()}{lsm6dsox\_sh\_batch\_slave\_1\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+1\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of second slave.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+1\+\_\+en in reg SLV1\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07768}{7768}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga7f06f1a78598801b5ff15c5f8ca1840a}\label{group__LSM6DSOX__fifo_ga7f06f1a78598801b5ff15c5f8ca1840a} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_1\_set@{lsm6dsox\_sh\_batch\_slave\_1\_set}}
+\index{lsm6dsox\_sh\_batch\_slave\_1\_set@{lsm6dsox\_sh\_batch\_slave\_1\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_1\_set()}{lsm6dsox\_sh\_batch\_slave\_1\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+1\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of second slave.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+1\+\_\+en in reg SLV1\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07733}{7733}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga8e99c3319da3fb70c2e8a45a8fad95df}\label{group__LSM6DSOX__fifo_ga8e99c3319da3fb70c2e8a45a8fad95df} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_2\_get@{lsm6dsox\_sh\_batch\_slave\_2\_get}}
+\index{lsm6dsox\_sh\_batch\_slave\_2\_get@{lsm6dsox\_sh\_batch\_slave\_2\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_2\_get()}{lsm6dsox\_sh\_batch\_slave\_2\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+2\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of third slave.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+2\+\_\+en in reg SLV2\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07833}{7833}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga601a8313248f3792b7c013cf977682b2}\label{group__LSM6DSOX__fifo_ga601a8313248f3792b7c013cf977682b2} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_2\_set@{lsm6dsox\_sh\_batch\_slave\_2\_set}}
+\index{lsm6dsox\_sh\_batch\_slave\_2\_set@{lsm6dsox\_sh\_batch\_slave\_2\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_2\_set()}{lsm6dsox\_sh\_batch\_slave\_2\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+2\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of third slave.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+2\+\_\+en in reg SLV2\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07798}{7798}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_ga07bf57c8b6f929687843823f9cc08605}\label{group__LSM6DSOX__fifo_ga07bf57c8b6f929687843823f9cc08605} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_3\_get@{lsm6dsox\_sh\_batch\_slave\_3\_get}}
+\index{lsm6dsox\_sh\_batch\_slave\_3\_get@{lsm6dsox\_sh\_batch\_slave\_3\_get}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_3\_get()}{lsm6dsox\_sh\_batch\_slave\_3\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+3\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of fourth slave.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+3\+\_\+en in reg SLV3\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07898}{7898}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__fifo_gaf7e9a946802ccc971b0b89e2ae4d1a3c}\label{group__LSM6DSOX__fifo_gaf7e9a946802ccc971b0b89e2ae4d1a3c} 
+\index{LSM6DSOX\_fifo@{LSM6DSOX\_fifo}!lsm6dsox\_sh\_batch\_slave\_3\_set@{lsm6dsox\_sh\_batch\_slave\_3\_set}}
+\index{lsm6dsox\_sh\_batch\_slave\_3\_set@{lsm6dsox\_sh\_batch\_slave\_3\_set}!LSM6DSOX\_fifo@{LSM6DSOX\_fifo}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_batch\_slave\_3\_set()}{lsm6dsox\_sh\_batch\_slave\_3\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+3\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable FIFO batching data of fourth slave.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of batch\+\_\+ext\+\_\+sens\+\_\+3\+\_\+en in reg SLV3\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l07863}{7863}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

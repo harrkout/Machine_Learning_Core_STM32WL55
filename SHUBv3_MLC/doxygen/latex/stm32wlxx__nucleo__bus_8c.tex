@@ -1,0 +1,54 @@
+\doxysection{Core/\+Src/stm32wlxx\+\_\+nucleo\+\_\+bus.c File Reference}
+\hypertarget{stm32wlxx__nucleo__bus_8c}{}\label{stm32wlxx__nucleo__bus_8c}\index{Core/Src/stm32wlxx\_nucleo\_bus.c@{Core/Src/stm32wlxx\_nucleo\_bus.c}}
+
+
+\+: source file for the BSP BUS IO driver  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+nucleo\+\_\+bus.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+weak \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaf9561f743106eb833f296e9122e242aa}{MX\+\_\+\+I2\+C2\+\_\+\+Init}} (\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hi2c)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga8a9170aef00741af96f90ef9bfc1833e}{BSP\+\_\+\+I2\+C2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize I2C HAL. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga82a8bbc7fa87e06619bc02c511ed5cea}{BSP\+\_\+\+I2\+C2\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initialize I2C HAL. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gab5c4becb0e6b8d70e1b69646f6149dd1}{BSP\+\_\+\+I2\+C2\+\_\+\+Is\+Ready}} (uint16\+\_\+t Dev\+Addr, uint32\+\_\+t Trials)
+\begin{DoxyCompactList}\small\item\em Check whether the I2C bus is ready. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gad5850679744cce10042e00c1c4ec80cb}{BSP\+\_\+\+I2\+C2\+\_\+\+Write\+Reg}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Write a value in a register of the device through BUS. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gac0d7856d7cb61d97aea6449c4978e6c0}{BSP\+\_\+\+I2\+C2\+\_\+\+Read\+Reg}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Read a register of the device through BUS. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga137a61947958a40d0b2aa5f950f57686}{BSP\+\_\+\+I2\+C2\+\_\+\+Write\+Reg16}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Write a value in a register of the device through BUS. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaedb4a68216a2693af5f2ef05e749b071}{BSP\+\_\+\+I2\+C2\+\_\+\+Read\+Reg16}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Read registers through a bus (16 bits) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga5b97e6c9eed913c1b07b720085d82770}{BSP\+\_\+\+I2\+C2\+\_\+\+Send}} (uint16\+\_\+t Dev\+Addr, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Send an amount width data through bus (Simplex) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga2271923231d60168d13546f56c4f005d}{BSP\+\_\+\+I2\+C2\+\_\+\+Recv}} (uint16\+\_\+t Dev\+Addr, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Receive an amount of data through a bus (Simplex) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gae47e142551a4ef16e926c245d4292297}{BSP\+\_\+\+Get\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Return system tick in ms. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaf9561f743106eb833f296e9122e242aa}{MX\+\_\+\+I2\+C2\+\_\+\+Init}} (\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hi2c)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: source file for the BSP BUS IO driver 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+

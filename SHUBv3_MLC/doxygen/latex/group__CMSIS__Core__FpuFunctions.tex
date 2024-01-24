@@ -1,0 +1,71 @@
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{FPU Functions}
+\hypertarget{group__CMSIS__Core__FpuFunctions}{}\label{group__CMSIS__Core__FpuFunctions}\index{FPU Functions@{FPU Functions}}
+
+
+Function that provides FPU type.  
+
+
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection*{Topics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__CMSIS__Core__SAUFunctions}{SAU Functions}}
+\begin{DoxyCompactList}\small\item\em Functions that configure the SAU. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions}{Cache Functions}}
+\begin{DoxyCompactList}\small\item\em Functions that configure Instruction and Data cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t \mbox{\hyperlink{group__CMSIS__Core__NVICFunctions_ga6bcad99ce80a0e7e4ddc6f2379081756}{SCB\+\_\+\+Get\+FPUType}} (void)
+\begin{DoxyCompactList}\small\item\em get FPU type \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{Detailed Description}
+Function that provides FPU type. 
+
+
+
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{Function Documentation}
+\Hypertarget{group__CMSIS__Core__NVICFunctions_ga6bcad99ce80a0e7e4ddc6f2379081756}\label{group__CMSIS__Core__NVICFunctions_ga6bcad99ce80a0e7e4ddc6f2379081756} 
+\index{FPU Functions@{FPU Functions}!SCB\_GetFPUType@{SCB\_GetFPUType}}
+\index{SCB\_GetFPUType@{SCB\_GetFPUType}!FPU Functions@{FPU Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_GetFPUType()}{SCB\_GetFPUType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t SCB\+\_\+\+Get\+FPUType (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+get FPU type 
+
+returns the FPU type \begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item {\bfseries{0}}\+: No FPU
+\item {\bfseries{1}}\+: Single precision FPU
+\item {\bfseries{2}}\+: Double + Single precision FPU 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{core__armv81mml_8h_source_l02749}{2749}} of file \mbox{\hyperlink{core__armv81mml_8h_source}{core\+\_\+armv81mml.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02750\ \{}
+\DoxyCodeLine{02751\ \ \ uint32\_t\ mvfr0;}
+\DoxyCodeLine{02752\ }
+\DoxyCodeLine{02753\ \ \ mvfr0\ =\ \mbox{\hyperlink{group__CMSIS__CORE_gabc7c93f2594e85ece1e1a24f10591428}{FPU}}-\/>MVFR0;}
+\DoxyCodeLine{02754\ \ \ \textcolor{keywordflow}{if}\ \ \ \ \ \ ((mvfr0\ \&\ (\mbox{\hyperlink{group__CMSIS__CORE_ga95008f205c9d25e4ffebdbdc50d5ae44}{FPU\_MVFR0\_Single\_precision\_Msk}}\ |\ \mbox{\hyperlink{group__CMSIS__CORE_ga3f2c8c6c759ffe70f548a165602ea901}{FPU\_MVFR0\_Double\_precision\_Msk}}))\ ==\ 0x220U)}
+\DoxyCodeLine{02755\ \ \ \{}
+\DoxyCodeLine{02756\ \ \ \ \ \textcolor{keywordflow}{return}\ 2U;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Double\ +\ Single\ precision\ FPU\ */}}
+\DoxyCodeLine{02757\ \ \ \}}
+\DoxyCodeLine{02758\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((mvfr0\ \&\ (\mbox{\hyperlink{group__CMSIS__CORE_ga95008f205c9d25e4ffebdbdc50d5ae44}{FPU\_MVFR0\_Single\_precision\_Msk}}\ |\ \mbox{\hyperlink{group__CMSIS__CORE_ga3f2c8c6c759ffe70f548a165602ea901}{FPU\_MVFR0\_Double\_precision\_Msk}}))\ ==\ 0x020U)}
+\DoxyCodeLine{02759\ \ \ \{}
+\DoxyCodeLine{02760\ \ \ \ \ \textcolor{keywordflow}{return}\ 1U;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Single\ precision\ FPU\ */}}
+\DoxyCodeLine{02761\ \ \ \}}
+\DoxyCodeLine{02762\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{02763\ \ \ \{}
+\DoxyCodeLine{02764\ \ \ \ \ \textcolor{keywordflow}{return}\ 0U;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ No\ FPU\ */}}
+\DoxyCodeLine{02765\ \ \ \}}
+\DoxyCodeLine{02766\ \}}
+
+\end{DoxyCode}
+\input{group__CMSIS__Core__SAUFunctions}
+\input{group__CMSIS__Core__CacheFunctions}

@@ -1,0 +1,533 @@
+\doxysubsubsection{DMA Exported Macros}
+\hypertarget{group__DMA__Exported__Macros}{}\label{group__DMA__Exported__Macros}\index{DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_gaadcee34f0999c8eafd37de2f69daa0ac}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2}{HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+RESET}})
+\begin{DoxyCompactList}\small\item\em Reset DMA handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga93900b3ef3f87ef924eb887279a434b4}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \texorpdfstring{$\vert$}{|}=  \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})
+\begin{DoxyCompactList}\small\item\em Enable the specified DMA Channel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&=  \texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})
+\begin{DoxyCompactList}\small\item\em Disable the specified DMA Channel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_gae3feef5ea50ff13a6a5b98cb353c87b0}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TC\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel transfer complete flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga0095f5f3166a82bedc67744ac94acfba}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+HT\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel half transfer complete flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga5e765bb3b1c5fc9f1b1abbbb764250bc}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TE\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel transfer error flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga718c628ea8c112c5b09bc61c52b86e75}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+GI\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel Global interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga798d4b3b3fbd32b95540967bb35b35be}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Get the DMA Channel pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_gabc041fb1c85ea7a3af94e42470ef7f2a}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the DMA Channel pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga2124233229c04ca90b790cd8cddfa98b}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the specified DMA Channel interrupts. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the specified DMA Channel interrupts. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga206f24e6bee4600515b9b6b1ec79365b}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Check whether the specified DMA Channel interrupt is enabled or disabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__DMA__Exported__Macros_ga082d691311bac96641dc35a17cfe8e63}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+COUNTER}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNDTR)
+\begin{DoxyCompactList}\small\item\em Returns the number of remaining data units in the current DMA Channel transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__DMA__Exported__Macros_gabc041fb1c85ea7a3af94e42470ef7f2a}\label{group__DMA__Exported__Macros_gabc041fb1c85ea7a3af94e42470ef7f2a} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_CLEAR\_FLAG@{\_\_HAL\_DMA\_CLEAR\_FLAG}}
+\index{\_\_HAL\_DMA\_CLEAR\_FLAG@{\_\_HAL\_DMA\_CLEAR\_FLAG}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_CLEAR\_FLAG}{\_\_HAL\_DMA\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ >\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga4f9c23b3d1add93ed206b5c9afa5cda3}{DMA1\_Channel7}}))?\ \(\backslash\)}
+\DoxyCodeLine{\ (\mbox{\hyperlink{group__Peripheral__declaration_ga506520140eec1708bc7570c49bdf972d}{DMA2}}-\/>IFCR\ =\ (\_\_FLAG\_\_))\ :\ (\mbox{\hyperlink{group__Peripheral__declaration_gacc16d2a5937f7585320a98f7f6b578f9}{DMA1}}-\/>IFCR\ =\ (\_\_FLAG\_\_)))}
+
+\end{DoxyCode}
+
+
+Clear the DMA Channel pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the flag to clear. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+FLAG\+\_\+\+TCx\+: Transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+HTx\+: Half transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+TEx\+: Transfer error flag \item DMA\+\_\+\+FLAG\+\_\+\+GIx\+: Global interrupt flag Where x can be 1 to max Channel supported by the product to select the DMA Channel flag. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00511}{511}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00511\ \textcolor{preprocessor}{\#define\ \_\_HAL\_DMA\_CLEAR\_FLAG(\_\_HANDLE\_\_,\ \_\_FLAG\_\_)\ (((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ >\ ((uint32\_t)DMA1\_Channel7))?\ \(\backslash\)}}
+\DoxyCodeLine{00512\ \textcolor{preprocessor}{\ (DMA2-\/>IFCR\ =\ (\_\_FLAG\_\_))\ :\ (DMA1-\/>IFCR\ =\ (\_\_FLAG\_\_)))}}
+
+\end{DoxyCode}
+\Hypertarget{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}\label{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_DISABLE@{\_\_HAL\_DMA\_DISABLE}}
+\index{\_\_HAL\_DMA\_DISABLE@{\_\_HAL\_DMA\_DISABLE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_DISABLE}{\_\_HAL\_DMA\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&=  \texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})}
+
+
+
+Disable the specified DMA Channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00402}{402}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}\label{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_DISABLE\_IT@{\_\_HAL\_DMA\_DISABLE\_IT}}
+\index{\_\_HAL\_DMA\_DISABLE\_IT@{\_\_HAL\_DMA\_DISABLE\_IT}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_DISABLE\_IT}{\_\_HAL\_DMA\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable the specified DMA Channel interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the DMA interrupt sources to be enabled or disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+IT\+\_\+\+TC\+: Transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+HT\+: Half transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+TE\+: Transfer error interrupt mask \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00536}{536}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{group__DMA__Exported__Macros_ga93900b3ef3f87ef924eb887279a434b4}\label{group__DMA__Exported__Macros_ga93900b3ef3f87ef924eb887279a434b4} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_ENABLE@{\_\_HAL\_DMA\_ENABLE}}
+\index{\_\_HAL\_DMA\_ENABLE@{\_\_HAL\_DMA\_ENABLE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_ENABLE}{\_\_HAL\_DMA\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \texorpdfstring{$\vert$}{|}=  \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})}
+
+
+
+Enable the specified DMA Channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00395}{395}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{group__DMA__Exported__Macros_ga2124233229c04ca90b790cd8cddfa98b}\label{group__DMA__Exported__Macros_ga2124233229c04ca90b790cd8cddfa98b} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_ENABLE\_IT@{\_\_HAL\_DMA\_ENABLE\_IT}}
+\index{\_\_HAL\_DMA\_ENABLE\_IT@{\_\_HAL\_DMA\_ENABLE\_IT}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_ENABLE\_IT}{\_\_HAL\_DMA\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable the specified DMA Channel interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the DMA interrupt sources to be enabled or disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+IT\+\_\+\+TC\+: Transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+HT\+: Half transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+TE\+: Transfer error interrupt mask \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00524}{524}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{group__DMA__Exported__Macros_ga082d691311bac96641dc35a17cfe8e63}\label{group__DMA__Exported__Macros_ga082d691311bac96641dc35a17cfe8e63} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_COUNTER@{\_\_HAL\_DMA\_GET\_COUNTER}}
+\index{\_\_HAL\_DMA\_GET\_COUNTER@{\_\_HAL\_DMA\_GET\_COUNTER}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_COUNTER}{\_\_HAL\_DMA\_GET\_COUNTER}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+COUNTER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNDTR)}
+
+
+
+Returns the number of remaining data units in the current DMA Channel transfer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & number of remaining data units in the current DMA Channel transfer. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00555}{555}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{group__DMA__Exported__Macros_ga798d4b3b3fbd32b95540967bb35b35be}\label{group__DMA__Exported__Macros_ga798d4b3b3fbd32b95540967bb35b35be} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_FLAG@{\_\_HAL\_DMA\_GET\_FLAG}}
+\index{\_\_HAL\_DMA\_GET\_FLAG@{\_\_HAL\_DMA\_GET\_FLAG}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_FLAG}{\_\_HAL\_DMA\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ (((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ >\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga4f9c23b3d1add93ed206b5c9afa5cda3}{DMA1\_Channel7}}))?\ \(\backslash\)}
+\DoxyCodeLine{\ (\mbox{\hyperlink{group__Peripheral__declaration_ga506520140eec1708bc7570c49bdf972d}{DMA2}}-\/>ISR\ \&\ (\_\_FLAG\_\_))\ :\ (\mbox{\hyperlink{group__Peripheral__declaration_gacc16d2a5937f7585320a98f7f6b578f9}{DMA1}}-\/>ISR\ \&\ (\_\_FLAG\_\_)))}
+
+\end{DoxyCode}
+
+
+Get the DMA Channel pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & Get the specified flag. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+FLAG\+\_\+\+TCx\+: Transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+HTx\+: Half transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+TEx\+: Transfer error flag \item DMA\+\_\+\+FLAG\+\_\+\+GIx\+: Global interrupt flag Where x can be 1 to max Channel supported by the product to select the DMA Channel flag. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & state of FLAG (SET or RESET). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00496}{496}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#define\ \_\_HAL\_DMA\_GET\_FLAG(\_\_HANDLE\_\_,\ \_\_FLAG\_\_)\ (((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ >\ ((uint32\_t)DMA1\_Channel7))?\ \(\backslash\)}}
+\DoxyCodeLine{00497\ \textcolor{preprocessor}{\ (DMA2-\/>ISR\ \&\ (\_\_FLAG\_\_))\ :\ (DMA1-\/>ISR\ \&\ (\_\_FLAG\_\_)))}}
+
+\end{DoxyCode}
+\Hypertarget{group__DMA__Exported__Macros_ga718c628ea8c112c5b09bc61c52b86e75}\label{group__DMA__Exported__Macros_ga718c628ea8c112c5b09bc61c52b86e75} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_GI\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_GI\_FLAG\_INDEX}}
+\index{\_\_HAL\_DMA\_GET\_GI\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_GI\_FLAG\_INDEX}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_GI\_FLAG\_INDEX}{\_\_HAL\_DMA\_GET\_GI\_FLAG\_INDEX}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+GI\+\_\+\+FLAG\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga44e8f6c1abaebbf8eb3b758242fefd4e}{DMA\_FLAG\_GI1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga44e8f6c1abaebbf8eb3b758242fefd4e}{DMA\_FLAG\_GI1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga23d7631dd10c645e06971b2543ba2949}{DMA1\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga7c4967d950bea1bde3bd90acb4b3c23d}{DMA\_FLAG\_GI2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga316024020799373b9d8e35c316c74f24}{DMA2\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga7c4967d950bea1bde3bd90acb4b3c23d}{DMA\_FLAG\_GI2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gacf7b6093a37b306d7f1f50b2f200f0d0}{DMA1\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga83f4d42a573855a0de0dece4512dce76}{DMA\_FLAG\_GI3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga6dca52a79587e0ca9a5d669048b4c7eb}{DMA2\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga83f4d42a573855a0de0dece4512dce76}{DMA\_FLAG\_GI3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad2c42743316bf64da557130061b1f56a}{DMA1\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gac8b038323440eac7e763f9c01949ab6f}{DMA\_FLAG\_GI4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga612b396657695191ad740b0b59bc9f12}{DMA2\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gac8b038323440eac7e763f9c01949ab6f}{DMA\_FLAG\_GI4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga06ff98ddef3c962795d2e2444004abff}{DMA1\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gad82435e0729bea1b9a5ed01169ca6de6}{DMA\_FLAG\_GI5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga521c13b7d0f82a6897d47995da392750}{DMA2\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gad82435e0729bea1b9a5ed01169ca6de6}{DMA\_FLAG\_GI5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac013c4376e4797831b5ddd2a09519df8}{DMA1\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga8c5e51cac200669ba19bd590069582d6}{DMA\_FLAG\_GI6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga74a1cc88faa12064831fb58fe3fd4fd3}{DMA2\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga8c5e51cac200669ba19bd590069582d6}{DMA\_FLAG\_GI6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group__DMA__flag__definitions_ga08693ad6c24f8100a564bb0b13c11fa0}{DMA\_FLAG\_GI7}})}
+
+\end{DoxyCode}
+
+
+Return the current DMA Channel Global interrupt flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified transfer error flag index. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00469}{469}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00469\ \textcolor{preprocessor}{\#define\ \_\_HAL\_DMA\_GET\_GI\_FLAG\_INDEX(\_\_HANDLE\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{00470\ \textcolor{preprocessor}{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel1))?\ DMA\_FLAG\_GI1\ :\(\backslash\)}}
+\DoxyCodeLine{00471\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel1))?\ DMA\_FLAG\_GI1\ :\(\backslash\)}}
+\DoxyCodeLine{00472\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel2))?\ DMA\_FLAG\_GI2\ :\(\backslash\)}}
+\DoxyCodeLine{00473\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel2))?\ DMA\_FLAG\_GI2\ :\(\backslash\)}}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel3))?\ DMA\_FLAG\_GI3\ :\(\backslash\)}}
+\DoxyCodeLine{00475\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel3))?\ DMA\_FLAG\_GI3\ :\(\backslash\)}}
+\DoxyCodeLine{00476\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel4))?\ DMA\_FLAG\_GI4\ :\(\backslash\)}}
+\DoxyCodeLine{00477\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel4))?\ DMA\_FLAG\_GI4\ :\(\backslash\)}}
+\DoxyCodeLine{00478\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel5))?\ DMA\_FLAG\_GI5\ :\(\backslash\)}}
+\DoxyCodeLine{00479\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel5))?\ DMA\_FLAG\_GI5\ :\(\backslash\)}}
+\DoxyCodeLine{00480\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel6))?\ DMA\_FLAG\_GI6\ :\(\backslash\)}}
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel6))?\ DMA\_FLAG\_GI6\ :\(\backslash\)}}
+\DoxyCodeLine{00482\ \textcolor{preprocessor}{\ \ \ DMA\_FLAG\_GI7)}}
+
+\end{DoxyCode}
+\Hypertarget{group__DMA__Exported__Macros_ga0095f5f3166a82bedc67744ac94acfba}\label{group__DMA__Exported__Macros_ga0095f5f3166a82bedc67744ac94acfba} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_HT\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_HT\_FLAG\_INDEX}}
+\index{\_\_HAL\_DMA\_GET\_HT\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_HT\_FLAG\_INDEX}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_HT\_FLAG\_INDEX}{\_\_HAL\_DMA\_GET\_HT\_FLAG\_INDEX}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+HT\+\_\+\+FLAG\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga4317f6260e1aecc4f5fe882fc043f606}{DMA\_FLAG\_HT1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga4317f6260e1aecc4f5fe882fc043f606}{DMA\_FLAG\_HT1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga23d7631dd10c645e06971b2543ba2949}{DMA1\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gab21f437ec8a55a600e5ca2af9416baba}{DMA\_FLAG\_HT2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga316024020799373b9d8e35c316c74f24}{DMA2\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gab21f437ec8a55a600e5ca2af9416baba}{DMA\_FLAG\_HT2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gacf7b6093a37b306d7f1f50b2f200f0d0}{DMA1\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gad28ea63fda2c87dd5e2ec08e0ab407d4}{DMA\_FLAG\_HT3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga6dca52a79587e0ca9a5d669048b4c7eb}{DMA2\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gad28ea63fda2c87dd5e2ec08e0ab407d4}{DMA\_FLAG\_HT3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad2c42743316bf64da557130061b1f56a}{DMA1\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga1a766ffe9b0138d6ab42819c1a9206f1}{DMA\_FLAG\_HT4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga612b396657695191ad740b0b59bc9f12}{DMA2\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga1a766ffe9b0138d6ab42819c1a9206f1}{DMA\_FLAG\_HT4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga06ff98ddef3c962795d2e2444004abff}{DMA1\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga3f7bd37a3c6a833a5e8dd011f7ef9acd}{DMA\_FLAG\_HT5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga521c13b7d0f82a6897d47995da392750}{DMA2\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga3f7bd37a3c6a833a5e8dd011f7ef9acd}{DMA\_FLAG\_HT5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac013c4376e4797831b5ddd2a09519df8}{DMA1\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga37e18ea9dab110bafc8de3b6aedabb02}{DMA\_FLAG\_HT6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga74a1cc88faa12064831fb58fe3fd4fd3}{DMA2\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga37e18ea9dab110bafc8de3b6aedabb02}{DMA\_FLAG\_HT6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group__DMA__flag__definitions_ga8216565e4c640761fa93891006d43655}{DMA\_FLAG\_HT7}})}
+
+\end{DoxyCode}
+
+
+Return the current DMA Channel half transfer complete flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified half transfer complete flag index. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00429}{429}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00429\ \textcolor{preprocessor}{\#define\ \_\_HAL\_DMA\_GET\_HT\_FLAG\_INDEX(\_\_HANDLE\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{00430\ \textcolor{preprocessor}{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel1))?\ DMA\_FLAG\_HT1\ :\(\backslash\)}}
+\DoxyCodeLine{00431\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel1))?\ DMA\_FLAG\_HT1\ :\(\backslash\)}}
+\DoxyCodeLine{00432\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel2))?\ DMA\_FLAG\_HT2\ :\(\backslash\)}}
+\DoxyCodeLine{00433\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel2))?\ DMA\_FLAG\_HT2\ :\(\backslash\)}}
+\DoxyCodeLine{00434\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel3))?\ DMA\_FLAG\_HT3\ :\(\backslash\)}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel3))?\ DMA\_FLAG\_HT3\ :\(\backslash\)}}
+\DoxyCodeLine{00436\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel4))?\ DMA\_FLAG\_HT4\ :\(\backslash\)}}
+\DoxyCodeLine{00437\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel4))?\ DMA\_FLAG\_HT4\ :\(\backslash\)}}
+\DoxyCodeLine{00438\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel5))?\ DMA\_FLAG\_HT5\ :\(\backslash\)}}
+\DoxyCodeLine{00439\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel5))?\ DMA\_FLAG\_HT5\ :\(\backslash\)}}
+\DoxyCodeLine{00440\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel6))?\ DMA\_FLAG\_HT6\ :\(\backslash\)}}
+\DoxyCodeLine{00441\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel6))?\ DMA\_FLAG\_HT6\ :\(\backslash\)}}
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\ \ \ DMA\_FLAG\_HT7)}}
+
+\end{DoxyCode}
+\Hypertarget{group__DMA__Exported__Macros_ga206f24e6bee4600515b9b6b1ec79365b}\label{group__DMA__Exported__Macros_ga206f24e6bee4600515b9b6b1ec79365b} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_IT\_SOURCE@{\_\_HAL\_DMA\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_DMA\_GET\_IT\_SOURCE@{\_\_HAL\_DMA\_GET\_IT\_SOURCE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_IT\_SOURCE}{\_\_HAL\_DMA\_GET\_IT\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))}
+
+
+
+Check whether the specified DMA Channel interrupt is enabled or disabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the DMA interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+IT\+\_\+\+TC\+: Transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+HT\+: Half transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+TE\+: Transfer error interrupt mask \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & state of DMA\+\_\+\+IT (SET or RESET). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00548}{548}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{group__DMA__Exported__Macros_gae3feef5ea50ff13a6a5b98cb353c87b0}\label{group__DMA__Exported__Macros_gae3feef5ea50ff13a6a5b98cb353c87b0} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_TC\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_TC\_FLAG\_INDEX}}
+\index{\_\_HAL\_DMA\_GET\_TC\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_TC\_FLAG\_INDEX}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_TC\_FLAG\_INDEX}{\_\_HAL\_DMA\_GET\_TC\_FLAG\_INDEX}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TC\+\_\+\+FLAG\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga02b6c752c28b35dba79fa1d2bb55ec06}{DMA\_FLAG\_TC1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga02b6c752c28b35dba79fa1d2bb55ec06}{DMA\_FLAG\_TC1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga23d7631dd10c645e06971b2543ba2949}{DMA1\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gacdf2954f3faf8314811ed39272825ab0}{DMA\_FLAG\_TC2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga316024020799373b9d8e35c316c74f24}{DMA2\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gacdf2954f3faf8314811ed39272825ab0}{DMA\_FLAG\_TC2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gacf7b6093a37b306d7f1f50b2f200f0d0}{DMA1\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga17463fb2609ad37aebe6955a044e83c7}{DMA\_FLAG\_TC3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga6dca52a79587e0ca9a5d669048b4c7eb}{DMA2\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga17463fb2609ad37aebe6955a044e83c7}{DMA\_FLAG\_TC3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad2c42743316bf64da557130061b1f56a}{DMA1\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gafb3f8a8c7048d344865c47e72a598074}{DMA\_FLAG\_TC4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga612b396657695191ad740b0b59bc9f12}{DMA2\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gafb3f8a8c7048d344865c47e72a598074}{DMA\_FLAG\_TC4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga06ff98ddef3c962795d2e2444004abff}{DMA1\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga2e3a81f03ed107dbb60cfa7560c32e97}{DMA\_FLAG\_TC5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga521c13b7d0f82a6897d47995da392750}{DMA2\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga2e3a81f03ed107dbb60cfa7560c32e97}{DMA\_FLAG\_TC5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac013c4376e4797831b5ddd2a09519df8}{DMA1\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga1e3da05635b4165ce2a0075646cc9131}{DMA\_FLAG\_TC6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga74a1cc88faa12064831fb58fe3fd4fd3}{DMA2\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga1e3da05635b4165ce2a0075646cc9131}{DMA\_FLAG\_TC6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group__DMA__flag__definitions_gaacfd9fe9de9727dd862aa475b3d5aee8}{DMA\_FLAG\_TC7}})}
+
+\end{DoxyCode}
+
+
+Return the current DMA Channel transfer complete flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified transfer complete flag index. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00409}{409}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00409\ \textcolor{preprocessor}{\#define\ \_\_HAL\_DMA\_GET\_TC\_FLAG\_INDEX(\_\_HANDLE\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{00410\ \textcolor{preprocessor}{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel1))?\ DMA\_FLAG\_TC1\ :\(\backslash\)}}
+\DoxyCodeLine{00411\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel1))?\ DMA\_FLAG\_TC1\ :\(\backslash\)}}
+\DoxyCodeLine{00412\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel2))?\ DMA\_FLAG\_TC2\ :\(\backslash\)}}
+\DoxyCodeLine{00413\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel2))?\ DMA\_FLAG\_TC2\ :\(\backslash\)}}
+\DoxyCodeLine{00414\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel3))?\ DMA\_FLAG\_TC3\ :\(\backslash\)}}
+\DoxyCodeLine{00415\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel3))?\ DMA\_FLAG\_TC3\ :\(\backslash\)}}
+\DoxyCodeLine{00416\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel4))?\ DMA\_FLAG\_TC4\ :\(\backslash\)}}
+\DoxyCodeLine{00417\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel4))?\ DMA\_FLAG\_TC4\ :\(\backslash\)}}
+\DoxyCodeLine{00418\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel5))?\ DMA\_FLAG\_TC5\ :\(\backslash\)}}
+\DoxyCodeLine{00419\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel5))?\ DMA\_FLAG\_TC5\ :\(\backslash\)}}
+\DoxyCodeLine{00420\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel6))?\ DMA\_FLAG\_TC6\ :\(\backslash\)}}
+\DoxyCodeLine{00421\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel6))?\ DMA\_FLAG\_TC6\ :\(\backslash\)}}
+\DoxyCodeLine{00422\ \textcolor{preprocessor}{\ \ \ DMA\_FLAG\_TC7)}}
+
+\end{DoxyCode}
+\Hypertarget{group__DMA__Exported__Macros_ga5e765bb3b1c5fc9f1b1abbbb764250bc}\label{group__DMA__Exported__Macros_ga5e765bb3b1c5fc9f1b1abbbb764250bc} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_TE\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_TE\_FLAG\_INDEX}}
+\index{\_\_HAL\_DMA\_GET\_TE\_FLAG\_INDEX@{\_\_HAL\_DMA\_GET\_TE\_FLAG\_INDEX}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_TE\_FLAG\_INDEX}{\_\_HAL\_DMA\_GET\_TE\_FLAG\_INDEX}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TE\+\_\+\+FLAG\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga198c0b4984a79514964d3dd5ae546008}{DMA\_FLAG\_TE1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga198c0b4984a79514964d3dd5ae546008}{DMA\_FLAG\_TE1}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga23d7631dd10c645e06971b2543ba2949}{DMA1\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga6d81cc881182d35ba7a34c2759cd97f3}{DMA\_FLAG\_TE2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga316024020799373b9d8e35c316c74f24}{DMA2\_Channel2}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga6d81cc881182d35ba7a34c2759cd97f3}{DMA\_FLAG\_TE2}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gacf7b6093a37b306d7f1f50b2f200f0d0}{DMA1\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga3e3d70e09d144c82ffc17d2ece186339}{DMA\_FLAG\_TE3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga6dca52a79587e0ca9a5d669048b4c7eb}{DMA2\_Channel3}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga3e3d70e09d144c82ffc17d2ece186339}{DMA\_FLAG\_TE3}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad2c42743316bf64da557130061b1f56a}{DMA1\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gab1bb20d71697de115b87319347216a26}{DMA\_FLAG\_TE4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga612b396657695191ad740b0b59bc9f12}{DMA2\_Channel4}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_gab1bb20d71697de115b87319347216a26}{DMA\_FLAG\_TE4}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga06ff98ddef3c962795d2e2444004abff}{DMA1\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga04a05f5cc8f193757d8658d97a857b3a}{DMA\_FLAG\_TE5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga521c13b7d0f82a6897d47995da392750}{DMA2\_Channel5}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga04a05f5cc8f193757d8658d97a857b3a}{DMA\_FLAG\_TE5}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac013c4376e4797831b5ddd2a09519df8}{DMA1\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga50e2f489b50cbe42d03a80ca7cd42dad}{DMA\_FLAG\_TE6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga74a1cc88faa12064831fb58fe3fd4fd3}{DMA2\_Channel6}}))?\ \mbox{\hyperlink{group__DMA__flag__definitions_ga50e2f489b50cbe42d03a80ca7cd42dad}{DMA\_FLAG\_TE6}}\ :\(\backslash\)}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group__DMA__flag__definitions_ga312e060067bffdf46136be4f7b0b614c}{DMA\_FLAG\_TE7}})}
+
+\end{DoxyCode}
+
+
+Return the current DMA Channel transfer error flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified transfer error flag index. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00449}{449}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00449\ \textcolor{preprocessor}{\#define\ \_\_HAL\_DMA\_GET\_TE\_FLAG\_INDEX(\_\_HANDLE\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{00450\ \textcolor{preprocessor}{(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel1))?\ DMA\_FLAG\_TE1\ :\(\backslash\)}}
+\DoxyCodeLine{00451\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel1))?\ DMA\_FLAG\_TE1\ :\(\backslash\)}}
+\DoxyCodeLine{00452\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel2))?\ DMA\_FLAG\_TE2\ :\(\backslash\)}}
+\DoxyCodeLine{00453\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel2))?\ DMA\_FLAG\_TE2\ :\(\backslash\)}}
+\DoxyCodeLine{00454\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel3))?\ DMA\_FLAG\_TE3\ :\(\backslash\)}}
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel3))?\ DMA\_FLAG\_TE3\ :\(\backslash\)}}
+\DoxyCodeLine{00456\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel4))?\ DMA\_FLAG\_TE4\ :\(\backslash\)}}
+\DoxyCodeLine{00457\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel4))?\ DMA\_FLAG\_TE4\ :\(\backslash\)}}
+\DoxyCodeLine{00458\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel5))?\ DMA\_FLAG\_TE5\ :\(\backslash\)}}
+\DoxyCodeLine{00459\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel5))?\ DMA\_FLAG\_TE5\ :\(\backslash\)}}
+\DoxyCodeLine{00460\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA1\_Channel6))?\ DMA\_FLAG\_TE6\ :\(\backslash\)}}
+\DoxyCodeLine{00461\ \textcolor{preprocessor}{\ ((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)\ ==\ ((uint32\_t)DMA2\_Channel6))?\ DMA\_FLAG\_TE6\ :\(\backslash\)}}
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\ \ \ DMA\_FLAG\_TE7)}}
+
+\end{DoxyCode}
+\Hypertarget{group__DMA__Exported__Macros_gaadcee34f0999c8eafd37de2f69daa0ac}\label{group__DMA__Exported__Macros_gaadcee34f0999c8eafd37de2f69daa0ac} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_RESET\_HANDLE\_STATE@{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE@{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2}{HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+RESET}})}
+
+
+
+Reset DMA handle state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00388}{388}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+

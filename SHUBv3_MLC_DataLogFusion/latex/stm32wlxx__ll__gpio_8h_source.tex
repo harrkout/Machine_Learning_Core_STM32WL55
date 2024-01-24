@@ -1,0 +1,291 @@
+\doxysection{stm32wlxx\+\_\+ll\+\_\+gpio.\+h}
+\hypertarget{stm32wlxx__ll__gpio_8h_source}{}\label{stm32wlxx__ll__gpio_8h_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_gpio.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_gpio.h}}
+\mbox{\hyperlink{stm32wlxx__ll__gpio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00019}00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ STM32WLxx\_LL\_GPIO\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ STM32WLxx\_LL\_GPIO\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00024}00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00027}00027\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx_8h}{stm32wlxx.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00034}00034\ \textcolor{preprocessor}{\#if\ defined\ (GPIOA)\ ||\ defined\ (GPIOB)\ ||\ defined\ (GPIOC)\ ||defined\ (GPIOH)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00040}00040\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00041}00041\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00042}00042\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00043}00043\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00044}00044\ \textcolor{preprocessor}{\#if\ defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00052}00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*USE\_FULL\_LL\_DRIVER*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00054}00054\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00055}00055\ \textcolor{preprocessor}{\#if\ defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00063}00063\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00064}00064\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00065}00065\ \ \ uint32\_t\ Pin;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00068}00068\ \ \ uint32\_t\ Mode;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00074}00074\ \ \ uint32\_t\ Speed;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00080}00080\ \ \ uint32\_t\ OutputType;\ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00086}00086\ \ \ uint32\_t\ Pull;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00092}00092\ \ \ uint32\_t\ Alternate;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00097}00097\ \}\ LL\_GPIO\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00102}00102\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_FULL\_LL\_DRIVER\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00104}00104\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00112}00112\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS0\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00113}00113\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS1\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00114}00114\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS2\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00115}00115\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS3\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00116}00116\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS4\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00117}00117\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS5\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00118}00118\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS6\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00119}00119\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS7\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00120}00120\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS8\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00121}00121\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS9\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00122}00122\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS10\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00123}00123\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_11\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS11\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00124}00124\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS12\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00125}00125\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS13\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00126}00126\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_14\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS14\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00127}00127\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_15\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS15\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00128}00128\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PIN\_ALL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (GPIO\_BSRR\_BS0\ |\ GPIO\_BSRR\_BS1\ \ |\ GPIO\_BSRR\_BS2\ \ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00129}00129\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS3\ \ |\ GPIO\_BSRR\_BS4\ \ |\ GPIO\_BSRR\_BS5\ \ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00130}00130\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS6\ \ |\ GPIO\_BSRR\_BS7\ \ |\ GPIO\_BSRR\_BS8\ \ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00131}00131\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS9\ \ |\ GPIO\_BSRR\_BS10\ |\ GPIO\_BSRR\_BS11\ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00132}00132\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS12\ |\ GPIO\_BSRR\_BS13\ |\ GPIO\_BSRR\_BS14\ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00133}00133\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_BSRR\_BS15)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00141}00141\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_MODE\_INPUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x00000000U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00142}00142\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_MODE\_OUTPUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_MODER\_MODE0\_0\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00143}00143\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_MODE\_ALTERNATE\ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_MODER\_MODE0\_1\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00144}00144\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_MODE\_ANALOG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_MODER\_MODE0\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00152}00152\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_OUTPUT\_PUSHPULL\ \ \ \ \ \ \ \ \ \ \ \ (0x00000000U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00153}00153\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_OUTPUT\_OPENDRAIN\ \ \ \ \ \ \ \ \ \ \ GPIO\_OTYPER\_OT0\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00161}00161\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_SPEED\_FREQ\_LOW\ \ \ \ \ \ \ \ \ \ \ \ \ (0x00000000U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00162}00162\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_SPEED\_FREQ\_MEDIUM\ \ \ \ \ \ \ \ \ \ GPIO\_OSPEEDR\_OSPEED0\_0\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00163}00163\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_SPEED\_FREQ\_HIGH\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_OSPEEDR\_OSPEED0\_1\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00164}00164\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_SPEED\_FREQ\_VERY\_HIGH\ \ \ \ \ \ \ GPIO\_OSPEEDR\_OSPEED0\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00172}00172\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PULL\_NO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x00000000U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00173}00173\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PULL\_UP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_PUPDR\_PUPD0\_0\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00174}00174\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_PULL\_DOWN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_PUPDR\_PUPD0\_1\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00182}00182\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000000U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00183}00183\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000001U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00184}00184\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000002U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00185}00185\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000003U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00186}00186\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000004U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00187}00187\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000005U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00188}00188\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000006U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00189}00189\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000007U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00190}00190\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000008U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00191}00191\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0000009U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00192}00192\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x000000AU)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00193}00193\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_11\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x000000BU)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00194}00194\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x000000CU)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00195}00195\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x000000DU)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00196}00196\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_14\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x000000EU)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00197}00197\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_AF\_15\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x000000FU)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00206}00206\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00222}00222\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_WriteReg(\_\_INSTANCE\_\_,\ \_\_REG\_\_,\ \_\_VALUE\_\_)\ WRITE\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_,\ (\_\_VALUE\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00230}00230\ \textcolor{preprocessor}{\#define\ LL\_GPIO\_ReadReg(\_\_INSTANCE\_\_,\ \_\_REG\_\_)\ READ\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00239}00239\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00278}00278\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_SetPinMode(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin,\ uint32\_t\ Mode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00279}00279\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00280}00280\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00281}00281\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2b671a94c63a612f81e0e9de8152d01c}{MODER}},\ ((Pin\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabad45500839e6f801c64ee9474e4da33}{GPIO\_MODER\_MODE0}}),\ ((Pin\ *\ Pin)\ *\ Mode));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00282}00282\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00283}00283\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2b671a94c63a612f81e0e9de8152d01c}{MODER}},\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabad45500839e6f801c64ee9474e4da33}{GPIO\_MODER\_MODE0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)),\ (Mode\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00284}00284\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00285}00285\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00316}00316\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_GetPinMode(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00317}00317\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00318}00318\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00319}00319\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2b671a94c63a612f81e0e9de8152d01c}{MODER}},\ ((Pin\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabad45500839e6f801c64ee9474e4da33}{GPIO\_MODER\_MODE0}}))\ /\ (Pin\ *\ Pin));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00320}00320\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00321}00321\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2b671a94c63a612f81e0e9de8152d01c}{MODER}},}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabad45500839e6f801c64ee9474e4da33}{GPIO\_MODER\_MODE0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)))\ >>\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00323}00323\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00324}00324\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00325}00325\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00355}00355\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_SetPinOutputType(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask,\ uint32\_t\ OutputType)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00356}00356\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00357}00357\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a9543592bda60cb5261075594bdeedac9}{OTYPER}},\ PinMask,\ (PinMask\ *\ OutputType));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00358}00358\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00359}00359\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00389}00389\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_GetPinOutputType(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00390}00390\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00391}00391\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00392}00392\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a9543592bda60cb5261075594bdeedac9}{OTYPER}},\ Pin)\ /\ Pin);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00393}00393\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00394}00394\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a9543592bda60cb5261075594bdeedac9}{OTYPER}},\ Pin)\ >>\ \mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00395}00395\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00396}00396\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00397}00397\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00430}00430\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_SetPinSpeed(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin,\ uint32\_t\ \ Speed)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00431}00431\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00432}00432\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00433}00433\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a328d16cc6213783ede54e4059ffd50a3}{OSPEEDR}},\ ((Pin\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga25d567c6d24df0adb6402498fd5eb582}{GPIO\_OSPEEDR\_OSPEED0}}),\ ((Pin\ *\ Pin)\ *\ Speed));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00434}00434\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00435}00435\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a328d16cc6213783ede54e4059ffd50a3}{OSPEEDR}},\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga25d567c6d24df0adb6402498fd5eb582}{GPIO\_OSPEEDR\_OSPEED0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)),}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00436}00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ (Speed\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00437}00437\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00438}00438\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00471}00471\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_GetPinSpeed(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00472}00472\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00473}00473\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00474}00474\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a328d16cc6213783ede54e4059ffd50a3}{OSPEEDR}},\ ((Pin\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga25d567c6d24df0adb6402498fd5eb582}{GPIO\_OSPEEDR\_OSPEED0}}))\ /\ (Pin\ *\ Pin));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00475}00475\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00476}00476\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a328d16cc6213783ede54e4059ffd50a3}{OSPEEDR}},}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00477}00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga25d567c6d24df0adb6402498fd5eb582}{GPIO\_OSPEEDR\_OSPEED0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)))\ >>\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00478}00478\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00479}00479\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00509}00509\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_SetPinPull(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin,\ uint32\_t\ Pull)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00510}00510\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00511}00511\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00512}00512\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abeed38529bd7b8de082e490e5d4f1727}{PUPDR}},\ ((Pin\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga757af1d9f0ba5f4ed76320b6932e3741}{GPIO\_PUPDR\_PUPD0}}),\ ((Pin\ *\ Pin)\ *\ Pull));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00513}00513\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00514}00514\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abeed38529bd7b8de082e490e5d4f1727}{PUPDR}},\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga757af1d9f0ba5f4ed76320b6932e3741}{GPIO\_PUPDR\_PUPD0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)),\ (Pull\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00515}00515\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00516}00516\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00517}00517\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00545}00545\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_GetPinPull(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00546}00546\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00547}00547\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00548}00548\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abeed38529bd7b8de082e490e5d4f1727}{PUPDR}},\ ((Pin\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga757af1d9f0ba5f4ed76320b6932e3741}{GPIO\_PUPDR\_PUPD0}}))\ /\ (Pin\ *\ Pin));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00549}00549\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00550}00550\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abeed38529bd7b8de082e490e5d4f1727}{PUPDR}},}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00551}00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga757af1d9f0ba5f4ed76320b6932e3741}{GPIO\_PUPDR\_PUPD0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U)))\ >>\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 2U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00552}00552\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00553}00553\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00554}00554\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00589}00589\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_SetAFPin\_0\_7(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin,\ uint32\_t\ Alternate)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00590}00590\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00591}00591\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00592}00592\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[0],\ ((((Pin\ *\ Pin)\ *\ Pin)\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7ec251e186471ae09aeb3cb0aa788594}{GPIO\_AFRL\_AFSEL0}}),}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00593}00593\ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((Pin\ *\ Pin)\ *\ Pin)\ *\ Pin)\ *\ Alternate));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00594}00594\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00595}00595\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[0],\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7ec251e186471ae09aeb3cb0aa788594}{GPIO\_AFRL\_AFSEL0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 4U)),}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00596}00596\ \ \ \ \ \ \ \ \ \ \ \ \ \ (Alternate\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 4U)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00597}00597\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00598}00598\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00599}00599\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00631}00631\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_GetAFPin\_0\_7(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00632}00632\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00633}00633\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00634}00634\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[0],}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00635}00635\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((Pin\ *\ Pin)\ *\ Pin)\ *\ Pin)\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7ec251e186471ae09aeb3cb0aa788594}{GPIO\_AFRL\_AFSEL0}}))\ /\ (((Pin\ *\ Pin)\ *\ Pin)\ *\ Pin));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00636}00636\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00637}00637\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[0],}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7ec251e186471ae09aeb3cb0aa788594}{GPIO\_AFRL\_AFSEL0}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 4U)))\ >>\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin)\ *\ 4U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00639}00639\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00640}00640\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00641}00641\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00676}00676\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_SetAFPin\_8\_15(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin,\ uint32\_t\ Alternate)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00677}00677\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00678}00678\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00679}00679\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[1],\ (((((Pin\ >>\ 8U)\ *\ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U))\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6ed3881740613378329271150088f1b2}{GPIO\_AFRH\_AFSEL8}}),}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00680}00680\ \ \ \ \ \ \ \ \ \ \ \ \ \ (((((Pin\ >>\ 8U)\ *\ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U))\ *\ Alternate));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00681}00681\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00682}00682\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[1],\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6ed3881740613378329271150088f1b2}{GPIO\_AFRH\_AFSEL8}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin\ >>\ 8U)\ *\ 4U)),}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00683}00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ (Alternate\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin\ >>\ 8U)\ *\ 4U)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00684}00684\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00685}00685\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00686}00686\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00719}00719\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_GetAFPin\_8\_15(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ Pin)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00720}00720\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00721}00721\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00722}00722\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[1],}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00723}00723\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((((Pin\ >>\ 8U)\ *\ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U))\ *\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6ed3881740613378329271150088f1b2}{GPIO\_AFRH\_AFSEL8}}))\ /\ ((((Pin\ >>\ 8U)\ *}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00724}00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U))\ *\ (Pin\ >>\ 8U)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00725}00725\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00726}00726\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ab67c1158c04450d19ad483dcd2192e43}{AFR}}[1],}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00727}00727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6ed3881740613378329271150088f1b2}{GPIO\_AFRH\_AFSEL8}}\ <<\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin\ >>\ 8U)\ *\ 4U)))\ >>\ (\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Pin\ >>\ 8U)\ *\ 4U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00728}00728\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00729}00729\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00730}00730\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00731}00731\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00761}00761\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_LockPin(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00762}00762\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00763}00763\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ temp;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00764}00764\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2612a0f4b3fbdbb6293f6dc70105e190}{LCKR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafa2a83bf31ef76ee3857c7cb0a90c4d9}{GPIO\_LCKR\_LCKK}}\ |\ PinMask);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00765}00765\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2612a0f4b3fbdbb6293f6dc70105e190}{LCKR}},\ PinMask);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00766}00766\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2612a0f4b3fbdbb6293f6dc70105e190}{LCKR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafa2a83bf31ef76ee3857c7cb0a90c4d9}{GPIO\_LCKR\_LCKK}}\ |\ PinMask);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00767}00767\ \ \ \textcolor{comment}{/*\ Read\ LCKK\ register.\ This\ read\ is\ mandatory\ to\ complete\ key\ lock\ sequence\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00768}00768\ \ \ temp\ =\ \mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2612a0f4b3fbdbb6293f6dc70105e190}{LCKR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00769}00769\ \ \ (void)\ temp;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00770}00770\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00771}00771\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00796}00796\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_IsPinLocked(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00797}00797\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00798}00798\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2612a0f4b3fbdbb6293f6dc70105e190}{LCKR}},\ PinMask)\ ==\ (PinMask))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00799}00799\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00800}00800\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00807}00807\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_IsAnyPinLocked(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00808}00808\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00809}00809\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a2612a0f4b3fbdbb6293f6dc70105e190}{LCKR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafa2a83bf31ef76ee3857c7cb0a90c4d9}{GPIO\_LCKR\_LCKK}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafa2a83bf31ef76ee3857c7cb0a90c4d9}{GPIO\_LCKR\_LCKK}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00810}00810\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00811}00811\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00826}00826\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_ReadInputPort(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00827}00827\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00828}00828\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a328d2fe9ef1d513c3a97d30f98f0047c}{IDR}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00829}00829\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00830}00830\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00855}00855\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_IsInputPinSet(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00856}00856\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00857}00857\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a328d2fe9ef1d513c3a97d30f98f0047c}{IDR}},\ PinMask)\ ==\ (PinMask))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00858}00858\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00859}00859\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00867}00867\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_WriteOutputPort(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PortValue)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00868}00868\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00869}00869\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abff7fffd2b5a718715a130006590c75c}{ODR}},\ PortValue);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00870}00870\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00871}00871\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00878}00878\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_ReadOutputPort(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00879}00879\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00880}00880\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abff7fffd2b5a718715a130006590c75c}{ODR}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00881}00881\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00882}00882\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00907}00907\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_GPIO\_IsOutputPinSet(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00908}00908\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00909}00909\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abff7fffd2b5a718715a130006590c75c}{ODR}},\ PinMask)\ ==\ (PinMask))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00910}00910\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00911}00911\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00936}00936\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_SetOutputPin(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00937}00937\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00938}00938\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ac25dd6b9e3d55e17589195b461c5ec80}{BSRR}},\ PinMask);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00939}00939\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00940}00940\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00965}00965\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_ResetOutputPin(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00966}00966\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00967}00967\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_a092e59d908b2ca112e31047e942340cb}{BRR}},\ PinMask);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00968}00968\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00969}00969\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00994}00994\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_GPIO\_TogglePin(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ uint32\_t\ PinMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00995}00995\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00996}00996\ \ \ uint32\_t\ odr\ =\ \mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_abff7fffd2b5a718715a130006590c75c}{ODR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00997}00997\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(GPIOx-\/>\mbox{\hyperlink{structGPIO__TypeDef_ac25dd6b9e3d55e17589195b461c5ec80}{BSRR}},\ ((odr\ \&\ PinMask)\ <<\ 16u)\ |\ (\string~odr\ \&\ PinMask));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00998}00998\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l00999}00999\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01004}01004\ \textcolor{preprocessor}{\#if\ defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01009}01009\ \mbox{\hyperlink{group__Exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{ErrorStatus}}\ LL\_GPIO\_DeInit(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01010}01010\ \mbox{\hyperlink{group__Exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{ErrorStatus}}\ LL\_GPIO\_Init(\mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}\ *GPIOx,\ LL\_GPIO\_InitTypeDef\ *GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01011}01011\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ LL\_GPIO\_StructInit(LL\_GPIO\_InitTypeDef\ *GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01012}01012\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01016}01016\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_FULL\_LL\_DRIVER\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01017}01017\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01026}01026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ defined\ (GPIOA)\ ||\ defined\ (GPIOB)\ ||\ defined\ (GPIOC)\ ||\ defined\ (GPIOH)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01031}01031\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01032}01032\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01033}01033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01034}01034\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__gpio_8h_source_l01035}01035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ STM32WLxx\_LL\_GPIO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,55 @@
+\doxysection{serial\+\_\+cmd.\+h}
+\hypertarget{serial__cmd_8h_source}{}\label{serial__cmd_8h_source}\index{MEMS/Target/serial\_cmd.h@{MEMS/Target/serial\_cmd.h}}
+\mbox{\hyperlink{serial__cmd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00019}00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ SERIAL\_CMD\_H}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ SERIAL\_CMD\_H}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00024}00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00027}00027\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00029}00029\ \textcolor{comment}{/*\ GENERIC\ \ CMD\ \ (0x00\ -\/\ 0x0F)\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00030}\mbox{\hyperlink{serial__cmd_8h_abc725c1ad8a9472e1c765b8f2e1b3e6b}{00030}}\ \textcolor{preprocessor}{\#define\ CMD\_Ping\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00031}\mbox{\hyperlink{serial__cmd_8h_abaaf165159e49796add4d5c17b06f33a}{00031}}\ \textcolor{preprocessor}{\#define\ CMD\_Read\_PresString\ \ \ \ \ \ \ \ \ \ \ \ 0x02}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00032}\mbox{\hyperlink{serial__cmd_8h_a309f891b5f9ad3460745fbaf11357a2e}{00032}}\ \textcolor{preprocessor}{\#define\ CMD\_NACK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x03}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00033}\mbox{\hyperlink{serial__cmd_8h_a1c75d08f88a43f15c7b9480fe6d5fa7e}{00033}}\ \textcolor{preprocessor}{\#define\ CMD\_CheckModeSupport\ \ \ \ \ \ \ \ \ \ \ 0x04}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00034}\mbox{\hyperlink{serial__cmd_8h_acd214297697b56e54df9b3a21fbbb60d}{00034}}\ \textcolor{preprocessor}{\#define\ CMD\_UploadXX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x05}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00035}\mbox{\hyperlink{serial__cmd_8h_aa2e5585319bd296e9b446531352ea691}{00035}}\ \textcolor{preprocessor}{\#define\ CMD\_ChangeSF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x07}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00036}\mbox{\hyperlink{serial__cmd_8h_a69a50b1a9f5858dd888515e48bc596d2}{00036}}\ \textcolor{preprocessor}{\#define\ CMD\_Start\_Data\_Streaming\ \ \ \ \ \ \ 0x08}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00037}\mbox{\hyperlink{serial__cmd_8h_a6468fe5ac0323aac5168632d9ca57730}{00037}}\ \textcolor{preprocessor}{\#define\ CMD\_Stop\_Data\_Streaming\ \ \ \ \ \ \ \ 0x09}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00038}\mbox{\hyperlink{serial__cmd_8h_aa30bfd00678d62ab9d227bd0abbade63}{00038}}\ \textcolor{preprocessor}{\#define\ CMD\_Offline\_Data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10\ }\textcolor{comment}{/*\ Offline\ data\ stream\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00039}\mbox{\hyperlink{serial__cmd_8h_a907c549cf7c51df72aef970098a37ab5}{00039}}\ \textcolor{preprocessor}{\#define\ CMD\_Use\_Offline\_Data\ \ \ \ \ \ \ \ \ \ \ 0x11\ }\textcolor{comment}{/*\ From\ Msg-\/>Data[3]:\ uint8\_t\ UseOfflineData\ (1\ ON,\ 0\ OFF)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00040}\mbox{\hyperlink{serial__cmd_8h_aff8798f3f487e51c1535bc78427c7e21}{00040}}\ \textcolor{preprocessor}{\#define\ CMD\_Get\_App\_Info\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x12\ }\textcolor{comment}{/*\ From\ Msg-\/>Data[3]:\ int\ AlgoFreq;\ uint8\_t\ RequiredData;\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00042}\mbox{\hyperlink{serial__cmd_8h_a81ad85768c6cf07b2a600e8943b3ed41}{00042}}\ \textcolor{preprocessor}{\#define\ CMD\_Set\_DateTime\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0C}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00043}\mbox{\hyperlink{serial__cmd_8h_ac75539ca2f1186c76b12abf76912eb8f}{00043}}\ \textcolor{preprocessor}{\#define\ CMD\_Enter\_DFU\_Mode\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0E}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00044}\mbox{\hyperlink{serial__cmd_8h_aabf01ca723489c1352d4b946c3ad5f2c}{00044}}\ \textcolor{preprocessor}{\#define\ CMD\_Reset\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0F}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00045}\mbox{\hyperlink{serial__cmd_8h_af1b5f450c8f4227ced357f5660fde0d9}{00045}}\ \textcolor{preprocessor}{\#define\ CMD\_Reply\_Add\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x80U}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00047}00047\ \textcolor{comment}{/*\ Algorithm\ \ CMD\ \ (0x51\ -\/\ 0x5F)\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00048}\mbox{\hyperlink{serial__cmd_8h_a83e7f6c3d3fc342854511bd7db66299d}{00048}}\ \textcolor{preprocessor}{\#define\ CMD\_Algo\_Mode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x51}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00049}\mbox{\hyperlink{serial__cmd_8h_a4467d8a28271589a81f7fa072c0bc728}{00049}}\ \textcolor{preprocessor}{\#define\ CMD\_Angle\_Mode\_Cal\_Pos\ \ \ \ \ \ \ \ \ 0x52}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00050}\mbox{\hyperlink{serial__cmd_8h_ae63a6bd09c38eec5313ecdb5b5585a96}{00050}}\ \textcolor{preprocessor}{\#define\ CMD\_Calibration\_Mode\ \ \ \ \ \ \ \ \ \ \ 0x53}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00051}\mbox{\hyperlink{serial__cmd_8h_affa08aa528a84f98277ce92e3cd67fc1}{00051}}\ \textcolor{preprocessor}{\#define\ CMD\_Calibration\_Reset\ \ \ \ \ \ \ \ \ \ 0x54}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00053}00053\ \textcolor{comment}{/*\ ENVIRONMENTAL\ \ CMD\ \ (0x60\ -\/\ 0x6F)\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00054}\mbox{\hyperlink{serial__cmd_8h_a9c203304d8691f8f67c9c6e6bf8def92}{00054}}\ \textcolor{preprocessor}{\#define\ CMD\_PRESSURE\_Init\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x60}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00055}\mbox{\hyperlink{serial__cmd_8h_a6559603f3f7af605c4077c3e1aef095a}{00055}}\ \textcolor{preprocessor}{\#define\ CMD\_HUMIDITY\_TEMPERATURE\_Init\ \ 0x62}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00057}00057\ \textcolor{comment}{/*\ INERTIAL\ \ CMD\ \ (0x70\ -\/\ 0x7F)\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00058}\mbox{\hyperlink{serial__cmd_8h_ae490fc6f71f7f3364e606efe10663276}{00058}}\ \textcolor{preprocessor}{\#define\ CMD\_ACCELERO\_GYRO\_Init\ \ \ \ \ \ \ \ \ 0x76}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00059}\mbox{\hyperlink{serial__cmd_8h_af04ced89747991467f4ddd7e6057b56b}{00059}}\ \textcolor{preprocessor}{\#define\ CMD\_MAGNETO\_Init\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x7A}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00061}00061\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00065}00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SERIAL\_CMD\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{serial__cmd_8h_source_l00066}00066\ }
+
+\end{DoxyCode}

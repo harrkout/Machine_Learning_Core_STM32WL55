@@ -1,0 +1,594 @@
+\doxysection{configuration}
+\hypertarget{group__Basic}{}\label{group__Basic}\index{configuration@{configuration}}
+
+
+This section groups all the functions concerning device basic configuration.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga3121f528bc6eee54e4028373b5e4f9bf}{lsm6dsox\+\_\+id\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__id__t}{lsm6dsox\+\_\+id\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Device "{}\+Who am I"{}.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga9deaf799b5f0c99724fb13e7ec213365}{lsm6dsox\+\_\+init\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga7ac06e154a924b2e8b4644dd56965b37}{lsm6dsox\+\_\+init\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Re-\/initialize the device.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gac103f28aa3811355f8b5c4ad9f6045cb}{lsm6dsox\+\_\+bus\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__bus__mode__t}{lsm6dsox\+\_\+bus\+\_\+mode\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Configures the bus operating mode.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gaf204500f0581849a821cfcf26b68ef3e}{lsm6dsox\+\_\+bus\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__bus__mode__t}{lsm6dsox\+\_\+bus\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Get the bus operating mode.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga0f5552093df2f47e75a5e5025cb51f9f}{lsm6dsox\+\_\+status\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__status__t}{lsm6dsox\+\_\+status\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Get the status of the device.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gad028bc9e9c434302a846f49f91d807ee}{lsm6dsox\+\_\+pin\+\_\+conf\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__pin__conf__t}{lsm6dsox\+\_\+pin\+\_\+conf\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Electrical pin configuration.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gafc7f5591fe6e3a8a8852c327cec89ea9}{lsm6dsox\+\_\+pin\+\_\+conf\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__pin__conf__t}{lsm6dsox\+\_\+pin\+\_\+conf\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Electrical pin configuration.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gad21778f6ee9d75e8233470e6b7d457c7}{lsm6dsox\+\_\+interrupt\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__int__mode__t}{lsm6dsox\+\_\+int\+\_\+mode\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Interrupt pins hardware signal configuration.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gac2ca21a37459374181e2771dd166d2ea}{lsm6dsox\+\_\+interrupt\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__int__mode__t}{lsm6dsox\+\_\+int\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt pins hardware signal configuration.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga79345b8cadf08cf71b18ee309af27c57}{lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__pin__int1__route__t}{lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Route interrupt signals on int1 pin.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga51fe440da6d0bddd86c4cf08249818e2}{lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__pin__int1__route__t}{lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Route interrupt signals on int1 pin.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga06997cf16eab727b5c654e87ffe737c0}{lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__pin__int2__route__t}{lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Route interrupt signals on int2 pin.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga8558a2d6dd6148198de2f6b2b39f9f84}{lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__pin__int2__route__t}{lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Route interrupt signals on int2 pin.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga71c625c1e04c2b9dd939d911c62af5cf}{lsm6dsox\+\_\+all\+\_\+sources\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__all__sources__t}{lsm6dsox\+\_\+all\+\_\+sources\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Get the status of all the interrupt sources.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga5eeb5362a2822c157e590d6e6aa80440}{lsm6dsox\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__md__t}{lsm6dsox\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor conversion parameters selection.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga05b6cfb0b32daa21db48f6d85b6fba11}{lsm6dsox\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__md__t}{lsm6dsox\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor conversion parameters selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gac6ea928fd8510dea5d5cfd23a0829424}{lsm6dsox\+\_\+data\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}aux\+\_\+ctx, \mbox{\hyperlink{structlsm6dsox__md__t}{lsm6dsox\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}md, \mbox{\hyperlink{structlsm6dsox__data__t}{lsm6dsox\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Read data in engineering unit.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_gac62d11ae200049849a169f7f01064eb1}{lsm6dsox\+\_\+embedded\+\_\+sens\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__emb__sens__t}{lsm6dsox\+\_\+emb\+\_\+sens\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Embedded functions.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga3cf451a6c88a6c0e23152520a77eb892}{lsm6dsox\+\_\+embedded\+\_\+sens\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__emb__sens__t}{lsm6dsox\+\_\+emb\+\_\+sens\+\_\+t}} \texorpdfstring{$\ast$}{*}emb\+\_\+sens)
+\begin{DoxyCompactList}\small\item\em Embedded functions.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Basic_ga541538c1d420f0fabee2306049d5b85b}{lsm6dsox\+\_\+embedded\+\_\+sens\+\_\+off}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em turn off all embedded functions.\mbox{[}get\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions concerning device basic configuration. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__Basic_ga71c625c1e04c2b9dd939d911c62af5cf}\label{group__Basic_ga71c625c1e04c2b9dd939d911c62af5cf} 
+\index{configuration@{configuration}!lsm6dsox\_all\_sources\_get@{lsm6dsox\_all\_sources\_get}}
+\index{lsm6dsox\_all\_sources\_get@{lsm6dsox\_all\_sources\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_all\_sources\_get()}{lsm6dsox\_all\_sources\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+all\+\_\+sources\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__all__sources__t}{lsm6dsox\+\_\+all\+\_\+sources\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Get the status of all the interrupt sources.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & the status of all the interrupt sources.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l12731}{12731}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gaf204500f0581849a821cfcf26b68ef3e}\label{group__Basic_gaf204500f0581849a821cfcf26b68ef3e} 
+\index{configuration@{configuration}!lsm6dsox\_bus\_mode\_get@{lsm6dsox\_bus\_mode\_get}}
+\index{lsm6dsox\_bus\_mode\_get@{lsm6dsox\_bus\_mode\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_bus\_mode\_get()}{lsm6dsox\_bus\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+bus\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__bus__mode__t}{lsm6dsox\+\_\+bus\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Get the bus operating mode.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & retrieves the bus operating mode for both the main and the auxiliary interface.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11573}{11573}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gac103f28aa3811355f8b5c4ad9f6045cb}\label{group__Basic_gac103f28aa3811355f8b5c4ad9f6045cb} 
+\index{configuration@{configuration}!lsm6dsox\_bus\_mode\_set@{lsm6dsox\_bus\_mode\_set}}
+\index{lsm6dsox\_bus\_mode\_set@{lsm6dsox\_bus\_mode\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_bus\_mode\_set()}{lsm6dsox\_bus\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+bus\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__bus__mode__t}{lsm6dsox\+\_\+bus\+\_\+mode\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configures the bus operating mode.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & configures the bus operating mode for both the main and the auxiliary interface. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11467}{11467}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gac6ea928fd8510dea5d5cfd23a0829424}\label{group__Basic_gac6ea928fd8510dea5d5cfd23a0829424} 
+\index{configuration@{configuration}!lsm6dsox\_data\_get@{lsm6dsox\_data\_get}}
+\index{lsm6dsox\_data\_get@{lsm6dsox\_data\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_data\_get()}{lsm6dsox\_data\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+data\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__md__t}{lsm6dsox\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{md,  }\item[{\mbox{\hyperlink{structlsm6dsox__data__t}{lsm6dsox\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Read data in engineering unit.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em md} & the sensor conversion parameters.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l14108}{14108}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga3cf451a6c88a6c0e23152520a77eb892}\label{group__Basic_ga3cf451a6c88a6c0e23152520a77eb892} 
+\index{configuration@{configuration}!lsm6dsox\_embedded\_sens\_get@{lsm6dsox\_embedded\_sens\_get}}
+\index{lsm6dsox\_embedded\_sens\_get@{lsm6dsox\_embedded\_sens\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_embedded\_sens\_get()}{lsm6dsox\_embedded\_sens\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+embedded\+\_\+sens\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__emb__sens__t}{lsm6dsox\+\_\+emb\+\_\+sens\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{emb\+\_\+sens }\end{DoxyParamCaption})}
+
+
+
+Embedded functions.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & get the values of registers EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+A e EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+B. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l14360}{14360}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga541538c1d420f0fabee2306049d5b85b}\label{group__Basic_ga541538c1d420f0fabee2306049d5b85b} 
+\index{configuration@{configuration}!lsm6dsox\_embedded\_sens\_off@{lsm6dsox\_embedded\_sens\_off}}
+\index{lsm6dsox\_embedded\_sens\_off@{lsm6dsox\_embedded\_sens\_off}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_embedded\_sens\_off()}{lsm6dsox\_embedded\_sens\_off()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+embedded\+\_\+sens\+\_\+off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+turn off all embedded functions.\mbox{[}get\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & get the values of registers EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+A e EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+B. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l14404}{14404}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gac62d11ae200049849a169f7f01064eb1}\label{group__Basic_gac62d11ae200049849a169f7f01064eb1} 
+\index{configuration@{configuration}!lsm6dsox\_embedded\_sens\_set@{lsm6dsox\_embedded\_sens\_set}}
+\index{lsm6dsox\_embedded\_sens\_set@{lsm6dsox\_embedded\_sens\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_embedded\_sens\_set()}{lsm6dsox\_embedded\_sens\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+embedded\+\_\+sens\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__emb__sens__t}{lsm6dsox\+\_\+emb\+\_\+sens\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Embedded functions.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of registers EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+A e EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+B. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l14304}{14304}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga3121f528bc6eee54e4028373b5e4f9bf}\label{group__Basic_ga3121f528bc6eee54e4028373b5e4f9bf} 
+\index{configuration@{configuration}!lsm6dsox\_id\_get@{lsm6dsox\_id\_get}}
+\index{lsm6dsox\_id\_get@{lsm6dsox\_id\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_id\_get()}{lsm6dsox\_id\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+id\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__id__t}{lsm6dsox\+\_\+id\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Device "{}\+Who am I"{}.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & ID values read from the two interfaces. ID values will be the same.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11346}{11346}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga9deaf799b5f0c99724fb13e7ec213365}\label{group__Basic_ga9deaf799b5f0c99724fb13e7ec213365} 
+\index{configuration@{configuration}!lsm6dsox\_init\_set@{lsm6dsox\_init\_set}}
+\index{lsm6dsox\_init\_set@{lsm6dsox\_init\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_init\_set()}{lsm6dsox\_init\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+init\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga7ac06e154a924b2e8b4644dd56965b37}{lsm6dsox\+\_\+init\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Re-\/initialize the device.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & re-\/initialization mode. Refer to datasheet and application note for more information about differencies between boot and sw\+\_\+reset procedure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11380}{11380}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gac2ca21a37459374181e2771dd166d2ea}\label{group__Basic_gac2ca21a37459374181e2771dd166d2ea} 
+\index{configuration@{configuration}!lsm6dsox\_interrupt\_mode\_get@{lsm6dsox\_interrupt\_mode\_get}}
+\index{lsm6dsox\_interrupt\_mode\_get@{lsm6dsox\_interrupt\_mode\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_interrupt\_mode\_get()}{lsm6dsox\_interrupt\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+interrupt\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__int__mode__t}{lsm6dsox\+\_\+int\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Interrupt pins hardware signal configuration.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & the pins hardware signal settings.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11901}{11901}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gad21778f6ee9d75e8233470e6b7d457c7}\label{group__Basic_gad21778f6ee9d75e8233470e6b7d457c7} 
+\index{configuration@{configuration}!lsm6dsox\_interrupt\_mode\_set@{lsm6dsox\_interrupt\_mode\_set}}
+\index{lsm6dsox\_interrupt\_mode\_set@{lsm6dsox\_interrupt\_mode\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_interrupt\_mode\_set()}{lsm6dsox\_interrupt\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+interrupt\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__int__mode__t}{lsm6dsox\+\_\+int\+\_\+mode\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Interrupt pins hardware signal configuration.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & the pins hardware signal settings. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11840}{11840}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga05b6cfb0b32daa21db48f6d85b6fba11}\label{group__Basic_ga05b6cfb0b32daa21db48f6d85b6fba11} 
+\index{configuration@{configuration}!lsm6dsox\_mode\_get@{lsm6dsox\_mode\_get}}
+\index{lsm6dsox\_mode\_get@{lsm6dsox\_mode\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mode\_get()}{lsm6dsox\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__md__t}{lsm6dsox\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensor conversion parameters selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & get the sensor conversion parameters.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l13414}{13414}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga5eeb5362a2822c157e590d6e6aa80440}\label{group__Basic_ga5eeb5362a2822c157e590d6e6aa80440} 
+\index{configuration@{configuration}!lsm6dsox\_mode\_set@{lsm6dsox\_mode\_set}}
+\index{lsm6dsox\_mode\_set@{lsm6dsox\_mode\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mode\_set()}{lsm6dsox\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__md__t}{lsm6dsox\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensor conversion parameters selection.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & set the sensor conversion parameters by checking the constraints of the device.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l12861}{12861}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gafc7f5591fe6e3a8a8852c327cec89ea9}\label{group__Basic_gafc7f5591fe6e3a8a8852c327cec89ea9} 
+\index{configuration@{configuration}!lsm6dsox\_pin\_conf\_get@{lsm6dsox\_pin\_conf\_get}}
+\index{lsm6dsox\_pin\_conf\_get@{lsm6dsox\_pin\_conf\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pin\_conf\_get()}{lsm6dsox\_pin\_conf\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pin\+\_\+conf\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__pin__conf__t}{lsm6dsox\+\_\+pin\+\_\+conf\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Electrical pin configuration.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & the electrical settings for the configurable pins.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11800}{11800}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_gad028bc9e9c434302a846f49f91d807ee}\label{group__Basic_gad028bc9e9c434302a846f49f91d807ee} 
+\index{configuration@{configuration}!lsm6dsox\_pin\_conf\_set@{lsm6dsox\_pin\_conf\_set}}
+\index{lsm6dsox\_pin\_conf\_set@{lsm6dsox\_pin\_conf\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pin\_conf\_set()}{lsm6dsox\_pin\_conf\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pin\+\_\+conf\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__pin__conf__t}{lsm6dsox\+\_\+pin\+\_\+conf\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Electrical pin configuration.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & the electrical settings for the configurable pins. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11747}{11747}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga51fe440da6d0bddd86c4cf08249818e2}\label{group__Basic_ga51fe440da6d0bddd86c4cf08249818e2} 
+\index{configuration@{configuration}!lsm6dsox\_pin\_int1\_route\_get@{lsm6dsox\_pin\_int1\_route\_get}}
+\index{lsm6dsox\_pin\_int1\_route\_get@{lsm6dsox\_pin\_int1\_route\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pin\_int1\_route\_get()}{lsm6dsox\_pin\_int1\_route\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__pin__int1__route__t}{lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Route interrupt signals on int1 pin.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & the signals that are routed on int1 pin.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l12198}{12198}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga79345b8cadf08cf71b18ee309af27c57}\label{group__Basic_ga79345b8cadf08cf71b18ee309af27c57} 
+\index{configuration@{configuration}!lsm6dsox\_pin\_int1\_route\_set@{lsm6dsox\_pin\_int1\_route\_set}}
+\index{lsm6dsox\_pin\_int1\_route\_set@{lsm6dsox\_pin\_int1\_route\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pin\_int1\_route\_set()}{lsm6dsox\_pin\_int1\_route\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__pin__int1__route__t}{lsm6dsox\+\_\+pin\+\_\+int1\+\_\+route\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Route interrupt signals on int1 pin.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler.(ptr) \\
+\hline
+{\em val} & the signals to route on int1 pin. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11951}{11951}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga8558a2d6dd6148198de2f6b2b39f9f84}\label{group__Basic_ga8558a2d6dd6148198de2f6b2b39f9f84} 
+\index{configuration@{configuration}!lsm6dsox\_pin\_int2\_route\_get@{lsm6dsox\_pin\_int2\_route\_get}}
+\index{lsm6dsox\_pin\_int2\_route\_get@{lsm6dsox\_pin\_int2\_route\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pin\_int2\_route\_get()}{lsm6dsox\_pin\_int2\_route\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__pin__int2__route__t}{lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Route interrupt signals on int2 pin.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & the signals that are routed on int2 pin.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l12580}{12580}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga06997cf16eab727b5c654e87ffe737c0}\label{group__Basic_ga06997cf16eab727b5c654e87ffe737c0} 
+\index{configuration@{configuration}!lsm6dsox\_pin\_int2\_route\_set@{lsm6dsox\_pin\_int2\_route\_set}}
+\index{lsm6dsox\_pin\_int2\_route\_set@{lsm6dsox\_pin\_int2\_route\_set}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pin\_int2\_route\_set()}{lsm6dsox\_pin\_int2\_route\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__pin__int2__route__t}{lsm6dsox\+\_\+pin\+\_\+int2\+\_\+route\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Route interrupt signals on int2 pin.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & the signals to route on int2 pin. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l12338}{12338}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Basic_ga0f5552093df2f47e75a5e5025cb51f9f}\label{group__Basic_ga0f5552093df2f47e75a5e5025cb51f9f} 
+\index{configuration@{configuration}!lsm6dsox\_status\_get@{lsm6dsox\_status\_get}}
+\index{lsm6dsox\_status\_get@{lsm6dsox\_status\_get}!configuration@{configuration}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_status\_get()}{lsm6dsox\_status\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+status\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{aux\+\_\+ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__status__t}{lsm6dsox\+\_\+status\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Get the status of the device.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em aux\+\_\+ctx} & auxiliary communication interface handler. Use NULL to ignore this interface.(ptr) \\
+\hline
+{\em val} & the status of the device.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11687}{11687}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

@@ -1,0 +1,82 @@
+\doxysubsubsubsection{HAL mode structure definition}
+\hypertarget{group__HAL__mode__structure__definition}{}\label{group__HAL__mode__structure__definition}\index{HAL mode structure definition@{HAL mode structure definition}}
+
+
+HAL Mode structure definition.  
+
+
+\doxysubsubsubsubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__HAL__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{HAL\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}} \{ \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71}{HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+NONE}} = 0x00U
+, \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2}{HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+MASTER}} = 0x10U
+, \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53}{HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+SLAVE}} = 0x20U
+, \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e}{HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+MEM}} = 0x40U
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+HAL Mode structure definition. 
+
+\begin{DoxyNote}{Note}
+HAL I2C Mode value coding follow below described bitmap \+:~\newline
+ b7 (not used)~\newline
+ x \+: Should be set to 0~\newline
+ b6~\newline
+ 0 \+: None~\newline
+ 1 \+: Memory (HAL I2C communication is in Memory Mode)~\newline
+ b5~\newline
+ 0 \+: None~\newline
+ 1 \+: Slave (HAL I2C communication is in Slave Mode)~\newline
+ b4~\newline
+ 0 \+: None~\newline
+ 1 \+: Master (HAL I2C communication is in Master Mode)~\newline
+ b3-\/b2-\/b1-\/b0 (not used)~\newline
+ xxxx \+: Should be set to 0000 
+\end{DoxyNote}
+
+
+\doxysubsubsubsubsection{Enumeration Type Documentation}
+\Hypertarget{group__HAL__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}\label{group__HAL__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062} 
+\index{HAL mode structure definition@{HAL mode structure definition}!HAL\_I2C\_ModeTypeDef@{HAL\_I2C\_ModeTypeDef}}
+\index{HAL\_I2C\_ModeTypeDef@{HAL\_I2C\_ModeTypeDef}!HAL mode structure definition@{HAL mode structure definition}}
+\doxysubsubsubsubsubsection{\texorpdfstring{HAL\_I2C\_ModeTypeDef}{HAL\_I2C\_ModeTypeDef}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__HAL__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{HAL\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2C\_MODE\_NONE@{HAL\_I2C\_MODE\_NONE}!HAL mode structure definition@{HAL mode structure definition}}\index{HAL mode structure definition@{HAL mode structure definition}!HAL\_I2C\_MODE\_NONE@{HAL\_I2C\_MODE\_NONE}}}\Hypertarget{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71}\label{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71} 
+HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+NONE&No I2C communication on going ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2C\_MODE\_MASTER@{HAL\_I2C\_MODE\_MASTER}!HAL mode structure definition@{HAL mode structure definition}}\index{HAL mode structure definition@{HAL mode structure definition}!HAL\_I2C\_MODE\_MASTER@{HAL\_I2C\_MODE\_MASTER}}}\Hypertarget{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2}\label{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2} 
+HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+MASTER&I2C communication is in Master Mode ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2C\_MODE\_SLAVE@{HAL\_I2C\_MODE\_SLAVE}!HAL mode structure definition@{HAL mode structure definition}}\index{HAL mode structure definition@{HAL mode structure definition}!HAL\_I2C\_MODE\_SLAVE@{HAL\_I2C\_MODE\_SLAVE}}}\Hypertarget{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53}\label{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53} 
+HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+SLAVE&I2C communication is in Slave Mode ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2C\_MODE\_MEM@{HAL\_I2C\_MODE\_MEM}!HAL mode structure definition@{HAL mode structure definition}}\index{HAL mode structure definition@{HAL mode structure definition}!HAL\_I2C\_MODE\_MEM@{HAL\_I2C\_MODE\_MEM}}}\Hypertarget{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e}\label{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e} 
+HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+MEM&I2C communication is in Memory Mode ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__i2c_8h_source_l00148}{148}} of file \mbox{\hyperlink{stm32wlxx__hal__i2c_8h_source}{stm32wlxx\+\_\+hal\+\_\+i2c.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00149\ \{}
+\DoxyCodeLine{00150\ \ \ \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71}{HAL\_I2C\_MODE\_NONE}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x00U,\ \ \ }
+\DoxyCodeLine{00151\ \ \ \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2}{HAL\_I2C\_MODE\_MASTER}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x10U,\ \ \ }
+\DoxyCodeLine{00152\ \ \ \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53}{HAL\_I2C\_MODE\_SLAVE}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x20U,\ \ \ }
+\DoxyCodeLine{00153\ \ \ \mbox{\hyperlink{group__HAL__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e}{HAL\_I2C\_MODE\_MEM}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x40U\ \ \ \ }
+\DoxyCodeLine{00155\ \}\ \mbox{\hyperlink{group__HAL__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{HAL\_I2C\_ModeTypeDef}};}
+
+\end{DoxyCode}

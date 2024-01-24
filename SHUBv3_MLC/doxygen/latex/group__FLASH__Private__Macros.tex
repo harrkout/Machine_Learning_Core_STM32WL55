@@ -1,0 +1,315 @@
+\doxysubsubsection{FLASH Private Macros}
+\hypertarget{group__FLASH__Private__Macros}{}\label{group__FLASH__Private__Macros}\index{FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga6d2fefb81282421b7762dce79ec62264}{IS\+\_\+\+FLASH\+\_\+\+MAIN\+\_\+\+MEM\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}} + \mbox{\hyperlink{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}{FLASH\+\_\+\+SIZE}} -\/ 1UL)))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gaf5d42691b298ab2c623cc3fc1de1bc46}{IS\+\_\+\+FLASH\+\_\+\+FAST\+\_\+\+PROGRAM\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}} + \mbox{\hyperlink{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}{FLASH\+\_\+\+SIZE}} -\/ 256UL)) \&\& (((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \% 256UL) == 0\+UL))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gaaddfac6ae788cc865fc8f936e32877ad}{IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+MAIN\+\_\+\+MEM\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}} + \mbox{\hyperlink{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}{FLASH\+\_\+\+SIZE}} -\/ 8UL)) \&\& (((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \% 8UL) == 0\+UL))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga56f0cce9fc36a24d78bf44d5820111be}{IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+OTP\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga19ec3af1dfdd2894a57864e5aa2d650b}{OTP\+\_\+\+AREA\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga3a35815d6a2ee963ad77302d5bbf43de}{OTP\+\_\+\+AREA\+\_\+\+END\+\_\+\+ADDR}} + 1UL -\/ 8UL)) \&\& (((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \% 8UL) == 0\+UL))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gaff9f2b3906d51587f68d3075b4305743}{IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__FLASH__Private__Macros_gaaddfac6ae788cc865fc8f936e32877ad}{IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+MAIN\+\_\+\+MEM\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__Private__Macros_ga56f0cce9fc36a24d78bf44d5820111be}{IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+OTP\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga87d08bc131d03fe4ea1ac178d7748e86}{IS\+\_\+\+FLASH\+\_\+\+PAGE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$ \mbox{\hyperlink{group__FLASH__Private__Constants_ga3d98541dcb89735b8d2fd559b75d1ebf}{FLASH\+\_\+\+PAGE\+\_\+\+NB}})
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga8627f5e6a6c048fad09d328680be7e5a}{IS\+\_\+\+ADDR\+\_\+\+ALIGNED\+\_\+64\+BITS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \& 0x7U) == (0x00\+UL))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga4d40dfc92b46733adbabaae5f3db59ab}{IS\+\_\+\+FLASH\+\_\+\+TYPEERASE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gab96611359d7c156f22f1b37929933e34}{IS\+\_\+\+FLASH\+\_\+\+TYPEPROGRAM}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gaaced64683b0f15981a06f3d7581387a4}{IS\+\_\+\+OPTIONBYTE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__FLASH__OB__TYPE_ga48712a166ea192ddcda0f2653679f9ec}{OPTIONBYTE\+\_\+\+WRP}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__TYPE_ga8f0bdb21ef13bae39d5d8b6619e2df06}{OPTIONBYTE\+\_\+\+RDP}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__TYPE_gac7d843e666e15c79688a1914e8ffe7a5}{OPTIONBYTE\+\_\+\+USER}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__TYPE_gade16326e09bd923b54f1ec8622a7bc4b}{OPTIONBYTE\+\_\+\+PCROP}}))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gaa650b86609eea7c5f6e21e482670434e}{IS\+\_\+\+OB\+\_\+\+WRPAREA}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASH__OB__WRP__AREA_gaafeefc14205e2819477a720c372c6b91}{OB\+\_\+\+WRPAREA\+\_\+\+BANK1\+\_\+\+AREAA}}) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASH__OB__WRP__AREA_ga03abdb9bf97227b9e4ea570d6e658aca}{OB\+\_\+\+WRPAREA\+\_\+\+BANK1\+\_\+\+AREAB}}))
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gafe7c28caaae6862bead6e28c986a3cbc}{IS\+\_\+\+OB\+\_\+\+RDP\+\_\+\+LEVEL}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga0c9bf642d010763ca6e4d69882806f94}{IS\+\_\+\+OB\+\_\+\+USER\+\_\+\+TYPE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga5598e7a75aa0fb9f6017c9f118a6ba29}{IS\+\_\+\+OB\+\_\+\+USER\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+TYPE\+\_\+\+\_\+,  \+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga00f2e0d259b77e90eaa26bb44055f74f}{IS\+\_\+\+OB\+\_\+\+USER\+\_\+\+BOR\+\_\+\+LEVEL}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_ga086b76eec80a9ed46484b3687686b234}{IS\+\_\+\+OB\+\_\+\+PCROP\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \& \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__FLASH__OB__PCROP__ZONE_ga2daada6821275578c674b611128c2187}{OB\+\_\+\+PCROP\+\_\+\+ZONE\+\_\+A}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__PCROP__ZONE_ga7b92eff36b85dc1c09c6f820cf70dee2}{OB\+\_\+\+PCROP\+\_\+\+ZONE\+\_\+B}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__PCROP__RDP_gadc1d319505606fc82937702a2baf1bd3}{OB\+\_\+\+PCROP\+\_\+\+RDP\+\_\+\+ERASE}})) == 0U)
+\item 
+\#define \mbox{\hyperlink{group__FLASH__Private__Macros_gaa7abcde2f8cb79da64a7ad43ec9caff4}{IS\+\_\+\+FLASH\+\_\+\+LATENCY}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__FLASH__Private__Macros_ga8627f5e6a6c048fad09d328680be7e5a}\label{group__FLASH__Private__Macros_ga8627f5e6a6c048fad09d328680be7e5a} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_ADDR\_ALIGNED\_64BITS@{IS\_ADDR\_ALIGNED\_64BITS}}
+\index{IS\_ADDR\_ALIGNED\_64BITS@{IS\_ADDR\_ALIGNED\_64BITS}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_ADDR\_ALIGNED\_64BITS}{IS\_ADDR\_ALIGNED\_64BITS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADDR\+\_\+\+ALIGNED\+\_\+64\+BITS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \& 0x7U) == (0x00\+UL))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00923}{923}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_gaf5d42691b298ab2c623cc3fc1de1bc46}\label{group__FLASH__Private__Macros_gaf5d42691b298ab2c623cc3fc1de1bc46} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_FAST\_PROGRAM\_ADDRESS@{IS\_FLASH\_FAST\_PROGRAM\_ADDRESS}}
+\index{IS\_FLASH\_FAST\_PROGRAM\_ADDRESS@{IS\_FLASH\_FAST\_PROGRAM\_ADDRESS}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_FAST\_PROGRAM\_ADDRESS}{IS\_FLASH\_FAST\_PROGRAM\_ADDRESS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+FAST\+\_\+\+PROGRAM\+\_\+\+ADDRESS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}} + \mbox{\hyperlink{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}{FLASH\+\_\+\+SIZE}} -\/ 256UL)) \&\& (((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \% 256UL) == 0\+UL))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00913}{913}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_gaa7abcde2f8cb79da64a7ad43ec9caff4}\label{group__FLASH__Private__Macros_gaa7abcde2f8cb79da64a7ad43ec9caff4} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_LATENCY@{IS\_FLASH\_LATENCY}}
+\index{IS\_FLASH\_LATENCY@{IS\_FLASH\_LATENCY}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_LATENCY}{IS\_FLASH\_LATENCY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+LATENCY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__LATENCY_ga1276f51e97dc9857ca261fae4eb890f3}{FLASH\_LATENCY\_0}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__LATENCY_ga28c611f2cb4a3772ab37c538357fd5f6}{FLASH\_LATENCY\_1}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__LATENCY_ga69d209f9cb4f625010d72555c8dceb03}{FLASH\_LATENCY\_2}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00989}{989}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00989\ \textcolor{preprocessor}{\#define\ IS\_FLASH\_LATENCY(\_\_VALUE\_\_)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ FLASH\_LATENCY\_0)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00990\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ FLASH\_LATENCY\_1)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00991\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ FLASH\_LATENCY\_2))}}
+
+\end{DoxyCode}
+\Hypertarget{group__FLASH__Private__Macros_ga6d2fefb81282421b7762dce79ec62264}\label{group__FLASH__Private__Macros_ga6d2fefb81282421b7762dce79ec62264} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_MAIN\_MEM\_ADDRESS@{IS\_FLASH\_MAIN\_MEM\_ADDRESS}}
+\index{IS\_FLASH\_MAIN\_MEM\_ADDRESS@{IS\_FLASH\_MAIN\_MEM\_ADDRESS}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_MAIN\_MEM\_ADDRESS}{IS\_FLASH\_MAIN\_MEM\_ADDRESS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+MAIN\+\_\+\+MEM\+\_\+\+ADDRESS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}} + \mbox{\hyperlink{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}{FLASH\+\_\+\+SIZE}} -\/ 1UL)))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00911}{911}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_ga87d08bc131d03fe4ea1ac178d7748e86}\label{group__FLASH__Private__Macros_ga87d08bc131d03fe4ea1ac178d7748e86} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_PAGE@{IS\_FLASH\_PAGE}}
+\index{IS\_FLASH\_PAGE@{IS\_FLASH\_PAGE}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_PAGE}{IS\_FLASH\_PAGE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+PAGE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$ \mbox{\hyperlink{group__FLASH__Private__Constants_ga3d98541dcb89735b8d2fd559b75d1ebf}{FLASH\+\_\+\+PAGE\+\_\+\+NB}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00921}{921}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_gaff9f2b3906d51587f68d3075b4305743}\label{group__FLASH__Private__Macros_gaff9f2b3906d51587f68d3075b4305743} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_PROGRAM\_ADDRESS@{IS\_FLASH\_PROGRAM\_ADDRESS}}
+\index{IS\_FLASH\_PROGRAM\_ADDRESS@{IS\_FLASH\_PROGRAM\_ADDRESS}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_PROGRAM\_ADDRESS}{IS\_FLASH\_PROGRAM\_ADDRESS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+ADDRESS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__FLASH__Private__Macros_gaaddfac6ae788cc865fc8f936e32877ad}{IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+MAIN\+\_\+\+MEM\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__Private__Macros_ga56f0cce9fc36a24d78bf44d5820111be}{IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+OTP\+\_\+\+ADDRESS}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00919}{919}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_gaaddfac6ae788cc865fc8f936e32877ad}\label{group__FLASH__Private__Macros_gaaddfac6ae788cc865fc8f936e32877ad} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_PROGRAM\_MAIN\_MEM\_ADDRESS@{IS\_FLASH\_PROGRAM\_MAIN\_MEM\_ADDRESS}}
+\index{IS\_FLASH\_PROGRAM\_MAIN\_MEM\_ADDRESS@{IS\_FLASH\_PROGRAM\_MAIN\_MEM\_ADDRESS}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_PROGRAM\_MAIN\_MEM\_ADDRESS}{IS\_FLASH\_PROGRAM\_MAIN\_MEM\_ADDRESS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+MAIN\+\_\+\+MEM\+\_\+\+ADDRESS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}} + \mbox{\hyperlink{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}{FLASH\+\_\+\+SIZE}} -\/ 8UL)) \&\& (((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \% 8UL) == 0\+UL))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00915}{915}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_ga56f0cce9fc36a24d78bf44d5820111be}\label{group__FLASH__Private__Macros_ga56f0cce9fc36a24d78bf44d5820111be} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_PROGRAM\_OTP\_ADDRESS@{IS\_FLASH\_PROGRAM\_OTP\_ADDRESS}}
+\index{IS\_FLASH\_PROGRAM\_OTP\_ADDRESS@{IS\_FLASH\_PROGRAM\_OTP\_ADDRESS}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_PROGRAM\_OTP\_ADDRESS}{IS\_FLASH\_PROGRAM\_OTP\_ADDRESS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+PROGRAM\+\_\+\+OTP\+\_\+\+ADDRESS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__Peripheral__memory__map_ga19ec3af1dfdd2894a57864e5aa2d650b}{OTP\+\_\+\+AREA\+\_\+\+BASE}}) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__Peripheral__memory__map_ga3a35815d6a2ee963ad77302d5bbf43de}{OTP\+\_\+\+AREA\+\_\+\+END\+\_\+\+ADDR}} + 1UL -\/ 8UL)) \&\& (((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \% 8UL) == 0\+UL))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00917}{917}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_ga4d40dfc92b46733adbabaae5f3db59ab}\label{group__FLASH__Private__Macros_ga4d40dfc92b46733adbabaae5f3db59ab} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_TYPEERASE@{IS\_FLASH\_TYPEERASE}}
+\index{IS\_FLASH\_TYPEERASE@{IS\_FLASH\_TYPEERASE}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_TYPEERASE}{IS\_FLASH\_TYPEERASE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+TYPEERASE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__TYPE__ERASE_ga3664ce55155ec4990873c51737d787ce}{FLASH\_TYPEERASE\_PAGES}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__TYPE__ERASE_ga9bc03534e69c625e1b4f0f05c3852243}{FLASH\_TYPEERASE\_MASSERASE}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00925}{925}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00925\ \textcolor{preprocessor}{\#define\ IS\_FLASH\_TYPEERASE(\_\_VALUE\_\_)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ FLASH\_TYPEERASE\_PAGES)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00926\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ FLASH\_TYPEERASE\_MASSERASE))}}
+
+\end{DoxyCode}
+\Hypertarget{group__FLASH__Private__Macros_gab96611359d7c156f22f1b37929933e34}\label{group__FLASH__Private__Macros_gab96611359d7c156f22f1b37929933e34} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_FLASH\_TYPEPROGRAM@{IS\_FLASH\_TYPEPROGRAM}}
+\index{IS\_FLASH\_TYPEPROGRAM@{IS\_FLASH\_TYPEPROGRAM}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_FLASH\_TYPEPROGRAM}{IS\_FLASH\_TYPEPROGRAM}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+TYPEPROGRAM(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__TYPE__PROGRAM_gabdc2b0b4d2e66c2be90fafbfbf1e225f}{FLASH\_TYPEPROGRAM\_DOUBLEWORD}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__TYPE__PROGRAM_gae2edb2ca56dde4aba97c77502c580d81}{FLASH\_TYPEPROGRAM\_FAST}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00928}{928}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00928\ \textcolor{preprocessor}{\#define\ IS\_FLASH\_TYPEPROGRAM(\_\_VALUE\_\_)\ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ FLASH\_TYPEPROGRAM\_DOUBLEWORD)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00929\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ FLASH\_TYPEPROGRAM\_FAST))}}
+
+\end{DoxyCode}
+\Hypertarget{group__FLASH__Private__Macros_ga086b76eec80a9ed46484b3687686b234}\label{group__FLASH__Private__Macros_ga086b76eec80a9ed46484b3687686b234} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_OB\_PCROP\_CONFIG@{IS\_OB\_PCROP\_CONFIG}}
+\index{IS\_OB\_PCROP\_CONFIG@{IS\_OB\_PCROP\_CONFIG}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_OB\_PCROP\_CONFIG}{IS\_OB\_PCROP\_CONFIG}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+PCROP\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) \& \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__FLASH__OB__PCROP__ZONE_ga2daada6821275578c674b611128c2187}{OB\+\_\+\+PCROP\+\_\+\+ZONE\+\_\+A}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__PCROP__ZONE_ga7b92eff36b85dc1c09c6f820cf70dee2}{OB\+\_\+\+PCROP\+\_\+\+ZONE\+\_\+B}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__PCROP__RDP_gadc1d319505606fc82937702a2baf1bd3}{OB\+\_\+\+PCROP\+\_\+\+RDP\+\_\+\+ERASE}})) == 0U)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00976}{976}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_gafe7c28caaae6862bead6e28c986a3cbc}\label{group__FLASH__Private__Macros_gafe7c28caaae6862bead6e28c986a3cbc} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_OB\_RDP\_LEVEL@{IS\_OB\_RDP\_LEVEL}}
+\index{IS\_OB\_RDP\_LEVEL@{IS\_OB\_RDP\_LEVEL}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_OB\_RDP\_LEVEL}{IS\_OB\_RDP\_LEVEL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+RDP\+\_\+\+LEVEL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__READ__PROTECTION_ga22c7871bda267a2844ab9ca9f7bd38e4}{OB\_RDP\_LEVEL\_0}})\ \ \ ||\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__READ__PROTECTION_ga778207f0d12d87bbff9d55e985aba5bc}{OB\_RDP\_LEVEL\_1}})\ \ \ ||\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__READ__PROTECTION_ga2262afca565429ce2808d835c49e5ee6}{OB\_RDP\_LEVEL\_2}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00957}{957}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00957\ \textcolor{preprocessor}{\#define\ IS\_OB\_RDP\_LEVEL(\_\_VALUE\_\_)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ OB\_RDP\_LEVEL\_0)\ \ \ ||\(\backslash\)}}
+\DoxyCodeLine{00958\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ OB\_RDP\_LEVEL\_1)\ \ \ ||\(\backslash\)}}
+\DoxyCodeLine{00959\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ OB\_RDP\_LEVEL\_2))}}
+
+\end{DoxyCode}
+\Hypertarget{group__FLASH__Private__Macros_ga00f2e0d259b77e90eaa26bb44055f74f}\label{group__FLASH__Private__Macros_ga00f2e0d259b77e90eaa26bb44055f74f} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_OB\_USER\_BOR\_LEVEL@{IS\_OB\_USER\_BOR\_LEVEL}}
+\index{IS\_OB\_USER\_BOR\_LEVEL@{IS\_OB\_USER\_BOR\_LEVEL}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_OB\_USER\_BOR\_LEVEL}{IS\_OB\_USER\_BOR\_LEVEL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+USER\+\_\+\+BOR\+\_\+\+LEVEL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_ga5c53aae131ee67d58ed63b104758c23e}{OB\_BOR\_LEVEL\_0}})\ ||\ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_ga1ba8f79464d15e3a70367bcdec8c192c}{OB\_BOR\_LEVEL\_1}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_gaa11a6dc81e575c99d60f18d78c4c2a28}{OB\_BOR\_LEVEL\_2}})\ ||\ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_gaca4220c096c1c217e070d1dba7fee72f}{OB\_BOR\_LEVEL\_3}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_gaa4b60691eb133ef36d3882d935158d36}{OB\_BOR\_LEVEL\_4}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00972}{972}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00972\ \textcolor{preprocessor}{\#define\ IS\_OB\_USER\_BOR\_LEVEL(\_\_VALUE\_\_)\ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ ==\ OB\_BOR\_LEVEL\_0)\ ||\ ((\_\_VALUE\_\_)\ ==\ OB\_BOR\_LEVEL\_1)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00973\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ OB\_BOR\_LEVEL\_2)\ ||\ ((\_\_VALUE\_\_)\ ==\ OB\_BOR\_LEVEL\_3)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00974\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_VALUE\_\_)\ ==\ OB\_BOR\_LEVEL\_4))}}
+
+\end{DoxyCode}
+\Hypertarget{group__FLASH__Private__Macros_ga5598e7a75aa0fb9f6017c9f118a6ba29}\label{group__FLASH__Private__Macros_ga5598e7a75aa0fb9f6017c9f118a6ba29} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_OB\_USER\_CONFIG@{IS\_OB\_USER\_CONFIG}}
+\index{IS\_OB\_USER\_CONFIG@{IS\_OB\_USER\_CONFIG}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_OB\_USER\_CONFIG}{IS\_OB\_USER\_CONFIG}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+USER\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TYPE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((\_\_TYPE\_\_)\ \&\ \mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga59ac2734e4058c4194db96ba23e26ed5}{OB\_USER\_BOR\_LEV}})\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga59ac2734e4058c4194db96ba23e26ed5}{OB\_USER\_BOR\_LEV}})\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ ((((\_\_VALUE\_\_)\ \&\ \string~(\mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga9232b0910914b321a97762e030c53833}{OB\_USER\_ALL}}\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_ga5c53aae131ee67d58ed63b104758c23e}{OB\_BOR\_LEVEL\_0}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(\mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga9232b0910914b321a97762e030c53833}{OB\_USER\_ALL}}\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_ga1ba8f79464d15e3a70367bcdec8c192c}{OB\_BOR\_LEVEL\_1}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(\mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga9232b0910914b321a97762e030c53833}{OB\_USER\_ALL}}\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_gaa11a6dc81e575c99d60f18d78c4c2a28}{OB\_BOR\_LEVEL\_2}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(\mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga9232b0910914b321a97762e030c53833}{OB\_USER\_ALL}}\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_gaca4220c096c1c217e070d1dba7fee72f}{OB\_BOR\_LEVEL\_3}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(\mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga9232b0910914b321a97762e030c53833}{OB\_USER\_ALL}}\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ \mbox{\hyperlink{group__FLASH__OB__USER__BOR__LEVEL_gaa4b60691eb133ef36d3882d935158d36}{OB\_BOR\_LEVEL\_4}}))\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ ((\string~(\_\_TYPE\_\_)\ \&\ (\_\_VALUE\_\_))\ ==\ 0U))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00964}{964}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00964\ \textcolor{preprocessor}{\#define\ IS\_OB\_USER\_CONFIG(\_\_TYPE\_\_,\ \_\_VALUE\_\_)\ \ \ \ \ \ ((((\_\_TYPE\_\_)\ \&\ OB\_USER\_BOR\_LEV)\ ==\ OB\_USER\_BOR\_LEV)\ \(\backslash\)}}
+\DoxyCodeLine{00965\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ ((((\_\_VALUE\_\_)\ \&\ \string~(OB\_USER\_ALL\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ OB\_BOR\_LEVEL\_0)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00966\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(OB\_USER\_ALL\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ OB\_BOR\_LEVEL\_1)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00967\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(OB\_USER\_ALL\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ OB\_BOR\_LEVEL\_2)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00968\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(OB\_USER\_ALL\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ OB\_BOR\_LEVEL\_3)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00969\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~(OB\_USER\_ALL\ \&\ \string~OB\_USER\_BOR\_LEV))\ ==\ OB\_BOR\_LEVEL\_4))\ \(\backslash\)}}
+\DoxyCodeLine{00970\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ ((\string~(\_\_TYPE\_\_)\ \&\ (\_\_VALUE\_\_))\ ==\ 0U))}}
+
+\end{DoxyCode}
+\Hypertarget{group__FLASH__Private__Macros_ga0c9bf642d010763ca6e4d69882806f94}\label{group__FLASH__Private__Macros_ga0c9bf642d010763ca6e4d69882806f94} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_OB\_USER\_TYPE@{IS\_OB\_USER\_TYPE}}
+\index{IS\_OB\_USER\_TYPE@{IS\_OB\_USER\_TYPE}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_OB\_USER\_TYPE}{IS\_OB\_USER\_TYPE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+USER\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((\_\_VALUE\_\_)\ \&\ \mbox{\hyperlink{group__FLASH__OB__USER__TYPE_ga9232b0910914b321a97762e030c53833}{OB\_USER\_ALL}})\ !=\ 0U)\ \&\&\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~OB\_USER\_ALL)\ ==\ 0U))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00961}{961}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00961\ \textcolor{preprocessor}{\#define\ IS\_OB\_USER\_TYPE(\_\_VALUE\_\_)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((\_\_VALUE\_\_)\ \&\ OB\_USER\_ALL)\ !=\ 0U)\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{00962\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_VALUE\_\_)\ \&\ \string~OB\_USER\_ALL)\ ==\ 0U))}}
+
+\end{DoxyCode}
+\Hypertarget{group__FLASH__Private__Macros_gaa650b86609eea7c5f6e21e482670434e}\label{group__FLASH__Private__Macros_gaa650b86609eea7c5f6e21e482670434e} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_OB\_WRPAREA@{IS\_OB\_WRPAREA}}
+\index{IS\_OB\_WRPAREA@{IS\_OB\_WRPAREA}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_OB\_WRPAREA}{IS\_OB\_WRPAREA}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+WRPAREA(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASH__OB__WRP__AREA_gaafeefc14205e2819477a720c372c6b91}{OB\+\_\+\+WRPAREA\+\_\+\+BANK1\+\_\+\+AREAA}}) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASH__OB__WRP__AREA_ga03abdb9bf97227b9e4ea570d6e658aca}{OB\+\_\+\+WRPAREA\+\_\+\+BANK1\+\_\+\+AREAB}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00955}{955}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+
+\Hypertarget{group__FLASH__Private__Macros_gaaced64683b0f15981a06f3d7581387a4}\label{group__FLASH__Private__Macros_gaaced64683b0f15981a06f3d7581387a4} 
+\index{FLASH Private Macros@{FLASH Private Macros}!IS\_OPTIONBYTE@{IS\_OPTIONBYTE}}
+\index{IS\_OPTIONBYTE@{IS\_OPTIONBYTE}!FLASH Private Macros@{FLASH Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_OPTIONBYTE}{IS\_OPTIONBYTE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OPTIONBYTE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group__FLASH__OB__TYPE_ga48712a166ea192ddcda0f2653679f9ec}{OPTIONBYTE\+\_\+\+WRP}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__TYPE_ga8f0bdb21ef13bae39d5d8b6619e2df06}{OPTIONBYTE\+\_\+\+RDP}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__TYPE_gac7d843e666e15c79688a1914e8ffe7a5}{OPTIONBYTE\+\_\+\+USER}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__FLASH__OB__TYPE_gade16326e09bd923b54f1ec8622a7bc4b}{OPTIONBYTE\+\_\+\+PCROP}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source_l00952}{952}} of file \mbox{\hyperlink{stm32wlxx__hal__flash_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash.\+h}}.
+

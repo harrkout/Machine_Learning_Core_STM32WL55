@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['reversebytestuffcopy_0',['ReverseByteStuffCopy',['../group__MOTION__APPLICATIONS.html#gabf31baf1506c3e9c2d65283dae7bbdbb',1,'ReverseByteStuffCopy(TMsg *Dest, uint8_t *Source):&#160;serial_protocol.c'],['../group__MOTION__APPLICATIONS.html#gabf31baf1506c3e9c2d65283dae7bbdbb',1,'ReverseByteStuffCopy(TMsg *Dest, uint8_t *Source):&#160;serial_protocol.c']]],
+  ['reversebytestuffcopybyte_1',['ReverseByteStuffCopyByte',['../group__MOTION__APPLICATIONS.html#gaae0bc6cd28e1428bf2eff428b0eb1768',1,'ReverseByteStuffCopyByte(uint8_t *Source, uint8_t *Dest):&#160;serial_protocol.c'],['../group__MOTION__APPLICATIONS.html#gaae0bc6cd28e1428bf2eff428b0eb1768',1,'ReverseByteStuffCopyByte(uint8_t *Source, uint8_t *Dest):&#160;serial_protocol.c']]],
+  ['reversebytestuffcopybyte2_2',['ReverseByteStuffCopyByte2',['../group__MOTION__APPLICATIONS.html#ga25ab7e28ed8848f9c01dacbcaf098ee8',1,'ReverseByteStuffCopyByte2(uint8_t Source0, uint8_t Source1, uint8_t *Dest):&#160;serial_protocol.c'],['../group__MOTION__APPLICATIONS.html#ga25ab7e28ed8848f9c01dacbcaf098ee8',1,'ReverseByteStuffCopyByte2(uint8_t Source0, uint8_t Source1, uint8_t *Dest):&#160;serial_protocol.c']]],
+  ['rtc_5fbcd2tobyte_3',['RTC_Bcd2ToByte',['../group__RTC__Private__Functions.html#gaf1bcb309bb9e7ac4a1b4e95a11cfb26f',1,'stm32wlxx_hal_rtc.h']]],
+  ['rtc_5fbytetobcd2_4',['RTC_ByteToBcd2',['../group__RTC__Private__Functions.html#ga8c33f1358a98db0c7c829c38538bf7ba',1,'stm32wlxx_hal_rtc.h']]],
+  ['rtc_5fdateregulate_5',['RTC_DateRegulate',['../group__MOTION__APPLICATIONS.html#ga5e7a789f5c53b90d8949630c953cb1fb',1,'RTC_DateRegulate(uint8_t y, uint8_t m, uint8_t d, uint8_t dw):&#160;demo_serial.c'],['../group__MOTION__APPLICATIONS.html#ga5e7a789f5c53b90d8949630c953cb1fb',1,'RTC_DateRegulate(uint8_t y, uint8_t m, uint8_t d, uint8_t dw):&#160;demo_serial.c']]],
+  ['rtc_5fenterinitmode_6',['RTC_EnterInitMode',['../group__RTC__Private__Functions.html#ga50b2ead8d1755be360de2d624beaf9a0',1,'stm32wlxx_hal_rtc.h']]],
+  ['rtc_5fexitinitmode_7',['RTC_ExitInitMode',['../group__RTC__Private__Functions.html#ga36f8ecad0ea31f8ef0d0479f3efe195c',1,'stm32wlxx_hal_rtc.h']]],
+  ['rtc_5ftimeregulate_8',['RTC_TimeRegulate',['../group__MOTION__APPLICATIONS.html#gaf62c8372ca6f26badbf73d63c6697fb5',1,'RTC_TimeRegulate(uint8_t hh, uint8_t mm, uint8_t ss):&#160;demo_serial.c'],['../group__MOTION__APPLICATIONS.html#gaf62c8372ca6f26badbf73d63c6697fb5',1,'RTC_TimeRegulate(uint8_t hh, uint8_t mm, uint8_t ss):&#160;demo_serial.c']]]
+];

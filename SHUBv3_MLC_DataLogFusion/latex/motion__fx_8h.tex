@@ -1,0 +1,112 @@
+\doxysection{Middlewares/\+ST/\+STM32\+\_\+\+Motion\+FX\+\_\+\+Library/\+Inc/motion\+\_\+fx.h File Reference}
+\hypertarget{motion__fx_8h}{}\label{motion__fx_8h}\index{Middlewares/ST/STM32\_MotionFX\_Library/Inc/motion\_fx.h@{Middlewares/ST/STM32\_MotionFX\_Library/Inc/motion\_fx.h}}
+
+
+Header for motion\+\_\+fx module.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMFX__knobs__t}{MFX\+\_\+knobs\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__FX_gaf5ccf1d39f61513e8082425023488e74}{MFX\+\_\+\+NUM\+\_\+\+AXES}}~3
+\item 
+\#define \mbox{\hyperlink{group__MOTION__FX_ga292ce6d9884e4ee5f56b93bb1199f22f}{MFX\+\_\+\+QNUM\+\_\+\+AXES}}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a5b37dc702010f59d8730e23a3f2af560}{MFX\+\_\+\+ENGINE\+\_\+\+DISABLE}} = 0
+, \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a344375b610df16a794b28c2497336c48}{MFX\+\_\+\+ENGINE\+\_\+\+ENABLE}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{group__MOTION__FX_gaa98798dfbbb140cfd952db24b79a7bfa}{MFX\+\_\+engine\+\_\+fusion\+Type\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__FX_ggaa98798dfbbb140cfd952db24b79a7bfaa451898807d03bf727f6073d2737ddea1}{MFX\+\_\+\+ENGINE\+\_\+6X}} = 0
+, \mbox{\hyperlink{group__MOTION__FX_ggaa98798dfbbb140cfd952db24b79a7bfaa2c2c24eefcc0c89a89bb0e0b31ebfbd1}{MFX\+\_\+\+ENGINE\+\_\+9X}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{group__MOTION__FX_ga50949c1a3f24196e44cec6536a1e0c6d}{MFX\+\_\+engine\+\_\+output\+\_\+ref\+\_\+sys}} \{ \mbox{\hyperlink{group__MOTION__FX_gga50949c1a3f24196e44cec6536a1e0c6daa766f5e63a777d49d373c761abddfd58}{MFX\+\_\+\+ENGINE\+\_\+\+OUTPUT\+\_\+\+NED}} = 0
+, \mbox{\hyperlink{group__MOTION__FX_gga50949c1a3f24196e44cec6536a1e0c6daa187671295faac43a3d5dd7be0ef1b86}{MFX\+\_\+\+ENGINE\+\_\+\+OUTPUT\+\_\+\+ENU}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{group__MOTION__FX_gaa84fa386619d1efd4b57da429ba097cd}{MFX\+\_\+\+Mag\+Cal\+\_\+quality\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__FX_ggaa84fa386619d1efd4b57da429ba097cda360f1369066f9b226d0b3f7c336d6bd5}{MFX\+\_\+\+MAGCALUNKNOWN}} = 0
+, \mbox{\hyperlink{group__MOTION__FX_ggaa84fa386619d1efd4b57da429ba097cda6fb6469429612e6fdf4d5c11752922a3}{MFX\+\_\+\+MAGCALPOOR}}
+, \mbox{\hyperlink{group__MOTION__FX_ggaa84fa386619d1efd4b57da429ba097cdaeed268279181e9a870b40695b9ad1cae}{MFX\+\_\+\+MAGCALOK}}
+, \mbox{\hyperlink{group__MOTION__FX_ggaa84fa386619d1efd4b57da429ba097cda617b6a3acca4ddb0d31d76eccdceed58}{MFX\+\_\+\+MAGCALGOOD}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gafc2170341216ce1d17cd96ba1606be87}{Motion\+FX\+\_\+\+Get\+State\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em Provide the size of motion\+FX to allocate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gaae3cd9bd35e95571829ea5995d1f7a55}{Motion\+FX\+\_\+initialize}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga963567768fcb0f40699bb9efa0b71aaa}{Motion\+FX\+\_\+set\+Knobs}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__knobs__t}{MFX\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Set the internal knobs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gad58df3f3bbb9516938343d1f74ab5d81}{Motion\+FX\+\_\+get\+Knobs}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__knobs__t}{MFX\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Get the current internal knobs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga587ee7f0212aca8dce903ff49bf914c7}{Motion\+FX\+\_\+get\+Status\+\_\+6X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt)
+\begin{DoxyCompactList}\small\item\em Get the status of the 6 axes library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gade28e68801add6ea7a4418f03f99830f}{Motion\+FX\+\_\+get\+Status\+\_\+9X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt)
+\begin{DoxyCompactList}\small\item\em Get the status of the 9 axes library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga18e818a0e34144d57beae4f70f1c2191}{Motion\+FX\+\_\+enable\+\_\+6X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 6 axes function (ACC + GYRO) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga208aa120c91afe5cb9ccf768176ca177}{Motion\+FX\+\_\+enable\+\_\+9X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 9 axes function (ACC + GYRO + MAG) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga87682c2efd1471c800f4c72adf9523a9}{Motion\+FX\+\_\+set\+Gbias}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Set the initial gbias in dps in enu frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga0e9f1d055e28698ac0aead1cc03a86a4}{Motion\+FX\+\_\+get\+Gbias}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Get the initial gbias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga8a4eb3522073e57a4fc14c6e59ce0da5}{Motion\+FX\+\_\+update}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, \mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, float \texorpdfstring{$\ast$}{*}eml\+\_\+deltatime, float \texorpdfstring{$\ast$}{*}eml\+\_\+q\+\_\+update)
+\begin{DoxyCompactList}\small\item\em Run the Kalman filter update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga88d1aefbe23f66b6f796addd4b41e8e2}{Motion\+FX\+\_\+propagate}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, \mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, float \texorpdfstring{$\ast$}{*}eml\+\_\+deltatime)
+\begin{DoxyCompactList}\small\item\em Run the Kalman filter propagate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga39bf37f63f88a5974572aefa968b5cfb}{Motion\+FX\+\_\+\+Mag\+Cal\+\_\+init}} (int sampletime, unsigned short int enable)
+\begin{DoxyCompactList}\small\item\em Initialize magnetic calibration library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gac96af641ca8f3e712dac259e4e53064b}{Motion\+FX\+\_\+\+Mag\+Cal\+\_\+run}} (\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Run magnetic calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga28e2067bdb75c7dd4c920dd4a92f99d4}{Motion\+FX\+\_\+\+Mag\+Cal\+\_\+get\+Params}} (\mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Get magnetic calibration parameters. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga8a02245df7367d338e2ea0a41780f9cd}{Motion\+FX\+\_\+\+Get\+Lib\+Version}} (char \texorpdfstring{$\ast$}{*}version)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for motion\+\_\+fx module. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+6.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10-\/August-\/2021 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2015-\/2017 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{motion__fx_8h_source}{motion\+\_\+fx.\+h}}.
+

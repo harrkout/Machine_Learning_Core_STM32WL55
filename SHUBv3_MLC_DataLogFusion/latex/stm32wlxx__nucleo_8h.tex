@@ -1,0 +1,203 @@
+\doxysection{Drivers/\+BSP/\+STM32\+WLxx\+\_\+\+Nucleo/stm32wlxx\+\_\+nucleo.h File Reference}
+\hypertarget{stm32wlxx__nucleo_8h}{}\label{stm32wlxx__nucleo_8h}\index{Drivers/BSP/STM32WLxx\_Nucleo/stm32wlxx\_nucleo.h@{Drivers/BSP/STM32WLxx\_Nucleo/stm32wlxx\_nucleo.h}}
+
+
+\+: header file for the BSP Common driver  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+nucleo\+\_\+conf.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+nucleo\+\_\+errno.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__STM32L4XX__NUCLEO__LOW__LEVEL__Exported__Constants_ga8d7fca27346eeada2207c6abe6a75727}{\+\_\+\+\_\+\+STM32\+WLXX\+\_\+\+NUCLEO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+MAIN}}~(uint32\+\_\+t)(0x01)
+\begin{DoxyCompactList}\small\item\em STM32\+WLXX NUCLEO BSP Driver version number V1.\+0.\+0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__STM32L4XX__NUCLEO__LOW__LEVEL__Exported__Constants_gaf746e91071db016e3c944e17e7a6a02d}{\+\_\+\+\_\+\+STM32\+WLXX\+\_\+\+NUCLEO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+SUB1}}~(uint32\+\_\+t)(0x00)
+\item 
+\#define \mbox{\hyperlink{group__STM32L4XX__NUCLEO__LOW__LEVEL__Exported__Constants_gafe4d390da47a1d49a80da88549077499}{\+\_\+\+\_\+\+STM32\+WLXX\+\_\+\+NUCLEO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+SUB2}}~(uint32\+\_\+t)(0x00)
+\item 
+\#define \mbox{\hyperlink{group__STM32L4XX__NUCLEO__LOW__LEVEL__Exported__Constants_ga3299b7f812ee14718891ab52cad76c76}{\+\_\+\+\_\+\+STM32\+WLXX\+\_\+\+NUCLEO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+RC}}~(uint32\+\_\+t)(0x00)
+\item 
+\#define \mbox{\hyperlink{group__STM32L4XX__NUCLEO__LOW__LEVEL__Exported__Constants_gaf0dcb8db88078a415efa0fa8663177b3}{\+\_\+\+\_\+\+STM32\+WLXX\+\_\+\+NUCLEO\+\_\+\+BSP\+\_\+\+VERSION}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga3318c8a83270ca693e6957ba5486f95c}{USE\+\_\+\+STM32\+WLXX\+\_\+\+NUCLEO}}
+\begin{DoxyCompactList}\small\item\em Define for STM32\+WLXX\+\_\+\+NUCLEO board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaf31d1fe932254b4a28dea42a59213a70}{USE\+\_\+\+BSP\+\_\+\+COM\+\_\+\+FEATURE}}~0U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gab4be2480bf7d44d52aab1190a65a733c}{LEDn}}~1U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gaf6f84078113b55354d20585131b386f7}{LED2\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_ga79f6797ea82c1fb25cd6c0e14e44d312}{GPIO\+\_\+\+PIN\+\_\+11}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gaf88822ae4b79d37c7735ce1160b59f68}{LED2\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_ga68b66ac73be4c836db878a42e1fea3cd}{GPIOB}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga810e6c23b9a3e66da601b0058ec7a245}{LED2\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga5ad43f3f4d8163d40f7d402ef75d27c5}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga57f4d9343f3fe6d94d83ab2cb45c7d75}{LED2\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+DISABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga60be1be419b57dafbbb93df67d68a424}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+DISABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga767ccc6848085c57858c28f4cc16f853}{BUS\+\_\+\+GPIO\+\_\+\+INSTANCE}}~GPIO
+\begin{DoxyCompactList}\small\item\em User push-\/button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gaa09b6280082e17e190c11da80d35bbd0}{BUS\+\_\+\+BSP\+\_\+\+LED\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga5ad43f3f4d8163d40f7d402ef75d27c5}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga42f00df0002e44285df42043eb2c65f6}{BUS\+\_\+\+BSP\+\_\+\+LED\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_ga68b66ac73be4c836db878a42e1fea3cd}{GPIOB}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga66d1e32afc3b1df88129fb5ec4f364d3}{BUS\+\_\+\+BSP\+\_\+\+LED\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+DISABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga60be1be419b57dafbbb93df67d68a424}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+DISABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga7b541caaeeda0bd8449ccaba10b85df5}{BUS\+\_\+\+BSP\+\_\+\+LED\+\_\+\+GPIO\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_ga79f6797ea82c1fb25cd6c0e14e44d312}{GPIO\+\_\+\+PIN\+\_\+11}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gafd02c108ba5abc6ddc9b17b6a3348880}{BUTTON\+\_\+\+RELEASED}}~0U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga666f4a9872b7185170dd9318ceff91c6}{BUTTON\+\_\+\+PRESSED}}~1U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}~1U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga767ccc6848085c57858c28f4cc16f853}{BUS\+\_\+\+GPIO\+\_\+\+INSTANCE}}~GPIO
+\begin{DoxyCompactList}\small\item\em User push-\/button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga474859b9e2ee4e610554864ce1de73a7}{BUS\+\_\+\+BSP\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga1fde58d775fd2458002df817a68f486e}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gae5cea78873c5c229d2854d1a350c5a56}{BUS\+\_\+\+BSP\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_ga176efbf43a259b7bb0a85a47401505be}{GPIO\+\_\+\+PIN\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gad3422782bf932c7dfebffaa1f2fe93c8}{BUS\+\_\+\+BSP\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+DISABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga7083e491e6a1e165d064d199304bd2f0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+DISABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gaba24eaf9e6a7df3f15b3ff2731d167d0}{BUS\+\_\+\+BSP\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_gac485358099728ddae050db37924dd6b7}{GPIOA}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga34df6915e3013d6a0c74131d3946b659}{USER\+\_\+\+BUTTON\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_ga176efbf43a259b7bb0a85a47401505be}{GPIO\+\_\+\+PIN\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gae2e6fc2fdfda22b4eed3667375a8bd81}{USER\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_gac485358099728ddae050db37924dd6b7}{GPIOA}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga2e6e65a053529869d1c370610825d98f}{USER\+\_\+\+BUTTON\+\_\+\+EXTI\+\_\+\+IRQn}}~\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}{EXTI0\+\_\+\+IRQn}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gac41d04c2244ba780e4749991c85d1e9a}{USER\+\_\+\+BUTTON\+\_\+\+EXTI\+\_\+\+LINE}}~\mbox{\hyperlink{group__EXTI__Line_gac1a9cd58d76e9f497abecc832e3294c8}{EXTI\+\_\+\+LINE\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gade1f2052d170d0e85cc9328fcc307c22}{H\+\_\+\+EXTI\+\_\+0}}~\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga0fa6be53a0678a888f0bb620b9ba0757}{hpb\+\_\+exti}}\mbox{[}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga643816dfbad5c734fc25a29ce8d35bb1a6454f3dfd31c55a877e1b6684451d076}{BUTTON\+\_\+\+USER}}\mbox{]}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga9dbb47fb77045eaab9bc21b5ce0a4563}{BUS\+\_\+\+LPUART1\+\_\+\+INSTANCE}}~\mbox{\hyperlink{group__Peripheral__declaration_ga73eb37d103f4e4f2d18ec3d3f5208ab9}{LPUART1}}
+\begin{DoxyCompactList}\small\item\em Definition for COM portx, connected to LPUART1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga7053abb713b9318d899fae3ea7b9881c}{BUS\+\_\+\+LPUART1\+\_\+\+CTS\+\_\+\+GPIO\+\_\+\+AF}}~\mbox{\hyperlink{group__GPIOEx__Alternate__function__selection_gae0fa3a1c080d30ed70f6caac952da16f}{GPIO\+\_\+\+AF8\+\_\+\+LPUART1}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gacfb0750d0adcf8e860c43b59fe1a1cea}{BUS\+\_\+\+LPUART1\+\_\+\+CTS\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_ga68b66ac73be4c836db878a42e1fea3cd}{GPIOB}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gace831c673b37d7d346862a314f1ef794}{BUS\+\_\+\+LPUART1\+\_\+\+CTS\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga5ad43f3f4d8163d40f7d402ef75d27c5}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga234b6fddd2a7a501c0eb9c20761163d3}{BUS\+\_\+\+LPUART1\+\_\+\+CTS\+\_\+\+GPIO\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_ga173023dced8f9692ade0f1176558ef70}{GPIO\+\_\+\+PIN\+\_\+13}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gad40ddd905b42e578caca7ab413d35b9a}{BUS\+\_\+\+LPUART1\+\_\+\+CTS\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+DISABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga60be1be419b57dafbbb93df67d68a424}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+DISABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gae9baaf96032a5cf93da4a522b24b5511}{BUS\+\_\+\+LPUART1\+\_\+\+RTS\+\_\+\+GPIO\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_ga95f9ce5911fa8b209defb969db93ced3}{GPIO\+\_\+\+PIN\+\_\+12}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga94cd285f9a138e49abb544d8f5d6de8e}{BUS\+\_\+\+LPUART1\+\_\+\+RTS\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_ga68b66ac73be4c836db878a42e1fea3cd}{GPIOB}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga2cec3914092a724308c1c25fde6a22f9}{BUS\+\_\+\+LPUART1\+\_\+\+RTS\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+DISABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga60be1be419b57dafbbb93df67d68a424}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+DISABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga4180394dcab06e2d6ce0705f68af48f6}{BUS\+\_\+\+LPUART1\+\_\+\+RTS\+\_\+\+GPIO\+\_\+\+AF}}~\mbox{\hyperlink{group__GPIOEx__Alternate__function__selection_gae0fa3a1c080d30ed70f6caac952da16f}{GPIO\+\_\+\+AF8\+\_\+\+LPUART1}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga93d408576b51c794b7de51a940d428f6}{BUS\+\_\+\+LPUART1\+\_\+\+RTS\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga5ad43f3f4d8163d40f7d402ef75d27c5}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga1b9e73df5fcb7e5999bf719a6738b695}{BUS\+\_\+\+LPUART1\+\_\+\+RX\+\_\+\+GPIO\+\_\+\+AF}}~\mbox{\hyperlink{group__GPIOEx__Alternate__function__selection_gae0fa3a1c080d30ed70f6caac952da16f}{GPIO\+\_\+\+AF8\+\_\+\+LPUART1}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gaeac0515af806aed26e90f5dc15ca2f1f}{BUS\+\_\+\+LPUART1\+\_\+\+RX\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga1fde58d775fd2458002df817a68f486e}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga4bb7a15b603b5cf884b78c27abc2c747}{BUS\+\_\+\+LPUART1\+\_\+\+RX\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+DISABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga7083e491e6a1e165d064d199304bd2f0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+DISABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gaad87c80001f46757d2dc0a00d07c0d79}{BUS\+\_\+\+LPUART1\+\_\+\+RX\+\_\+\+GPIO\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_gadcaf899c018a0dde572b5af783565c62}{GPIO\+\_\+\+PIN\+\_\+3}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga72dc69bdeb7980575387c78ab0a121f3}{BUS\+\_\+\+LPUART1\+\_\+\+RX\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_gac485358099728ddae050db37924dd6b7}{GPIOA}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga823671b59f2f0112ecb2dc1ae62aa604}{BUS\+\_\+\+LPUART1\+\_\+\+TX\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga1fde58d775fd2458002df817a68f486e}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+ENABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga98149616f29e19bd45830dbc261985d1}{BUS\+\_\+\+LPUART1\+\_\+\+TX\+\_\+\+GPIO\+\_\+\+AF}}~\mbox{\hyperlink{group__GPIOEx__Alternate__function__selection_gae0fa3a1c080d30ed70f6caac952da16f}{GPIO\+\_\+\+AF8\+\_\+\+LPUART1}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gab5d7f3034d342baa71fb0a0d510cd836}{BUS\+\_\+\+LPUART1\+\_\+\+TX\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+DISABLE}}()~\mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga7083e491e6a1e165d064d199304bd2f0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+DISABLE}}()
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga4c6423346aa7226da6dc43e741f7d7c4}{BUS\+\_\+\+LPUART1\+\_\+\+TX\+\_\+\+GPIO\+\_\+\+PIN}}~\mbox{\hyperlink{group__GPIO__pins_ga6eee38b797a7268f04357dfa2759efd2}{GPIO\+\_\+\+PIN\+\_\+2}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gae9cef43be57b56a3d1c932efc82cee2a}{BUS\+\_\+\+LPUART1\+\_\+\+TX\+\_\+\+GPIO\+\_\+\+PORT}}~\mbox{\hyperlink{group__Peripheral__declaration_gac485358099728ddae050db37924dd6b7}{GPIOA}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga500e022eca97f5d5cd84b89c29e20d9e}{USE\+\_\+\+BSP\+\_\+\+COM}}~0U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gae4e30044c77234f9c00f69ece2b417df}{USE\+\_\+\+COM\+\_\+\+LOG}}~1U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga08276683c87b1e200ca1e457937cbb12}{BSP\+\_\+\+BUTTON\+\_\+\+USER\+\_\+\+IT\+\_\+\+PRIORITY}}~15U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga3b504ca34039bb8b0d5fe817e8422b31}{BUTTON\+\_\+\+KEY}}~\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga643816dfbad5c734fc25a29ce8d35bb1a6454f3dfd31c55a877e1b6684451d076}{BUTTON\+\_\+\+USER}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga070f05e8116f395d4b2e1af4ab64a5e3}{MX\+\_\+\+UART\+\_\+\+Init\+Type\+Def}}~COM\+\_\+\+Init\+Type\+Def
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga127194bd5f702e26eff1ca2edf0a0337}{MX\+\_\+\+UART\+\_\+\+Stop\+Bits\+Type\+Def}}~COM\+\_\+\+Stop\+Bits\+Type\+Def
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaf71faa6e3dd7166a46dc2268a83af513}{MX\+\_\+\+UART\+\_\+\+Parity\+Type\+Def}}~COM\+\_\+\+Parity\+Type\+Def
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga6fca30cceb49e9d7dd790ab3359ba8b6}{MX\+\_\+\+UART\+\_\+\+Hw\+Flow\+Ctl\+Type\+Def}}~COM\+\_\+\+Hw\+Flow\+Ctl\+Type\+Def
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}}~1U
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga664acafea688582aea600a52e04c785f}{COM1\+\_\+\+UART}}~\mbox{\hyperlink{group__Peripheral__declaration_ga73eb37d103f4e4f2d18ec3d3f5208ab9}{LPUART1}}
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gae15ba11d8352fc1eeac46d34aafad1ee}{COM\+\_\+\+POLL\+\_\+\+TIMEOUT}}~1000
+\item 
+\#define \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga016550989cd3ba081b170356050788b8}{hlpuart1}}~\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\+\_\+uart}}\mbox{[}COM1\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} \{ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ggaa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a}{LED2}} = 0
+, \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ggaa059704b7ca945eb9c1e7f2c3d03fecda0ad916c7f80666dc88f6b5b22a72e742}{LED\+\_\+\+GREEN}} = LED2
+ \}
+\item 
+enum \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} \{ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga643816dfbad5c734fc25a29ce8d35bb1a6454f3dfd31c55a877e1b6684451d076}{BUTTON\+\_\+\+USER}} = 0U
+ \}
+\item 
+enum \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga48825b7c7d851c440ef8e808fd9d8f0a}{Button\+Mode\+\_\+\+Type\+Def}} \{ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga48825b7c7d851c440ef8e808fd9d8f0aa9411f3542831027b24c493abfb998522}{BUTTON\+\_\+\+MODE\+\_\+\+GPIO}} = 0
+, \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga48825b7c7d851c440ef8e808fd9d8f0aa13c1ad97bc3db33d7f2b5a7c116bc8f5}{BUTTON\+\_\+\+MODE\+\_\+\+EXTI}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_gac791c242a2365c81b3e2c3da94fc8bc2}{BSP\+\_\+\+Get\+Version}} (void)
+\begin{DoxyCompactList}\small\item\em This method returns the STM32\+WLxx NUCLEO BSP Driver revision. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_gabdaab4f270e422a9b4c51ab0b46805d6}{BSP\+\_\+\+LED\+\_\+\+Init}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Configures LED on GPIO and/or on MFX. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga6e75d0d61e97bab0a93f0d9735c38a82}{BSP\+\_\+\+LED\+\_\+\+De\+Init}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em De\+Init LEDs. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga3e213ea9b2686f5c20d81e9137b5a0d0}{BSP\+\_\+\+LED\+\_\+\+On}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED On. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_gaea34e7387bd59481a5995f6dc99dfcfe}{BSP\+\_\+\+LED\+\_\+\+Off}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED Off. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga9cfb0f9b27e11a3efce50bcc045e8938}{BSP\+\_\+\+LED\+\_\+\+Toggle}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Toggles the selected LED. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga621cb57dc226c380bc12bc24300675e7}{BSP\+\_\+\+LED\+\_\+\+Get\+State}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\+\_\+\+Type\+Def}} Led)
+\begin{DoxyCompactList}\small\item\em Get the status of the LED. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga36ae7750be3904a4eac9465368fb8c95}{BSP\+\_\+\+PB\+\_\+\+Init}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} Button, \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga48825b7c7d851c440ef8e808fd9d8f0a}{Button\+Mode\+\_\+\+Type\+Def}} Button\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures button GPIO and EXTI Line. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_gaf682838f957fe4c9c2299342f404f78e}{BSP\+\_\+\+PB\+\_\+\+De\+Init}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} Button)
+\begin{DoxyCompactList}\small\item\em Push Button De\+Init. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga2a873fc1a9478adb9f92027cf3f31f00}{BSP\+\_\+\+PB\+\_\+\+Get\+State}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} Button)
+\begin{DoxyCompactList}\small\item\em Returns the selected button state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga6b81100f595935ad2744a6b09a3e52e1}{BSP\+\_\+\+PB\+\_\+\+Callback}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} Button)
+\begin{DoxyCompactList}\small\item\em BSP Push Button callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_gafc9200e75ead474a8953b027735787e9}{BSP\+\_\+\+PB\+\_\+\+IRQHandler}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} Button)
+\begin{DoxyCompactList}\small\item\em User EXTI line detection callbacks. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga88f2724b35dad8d0f1a31bfacce40d90}{BSP\+\_\+\+COM\+\_\+\+Select\+Log\+Port}} (COM\+\_\+\+Type\+Def COM)
+\begin{DoxyCompactList}\small\item\em Select the active COM port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__UART__Exported__Types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\+\_\+uart}} \mbox{[}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}}\mbox{]}
+\item 
+\mbox{\hyperlink{structEXTI__HandleTypeDef}{EXTI\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Variables_ga0fa6be53a0678a888f0bb620b9ba0757}{hpb\+\_\+exti}} \mbox{[}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: header file for the BSP Common driver 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__nucleo_8h_source}{stm32wlxx\+\_\+nucleo.\+h}}.
+

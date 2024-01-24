@@ -1,0 +1,978 @@
+\doxysection{stm32wlxx\+\_\+hal\+\_\+dma.\+c}
+\hypertarget{stm32wlxx__hal__dma_8c_source}{}\label{stm32wlxx__hal__dma_8c_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_dma.c@{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_dma.c}}
+\mbox{\hyperlink{stm32wlxx__hal__dma_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00089}00089\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00090}00090\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__hal_8h}{stm32wlxx\_hal.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00101}00101\ \textcolor{preprocessor}{\#ifdef\ HAL\_DMA\_MODULE\_ENABLED}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00103}00103\ \textcolor{comment}{/*\ Private\ typedef\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00104}00104\ \textcolor{comment}{/*\ Private\ define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00105}00105\ \textcolor{comment}{/*\ Private\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00106}00106\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00107}00107\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00112}00112\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DMA\_SetConfig(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ uint32\_t\ SrcAddress,\ uint32\_t\ DstAddress,\ uint32\_t\ DataLength);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00113}00113\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DMA\_CalcDMAMUXChannelBaseAndMask(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00114}00114\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DMA\_CalcDMAMUXRequestGenBaseAndMask(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00120}00120\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00152}00152\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group1_ga0fbcb690074233a03f2fa366dc22ff01}{HAL\_DMA\_Init}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00153}00153\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00154}00154\ \ \ \textcolor{comment}{/*\ Check\ the\ DMA\ handle\ allocation\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00155}00155\ \ \ \textcolor{keywordflow}{if}\ (hdma\ ==\ NULL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00156}00156\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00157}00157\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00158}00158\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00160}00160\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00161}00161\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__Exported__macros_ga40beb02b397c5f47e22a83fc28034afe}{IS\_DMA\_ALL\_INSTANCE}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00162}00162\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_gae2b02e8e823854bcd7c5746cdd29e70d}{IS\_DMA\_DIRECTION}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_ab94410c1333b512e271b1c135fe50916}{Direction}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00163}00163\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_ga28762105b3f567c16ba79a47e68ff0fa}{IS\_DMA\_PERIPHERAL\_INC\_STATE}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a4925ca3ceb52340daddc92817dc304d9}{PeriphInc}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00164}00164\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_gaa880f39d499d1e80449cf80381e4eb67}{IS\_DMA\_MEMORY\_INC\_STATE}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a831756fbcd64feb1e570a9bf743b5b8d}{MemInc}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00165}00165\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_gad7916e0ae55cdf5efdfa68a09a028037}{IS\_DMA\_PERIPHERAL\_DATA\_SIZE}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_aca5b89241171c093fd0fc6dacf72683c}{PeriphDataAlignment}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00166}00166\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_gac9e3748cebcb16d4ae4206d562bc804c}{IS\_DMA\_MEMORY\_DATA\_SIZE}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_afe3adac32f5411b1a744c030f398aa5e}{MemDataAlignment}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00167}00167\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_gad88ee5030574d6a573904378fb62c7ac}{IS\_DMA\_MODE}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00168}00168\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_gaa1cae2ab458948511596467c87cd02b6}{IS\_DMA\_PRIORITY}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a72acf77c0b19359eb70764505ae4bd70}{Priority}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00170}00170\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_ga0c6c13bc917ee21022b59a3474f256bc}{IS\_DMA\_ALL\_REQUEST}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00172}00172\ \ \ \textcolor{comment}{/*\ Compute\ the\ channel\ index\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00173}00173\ \ \ \textcolor{keywordflow}{if}\ ((uint32\_t)(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}})\ <\ (uint32\_t)(\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00174}00174\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00175}00175\ \ \ \ \ \textcolor{comment}{/*\ DMA1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00176}00176\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ =\ (((uint32\_t)hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}})\ /\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga23d7631dd10c645e06971b2543ba2949}{DMA1\_Channel2}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}}))\ <<\ 2U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00177}00177\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_gacc16d2a5937f7585320a98f7f6b578f9}{DMA1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00178}00178\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00179}00179\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00180}00180\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00181}00181\ \ \ \ \ \textcolor{comment}{/*\ DMA2\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00182}00182\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ =\ (((uint32\_t)hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}})\ /\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga316024020799373b9d8e35c316c74f24}{DMA2\_Channel2}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))\ <<\ 2U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00183}00183\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_ga506520140eec1708bc7570c49bdf972d}{DMA2}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00184}00184\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00186}00186\ \ \ \textcolor{comment}{/*\ Change\ DMA\ peripheral\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00187}00187\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef}{HAL\_DMA\_STATE\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00189}00189\ \ \ \textcolor{comment}{/*\ Clear\ PL,\ MSIZE,\ PSIZE,\ MINC,\ PINC,\ CIRC,\ DIR\ and\ MEM2MEM\ bits\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00190}00190\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}},\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97726688157629243aa59bb60e33c284}{DMA\_CCR\_PL}}\ \ \ \ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga492495253fe3f05ea83dd3c3dbb5dddf}{DMA\_CCR\_MSIZE}}\ \ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1a8d824b9bff520523fccfbe57b07516}{DMA\_CCR\_PSIZE}}\ \ |\ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa189138f534283d876f654ec9474987e}{DMA\_CCR\_MINC}}\ \ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga028cb96357bd24868a74ee1134a35b7e}{DMA\_CCR\_PINC}}\ \ \ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga445471396e741418bcd6f63404f4052c}{DMA\_CCR\_CIRC}}\ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8f1ece172cf3c3e696b86d401d7345a2}{DMA\_CCR\_DIR}}\ \ \ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5c87a41026384e25fe2312d03af76215}{DMA\_CCR\_MEM2MEM}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00194}00194\ \ \ \textcolor{comment}{/*\ Set\ the\ DMA\ Channel\ configuration\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00195}00195\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}},\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_ab94410c1333b512e271b1c135fe50916}{Direction}}\ \ \ \ \ \ \ \ \ \ \ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a4925ca3ceb52340daddc92817dc304d9}{PeriphInc}}\ \ \ \ \ \ \ \ \ \ \ |\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a831756fbcd64feb1e570a9bf743b5b8d}{MemInc}}\ \ \ \ \ \ \ \ \ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_aca5b89241171c093fd0fc6dacf72683c}{PeriphDataAlignment}}\ |\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_afe3adac32f5411b1a744c030f398aa5e}{MemDataAlignment}}\ |\ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a72acf77c0b19359eb70764505ae4bd70}{Priority}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00200}00200\ \ \ \textcolor{comment}{/*\ Initialize\ parameters\ for\ DMAMUX\ channel\ :}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00201}00201\ \textcolor{comment}{\ \ \ \ \ DMAmuxChannel,\ DMAmuxChannelStatus\ and\ DMAmuxChannelStatusMask}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00202}00202\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00203}00203\ \ \ DMA\_CalcDMAMUXChannelBaseAndMask(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00205}00205\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_ab94410c1333b512e271b1c135fe50916}{Direction}}\ ==\ \mbox{\hyperlink{group__DMA__Data__transfer__direction_ga0695035d725855ccf64d2d8452a33810}{DMA\_MEMORY\_TO\_MEMORY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00206}00206\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00207}00207\ \ \ \ \ \textcolor{comment}{/*\ if\ memory\ to\ memory\ force\ the\ request\ to\ 0*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00208}00208\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ =\ \mbox{\hyperlink{group__DMA__request_ga83ec6137a0f228f2bdf392e0c583fff1}{DMA\_REQUEST\_MEM2MEM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00209}00209\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00211}00211\ \ \ \textcolor{comment}{/*\ Set\ peripheral\ request\ \ to\ DMAMUX\ channel\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00212}00212\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}-\/>\mbox{\hyperlink{structDMAMUX__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ =\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga429e04913f0ea2ec973e5e82c0264766}{DMAMUX\_CxCR\_DMAREQ\_ID}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00214}00214\ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ synchro\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00215}00215\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}-\/>\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef_ac011ddcfe531f8e16787ea851c1f3667}{CFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00217}00217\ \ \ \textcolor{keywordflow}{if}\ (((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ >\ \ 0UL)\ \&\&\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ <=\ \mbox{\hyperlink{group__DMA__request_ga4c9ce5bc5fe8b5e64abf48302900819d}{DMA\_REQUEST\_GENERATOR3}})))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00218}00218\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00219}00219\ \ \ \ \ \textcolor{comment}{/*\ Initialize\ parameters\ for\ DMAMUX\ request\ generator\ :}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00220}00220\ \textcolor{comment}{\ \ \ \ \ \ \ DMAmuxRequestGen,\ DMAmuxRequestGenStatus\ and\ DMAmuxRequestGenStatusMask}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00221}00221\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00222}00222\ \ \ \ \ DMA\_CalcDMAMUXRequestGenBaseAndMask(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00224}00224\ \ \ \ \ \textcolor{comment}{/*\ Reset\ the\ DMAMUX\ request\ generator\ register*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00225}00225\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef_af617ec455f55f9d75a3cd87886ed0db2}{RGCR}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00227}00227\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ request\ generator\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00228}00228\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef_a38d23c49e57da98eddc7e80805a53d01}{RGCFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00229}00229\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00230}00230\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00231}00231\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00232}00232\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00233}00233\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00234}00234\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00235}00235\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00237}00237\ \ \ \textcolor{comment}{/*\ Initialize\ the\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00238}00238\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_gaad4009390bfbe05a1bb7115d03c25a97}{HAL\_DMA\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00240}00240\ \ \ \textcolor{comment}{/*\ Initialize\ the\ DMA\ state*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00241}00241\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00243}00243\ \ \ \textcolor{comment}{/*\ Release\ Lock\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00244}00244\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00246}00246\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00247}00247\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00255}00255\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group1_ga7bb8587d642da11252a97f5c41c389ef}{HAL\_DMA\_DeInit}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00256}00256\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00257}00257\ \ \ \textcolor{comment}{/*\ Check\ the\ DMA\ handle\ allocation\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00258}00258\ \ \ \textcolor{keywordflow}{if}\ (NULL\ ==\ hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00259}00259\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00260}00260\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00261}00261\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00263}00263\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00264}00264\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__Exported__macros_ga40beb02b397c5f47e22a83fc28034afe}{IS\_DMA\_ALL\_INSTANCE}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00266}00266\ \ \ \textcolor{comment}{/*\ Disable\ the\ selected\ DMA\ Channelx\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00267}00267\ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}{\_\_HAL\_DMA\_DISABLE}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00269}00269\ \ \ \textcolor{comment}{/*\ Compute\ the\ channel\ index\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00270}00270\ \ \ \textcolor{keywordflow}{if}\ ((uint32\_t)(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}})\ <\ (uint32\_t)(\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00271}00271\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00272}00272\ \ \ \ \ \textcolor{comment}{/*\ DMA1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00273}00273\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ =\ (((uint32\_t)hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}})\ /\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga23d7631dd10c645e06971b2543ba2949}{DMA1\_Channel2}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gac83c5be824be1c02716e2522e80ddf7a}{DMA1\_Channel1}}))\ <<\ 2U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00274}00274\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_gacc16d2a5937f7585320a98f7f6b578f9}{DMA1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00275}00275\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00276}00276\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00277}00277\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00278}00278\ \ \ \ \ \textcolor{comment}{/*\ DMA2\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00279}00279\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ =\ (((uint32\_t)hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}})\ /\ ((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga316024020799373b9d8e35c316c74f24}{DMA2\_Channel2}}\ -\/\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}}))\ <<\ 2U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00280}00280\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_ga506520140eec1708bc7570c49bdf972d}{DMA2}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00281}00281\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00283}00283\ \ \ \textcolor{comment}{/*\ Reset\ DMA\ Channel\ control\ register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00284}00284\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00286}00286\ \ \ \textcolor{comment}{/*\ Clear\ all\ flags\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00287}00287\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3475228c998897d0f408a4c5da066186}{DMA\_ISR\_GIF1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00289}00289\ \ \ \textcolor{comment}{/*\ Initialize\ parameters\ for\ DMAMUX\ channel\ :}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00290}00290\ \textcolor{comment}{\ \ \ \ \ DMAmuxChannel,\ DMAmuxChannelStatus\ and\ DMAmuxChannelStatusMask\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00292}00292\ \ \ DMA\_CalcDMAMUXChannelBaseAndMask(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00294}00294\ \ \ \textcolor{comment}{/*\ Reset\ the\ DMAMUX\ channel\ that\ corresponds\ to\ the\ DMA\ channel\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00295}00295\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}-\/>\mbox{\hyperlink{structDMAMUX__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00297}00297\ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ synchro\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00298}00298\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}-\/>\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef_ac011ddcfe531f8e16787ea851c1f3667}{CFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00300}00300\ \ \ \textcolor{comment}{/*\ Reset\ Request\ generator\ parameters\ if\ any\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00301}00301\ \ \ \textcolor{keywordflow}{if}\ (((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ >\ \ 0UL)\ \&\&\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ <=\ \mbox{\hyperlink{group__DMA__request_ga4c9ce5bc5fe8b5e64abf48302900819d}{DMA\_REQUEST\_GENERATOR3}})))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00302}00302\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00303}00303\ \ \ \ \ \textcolor{comment}{/*\ Initialize\ parameters\ for\ DMAMUX\ request\ generator\ :}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00304}00304\ \textcolor{comment}{\ \ \ \ \ \ \ DMAmuxRequestGen,\ DMAmuxRequestGenStatus\ and\ DMAmuxRequestGenStatusMask}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00305}00305\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00306}00306\ \ \ \ \ DMA\_CalcDMAMUXRequestGenBaseAndMask(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00308}00308\ \ \ \ \ \textcolor{comment}{/*\ Reset\ the\ DMAMUX\ request\ generator\ register*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00309}00309\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef_af617ec455f55f9d75a3cd87886ed0db2}{RGCR}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00311}00311\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ request\ generator\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00312}00312\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef_a38d23c49e57da98eddc7e80805a53d01}{RGCFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00313}00313\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00315}00315\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00316}00316\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00317}00317\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00319}00319\ \ \ \textcolor{comment}{/*\ Clean\ callbacks\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00320}00320\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}{XferCpltCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00321}00321\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{XferHalfCpltCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00322}00322\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}{XferErrorCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00323}00323\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}{XferAbortCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00325}00325\ \ \ \textcolor{comment}{/*\ Initialize\ the\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00326}00326\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_gaad4009390bfbe05a1bb7115d03c25a97}{HAL\_DMA\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00327}00327\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00328}00328\ \ \ \textcolor{comment}{/*\ Initialize\ the\ DMA\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00329}00329\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2}{HAL\_DMA\_STATE\_RESET}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00330}00330\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00331}00331\ \ \ \textcolor{comment}{/*\ Release\ Lock\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00332}00332\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00334}00334\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00335}00335\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00336}00336\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00370}00370\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_ga96fbd9c285135f558fd9283a57406330}{HAL\_DMA\_Start}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ uint32\_t\ SrcAddress,\ uint32\_t\ DstAddress,\ uint32\_t\ DataLength)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00371}00371\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00372}00372\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00373}00373\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00374}00374\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00375}00375\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_ga72ef4033bb3bc2cdfdbe579083b05e32}{IS\_DMA\_BUFFER\_SIZE}}(DataLength));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00376}00376\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00377}00377\ \ \ \textcolor{comment}{/*\ Process\ locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00378}00378\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00379}00379\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00380}00380\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ ==\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00381}00381\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00382}00382\ \ \ \ \ \textcolor{comment}{/*\ Change\ DMA\ peripheral\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00383}00383\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef}{HAL\_DMA\_STATE\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00384}00384\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00385}00385\ \ \ \ \ \textcolor{comment}{/*\ Initialize\ the\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00386}00386\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_gaad4009390bfbe05a1bb7115d03c25a97}{HAL\_DMA\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00387}00387\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00388}00388\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00389}00389\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}{\_\_HAL\_DMA\_DISABLE}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00391}00391\ \ \ \ \ \textcolor{comment}{/*\ Configure\ the\ source,\ destination\ address\ and\ the\ data\ length\ \&\ clear\ flags*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00392}00392\ \ \ \ \ DMA\_SetConfig(hdma,\ SrcAddress,\ DstAddress,\ DataLength);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00393}00393\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00394}00394\ \ \ \ \ \textcolor{comment}{/*\ Enable\ the\ Peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00395}00395\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga93900b3ef3f87ef924eb887279a434b4}{\_\_HAL\_DMA\_ENABLE}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00396}00396\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00397}00397\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00398}00398\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00399}00399\ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00400}00400\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_ga2fdb3d3f17fe028f4b4f16c89f008a76}{HAL\_DMA\_ERROR\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00401}00401\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00402}00402\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00403}00403\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00404}00404\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00405}00405\ \ \ \ \ \textcolor{comment}{/*\ Return\ error\ status\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00406}00406\ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00407}00407\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00408}00408\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00409}00409\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00410}00410\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00411}00411\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00421}00421\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_ga7eddc0931ac8a3d77b23d6d5e68407c7}{HAL\_DMA\_Start\_IT}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ uint32\_t\ SrcAddress,\ uint32\_t\ DstAddress,\ uint32\_t\ DataLength)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00422}00422\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00423}00423\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00424}00424\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00425}00425\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00426}00426\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__DMA__Private__Macros_ga72ef4033bb3bc2cdfdbe579083b05e32}{IS\_DMA\_BUFFER\_SIZE}}(DataLength));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00427}00427\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00428}00428\ \ \ \textcolor{comment}{/*\ Process\ locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00429}00429\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00430}00430\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00431}00431\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ ==\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00432}00432\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00433}00433\ \ \ \ \ \textcolor{comment}{/*\ Change\ DMA\ peripheral\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00434}00434\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef}{HAL\_DMA\_STATE\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00435}00435\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_gaad4009390bfbe05a1bb7115d03c25a97}{HAL\_DMA\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00437}00437\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00438}00438\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}{\_\_HAL\_DMA\_DISABLE}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00440}00440\ \ \ \ \ \textcolor{comment}{/*\ Configure\ the\ source,\ destination\ address\ and\ the\ data\ length\ \&\ clear\ flags*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00441}00441\ \ \ \ \ DMA\_SetConfig(hdma,\ SrcAddress,\ DstAddress,\ DataLength);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00442}00442\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00443}00443\ \ \ \ \ \textcolor{comment}{/*\ Enable\ the\ transfer\ complete\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00444}00444\ \ \ \ \ \textcolor{comment}{/*\ Enable\ the\ transfer\ Error\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00445}00445\ \ \ \ \ \textcolor{keywordflow}{if}\ (NULL\ !=\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{XferHalfCpltCallback}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00446}00446\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00447}00447\ \ \ \ \ \ \ \textcolor{comment}{/*\ Enable\ the\ Half\ transfer\ complete\ interrupt\ as\ well\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00448}00448\ \ \ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2124233229c04ca90b790cd8cddfa98b}{\_\_HAL\_DMA\_ENABLE\_IT}}(hdma,\ (\mbox{\hyperlink{group__DMA__interrupt__enable__definitions_ga06e83dd277e0d3e5635cf8ce8dfd6e16}{DMA\_IT\_TC}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gadf11c572b9797e04a14b105fdc2e5f66}{DMA\_IT\_HT}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gaf9d92649d2a0146f663ff253d8f3b59e}{DMA\_IT\_TE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00449}00449\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00450}00450\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00451}00451\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00452}00452\ \ \ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}{\_\_HAL\_DMA\_DISABLE\_IT}}(hdma,\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gadf11c572b9797e04a14b105fdc2e5f66}{DMA\_IT\_HT}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00453}00453\ \ \ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2124233229c04ca90b790cd8cddfa98b}{\_\_HAL\_DMA\_ENABLE\_IT}}(hdma,\ (\mbox{\hyperlink{group__DMA__interrupt__enable__definitions_ga06e83dd277e0d3e5635cf8ce8dfd6e16}{DMA\_IT\_TC}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gaf9d92649d2a0146f663ff253d8f3b59e}{DMA\_IT\_TE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00454}00454\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00456}00456\ \ \ \ \ \textcolor{comment}{/*\ Check\ if\ DMAMUX\ Synchronization\ is\ enabled*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00457}00457\ \ \ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}-\/>\mbox{\hyperlink{structDMAMUX__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeedb99c6edfa679f95441003a4fa184d}{DMAMUX\_CxCR\_SE}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00458}00458\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00459}00459\ \ \ \ \ \ \ \textcolor{comment}{/*\ Enable\ DMAMUX\ sync\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00460}00460\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}-\/>\mbox{\hyperlink{structDMAMUX__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ |=\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga15775843ac0ed584bf9a1cfffd8f38b8}{DMAMUX\_CxCR\_SOIE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00461}00461\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00462}00462\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00463}00463\ \ \ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00464}00464\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00465}00465\ \ \ \ \ \ \ \textcolor{comment}{/*\ if\ using\ DMAMUX\ request\ generator,\ enable\ the\ DMAMUX\ request\ generator\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00466}00466\ \ \ \ \ \ \ \textcolor{comment}{/*\ enable\ the\ request\ gen\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00467}00467\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef_af617ec455f55f9d75a3cd87886ed0db2}{RGCR}}\ |=\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6fde828ebf2591bf66b85b962d55f7c1}{DMAMUX\_RGxCR\_OIE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00468}00468\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00469}00469\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00470}00470\ \ \ \ \ \textcolor{comment}{/*\ Enable\ the\ Peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00471}00471\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga93900b3ef3f87ef924eb887279a434b4}{\_\_HAL\_DMA\_ENABLE}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00472}00472\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00473}00473\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00474}00474\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00475}00475\ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00476}00476\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_ga2fdb3d3f17fe028f4b4f16c89f008a76}{HAL\_DMA\_ERROR\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00477}00477\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00478}00478\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00479}00479\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00481}00481\ \ \ \ \ \textcolor{comment}{/*\ Return\ error\ status\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00482}00482\ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00483}00483\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00484}00484\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00485}00485\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00486}00486\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00487}00487\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00494}00494\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_ga001f9fb04328a7460f9ff16908ff987c}{HAL\_DMA\_Abort}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00495}00495\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00496}00496\ \ \ \textcolor{comment}{/*\ Check\ the\ DMA\ peripheral\ handle\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00497}00497\ \ \ \textcolor{keywordflow}{if}\ (NULL\ ==\ hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00498}00498\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00499}00499\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00500}00500\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00501}00501\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00502}00502\ \ \ \textcolor{comment}{/*\ Check\ the\ DMA\ peripheral\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00503}00503\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ !=\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef}{HAL\_DMA\_STATE\_BUSY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00504}00504\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00505}00505\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_gab7526e686427f26bf3b6af062d5a690b}{HAL\_DMA\_ERROR\_NO\_XFER}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00506}00506\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00507}00507\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00508}00508\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00509}00509\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00510}00510\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00511}00511\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00512}00512\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00513}00513\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00514}00514\ \ \ \ \ \textcolor{comment}{/*\ Disable\ DMA\ IT\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00515}00515\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}{\_\_HAL\_DMA\_DISABLE\_IT}}(hdma,\ (\mbox{\hyperlink{group__DMA__interrupt__enable__definitions_ga06e83dd277e0d3e5635cf8ce8dfd6e16}{DMA\_IT\_TC}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gadf11c572b9797e04a14b105fdc2e5f66}{DMA\_IT\_HT}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gaf9d92649d2a0146f663ff253d8f3b59e}{DMA\_IT\_TE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00516}00516\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00517}00517\ \ \ \ \ \textcolor{comment}{/*\ disable\ the\ DMAMUX\ sync\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00518}00518\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}-\/>\mbox{\hyperlink{structDMAMUX__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ \&=\ \string~DMAMUX\_CxCR\_SOIE;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00519}00519\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00520}00520\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ channel\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00521}00521\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}{\_\_HAL\_DMA\_DISABLE}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00522}00522\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00523}00523\ \ \ \ \ \textcolor{comment}{/*\ Clear\ all\ flags\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00524}00524\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3475228c998897d0f408a4c5da066186}{DMA\_ISR\_GIF1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00525}00525\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00526}00526\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ synchro\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00527}00527\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}-\/>\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef_ac011ddcfe531f8e16787ea851c1f3667}{CFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00528}00528\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00529}00529\ \ \ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00530}00530\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00531}00531\ \ \ \ \ \ \ \textcolor{comment}{/*\ if\ using\ DMAMUX\ request\ generator,\ disable\ the\ DMAMUX\ request\ generator\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00532}00532\ \ \ \ \ \ \ \textcolor{comment}{/*\ disable\ the\ request\ gen\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00533}00533\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef_af617ec455f55f9d75a3cd87886ed0db2}{RGCR}}\ \&=\ \string~DMAMUX\_RGxCR\_OIE;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00534}00534\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00535}00535\ \ \ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ request\ generator\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00536}00536\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef_a38d23c49e57da98eddc7e80805a53d01}{RGCFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00537}00537\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00538}00538\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00539}00539\ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ DMA\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00540}00540\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00541}00541\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00542}00542\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00543}00543\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00544}00544\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00545}00545\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00546}00546\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00547}00547\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00548}00548\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00555}00555\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_ga6677d7e614747341a58ffd7a048fd390}{HAL\_DMA\_Abort\_IT}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00556}00556\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00557}00557\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00558}00558\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00559}00559\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ !=\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef}{HAL\_DMA\_STATE\_BUSY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00560}00560\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00561}00561\ \ \ \ \ \textcolor{comment}{/*\ no\ transfer\ ongoing\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00562}00562\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_gab7526e686427f26bf3b6af062d5a690b}{HAL\_DMA\_ERROR\_NO\_XFER}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00563}00563\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00564}00564\ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00565}00565\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00566}00566\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00567}00567\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00568}00568\ \ \ \ \ \textcolor{comment}{/*\ Disable\ DMA\ IT\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00569}00569\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}{\_\_HAL\_DMA\_DISABLE\_IT}}(hdma,\ (\mbox{\hyperlink{group__DMA__interrupt__enable__definitions_ga06e83dd277e0d3e5635cf8ce8dfd6e16}{DMA\_IT\_TC}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gadf11c572b9797e04a14b105fdc2e5f66}{DMA\_IT\_HT}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gaf9d92649d2a0146f663ff253d8f3b59e}{DMA\_IT\_TE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00570}00570\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00571}00571\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ channel\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00572}00572\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}{\_\_HAL\_DMA\_DISABLE}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00573}00573\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00574}00574\ \ \ \ \ \textcolor{comment}{/*\ disable\ the\ DMAMUX\ sync\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00575}00575\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}-\/>\mbox{\hyperlink{structDMAMUX__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ \&=\ \string~DMAMUX\_CxCR\_SOIE;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00576}00576\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00577}00577\ \ \ \ \ \textcolor{comment}{/*\ Clear\ all\ flags\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00578}00578\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3475228c998897d0f408a4c5da066186}{DMA\_ISR\_GIF1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00579}00579\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00580}00580\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ synchro\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00581}00581\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}-\/>\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef_ac011ddcfe531f8e16787ea851c1f3667}{CFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00582}00582\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00583}00583\ \ \ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00584}00584\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00585}00585\ \ \ \ \ \ \ \textcolor{comment}{/*\ if\ using\ DMAMUX\ request\ generator,\ disable\ the\ DMAMUX\ request\ generator\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00586}00586\ \ \ \ \ \ \ \textcolor{comment}{/*\ disable\ the\ request\ gen\ overrun\ IT*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00587}00587\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef_af617ec455f55f9d75a3cd87886ed0db2}{RGCR}}\ \&=\ \string~DMAMUX\_RGxCR\_OIE;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00588}00588\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00589}00589\ \ \ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ request\ generator\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00590}00590\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef_a38d23c49e57da98eddc7e80805a53d01}{RGCFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00591}00591\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00592}00592\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00593}00593\ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ DMA\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00594}00594\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00595}00595\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00596}00596\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00597}00597\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00598}00598\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00599}00599\ \ \ \ \ \textcolor{comment}{/*\ Call\ User\ Abort\ callback\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00600}00600\ \ \ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}{XferAbortCallback}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00601}00601\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00602}00602\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}{XferAbortCallback}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00603}00603\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00604}00604\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00605}00605\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00606}00606\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00607}00607\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00616}00616\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_ga976a30472df973e3ad983f21289c9b5d}{HAL\_DMA\_PollForTransfer}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ \mbox{\hyperlink{group__DMA__Exported__Types_gaee3245eea8fa938edeb35a6c9596fd86}{HAL\_DMA\_LevelCompleteTypeDef}}\ CompleteLevel,\ uint32\_t\ Timeout)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00617}00617\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00618}00618\ \ \ uint32\_t\ temp;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00619}00619\ \ \ uint32\_t\ tickstart;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00620}00620\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00621}00621\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ !=\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef}{HAL\_DMA\_STATE\_BUSY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00622}00622\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00623}00623\ \ \ \ \ \textcolor{comment}{/*\ no\ transfer\ ongoing\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00624}00624\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_gab7526e686427f26bf3b6af062d5a690b}{HAL\_DMA\_ERROR\_NO\_XFER}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00625}00625\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00626}00626\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00627}00627\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00628}00628\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00629}00629\ \ \ \textcolor{comment}{/*\ Polling\ mode\ not\ supported\ in\ circular\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00630}00630\ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga445471396e741418bcd6f63404f4052c}{DMA\_CCR\_CIRC}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00631}00631\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00632}00632\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_ga7432f31f9972e1c0a398a3f20587d118}{HAL\_DMA\_ERROR\_NOT\_SUPPORTED}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00633}00633\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00634}00634\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00635}00635\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00636}00636\ \ \ \textcolor{comment}{/*\ Get\ the\ level\ transfer\ complete\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00637}00637\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__DMA__Exported__Types_ggaee3245eea8fa938edeb35a6c9596fd86a5314147c8ba21548763bf89446b78468}{HAL\_DMA\_FULL\_TRANSFER}}\ ==\ CompleteLevel)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00638}00638\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00639}00639\ \ \ \ \ \textcolor{comment}{/*\ Transfer\ Complete\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00640}00640\ \ \ \ \ temp\ =\ \mbox{\hyperlink{group__DMA__flag__definitions_ga02b6c752c28b35dba79fa1d2bb55ec06}{DMA\_FLAG\_TC1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00641}00641\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00642}00642\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00643}00643\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00644}00644\ \ \ \ \ \textcolor{comment}{/*\ Half\ Transfer\ Complete\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00645}00645\ \ \ \ \ temp\ =\ \mbox{\hyperlink{group__DMA__flag__definitions_ga4317f6260e1aecc4f5fe882fc043f606}{DMA\_FLAG\_HT1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00646}00646\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00647}00647\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00648}00648\ \ \ \textcolor{comment}{/*\ Get\ tick\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00649}00649\ \ \ tickstart\ =\ \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaf2c4f03d53e997a54e1fd5e80daa55c4}{HAL\_GetTick}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00650}00650\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00651}00651\ \ \ \textcolor{keywordflow}{while}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}}\ \&\ temp)\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00652}00652\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00653}00653\ \ \ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}}\ \&\ (\mbox{\hyperlink{group__DMA__flag__definitions_ga198c0b4984a79514964d3dd5ae546008}{DMA\_FLAG\_TE1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU)))\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00654}00654\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00655}00655\ \ \ \ \ \ \ \textcolor{comment}{/*\ When\ a\ DMA\ transfer\ error\ occurs\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00656}00656\ \ \ \ \ \ \ \textcolor{comment}{/*\ A\ hardware\ clear\ of\ its\ EN\ bits\ is\ performed\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00657}00657\ \ \ \ \ \ \ \textcolor{comment}{/*\ Clear\ all\ flags\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00658}00658\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3475228c998897d0f408a4c5da066186}{DMA\_ISR\_GIF1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00659}00659\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00660}00660\ \ \ \ \ \ \ \textcolor{comment}{/*\ Update\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00661}00661\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_ga9882442c5f8f0170917934bbee1cc92d}{HAL\_DMA\_ERROR\_TE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00662}00662\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00663}00663\ \ \ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ DMA\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00664}00664\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00665}00665\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00666}00666\ \ \ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00667}00667\ \ \ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00668}00668\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00669}00669\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00670}00670\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00671}00671\ \ \ \ \ \textcolor{comment}{/*\ Check\ for\ the\ Timeout\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00672}00672\ \ \ \ \ \textcolor{keywordflow}{if}\ (Timeout\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_aad28bc64749c50dcedd6bf819fdc6974}{HAL\_MAX\_DELAY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00673}00673\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00674}00674\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaf2c4f03d53e997a54e1fd5e80daa55c4}{HAL\_GetTick}}()\ -\/\ tickstart)\ >\ Timeout)\ ||\ (Timeout\ ==\ 0U))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00675}00675\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00676}00676\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Update\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00677}00677\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_ga6cf6a5b8881ff36ed4316a29bbfb5b79}{HAL\_DMA\_ERROR\_TIMEOUT}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00678}00678\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00679}00679\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ DMA\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00680}00680\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00681}00681\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00682}00682\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00683}00683\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00684}00684\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00685}00685\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00686}00686\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00687}00687\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00688}00688\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00689}00689\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00690}00690\ \ \ \textcolor{comment}{/*Check\ for\ DMAMUX\ Request\ generator\ (if\ used)\ overrun\ status\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00691}00691\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00692}00692\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00693}00693\ \ \ \ \ \textcolor{comment}{/*\ if\ using\ DMAMUX\ request\ generator\ Check\ for\ DMAMUX\ request\ generator\ overrun\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00694}00694\ \ \ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef_acd15854a6b0590daecbc44dd3e4e0bff}{RGSR}}\ \&\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00695}00695\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00696}00696\ \ \ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ request\ gen\ overrun\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00697}00697\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef_af617ec455f55f9d75a3cd87886ed0db2}{RGCR}}\ |=\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6fde828ebf2591bf66b85b962d55f7c1}{DMAMUX\_RGxCR\_OIE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00698}00698\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00699}00699\ \ \ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ request\ generator\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00700}00700\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef_a38d23c49e57da98eddc7e80805a53d01}{RGCFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00701}00701\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00702}00702\ \ \ \ \ \ \ \textcolor{comment}{/*\ Update\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00703}00703\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ |=\ \mbox{\hyperlink{group__DMA__Error__Code_ga3326e19157867d2fbee258b8327de03a}{HAL\_DMA\_ERROR\_REQGEN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00704}00704\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00705}00705\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00706}00706\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00707}00707\ \ \ \textcolor{comment}{/*\ Check\ for\ DMAMUX\ Synchronization\ overrun\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00708}00708\ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}-\/>\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef_a876dd0a8546697065f406b7543e27af2}{CSR}}\ \&\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00709}00709\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00710}00710\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ synchro\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00711}00711\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}-\/>\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef_ac011ddcfe531f8e16787ea851c1f3667}{CFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00712}00712\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00713}00713\ \ \ \ \ \textcolor{comment}{/*\ Update\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00714}00714\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ |=\ \mbox{\hyperlink{group__DMA__Error__Code_ga14727cd304e8d655835ffa1ea1c94adb}{HAL\_DMA\_ERROR\_SYNC}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00715}00715\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00716}00716\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00717}00717\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__DMA__Exported__Types_ggaee3245eea8fa938edeb35a6c9596fd86a5314147c8ba21548763bf89446b78468}{HAL\_DMA\_FULL\_TRANSFER}}\ ==\ CompleteLevel)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00718}00718\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00719}00719\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ transfer\ complete\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00720}00720\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__DMA__flag__definitions_ga02b6c752c28b35dba79fa1d2bb55ec06}{DMA\_FLAG\_TC1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00721}00721\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00722}00722\ \ \ \ \ \textcolor{comment}{/*\ Process\ unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00723}00723\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00724}00724\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00725}00725\ \ \ \ \ \textcolor{comment}{/*\ The\ selected\ Channelx\ EN\ bit\ is\ cleared\ (DMA\ is\ disabled\ and}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00726}00726\ \textcolor{comment}{\ \ \ \ all\ transfers\ are\ complete)\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00727}00727\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00728}00728\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00729}00729\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00730}00730\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00731}00731\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ half\ transfer\ complete\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00732}00732\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__DMA__flag__definitions_ga4317f6260e1aecc4f5fe882fc043f606}{DMA\_FLAG\_HT1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00733}00733\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00734}00734\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00735}00735\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00736}00736\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00737}00737\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00744}00744\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_ga8c8564d06f6d39b702af1c5cbb7dd54a}{HAL\_DMA\_IRQHandler}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00745}00745\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00746}00746\ \ \ uint32\_t\ flag\_it\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00747}00747\ \ \ uint32\_t\ source\_it\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00748}00748\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00749}00749\ \ \ \textcolor{comment}{/*\ Half\ Transfer\ Complete\ Interrupt\ management\ ******************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00750}00750\ \ \ \textcolor{keywordflow}{if}\ (((flag\_it\ \&\ (\mbox{\hyperlink{group__DMA__flag__definitions_ga4317f6260e1aecc4f5fe882fc043f606}{DMA\_FLAG\_HT1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU)))\ !=\ 0U)\ \&\&\ ((source\_it\ \&\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gadf11c572b9797e04a14b105fdc2e5f66}{DMA\_IT\_HT}})\ !=\ 0U))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00751}00751\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00752}00752\ \ \ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ half\ transfer\ interrupt\ if\ the\ DMA\ mode\ is\ not\ CIRCULAR\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00753}00753\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga445471396e741418bcd6f63404f4052c}{DMA\_CCR\_CIRC}})\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00754}00754\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00755}00755\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ half\ transfer\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00756}00756\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}{\_\_HAL\_DMA\_DISABLE\_IT}}(hdma,\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gadf11c572b9797e04a14b105fdc2e5f66}{DMA\_IT\_HT}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00757}00757\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00758}00758\ \ \ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ half\ transfer\ complete\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00759}00759\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5f83359698adf05854b55705f78d8a5c}{DMA\_ISR\_HTIF1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00760}00760\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00761}00761\ \ \ \ \ \ \ \textcolor{comment}{/*\ DMA\ peripheral\ state\ is\ not\ updated\ in\ Half\ Transfer\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00762}00762\ \ \ \ \ \ \ \textcolor{comment}{/*\ but\ in\ Transfer\ Complete\ case\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00763}00763\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00764}00764\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{XferHalfCpltCallback}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00765}00765\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00766}00766\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Half\ transfer\ callback\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00767}00767\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{XferHalfCpltCallback}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00768}00768\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00769}00769\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00770}00770\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00771}00771\ \ \ \textcolor{comment}{/*\ Transfer\ Complete\ Interrupt\ management\ ***********************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00772}00772\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((0U\ !=\ (flag\_it\ \&\ (\mbox{\hyperlink{group__DMA__flag__definitions_ga02b6c752c28b35dba79fa1d2bb55ec06}{DMA\_FLAG\_TC1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU))))\ \&\&\ (0U\ !=\ (source\_it\ \&\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_ga06e83dd277e0d3e5635cf8ce8dfd6e16}{DMA\_IT\_TC}})))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00773}00773\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00774}00774\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga445471396e741418bcd6f63404f4052c}{DMA\_CCR\_CIRC}})\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00775}00775\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00776}00776\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ transfer\ complete\ and\ error\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00777}00777\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}{\_\_HAL\_DMA\_DISABLE\_IT}}(hdma,\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gaf9d92649d2a0146f663ff253d8f3b59e}{DMA\_IT\_TE}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_ga06e83dd277e0d3e5635cf8ce8dfd6e16}{DMA\_IT\_TC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00778}00778\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00779}00779\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ DMA\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00780}00780\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00781}00781\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00782}00782\ \ \ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ transfer\ complete\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00783}00783\ \ \ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_gabc041fb1c85ea7a3af94e42470ef7f2a}{\_\_HAL\_DMA\_CLEAR\_FLAG}}(hdma,\ (\mbox{\hyperlink{group__DMA__flag__definitions_ga02b6c752c28b35dba79fa1d2bb55ec06}{DMA\_FLAG\_TC1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00784}00784\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00785}00785\ \ \ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00786}00786\ \ \ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00787}00787\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00788}00788\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}{XferCpltCallback}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00789}00789\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00790}00790\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Transfer\ complete\ callback\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00791}00791\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}{XferCpltCallback}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00792}00792\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00793}00793\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00794}00794\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00795}00795\ \ \ \textcolor{comment}{/*\ Transfer\ Error\ Interrupt\ management\ **************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00796}00796\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (((flag\_it\ \&\ (\mbox{\hyperlink{group__DMA__flag__definitions_ga198c0b4984a79514964d3dd5ae546008}{DMA\_FLAG\_TE1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU)))\ !=\ 0U)\ \&\&\ ((source\_it\ \&\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gaf9d92649d2a0146f663ff253d8f3b59e}{DMA\_IT\_TE}})\ !=\ 0U))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00797}00797\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00798}00798\ \ \ \ \ \textcolor{comment}{/*\ When\ a\ DMA\ transfer\ error\ occurs\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00799}00799\ \ \ \ \ \textcolor{comment}{/*\ A\ hardware\ clear\ of\ its\ EN\ bits\ is\ performed\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00800}00800\ \ \ \ \ \textcolor{comment}{/*\ Disable\ ALL\ DMA\ IT\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00801}00801\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Macros_ga2867eab09398df2daac55c3f327654da}{\_\_HAL\_DMA\_DISABLE\_IT}}(hdma,\ (\mbox{\hyperlink{group__DMA__interrupt__enable__definitions_ga06e83dd277e0d3e5635cf8ce8dfd6e16}{DMA\_IT\_TC}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gadf11c572b9797e04a14b105fdc2e5f66}{DMA\_IT\_HT}}\ |\ \mbox{\hyperlink{group__DMA__interrupt__enable__definitions_gaf9d92649d2a0146f663ff253d8f3b59e}{DMA\_IT\_TE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00802}00802\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00803}00803\ \ \ \ \ \textcolor{comment}{/*\ Clear\ all\ flags\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00804}00804\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3475228c998897d0f408a4c5da066186}{DMA\_ISR\_GIF1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00805}00805\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00806}00806\ \ \ \ \ \textcolor{comment}{/*\ Update\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00807}00807\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}}\ =\ \mbox{\hyperlink{group__DMA__Error__Code_ga9882442c5f8f0170917934bbee1cc92d}{HAL\_DMA\_ERROR\_TE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00808}00808\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00809}00809\ \ \ \ \ \textcolor{comment}{/*\ Change\ the\ DMA\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00810}00810\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ =\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00811}00811\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00812}00812\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00813}00813\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00814}00814\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00815}00815\ \ \ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}{XferErrorCallback}}\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00816}00816\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00817}00817\ \ \ \ \ \ \ \textcolor{comment}{/*\ Transfer\ error\ callback\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00818}00818\ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}{XferErrorCallback}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00819}00819\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00820}00820\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00821}00821\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00822}00822\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00823}00823\ \ \ \ \ \textcolor{comment}{/*\ Nothing\ To\ Do\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00824}00824\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00825}00825\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00826}00826\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00827}00827\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00838}00838\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_gaabec77de08a59c94f2c6265ce7ae8261}{HAL\_DMA\_RegisterCallback}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ \mbox{\hyperlink{group__DMA__Exported__Types_gafbe8b2bd9ce2128de6cdc08ccde7e8ad}{HAL\_DMA\_CallbackIDTypeDef}}\ CallbackID,\ \textcolor{keywordtype}{void}\ (*\ pCallback)(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *\_hdma))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00839}00839\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00840}00840\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00841}00841\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00842}00842\ \ \ \textcolor{comment}{/*\ Process\ locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00843}00843\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00844}00844\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00845}00845\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ ==\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00846}00846\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00847}00847\ \ \ \ \ \textcolor{keywordflow}{switch}\ (CallbackID)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00848}00848\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00849}00849\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada7d4463d9db2e6d15282128b44ae08e12}{HAL\_DMA\_XFER\_CPLT\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00850}00850\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}{XferCpltCallback}}\ =\ pCallback;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00851}00851\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00852}00852\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00853}00853\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada4b1606f39a4eec41d958bc878719f046}{HAL\_DMA\_XFER\_HALFCPLT\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00854}00854\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{XferHalfCpltCallback}}\ =\ pCallback;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00855}00855\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00856}00856\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00857}00857\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada3e76bc89154e0b50333cc551bf0337a6}{HAL\_DMA\_XFER\_ERROR\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00858}00858\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}{XferErrorCallback}}\ =\ pCallback;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00859}00859\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00860}00860\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00861}00861\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada3059a9412e0624699e9123ba2bccdf3e}{HAL\_DMA\_XFER\_ABORT\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00862}00862\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}{XferAbortCallback}}\ =\ pCallback;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00863}00863\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00864}00864\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00865}00865\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00866}00866\ \ \ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00867}00867\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00868}00868\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00869}00869\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00870}00870\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00871}00871\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00872}00872\ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00873}00873\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00874}00874\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00875}00875\ \ \ \textcolor{comment}{/*\ Release\ Lock\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00876}00876\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00877}00877\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00878}00878\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00879}00879\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00880}00880\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00889}00889\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group2_ga87842d3780f0e54c7fb29a003e6b5ac4}{HAL\_DMA\_UnRegisterCallback}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ \mbox{\hyperlink{group__DMA__Exported__Types_gafbe8b2bd9ce2128de6cdc08ccde7e8ad}{HAL\_DMA\_CallbackIDTypeDef}}\ CallbackID)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00890}00890\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00891}00891\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00892}00892\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00893}00893\ \ \ \textcolor{comment}{/*\ Process\ locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00894}00894\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00895}00895\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00896}00896\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}\ ==\ \mbox{\hyperlink{group__DMA__Exported__Types_gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a}{HAL\_DMA\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00897}00897\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00898}00898\ \ \ \ \ \textcolor{keywordflow}{switch}\ (CallbackID)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00899}00899\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00900}00900\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada7d4463d9db2e6d15282128b44ae08e12}{HAL\_DMA\_XFER\_CPLT\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00901}00901\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}{XferCpltCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00902}00902\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00903}00903\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00904}00904\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada4b1606f39a4eec41d958bc878719f046}{HAL\_DMA\_XFER\_HALFCPLT\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00905}00905\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{XferHalfCpltCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00906}00906\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00907}00907\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00908}00908\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada3e76bc89154e0b50333cc551bf0337a6}{HAL\_DMA\_XFER\_ERROR\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00909}00909\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}{XferErrorCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00910}00910\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00911}00911\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00912}00912\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8ada3059a9412e0624699e9123ba2bccdf3e}{HAL\_DMA\_XFER\_ABORT\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00913}00913\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}{XferAbortCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00914}00914\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00915}00915\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00916}00916\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \ \ \mbox{\hyperlink{group__DMA__Exported__Types_ggafbe8b2bd9ce2128de6cdc08ccde7e8adac9935fd906719942d6b09cfd55e837f0}{HAL\_DMA\_XFER\_ALL\_CB\_ID}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00917}00917\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}{XferCpltCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00918}00918\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{XferHalfCpltCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00919}00919\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}{XferErrorCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00920}00920\ \ \ \ \ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}{XferAbortCallback}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00921}00921\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00922}00922\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00923}00923\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00924}00924\ \ \ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00925}00925\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00926}00926\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00927}00927\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00928}00928\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00929}00929\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00930}00930\ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00931}00931\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00932}00932\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00933}00933\ \ \ \textcolor{comment}{/*\ Release\ Lock\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00934}00934\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hdma);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00935}00935\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00936}00936\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00937}00937\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00938}00938\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00967}00967\ \mbox{\hyperlink{group__DMA__Exported__Types_ga9c012af359987a240826f29073bbe463}{HAL\_DMA\_StateTypeDef}}\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group3_gaef09509c41da57dc118c8ffb9533ce3f}{HAL\_DMA\_GetState}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00968}00968\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00969}00969\ \ \ \textcolor{comment}{/*\ Return\ DMA\ handle\ state\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00970}00970\ \ \ \textcolor{keywordflow}{return}\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00971}00971\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00972}00972\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00979}00979\ uint32\_t\ \mbox{\hyperlink{group__DMA__Exported__Functions__Group3_gabc0735694a0dd08e352b796d7fa7634f}{HAL\_DMA\_GetError}}(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00980}00980\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00981}00981\ \ \ \textcolor{comment}{/*\ Return\ the\ DMA\ error\ code\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00982}00982\ \ \ \textcolor{keywordflow}{return}\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00983}00983\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00984}00984\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l00993}00993\ \textcolor{preprocessor}{\#if\ defined(DMA\_CCR\_SECM)\ \&\&\ defined(DMA\_CCR\_PRIV)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01023}01023\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ HAL\_DMA\_ConfigChannelAttributes(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ uint32\_t\ ChannelAttributes)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01024}01024\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01025}01025\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01026}01026\ \ \ uint32\_t\ ccr;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01027}01027\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01028}01028\ \textcolor{preprocessor}{\#if\ defined\ (CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01029}01029\ \ \ uint32\_t\ ccr\_SECM;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01030}01030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01031}01031\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01032}01032\ \ \ \textcolor{comment}{/*\ Check\ the\ DMA\ peripheral\ handle\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01033}01033\ \ \ \textcolor{keywordflow}{if}\ (hdma\ ==\ NULL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01034}01034\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01035}01035\ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01036}01036\ \ \ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01037}01037\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01038}01038\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01039}01039\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01040}01040\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_DMA\_ATTRIBUTES(ChannelAttributes));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01041}01041\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01042}01042\ \ \ \textcolor{comment}{/*\ Read\ CCR\ register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01043}01043\ \ \ ccr\ =\ \mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01044}01044\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01045}01045\ \ \ \textcolor{comment}{/*\ Apply\ any\ requested\ privilege/non-\/privilege\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01046}01046\ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ DMA\_CHANNEL\_ATTR\_PRIV\_MASK)\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01047}01047\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01048}01048\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaac522679169831df558bf1c30a1fa27d}{DMA\_CCR\_PRIV}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01049}01049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01050}01050\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaac522679169831df558bf1c30a1fa27d}{DMA\_CCR\_PRIV}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01051}01051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01052}01052\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01053}01053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01054}01054\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaac522679169831df558bf1c30a1fa27d}{DMA\_CCR\_PRIV}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01055}01055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01056}01056\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01057}01057\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01058}01058\ \textcolor{preprocessor}{\#if\ defined\ (CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01059}01059\ \ \ \textcolor{comment}{/*\ Channel\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01060}01060\ \ \ \textcolor{comment}{/*\ Check\ what\ is\ the\ current\ SECM\ status\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01061}01061\ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}}\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}})\ ==\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01062}01062\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01063}01063\ \ \ \ \ \textcolor{comment}{/*\ Channel\ is\ currently\ secure\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01064}01064\ \ \ \ \ ccr\_SECM\ =\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01065}01065\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01066}01066\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01067}01067\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01068}01068\ \ \ \ \ \textcolor{comment}{/*\ Channel\ is\ currently\ non-\/secure\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01069}01069\ \ \ \ \ ccr\_SECM\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01070}01070\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01071}01071\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01072}01072\ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ DMA\_CHANNEL\_ATTR\_SEC\_MASK)\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01073}01073\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01074}01074\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01075}01075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01076}01076\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01077}01077\ \ \ \ \ \ \ \textcolor{comment}{/*\ Channel\ changed\ to\ secure\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01078}01078\ \ \ \ \ \ \ ccr\_SECM\ =\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01079}01079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01080}01080\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01081}01081\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01082}01082\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01083}01083\ \ \ \ \ \ \ \textcolor{comment}{/*\ Channel\ changed\ to\ non-\/secure\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01084}01084\ \ \ \ \ \ \ ccr\_SECM\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01085}01085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01086}01086\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01087}01087\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01088}01088\ \ \ \textcolor{comment}{/*\ Channel\ source\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01089}01089\ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ DMA\_CHANNEL\_ATTR\_SEC\_SRC\_MASK)\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01090}01090\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01091}01091\ \ \ \ \ \textcolor{comment}{/*\ Configure\ Source\ security\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01092}01092\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga79ff558426966e8f3581f5ff53735f4f}{DMA\_CCR\_SSEC}})\ !=\ 0x0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01093}01093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01094}01094\ \ \ \ \ \ \ \textcolor{comment}{/*\ SSEC\ can\ only\ be\ set\ if\ channel\ is\ secure\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01095}01095\ \ \ \ \ \ \ \textcolor{comment}{/*\ Otherwise\ configuration\ is\ not\ taken\ into\ account\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01096}01096\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ccr\_SECM\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01097}01097\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01098}01098\ \ \ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01099}01099\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01100}01100\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01101}01101\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01102}01102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga79ff558426966e8f3581f5ff53735f4f}{DMA\_CCR\_SSEC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01103}01103\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01104}01104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01105}01105\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01106}01106\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01107}01107\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga79ff558426966e8f3581f5ff53735f4f}{DMA\_CCR\_SSEC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01108}01108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01109}01109\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01110}01110\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01111}01111\ \ \ \textcolor{comment}{/*\ Channel\ destination\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01112}01112\ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ DMA\_CHANNEL\_ATTR\_SEC\_DEST\_MASK)\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01113}01113\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01114}01114\ \ \ \ \ \textcolor{comment}{/*\ Configure\ Destination\ security\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01115}01115\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ChannelAttributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaede73edbc55c257ee62052c5ce0bb580}{DMA\_CCR\_DSEC}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01116}01116\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01117}01117\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ccr\_SECM\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01118}01118\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01119}01119\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ DSEC\ can\ only\ be\ set\ if\ channel\ is\ secure\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01120}01120\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Destination\ channel\ is\ non\ secure\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01121}01121\ \ \ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01122}01122\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01123}01123\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01124}01124\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01125}01125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaede73edbc55c257ee62052c5ce0bb580}{DMA\_CCR\_DSEC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01126}01126\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01127}01127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01128}01128\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01129}01129\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01130}01130\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(ccr,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaede73edbc55c257ee62052c5ce0bb580}{DMA\_CCR\_DSEC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01131}01131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01132}01132\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01133}01133\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01134}01134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01135}01135\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01136}01136\ \ \ \textcolor{comment}{/*\ Update\ CCR\ Register:\ PRIV,\ SECM,\ SCEC,\ DSEC\ bits\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01137}01137\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}},\ ccr);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01138}01138\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01139}01139\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01140}01140\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01141}01141\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01151}01151\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ HAL\_DMA\_GetConfigChannelAttributes(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ uint32\_t\ *ChannelAttributes)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01152}01152\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01153}01153\ \ \ uint32\_t\ read\_attributes;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01154}01154\ \ \ uint32\_t\ attributes;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01155}01155\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01156}01156\ \ \ \textcolor{comment}{/*\ Check\ the\ DMA\ peripheral\ handle\ and\ pointer\ to\ returned\ value\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01157}01157\ \ \ \textcolor{keywordflow}{if}\ ((hdma\ ==\ NULL)\ ||\ (ChannelAttributes\ ==\ NULL))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01158}01158\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01159}01159\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01160}01160\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01161}01161\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01162}01162\ \textcolor{preprocessor}{\#if\ defined\ (CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01163}01163\ \ \ \textcolor{comment}{/*\ Get\ secure\ or\ non-\/secure\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01164}01164\ \ \ read\_attributes\ =\ \mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaac522679169831df558bf1c30a1fa27d}{DMA\_CCR\_PRIV}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga79ff558426966e8f3581f5ff53735f4f}{DMA\_CCR\_SSEC}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaede73edbc55c257ee62052c5ce0bb580}{DMA\_CCR\_DSEC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01165}01165\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01166}01166\ \ \ \textcolor{comment}{/*\ Get\ privilege\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01167}01167\ \ \ attributes\ =\ ((read\_attributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaac522679169831df558bf1c30a1fa27d}{DMA\_CCR\_PRIV}})\ ==\ 0U)\ ?\ DMA\_CHANNEL\_NPRIV\ :\ DMA\_CHANNEL\_PRIV;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01168}01168\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01169}01169\ \ \ \textcolor{comment}{/*\ Get\ security\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01170}01170\ \ \ attributes\ |=\ ((read\_attributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}})\ ==\ 0U)\ ?\ DMA\_CHANNEL\_NSEC\ :\ DMA\_CHANNEL\_SEC;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01171}01171\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01172}01172\ \ \ \textcolor{comment}{/*\ Get\ security\ attributes\ of\ the\ source\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01173}01173\ \ \ attributes\ |=\ ((read\_attributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga79ff558426966e8f3581f5ff53735f4f}{DMA\_CCR\_SSEC}})\ ==\ 0U)\ ?\ DMA\_CHANNEL\_SRC\_NSEC\ :\ DMA\_CHANNEL\_SRC\_SEC;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01174}01174\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01175}01175\ \ \ \textcolor{comment}{/*\ Get\ security\ attributes\ of\ the\ destination\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01176}01176\ \ \ attributes\ |=\ ((read\_attributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaede73edbc55c257ee62052c5ce0bb580}{DMA\_CCR\_DSEC}})\ ==\ 0U)\ ?\ DMA\_CHANNEL\_DEST\_NSEC\ :\ DMA\_CHANNEL\_DEST\_SEC;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01177}01177\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01178}01178\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01179}01179\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01180}01180\ \ \ \textcolor{comment}{/*\ Get\ secure\ or\ non-\/secure\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01181}01181\ \ \ read\_attributes\ =\ \mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a5e1322e27c40bf91d172f9673f205c97}{CCR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaac522679169831df558bf1c30a1fa27d}{DMA\_CCR\_PRIV}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01182}01182\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01183}01183\ \ \ \textcolor{comment}{/*\ Get\ privilege\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01184}01184\ \ \ attributes\ =\ ((read\_attributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaac522679169831df558bf1c30a1fa27d}{DMA\_CCR\_PRIV}})\ ==\ 0U)\ ?\ DMA\_CHANNEL\_NPRIV\ :\ DMA\_CHANNEL\_PRIV;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01185}01185\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01186}01186\ \ \ \textcolor{comment}{/*\ Get\ security\ attributes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01187}01187\ \ \ attributes\ |=\ ((read\_attributes\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa73595c8299a35188251213dddb261b5}{DMA\_CCR\_SECM}})\ ==\ 0U)\ ?\ DMA\_CHANNEL\_NSEC\ :\ DMA\_CHANNEL\_SEC;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01188}01188\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01189}01189\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01190}01190\ \ \ \textcolor{comment}{/*\ return\ value\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01191}01191\ \ \ *ChannelAttributes\ =\ attributes;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01192}01192\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01193}01193\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01194}01194\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01195}01195\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DMA\_SECURE\_SWITCH\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01209}01209\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DMA\_SetConfig(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma,\ uint32\_t\ SrcAddress,\ uint32\_t\ DstAddress,\ uint32\_t\ DataLength)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01210}01210\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01211}01211\ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ synchro\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01212}01212\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}-\/>\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef_ac011ddcfe531f8e16787ea851c1f3667}{CFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01213}01213\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01214}01214\ \ \ \textcolor{keywordflow}{if}\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01215}01215\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01216}01216\ \ \ \ \ \textcolor{comment}{/*\ Clear\ the\ DMAMUX\ request\ generator\ overrun\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01217}01217\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}-\/>\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef_a38d23c49e57da98eddc7e80805a53d01}{RGCFR}}\ =\ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01218}01218\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01219}01219\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01220}01220\ \ \ \textcolor{comment}{/*\ Clear\ all\ flags\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01221}01221\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{DmaBaseAddress}}-\/>\mbox{\hyperlink{structDMA__TypeDef_ac6f9d540fd6a21c0fbc7bfbbee9a8504}{IFCR}}\ =\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3475228c998897d0f408a4c5da066186}{DMA\_ISR\_GIF1}}\ <<\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ \&\ 0x1CU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01222}01222\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01223}01223\ \ \ \textcolor{comment}{/*\ Configure\ DMA\ Channel\ data\ length\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01224}01224\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_aae019365e4288337da20775971c1a123}{CNDTR}}\ =\ DataLength;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01225}01225\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01226}01226\ \ \ \textcolor{comment}{/*\ Memory\ to\ Peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01227}01227\ \ \ \textcolor{keywordflow}{if}\ ((hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_ab94410c1333b512e271b1c135fe50916}{Direction}})\ ==\ \mbox{\hyperlink{group__DMA__Data__transfer__direction_ga9e76fc559a2d5c766c969e6e921b1ee9}{DMA\_MEMORY\_TO\_PERIPH}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01228}01228\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01229}01229\ \ \ \ \ \textcolor{comment}{/*\ Configure\ DMA\ Channel\ destination\ address\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01230}01230\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a07aacf332c9bf310ff5be02140f892e1}{CPAR}}\ =\ DstAddress;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01231}01231\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01232}01232\ \ \ \ \ \textcolor{comment}{/*\ Configure\ DMA\ Channel\ source\ address\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01233}01233\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_ab51edd49cb9294ebe2db18fb5cf399dd}{CMAR}}\ =\ SrcAddress;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01234}01234\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01235}01235\ \ \ \textcolor{comment}{/*\ Peripheral\ to\ Memory\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01236}01236\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01237}01237\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01238}01238\ \ \ \ \ \textcolor{comment}{/*\ Configure\ DMA\ Channel\ source\ address\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01239}01239\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_a07aacf332c9bf310ff5be02140f892e1}{CPAR}}\ =\ SrcAddress;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01240}01240\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01241}01241\ \ \ \ \ \textcolor{comment}{/*\ Configure\ DMA\ Channel\ destination\ address\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01242}01242\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}-\/>\mbox{\hyperlink{structDMA__Channel__TypeDef_ab51edd49cb9294ebe2db18fb5cf399dd}{CMAR}}\ =\ DstAddress;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01243}01243\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01244}01244\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01245}01245\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01252}01252\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DMA\_CalcDMAMUXChannelBaseAndMask(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01253}01253\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01254}01254\ \ \ uint32\_t\ channel\_number;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01255}01255\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01256}01256\ \ \ \textcolor{comment}{/*\ check\ if\ instance\ is\ not\ outside\ the\ DMA\ channel\ range\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01257}01257\ \ \ \textcolor{keywordflow}{if}\ ((uint32\_t)hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ <\ (uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_gad86c75e1ff89e03e15570f47962865c8}{DMA2\_Channel1}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01258}01258\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01259}01259\ \ \ \ \ \textcolor{comment}{/*\ DMA1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01260}01260\ \ \ \ \ \textcolor{comment}{/*\ Associate\ a\ DMA\ Channel\ to\ a\ DMAMUX\ channel\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01261}01261\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}\ =\ (\mbox{\hyperlink{group__Peripheral__declaration_ga7672f776007b4a365bd34f2432142ab4}{DMAMUX1\_Channel0}}\ +\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ >>\ 2U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01262}01262\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01263}01263\ \ \ \ \ \textcolor{comment}{/*\ Prepare\ channel\_number\ used\ for\ DMAmuxChannelStatusMask\ computation\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01264}01264\ \ \ \ \ channel\_number\ =\ (((uint32\_t)hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ \&\ 0xFFU)\ -\/\ 8U)\ /\ 20U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01265}01265\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01266}01266\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01267}01267\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01268}01268\ \ \ \ \ \textcolor{comment}{/*\ DMA2\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01269}01269\ \ \ \ \ \textcolor{comment}{/*\ Associate\ a\ DMA\ Channel\ to\ a\ DMAMUX\ channel\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01270}01270\ \ \ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmuxChannel}}\ =\ (\mbox{\hyperlink{group__Peripheral__declaration_ga69ff0ff07eb8075872d9ff8dcad68dc7}{DMAMUX1\_Channel7}}\ +\ (hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{ChannelIndex}}\ >>\ 2U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01271}01271\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01272}01272\ \ \ \ \ \textcolor{comment}{/*\ Prepare\ channel\_number\ used\ for\ DMAmuxChannelStatusMask\ computation\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01273}01273\ \ \ \ \ channel\_number\ =\ (((((uint32\_t)hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ \&\ 0xFFU)\ -\/\ 8U)\ /\ 20U)\ +\ 7U);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01274}01274\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01275}01275\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01276}01276\ \ \ \textcolor{comment}{/*\ Initialize\ the\ field\ DMAmuxChannelStatus\ to\ DMAMUX1\_ChannelStatus\ base\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01277}01277\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmuxChannelStatus}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_gaa3bf9725a03595373c83946d3666174a}{DMAMUX1\_ChannelStatus}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01278}01278\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01279}01279\ \ \ \textcolor{comment}{/*\ Initialize\ the\ field\ DMAmuxChannelStatusMask\ with\ the\ corresponding\ index\ of\ the\ DMAMUX\ channel\ selected\ for\ the\ current\ ChannelIndex\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01280}01280\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmuxChannelStatusMask}}\ =\ 1UL\ <<\ (channel\_number\ \&\ 0x1FU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01281}01281\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01282}01282\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01290}01290\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DMA\_CalcDMAMUXRequestGenBaseAndMask(\mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ *hdma)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01291}01291\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01292}01292\ \ \ uint32\_t\ request\ =\ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga429e04913f0ea2ec973e5e82c0264766}{DMAMUX\_CxCR\_DMAREQ\_ID}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01293}01293\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01294}01294\ \ \ \textcolor{comment}{/*\ DMA\ Channels\ are\ connected\ to\ DMAMUX1\ request\ generator\ blocks*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01295}01295\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmuxRequestGen}}\ =\ (\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef}{DMAMUX\_RequestGen\_TypeDef}}\ *)((uint32\_t)(((uint32\_t)\mbox{\hyperlink{group__Peripheral__declaration_ga7f2de783aee1e5411ae43f2e59dc49d6}{DMAMUX1\_RequestGenerator0}})\ +\ ((request\ -\/\ 1U)\ *\ 4U)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01296}01296\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01297}01297\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmuxRequestGenStatus}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_ga6c9a2e5335db4ae71ef7c2536fcf97b3}{DMAMUX1\_RequestGenStatus}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01298}01298\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01299}01299\ \ \ \textcolor{comment}{/*\ here\ "{}Request"{}\ is\ either\ DMA\_REQUEST\_GENERATOR0\ to\ DMA\_REQUEST\_GENERATOR3,\ i.e.\ <=\ 4*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01300}01300\ \ \ hdma-\/>\mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmuxRequestGenStatusMask}}\ =\ 1UL\ <<\ ((request\ -\/\ 1U)\ \&\ 0x3U);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01301}01301\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01302}01302\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__dma_8c_source_l01311}01311\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_DMA\_MODULE\_ENABLED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

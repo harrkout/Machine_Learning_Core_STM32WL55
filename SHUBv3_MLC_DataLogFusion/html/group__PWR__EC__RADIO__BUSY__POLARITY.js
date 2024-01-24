@@ -1,0 +1,5 @@
+var group__PWR__EC__RADIO__BUSY__POLARITY =
+[
+    [ "PWR_RADIO_BUSY_POLARITY_FALLING", "group__PWR__EC__RADIO__BUSY__POLARITY.html#gab54ce6f731218eb20dca9c399ff95959", null ],
+    [ "PWR_RADIO_BUSY_POLARITY_RISING", "group__PWR__EC__RADIO__BUSY__POLARITY.html#gafef03f323dd75ee3289ae7b2fe52ff69", null ]
+];

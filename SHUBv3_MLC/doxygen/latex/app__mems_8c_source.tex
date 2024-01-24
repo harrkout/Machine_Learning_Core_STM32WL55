@@ -1,0 +1,392 @@
+\doxysection{app\+\_\+mems.\+c}
+\hypertarget{app__mems_8c_source}{}\label{app__mems_8c_source}\index{MEMS/App/app\_mems.c@{MEMS/App/app\_mems.c}}
+\mbox{\hyperlink{app__mems_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00019}00019\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00020}00020\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00021}00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00023}00023\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{app__mems_8h}{app\_mems.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__motion__sensors_8h}{custom\_motion\_sensors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lsm6dsox__settings_8h}{lsm6dsox\_settings.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__nucleo_8h}{stm32wlxx\_nucleo.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00031}00031\ \textcolor{preprocessor}{\#include\ "{}math.h"{}}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00033}00033\ \textcolor{comment}{/*\ Private\ typedef\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00034}\mbox{\hyperlink{structdisplayFloatToInt__s}{00034}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdisplayFloatToInt__s}{displayFloatToInt\_s}}\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00035}\mbox{\hyperlink{structdisplayFloatToInt__s_a98b4563c5f811938ca031a7553ae81e3}{00035}}\ \ \ int8\_t\ \mbox{\hyperlink{structdisplayFloatToInt__s_a98b4563c5f811938ca031a7553ae81e3}{sign}};\ \textcolor{comment}{/*\ 0\ means\ positive,\ 1\ means\ negative*/}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00036}\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{00036}}\ \ \ uint32\_t\ \ \mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}};}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00037}\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{00037}}\ \ \ uint32\_t\ \ \mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}};}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00038}\mbox{\hyperlink{app__mems_8c_a43fbd0b0c1c0ddb422b15cff59a3d298}{00038}}\ \}\ \mbox{\hyperlink{app__mems_8c_a43fbd0b0c1c0ddb422b15cff59a3d298}{displayFloatToInt\_t}};}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00040}00040\ \textcolor{comment}{/*\ Private\ define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00041}\mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{00041}}\ \textcolor{preprocessor}{\#define\ MAX\_BUF\_SIZE\ 256}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00043}00043\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00044}00044\ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ uint8\_t\ PushButtonDetected\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00045}00045\ \textcolor{keyword}{static}\ uint8\_t\ verbose\ =\ 1;\ \ \textcolor{comment}{/*\ Verbose\ output\ to\ UART\ terminal\ ON/OFF.\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00046}00046\ \textcolor{keyword}{static}\ \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Capabilities__t}{CUSTOM\_MOTION\_SENSOR\_Capabilities\_t}}\ MotionCapabilities[\mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}}];}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00047}00047\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ dataOut[\mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}}];}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00048}00048\ \textcolor{keyword}{static}\ int32\_t\ PushButtonState\ =\ \mbox{\hyperlink{group__GPIO__Exported__Types_gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2}{GPIO\_PIN\_RESET}};}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00050}00050\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00051}00051\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ floatToInt(\textcolor{keywordtype}{float}\ in,\ \mbox{\hyperlink{structdisplayFloatToInt__s}{displayFloatToInt\_t}}\ *out\_value,\ int32\_t\ dec\_prec);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00052}00052\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Motion\_Accelero\_Sensor\_Handler(uint32\_t\ Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00053}00053\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Motion\_Gyro\_Sensor\_Handler(uint32\_t\ Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00054}00054\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Motion\_Magneto\_Sensor\_Handler(uint32\_t\ Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00055}00055\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MX\_DataLogTerminal\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00056}00056\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MX\_DataLogTerminal\_Process(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00058}\mbox{\hyperlink{app__mems_8c_a366fad6b5f3194944230fa746def0ef1}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{app__mems_8c_a366fad6b5f3194944230fa746def0ef1}{MX\_MEMS\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00059}00059\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00060}00060\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SV\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00062}00062\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SV\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00064}00064\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Init\_PreTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00066}00066\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Init\_PreTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00068}00068\ \ \ \textcolor{comment}{/*\ Initialize\ the\ peripherals\ and\ the\ MEMS\ components\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00070}00070\ \ \ MX\_DataLogTerminal\_Init();}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00072}00072\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Init\_PostTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00074}00074\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Init\_PostTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00077}00077\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00078}00078\ \textcolor{comment}{\ *\ LM\ background\ task}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00079}00079\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00080}\mbox{\hyperlink{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9}{00080}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9}{MX\_MEMS\_Process}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00081}00081\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00082}00082\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Process\_PreTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00084}00084\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Process\_PreTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00086}00086\ \ \ MX\_DataLogTerminal\_Process();}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00088}00088\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Process\_PostTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00090}00090\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Process\_PostTreatment\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00097}00097\ \textcolor{keywordtype}{void}\ MX\_DataLogTerminal\_Init(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00098}00098\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00099}00099\ \ \ \mbox{\hyperlink{structdisplayFloatToInt__s}{displayFloatToInt\_t}}\ out\_value\_odr;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00100}00100\ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00102}00102\ \ \ \textcolor{comment}{/*\ Initialize\ LED\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00103}00103\ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gabdaab4f270e422a9b4c51ab0b46805d6}{BSP\_LED\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ggaa059704b7ca945eb9c1e7f2c3d03fecda8379bbaa96d151e6adac488b2a147b7a}{LED2}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00105}00105\ \ \ \textcolor{comment}{/*\ Initialize\ button\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00106}00106\ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga36ae7750be3904a4eac9465368fb8c95}{BSP\_PB\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga3b504ca34039bb8b0d5fe817e8422b31}{BUTTON\_KEY}},\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga48825b7c7d851c440ef8e808fd9d8f0aa13c1ad97bc3db33d7f2b5a7c116bc8f5}{BUTTON\_MODE\_EXTI}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00108}00108\ \ \ \textcolor{comment}{/*\ Check\ what\ is\ the\ Push\ Button\ State\ when\ the\ button\ is\ not\ pressed.\ It\ can\ change\ across\ families\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00109}00109\ \ \ PushButtonState\ =\ (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga2a873fc1a9478adb9f92027cf3f31f00}{BSP\_PB\_GetState}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga3b504ca34039bb8b0d5fe817e8422b31}{BUTTON\_KEY}}))\ ?\ \ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00111}00111\ \ \ \textcolor{comment}{/*\ Initialize\ Virtual\ COM\ Port\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00112}00112\ \ \ BSP\_COM\_Init(COM1);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00114}00114\ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00115}00115\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00117}00117\ \ \ \mbox{\hyperlink{custom__motion__sensors_8c_a95465dcb10737d67b068b6173a5a9542}{CUSTOM\_MOTION\_SENSOR\_Init}}(\mbox{\hyperlink{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}{CUSTOM\_LSM6DSOX\_0}},\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}}\ |\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00119}00119\ \ \ \mbox{\hyperlink{custom__motion__sensors_8c_aa2399dbd3d1183a1fafabf440c4cd93e}{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate}}(\mbox{\hyperlink{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}{CUSTOM\_LSM6DSOX\_0}},\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ \mbox{\hyperlink{lsm6dsox__settings_8h_a26dc8a11fad5eda5e3ffa0e056fef349}{LSM6DSOX\_ACC\_ODR}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00121}00121\ \ \ \mbox{\hyperlink{custom__motion__sensors_8c_aebdf0db01a505b7c788cba9f2ce749cb}{CUSTOM\_MOTION\_SENSOR\_SetFullScale}}(\mbox{\hyperlink{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}{CUSTOM\_LSM6DSOX\_0}},\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ \mbox{\hyperlink{lsm6dsox__settings_8h_aa2ef9bdd85add46a2a44b78a77acc66a}{LSM6DSOX\_ACC\_FS}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00123}00123\ \ \ \mbox{\hyperlink{custom__motion__sensors_8c_aa2399dbd3d1183a1fafabf440c4cd93e}{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate}}(\mbox{\hyperlink{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}{CUSTOM\_LSM6DSOX\_0}},\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ \mbox{\hyperlink{lsm6dsox__settings_8h_af9294a1d383fa10b751ae23fedd2a7be}{LSM6DSOX\_GYRO\_ODR}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00125}00125\ \ \ \mbox{\hyperlink{custom__motion__sensors_8c_aebdf0db01a505b7c788cba9f2ce749cb}{CUSTOM\_MOTION\_SENSOR\_SetFullScale}}(\mbox{\hyperlink{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}{CUSTOM\_LSM6DSOX\_0}},\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ \mbox{\hyperlink{lsm6dsox__settings_8h_a6a8d3fb055897349afbb808d8ae5df89}{LSM6DSOX\_GYRO\_FS}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00127}00127\ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}};\ i++)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00128}00128\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00129}00129\ \ \ \ \ \mbox{\hyperlink{custom__motion__sensors_8c_a1b3c5213074969bec1a9a0e173d27cc7}{CUSTOM\_MOTION\_SENSOR\_GetCapabilities}}(i,\ \&MotionCapabilities[i]);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00130}00130\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nMotion\ Sensor\ Instance\ \%d\ capabilities:\ \(\backslash\)r\(\backslash\)n\ ACCELEROMETER:\ \%d\(\backslash\)r\(\backslash\)n\ GYROSCOPE:\ \%d\(\backslash\)r\(\backslash\)n\ MAGNETOMETER:\ \%d\(\backslash\)r\(\backslash\)n\ LOW\ POWER:\ \%d\(\backslash\)r\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ i,\ MotionCapabilities[i].Acc,\ MotionCapabilities[i].Gyro,\ MotionCapabilities[i].Magneto,\ MotionCapabilities[i].LowPower);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00133}00133\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00134}00134\ \ \ \ \ floatToInt(MotionCapabilities[i].AccMaxOdr,\ \&out\_value\_odr,\ 3);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00135}00135\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\ MAX\ ACC\ ODR:\ \%d.\%03d\ Hz,\ MAX\ ACC\ FS:\ \%d\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})out\_value\_odr.\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})out\_value\_odr.\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}},\ (\textcolor{keywordtype}{int})MotionCapabilities[i].AccMaxFS);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00137}00137\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00138}00138\ \ \ \ \ floatToInt(MotionCapabilities[i].GyroMaxOdr,\ \&out\_value\_odr,\ 3);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00139}00139\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\ MAX\ GYRO\ ODR:\ \%d.\%03d\ Hz,\ MAX\ GYRO\ FS:\ \%d\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})out\_value\_odr.\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})out\_value\_odr.\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}},\ (\textcolor{keywordtype}{int})MotionCapabilities[i].GyroMaxFS);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00141}00141\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00142}00142\ \ \ \ \ floatToInt(MotionCapabilities[i].MagMaxOdr,\ \&out\_value\_odr,\ 3);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00143}00143\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\ MAX\ MAG\ ODR:\ \%d.\%03d\ Hz,\ MAX\ MAG\ FS:\ \%d\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})out\_value\_odr.\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})out\_value\_odr.\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}},\ (\textcolor{keywordtype}{int})MotionCapabilities[i].MagMaxFS);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00145}00145\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00146}00146\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00148}00148\ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nPlease\ wait...\(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00149}00149\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00150}00150\ \ \ \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gae63b34eea12780ca2e1100c2402da18e}{HAL\_Delay}}(5000);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00151}00151\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00158}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga6b81100f595935ad2744a6b09a3e52e1}{00158}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga6b81100f595935ad2744a6b09a3e52e1}{BSP\_PB\_Callback}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\_TypeDef}}\ Button)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00159}00159\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00160}00160\ \ \ PushButtonDetected\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00161}00161\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00167}00167\ \textcolor{keywordtype}{void}\ MX\_DataLogTerminal\_Process(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00168}00168\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00169}00169\ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00171}00171\ \ \ \textcolor{keywordflow}{if}\ (PushButtonDetected\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00172}00172\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00173}00173\ \ \ \ \ \textcolor{comment}{/*\ Debouncing\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00174}00174\ \ \ \ \ \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gae63b34eea12780ca2e1100c2402da18e}{HAL\_Delay}}(50);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00176}00176\ \ \ \ \ \textcolor{comment}{/*\ Wait\ until\ the\ button\ is\ released\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00177}00177\ \ \ \ \ \textcolor{keywordflow}{while}\ ((\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga2a873fc1a9478adb9f92027cf3f31f00}{BSP\_PB\_GetState}}(\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga3b504ca34039bb8b0d5fe817e8422b31}{BUTTON\_KEY}}\ )\ ==\ PushButtonState));}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00179}00179\ \ \ \ \ \textcolor{comment}{/*\ Debouncing\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00180}00180\ \ \ \ \ \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gae63b34eea12780ca2e1100c2402da18e}{HAL\_Delay}}(50);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00182}00182\ \ \ \ \ \textcolor{comment}{/*\ Reset\ Interrupt\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00183}00183\ \ \ \ \ PushButtonDetected\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00185}00185\ \ \ \ \ MX\_DataLogTerminal\_Init();}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00186}00186\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00188}00188\ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00189}00189\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00191}00191\ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}};\ i++)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00192}00192\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{if}(MotionCapabilities[i].Acc)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00194}00194\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00195}00195\ \ \ \ \ \ \ Motion\_Accelero\_Sensor\_Handler(i);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00196}00196\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00197}00197\ \ \ \ \ \textcolor{keywordflow}{if}(MotionCapabilities[i].Gyro)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00198}00198\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00199}00199\ \ \ \ \ \ \ Motion\_Gyro\_Sensor\_Handler(i);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00200}00200\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00201}00201\ \ \ \ \ \textcolor{keywordflow}{if}(MotionCapabilities[i].Magneto)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00202}00202\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00203}00203\ \ \ \ \ \ \ Motion\_Magneto\_Sensor\_Handler(i);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00204}00204\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00205}00205\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00207}00207\ \ \ \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gae63b34eea12780ca2e1100c2402da18e}{HAL\_Delay}}(\ 1000\ );}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00208}00208\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00217}00217\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ floatToInt(\textcolor{keywordtype}{float}\ in,\ \mbox{\hyperlink{structdisplayFloatToInt__s}{displayFloatToInt\_t}}\ *out\_value,\ int32\_t\ dec\_prec)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00218}00218\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00219}00219\ \ \ \textcolor{keywordflow}{if}(in\ >=\ 0.0f)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00220}00220\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00221}00221\ \ \ \ \ out\_value-\/>\mbox{\hyperlink{structdisplayFloatToInt__s_a98b4563c5f811938ca031a7553ae81e3}{sign}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00222}00222\ \ \ \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00223}00223\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00224}00224\ \ \ \ \ out\_value-\/>\mbox{\hyperlink{structdisplayFloatToInt__s_a98b4563c5f811938ca031a7553ae81e3}{sign}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00225}00225\ \ \ \ \ in\ =\ -\/in;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00226}00226\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00228}00228\ \ \ in\ =\ in\ +\ (0.5f\ /\ pow(10,\ dec\_prec));}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00229}00229\ \ \ out\_value-\/>\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}}\ =\ (int32\_t)in;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00230}00230\ \ \ in\ =\ in\ -\/\ (float)(out\_value-\/>\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00231}00231\ \ \ out\_value-\/>\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}}\ =\ (int32\_t)trunc(in\ *\ pow(10,\ dec\_prec));}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00232}00232\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00239}00239\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Motion\_Accelero\_Sensor\_Handler(uint32\_t\ Instance)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00240}00240\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00241}00241\ \ \ \textcolor{keywordtype}{float}\ odr;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00242}00242\ \ \ int32\_t\ fullScale;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00243}00243\ \ \ \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\_MOTION\_SENSOR\_Axes\_t}}\ acceleration;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00244}00244\ \ \ \mbox{\hyperlink{structdisplayFloatToInt__s}{displayFloatToInt\_t}}\ out\_value;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00245}00245\ \ \ uint8\_t\ whoami;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00247}00247\ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nMotion\ sensor\ instance\ \%d:"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00248}00248\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00250}00250\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a054f13f7bcc8962d8414309c90eebcf6}{CUSTOM\_MOTION\_SENSOR\_GetAxes}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ \&acceleration))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00251}00251\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00252}00252\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nACC[\%d]:\ Error\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00253}00253\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00254}00254\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00255}00255\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00256}00256\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nACC\_X[\%d]:\ \%d,\ ACC\_Y[\%d]:\ \%d,\ ACC\_Z[\%d]:\ \%d\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})acceleration.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_af6d3062751bd565decb1a2cd3b63bdb2}{x}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})acceleration.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_af64066d134a77e01b3d6eb8da813627a}{y}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})acceleration.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_ac2fb30be1b894e32b31b68bb513262a3}{z}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00258}00258\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00260}00260\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00262}00262\ \ \ \textcolor{keywordflow}{if}\ (verbose\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00263}00263\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00264}00264\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_ac9d7795e06cf391c0f09d7fe81f672a9}{CUSTOM\_MOTION\_SENSOR\_ReadID}}(Instance,\ \&whoami))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00265}00265\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00266}00266\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}WHOAMI[\%d]:\ Error\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00267}00267\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00269}00269\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00270}00270\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}WHOAMI[\%d]:\ 0x\%x\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})whoami);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00271}00271\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00273}00273\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00275}00275\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a2cf70a22cb835bac74c53213f9a59c3f}{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ \&odr))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00276}00276\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00277}00277\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}ODR[\%d]:\ ERROR\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00278}00278\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00279}00279\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00280}00280\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00281}00281\ \ \ \ \ \ \ floatToInt(odr,\ \&out\_value,\ 3);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00282}00282\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}ODR[\%d]:\ \%d.\%03d\ Hz\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})out\_value.\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})out\_value.\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00284}00284\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00286}00286\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00288}00288\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a1f4a417a0e38fc846d5a9d4c4aaff41a}{CUSTOM\_MOTION\_SENSOR\_GetFullScale}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ \&fullScale))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00289}00289\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00290}00290\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}FS[\%d]:\ ERROR\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00291}00291\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00292}00292\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00293}00293\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00294}00294\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}FS[\%d]:\ \%d\ g\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})fullScale);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00295}00295\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00297}00297\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00298}00298\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00299}00299\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00306}00306\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Motion\_Gyro\_Sensor\_Handler(uint32\_t\ Instance)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00307}00307\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00308}00308\ \ \ \textcolor{keywordtype}{float}\ odr;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00309}00309\ \ \ int32\_t\ fullScale;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00310}00310\ \ \ \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\_MOTION\_SENSOR\_Axes\_t}}\ angular\_velocity;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00311}00311\ \ \ \mbox{\hyperlink{structdisplayFloatToInt__s}{displayFloatToInt\_t}}\ out\_value;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00312}00312\ \ \ uint8\_t\ whoami;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00314}00314\ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nMotion\ sensor\ instance\ \%d:"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00315}00315\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00317}00317\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a054f13f7bcc8962d8414309c90eebcf6}{CUSTOM\_MOTION\_SENSOR\_GetAxes}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ \&angular\_velocity))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00318}00318\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00319}00319\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nGYR[\%d]:\ Error\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00320}00320\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00321}00321\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00322}00322\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00323}00323\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nGYR\_X[\%d]:\ \%d,\ GYR\_Y[\%d]:\ \%d,\ GYR\_Z[\%d]:\ \%d\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})angular\_velocity.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_af6d3062751bd565decb1a2cd3b63bdb2}{x}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})angular\_velocity.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_af64066d134a77e01b3d6eb8da813627a}{y}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})angular\_velocity.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_ac2fb30be1b894e32b31b68bb513262a3}{z}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00325}00325\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00326}00326\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00327}00327\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00329}00329\ \ \ \textcolor{keywordflow}{if}\ (verbose\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00330}00330\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00331}00331\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_ac9d7795e06cf391c0f09d7fe81f672a9}{CUSTOM\_MOTION\_SENSOR\_ReadID}}(Instance,\ \&whoami))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00332}00332\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00333}00333\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}WHOAMI[\%d]:\ Error\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00334}00334\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00335}00335\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00336}00336\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00337}00337\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}WHOAMI[\%d]:\ 0x\%x\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})whoami);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00338}00338\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00340}00340\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00342}00342\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a2cf70a22cb835bac74c53213f9a59c3f}{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ \&odr))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00343}00343\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00344}00344\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}ODR[\%d]:\ ERROR\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00345}00345\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00346}00346\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00347}00347\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00348}00348\ \ \ \ \ \ \ floatToInt(odr,\ \&out\_value,\ 3);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00349}00349\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}ODR[\%d]:\ \%d.\%03d\ Hz\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})out\_value.\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})out\_value.\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00351}00351\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00352}00352\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00353}00353\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00354}00354\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00355}00355\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a1f4a417a0e38fc846d5a9d4c4aaff41a}{CUSTOM\_MOTION\_SENSOR\_GetFullScale}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ \&fullScale))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00356}00356\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00357}00357\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}FS[\%d]:\ ERROR\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00358}00358\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00359}00359\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00360}00360\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00361}00361\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}FS[\%d]:\ \%d\ dps\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})fullScale);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00362}00362\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00363}00363\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00364}00364\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00365}00365\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00366}00366\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00367}00367\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00373}00373\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Motion\_Magneto\_Sensor\_Handler(uint32\_t\ Instance)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00374}00374\ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00375}00375\ \ \ \textcolor{keywordtype}{float}\ odr;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00376}00376\ \ \ int32\_t\ fullScale;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00377}00377\ \ \ \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\_MOTION\_SENSOR\_Axes\_t}}\ magnetic\_field;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00378}00378\ \ \ \mbox{\hyperlink{structdisplayFloatToInt__s}{displayFloatToInt\_t}}\ out\_value;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00379}00379\ \ \ uint8\_t\ whoami;}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00380}00380\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00381}00381\ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nMotion\ sensor\ instance\ \%d:"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00382}00382\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00383}00383\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00384}00384\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a054f13f7bcc8962d8414309c90eebcf6}{CUSTOM\_MOTION\_SENSOR\_GetAxes}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ \&magnetic\_field))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00385}00385\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00386}00386\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nMAG[\%d]:\ Error\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00387}00387\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00388}00388\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00389}00389\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00390}00390\ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)nMAG\_X[\%d]:\ \%d,\ MAG\_Y[\%d]:\ \%d,\ MAG\_Z[\%d]:\ \%d\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})magnetic\_field.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_af6d3062751bd565decb1a2cd3b63bdb2}{x}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})magnetic\_field.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_af64066d134a77e01b3d6eb8da813627a}{y}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})magnetic\_field.\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t_ac2fb30be1b894e32b31b68bb513262a3}{z}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00392}00392\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00393}00393\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00394}00394\ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00395}00395\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00396}00396\ \ \ \textcolor{keywordflow}{if}\ (verbose\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00397}00397\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00398}00398\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_ac9d7795e06cf391c0f09d7fe81f672a9}{CUSTOM\_MOTION\_SENSOR\_ReadID}}(Instance,\ \&whoami))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00399}00399\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00400}00400\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}WHOAMI[\%d]:\ Error\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00401}00401\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00402}00402\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00403}00403\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00404}00404\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}WHOAMI[\%d]:\ 0x\%x\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})whoami);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00405}00405\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00406}00406\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00407}00407\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00408}00408\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00409}00409\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a2cf70a22cb835bac74c53213f9a59c3f}{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ \&odr))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00410}00410\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00411}00411\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}ODR[\%d]:\ ERROR\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00412}00412\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00413}00413\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00414}00414\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00415}00415\ \ \ \ \ \ \ floatToInt(odr,\ \&out\_value,\ 3);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00416}00416\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}ODR[\%d]:\ \%d.\%03d\ Hz\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})out\_value.\mbox{\hyperlink{structdisplayFloatToInt__s_a1d6801a6019a80544fa7200826c92c9c}{out\_int}},}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})out\_value.\mbox{\hyperlink{structdisplayFloatToInt__s_aae926cf3854cda254db4ad66e1f7830a}{out\_dec}});}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00418}00418\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00419}00419\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00420}00420\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00421}00421\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00422}00422\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{custom__motion__sensors_8c_a1f4a417a0e38fc846d5a9d4c4aaff41a}{CUSTOM\_MOTION\_SENSOR\_GetFullScale}}(Instance,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ \&fullScale))}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00423}00423\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00424}00424\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}FS[\%d]:\ ERROR\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00425}00425\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00426}00426\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00427}00427\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00428}00428\ \ \ \ \ \ \ snprintf(dataOut,\ \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\_BUF\_SIZE}},\ \textcolor{stringliteral}{"{}FS[\%d]:\ \%d\ gauss\(\backslash\)r\(\backslash\)n"{}},\ (\textcolor{keywordtype}{int})Instance,\ (\textcolor{keywordtype}{int})fullScale);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00429}00429\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00430}00430\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00431}00431\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s"{}},\ dataOut);}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00432}00432\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00433}00433\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00434}00434\ }
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00435}00435\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00436}00436\ \}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00437}00437\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{app__mems_8c_source_l00438}00438\ }
+
+\end{DoxyCode}

@@ -1,0 +1,464 @@
+\doxysection{output}
+\hypertarget{group__LSM6DSOX__Data}{}\label{group__LSM6DSOX__Data}\index{output@{output}}
+
+
+This section groups all the data output functions.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga1e86e6fcfe45eec722ecad478fcac801}{lsm6dsox\+\_\+rounding\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga5ff2065eda95f4349903679cf996b417}{lsm6dsox\+\_\+rounding\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Circular burst-\/mode (rounding) read of the output registers.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga32af17e448d619988548dcc0e9d033b4}{lsm6dsox\+\_\+rounding\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga5ff2065eda95f4349903679cf996b417}{lsm6dsox\+\_\+rounding\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope UI chain full-\/scale selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga0be85eae3b8fcf5a541a256e4e9bbf52}{lsm6dsox\+\_\+rounding\+\_\+on\+\_\+status\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga1ba0cd206327350a0962c45a532f5340}{lsm6dsox\+\_\+rounding\+\_\+status\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em rounding\+\_\+on\+\_\+status\+: \mbox{[}set\mbox{]} Source register rounding function in ALL\+\_\+\+INT\+\_\+\+SRC (1Ah), WAKE\+\_\+\+UP\+\_\+\+SRC(1\+Bh), TAP\+\_\+\+SRC (1Ch), D6\+D\+\_\+\+SRC (1Dh), STATUS\+\_\+\+REG (1Eh) and EMB\+\_\+\+FUNC\+\_\+\+STATUS\+\_\+\+MAINPAGE(35h), FSM\+\_\+\+STATUS\+\_\+\+A\+\_\+\+MAINPAGE (36h), FSM\+\_\+\+STATUS\+\_\+\+B\+\_\+\+MAINPAGE (37h), MLC\+\_\+\+STATUS\+\_\+\+MAINPAGE (38h), STATUS\+\_\+\+MASTER\+\_\+\+MAINPAGE (39h), FIFO\+\_\+\+STATUS1 (3Ah), FIFO\+\_\+\+STATUS2(3\+Bh). \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga827d2569c143e665299f13cbe5ae03eb}{lsm6dsox\+\_\+rounding\+\_\+on\+\_\+status\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga1ba0cd206327350a0962c45a532f5340}{lsm6dsox\+\_\+rounding\+\_\+status\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em rounding\+\_\+on\+\_\+status\+: \mbox{[}get\mbox{]} Source register rounding function in ALL\+\_\+\+INT\+\_\+\+SRC (1Ah), WAKE\+\_\+\+UP\+\_\+\+SRC(1\+Bh), TAP\+\_\+\+SRC (1Ch), D6\+D\+\_\+\+SRC (1Dh), STATUS\+\_\+\+REG (1Eh) and EMB\+\_\+\+FUNC\+\_\+\+STATUS\+\_\+\+MAINPAGE(35h), FSM\+\_\+\+STATUS\+\_\+\+A\+\_\+\+MAINPAGE (36h), FSM\+\_\+\+STATUS\+\_\+\+B\+\_\+\+MAINPAGE (37h), MLC\+\_\+\+STATUS\+\_\+\+MAINPAGE (38h), STATUS\+\_\+\+MASTER\+\_\+\+MAINPAGE (39h), FIFO\+\_\+\+STATUS1 (3Ah), FIFO\+\_\+\+STATUS2(3\+Bh). \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga47f4bde40f4b4dbdda6fa9555f722c3c}{lsm6dsox\+\_\+temperature\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Temperature data output register (r). L and H registers together express a 16-\/bit word in two\textquotesingle{}s complement.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga8396e058dc471c2a28eee023fea3b028}{lsm6dsox\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Angular rate sensor. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga3a81df6931e372997677278c5b7abae7}{lsm6dsox\+\_\+acceleration\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Linear acceleration output register. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga95cd088f771ebaa43e5bea0064b1d412}{lsm6dsox\+\_\+fifo\+\_\+out\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em FIFO data output \mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_gacbeb03873dd216d62ad50e4717a9d6d4}{lsm6dsox\+\_\+ois\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em ois\+\_\+angular\+\_\+rate\+\_\+raw\+: \mbox{[}get\mbox{]} OIS angular rate sensor. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_gabb206ccaed54f8cb555bb37ca79f2aea}{lsm6dsox\+\_\+ois\+\_\+acceleration\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em ois\+\_\+acceleration\+\_\+raw\+: \mbox{[}get\mbox{]} OIS Linear acceleration output register. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga1c570e5114dab9a159f11d336ec93fa8}{lsm6dsox\+\_\+aux\+\_\+temperature\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em aux\+\_\+temperature\+\_\+raw\+: \mbox{[}get\mbox{]} Temperature from auxiliary interface. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_ga41769c1897d53194c88f36b4995a33b6}{lsm6dsox\+\_\+aux\+\_\+ois\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em aux\+\_\+ois\+\_\+angular\+\_\+rate\+\_\+raw\+: \mbox{[}get\mbox{]} OIS angular rate sensor from auxiliary interface. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_gaacc28fb7ecedacf97a92830a29cc2e57}{lsm6dsox\+\_\+aux\+\_\+ois\+\_\+acceleration\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em aux\+\_\+ois\+\_\+acceleration\+\_\+raw\+: \mbox{[}get\mbox{]} OIS linear acceleration output register from auxiliary interface. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_gad8057a5079ea3ac7ec944c96aab7d450}{lsm6dsox\+\_\+number\+\_\+of\+\_\+steps\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Step counter output register.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_gad23e8da4fdcc634a07acb7f043768a18}{lsm6dsox\+\_\+steps\+\_\+reset}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Reset step counter register.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Data_gace1fdf1008c62de175e24f0db95ed7df}{lsm6dsox\+\_\+mlc\+\_\+out\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em prgsens\+\_\+out\+: \mbox{[}get\mbox{]} Output value of all MLCx decision trees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the data output functions. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__Data_ga3a81df6931e372997677278c5b7abae7}\label{group__LSM6DSOX__Data_ga3a81df6931e372997677278c5b7abae7} 
+\index{output@{output}!lsm6dsox\_acceleration\_raw\_get@{lsm6dsox\_acceleration\_raw\_get}}
+\index{lsm6dsox\_acceleration\_raw\_get@{lsm6dsox\_acceleration\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_acceleration\_raw\_get()}{lsm6dsox\_acceleration\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+acceleration\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Linear acceleration output register. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01761}{1761}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga8396e058dc471c2a28eee023fea3b028}\label{group__LSM6DSOX__Data_ga8396e058dc471c2a28eee023fea3b028} 
+\index{output@{output}!lsm6dsox\_angular\_rate\_raw\_get@{lsm6dsox\_angular\_rate\_raw\_get}}
+\index{lsm6dsox\_angular\_rate\_raw\_get@{lsm6dsox\_angular\_rate\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_angular\_rate\_raw\_get()}{lsm6dsox\_angular\_rate\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Angular rate sensor. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01736}{1736}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_gaacc28fb7ecedacf97a92830a29cc2e57}\label{group__LSM6DSOX__Data_gaacc28fb7ecedacf97a92830a29cc2e57} 
+\index{output@{output}!lsm6dsox\_aux\_ois\_acceleration\_raw\_get@{lsm6dsox\_aux\_ois\_acceleration\_raw\_get}}
+\index{lsm6dsox\_aux\_ois\_acceleration\_raw\_get@{lsm6dsox\_aux\_ois\_acceleration\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_ois\_acceleration\_raw\_get()}{lsm6dsox\_aux\_ois\_acceleration\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+ois\+\_\+acceleration\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+aux\+\_\+ois\+\_\+acceleration\+\_\+raw\+: \mbox{[}get\mbox{]} OIS linear acceleration output register from auxiliary interface. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & \texorpdfstring{$\ast$}{*} \+: buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01911}{1911}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga41769c1897d53194c88f36b4995a33b6}\label{group__LSM6DSOX__Data_ga41769c1897d53194c88f36b4995a33b6} 
+\index{output@{output}!lsm6dsox\_aux\_ois\_angular\_rate\_raw\_get@{lsm6dsox\_aux\_ois\_angular\_rate\_raw\_get}}
+\index{lsm6dsox\_aux\_ois\_angular\_rate\_raw\_get@{lsm6dsox\_aux\_ois\_angular\_rate\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_ois\_angular\_rate\_raw\_get()}{lsm6dsox\_aux\_ois\_angular\_rate\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+ois\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+aux\+\_\+ois\+\_\+angular\+\_\+rate\+\_\+raw\+: \mbox{[}get\mbox{]} OIS angular rate sensor from auxiliary interface. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & \texorpdfstring{$\ast$}{*} \+: buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01883}{1883}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga1c570e5114dab9a159f11d336ec93fa8}\label{group__LSM6DSOX__Data_ga1c570e5114dab9a159f11d336ec93fa8} 
+\index{output@{output}!lsm6dsox\_aux\_temperature\_raw\_get@{lsm6dsox\_aux\_temperature\_raw\_get}}
+\index{lsm6dsox\_aux\_temperature\_raw\_get@{lsm6dsox\_aux\_temperature\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_temperature\_raw\_get()}{lsm6dsox\_aux\_temperature\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+temperature\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+aux\+\_\+temperature\+\_\+raw\+: \mbox{[}get\mbox{]} Temperature from auxiliary interface. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & \texorpdfstring{$\ast$}{*} \+: buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01859}{1859}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga95cd088f771ebaa43e5bea0064b1d412}\label{group__LSM6DSOX__Data_ga95cd088f771ebaa43e5bea0064b1d412} 
+\index{output@{output}!lsm6dsox\_fifo\_out\_raw\_get@{lsm6dsox\_fifo\_out\_raw\_get}}
+\index{lsm6dsox\_fifo\_out\_raw\_get@{lsm6dsox\_fifo\_out\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fifo\_out\_raw\_get()}{lsm6dsox\_fifo\_out\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fifo\+\_\+out\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff }\end{DoxyParamCaption})}
+
+
+
+FIFO data output \mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01785}{1785}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_gace1fdf1008c62de175e24f0db95ed7df}\label{group__LSM6DSOX__Data_gace1fdf1008c62de175e24f0db95ed7df} 
+\index{output@{output}!lsm6dsox\_mlc\_out\_get@{lsm6dsox\_mlc\_out\_get}}
+\index{lsm6dsox\_mlc\_out\_get@{lsm6dsox\_mlc\_out\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_out\_get()}{lsm6dsox\_mlc\_out\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+out\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff }\end{DoxyParamCaption})}
+
+
+
+prgsens\+\_\+out\+: \mbox{[}get\mbox{]} Output value of all MLCx decision trees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx\+\_\+t} & \texorpdfstring{$\ast$}{*}ctx\+: read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & \texorpdfstring{$\ast$}{*} \+: buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01999}{1999}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_gad8057a5079ea3ac7ec944c96aab7d450}\label{group__LSM6DSOX__Data_gad8057a5079ea3ac7ec944c96aab7d450} 
+\index{output@{output}!lsm6dsox\_number\_of\_steps\_get@{lsm6dsox\_number\_of\_steps\_get}}
+\index{lsm6dsox\_number\_of\_steps\_get@{lsm6dsox\_number\_of\_steps\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_number\_of\_steps\_get()}{lsm6dsox\_number\_of\_steps\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+number\+\_\+of\+\_\+steps\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Step counter output register.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01936}{1936}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_gabb206ccaed54f8cb555bb37ca79f2aea}\label{group__LSM6DSOX__Data_gabb206ccaed54f8cb555bb37ca79f2aea} 
+\index{output@{output}!lsm6dsox\_ois\_acceleration\_raw\_get@{lsm6dsox\_ois\_acceleration\_raw\_get}}
+\index{lsm6dsox\_ois\_acceleration\_raw\_get@{lsm6dsox\_ois\_acceleration\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ois\_acceleration\_raw\_get()}{lsm6dsox\_ois\_acceleration\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ois\+\_\+acceleration\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+ois\+\_\+acceleration\+\_\+raw\+: \mbox{[}get\mbox{]} OIS Linear acceleration output register. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & \texorpdfstring{$\ast$}{*} \+: buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01831}{1831}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_gacbeb03873dd216d62ad50e4717a9d6d4}\label{group__LSM6DSOX__Data_gacbeb03873dd216d62ad50e4717a9d6d4} 
+\index{output@{output}!lsm6dsox\_ois\_angular\_rate\_raw\_get@{lsm6dsox\_ois\_angular\_rate\_raw\_get}}
+\index{lsm6dsox\_ois\_angular\_rate\_raw\_get@{lsm6dsox\_ois\_angular\_rate\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ois\_angular\_rate\_raw\_get()}{lsm6dsox\_ois\_angular\_rate\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ois\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+ois\+\_\+angular\+\_\+rate\+\_\+raw\+: \mbox{[}get\mbox{]} OIS angular rate sensor. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & \texorpdfstring{$\ast$}{*} \+: buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01804}{1804}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga32af17e448d619988548dcc0e9d033b4}\label{group__LSM6DSOX__Data_ga32af17e448d619988548dcc0e9d033b4} 
+\index{output@{output}!lsm6dsox\_rounding\_mode\_get@{lsm6dsox\_rounding\_mode\_get}}
+\index{lsm6dsox\_rounding\_mode\_get@{lsm6dsox\_rounding\_mode\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_rounding\_mode\_get()}{lsm6dsox\_rounding\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+rounding\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga5ff2065eda95f4349903679cf996b417}{lsm6dsox\+\_\+rounding\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Gyroscope UI chain full-\/scale selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of rounding in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01592}{1592}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga1e86e6fcfe45eec722ecad478fcac801}\label{group__LSM6DSOX__Data_ga1e86e6fcfe45eec722ecad478fcac801} 
+\index{output@{output}!lsm6dsox\_rounding\_mode\_set@{lsm6dsox\_rounding\_mode\_set}}
+\index{lsm6dsox\_rounding\_mode\_set@{lsm6dsox\_rounding\_mode\_set}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_rounding\_mode\_set()}{lsm6dsox\_rounding\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+rounding\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga5ff2065eda95f4349903679cf996b417}{lsm6dsox\+\_\+rounding\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Circular burst-\/mode (rounding) read of the output registers.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of rounding in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01567}{1567}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga827d2569c143e665299f13cbe5ae03eb}\label{group__LSM6DSOX__Data_ga827d2569c143e665299f13cbe5ae03eb} 
+\index{output@{output}!lsm6dsox\_rounding\_on\_status\_get@{lsm6dsox\_rounding\_on\_status\_get}}
+\index{lsm6dsox\_rounding\_on\_status\_get@{lsm6dsox\_rounding\_on\_status\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_rounding\_on\_status\_get()}{lsm6dsox\_rounding\_on\_status\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+rounding\+\_\+on\+\_\+status\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga1ba0cd206327350a0962c45a532f5340}{lsm6dsox\+\_\+rounding\+\_\+status\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+rounding\+\_\+on\+\_\+status\+: \mbox{[}get\mbox{]} Source register rounding function in ALL\+\_\+\+INT\+\_\+\+SRC (1Ah), WAKE\+\_\+\+UP\+\_\+\+SRC(1\+Bh), TAP\+\_\+\+SRC (1Ch), D6\+D\+\_\+\+SRC (1Dh), STATUS\+\_\+\+REG (1Eh) and EMB\+\_\+\+FUNC\+\_\+\+STATUS\+\_\+\+MAINPAGE(35h), FSM\+\_\+\+STATUS\+\_\+\+A\+\_\+\+MAINPAGE (36h), FSM\+\_\+\+STATUS\+\_\+\+B\+\_\+\+MAINPAGE (37h), MLC\+\_\+\+STATUS\+\_\+\+MAINPAGE (38h), STATUS\+\_\+\+MASTER\+\_\+\+MAINPAGE (39h), FIFO\+\_\+\+STATUS1 (3Ah), FIFO\+\_\+\+STATUS2(3\+Bh). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em lsm6dsox\+\_\+rounding\+\_\+status\+\_\+t} & Get the values of rounding\+\_\+status in reg CTRL7\+\_\+G \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01679}{1679}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga0be85eae3b8fcf5a541a256e4e9bbf52}\label{group__LSM6DSOX__Data_ga0be85eae3b8fcf5a541a256e4e9bbf52} 
+\index{output@{output}!lsm6dsox\_rounding\_on\_status\_set@{lsm6dsox\_rounding\_on\_status\_set}}
+\index{lsm6dsox\_rounding\_on\_status\_set@{lsm6dsox\_rounding\_on\_status\_set}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_rounding\_on\_status\_set()}{lsm6dsox\_rounding\_on\_status\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+rounding\+\_\+on\+\_\+status\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga1ba0cd206327350a0962c45a532f5340}{lsm6dsox\+\_\+rounding\+\_\+status\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+rounding\+\_\+on\+\_\+status\+: \mbox{[}set\mbox{]} Source register rounding function in ALL\+\_\+\+INT\+\_\+\+SRC (1Ah), WAKE\+\_\+\+UP\+\_\+\+SRC(1\+Bh), TAP\+\_\+\+SRC (1Ch), D6\+D\+\_\+\+SRC (1Dh), STATUS\+\_\+\+REG (1Eh) and EMB\+\_\+\+FUNC\+\_\+\+STATUS\+\_\+\+MAINPAGE(35h), FSM\+\_\+\+STATUS\+\_\+\+A\+\_\+\+MAINPAGE (36h), FSM\+\_\+\+STATUS\+\_\+\+B\+\_\+\+MAINPAGE (37h), MLC\+\_\+\+STATUS\+\_\+\+MAINPAGE (38h), STATUS\+\_\+\+MASTER\+\_\+\+MAINPAGE (39h), FIFO\+\_\+\+STATUS1 (3Ah), FIFO\+\_\+\+STATUS2(3\+Bh). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em lsm6dsox\+\_\+rounding\+\_\+status\+\_\+t} & change the values of rounding\+\_\+status in reg CTRL7\+\_\+G \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01644}{1644}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_gad23e8da4fdcc634a07acb7f043768a18}\label{group__LSM6DSOX__Data_gad23e8da4fdcc634a07acb7f043768a18} 
+\index{output@{output}!lsm6dsox\_steps\_reset@{lsm6dsox\_steps\_reset}}
+\index{lsm6dsox\_steps\_reset@{lsm6dsox\_steps\_reset}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_steps\_reset()}{lsm6dsox\_steps\_reset()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+steps\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Reset step counter register.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01965}{1965}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Data_ga47f4bde40f4b4dbdda6fa9555f722c3c}\label{group__LSM6DSOX__Data_ga47f4bde40f4b4dbdda6fa9555f722c3c} 
+\index{output@{output}!lsm6dsox\_temperature\_raw\_get@{lsm6dsox\_temperature\_raw\_get}}
+\index{lsm6dsox\_temperature\_raw\_get@{lsm6dsox\_temperature\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_temperature\_raw\_get()}{lsm6dsox\_temperature\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+temperature\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Temperature data output register (r). L and H registers together express a 16-\/bit word in two\textquotesingle{}s complement.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01715}{1715}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

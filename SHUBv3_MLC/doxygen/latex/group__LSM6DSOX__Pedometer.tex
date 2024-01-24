@@ -1,0 +1,462 @@
+\doxysection{LSM6\+DSOX\+\_\+\+Pedometer}
+\hypertarget{group__LSM6DSOX__Pedometer}{}\label{group__LSM6DSOX__Pedometer}\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+
+
+This section groups all the functions that manage pedometer.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_ga86ae48c3e9bbf60489cffcc57f0529d7}{lsm6dsox\+\_\+pedo\+\_\+sens\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga9d0e5e360e754906b0caf5285840c3fc}{lsm6dsox\+\_\+pedo\+\_\+md\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Enable pedometer algorithm.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_ga38ce7249b23b1474906775186ef8fe8f}{lsm6dsox\+\_\+pedo\+\_\+sens\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga9d0e5e360e754906b0caf5285840c3fc}{lsm6dsox\+\_\+pedo\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable pedometer algorithm.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_ga5cbe44e93fedb860debe37623b1051b9}{lsm6dsox\+\_\+pedo\+\_\+step\+\_\+detect\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt status bit for step detection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_gac5a9835374cb702f1f1a9e9856a4ead7}{lsm6dsox\+\_\+pedo\+\_\+debounce\+\_\+steps\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Pedometer debounce configuration register (r/w).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_gac533f418705618c7e8211d96527ed1e0}{lsm6dsox\+\_\+pedo\+\_\+debounce\+\_\+steps\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Pedometer debounce configuration register (r/w).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_gac91300fdff4a5e540d0234d3a2b23b4c}{lsm6dsox\+\_\+pedo\+\_\+steps\+\_\+period\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Time period register for step detection on delta time (r/w).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_gad501ee11f76dc3087d207336a0b2197e}{lsm6dsox\+\_\+pedo\+\_\+steps\+\_\+period\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Time period register for step detection on delta time (r/w).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_ga942f830d83a65d36e2f4398abcce57a5}{lsm6dsox\+\_\+pedo\+\_\+int\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga57b8886ff416a3a79dc1d3ee20d18274}{lsm6dsox\+\_\+carry\+\_\+count\+\_\+en\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Set when user wants to generate interrupt on count overflow event/every step.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Pedometer_gaaf15c6567849364158b01930a882da26}{lsm6dsox\+\_\+pedo\+\_\+int\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga57b8886ff416a3a79dc1d3ee20d18274}{lsm6dsox\+\_\+carry\+\_\+count\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Set when user wants to generate interrupt on count overflow event/every step.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions that manage pedometer. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__Pedometer_gac533f418705618c7e8211d96527ed1e0}\label{group__LSM6DSOX__Pedometer_gac533f418705618c7e8211d96527ed1e0} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_debounce\_steps\_get@{lsm6dsox\_pedo\_debounce\_steps\_get}}
+\index{lsm6dsox\_pedo\_debounce\_steps\_get@{lsm6dsox\_pedo\_debounce\_steps\_get}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_debounce\_steps\_get()}{lsm6dsox\_pedo\_debounce\_steps\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+debounce\+\_\+steps\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff }\end{DoxyParamCaption})}
+
+
+
+Pedometer debounce configuration register (r/w).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08391}{8391}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08393\ \{}
+\DoxyCodeLine{08394\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08395\ }
+\DoxyCodeLine{08396\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\_ln\_pg\_read\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga6162b5149984df7ea4e57f27dd953377}{LSM6DSOX\_PEDO\_DEB\_STEPS\_CONF}},}
+\DoxyCodeLine{08397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buff);}
+\DoxyCodeLine{08398\ }
+\DoxyCodeLine{08399\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08400\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_gac5a9835374cb702f1f1a9e9856a4ead7}\label{group__LSM6DSOX__Pedometer_gac5a9835374cb702f1f1a9e9856a4ead7} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_debounce\_steps\_set@{lsm6dsox\_pedo\_debounce\_steps\_set}}
+\index{lsm6dsox\_pedo\_debounce\_steps\_set@{lsm6dsox\_pedo\_debounce\_steps\_set}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_debounce\_steps\_set()}{lsm6dsox\_pedo\_debounce\_steps\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+debounce\+\_\+steps\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff }\end{DoxyParamCaption})}
+
+
+
+Pedometer debounce configuration register (r/w).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08372}{8372}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08374\ \{}
+\DoxyCodeLine{08375\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08376\ }
+\DoxyCodeLine{08377\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9}{lsm6dsox\_ln\_pg\_write\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga6162b5149984df7ea4e57f27dd953377}{LSM6DSOX\_PEDO\_DEB\_STEPS\_CONF}},}
+\DoxyCodeLine{08378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buff);}
+\DoxyCodeLine{08379\ }
+\DoxyCodeLine{08380\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08381\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_gaaf15c6567849364158b01930a882da26}\label{group__LSM6DSOX__Pedometer_gaaf15c6567849364158b01930a882da26} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_int\_mode\_get@{lsm6dsox\_pedo\_int\_mode\_get}}
+\index{lsm6dsox\_pedo\_int\_mode\_get@{lsm6dsox\_pedo\_int\_mode\_get}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_int\_mode\_get()}{lsm6dsox\_pedo\_int\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+int\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga57b8886ff416a3a79dc1d3ee20d18274}{lsm6dsox\+\_\+carry\+\_\+count\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Set when user wants to generate interrupt on count overflow event/every step.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of carry\+\_\+count\+\_\+en in reg PEDO\+\_\+\+CMD\+\_\+\+REG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08495}{8495}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08497\ \{}
+\DoxyCodeLine{08498\ \ \ \mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t}{lsm6dsox\_pedo\_cmd\_reg\_t}}\ reg;}
+\DoxyCodeLine{08499\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08500\ }
+\DoxyCodeLine{08501\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\_ln\_pg\_read\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga42a43c6f0a7ef7bcbda5b93d271a64d8}{LSM6DSOX\_PEDO\_CMD\_REG}},}
+\DoxyCodeLine{08502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&reg);}
+\DoxyCodeLine{08503\ }
+\DoxyCodeLine{08504\ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t_a42e807b851b62ba63a63ca75a1cbfcda}{carry\_count\_en}})}
+\DoxyCodeLine{08505\ \ \ \{}
+\DoxyCodeLine{08506\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga57b8886ff416a3a79dc1d3ee20d18274af559ffb4d38bc1f50aa3e00d9df2871c}{LSM6DSOX\_EVERY\_STEP}}:}
+\DoxyCodeLine{08507\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga57b8886ff416a3a79dc1d3ee20d18274af559ffb4d38bc1f50aa3e00d9df2871c}{LSM6DSOX\_EVERY\_STEP}};}
+\DoxyCodeLine{08508\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{08509\ }
+\DoxyCodeLine{08510\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga57b8886ff416a3a79dc1d3ee20d18274aa1a88205de1dee24ff334313216a1cde}{LSM6DSOX\_COUNT\_OVERFLOW}}:}
+\DoxyCodeLine{08511\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga57b8886ff416a3a79dc1d3ee20d18274aa1a88205de1dee24ff334313216a1cde}{LSM6DSOX\_COUNT\_OVERFLOW}};}
+\DoxyCodeLine{08512\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{08513\ }
+\DoxyCodeLine{08514\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{08515\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga57b8886ff416a3a79dc1d3ee20d18274af559ffb4d38bc1f50aa3e00d9df2871c}{LSM6DSOX\_EVERY\_STEP}};}
+\DoxyCodeLine{08516\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{08517\ \ \ \}}
+\DoxyCodeLine{08518\ }
+\DoxyCodeLine{08519\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08520\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_ga942f830d83a65d36e2f4398abcce57a5}\label{group__LSM6DSOX__Pedometer_ga942f830d83a65d36e2f4398abcce57a5} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_int\_mode\_set@{lsm6dsox\_pedo\_int\_mode\_set}}
+\index{lsm6dsox\_pedo\_int\_mode\_set@{lsm6dsox\_pedo\_int\_mode\_set}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_int\_mode\_set()}{lsm6dsox\_pedo\_int\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+int\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga57b8886ff416a3a79dc1d3ee20d18274}{lsm6dsox\+\_\+carry\+\_\+count\+\_\+en\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Set when user wants to generate interrupt on count overflow event/every step.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of carry\+\_\+count\+\_\+en in reg PEDO\+\_\+\+CMD\+\_\+\+REG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08467}{8467}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08469\ \{}
+\DoxyCodeLine{08470\ \ \ \mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t}{lsm6dsox\_pedo\_cmd\_reg\_t}}\ reg;}
+\DoxyCodeLine{08471\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08472\ }
+\DoxyCodeLine{08473\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\_ln\_pg\_read\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga42a43c6f0a7ef7bcbda5b93d271a64d8}{LSM6DSOX\_PEDO\_CMD\_REG}},}
+\DoxyCodeLine{08474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&reg);}
+\DoxyCodeLine{08475\ }
+\DoxyCodeLine{08476\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{08477\ \ \ \{}
+\DoxyCodeLine{08478\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t_a42e807b851b62ba63a63ca75a1cbfcda}{carry\_count\_en}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{08479\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9}{lsm6dsox\_ln\_pg\_write\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga42a43c6f0a7ef7bcbda5b93d271a64d8}{LSM6DSOX\_PEDO\_CMD\_REG}},}
+\DoxyCodeLine{08480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&reg);}
+\DoxyCodeLine{08481\ \ \ \}}
+\DoxyCodeLine{08482\ }
+\DoxyCodeLine{08483\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08484\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_ga38ce7249b23b1474906775186ef8fe8f}\label{group__LSM6DSOX__Pedometer_ga38ce7249b23b1474906775186ef8fe8f} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_sens\_get@{lsm6dsox\_pedo\_sens\_get}}
+\index{lsm6dsox\_pedo\_sens\_get@{lsm6dsox\_pedo\_sens\_get}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_sens\_get()}{lsm6dsox\_pedo\_sens\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+sens\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga9d0e5e360e754906b0caf5285840c3fc}{lsm6dsox\+\_\+pedo\+\_\+md\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable pedometer algorithm.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & turn on and configure pedometer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08302}{8302}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08304\ \{}
+\DoxyCodeLine{08305\ \ \ \mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t}{lsm6dsox\_pedo\_cmd\_reg\_t}}\ pedo\_cmd\_reg;}
+\DoxyCodeLine{08306\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08307\ }
+\DoxyCodeLine{08308\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\_ln\_pg\_read\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga42a43c6f0a7ef7bcbda5b93d271a64d8}{LSM6DSOX\_PEDO\_CMD\_REG}},}
+\DoxyCodeLine{08309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&pedo\_cmd\_reg);}
+\DoxyCodeLine{08310\ }
+\DoxyCodeLine{08311\ \ \ \textcolor{keywordflow}{switch}\ ((pedo\_cmd\_reg.\mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t_a7d0656eca5a8205171788e3953e3c98e}{ad\_det\_en}}\ <<\ 5)\ |\ (pedo\_cmd\_reg.\mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t_a2fd27e80996967c375e5f22f6fbbf49a}{fp\_rejection\_en}}}
+\DoxyCodeLine{08312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ 4))}
+\DoxyCodeLine{08313\ \ \ \{}
+\DoxyCodeLine{08314\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga9d0e5e360e754906b0caf5285840c3fca2453dd0dc4a3dad807fa0e4e26d95c1f}{LSM6DSOX\_PEDO\_BASE\_MODE}}:}
+\DoxyCodeLine{08315\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga9d0e5e360e754906b0caf5285840c3fca2453dd0dc4a3dad807fa0e4e26d95c1f}{LSM6DSOX\_PEDO\_BASE\_MODE}};}
+\DoxyCodeLine{08316\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{08317\ }
+\DoxyCodeLine{08318\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga9d0e5e360e754906b0caf5285840c3fcaeb8f4197e4f5713db46c3d2564cb2e52}{LSM6DSOX\_FALSE\_STEP\_REJ}}:}
+\DoxyCodeLine{08319\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga9d0e5e360e754906b0caf5285840c3fcaeb8f4197e4f5713db46c3d2564cb2e52}{LSM6DSOX\_FALSE\_STEP\_REJ}};}
+\DoxyCodeLine{08320\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{08321\ }
+\DoxyCodeLine{08322\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga9d0e5e360e754906b0caf5285840c3fcaffc3ae18cdebcc8a08aca51299775d0e}{LSM6DSOX\_FALSE\_STEP\_REJ\_ADV\_MODE}}:}
+\DoxyCodeLine{08323\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga9d0e5e360e754906b0caf5285840c3fcaffc3ae18cdebcc8a08aca51299775d0e}{LSM6DSOX\_FALSE\_STEP\_REJ\_ADV\_MODE}};}
+\DoxyCodeLine{08324\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{08325\ }
+\DoxyCodeLine{08326\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{08327\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga9d0e5e360e754906b0caf5285840c3fca2453dd0dc4a3dad807fa0e4e26d95c1f}{LSM6DSOX\_PEDO\_BASE\_MODE}};}
+\DoxyCodeLine{08328\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{08329\ \ \ \}}
+\DoxyCodeLine{08330\ }
+\DoxyCodeLine{08331\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08332\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_ga86ae48c3e9bbf60489cffcc57f0529d7}\label{group__LSM6DSOX__Pedometer_ga86ae48c3e9bbf60489cffcc57f0529d7} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_sens\_set@{lsm6dsox\_pedo\_sens\_set}}
+\index{lsm6dsox\_pedo\_sens\_set@{lsm6dsox\_pedo\_sens\_set}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_sens\_set()}{lsm6dsox\_pedo\_sens\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+sens\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga9d0e5e360e754906b0caf5285840c3fc}{lsm6dsox\+\_\+pedo\+\_\+md\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable pedometer algorithm.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & turn on and configure pedometer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08274}{8274}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08276\ \{}
+\DoxyCodeLine{08277\ \ \ \mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t}{lsm6dsox\_pedo\_cmd\_reg\_t}}\ pedo\_cmd\_reg;}
+\DoxyCodeLine{08278\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08279\ }
+\DoxyCodeLine{08280\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\_ln\_pg\_read\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga42a43c6f0a7ef7bcbda5b93d271a64d8}{LSM6DSOX\_PEDO\_CMD\_REG}},}
+\DoxyCodeLine{08281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&pedo\_cmd\_reg);}
+\DoxyCodeLine{08282\ }
+\DoxyCodeLine{08283\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{08284\ \ \ \{}
+\DoxyCodeLine{08285\ \ \ \ \ pedo\_cmd\_reg.\mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t_a2fd27e80996967c375e5f22f6fbbf49a}{fp\_rejection\_en}}\ =\ ((uint8\_t)val\ \&\ 0x10U)\ >>\ 4;}
+\DoxyCodeLine{08286\ \ \ \ \ pedo\_cmd\_reg.\mbox{\hyperlink{structlsm6dsox__pedo__cmd__reg__t_a7d0656eca5a8205171788e3953e3c98e}{ad\_det\_en}}\ =\ ((uint8\_t)val\ \&\ 0x20U)\ >>\ 5;}
+\DoxyCodeLine{08287\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9}{lsm6dsox\_ln\_pg\_write\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga42a43c6f0a7ef7bcbda5b93d271a64d8}{LSM6DSOX\_PEDO\_CMD\_REG}},}
+\DoxyCodeLine{08288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&pedo\_cmd\_reg);}
+\DoxyCodeLine{08289\ \ \ \}}
+\DoxyCodeLine{08290\ }
+\DoxyCodeLine{08291\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08292\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_ga5cbe44e93fedb860debe37623b1051b9}\label{group__LSM6DSOX__Pedometer_ga5cbe44e93fedb860debe37623b1051b9} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_step\_detect\_get@{lsm6dsox\_pedo\_step\_detect\_get}}
+\index{lsm6dsox\_pedo\_step\_detect\_get@{lsm6dsox\_pedo\_step\_detect\_get}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_step\_detect\_get()}{lsm6dsox\_pedo\_step\_detect\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+step\+\_\+detect\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Interrupt status bit for step detection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of is\+\_\+step\+\_\+det in reg EMB\+\_\+\+FUNC\+\_\+\+STATUS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08342}{8342}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08343\ \{}
+\DoxyCodeLine{08344\ \ \ \mbox{\hyperlink{structlsm6dsox__emb__func__status__t}{lsm6dsox\_emb\_func\_status\_t}}\ reg;}
+\DoxyCodeLine{08345\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08346\ }
+\DoxyCodeLine{08347\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56ae2847a572de7062ce4a04c21bb78c891}{LSM6DSOX\_EMBEDDED\_FUNC\_BANK}});}
+\DoxyCodeLine{08348\ }
+\DoxyCodeLine{08349\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{08350\ \ \ \{}
+\DoxyCodeLine{08351\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga08c7afa8d19def12fd6ffc012a2df255}{LSM6DSOX\_EMB\_FUNC\_STATUS}},}
+\DoxyCodeLine{08352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{08353\ \ \ \}}
+\DoxyCodeLine{08354\ }
+\DoxyCodeLine{08355\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{08356\ \ \ \{}
+\DoxyCodeLine{08357\ \ \ \ \ *val\ =\ reg.\mbox{\hyperlink{structlsm6dsox__emb__func__status__t_a17b05cb37010ab93fade762d0c010bfb}{is\_step\_det}};}
+\DoxyCodeLine{08358\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{08359\ \ \ \}}
+\DoxyCodeLine{08360\ }
+\DoxyCodeLine{08361\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08362\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_gad501ee11f76dc3087d207336a0b2197e}\label{group__LSM6DSOX__Pedometer_gad501ee11f76dc3087d207336a0b2197e} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_steps\_period\_get@{lsm6dsox\_pedo\_steps\_period\_get}}
+\index{lsm6dsox\_pedo\_steps\_period\_get@{lsm6dsox\_pedo\_steps\_period\_get}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_steps\_period\_get()}{lsm6dsox\_pedo\_steps\_period\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+steps\+\_\+period\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Time period register for step detection on delta time (r/w).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08438}{8438}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08440\ \{}
+\DoxyCodeLine{08441\ \ \ uint8\_t\ buff[2];}
+\DoxyCodeLine{08442\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08443\ }
+\DoxyCodeLine{08444\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\_ln\_pg\_read\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac17bce976a8e04cc798b621d5a708c5d}{LSM6DSOX\_PEDO\_SC\_DELTAT\_L}},}
+\DoxyCodeLine{08445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&buff[0]);}
+\DoxyCodeLine{08446\ }
+\DoxyCodeLine{08447\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{08448\ \ \ \{}
+\DoxyCodeLine{08449\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\_ln\_pg\_read\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gadbe7961d1e53d8220c6e706e57da9dd7}{LSM6DSOX\_PEDO\_SC\_DELTAT\_H}},}
+\DoxyCodeLine{08450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&buff[1]);}
+\DoxyCodeLine{08451\ \ \ \ \ *val\ =\ buff[1];}
+\DoxyCodeLine{08452\ \ \ \ \ *val\ =\ (*val\ *\ 256U)\ +\ \ buff[0];}
+\DoxyCodeLine{08453\ \ \ \}}
+\DoxyCodeLine{08454\ }
+\DoxyCodeLine{08455\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08456\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Pedometer_gac91300fdff4a5e540d0234d3a2b23b4c}\label{group__LSM6DSOX__Pedometer_gac91300fdff4a5e540d0234d3a2b23b4c} 
+\index{LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}!lsm6dsox\_pedo\_steps\_period\_set@{lsm6dsox\_pedo\_steps\_period\_set}}
+\index{lsm6dsox\_pedo\_steps\_period\_set@{lsm6dsox\_pedo\_steps\_period\_set}!LSM6DSOX\_Pedometer@{LSM6DSOX\_Pedometer}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_pedo\_steps\_period\_set()}{lsm6dsox\_pedo\_steps\_period\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+pedo\+\_\+steps\+\_\+period\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Time period register for step detection on delta time (r/w).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08410}{8410}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{08412\ \{}
+\DoxyCodeLine{08413\ \ \ uint8\_t\ buff[2];}
+\DoxyCodeLine{08414\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{08415\ }
+\DoxyCodeLine{08416\ \ \ buff[1]\ =\ (uint8\_t)(val\ /\ 256U);}
+\DoxyCodeLine{08417\ \ \ buff[0]\ =\ (uint8\_t)(val\ -\/\ (buff[1]\ *\ 256U));}
+\DoxyCodeLine{08418\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9}{lsm6dsox\_ln\_pg\_write\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac17bce976a8e04cc798b621d5a708c5d}{LSM6DSOX\_PEDO\_SC\_DELTAT\_L}},}
+\DoxyCodeLine{08419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&buff[0]);}
+\DoxyCodeLine{08420\ }
+\DoxyCodeLine{08421\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{08422\ \ \ \{}
+\DoxyCodeLine{08423\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9}{lsm6dsox\_ln\_pg\_write\_byte}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gadbe7961d1e53d8220c6e706e57da9dd7}{LSM6DSOX\_PEDO\_SC\_DELTAT\_H}},}
+\DoxyCodeLine{08424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&buff[1]);}
+\DoxyCodeLine{08425\ \ \ \}}
+\DoxyCodeLine{08426\ }
+\DoxyCodeLine{08427\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{08428\ \}}
+
+\end{DoxyCode}

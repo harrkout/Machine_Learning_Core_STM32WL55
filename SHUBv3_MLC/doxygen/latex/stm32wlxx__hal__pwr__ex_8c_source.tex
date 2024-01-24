@@ -1,0 +1,685 @@
+\doxysection{stm32wlxx\+\_\+hal\+\_\+pwr\+\_\+ex.\+c}
+\hypertarget{stm32wlxx__hal__pwr__ex_8c_source}{}\label{stm32wlxx__hal__pwr__ex_8c_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_pwr\_ex.c@{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_pwr\_ex.c}}
+\mbox{\hyperlink{stm32wlxx__hal__pwr__ex_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00024}00024\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__hal_8h}{stm32wlxx\_hal.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00035}00035\ \textcolor{preprocessor}{\#ifdef\ HAL\_PWR\_MODULE\_ENABLED}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00037}00037\ \textcolor{comment}{/*\ Private\ typedef\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00038}00038\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00042}00042\ \textcolor{preprocessor}{\#define\ PWR\_PORTC\_AVAILABLE\_PINS\ \ \ (PWR\_GPIO\_BIT\_15\ |\ PWR\_GPIO\_BIT\_14\ |\ PWR\_GPIO\_BIT\_13\ |\ PWR\_GPIO\_BIT\_6\ |\ PWR\_GPIO\_BIT\_5\ |\ PWR\_GPIO\_BIT\_4\ |\ PWR\_GPIO\_BIT\_3\ |\ PWR\_GPIO\_BIT\_2\ |\ PWR\_GPIO\_BIT\_1\ |\ PWR\_GPIO\_BIT\_0)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00043}00043\ \textcolor{preprocessor}{\#define\ PWR\_PORTH\_AVAILABLE\_PINS\ \ \ (PWR\_GPIO\_BIT\_3)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00048}00048\ \textcolor{preprocessor}{\#define\ PWR\_FLAG\_SETTING\_DELAY\_US\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 50UL\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00057}00057\ \textcolor{comment}{/*\ Private\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00058}00058\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00059}00059\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00060}00060\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00083}00083\ uint32\_t\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga2978c7160c8d166f1bf2bf39e4bf33f7}{HAL\_PWREx\_GetVoltageRange}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00084}00084\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00085}00085\ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1\ \&\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac0de060b7b7fbbb12926c28cf5252c61}{PWR\_CR1\_VOS}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00086}00086\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00108}00108\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga1a1e616641c2dc696681ace585d9afb5}{HAL\_PWREx\_ControlVoltageScaling}}(uint32\_t\ VoltageScaling)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00109}00109\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00110}00110\ \ \ uint32\_t\ wait\_loop\_index;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00112}00112\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_gaf6e000967314ce201c4602b4555750e6}{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}}(VoltageScaling));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00114}00114\ \ \ \textcolor{comment}{/*\ If\ Set\ Range\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00115}00115\ \ \ \textcolor{keywordflow}{if}\ (VoltageScaling\ ==\ \mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_ga3b5ca5ab9c19938a14d273825bcf840e}{PWR\_REGULATOR\_VOLTAGE\_SCALE1}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00116}00116\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00117}00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac0de060b7b7fbbb12926c28cf5252c61}{PWR\_CR1\_VOS}})\ !=\ \mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_ga3b5ca5ab9c19938a14d273825bcf840e}{PWR\_REGULATOR\_VOLTAGE\_SCALE1}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00118}00118\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00119}00119\ \ \ \ \ \ \ \textcolor{comment}{/*\ Set\ Range\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00120}00120\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac0de060b7b7fbbb12926c28cf5252c61}{PWR\_CR1\_VOS}},\ \mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_ga3b5ca5ab9c19938a14d273825bcf840e}{PWR\_REGULATOR\_VOLTAGE\_SCALE1}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00122}00122\ \ \ \ \ \ \ \textcolor{comment}{/*\ Wait\ until\ VOSF\ is\ cleared\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00123}00123\ \ \ \ \ \ \ wait\_loop\_index\ =\ ((PWR\_FLAG\_SETTING\_DELAY\_US\ *\ \mbox{\hyperlink{group__STM32WLxx__System__Private__Variables_gaa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}})\ /\ 1000000UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00124}00124\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((\mbox{\hyperlink{stm32wlxx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}{HAL\_IS\_BIT\_SET}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>SR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa16cbf806601b43cdbcba10b444c7f81}{PWR\_SR2\_VOSF}}))\ \&\&\ (wait\_loop\_index\ !=\ 0U))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00125}00125\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ wait\_loop\_index-\/-\/;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00127}00127\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00128}00128\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{stm32wlxx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}{HAL\_IS\_BIT\_SET}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>SR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa16cbf806601b43cdbcba10b444c7f81}{PWR\_SR2\_VOSF}}))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00129}00129\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5}{HAL\_TIMEOUT}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00131}00131\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00133}00133\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00134}00134\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00135}00135\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac0de060b7b7fbbb12926c28cf5252c61}{PWR\_CR1\_VOS}})\ !=\ \mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_gaa0d38e304a0adfdbb58a61c96bdb95e9}{PWR\_REGULATOR\_VOLTAGE\_SCALE2}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00137}00137\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00138}00138\ \ \ \ \ \ \ \textcolor{comment}{/*\ Set\ Range\ 2\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00139}00139\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac0de060b7b7fbbb12926c28cf5252c61}{PWR\_CR1\_VOS}},\ \mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_gaa0d38e304a0adfdbb58a61c96bdb95e9}{PWR\_REGULATOR\_VOLTAGE\_SCALE2}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00140}00140\ \ \ \ \ \ \ \textcolor{comment}{/*\ No\ need\ to\ wait\ for\ VOSF\ to\ be\ cleared\ for\ this\ transition\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00142}00142\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00144}00144\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00145}00145\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00147}00147\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00158}00158\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gabc3f2197ca4d8879dabb76d5cc4bc442}{HAL\_PWREx\_EnableBatteryCharging}}(uint32\_t\ ResistorSelection)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00159}00159\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00160}00160\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga271976c1e479959e9f5a23c61745ab3a}{IS\_PWR\_BATTERY\_RESISTOR\_SELECT}}(ResistorSelection));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00162}00162\ \ \ \textcolor{comment}{/*\ Specify\ resistor\ selection\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00163}00163\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR4,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6932c5d73145f26e380271c73ac97a8f}{PWR\_CR4\_VBRS}},\ ResistorSelection);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00165}00165\ \ \ \textcolor{comment}{/*\ Enable\ battery\ charging\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00166}00166\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR4,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7cb65a447514614845b72f00250728cb}{PWR\_CR4\_VBE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00167}00167\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00173}00173\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga808f86f6f56f380c9863dee7ddf5bff5}{HAL\_PWREx\_DisableBatteryCharging}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00174}00174\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00175}00175\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR4,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7cb65a447514614845b72f00250728cb}{PWR\_CR4\_VBE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00178}00178\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00184}00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3cfe7616c39b0c8524bdad2290e508b0}{HAL\_PWREx\_EnableInternalWakeUpLine}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00185}00185\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00186}00186\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00187}00187\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa31b9480e39b264c9801f65a56d08975}{PWR\_C2CR3\_EIWUL}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00188}00188\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00189}00189\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75f500918c09da1102b73a7811099648}{PWR\_CR3\_EIWUL}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00190}00190\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00191}00191\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00197}00197\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga32380a9c44681d7a53212adf35cdc16f}{HAL\_PWREx\_DisableInternalWakeUpLine}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00198}00198\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00199}00199\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00200}00200\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa31b9480e39b264c9801f65a56d08975}{PWR\_C2CR3\_EIWUL}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00201}00201\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00202}00202\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75f500918c09da1102b73a7811099648}{PWR\_CR3\_EIWUL}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00203}00203\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00204}00204\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00213}00213\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga2afef3490d23c3c9b7ef08101796d494}{HAL\_PWREx\_SetRadioBusyPolarity}}(uint32\_t\ RadioBusyPolarity)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00214}00214\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00215}00215\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00216}00216\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga0fa86a5bfcee5cebd33ff4fa55bc14a4}{IS\_RADIO\_BUSY\_POLARITY}}(RadioBusyPolarity));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00218}00218\ \ \ LL\_PWR\_SetRadioBusyPolarity(RadioBusyPolarity);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00219}00219\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00231}00231\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga81688a8f71fc419395661a2d516424ad}{HAL\_PWREx\_SetRadioBusyTrigger}}(uint32\_t\ RadioBusyTrigger)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00232}00232\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00233}00233\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00234}00234\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga3385f0b36f4059f17ff75e1fee5275b0}{IS\_PWR\_RADIO\_BUSY\_TRIGGER}}(RadioBusyTrigger));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00236}00236\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00237}00237\ \ \ LL\_C2\_PWR\_SetRadioBusyTrigger(RadioBusyTrigger);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00238}00238\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00239}00239\ \ \ LL\_PWR\_SetRadioBusyTrigger(RadioBusyTrigger);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00240}00240\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00241}00241\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00251}00251\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaab43db11012e264b37bab04daaa27730}{HAL\_PWREx\_SetRadioIRQTrigger}}(uint32\_t\ RadioIRQTrigger)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00252}00252\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00253}00253\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00254}00254\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga1496148f3b95191910b8f9351775194f}{IS\_RADIO\_IRQ\_TRIGGER}}(RadioIRQTrigger));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00256}00256\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00257}00257\ \ \ LL\_C2\_PWR\_SetRadioIRQTrigger(RadioIRQTrigger);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00258}00258\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00259}00259\ \ \ LL\_PWR\_SetRadioIRQTrigger(RadioIRQTrigger);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00260}00260\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00261}00261\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00263}00263\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00268}00268\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gad59ef8202f89903edb81ec38b0e6147a}{HAL\_PWREx\_EnableHOLDC2IT}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00269}00269\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00270}00270\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae7d79d75450ca0651d48d21716ed74e8}{PWR\_CR3\_EC2H}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00271}00271\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00277}00277\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaf4eb271ed4809ff80c839561d62fafbe}{HAL\_PWREx\_DisableHOLDC2IT}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00278}00278\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00279}00279\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae7d79d75450ca0651d48d21716ed74e8}{PWR\_CR3\_EC2H}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00280}00280\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00281}00281\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00283}00283\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00306}00306\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga1c66e7444ac70938c6e7a107212c62f5}{HAL\_PWREx\_EnableGPIOPullUp}}(uint32\_t\ GPIO,\ uint32\_t\ GPIONumber)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00307}00307\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00308}00308\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00309}00309\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00310}00310\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga993e3325f8c019aae05694e16afab13a}{IS\_PWR\_GPIO}}(GPIO));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00311}00311\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga63bba0938dd122a0a9d612fd473342dd}{IS\_PWR\_GPIO\_BIT\_NUMBER}}(GPIONumber));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00313}00313\ \ \ \textcolor{keywordflow}{switch}\ (GPIO)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00314}00314\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00315}00315\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga89e70f23992ce82aed435254a3a2436a}{PWR\_GPIO\_A}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00316}00316\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRA,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00317}00317\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRA,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00318}00318\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00319}00319\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga56dd775ffa87ae1e07b84ff963b6f723}{PWR\_GPIO\_B}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00320}00320\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRB,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00321}00321\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRB,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00322}00322\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00323}00323\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_gaffb175dc1b426b66fc8334298dedfb2d}{PWR\_GPIO\_C}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00324}00324\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRC,\ (GPIONumber\ \&\ PWR\_PORTC\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00325}00325\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRC,\ (GPIONumber\ \&\ PWR\_PORTC\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00326}00326\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00327}00327\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga10094103008af7d266d57f501f795d75}{PWR\_GPIO\_H}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00328}00328\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRH,\ (GPIONumber\ \&\ PWR\_PORTH\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00329}00329\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRH,\ (GPIONumber\ \&\ PWR\_PORTH\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00330}00330\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00331}00331\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00332}00332\ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00333}00333\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00334}00334\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00335}00335\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00336}00336\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00337}00337\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00354}00354\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gad3e402154b79e7f56c4f526d3c9d12d3}{HAL\_PWREx\_DisableGPIOPullUp}}(uint32\_t\ GPIO,\ uint32\_t\ GPIONumber)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00355}00355\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00356}00356\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00358}00358\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga993e3325f8c019aae05694e16afab13a}{IS\_PWR\_GPIO}}(GPIO));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00359}00359\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga63bba0938dd122a0a9d612fd473342dd}{IS\_PWR\_GPIO\_BIT\_NUMBER}}(GPIONumber));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00360}00360\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00361}00361\ \ \ \textcolor{keywordflow}{switch}\ (GPIO)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00362}00362\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00363}00363\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga89e70f23992ce82aed435254a3a2436a}{PWR\_GPIO\_A}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00364}00364\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRA,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00365}00365\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00366}00366\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga56dd775ffa87ae1e07b84ff963b6f723}{PWR\_GPIO\_B}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00367}00367\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRB,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00368}00368\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00369}00369\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_gaffb175dc1b426b66fc8334298dedfb2d}{PWR\_GPIO\_C}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00370}00370\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRC,\ (GPIONumber\ \&\ PWR\_PORTC\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00371}00371\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00372}00372\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga10094103008af7d266d57f501f795d75}{PWR\_GPIO\_H}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00373}00373\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRH,\ (GPIONumber\ \&\ PWR\_PORTH\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00374}00374\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00375}00375\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00376}00376\ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00377}00377\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00378}00378\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00379}00379\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00380}00380\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00381}00381\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00404}00404\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaacf48e452bfd1b111fcb9dd4be19774e}{HAL\_PWREx\_EnableGPIOPullDown}}(uint32\_t\ GPIO,\ uint32\_t\ GPIONumber)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00405}00405\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00406}00406\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00407}00407\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00408}00408\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga993e3325f8c019aae05694e16afab13a}{IS\_PWR\_GPIO}}(GPIO));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00409}00409\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga63bba0938dd122a0a9d612fd473342dd}{IS\_PWR\_GPIO\_BIT\_NUMBER}}(GPIONumber));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00410}00410\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00411}00411\ \ \ \textcolor{keywordflow}{switch}\ (GPIO)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00412}00412\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00413}00413\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga89e70f23992ce82aed435254a3a2436a}{PWR\_GPIO\_A}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00414}00414\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRA,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00415}00415\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRA,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00416}00416\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00417}00417\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga56dd775ffa87ae1e07b84ff963b6f723}{PWR\_GPIO\_B}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00418}00418\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRB,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00419}00419\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRB,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00420}00420\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00421}00421\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_gaffb175dc1b426b66fc8334298dedfb2d}{PWR\_GPIO\_C}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00422}00422\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRC,\ (GPIONumber\ \&\ PWR\_PORTC\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00423}00423\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRC,\ (GPIONumber\ \&\ PWR\_PORTC\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00424}00424\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00425}00425\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga10094103008af7d266d57f501f795d75}{PWR\_GPIO\_H}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00426}00426\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRH,\ (GPIONumber\ \&\ PWR\_PORTH\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00427}00427\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PUCRH,\ (GPIONumber\ \&\ PWR\_PORTH\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00428}00428\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00429}00429\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00430}00430\ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00431}00431\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00432}00432\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00433}00433\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00434}00434\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00435}00435\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00452}00452\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3313d923ce8e87302a066fc5a31bf3dc}{HAL\_PWREx\_DisableGPIOPullDown}}(uint32\_t\ GPIO,\ uint32\_t\ GPIONumber)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00453}00453\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00454}00454\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00456}00456\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga993e3325f8c019aae05694e16afab13a}{IS\_PWR\_GPIO}}(GPIO));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00457}00457\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga63bba0938dd122a0a9d612fd473342dd}{IS\_PWR\_GPIO\_BIT\_NUMBER}}(GPIONumber));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00458}00458\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00459}00459\ \ \ \textcolor{keywordflow}{switch}\ (GPIO)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00460}00460\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00461}00461\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga89e70f23992ce82aed435254a3a2436a}{PWR\_GPIO\_A}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00462}00462\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRA,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00463}00463\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00464}00464\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga56dd775ffa87ae1e07b84ff963b6f723}{PWR\_GPIO\_B}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00465}00465\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRB,\ GPIONumber);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00466}00466\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00467}00467\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_gaffb175dc1b426b66fc8334298dedfb2d}{PWR\_GPIO\_C}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00468}00468\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRC,\ (GPIONumber\ \&\ PWR\_PORTC\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00469}00469\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00470}00470\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__GPIO_ga10094103008af7d266d57f501f795d75}{PWR\_GPIO\_H}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00471}00471\ \ \ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>PDCRH,\ (GPIONumber\ \&\ PWR\_PORTH\_AVAILABLE\_PINS));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00472}00472\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00473}00473\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00474}00474\ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00475}00475\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00476}00476\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00477}00477\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00478}00478\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00479}00479\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00491}00491\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gac3b0e88b0d5af66f04a4fe79295f8a47}{HAL\_PWREx\_EnablePullUpPullDownConfig}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00492}00492\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00493}00493\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00494}00494\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga61657408a4197733e4cddef150d42523}{PWR\_C2CR3\_APC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00495}00495\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00496}00496\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae2217dfc0235df242e58c074f5f3f4de}{PWR\_CR3\_APC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00497}00497\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00498}00498\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00499}00499\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00506}00506\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaac0bbd32fc0ef037024720692f190f64}{HAL\_PWREx\_DisablePullUpPullDownConfig}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00507}00507\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00508}00508\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00509}00509\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga61657408a4197733e4cddef150d42523}{PWR\_C2CR3\_APC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00510}00510\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00511}00511\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae2217dfc0235df242e58c074f5f3f4de}{PWR\_CR3\_APC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00512}00512\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00513}00513\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00514}00514\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00515}00515\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00516}00516\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00517}00517\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00526}00526\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gada1765504b5a6d0f5d13152693332f23}{HAL\_PWREx\_HoldCore}}(uint32\_t\ CPU)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00527}00527\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00528}00528\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00529}00529\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_PWR\_CORE\_HOLD\_RELEASE(CPU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00530}00530\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00531}00531\ \ \ LL\_PWR\_DisableBootC2();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00532}00532\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00533}00533\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00541}00541\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gae914bc76331d51b678e02b81cdc633dc}{HAL\_PWREx\_ReleaseCore}}(uint32\_t\ CPU)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00542}00542\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00543}00543\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00544}00544\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_PWR\_CORE\_HOLD\_RELEASE(CPU));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00545}00545\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00546}00546\ \ \ LL\_PWR\_EnableBootC2();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00547}00547\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00548}00548\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00549}00549\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00550}00550\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00556}00556\ \textcolor{keywordtype}{void}\ HAL\_PWREx\_EnableWakeUp\_ILAC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00557}00557\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00558}00558\ \ \ LL\_PWR\_C2\_EnableWakeUp\_ILAC();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00559}00559\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00560}00560\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00566}00566\ \textcolor{keywordtype}{void}\ HAL\_PWREx\_DisableWakeUp\_ILAC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00567}00567\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00568}00568\ \ \ LL\_PWR\_C2\_DisableWakeUp\_ILAC();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00569}00569\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00570}00570\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00577}00577\ uint32\_t\ HAL\_PWREx\_IsEnabledWakeUp\_ILAC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00578}00578\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00579}00579\ \ \ \textcolor{keywordflow}{return}\ LL\_PWR\_C2\_IsEnabledWakeUp\_ILAC();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00580}00580\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00581}00581\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00582}00582\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00583}00583\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00584}00584\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00591}00591\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga7160386fe526fbeb72d6d74f71f225c9}{HAL\_PWREx\_EnableSRAMRetention}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00592}00592\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00593}00593\ \ \ LL\_PWR\_EnableSRAM2Retention();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00594}00594\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00595}00595\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00602}00602\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga9eb7dac4f781b8e49ee4b1fd9d5af014}{HAL\_PWREx\_DisableSRAMRetention}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00603}00603\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00604}00604\ \ \ LL\_PWR\_DisableSRAM2Retention();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00605}00605\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00606}00606\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00607}00607\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00618}00618\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3712f4a4b5b492864fbb206763426428}{HAL\_PWREx\_EnableFlashPowerDown}}(uint32\_t\ PowerMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00619}00619\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00620}00620\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga0f2481ecabd15fce28fa073838985894}{IS\_PWR\_FLASH\_POWERDOWN}}(PowerMode));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00621}00621\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00622}00622\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00623}00623\ \ \ \textcolor{keywordflow}{if}\ ((PowerMode\ \&\ \mbox{\hyperlink{group__PWREx__Flash__PowerDown_ga09d759cd12585c2538a7a5ae6d26381c}{PWR\_FLASHPD\_LPRUN}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00624}00624\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00625}00625\ \ \ \ \ \textcolor{comment}{/*\ Unlock\ bit\ FPDR\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00626}00626\ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR1,\ PWR\_FLASH\_POWER\_MODE\_UNLOCK\_CODE);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00627}00627\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00628}00628\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00629}00629\ \ \ \textcolor{comment}{/*\ Set\ flash\ power\ down\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00630}00630\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR1,\ PowerMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00631}00631\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00632}00632\ \ \ \textcolor{keywordflow}{if}\ ((PowerMode\ \&\ \mbox{\hyperlink{group__PWREx__Flash__PowerDown_ga09d759cd12585c2538a7a5ae6d26381c}{PWR\_FLASHPD\_LPRUN}})\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00633}00633\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00634}00634\ \ \ \ \ \textcolor{comment}{/*\ Unlock\ bit\ FPDR\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00635}00635\ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ PWR\_FLASH\_POWER\_MODE\_UNLOCK\_CODE);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00636}00636\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00637}00637\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00638}00638\ \ \ \textcolor{comment}{/*\ Set\ flash\ power\ down\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00639}00639\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ PowerMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00640}00640\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00641}00641\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00642}00642\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00653}00653\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga283979e2c9117c27dfacc38161ac100b}{HAL\_PWREx\_DisableFlashPowerDown}}(uint32\_t\ PowerMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00654}00654\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00655}00655\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga0f2481ecabd15fce28fa073838985894}{IS\_PWR\_FLASH\_POWERDOWN}}(PowerMode));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00656}00656\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00657}00657\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00658}00658\ \ \ \textcolor{comment}{/*\ Set\ flash\ power\ down\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00659}00659\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR1,\ PowerMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00660}00660\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00661}00661\ \ \ \textcolor{comment}{/*\ Set\ flash\ power\ down\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00662}00662\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ PowerMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00663}00663\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00664}00664\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00665}00665\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00666}00666\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00673}00673\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga304c96c00856fa403922a589f206f742}{HAL\_PWREx\_EnableWPVD}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00674}00674\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00675}00675\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00676}00676\ \ \ LL\_C2\_PWR\_EnableWPVD();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00677}00677\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00678}00678\ \ \ LL\_PWR\_EnableWPVD();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00679}00679\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00680}00680\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00681}00681\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00686}00686\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga4ee59416a466348c2c58d27e756bca37}{HAL\_PWREx\_DisableWPVD}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00687}00687\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00688}00688\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00689}00689\ \ \ LL\_C2\_PWR\_DisableWPVD();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00690}00690\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00691}00691\ \ \ LL\_PWR\_DisableWPVD();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00692}00692\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00693}00693\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00694}00694\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00703}00703\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga70064db60f675e8e66e4dc5f31b0e2f7}{HAL\_PWREx\_EnableBORPVD\_ULP}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00704}00704\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00705}00705\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga433fdb140106531e289704c17ee1971d}{PWR\_CR3\_ULPEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00706}00706\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00707}00707\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00708}00708\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00715}00715\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga05f64d3c2091d5f5fbf3ce9bbe2e64c5}{HAL\_PWREx\_DisableBORPVD\_ULP}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00716}00716\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00717}00717\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR3,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga433fdb140106531e289704c17ee1971d}{PWR\_CR3\_ULPEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00718}00718\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00719}00719\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00720}00720\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00721}00721\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00726}00726\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gae4cc99f355694c08c6550295cc098a80}{HAL\_PWREx\_EnablePVM3}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00727}00727\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00728}00728\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR2,\ \mbox{\hyperlink{group__PWREx__PVM__Type_ga9690d421376ae26081cb09a9cca14d29}{PWR\_PVM\_3}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00729}00729\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00730}00730\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00735}00735\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga8a83216a3ae9f69d410b77c9b94bc383}{HAL\_PWREx\_DisablePVM3}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00736}00736\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00737}00737\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR2,\ \mbox{\hyperlink{group__PWREx__PVM__Type_ga9690d421376ae26081cb09a9cca14d29}{PWR\_PVM\_3}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00738}00738\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00739}00739\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00752}00752\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga179ab0cb7ce421759273f0ab80a64f2f}{HAL\_PWREx\_ConfigPVM}}(\mbox{\hyperlink{structPWR__PVMTypeDef}{PWR\_PVMTypeDef}}\ *sConfigPVM)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00753}00753\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00754}00754\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00755}00755\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00756}00756\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00757}00757\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga2ca346be5c7164d2f89e2d8c089163fa}{IS\_PWR\_PVM\_TYPE}}(sConfigPVM-\/>\mbox{\hyperlink{structPWR__PVMTypeDef_a70b4f593e111166b5615cf50e8f60ecf}{PVMType}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00758}00758\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWREx__Private__Macros_ga3fdff82a86fc43bad8975e531ba14d19}{IS\_PWR\_PVM\_MODE}}(sConfigPVM-\/>\mbox{\hyperlink{structPWR__PVMTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00759}00759\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00760}00760\ \ \ \textcolor{comment}{/*\ Configure\ EXTI\ lines\ if\ so\ required:}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00761}00761\ \textcolor{comment}{\ \ \ \ \ scan\ through\ PVMType\ to\ detect\ which\ PVMx\ is\ set\ and}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00762}00762\ \textcolor{comment}{\ \ \ \ \ configure\ the\ corresponding\ EXTI\ line\ accordingly.\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00763}00763\ \ \ \textcolor{keywordflow}{switch}\ (sConfigPVM-\/>\mbox{\hyperlink{structPWR__PVMTypeDef_a70b4f593e111166b5615cf50e8f60ecf}{PVMType}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00764}00764\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00765}00765\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__PWREx__PVM__Type_ga9690d421376ae26081cb09a9cca14d29}{PWR\_PVM\_3}}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00766}00766\ \ \ \ \ \ \ \textcolor{comment}{/*\ Clear\ any\ previous\ config.\ Keep\ it\ clear\ if\ no\ event\ or\ IT\ mode\ is\ selected\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00767}00767\ \ \ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_ga08575b1941c0e2ef17565ba079b3281a}{\_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_EVENT}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00768}00768\ \ \ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_ga8c2594b9089a0b878aa7dfdf7b84e8db}{\_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_IT}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00769}00769\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00770}00770\ \ \ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_ga4c997b83049e40ba993babdc40f70154}{\_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_FALLING\_EDGE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00771}00771\ \ \ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_gaac446f9119998abbf6d6c727e69229ee}{\_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_RISING\_EDGE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00772}00772\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00773}00773\ \ \ \ \ \ \ \textcolor{comment}{/*\ Configure\ interrupt\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00774}00774\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((sConfigPVM-\/>\mbox{\hyperlink{structPWR__PVMTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ \&\ \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gac5209faf43a32aad1185a39e9cd7e295}{PVM\_MODE\_IT}})\ ==\ \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gac5209faf43a32aad1185a39e9cd7e295}{PVM\_MODE\_IT}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00775}00775\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00776}00776\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_gab3b372913143c1f67eb2e0329d1d72a2}{\_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_IT}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00777}00777\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00778}00778\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00779}00779\ \ \ \ \ \ \ \textcolor{comment}{/*\ Configure\ the\ edge\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00780}00780\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((sConfigPVM-\/>\mbox{\hyperlink{structPWR__PVMTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ \&\ \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_ga59a5f6af101fe282da71dc2416d9fdc9}{PVM\_RISING\_EDGE}})\ ==\ \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_ga59a5f6af101fe282da71dc2416d9fdc9}{PVM\_RISING\_EDGE}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00781}00781\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00782}00782\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_ga63d7fb72a47f5f94884b19d244d024e7}{\_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_RISING\_EDGE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00783}00783\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00784}00784\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00785}00785\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((sConfigPVM-\/>\mbox{\hyperlink{structPWR__PVMTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ \&\ \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gaec6b36d7562889101b7787a2d79e3916}{PVM\_FALLING\_EDGE}})\ ==\ \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gaec6b36d7562889101b7787a2d79e3916}{PVM\_FALLING\_EDGE}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00786}00786\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00787}00787\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_gae3ee5db9130faf21f6902a2f0e11ba62}{\_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_FALLING\_EDGE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00788}00788\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00789}00789\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00790}00790\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00791}00791\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00792}00792\ \ \ \ \ \ \ status\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00793}00793\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00794}00794\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00795}00795\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00796}00796\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00797}00797\ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00798}00798\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00799}00799\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00808}00808\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gac2c18f97d5c335fdded411071e39daba}{HAL\_PWREx\_SetRadioEOL}}(uint32\_t\ RadioEOL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00809}00809\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00810}00810\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR5,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab2a22fb7f751fe39d3536111af88756c}{PWR\_CR5\_RFEOLEN}},\ RadioEOL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00811}00811\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00812}00812\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00813}00813\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00814}00814\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00823}00823\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga30dca54dfd1e54f1a9dd7e30dc6ec1d8}{HAL\_PWREx\_SMPS\_SetMode}}(uint32\_t\ OperatingMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00824}00824\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00825}00825\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR5,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad56cd8b6a4178a44439c09243b64703c}{PWR\_CR5\_SMPSEN}},\ OperatingMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00826}00826\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00827}00827\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00839}00839\ uint32\_t\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga6f37d74248bcf03a835a96b6bc95e25f}{HAL\_PWREx\_SMPS\_GetEffectiveMode}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00840}00840\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00841}00841\ \ \ \textcolor{comment}{/*\ Return\ a\ value\ corresponding\ to\ definition\ of\ literals\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00842}00842\ \ \ \textcolor{comment}{/*\ PWR\_SMPS\_BYPASS\ or\ PWR\_SMPS\_STEP\_DOWN.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00843}00843\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>SR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga427d5cd60cf32a78c63699ccf6a382c3}{PWR\_SR2\_SMPSRDY}})\ <<\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4d566721bb84e086dafcf366dc068834}{PWR\_CR5\_SMPSEN\_Pos}}\ -\/\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gadf027d4ae1d888ffa6aadee3dfa9d2f6}{PWR\_SR2\_SMPSRDY\_Pos}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00844}00844\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00845}00845\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00846}00846\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00847}00847\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00854}00854\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga03d018969b6940092bb32a3869b8c84e}{HAL\_PWREx\_EnableLowPowerRunMode}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00855}00855\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00856}00856\ \ \ \textcolor{comment}{/*\ Set\ Regulator\ parameter\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00857}00857\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa4f44f2d21d09b8200203851c6b7bac5}{PWR\_CR1\_LPR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00858}00858\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00859}00859\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00868}00868\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga848ac532d5c69ae9357a8ebcd8bb82f1}{HAL\_PWREx\_DisableLowPowerRunMode}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00869}00869\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00870}00870\ \ \ uint32\_t\ wait\_loop\_index;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00871}00871\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00872}00872\ \ \ \textcolor{comment}{/*\ Clear\ LPR\ bit\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00873}00873\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa4f44f2d21d09b8200203851c6b7bac5}{PWR\_CR1\_LPR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00874}00874\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00875}00875\ \ \ \textcolor{comment}{/*\ Wait\ until\ REGLPF\ is\ reset\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00876}00876\ \ \ wait\_loop\_index\ =\ ((PWR\_FLAG\_SETTING\_DELAY\_US\ *\ \mbox{\hyperlink{group__STM32WLxx__System__Private__Variables_gaa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}})\ /\ 1000000UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00877}00877\ \ \ \textcolor{keywordflow}{while}\ ((\mbox{\hyperlink{stm32wlxx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}{HAL\_IS\_BIT\_SET}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>SR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8b4c0d31f1dbb17ccb85a6e582a00b9d}{PWR\_SR2\_REGLPF}}))\ \&\&\ (wait\_loop\_index\ !=\ 0U))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00878}00878\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00879}00879\ \ \ \ \ wait\_loop\_index-\/-\/;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00880}00880\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00881}00881\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{stm32wlxx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}{HAL\_IS\_BIT\_SET}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>SR2,\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8b4c0d31f1dbb17ccb85a6e582a00b9d}{PWR\_SR2\_REGLPF}})))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00882}00882\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00883}00883\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5}{HAL\_TIMEOUT}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00884}00884\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00885}00885\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00886}00886\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00887}00887\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00888}00888\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00889}00889\ \textcolor{comment}{/****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00890}00890\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00915}00915\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaaf42742d4b4331ef39167ce91872a6c8}{HAL\_PWREx\_EnterSTOP0Mode}}(uint8\_t\ STOPEntry)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00916}00916\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00917}00917\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00918}00918\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWR__Private__Macros_ga421f248d4e2c8f86188bd6134af53541}{IS\_PWR\_STOP\_ENTRY}}(STOPEntry));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00919}00919\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00920}00920\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00921}00921\ \ \ \textcolor{comment}{/*\ Stop\ 0\ mode\ with\ Main\ Regulator\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00922}00922\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad224073ef19493300eb231d410520da8}{PWR\_C2CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_gae163dddadea03ea51d61e4d86c6efe86}{PWR\_LOWPOWERMODE\_STOP0}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00923}00923\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00924}00924\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00925}00925\ \ \ \textcolor{comment}{/*\ Stop\ 0\ mode\ with\ Main\ Regulator\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00926}00926\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf533ae177088e3bea24206d65fdb8989}{PWR\_CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_gae163dddadea03ea51d61e4d86c6efe86}{PWR\_LOWPOWERMODE\_STOP0}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00927}00927\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00928}00928\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00929}00929\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00930}00930\ \ \ \textcolor{comment}{/*\ Set\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00931}00931\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00932}00932\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00933}00933\ \ \ \textcolor{comment}{/*\ Select\ Stop\ mode\ entry\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00934}00934\ \ \ \textcolor{keywordflow}{if}\ (STOPEntry\ ==\ \mbox{\hyperlink{group__PWR__STOP__mode__entry_ga3bdb1a9c9b421b73ab148d45eb90fa9b}{PWR\_STOPENTRY\_WFI}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00935}00935\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00936}00936\ \ \ \ \ \textcolor{comment}{/*\ Request\ Wait\ For\ Interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00937}00937\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gad23bf2b78a9a4524157c9de0d30b7448}{\_\_WFI}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00938}00938\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00939}00939\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00940}00940\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00941}00941\ \ \ \ \ \textcolor{comment}{/*\ Request\ Wait\ For\ Event\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00942}00942\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaab4f296d0022b4b10dc0976eb22052f9}{\_\_SEV}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00943}00943\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaac6cc7dd4325d9cb40d3290fa5244b3d}{\_\_WFE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00944}00944\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaac6cc7dd4325d9cb40d3290fa5244b3d}{\_\_WFE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00945}00945\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00946}00946\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00947}00947\ \ \ \textcolor{comment}{/*\ Reset\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00948}00948\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00949}00949\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00950}00950\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00974}00974\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3a51da1f13d37cb1aee7a08c5ec57fb2}{HAL\_PWREx\_EnterSTOP1Mode}}(uint8\_t\ STOPEntry)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00975}00975\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00976}00976\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00977}00977\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWR__Private__Macros_ga421f248d4e2c8f86188bd6134af53541}{IS\_PWR\_STOP\_ENTRY}}(STOPEntry));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00978}00978\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00979}00979\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00980}00980\ \ \ \textcolor{comment}{/*\ Stop\ 1\ mode\ with\ Low-\/Power\ Regulator\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00981}00981\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad224073ef19493300eb231d410520da8}{PWR\_C2CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_ga6e436b19d68a17f664de329633049aa9}{PWR\_LOWPOWERMODE\_STOP1}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00982}00982\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00983}00983\ \ \ \textcolor{comment}{/*\ Stop\ 1\ mode\ with\ Low-\/Power\ Regulator\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00984}00984\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf533ae177088e3bea24206d65fdb8989}{PWR\_CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_ga6e436b19d68a17f664de329633049aa9}{PWR\_LOWPOWERMODE\_STOP1}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00985}00985\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00986}00986\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00987}00987\ \ \ \textcolor{comment}{/*\ Set\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00988}00988\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00989}00989\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00990}00990\ \ \ \textcolor{comment}{/*\ Select\ Stop\ mode\ entry\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00991}00991\ \ \ \textcolor{keywordflow}{if}\ (STOPEntry\ ==\ \mbox{\hyperlink{group__PWR__STOP__mode__entry_ga3bdb1a9c9b421b73ab148d45eb90fa9b}{PWR\_STOPENTRY\_WFI}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00992}00992\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00993}00993\ \ \ \ \ \textcolor{comment}{/*\ Request\ Wait\ For\ Interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00994}00994\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gad23bf2b78a9a4524157c9de0d30b7448}{\_\_WFI}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00995}00995\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00996}00996\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00997}00997\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00998}00998\ \ \ \ \ \textcolor{comment}{/*\ Request\ Wait\ For\ Event\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l00999}00999\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaab4f296d0022b4b10dc0976eb22052f9}{\_\_SEV}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01000}01000\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaac6cc7dd4325d9cb40d3290fa5244b3d}{\_\_WFE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01001}01001\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaac6cc7dd4325d9cb40d3290fa5244b3d}{\_\_WFE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01002}01002\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01003}01003\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01004}01004\ \ \ \textcolor{comment}{/*\ Reset\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01005}01005\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01006}01006\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01007}01007\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01008}01008\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01033}01033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaba025702128d5e2f1dc5f1aef3bbc360}{HAL\_PWREx\_EnterSTOP2Mode}}(uint8\_t\ STOPEntry)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01034}01034\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01035}01035\ \ \ \textcolor{comment}{/*\ Check\ the\ parameter\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01036}01036\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__PWR__Private__Macros_ga421f248d4e2c8f86188bd6134af53541}{IS\_PWR\_STOP\_ENTRY}}(STOPEntry));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01037}01037\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01038}01038\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01039}01039\ \ \ \textcolor{comment}{/*\ Set\ Stop\ mode\ 2\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01040}01040\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad224073ef19493300eb231d410520da8}{PWR\_C2CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_gaaf2adaf215178cc2462b4c1a7413502e}{PWR\_LOWPOWERMODE\_STOP2}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01041}01041\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01042}01042\ \ \ \textcolor{comment}{/*\ Set\ Stop\ mode\ 2\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01043}01043\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf533ae177088e3bea24206d65fdb8989}{PWR\_CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_gaaf2adaf215178cc2462b4c1a7413502e}{PWR\_LOWPOWERMODE\_STOP2}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01044}01044\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01045}01045\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01046}01046\ \ \ \textcolor{comment}{/*\ Set\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01047}01047\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01048}01048\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01049}01049\ \ \ \textcolor{comment}{/*\ Select\ Stop\ mode\ entry\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01050}01050\ \ \ \textcolor{keywordflow}{if}\ (STOPEntry\ ==\ \mbox{\hyperlink{group__PWR__STOP__mode__entry_ga3bdb1a9c9b421b73ab148d45eb90fa9b}{PWR\_STOPENTRY\_WFI}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01051}01051\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01052}01052\ \ \ \ \ \textcolor{comment}{/*\ Request\ Wait\ For\ Interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01053}01053\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gad23bf2b78a9a4524157c9de0d30b7448}{\_\_WFI}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01054}01054\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01055}01055\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01056}01056\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01057}01057\ \ \ \ \ \textcolor{comment}{/*\ Request\ Wait\ For\ Event\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01058}01058\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaab4f296d0022b4b10dc0976eb22052f9}{\_\_SEV}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01059}01059\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaac6cc7dd4325d9cb40d3290fa5244b3d}{\_\_WFE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01060}01060\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaac6cc7dd4325d9cb40d3290fa5244b3d}{\_\_WFE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01061}01061\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01062}01062\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01063}01063\ \ \ \textcolor{comment}{/*\ Reset\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01064}01064\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01065}01065\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01066}01066\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01078}01078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gab51ca7c536b8afc1bae6b96e00a1949f}{HAL\_PWREx\_EnterSHUTDOWNMode}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01079}01079\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01080}01080\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01081}01081\ \ \ \textcolor{comment}{/*\ Set\ Shutdown\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01082}01082\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>C2CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad224073ef19493300eb231d410520da8}{PWR\_C2CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_ga08c9eb792f1e5e9c7f49ec936a5c39eb}{PWR\_LOWPOWERMODE\_SHUTDOWN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01083}01083\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01084}01084\ \ \ \textcolor{comment}{/*\ Set\ Shutdown\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01085}01085\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}}-\/>CR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf533ae177088e3bea24206d65fdb8989}{PWR\_CR1\_LPMS}},\ \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_ga08c9eb792f1e5e9c7f49ec936a5c39eb}{PWR\_LOWPOWERMODE\_SHUTDOWN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01086}01086\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01087}01087\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01088}01088\ \ \ \textcolor{comment}{/*\ Set\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01089}01089\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01090}01090\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01091}01091\ \ \ \textcolor{comment}{/*\ This\ option\ is\ used\ to\ ensure\ that\ store\ operations\ are\ completed\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01092}01092\ \textcolor{preprocessor}{\#if\ defined\ (\ \_\_CC\_ARM)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01093}01093\ \ \ \_\_force\_stores();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01094}01094\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01095}01095\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01096}01096\ \ \ \textcolor{comment}{/*\ Request\ Wait\ For\ Interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01097}01097\ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gad23bf2b78a9a4524157c9de0d30b7448}{\_\_WFI}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01098}01098\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01099}01099\ \ \ \textcolor{comment}{/*\ Note:\ After\ this\ request\ to\ enter\ in\ Shutdown\ mode,\ at\ wake-\/up,\ program}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01100}01100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ execution\ depends\ on\ system\ low-\/power\ mode:}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01101}01101\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ -\/\ If\ system\ was\ in\ Shutdown\ mode\ (other\ CPU\ in\ Shutdown),}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01102}01102\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ then\ at\ wake-\/up\ program\ restarts\ at\ reset\ state}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01103}01103\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ -\/\ If\ system\ was\ in\ Run\ or\ Stop\ mode\ (other\ CPU\ in\ Run,\ Sleep,\ Stop),}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01104}01104\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ then\ at\ wake-\/up\ program\ continues\ from\ this\ point}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01105}01105\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01106}01106\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01107}01107\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01113}01113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga41c9c878f0029884898463e9fe6bdff2}{HAL\_PWREx\_PVD\_PVM\_IRQHandler}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01114}01114\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01115}01115\ \ \ \textcolor{comment}{/*\ Check\ PWR\ exti\ flag\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01116}01116\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__PWR__Exported__Macros_ga5e66fa75359b51066e0731ac1e5ae438}{\_\_HAL\_PWR\_PVD\_EXTI\_GET\_FLAG}}()\ !=\ 0UL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01117}01117\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01118}01118\ \ \ \ \ \textcolor{comment}{/*\ Clear\ PVD\ exti\ pending\ bit\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01119}01119\ \ \ \ \ \mbox{\hyperlink{group__PWR__Exported__Macros_gac0fb2218bc050f5d8fdb1a3f28590352}{\_\_HAL\_PWR\_PVD\_EXTI\_CLEAR\_FLAG}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01120}01120\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01121}01121\ \ \ \ \ \textcolor{comment}{/*\ PWR\ PVD\ interrupt\ user\ callback\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01122}01122\ \ \ \ \ \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_gaa4843b3eb7989f5b95e1218af4086940}{HAL\_PWR\_PVDCallback}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01123}01123\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01124}01124\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01125}01125\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__PWREx__Exported__Macros_ga694cca021af0cb428a962525e773bb02}{\_\_HAL\_PWR\_PVM3\_EXTI\_GET\_FLAG}}()\ !=\ 0UL)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01126}01126\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01127}01127\ \ \ \ \ \textcolor{comment}{/*\ Clear\ PVM3\ exti\ pending\ bit\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01128}01128\ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_ga372d2bbe37a6db92ba6834ea7ceda508}{\_\_HAL\_PWR\_PVM3\_EXTI\_CLEAR\_FLAG}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01129}01129\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01130}01130\ \ \ \ \ \textcolor{comment}{/*\ PWR\ PVM3\ interrupt\ user\ callback\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01131}01131\ \ \ \ \ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga6c2197cf7c7507a0b6ec689b5e9bcfbc}{HAL\_PWREx\_PVM3Callback}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01132}01132\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01133}01133\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01134}01134\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01139}01139\ \_\_weak\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga6c2197cf7c7507a0b6ec689b5e9bcfbc}{HAL\_PWREx\_PVM3Callback}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01140}01140\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01141}01141\ \ \ \textcolor{comment}{/*\ NOTE\ :\ This\ function\ should\ not\ be\ modified;\ when\ the\ callback\ is\ needed,}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01142}01142\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ HAL\_PWREx\_PVM3Callback()\ API\ can\ be\ implemented\ in\ the\ user\ file}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01143}01143\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01144}01144\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01145}01145\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__pwr__ex_8c_source_l01154}01154\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_PWR\_MODULE\_ENABLED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

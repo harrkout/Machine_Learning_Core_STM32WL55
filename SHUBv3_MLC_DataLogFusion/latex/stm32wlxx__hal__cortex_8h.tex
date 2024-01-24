@@ -1,0 +1,85 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+cortex.h File Reference}
+\hypertarget{stm32wlxx__hal__cortex_8h}{}\label{stm32wlxx__hal__cortex_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_cortex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_cortex.h}}
+
+
+Header file of CORTEX HAL module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Preemption__Priority__Group_ga5e97dcff77680602c86e44f23f5ffa1a}{NVIC\+\_\+\+PRIORITYGROUP\+\_\+0}}~(0x00000007U)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Preemption__Priority__Group_ga702227137b010421c3a3b6434005a132}{NVIC\+\_\+\+PRIORITYGROUP\+\_\+1}}~(0x00000006U)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Preemption__Priority__Group_gaa43a3fd37850c120ce567ab2743d11b4}{NVIC\+\_\+\+PRIORITYGROUP\+\_\+2}}~(0x00000005U)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Preemption__Priority__Group_ga8ddb24962e6f0fc3273139d45d374b09}{NVIC\+\_\+\+PRIORITYGROUP\+\_\+3}}~(0x00000004U)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Preemption__Priority__Group_gae6eab9140204bc938255aa148e597c45}{NVIC\+\_\+\+PRIORITYGROUP\+\_\+4}}~(0x00000003U)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__SysTick__clock__source_ga1fd9b5bada2a8b2425a8523bc0fc7124}{SYSTICK\+\_\+\+CLKSOURCE\+\_\+\+HCLK\+\_\+\+DIV8}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__SysTick__clock__source_ga6f6582df23b6fbc578325e453b9893b7}{SYSTICK\+\_\+\+CLKSOURCE\+\_\+\+HCLK}}~0x00000004U
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Private__Macros_ga6569304a39fe4f91bd59b6a586c8ede9}{IS\+\_\+\+NVIC\+\_\+\+PRIORITY\+\_\+\+GROUP}}(GROUP)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Private__Macros_gaf30fd8f5960c2e28a772d8f16bb156dd}{IS\+\_\+\+NVIC\+\_\+\+PREEMPTION\+\_\+\+PRIORITY}}(PRIORITY)~((PRIORITY) $<$ 0x10U)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Private__Macros_ga010705bc997dcff935b965b372cba61d}{IS\+\_\+\+NVIC\+\_\+\+SUB\+\_\+\+PRIORITY}}(PRIORITY)~((PRIORITY) $<$ 0x10U)
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Private__Macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}{IS\+\_\+\+NVIC\+\_\+\+DEVICE\+\_\+\+IRQ}}(IRQ)~((IRQ) $>$ \mbox{\hyperlink{group__Peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}{Sys\+Tick\+\_\+\+IRQn}})
+\item 
+\#define \mbox{\hyperlink{group__CORTEX__Private__Macros_ga22d6291f6aed29442cf4cd9098fa0784}{IS\+\_\+\+SYSTICK\+\_\+\+CLK\+\_\+\+SOURCE}}(SOURCE)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gad9be53e08b1498adea006e5e037f238f}{HAL\+\_\+\+NVIC\+\_\+\+Set\+Priority\+Grouping}} (uint32\+\_\+t Priority\+Group)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga8581a82025a4780efd00876a66e3e91b}{HAL\+\_\+\+NVIC\+\_\+\+Set\+Priority}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn, uint32\+\_\+t Preempt\+Priority, uint32\+\_\+t Sub\+Priority)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gaaad4492c1b25e006d69948a15790352a}{HAL\+\_\+\+NVIC\+\_\+\+Enable\+IRQ}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga50ca6290e068821cb84aa168f3e13967}{HAL\+\_\+\+NVIC\+\_\+\+Disable\+IRQ}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gac83d89028fabdf5d4c38ecf4fbfbefdc}{HAL\+\_\+\+NVIC\+\_\+\+System\+Reset}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gac3a3f0d53c315523a8e6e7bcac1940cf}{HAL\+\_\+\+SYSTICK\+\_\+\+Config}} (uint32\+\_\+t Ticks\+Numb)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga6a21c9d904b0bcf4cb060f7c5c39b6f5}{HAL\+\_\+\+NVIC\+\_\+\+Get\+Priority}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn, uint32\+\_\+t Priority\+Group, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Preempt\+Priority, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Sub\+Priority)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_gaa02bc953fd4fce22248c491a93c4ce40}{HAL\+\_\+\+NVIC\+\_\+\+Get\+Priority\+Grouping}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_gad3f7598e54fb3d74eaf9abedef704c57}{HAL\+\_\+\+NVIC\+\_\+\+Get\+Active}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga3bd5802a96f0dcbc00ac3b89b134da3b}{HAL\+\_\+\+NVIC\+\_\+\+Get\+Pending\+IRQ}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_gaecf50f6c6d0e1fa5f8bd8c1b45309f18}{HAL\+\_\+\+NVIC\+\_\+\+Set\+Pending\+IRQ}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga0c7d007acf1339ca1bb46f3c6e018ff5}{HAL\+\_\+\+NVIC\+\_\+\+Clear\+Pending\+IRQ}} (\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} IRQn)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga3284dc8428996f5b6aa6b3b99e643788}{HAL\+\_\+\+SYSTICK\+\_\+\+CLKSource\+Config}} (uint32\+\_\+t CLKSource)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga5b66b62383261c1e0acef98d344aa4c1}{HAL\+\_\+\+SYSTICK\+\_\+\+IRQHandler}} (void)
+\item 
+void \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga5033855e81ba2071231b60599a3ce9a1}{HAL\+\_\+\+SYSTICK\+\_\+\+Callback}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of CORTEX HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__cortex_8h_source}{stm32wlxx\+\_\+hal\+\_\+cortex.\+h}}.
+

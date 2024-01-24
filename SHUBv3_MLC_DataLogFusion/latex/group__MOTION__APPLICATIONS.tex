@@ -1,0 +1,711 @@
+\doxysection{MOTION APPLICATIONS}
+\hypertarget{group__MOTION__APPLICATIONS}{}\label{group__MOTION__APPLICATIONS}\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection*{Topics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__DATALOG__FUSION}{DATALOG FUSION}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga354ef6d002fe5d4532dcf26c070e0392}{Uart\+\_\+\+Msg\+\_\+\+Max\+\_\+\+Size}}~\mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\+\_\+\+Max\+Len}}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga23eb6a1aef31b57bc7d80df89543e8ab}{MAG\+\_\+\+UNICLEO\+\_\+\+ID}}~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga39b337b3f942ac33af40252f5f315f21}{HUM\+\_\+\+TEMP\+\_\+\+UNICLEO\+\_\+\+ID}}~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga61936bef1bedb61a9925c66837ed37d3}{PRESS\+\_\+\+UNICLEO\+\_\+\+ID}}~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaa3ca702c66e1272c143ddfcbe3a93e7b}{UART\+\_\+\+Received\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Check if a message is received via UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\+\_\+\+Send\+Msg}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Send a message via UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga0b26bd6e23b2426297bc1ef2bea9ca6f}{UART\+\_\+\+Start\+Receive\+Msg}} (void)
+\begin{DoxyCompactList}\small\item\em Start receiving messages via DMA. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\+\_\+\+REPLY\+\_\+\+HEADER}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Build the reply header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga93e2f792c7ac7e088eaa2cf6bbc21028}{INIT\+\_\+\+STREAMING\+\_\+\+HEADER}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Initialize the streaming header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga140b99c6cfd3935acaeedec0e26d1950}{INIT\+\_\+\+STREAMING\+\_\+\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Initialize the streaming message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga4eb41985a5b7a732924e74891950c19e}{Handle\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Handle a message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb}{RTC\+\_\+\+Date\+Regulate}} (uint8\+\_\+t y, uint8\+\_\+t m, uint8\+\_\+t d, uint8\+\_\+t dw)
+\begin{DoxyCompactList}\small\item\em Configures the current date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5}{RTC\+\_\+\+Time\+Regulate}} (uint8\+\_\+t hh, uint8\+\_\+t mm, uint8\+\_\+t ss)
+\begin{DoxyCompactList}\small\item\em Configures the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77}{Get\+\_\+\+Presentation\+String}} (char \texorpdfstring{$\ast$}{*}Presentation\+String, uint32\+\_\+t \texorpdfstring{$\ast$}{*}Length)
+\begin{DoxyCompactList}\small\item\em Gets Presentation string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga01a28ff7c262d833418b799faaabb1f3}{Byte\+Stuff\+Copy\+Byte}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Byte stuffing process for one byte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf6e45bca9826260db57c60ae16416a74}{Byte\+Stuff\+Copy}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, \mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Source)
+\begin{DoxyCompactList}\small\item\em Byte stuffing process for a Msg. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaae0bc6cd28e1428bf2eff428b0eb1768}{Reverse\+Byte\+Stuff\+Copy\+Byte}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest)
+\begin{DoxyCompactList}\small\item\em Reverse Byte stuffing process for one byte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga25ab7e28ed8848f9c01dacbcaf098ee8}{Reverse\+Byte\+Stuff\+Copy\+Byte2}} (uint8\+\_\+t Source0, uint8\+\_\+t Source1, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest)
+\begin{DoxyCompactList}\small\item\em Reverse Byte stuffing process for two input data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabf31baf1506c3e9c2d65283dae7bbdbb}{Reverse\+Byte\+Stuff\+Copy}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Dest, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source)
+\begin{DoxyCompactList}\small\item\em Reverse Byte stuffing process for a Msg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e855d70731e181b4434206177b29583}{CHK\+\_\+\+Compute\+And\+Add}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Compute and add checksum. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga1d26d784869262c1b26e1575e243bb58}{CHK\+\_\+\+Check\+And\+Remove}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Compute and remove checksum. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gafcfd1af2fbe326e409de2714619638ab}{Serialize}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, uint32\+\_\+t Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Build an array from the uint32\+\_\+t (LSB first) \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga035bebfe269f424d70df46fb016df489}{Deserialize}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Unbuild a Number from an array (LSB first) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\+\_\+s32}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, int32\+\_\+t Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Build an array from the uint32\+\_\+t (LSB first) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e0f8016b226dacdb2f49091ad9cd543}{Deserialize\+\_\+s32}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Unbuild a Number from an array (LSB first) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga58aacda60a9822ef818fcec6f380e326}{Float\+To\+Array}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, float Data)
+\begin{DoxyCompactList}\small\item\em Build an array from the float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga27a1b0ece17d629a9628d0209e168435}{Uart\+Rx\+Buffer}} \mbox{[}\mbox{\hyperlink{com_8h_a566ad7c668661f2b4e70ad6673519507}{UART\+\_\+\+Rx\+Buffer\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{structTUart__Engine}{TUart\+\_\+\+Engine}} \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga44d3e8cd0b3ddfd2f7fa0f14f0870c21}{Uart\+Engine}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group__MOTION__APPLICATIONS_ga39b337b3f942ac33af40252f5f315f21}\label{group__MOTION__APPLICATIONS_ga39b337b3f942ac33af40252f5f315f21} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!HUM\_TEMP\_UNICLEO\_ID@{HUM\_TEMP\_UNICLEO\_ID}}
+\index{HUM\_TEMP\_UNICLEO\_ID@{HUM\_TEMP\_UNICLEO\_ID}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{HUM\_TEMP\_UNICLEO\_ID}{HUM\_TEMP\_UNICLEO\_ID}}
+{\footnotesize\ttfamily \#define HUM\+\_\+\+TEMP\+\_\+\+UNICLEO\+\_\+\+ID~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00047}{47}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga23eb6a1aef31b57bc7d80df89543e8ab}\label{group__MOTION__APPLICATIONS_ga23eb6a1aef31b57bc7d80df89543e8ab} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!MAG\_UNICLEO\_ID@{MAG\_UNICLEO\_ID}}
+\index{MAG\_UNICLEO\_ID@{MAG\_UNICLEO\_ID}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{MAG\_UNICLEO\_ID}{MAG\_UNICLEO\_ID}}
+{\footnotesize\ttfamily \#define MAG\+\_\+\+UNICLEO\+\_\+\+ID~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00043}{43}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga61936bef1bedb61a9925c66837ed37d3}\label{group__MOTION__APPLICATIONS_ga61936bef1bedb61a9925c66837ed37d3} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!PRESS\_UNICLEO\_ID@{PRESS\_UNICLEO\_ID}}
+\index{PRESS\_UNICLEO\_ID@{PRESS\_UNICLEO\_ID}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{PRESS\_UNICLEO\_ID}{PRESS\_UNICLEO\_ID}}
+{\footnotesize\ttfamily \#define PRESS\+\_\+\+UNICLEO\+\_\+\+ID~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00051}{51}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga354ef6d002fe5d4532dcf26c070e0392}\label{group__MOTION__APPLICATIONS_ga354ef6d002fe5d4532dcf26c070e0392} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!Uart\_Msg\_Max\_Size@{Uart\_Msg\_Max\_Size}}
+\index{Uart\_Msg\_Max\_Size@{Uart\_Msg\_Max\_Size}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{Uart\_Msg\_Max\_Size}{Uart\_Msg\_Max\_Size}}
+{\footnotesize\ttfamily \#define Uart\+\_\+\+Msg\+\_\+\+Max\+\_\+\+Size~\mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\+\_\+\+Max\+Len}}}
+
+
+
+Definition at line \mbox{\hyperlink{com_8c_source_l00028}{28}} of file \mbox{\hyperlink{com_8c_source}{com.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}\label{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!BUILD\_REPLY\_HEADER@{BUILD\_REPLY\_HEADER}}
+\index{BUILD\_REPLY\_HEADER@{BUILD\_REPLY\_HEADER}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{BUILD\_REPLY\_HEADER()}{BUILD\_REPLY\_HEADER()}}
+{\footnotesize\ttfamily void BUILD\+\_\+\+REPLY\+\_\+\+HEADER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Build the reply header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & the pointer to the message to be built \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00064}{64}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gaf6e45bca9826260db57c60ae16416a74}\label{group__MOTION__APPLICATIONS_gaf6e45bca9826260db57c60ae16416a74} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!ByteStuffCopy@{ByteStuffCopy}}
+\index{ByteStuffCopy@{ByteStuffCopy}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{ByteStuffCopy()}{ByteStuffCopy()}}
+{\footnotesize\ttfamily int Byte\+Stuff\+Copy (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Dest,  }\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Source }\end{DoxyParamCaption})}
+
+
+
+Byte stuffing process for a Msg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dest} & destination \\
+\hline
+{\em Source} & source \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Total} & number of bytes processed \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00071}{71}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga01a28ff7c262d833418b799faaabb1f3}\label{group__MOTION__APPLICATIONS_ga01a28ff7c262d833418b799faaabb1f3} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!ByteStuffCopyByte@{ByteStuffCopyByte}}
+\index{ByteStuffCopyByte@{ByteStuffCopyByte}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{ByteStuffCopyByte()}{ByteStuffCopyByte()}}
+{\footnotesize\ttfamily int Byte\+Stuff\+Copy\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Dest,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Byte stuffing process for one byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dest} & destination \\
+\hline
+{\em Source} & source \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Total} & number of bytes processed \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00040}{40}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga1d26d784869262c1b26e1575e243bb58}\label{group__MOTION__APPLICATIONS_ga1d26d784869262c1b26e1575e243bb58} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!CHK\_CheckAndRemove@{CHK\_CheckAndRemove}}
+\index{CHK\_CheckAndRemove@{CHK\_CheckAndRemove}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{CHK\_CheckAndRemove()}{CHK\_CheckAndRemove()}}
+{\footnotesize\ttfamily int CHK\+\_\+\+Check\+And\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Compute and remove checksum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & pointer to the message \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & number different from 0 if the operation succeeds, 0 if an error occurs \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00233}{233}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga5e855d70731e181b4434206177b29583}\label{group__MOTION__APPLICATIONS_ga5e855d70731e181b4434206177b29583} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!CHK\_ComputeAndAdd@{CHK\_ComputeAndAdd}}
+\index{CHK\_ComputeAndAdd@{CHK\_ComputeAndAdd}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{CHK\_ComputeAndAdd()}{CHK\_ComputeAndAdd()}}
+{\footnotesize\ttfamily void CHK\+\_\+\+Compute\+And\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Compute and add checksum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & pointer to the message \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00214}{214}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga035bebfe269f424d70df46fb016df489}\label{group__MOTION__APPLICATIONS_ga035bebfe269f424d70df46fb016df489} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{Deserialize()}{Deserialize()}}
+{\footnotesize\ttfamily uint32\+\_\+t Deserialize (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Source,  }\item[{uint32\+\_\+t}]{Len }\end{DoxyParamCaption})}
+
+
+
+Unbuild a Number from an array (LSB first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & source \\
+\hline
+{\em Len} & number of bytes \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Rebuild} & unsigned int variable \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00271}{271}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga5e0f8016b226dacdb2f49091ad9cd543}\label{group__MOTION__APPLICATIONS_ga5e0f8016b226dacdb2f49091ad9cd543} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!Deserialize\_s32@{Deserialize\_s32}}
+\index{Deserialize\_s32@{Deserialize\_s32}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{Deserialize\_s32()}{Deserialize\_s32()}}
+{\footnotesize\ttfamily int32\+\_\+t Deserialize\+\_\+s32 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Source,  }\item[{uint32\+\_\+t}]{Len }\end{DoxyParamCaption})}
+
+
+
+Unbuild a Number from an array (LSB first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & source \\
+\hline
+{\em Len} & number of bytes \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Rebuild} & signed int variable \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00312}{312}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga58aacda60a9822ef818fcec6f380e326}\label{group__MOTION__APPLICATIONS_ga58aacda60a9822ef818fcec6f380e326} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!FloatToArray@{FloatToArray}}
+\index{FloatToArray@{FloatToArray}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{FloatToArray()}{FloatToArray()}}
+{\footnotesize\ttfamily void Float\+To\+Array (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Dest,  }\item[{float}]{Data }\end{DoxyParamCaption})}
+
+
+
+Build an array from the float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dest} & destination \\
+\hline
+{\em Data} & source \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00332}{332}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77}\label{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!Get\_PresentationString@{Get\_PresentationString}}
+\index{Get\_PresentationString@{Get\_PresentationString}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{Get\_PresentationString()}{Get\_PresentationString()}}
+{\footnotesize\ttfamily void Get\+\_\+\+Presentation\+String (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{Presentation\+String,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Length }\end{DoxyParamCaption})}
+
+
+
+Gets Presentation string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Presentation\+String} & the Presentation string \\
+\hline
+{\em Length} & the length of Presentation string \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00487}{487}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga4eb41985a5b7a732924e74891950c19e}\label{group__MOTION__APPLICATIONS_ga4eb41985a5b7a732924e74891950c19e} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!HandleMSG@{HandleMSG}}
+\index{HandleMSG@{HandleMSG}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{HandleMSG()}{HandleMSG()}}
+{\footnotesize\ttfamily int Handle\+MSG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Handle a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & the pointer to the message to be handled \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if the message is correctly handled, 0 otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00109}{109}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga93e2f792c7ac7e088eaa2cf6bbc21028}\label{group__MOTION__APPLICATIONS_ga93e2f792c7ac7e088eaa2cf6bbc21028} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!INIT\_STREAMING\_HEADER@{INIT\_STREAMING\_HEADER}}
+\index{INIT\_STREAMING\_HEADER@{INIT\_STREAMING\_HEADER}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{INIT\_STREAMING\_HEADER()}{INIT\_STREAMING\_HEADER()}}
+{\footnotesize\ttfamily void INIT\+\_\+\+STREAMING\+\_\+\+HEADER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Initialize the streaming header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & the pointer to the header to be initialized \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00076}{76}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga140b99c6cfd3935acaeedec0e26d1950}\label{group__MOTION__APPLICATIONS_ga140b99c6cfd3935acaeedec0e26d1950} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!INIT\_STREAMING\_MSG@{INIT\_STREAMING\_MSG}}
+\index{INIT\_STREAMING\_MSG@{INIT\_STREAMING\_MSG}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{INIT\_STREAMING\_MSG()}{INIT\_STREAMING\_MSG()}}
+{\footnotesize\ttfamily void INIT\+\_\+\+STREAMING\+\_\+\+MSG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Initialize the streaming message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & the pointer to the message to be initialized \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00089}{89}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gabf31baf1506c3e9c2d65283dae7bbdbb}\label{group__MOTION__APPLICATIONS_gabf31baf1506c3e9c2d65283dae7bbdbb} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!ReverseByteStuffCopy@{ReverseByteStuffCopy}}
+\index{ReverseByteStuffCopy@{ReverseByteStuffCopy}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{ReverseByteStuffCopy()}{ReverseByteStuffCopy()}}
+{\footnotesize\ttfamily int Reverse\+Byte\+Stuff\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Dest,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Source }\end{DoxyParamCaption})}
+
+
+
+Reverse Byte stuffing process for a Msg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dest} & destination \\
+\hline
+{\em Source} & source \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if the operation succeeds, 0 if an error occurs \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00155}{155}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gaae0bc6cd28e1428bf2eff428b0eb1768}\label{group__MOTION__APPLICATIONS_gaae0bc6cd28e1428bf2eff428b0eb1768} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!ReverseByteStuffCopyByte@{ReverseByteStuffCopyByte}}
+\index{ReverseByteStuffCopyByte@{ReverseByteStuffCopyByte}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{ReverseByteStuffCopyByte()}{ReverseByteStuffCopyByte()}}
+{\footnotesize\ttfamily int Reverse\+Byte\+Stuff\+Copy\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Source,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Dest }\end{DoxyParamCaption})}
+
+
+
+Reverse Byte stuffing process for one byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & source \\
+\hline
+{\em Dest} & destination \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Number} & of input bytes processed (1 or 2) or 0 for invalid sequence \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00092}{92}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga25ab7e28ed8848f9c01dacbcaf098ee8}\label{group__MOTION__APPLICATIONS_ga25ab7e28ed8848f9c01dacbcaf098ee8} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!ReverseByteStuffCopyByte2@{ReverseByteStuffCopyByte2}}
+\index{ReverseByteStuffCopyByte2@{ReverseByteStuffCopyByte2}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{ReverseByteStuffCopyByte2()}{ReverseByteStuffCopyByte2()}}
+{\footnotesize\ttfamily int Reverse\+Byte\+Stuff\+Copy\+Byte2 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Source0,  }\item[{uint8\+\_\+t}]{Source1,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Dest }\end{DoxyParamCaption})}
+
+
+
+Reverse Byte stuffing process for two input data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Source0} & input data \\
+\hline
+{\em Source1} & input data \\
+\hline
+{\em Dest} & the destination data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Number} & of input bytes processed (1 or 2) or 0 for invalid sequence \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00124}{124}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb}\label{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!RTC\_DateRegulate@{RTC\_DateRegulate}}
+\index{RTC\_DateRegulate@{RTC\_DateRegulate}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{RTC\_DateRegulate()}{RTC\_DateRegulate()}}
+{\footnotesize\ttfamily void RTC\+\_\+\+Date\+Regulate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{y,  }\item[{uint8\+\_\+t}]{m,  }\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{dw }\end{DoxyParamCaption})}
+
+
+
+Configures the current date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & the year value to be set \\
+\hline
+{\em m} & the month value to be set \\
+\hline
+{\em d} & the day value to be set \\
+\hline
+{\em dw} & the day-\/week value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00439}{439}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5}\label{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!RTC\_TimeRegulate@{RTC\_TimeRegulate}}
+\index{RTC\_TimeRegulate@{RTC\_TimeRegulate}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{RTC\_TimeRegulate()}{RTC\_TimeRegulate()}}
+{\footnotesize\ttfamily void RTC\+\_\+\+Time\+Regulate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{hh,  }\item[{uint8\+\_\+t}]{mm,  }\item[{uint8\+\_\+t}]{ss }\end{DoxyParamCaption})}
+
+
+
+Configures the current time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hh} & the hour value to be set \\
+\hline
+{\em mm} & the minute value to be set \\
+\hline
+{\em ss} & the second value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8c_source_l00462}{462}} of file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gafcfd1af2fbe326e409de2714619638ab}\label{group__MOTION__APPLICATIONS_gafcfd1af2fbe326e409de2714619638ab} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily void Serialize (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Dest,  }\item[{uint32\+\_\+t}]{Source,  }\item[{uint32\+\_\+t}]{Len }\end{DoxyParamCaption})}
+
+
+
+Build an array from the uint32\+\_\+t (LSB first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dest} & destination \\
+\hline
+{\em Source} & source \\
+\hline
+{\em Len} & number of bytes \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00254}{254}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}\label{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!Serialize\_s32@{Serialize\_s32}}
+\index{Serialize\_s32@{Serialize\_s32}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{Serialize\_s32()}{Serialize\_s32()}}
+{\footnotesize\ttfamily void Serialize\+\_\+s32 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Dest,  }\item[{int32\+\_\+t}]{Source,  }\item[{uint32\+\_\+t}]{Len }\end{DoxyParamCaption})}
+
+
+
+Build an array from the uint32\+\_\+t (LSB first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dest} & destination \\
+\hline
+{\em Source} & source \\
+\hline
+{\em Len} & number of bytes \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{serial__protocol_8c_source_l00292}{292}} of file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gaa3ca702c66e1272c143ddfcbe3a93e7b}\label{group__MOTION__APPLICATIONS_gaa3ca702c66e1272c143ddfcbe3a93e7b} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!UART\_ReceivedMSG@{UART\_ReceivedMSG}}
+\index{UART\_ReceivedMSG@{UART\_ReceivedMSG}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{UART\_ReceivedMSG()}{UART\_ReceivedMSG()}}
+{\footnotesize\ttfamily int UART\+\_\+\+Received\+MSG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Check if a message is received via UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & the pointer to the message to be received \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if a complete message is found, 0 otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{com_8c_source_l00048}{48}} of file \mbox{\hyperlink{com_8c_source}{com.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}\label{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!UART\_SendMsg@{UART\_SendMsg}}
+\index{UART\_SendMsg@{UART\_SendMsg}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{UART\_SendMsg()}{UART\_SendMsg()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Send\+Msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}}]{Msg }\end{DoxyParamCaption})}
+
+
+
+Send a message via UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Msg} & the pointer to the message to be sent \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{com_8c_source_l00138}{138}} of file \mbox{\hyperlink{com_8c_source}{com.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga0b26bd6e23b2426297bc1ef2bea9ca6f}\label{group__MOTION__APPLICATIONS_ga0b26bd6e23b2426297bc1ef2bea9ca6f} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!UART\_StartReceiveMsg@{UART\_StartReceiveMsg}}
+\index{UART\_StartReceiveMsg@{UART\_StartReceiveMsg}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{UART\_StartReceiveMsg()}{UART\_StartReceiveMsg()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Start\+Receive\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Start receiving messages via DMA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{com_8c_source_l00156}{156}} of file \mbox{\hyperlink{com_8c_source}{com.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{group__MOTION__APPLICATIONS_ga44d3e8cd0b3ddfd2f7fa0f14f0870c21}\label{group__MOTION__APPLICATIONS_ga44d3e8cd0b3ddfd2f7fa0f14f0870c21} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!UartEngine@{UartEngine}}
+\index{UartEngine@{UartEngine}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{UartEngine}{UartEngine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTUart__Engine}{TUart\+\_\+\+Engine}} Uart\+Engine}
+
+
+
+Definition at line \mbox{\hyperlink{com_8c_source_l00033}{33}} of file \mbox{\hyperlink{com_8c_source}{com.\+c}}.
+
+\Hypertarget{group__MOTION__APPLICATIONS_ga27a1b0ece17d629a9628d0209e168435}\label{group__MOTION__APPLICATIONS_ga27a1b0ece17d629a9628d0209e168435} 
+\index{MOTION APPLICATIONS@{MOTION APPLICATIONS}!UartRxBuffer@{UartRxBuffer}}
+\index{UartRxBuffer@{UartRxBuffer}!MOTION APPLICATIONS@{MOTION APPLICATIONS}}
+\doxysubsubsection{\texorpdfstring{UartRxBuffer}{UartRxBuffer}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t Uart\+Rx\+Buffer\mbox{[}\mbox{\hyperlink{com_8h_a566ad7c668661f2b4e70ad6673519507}{UART\+\_\+\+Rx\+Buffer\+Size}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{com_8c_source_l00032}{32}} of file \mbox{\hyperlink{com_8c_source}{com.\+c}}.
+
+\input{group__DATALOG__FUSION}

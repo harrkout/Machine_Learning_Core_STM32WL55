@@ -1,0 +1,761 @@
+\doxysection{stm32wlxx\+\_\+ll\+\_\+system.\+h}
+\hypertarget{stm32wlxx__ll__system_8h_source}{}\label{stm32wlxx__ll__system_8h_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_system.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_system.h}}
+\mbox{\hyperlink{stm32wlxx__ll__system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00034}00034\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00035}00035\ \textcolor{preprocessor}{\#ifndef\ STM32WLxx\_LL\_SYSTEM\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00036}00036\ \textcolor{preprocessor}{\#define\ STM32WLxx\_LL\_SYSTEM\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00038}00038\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00039}00039\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00042}00042\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00043}00043\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx_8h}{stm32wlxx.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00049}00049\ \textcolor{preprocessor}{\#if\ defined\ (FLASH)\ ||\ defined\ (SYSCFG)\ ||\ defined\ (DBGMCU)\ ||\ defined\ (VREFBUF)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00055}00055\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00056}00056\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00058}00058\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00062}00062\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT\ \ \ \ \ 16U\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00067}00067\ \textcolor{preprocessor}{\#define\ VREFBUF\_SC0\_CAL\_ADDR\ \ \ ((uint8\_t*)\ (0x1FFF75F0UL))\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00069}00069\ \textcolor{preprocessor}{\#define\ VREFBUF\_SC1\_CAL\_ADDR\ \ \ ((uint8\_t*)\ (0x1FFF7530UL))\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00075}00075\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00077}00077\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00078}00078\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00086}00086\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_REMAP\_FLASH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00087}00087\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_REMAP\_SYSTEMFLASH\ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_MEMRMP\_MEM\_MODE\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00088}00088\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_REMAP\_SRAM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (SYSCFG\_MEMRMP\_MEM\_MODE\_1\ |\ SYSCFG\_MEMRMP\_MEM\_MODE\_0)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00096}00096\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_I2C\_FASTMODEPLUS\_PB6\ \ \ \ \ \ \ \ \ \ SYSCFG\_CFGR1\_I2C\_PB6\_FMP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00097}00097\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_I2C\_FASTMODEPLUS\_PB7\ \ \ \ \ \ \ \ \ \ SYSCFG\_CFGR1\_I2C\_PB7\_FMP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00098}00098\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_I2C\_FASTMODEPLUS\_PB8\ \ \ \ \ \ \ \ \ \ SYSCFG\_CFGR1\_I2C\_PB8\_FMP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00099}00099\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_I2C\_FASTMODEPLUS\_PB9\ \ \ \ \ \ \ \ \ \ SYSCFG\_CFGR1\_I2C\_PB9\_FMP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00100}00100\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_I2C\_FASTMODEPLUS\_I2C1\ \ \ \ \ \ \ \ \ SYSCFG\_CFGR1\_I2C1\_FMP\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00101}00101\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_I2C\_FASTMODEPLUS\_I2C2\ \ \ \ \ \ \ \ \ SYSCFG\_CFGR1\_I2C2\_FMP\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00102}00102\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_I2C\_FASTMODEPLUS\_I2C3\ \ \ \ \ \ \ \ \ SYSCFG\_CFGR1\_I2C3\_FMP\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00110}00110\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_PORTA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00111}00111\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_PORTB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00112}00112\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_PORTC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00120}00120\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00121}00121\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00122}00122\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((4U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00123}00123\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((8U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00124}00124\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((12U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00125}00125\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00126}00126\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((4U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00127}00127\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((8U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00128}00128\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((12U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00129}00129\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00130}00130\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((4U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00131}00131\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((8U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00132}00132\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE11\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((12U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00133}00133\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00134}00134\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((4U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00135}00135\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE14\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((8U\ \ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00136}00136\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE15\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((12U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00137}00137\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00138}00138\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x000FU\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00139}00139\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x00F0U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00140}00140\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x0F00U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00141}00141\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0xF000U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 0U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00142}00142\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x000FU\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00143}00143\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x00F0U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00144}00144\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x0F00U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00145}00145\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0xF000U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 1U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00146}00146\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x000FU\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00147}00147\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x00F0U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00148}00148\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x0F00U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00149}00149\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE11\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0xF000U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 2U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00150}00150\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x000FU\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00151}00151\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x00F0U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00152}00152\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE14\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0x0F00U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00153}00153\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EXTI\_LINE15\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)((0xF000U\ <<\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ |\ 3U)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00154}00154\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00162}00162\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_TIMBREAK\_ECC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_CFGR2\_ECCL\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00164}00164\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_TIMBREAK\_PVD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_CFGR2\_PVDL\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00167}00167\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_TIMBREAK\_SRAM2\_PARITY\ \ \ \ \ \ \ \ \ SYSCFG\_CFGR2\_SPL\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00169}00169\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_TIMBREAK\_LOCKUP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_CFGR2\_CLL\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00178}00178\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE0\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00179}00179\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE1\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00180}00180\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE2\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00181}00181\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE3\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00182}00182\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE4\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00183}00183\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE5\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00184}00184\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE6\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00185}00185\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE7\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00186}00186\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE8\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00187}00187\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE9\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00188}00188\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE10\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00189}00189\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE11\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE11\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00190}00190\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE12\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00191}00191\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE13\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00192}00192\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE14\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE14\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00193}00193\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE15\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE15\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00194}00194\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE16\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00195}00195\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE17\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE17\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00196}00196\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE18\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE18\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00197}00197\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE19\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE19\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00198}00198\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE20\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE20\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00199}00199\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE21\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE21\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00200}00200\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE22\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE22\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00201}00201\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE23\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE23\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00202}00202\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE24\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE24\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00203}00203\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE25\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE25\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00204}00204\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE26\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE26\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00205}00205\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE27\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE27\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00206}00206\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE28\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE28\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00207}00207\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE29\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE29\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00208}00208\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE30\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE30\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00209}00209\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_SRAM2WRP\_PAGE31\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_SWPR\_PAGE31\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00214}00214\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00218}00218\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_RTCSTAMPTAMPLSECSS\ \ \ \ \ \ \ SYSCFG\_IMR1\_RTCSTAMPTAMPLSECSSIM\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00219}00219\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_RTCSSRU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_RTCSSRUIM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00220}00220\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI5IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00221}00221\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI6IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00222}00222\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI7IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00223}00223\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI8IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00224}00224\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI9IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00225}00225\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI10IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00226}00226\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI11\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI11IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00227}00227\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI12IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00228}00228\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI13IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00229}00229\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI14\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI14IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00230}00230\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP1\_EXTI15\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR1\_EXTI15IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00232}00232\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP2\_PVM3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR2\_PVM3IM\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00233}00233\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_GRP2\_PVD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_IMR2\_PVDIM\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00241}00241\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_RTCSTAMP\_RTCTAMP\_LSECSS\ \ SYSCFG\_C2IMR1\_RTCSTAMPTAMPLSECSSIM\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00243}00243\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_RTCALARM\ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_RTCALARMIM\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00244}00244\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_RTCSSRU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_RTCSSRUIM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00245}00245\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_RTCWKUP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_RTCWKUPIM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00246}00246\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_RCC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_RCCIM\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00247}00247\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_FLASH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_FLASHIM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00248}00248\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_PKA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_PKAIM\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00249}00249\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_AES\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_AESIM\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00250}00250\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_COMP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_COMPIM\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00251}00251\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_ADC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_ADCIM\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00252}00252\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_DAC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_DACIM\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00254}00254\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI0IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00255}00255\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI1IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00256}00256\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI2IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00257}00257\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI3IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00258}00258\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI4IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00259}00259\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI5IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00260}00260\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI6IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00261}00261\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI7IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00262}00262\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI8IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00263}00263\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI9IM\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00264}00264\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI10IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00265}00265\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI11\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI11IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00266}00266\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI12IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00267}00267\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI13IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00268}00268\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI14\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI14IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00269}00269\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP1\_EXTI15\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR1\_EXTI15IM\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00271}00271\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA1CH1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA1CH1IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00272}00272\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA1CH2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA1CH2IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00273}00273\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA1CH3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA1CH3IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00274}00274\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA1CH4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA1CH4IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00275}00275\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA1CH5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA1CH5IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00276}00276\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA1CH6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA1CH6IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00277}00277\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA1CH7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA1CH7IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00279}00279\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA2CH1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA2CH1IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00280}00280\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA2CH2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA2CH2IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00281}00281\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA2CH3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA2CH3IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00282}00282\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA2CH4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA2CH4IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00283}00283\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA2CH5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA2CH5IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00284}00284\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA2CH6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA2CH6IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00285}00285\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMA2CH7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMA2CH7IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00287}00287\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_DMAMUX1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_DMAMUX1IM\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00289}00289\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_PVM3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_PVM3IM\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00290}00290\ \textcolor{preprocessor}{\#define\ LL\_C2\_SYSCFG\_GRP2\_PVD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_C2IMR2\_PVDIM\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00294}00294\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00299}00299\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_ANALOG\_TEST\_BUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SYSCFG\_RFDCR\_RFTBSEL\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00300}00300\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_DIGITAL\_TEST\_BUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00306}00306\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00307}00307\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00311}00311\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_TIM2\_STOP\ \ \ \ \ \ DBGMCU\_APB1FZR1\_DBG\_TIM2\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00312}00312\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_RTC\_STOP\ \ \ \ \ \ \ DBGMCU\_APB1FZR1\_DBG\_RTC\_STOP\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00313}00313\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_WWDG\_STOP\ \ \ \ \ \ DBGMCU\_APB1FZR1\_DBG\_WWDG\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00314}00314\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_IWDG\_STOP\ \ \ \ \ \ DBGMCU\_APB1FZR1\_DBG\_IWDG\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00315}00315\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_I2C1\_STOP\ \ \ \ \ \ DBGMCU\_APB1FZR1\_DBG\_I2C1\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00316}00316\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_I2C2\_STOP\ \ \ \ \ \ DBGMCU\_APB1FZR1\_DBG\_I2C2\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00317}00317\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_I2C3\_STOP\ \ \ \ \ \ DBGMCU\_APB1FZR1\_DBG\_I2C3\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00318}00318\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP1\_LPTIM1\_STOP\ \ \ \ DBGMCU\_APB1FZR1\_DBG\_LPTIM1\_STOP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00323}00323\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00327}00327\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP1\_TIM2\_STOP\ \ \ DBGMCU\_C2APB1FZR1\_DBG\_TIM2\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00328}00328\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP1\_RTC\_STOP\ \ \ \ DBGMCU\_C2APB1FZR1\_DBG\_RTC\_STOP\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00329}00329\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP1\_IWDG\_STOP\ \ \ DBGMCU\_C2APB1FZR1\_DBG\_IWDG\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00330}00330\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP1\_I2C1\_STOP\ \ \ DBGMCU\_C2APB1FZR1\_DBG\_I2C1\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00331}00331\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP1\_I2C2\_STOP\ \ \ DBGMCU\_C2APB1FZR1\_DBG\_I2C2\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00332}00332\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP1\_I2C3\_STOP\ \ \ DBGMCU\_C2APB1FZR1\_DBG\_I2C3\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00333}00333\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP1\_LPTIM1\_STOP\ DBGMCU\_C2APB1FZR1\_DBG\_LPTIM1\_STOP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00337}00337\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00342}00342\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP2\_LPTIM2\_STOP\ \ \ \ DBGMCU\_APB1FZR2\_DBG\_LPTIM2\_STOP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00343}00343\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB1\_GRP2\_LPTIM3\_STOP\ \ \ \ DBGMCU\_APB1FZR2\_DBG\_LPTIM3\_STOP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00348}00348\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00352}00352\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP2\_LPTIM2\_STOP\ DBGMCU\_C2APB1FZR2\_DBG\_LPTIM2\_STOP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00353}00353\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB1\_GRP2\_LPTIM3\_STOP\ DBGMCU\_C2APB1FZR2\_DBG\_LPTIM3\_STOP\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00357}00357\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00362}00362\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB2\_GRP1\_TIM1\_STOP\ \ \ \ \ \ DBGMCU\_APB2FZR\_DBG\_TIM1\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00363}00363\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB2\_GRP1\_TIM16\_STOP\ \ \ \ \ DBGMCU\_APB2FZR\_DBG\_TIM16\_STOP\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00364}00364\ \textcolor{preprocessor}{\#define\ LL\_DBGMCU\_APB2\_GRP1\_TIM17\_STOP\ \ \ \ \ DBGMCU\_APB2FZR\_DBG\_TIM17\_STOP\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00369}00369\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00373}00373\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB2\_GRP1\_TIM1\_STOP\ \ \ DBGMCU\_C2APB2FZR\_DBG\_TIM1\_STOP\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00374}00374\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB2\_GRP1\_TIM16\_STOP\ \ DBGMCU\_C2APB2FZR\_DBG\_TIM16\_STOP\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00375}00375\ \textcolor{preprocessor}{\#define\ LL\_C2\_DBGMCU\_APB2\_GRP1\_TIM17\_STOP\ \ DBGMCU\_C2APB2FZR\_DBG\_TIM17\_STOP\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00379}00379\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00380}00380\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00381}00381\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00383}00383\ \textcolor{preprocessor}{\#if\ defined(VREFBUF)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00387}00387\ \textcolor{preprocessor}{\#define\ LL\_VREFBUF\_VOLTAGE\_SCALE0\ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00388}00388\ \textcolor{preprocessor}{\#define\ LL\_VREFBUF\_VOLTAGE\_SCALE1\ \ \ \ \ \ \ \ \ \ VREFBUF\_CSR\_VRS\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00392}00392\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VREFBUF\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00393}00393\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00397}00397\ \textcolor{preprocessor}{\#define\ LL\_FLASH\_LATENCY\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00398}00398\ \textcolor{preprocessor}{\#define\ LL\_FLASH\_LATENCY\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH\_ACR\_LATENCY\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00399}00399\ \textcolor{preprocessor}{\#define\ LL\_FLASH\_LATENCY\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH\_ACR\_LATENCY\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00408}00408\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00409}00409\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00410}00410\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00428}00428\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_SetRemapMemory(uint32\_t\ Memory)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00429}00429\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00430}00430\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>MEMRMP,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3c05039ec67573c00da29f58b914f258}{SYSCFG\_MEMRMP\_MEM\_MODE}},\ Memory);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00431}00431\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00432}00432\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00441}00441\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_GetRemapMemory(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00442}00442\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00443}00443\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>MEMRMP,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3c05039ec67573c00da29f58b914f258}{SYSCFG\_MEMRMP\_MEM\_MODE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00444}00444\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00460}00460\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_EnableAnalogBooster(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00461}00461\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00462}00462\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga948471b86a4c7bf56000670b10b203ab}{SYSCFG\_CFGR1\_BOOSTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00463}00463\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00464}00464\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00479}00479\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_DisableAnalogBooster(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00480}00480\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00481}00481\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR1,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga948471b86a4c7bf56000670b10b203ab}{SYSCFG\_CFGR1\_BOOSTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00482}00482\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00483}00483\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00498}00498\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_EnableFastModePlus(uint32\_t\ ConfigFastModePlus)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00499}00499\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00500}00500\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR1,\ ConfigFastModePlus);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00501}00501\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00502}00502\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00517}00517\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_DisableFastModePlus(uint32\_t\ ConfigFastModePlus)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00518}00518\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00519}00519\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR1,\ ConfigFastModePlus);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00520}00520\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00521}00521\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00552}00552\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_SetEXTISource(uint32\_t\ Port,\ uint32\_t\ Line)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00553}00553\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00554}00554\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00555}00555\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>EXTICR[Line\ \&\ 0x03U],\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75b70d07448c3037234bc2abb8e3d884}{SYSCFG\_EXTICR1\_EXTI0}}\ <<\ ((Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ \&\ 12UL),\ (Port\ <<\ ((Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ \&\ 12UL)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00556}00556\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00557}00557\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>EXTICR[Line\ \&\ 0x03U],\ (Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT),\ (Port\ <<\ ((\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}((Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)))\ \&\ 0x0000000FUL)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00558}00558\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00559}00559\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00560}00560\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00589}00589\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_GetEXTISource(uint32\_t\ Line)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00590}00590\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00591}00591\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00592}00592\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>EXTICR[Line\ \&\ 0x03U],\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75b70d07448c3037234bc2abb8e3d884}{SYSCFG\_EXTICR1\_EXTI0}}\ <<\ ((Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ \&\ 12UL)))\ >>\ ((Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT)\ \&\ 12UL));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00593}00593\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00594}00594\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>EXTICR[Line\ \&\ 0x03U],\ ((Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT))\ >>\ ((\mbox{\hyperlink{group__Exported__macros_ga47a8870d71d55cefb3df47cd8c815ec8}{POSITION\_VAL}}(Line\ >>\ LL\_SYSCFG\_EXTI\_REGISTER\_PINPOS\_SHFT))\ \&\ 0x0000000FUL)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00595}00595\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00596}00596\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00597}00597\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00604}00604\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_EnableSRAM2Erase(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00605}00605\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00606}00606\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>SCSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad2980c87d46dca95c2670581abee8e3c}{SYSCFG\_SCSR\_SRAM2ER}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00607}00607\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00608}00608\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00614}00614\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_IsSRAMEraseOngoing(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00615}00615\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00616}00616\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>SCSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga10c2cd41bfae3186f6611e02a03fd565}{SYSCFG\_SCSR\_SRAMBSY}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga10c2cd41bfae3186f6611e02a03fd565}{SYSCFG\_SCSR\_SRAMBSY}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00617}00617\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00618}00618\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00624}00624\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_IsPKASRAMEraseOngoing(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00625}00625\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00626}00626\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>SCSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga378c3b64e5e7deba02f5804d759b4fea}{SYSCFG\_SCSR\_PKASRAMBSY}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga378c3b64e5e7deba02f5804d759b4fea}{SYSCFG\_SCSR\_PKASRAMBSY}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00627}00627\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00628}00628\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00642}00642\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_SetTIMBreakInputs(uint32\_t\ Break)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00643}00643\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00644}00644\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga37867c85a6455883bf60424879a281f4}{SYSCFG\_CFGR2\_CLL}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gacbf387c6e12d90c012dd85636c5dc31b}{SYSCFG\_CFGR2\_SPL}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac8ca8fa7bb3ae856eb5fc3102cc0ff21}{SYSCFG\_CFGR2\_PVDL}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae75e85c4c032560b4db88cd8fcb3aaf9}{SYSCFG\_CFGR2\_ECCL}},\ Break);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00645}00645\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00646}00646\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00659}00659\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_GetTIMBreakInputs(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00660}00660\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00661}00661\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga37867c85a6455883bf60424879a281f4}{SYSCFG\_CFGR2\_CLL}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gacbf387c6e12d90c012dd85636c5dc31b}{SYSCFG\_CFGR2\_SPL}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac8ca8fa7bb3ae856eb5fc3102cc0ff21}{SYSCFG\_CFGR2\_PVDL}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae75e85c4c032560b4db88cd8fcb3aaf9}{SYSCFG\_CFGR2\_ECCL}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00662}00662\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00663}00663\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00669}00669\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_IsActiveFlag\_SP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00670}00670\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00671}00671\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga155014fba33b6dc281892ec1ff27e4da}{SYSCFG\_CFGR2\_SPF}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga155014fba33b6dc281892ec1ff27e4da}{SYSCFG\_CFGR2\_SPF}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00672}00672\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00673}00673\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00679}00679\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_ClearFlag\_SP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00680}00680\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00681}00681\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR2,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga155014fba33b6dc281892ec1ff27e4da}{SYSCFG\_CFGR2\_SPF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00682}00682\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00683}00683\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00723}00723\ \textcolor{comment}{/*\ Legacy\ define\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00724}00724\ \textcolor{preprocessor}{\#define\ LL\_SYSCFG\_EnableSRAM2PageWRP\ \ \ \ LL\_SYSCFG\_EnableSRAM2PageWRP\_0\_31}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00725}00725\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_EnableSRAM2PageWRP\_0\_31(uint32\_t\ SRAM2WRP)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00726}00726\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00727}00727\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>SWPR,\ SRAM2WRP);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00728}00728\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00729}00729\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00730}00730\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00736}00736\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_LockSRAM2WRP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00737}00737\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00738}00738\ \ \ \textcolor{comment}{/*\ Writing\ a\ wrong\ key\ reactivates\ the\ write\ protection\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00739}00739\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>SKR,\ 0x00U);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00740}00740\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00741}00741\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00747}00747\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_UnlockSRAM2WRP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00748}00748\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00749}00749\ \ \ \textcolor{comment}{/*\ unlock\ the\ write\ protection\ of\ the\ SRAM2ER\ bit\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00750}00750\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>SKR,\ 0xCAU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00751}00751\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>SKR,\ 0x53U);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00752}00752\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00753}00753\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00754}00754\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00776}00776\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_GRP1\_EnableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00777}00777\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00778}00778\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>IMR1,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00779}00779\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00780}00780\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00790}00790\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_GRP2\_EnableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00791}00791\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00792}00792\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>IMR2,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00793}00793\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00794}00794\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00816}00816\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_GRP1\_DisableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00817}00817\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00818}00818\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>IMR1,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00819}00819\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00820}00820\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00830}00830\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_GRP2\_DisableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00831}00831\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00832}00832\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>IMR2,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00833}00833\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00834}00834\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00856}00856\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_GRP1\_IsEnabledIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00857}00857\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00858}00858\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>IMR1,\ Interrupt)\ !=\ (Interrupt))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00859}00859\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00860}00860\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00870}00870\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_GRP2\_IsEnabledIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00871}00871\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00872}00872\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>IMR2,\ Interrupt)\ !=\ (Interrupt))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00873}00873\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00874}00874\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00919}00919\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_SYSCFG\_GRP1\_EnableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00920}00920\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00921}00921\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>C2IMR1,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00922}00922\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00923}00923\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00951}00951\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_SYSCFG\_GRP2\_EnableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00952}00952\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00953}00953\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>C2IMR2,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00954}00954\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00955}00955\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l00999}00999\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_SYSCFG\_GRP1\_DisableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01000}01000\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01001}01001\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>C2IMR1,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01002}01002\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01003}01003\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01031}01031\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_SYSCFG\_GRP2\_DisableIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01032}01032\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01033}01033\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>C2IMR2,\ Interrupt);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01034}01034\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01035}01035\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01080}01080\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_C2\_SYSCFG\_GRP1\_IsEnabledIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01081}01081\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01082}01082\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>C2IMR1,\ Interrupt)\ !=\ (Interrupt))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01083}01083\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01084}01084\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01112}01112\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_C2\_SYSCFG\_GRP2\_IsEnabledIT(uint32\_t\ Interrupt)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01113}01113\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01114}01114\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>C2IMR2,\ Interrupt)\ !=\ (Interrupt))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01115}01115\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01116}01116\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01117}01117\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01126}01126\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_SYSCFG\_SetRadioDebugTestBus(uint32\_t\ RadioDebugTestBus)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01127}01127\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01128}01128\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>RFDCR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga70b8e196bc702c52f9affb3fc8aa2c54}{SYSCFG\_RFDCR\_RFTBSEL}},\ RadioDebugTestBus);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01129}01129\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01130}01130\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01138}01138\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_SYSCFG\_GetRadioDebugTestBus(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01139}01139\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01140}01140\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>RFDCR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga70b8e196bc702c52f9affb3fc8aa2c54}{SYSCFG\_RFDCR\_RFTBSEL}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01141}01141\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01153}01153\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01154}01154\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01161}01161\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_DBGMCU\_GetDeviceID(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01162}01162\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01163}01163\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>IDCODE,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafd961fcddc40341a817a9ec85b7c80ac}{DBGMCU\_IDCODE\_DEV\_ID}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01164}01164\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01165}01165\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01172}01172\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_DBGMCU\_GetRevisionID(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01173}01173\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01174}01174\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>IDCODE,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga887eb26364a8693355024ca203323165}{DBGMCU\_IDCODE\_REV\_ID}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6e98f7579d16c36cbf6a09b04f2ee170}{DBGMCU\_IDCODE\_REV\_ID\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01175}01175\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01176}01176\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01182}01182\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_EnableDBGSleepMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01183}01183\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01184}01184\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>CR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga037c80fe1d7308cee68245715ef6cd9a}{DBGMCU\_CR\_DBG\_SLEEP}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01185}01185\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01186}01186\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01192}01192\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_DisableDBGSleepMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01193}01193\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01194}01194\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>CR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga037c80fe1d7308cee68245715ef6cd9a}{DBGMCU\_CR\_DBG\_SLEEP}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01195}01195\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01196}01196\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01204}01204\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_EnableDBGStopMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01205}01205\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01206}01206\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>CR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf511f21a8de5b0b66c862915eee8bf75}{DBGMCU\_CR\_DBG\_STOP}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01207}01207\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01208}01208\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01214}01214\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_DisableDBGStopMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01215}01215\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01216}01216\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>CR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf511f21a8de5b0b66c862915eee8bf75}{DBGMCU\_CR\_DBG\_STOP}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01217}01217\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01218}01218\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01226}01226\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_EnableDBGStandbyMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01227}01227\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01228}01228\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>CR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga107a9396d63c892a8e614897c9d0b132}{DBGMCU\_CR\_DBG\_STANDBY}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01229}01229\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01230}01230\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01236}01236\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_DisableDBGStandbyMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01237}01237\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01238}01238\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>CR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga107a9396d63c892a8e614897c9d0b132}{DBGMCU\_CR\_DBG\_STANDBY}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01239}01239\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01240}01240\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01255}01255\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_APB1\_GRP1\_FreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01256}01256\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01257}01257\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>APB1FZR1,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01258}01258\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01259}01259\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01260}01260\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01274}01274\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_DBGMCU\_APB1\_GRP1\_FreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01275}01275\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01276}01276\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>C2APB1FZR1,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01277}01277\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01278}01278\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01279}01279\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01289}01289\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_APB1\_GRP2\_FreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01290}01290\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01291}01291\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>APB1FZR2,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01292}01292\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01293}01293\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01294}01294\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01304}01304\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_DBGMCU\_APB1\_GRP2\_FreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01305}01305\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01306}01306\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>C2APB1FZR2,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01307}01307\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01308}01308\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01309}01309\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01323}01323\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_APB1\_GRP1\_UnFreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01324}01324\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01325}01325\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>APB1FZR1,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01326}01326\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01327}01327\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01328}01328\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01341}01341\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_DBGMCU\_APB1\_GRP1\_UnFreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01342}01342\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01343}01343\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>C2APB1FZR1,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01344}01344\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01345}01345\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01346}01346\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01355}01355\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_APB1\_GRP2\_UnFreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01356}01356\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01357}01357\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>APB1FZR2,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01358}01358\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01359}01359\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01360}01360\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01369}01369\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_DBGMCU\_APB1\_GRP2\_UnFreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01370}01370\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01371}01371\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>C2APB1FZR2,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01372}01372\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01373}01373\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01374}01374\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01384}01384\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_APB2\_GRP1\_FreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01385}01385\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01386}01386\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>APB2FZR,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01387}01387\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01388}01388\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01389}01389\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01399}01399\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_DBGMCU\_APB2\_GRP1\_FreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01400}01400\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01401}01401\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>C2APB2FZR,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01402}01402\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01403}01403\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01404}01404\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01414}01414\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_DBGMCU\_APB2\_GRP1\_UnFreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01415}01415\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01416}01416\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>APB2FZR,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01417}01417\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01418}01418\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01419}01419\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01429}01429\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_C2\_DBGMCU\_APB2\_GRP1\_UnFreezePeriph(uint32\_t\ Periphs)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01430}01430\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01431}01431\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{DBGMCU}}-\/>C2APB2FZR,\ Periphs);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01432}01432\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01433}01433\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01434}01434\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01435}01435\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01440}01440\ \textcolor{preprocessor}{\#if\ defined(VREFBUF)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01450}01450\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_VREFBUF\_Enable(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01451}01451\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01452}01452\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga20bab4e4f333ddecff9bf922c7d93a02}{VREFBUF\_CSR\_ENVR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01453}01453\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01454}01454\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01460}01460\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_VREFBUF\_Disable(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01461}01461\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01462}01462\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga20bab4e4f333ddecff9bf922c7d93a02}{VREFBUF\_CSR\_ENVR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01463}01463\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01464}01464\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01470}01470\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_VREFBUF\_EnableHIZ(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01471}01471\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01472}01472\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga13d4cf5943c63ae8ff694e1446266bcc}{VREFBUF\_CSR\_HIZ}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01473}01473\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01474}01474\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01480}01480\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_VREFBUF\_DisableHIZ(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01481}01481\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01482}01482\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga13d4cf5943c63ae8ff694e1446266bcc}{VREFBUF\_CSR\_HIZ}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01483}01483\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01484}01484\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01493}01493\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_VREFBUF\_SetVoltageScaling(uint32\_t\ Scale)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01494}01494\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01495}01495\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad4670ed4900a7abf116f8f13378ea6a8}{VREFBUF\_CSR\_VRS}},\ Scale);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01496}01496\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01497}01497\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01505}01505\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_VREFBUF\_GetVoltageScaling(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01506}01506\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01507}01507\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad4670ed4900a7abf116f8f13378ea6a8}{VREFBUF\_CSR\_VRS}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01508}01508\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01509}01509\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01514}01514\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_VREFBUF\_SC0\_GetCalibration(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01515}01515\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01516}01516\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(*VREFBUF\_SC0\_CAL\_ADDR);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01517}01517\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01518}01518\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01523}01523\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_VREFBUF\_SC1\_GetCalibration(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01524}01524\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01525}01525\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(*VREFBUF\_SC1\_CAL\_ADDR);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01526}01526\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01527}01527\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01533}01533\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_VREFBUF\_IsVREFReady(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01534}01534\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01535}01535\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CSR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf40ce35d91ad9aaedeaf6c3f3d618c33}{VREFBUF\_CSR\_VRR}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf40ce35d91ad9aaedeaf6c3f3d618c33}{VREFBUF\_CSR\_VRR}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01536}01536\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01537}01537\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01543}01543\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_VREFBUF\_GetTrimming(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01544}01544\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01545}01545\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CCR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga352e19b53b9986eb54de8fd79b27d052}{VREFBUF\_CCR\_TRIM}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01546}01546\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01547}01547\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01559}01559\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_VREFBUF\_SetTrimming(uint32\_t\ Value)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01560}01560\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01561}01561\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga1446a32e57e1b1cfa1683494561a5b2f}{VREFBUF}}-\/>CCR,\ Value);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01562}01562\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01563}01563\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01567}01567\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VREFBUF\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01568}01568\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01582}01582\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_SetLatency(uint32\_t\ Latency)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01583}01583\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01584}01584\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaef5e44cbb084160a6004ca9951ec7318}{FLASH\_ACR\_LATENCY}},\ Latency);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01585}01585\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01586}01586\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01595}01595\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_GetLatency(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01596}01596\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01597}01597\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaef5e44cbb084160a6004ca9951ec7318}{FLASH\_ACR\_LATENCY}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01598}01598\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01599}01599\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01605}01605\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_EnablePrefetch(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01606}01606\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01607}01607\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01608}01608\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga938137d359b94952c40b09373d1ac470}{FLASH\_C2ACR\_PRFTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01609}01609\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01610}01610\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga082e7e91fffee86db39676396d01a8e0}{FLASH\_ACR\_PRFTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01611}01611\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01612}01612\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01613}01613\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01620}01620\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_DisablePrefetch(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01621}01621\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01622}01622\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01623}01623\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga938137d359b94952c40b09373d1ac470}{FLASH\_C2ACR\_PRFTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01624}01624\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01625}01625\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga082e7e91fffee86db39676396d01a8e0}{FLASH\_ACR\_PRFTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01626}01626\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01627}01627\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01628}01628\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01635}01635\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_IsPrefetchEnabled(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01636}01636\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01637}01637\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01638}01638\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga938137d359b94952c40b09373d1ac470}{FLASH\_C2ACR\_PRFTEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga938137d359b94952c40b09373d1ac470}{FLASH\_C2ACR\_PRFTEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01639}01639\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01640}01640\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga082e7e91fffee86db39676396d01a8e0}{FLASH\_ACR\_PRFTEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga082e7e91fffee86db39676396d01a8e0}{FLASH\_ACR\_PRFTEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01641}01641\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01642}01642\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01643}01643\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01650}01650\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_EnableInstCache(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01651}01651\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01652}01652\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01653}01653\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeadfcc32aa6f25e869d5c4350f85d094}{FLASH\_C2ACR\_ICEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01654}01654\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01655}01655\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga51d8b1dd2c46942d377c579a38dce711}{FLASH\_ACR\_ICEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01656}01656\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01657}01657\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01658}01658\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01665}01665\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_DisableInstCache(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01666}01666\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01667}01667\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01668}01668\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeadfcc32aa6f25e869d5c4350f85d094}{FLASH\_C2ACR\_ICEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01669}01669\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01670}01670\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga51d8b1dd2c46942d377c579a38dce711}{FLASH\_ACR\_ICEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01671}01671\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01672}01672\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01673}01673\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01674}01674\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01675}01675\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01681}01681\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_EnableDataCache(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01682}01682\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01683}01683\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5a9a5cc3aa05dc62264addab1008c896}{FLASH\_ACR\_DCEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01684}01684\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01685}01685\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01691}01691\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_DisableDataCache(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01692}01692\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01693}01693\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5a9a5cc3aa05dc62264addab1008c896}{FLASH\_ACR\_DCEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01694}01694\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01695}01695\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01696}01696\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01704}01704\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_EnableInstCacheReset(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01705}01705\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01706}01706\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01707}01707\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae9956c9500943f8865130cae61ea3dde}{FLASH\_C2ACR\_ICRST}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01708}01708\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01709}01709\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga923ff88475799eea9285f77f5383ced5}{FLASH\_ACR\_ICRST}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01710}01710\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01711}01711\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01712}01712\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01719}01719\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_DisableInstCacheReset(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01720}01720\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01721}01721\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01722}01722\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae9956c9500943f8865130cae61ea3dde}{FLASH\_C2ACR\_ICRST}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01723}01723\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01724}01724\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga923ff88475799eea9285f77f5383ced5}{FLASH\_ACR\_ICRST}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01725}01725\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01726}01726\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01727}01727\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01728}01728\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01729}01729\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01736}01736\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_EnableDataCacheReset(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01737}01737\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01738}01738\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac53d7c85551a9829014d6027d67ce6c7}{FLASH\_ACR\_DCRST}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01739}01739\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01740}01740\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01746}01746\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_DisableDataCacheReset(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01747}01747\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01748}01748\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac53d7c85551a9829014d6027d67ce6c7}{FLASH\_ACR\_DCRST}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01749}01749\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01750}01750\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01751}01751\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01763}01763\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_SuspendOperation(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01764}01764\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01765}01765\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01766}01766\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4eb42863f567e98d4451d0f9a50c417f}{FLASH\_C2ACR\_PES}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01767}01767\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01768}01768\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8afd718190da19666b607ba06c116556}{FLASH\_ACR\_PES}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01769}01769\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01770}01770\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01771}01771\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01783}01783\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_AllowOperation(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01784}01784\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01785}01785\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01786}01786\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4eb42863f567e98d4451d0f9a50c417f}{FLASH\_C2ACR\_PES}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01787}01787\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01788}01788\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8afd718190da19666b607ba06c116556}{FLASH\_ACR\_PES}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01789}01789\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01790}01790\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01791}01791\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01798}01798\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_IsOperationSuspended(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01799}01799\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01800}01800\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01801}01801\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4eb42863f567e98d4451d0f9a50c417f}{FLASH\_C2ACR\_PES}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4eb42863f567e98d4451d0f9a50c417f}{FLASH\_C2ACR\_PES}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01802}01802\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01803}01803\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8afd718190da19666b607ba06c116556}{FLASH\_ACR\_PES}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8afd718190da19666b607ba06c116556}{FLASH\_ACR\_PES}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01804}01804\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01805}01805\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01806}01806\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01813}01813\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_IsActiveFlag\_OperationSuspended(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01814}01814\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01815}01815\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01816}01816\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>C2SR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4725869f213f97fbaf72ff15acad9894}{FLASH\_C2SR\_PESD}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4725869f213f97fbaf72ff15acad9894}{FLASH\_C2SR\_PESD}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01817}01817\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01818}01818\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>SR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa40ac2d227412ce94e70af84422bed46}{FLASH\_SR\_PESD}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa40ac2d227412ce94e70af84422bed46}{FLASH\_SR\_PESD}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01819}01819\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01820}01820\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01821}01821\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01827}01827\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_SetEmptyFlag(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01828}01828\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01829}01829\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ef510aed5b3fa267d41e8a07540bb7c}{FLASH\_ACR\_EMPTY}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01830}01830\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01831}01831\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01837}01837\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_FLASH\_ClearEmptyFlag(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01838}01838\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01839}01839\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ef510aed5b3fa267d41e8a07540bb7c}{FLASH\_ACR\_EMPTY}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01840}01840\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01841}01841\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01847}01847\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_IsEmptyFlag(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01848}01848\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01849}01849\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>ACR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ef510aed5b3fa267d41e8a07540bb7c}{FLASH\_ACR\_EMPTY}})\ ==\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ef510aed5b3fa267d41e8a07540bb7c}{FLASH\_ACR\_EMPTY}})\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01850}01850\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01851}01851\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01852}01852\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01858}01858\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_GetIPCCBufferAddr(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01859}01859\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01860}01860\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>IPCCBR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6c27d029b2f94bad13775ac253c65af2}{FLASH\_IPCCBR\_IPCCDBA}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01861}01861\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01862}01862\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01863}01863\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01864}01864\ \textcolor{preprocessor}{\#if\ defined(DUAL\_CORE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01870}01870\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_GetC2BootResetVect(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01871}01871\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01872}01872\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH}}-\/>SRRVR,\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5b5decc41de55881ee3b95dc3b1c9af1}{FLASH\_SRRVR\_SBRV}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01873}01873\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01874}01874\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DUAL\_CORE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01875}01875\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01880}01880\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_GetUDN(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01881}01881\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01882}01882\ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(*((uint32\_t\ *)\mbox{\hyperlink{group__Peripheral__memory__map_gabc07c2f08504c1b41274e4e55ae57e25}{UID64\_BASE}})));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01883}01883\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01884}01884\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01890}01890\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_GetDeviceID(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01891}01891\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01892}01892\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(*((uint32\_t\ *)\mbox{\hyperlink{group__Peripheral__memory__map_gabc07c2f08504c1b41274e4e55ae57e25}{UID64\_BASE}}\ +\ 1U)))\ \&\ 0x000000FFU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01893}01893\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01894}01894\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01900}01900\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_FLASH\_GetSTCompanyID(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01901}01901\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01902}01902\ \ \ \textcolor{keywordflow}{return}\ (((\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(*((uint32\_t\ *)\mbox{\hyperlink{group__Peripheral__memory__map_gabc07c2f08504c1b41274e4e55ae57e25}{UID64\_BASE}}\ +\ 1U)))\ >>\ 8U)\ \&\ 0x00FFFFFFU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01903}01903\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01916}01916\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ defined\ (FLASH)\ ||\ defined\ (SYSCFG)\ ||\ defined\ (DBGMCU)\ ||\ defined\ (VREFBUF)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01917}01917\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01922}01922\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01923}01923\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01924}01924\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01925}01925\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__system_8h_source_l01926}01926\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ STM32WLxx\_LL\_SYSTEM\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

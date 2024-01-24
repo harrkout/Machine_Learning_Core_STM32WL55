@@ -1,0 +1,1319 @@
+\doxysubsubsection{Peripheral\+\_\+memory\+\_\+map}
+\hypertarget{group__Peripheral__memory__map}{}\label{group__Peripheral__memory__map}\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}{FLASH\+\_\+\+BASE}}~0x08000000\+UL
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}}~0x1\+FFF0000\+UL
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga7d0fbfb8894012dbbb96754b95e562cd}{SRAM1\+\_\+\+BASE}}~0x20000000\+UL
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gadbb42a3d0a8a90a79d2146e4014241b1}{SRAM2\+\_\+\+BASE}}~0x20008000\+UL
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}}~0x40000000\+UL
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}{FLASH\+\_\+\+SIZE}}~(((\texorpdfstring{$\ast$}{*}((uint32\+\_\+t \texorpdfstring{$\ast$}{*})\mbox{\hyperlink{group__Peripheral__memory__map_ga776d985f2d4d40b588ef6ca9d573af78}{FLASHSIZE\+\_\+\+BASE}})) \& 0x\+FFFFU) $<$$<$ 10U)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gacf1c7f7eb345f8e1b617fd1b16320111}{SRAM1\+\_\+\+SIZE}}~0x00008000\+UL
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gad89e757d25db6160b1aedeb58fcdac09}{SRAM2\+\_\+\+SIZE}}~0x00008000\+UL
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga148a5fd1bea09c76ca35bc65fd878daf}{RSSLIB\+\_\+\+PFUNC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00003\+A00\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga19ec3af1dfdd2894a57864e5aa2d650b}{OTP\+\_\+\+AREA\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00007000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00007400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga5ff16ebf3cb918d88d2703d11b4fbd74}{OPTION\+\_\+\+BYTES\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00007800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga88fc8a2912bd1ac72c6eddb456f0b096}{PACKAGE\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x00000100\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gabc07c2f08504c1b41274e4e55ae57e25}{UID64\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x00000180\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga664eda42b83c919b153b07b23348be67}{UID\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x00000190\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga776d985f2d4d40b588ef6ca9d573af78}{FLASHSIZE\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x000001\+E0\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaa3d08477cde132f1f20d1ea5bbf67ac2}{SYSTEM\+\_\+\+MEMORY\+\_\+\+END\+\_\+\+ADDR}}~(0x1\+FFF6\+FFFUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga3a35815d6a2ee963ad77302d5bbf43de}{OTP\+\_\+\+AREA\+\_\+\+END\+\_\+\+ADDR}}~(0x1\+FFF73\+FFUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga095fdca1bad2c8db687b92d5dfa22d04}{ENGI\+\_\+\+BYTE\+\_\+\+END\+\_\+\+ADDR}}~(0x1\+FFF77\+FFUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga64ef48ca8fa11372812dab820cf32b9c}{OPTION\+\_\+\+BYTE\+\_\+\+END\+\_\+\+ADDR}}~(0x1\+FFF7\+FFFUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}}~\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}}
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x00010000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x00020000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaeedaa71d22a1948492365e2cd26cfd46}{AHB2\+PERIPH\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x08000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x18000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gabd3b323bd62452ea4ac176bc88ea3ea5}{APB3\+PERIPH\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x18010000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga00d0fe6ad532ab32f0f81cafca8d3aa5}{TIM2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga4265e665d56225412e57a61d87417022}{RTC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00002800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga9a5bf4728ab93dea5b569f5b972cbe62}{WWDG\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00002\+C00\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga8543ee4997296af5536b007cd4748f55}{IWDG\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00003000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gac3e357b4c25106ed375fb1affab6bb86}{SPI2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00003800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gade83162a04bca0b15b39018a8e8ec090}{USART2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00004400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gacd72dbffb1738ca87c838545c4eb85a3}{I2\+C1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00005400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga04bda70f25c795fb79f163b633ad4a5d}{I2\+C2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00005800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga4e8b9198748235a1729e1e8f8f24983b}{I2\+C3\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00005\+C00\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gad18d0b914c7f68cecbee1a2d23a67d38}{DAC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00007400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga012ceb003fbb615eedb39a8d7f31c9c6}{LPTIM1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00007\+C00\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga42584c807077cea9525819eaf29c7e34}{LPUART1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00008000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga74dc5e8a0008c0e16598591753b71b17}{LPTIM2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00009400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga5cd6c66f06ccfbce4fe7d28d1839a23d}{LPTIM3\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00009800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gab6c536f4e63f5f710948483a0ed95e0d}{TAMP\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x0000\+B000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga62246020bf3b34b6a4d8d0e84ec79d3d}{SYSCFG\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga206fcc501d1ab876346acc1a922f8dbe}{VREFBUF\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000030\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gac21d535b541bcfb0c778a9584ebb132e}{COMP1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000200\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gacb8799f3d5301795f51e3b87d345cd50}{COMP2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000204\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gad06cb9e5985bd216a376f26f22303cd6}{ADC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00002400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga9492043c7185155e1faf075a5c6dd671}{ADC\+\_\+\+COMMON\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00002708\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaf8aa324ca5011b8173ab16585ed7324a}{TIM1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00002\+C00\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga50cd8b47929f18b05efbd0f41253bf8d}{SPI1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00003000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga86162ab3f740db9026c1320d46938b4d}{USART1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00003800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga16c97093a531d763b0794c3e6d09e1bf}{TIM16\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00004400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaffbedbe30e8c4cffdea326d6c1800574}{TIM17\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00004800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00000400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00000800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga656a447589e785594cbf2f45c835ad7e}{CRC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00003000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga888dbc1608243badeb3554ffedc7364c}{DMA1\+\_\+\+Channel1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000008\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga38a70090eef3687e83fa6ac0c6d22267}{DMA1\+\_\+\+Channel2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x0000001\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga70b3d9f36ca9ce95b4e421c11154fe5d}{DMA1\+\_\+\+Channel3\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000030\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga1adc93cd0baf0897202c71110e045692}{DMA1\+\_\+\+Channel4\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000044\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gac041a71cd6c1973964f847a68aa14478}{DMA1\+\_\+\+Channel5\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000058\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga896c2c7585dd8bc3969cf8561f689d2d}{DMA1\+\_\+\+Channel6\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x0000006\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaeee0d1f77d0db1db533016a09351166c}{DMA1\+\_\+\+Channel7\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000080\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gad3bd6c4201d12f5d474518c1b02f8e3b}{DMA2\+\_\+\+Channel1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000008\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga22f39f23c879c699b88e04a629f69d1c}{DMA2\+\_\+\+Channel2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x0000001\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga6f2369b8bc155fb55a28891987605c2c}{DMA2\+\_\+\+Channel3\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000030\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga01b063266473f290a55047654fbbfbee}{DMA2\+\_\+\+Channel4\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000044\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga1eea983a5d68bf36f4d19fbb07955ca1}{DMA2\+\_\+\+Channel5\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000058\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gae8888e635a33f196f414145b0e2b858d}{DMA2\+\_\+\+Channel6\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x0000006\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga1e48711c9b40cf50ac47b1e17c787807}{DMA2\+\_\+\+Channel7\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000080\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaccfb10abd55a74b368b4c96c230808f5}{DMAMUX1\+\_\+\+Channel0\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}})
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaea698d2efb0595ed32e748f28eba3f3a}{DMAMUX1\+\_\+\+Channel1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000004\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga4656629781ee3e6dd45c96e960ee2107}{DMAMUX1\+\_\+\+Channel2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000008\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gad1af2c5629d0bdd1bbb3c13724c4a299}{DMAMUX1\+\_\+\+Channel3\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000000\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga1d951becb3cfb504959d4044a7b9d058}{DMAMUX1\+\_\+\+Channel4\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000010\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gacb77d1d51186e22ac2614d6c54483060}{DMAMUX1\+\_\+\+Channel5\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000014\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gae4d818de4c042e8e3e31899e7d3d953c}{DMAMUX1\+\_\+\+Channel6\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000018\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga38225a2055253723093e66e32a25e00c}{DMAMUX1\+\_\+\+Channel7\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000001\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga4f3d7c0ebfb1d798029a9a7f0f11618d}{DMAMUX1\+\_\+\+Channel8\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000020\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga29c77dd6518f0a81a48b9fa8d2ffb2a2}{DMAMUX1\+\_\+\+Channel9\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000024\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaa01fa040ab8f318cbb4a8bb7af3d64d1}{DMAMUX1\+\_\+\+Channel10\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000028\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga821608a69113372c11d663c8b4f21fe9}{DMAMUX1\+\_\+\+Channel11\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000002\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaec2fe991014b9c95da15b86817ebdb72}{DMAMUX1\+\_\+\+Channel12\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000030\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga6703a28691162df4df5aefab041ef706}{DMAMUX1\+\_\+\+Channel13\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000034\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga4a6cd371ee5ca30425ba4670566910f7}{DMAMUX1\+\_\+\+Request\+Generator0\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000100\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gae504e59cfd5eaf11893a1e70a8c99447}{DMAMUX1\+\_\+\+Request\+Generator1\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000104\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gac7a406e4df5814aebf7a241f2f8695c0}{DMAMUX1\+\_\+\+Request\+Generator2\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000108\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaf6bfb649f38140a0b8b845a57b7ff867}{DMAMUX1\+\_\+\+Request\+Generator3\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000010\+CUL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga1c159f60f321afdf7871dbe5a13a33c6}{DMAMUX1\+\_\+\+Channel\+Status\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000080\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga657882d8c743486033ac4d766d7c782e}{DMAMUX1\+\_\+\+Request\+Gen\+Status\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000140\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaeedaa71d22a1948492365e2cd26cfd46}{AHB2\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gad7723846cc5db8e43a44d78cf21f6efa}{GPIOA\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gac944a89eb789000ece920c0f89cb6a68}{GPIOB\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00000400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga26f267dc35338eef219544c51f1e6b3f}{GPIOC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00000800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaee4716389f3a1c727495375b76645608}{GPIOH\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00001\+C00\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gac691ec23dace8b7a649a25acb110217a}{PWR\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga87371508b3bcdcd98cd1ec629be29061}{EXTI\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga72f043283fdab6151718bdb9a5adf163}{IPCC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000\+C00\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga0e681b03f364532055d88f63fec0d99d}{RCC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gab92662976cfe62457141e5b4f83d541c}{RNG\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00001000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga9e052bfbb418ce4602669e714acd0c78}{HSEM\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00001400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gad099ae8679538f6c00294639d67528bf}{AES\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00001800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga7399e83ebf73f4bb138963d04eb9e2bc}{PKA\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00002000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga8311d9a635d57a643676ca37bf461dd3}{FLASH\+\_\+\+REG\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00004000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_gaee52ff501f1597677d8b5bae1e366b79}{GTZC\+\_\+\+TZSC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00004400\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga4a35a8d3629e4520a391715d23b1ba34}{GTZC\+\_\+\+TZIC\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00004800\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga5b6f2197329ce798974feb54043f53c7}{SUBGHZSPI\+\_\+\+BASE}}~(\mbox{\hyperlink{group__Peripheral__memory__map_gabd3b323bd62452ea4ac176bc88ea3ea5}{APB3\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__Peripheral__memory__map_ga4adaf4fd82ccc3a538f1f27a70cdbbef}{DBGMCU\+\_\+\+BASE}}~(0x\+E0042000\+UL)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__Peripheral__memory__map_gad06cb9e5985bd216a376f26f22303cd6}\label{group__Peripheral__memory__map_gad06cb9e5985bd216a376f26f22303cd6} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!ADC\_BASE@{ADC\_BASE}}
+\index{ADC\_BASE@{ADC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{ADC\_BASE}{ADC\_BASE}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00002400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00980}{980}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga9492043c7185155e1faf075a5c6dd671}\label{group__Peripheral__memory__map_ga9492043c7185155e1faf075a5c6dd671} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!ADC\_COMMON\_BASE@{ADC\_COMMON\_BASE}}
+\index{ADC\_COMMON\_BASE@{ADC\_COMMON\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{ADC\_COMMON\_BASE}{ADC\_COMMON\_BASE}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+COMMON\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00002708\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00981}{981}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gad099ae8679538f6c00294639d67528bf}\label{group__Peripheral__memory__map_gad099ae8679538f6c00294639d67528bf} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!AES\_BASE@{AES\_BASE}}
+\index{AES\_BASE@{AES\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{AES\_BASE}{AES\_BASE}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00001800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01047}{1047}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}\label{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!AHB1PERIPH\_BASE@{AHB1PERIPH\_BASE}}
+\index{AHB1PERIPH\_BASE@{AHB1PERIPH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{AHB1PERIPH\_BASE}{AHB1PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define AHB1\+PERIPH\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x00020000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00953}{953}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaeedaa71d22a1948492365e2cd26cfd46}\label{group__Peripheral__memory__map_gaeedaa71d22a1948492365e2cd26cfd46} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!AHB2PERIPH\_BASE@{AHB2PERIPH\_BASE}}
+\index{AHB2PERIPH\_BASE@{AHB2PERIPH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{AHB2PERIPH\_BASE}{AHB2PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define AHB2\+PERIPH\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x08000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00954}{954}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}\label{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!AHB3PERIPH\_BASE@{AHB3PERIPH\_BASE}}
+\index{AHB3PERIPH\_BASE@{AHB3PERIPH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{AHB3PERIPH\_BASE}{AHB3PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define AHB3\+PERIPH\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x18000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00955}{955}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}\label{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!APB1PERIPH\_BASE@{APB1PERIPH\_BASE}}
+\index{APB1PERIPH\_BASE@{APB1PERIPH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{APB1PERIPH\_BASE}{APB1PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define APB1\+PERIPH\+\_\+\+BASE~\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}}}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00951}{951}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}\label{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!APB2PERIPH\_BASE@{APB2PERIPH\_BASE}}
+\index{APB2PERIPH\_BASE@{APB2PERIPH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{APB2PERIPH\_BASE}{APB2PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define APB2\+PERIPH\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x00010000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00952}{952}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gabd3b323bd62452ea4ac176bc88ea3ea5}\label{group__Peripheral__memory__map_gabd3b323bd62452ea4ac176bc88ea3ea5} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!APB3PERIPH\_BASE@{APB3PERIPH\_BASE}}
+\index{APB3PERIPH\_BASE@{APB3PERIPH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{APB3PERIPH\_BASE}{APB3PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define APB3\+PERIPH\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + 0x18010000\+UL)}
+
+APB1 peripherals 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00956}{956}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gac21d535b541bcfb0c778a9584ebb132e}\label{group__Peripheral__memory__map_gac21d535b541bcfb0c778a9584ebb132e} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!COMP1\_BASE@{COMP1\_BASE}}
+\index{COMP1\_BASE@{COMP1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{COMP1\_BASE}{COMP1\_BASE}}
+{\footnotesize\ttfamily \#define COMP1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000200\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00978}{978}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gacb8799f3d5301795f51e3b87d345cd50}\label{group__Peripheral__memory__map_gacb8799f3d5301795f51e3b87d345cd50} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!COMP2\_BASE@{COMP2\_BASE}}
+\index{COMP2\_BASE@{COMP2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{COMP2\_BASE}{COMP2\_BASE}}
+{\footnotesize\ttfamily \#define COMP2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000204\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00979}{979}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga656a447589e785594cbf2f45c835ad7e}\label{group__Peripheral__memory__map_ga656a447589e785594cbf2f45c835ad7e} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!CRC\_BASE@{CRC\_BASE}}
+\index{CRC\_BASE@{CRC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{CRC\_BASE}{CRC\_BASE}}
+{\footnotesize\ttfamily \#define CRC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00003000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00992}{992}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gad18d0b914c7f68cecbee1a2d23a67d38}\label{group__Peripheral__memory__map_gad18d0b914c7f68cecbee1a2d23a67d38} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DAC\_BASE@{DAC\_BASE}}
+\index{DAC\_BASE@{DAC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DAC\_BASE}{DAC\_BASE}}
+{\footnotesize\ttfamily \#define DAC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00007400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00968}{968}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga4adaf4fd82ccc3a538f1f27a70cdbbef}\label{group__Peripheral__memory__map_ga4adaf4fd82ccc3a538f1f27a70cdbbef} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DBGMCU\_BASE@{DBGMCU\_BASE}}
+\index{DBGMCU\_BASE@{DBGMCU\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DBGMCU\_BASE}{DBGMCU\_BASE}}
+{\footnotesize\ttfamily \#define DBGMCU\+\_\+\+BASE~(0x\+E0042000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01059}{1059}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}\label{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_BASE@{DMA1\_BASE}}
+\index{DMA1\_BASE@{DMA1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_BASE}{DMA1\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00989}{989}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga888dbc1608243badeb3554ffedc7364c}\label{group__Peripheral__memory__map_ga888dbc1608243badeb3554ffedc7364c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_Channel1\_BASE@{DMA1\_Channel1\_BASE}}
+\index{DMA1\_Channel1\_BASE@{DMA1\_Channel1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_Channel1\_BASE}{DMA1\_Channel1\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+Channel1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000008\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00994}{994}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga38a70090eef3687e83fa6ac0c6d22267}\label{group__Peripheral__memory__map_ga38a70090eef3687e83fa6ac0c6d22267} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_Channel2\_BASE@{DMA1\_Channel2\_BASE}}
+\index{DMA1\_Channel2\_BASE@{DMA1\_Channel2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_Channel2\_BASE}{DMA1\_Channel2\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+Channel2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x0000001\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00995}{995}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga70b3d9f36ca9ce95b4e421c11154fe5d}\label{group__Peripheral__memory__map_ga70b3d9f36ca9ce95b4e421c11154fe5d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_Channel3\_BASE@{DMA1\_Channel3\_BASE}}
+\index{DMA1\_Channel3\_BASE@{DMA1\_Channel3\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_Channel3\_BASE}{DMA1\_Channel3\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+Channel3\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000030\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00996}{996}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga1adc93cd0baf0897202c71110e045692}\label{group__Peripheral__memory__map_ga1adc93cd0baf0897202c71110e045692} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_Channel4\_BASE@{DMA1\_Channel4\_BASE}}
+\index{DMA1\_Channel4\_BASE@{DMA1\_Channel4\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_Channel4\_BASE}{DMA1\_Channel4\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+Channel4\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000044\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00997}{997}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gac041a71cd6c1973964f847a68aa14478}\label{group__Peripheral__memory__map_gac041a71cd6c1973964f847a68aa14478} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_Channel5\_BASE@{DMA1\_Channel5\_BASE}}
+\index{DMA1\_Channel5\_BASE@{DMA1\_Channel5\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_Channel5\_BASE}{DMA1\_Channel5\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+Channel5\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000058\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00998}{998}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga896c2c7585dd8bc3969cf8561f689d2d}\label{group__Peripheral__memory__map_ga896c2c7585dd8bc3969cf8561f689d2d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_Channel6\_BASE@{DMA1\_Channel6\_BASE}}
+\index{DMA1\_Channel6\_BASE@{DMA1\_Channel6\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_Channel6\_BASE}{DMA1\_Channel6\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+Channel6\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x0000006\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00999}{999}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaeee0d1f77d0db1db533016a09351166c}\label{group__Peripheral__memory__map_gaeee0d1f77d0db1db533016a09351166c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA1\_Channel7\_BASE@{DMA1\_Channel7\_BASE}}
+\index{DMA1\_Channel7\_BASE@{DMA1\_Channel7\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA1\_Channel7\_BASE}{DMA1\_Channel7\_BASE}}
+{\footnotesize\ttfamily \#define DMA1\+\_\+\+Channel7\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab2d8a917a0e4ea99a22ac6ebf279bc72}{DMA1\+\_\+\+BASE}} + 0x00000080\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01000}{1000}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}\label{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_BASE@{DMA2\_BASE}}
+\index{DMA2\_BASE@{DMA2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_BASE}{DMA2\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00000400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00990}{990}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gad3bd6c4201d12f5d474518c1b02f8e3b}\label{group__Peripheral__memory__map_gad3bd6c4201d12f5d474518c1b02f8e3b} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_Channel1\_BASE@{DMA2\_Channel1\_BASE}}
+\index{DMA2\_Channel1\_BASE@{DMA2\_Channel1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_Channel1\_BASE}{DMA2\_Channel1\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+Channel1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000008\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01002}{1002}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga22f39f23c879c699b88e04a629f69d1c}\label{group__Peripheral__memory__map_ga22f39f23c879c699b88e04a629f69d1c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_Channel2\_BASE@{DMA2\_Channel2\_BASE}}
+\index{DMA2\_Channel2\_BASE@{DMA2\_Channel2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_Channel2\_BASE}{DMA2\_Channel2\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+Channel2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x0000001\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01003}{1003}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga6f2369b8bc155fb55a28891987605c2c}\label{group__Peripheral__memory__map_ga6f2369b8bc155fb55a28891987605c2c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_Channel3\_BASE@{DMA2\_Channel3\_BASE}}
+\index{DMA2\_Channel3\_BASE@{DMA2\_Channel3\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_Channel3\_BASE}{DMA2\_Channel3\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+Channel3\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000030\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01004}{1004}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga01b063266473f290a55047654fbbfbee}\label{group__Peripheral__memory__map_ga01b063266473f290a55047654fbbfbee} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_Channel4\_BASE@{DMA2\_Channel4\_BASE}}
+\index{DMA2\_Channel4\_BASE@{DMA2\_Channel4\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_Channel4\_BASE}{DMA2\_Channel4\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+Channel4\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000044\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01005}{1005}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga1eea983a5d68bf36f4d19fbb07955ca1}\label{group__Peripheral__memory__map_ga1eea983a5d68bf36f4d19fbb07955ca1} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_Channel5\_BASE@{DMA2\_Channel5\_BASE}}
+\index{DMA2\_Channel5\_BASE@{DMA2\_Channel5\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_Channel5\_BASE}{DMA2\_Channel5\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+Channel5\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000058\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01006}{1006}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gae8888e635a33f196f414145b0e2b858d}\label{group__Peripheral__memory__map_gae8888e635a33f196f414145b0e2b858d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_Channel6\_BASE@{DMA2\_Channel6\_BASE}}
+\index{DMA2\_Channel6\_BASE@{DMA2\_Channel6\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_Channel6\_BASE}{DMA2\_Channel6\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+Channel6\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x0000006\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01007}{1007}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga1e48711c9b40cf50ac47b1e17c787807}\label{group__Peripheral__memory__map_ga1e48711c9b40cf50ac47b1e17c787807} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMA2\_Channel7\_BASE@{DMA2\_Channel7\_BASE}}
+\index{DMA2\_Channel7\_BASE@{DMA2\_Channel7\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMA2\_Channel7\_BASE}{DMA2\_Channel7\_BASE}}
+{\footnotesize\ttfamily \#define DMA2\+\_\+\+Channel7\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab72a9ae145053ee13d1d491fb5c1df64}{DMA2\+\_\+\+BASE}} + 0x00000080\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01008}{1008}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}\label{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_BASE@{DMAMUX1\_BASE}}
+\index{DMAMUX1\_BASE@{DMAMUX1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_BASE}{DMAMUX1\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga811a9a4ca17f0a50354a9169541d56c4}{AHB1\+PERIPH\+\_\+\+BASE}} + 0x00000800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00991}{991}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaccfb10abd55a74b368b4c96c230808f5}\label{group__Peripheral__memory__map_gaccfb10abd55a74b368b4c96c230808f5} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel0\_BASE@{DMAMUX1\_Channel0\_BASE}}
+\index{DMAMUX1\_Channel0\_BASE@{DMAMUX1\_Channel0\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel0\_BASE}{DMAMUX1\_Channel0\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel0\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01010}{1010}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaa01fa040ab8f318cbb4a8bb7af3d64d1}\label{group__Peripheral__memory__map_gaa01fa040ab8f318cbb4a8bb7af3d64d1} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel10\_BASE@{DMAMUX1\_Channel10\_BASE}}
+\index{DMAMUX1\_Channel10\_BASE@{DMAMUX1\_Channel10\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel10\_BASE}{DMAMUX1\_Channel10\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel10\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000028\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01020}{1020}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga821608a69113372c11d663c8b4f21fe9}\label{group__Peripheral__memory__map_ga821608a69113372c11d663c8b4f21fe9} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel11\_BASE@{DMAMUX1\_Channel11\_BASE}}
+\index{DMAMUX1\_Channel11\_BASE@{DMAMUX1\_Channel11\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel11\_BASE}{DMAMUX1\_Channel11\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel11\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000002\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01021}{1021}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaec2fe991014b9c95da15b86817ebdb72}\label{group__Peripheral__memory__map_gaec2fe991014b9c95da15b86817ebdb72} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel12\_BASE@{DMAMUX1\_Channel12\_BASE}}
+\index{DMAMUX1\_Channel12\_BASE@{DMAMUX1\_Channel12\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel12\_BASE}{DMAMUX1\_Channel12\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel12\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000030\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01022}{1022}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga6703a28691162df4df5aefab041ef706}\label{group__Peripheral__memory__map_ga6703a28691162df4df5aefab041ef706} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel13\_BASE@{DMAMUX1\_Channel13\_BASE}}
+\index{DMAMUX1\_Channel13\_BASE@{DMAMUX1\_Channel13\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel13\_BASE}{DMAMUX1\_Channel13\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel13\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000034\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01023}{1023}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaea698d2efb0595ed32e748f28eba3f3a}\label{group__Peripheral__memory__map_gaea698d2efb0595ed32e748f28eba3f3a} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel1\_BASE@{DMAMUX1\_Channel1\_BASE}}
+\index{DMAMUX1\_Channel1\_BASE@{DMAMUX1\_Channel1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel1\_BASE}{DMAMUX1\_Channel1\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000004\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01011}{1011}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga4656629781ee3e6dd45c96e960ee2107}\label{group__Peripheral__memory__map_ga4656629781ee3e6dd45c96e960ee2107} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel2\_BASE@{DMAMUX1\_Channel2\_BASE}}
+\index{DMAMUX1\_Channel2\_BASE@{DMAMUX1\_Channel2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel2\_BASE}{DMAMUX1\_Channel2\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000008\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01012}{1012}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gad1af2c5629d0bdd1bbb3c13724c4a299}\label{group__Peripheral__memory__map_gad1af2c5629d0bdd1bbb3c13724c4a299} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel3\_BASE@{DMAMUX1\_Channel3\_BASE}}
+\index{DMAMUX1\_Channel3\_BASE@{DMAMUX1\_Channel3\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel3\_BASE}{DMAMUX1\_Channel3\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel3\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000000\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01013}{1013}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga1d951becb3cfb504959d4044a7b9d058}\label{group__Peripheral__memory__map_ga1d951becb3cfb504959d4044a7b9d058} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel4\_BASE@{DMAMUX1\_Channel4\_BASE}}
+\index{DMAMUX1\_Channel4\_BASE@{DMAMUX1\_Channel4\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel4\_BASE}{DMAMUX1\_Channel4\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel4\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000010\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01014}{1014}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gacb77d1d51186e22ac2614d6c54483060}\label{group__Peripheral__memory__map_gacb77d1d51186e22ac2614d6c54483060} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel5\_BASE@{DMAMUX1\_Channel5\_BASE}}
+\index{DMAMUX1\_Channel5\_BASE@{DMAMUX1\_Channel5\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel5\_BASE}{DMAMUX1\_Channel5\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel5\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000014\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01015}{1015}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gae4d818de4c042e8e3e31899e7d3d953c}\label{group__Peripheral__memory__map_gae4d818de4c042e8e3e31899e7d3d953c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel6\_BASE@{DMAMUX1\_Channel6\_BASE}}
+\index{DMAMUX1\_Channel6\_BASE@{DMAMUX1\_Channel6\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel6\_BASE}{DMAMUX1\_Channel6\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel6\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000018\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01016}{1016}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga38225a2055253723093e66e32a25e00c}\label{group__Peripheral__memory__map_ga38225a2055253723093e66e32a25e00c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel7\_BASE@{DMAMUX1\_Channel7\_BASE}}
+\index{DMAMUX1\_Channel7\_BASE@{DMAMUX1\_Channel7\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel7\_BASE}{DMAMUX1\_Channel7\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel7\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000001\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01017}{1017}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga4f3d7c0ebfb1d798029a9a7f0f11618d}\label{group__Peripheral__memory__map_ga4f3d7c0ebfb1d798029a9a7f0f11618d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel8\_BASE@{DMAMUX1\_Channel8\_BASE}}
+\index{DMAMUX1\_Channel8\_BASE@{DMAMUX1\_Channel8\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel8\_BASE}{DMAMUX1\_Channel8\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel8\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000020\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01018}{1018}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga29c77dd6518f0a81a48b9fa8d2ffb2a2}\label{group__Peripheral__memory__map_ga29c77dd6518f0a81a48b9fa8d2ffb2a2} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_Channel9\_BASE@{DMAMUX1\_Channel9\_BASE}}
+\index{DMAMUX1\_Channel9\_BASE@{DMAMUX1\_Channel9\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_Channel9\_BASE}{DMAMUX1\_Channel9\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel9\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000024\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01019}{1019}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga1c159f60f321afdf7871dbe5a13a33c6}\label{group__Peripheral__memory__map_ga1c159f60f321afdf7871dbe5a13a33c6} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_ChannelStatus\_BASE@{DMAMUX1\_ChannelStatus\_BASE}}
+\index{DMAMUX1\_ChannelStatus\_BASE@{DMAMUX1\_ChannelStatus\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_ChannelStatus\_BASE}{DMAMUX1\_ChannelStatus\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Channel\+Status\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000080\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01030}{1030}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga4a6cd371ee5ca30425ba4670566910f7}\label{group__Peripheral__memory__map_ga4a6cd371ee5ca30425ba4670566910f7} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_RequestGenerator0\_BASE@{DMAMUX1\_RequestGenerator0\_BASE}}
+\index{DMAMUX1\_RequestGenerator0\_BASE@{DMAMUX1\_RequestGenerator0\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_RequestGenerator0\_BASE}{DMAMUX1\_RequestGenerator0\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Request\+Generator0\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000100\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01025}{1025}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gae504e59cfd5eaf11893a1e70a8c99447}\label{group__Peripheral__memory__map_gae504e59cfd5eaf11893a1e70a8c99447} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_RequestGenerator1\_BASE@{DMAMUX1\_RequestGenerator1\_BASE}}
+\index{DMAMUX1\_RequestGenerator1\_BASE@{DMAMUX1\_RequestGenerator1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_RequestGenerator1\_BASE}{DMAMUX1\_RequestGenerator1\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Request\+Generator1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000104\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01026}{1026}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gac7a406e4df5814aebf7a241f2f8695c0}\label{group__Peripheral__memory__map_gac7a406e4df5814aebf7a241f2f8695c0} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_RequestGenerator2\_BASE@{DMAMUX1\_RequestGenerator2\_BASE}}
+\index{DMAMUX1\_RequestGenerator2\_BASE@{DMAMUX1\_RequestGenerator2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_RequestGenerator2\_BASE}{DMAMUX1\_RequestGenerator2\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Request\+Generator2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000108\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01027}{1027}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaf6bfb649f38140a0b8b845a57b7ff867}\label{group__Peripheral__memory__map_gaf6bfb649f38140a0b8b845a57b7ff867} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_RequestGenerator3\_BASE@{DMAMUX1\_RequestGenerator3\_BASE}}
+\index{DMAMUX1\_RequestGenerator3\_BASE@{DMAMUX1\_RequestGenerator3\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_RequestGenerator3\_BASE}{DMAMUX1\_RequestGenerator3\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Request\+Generator3\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x0000010\+CUL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01028}{1028}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga657882d8c743486033ac4d766d7c782e}\label{group__Peripheral__memory__map_ga657882d8c743486033ac4d766d7c782e} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!DMAMUX1\_RequestGenStatus\_BASE@{DMAMUX1\_RequestGenStatus\_BASE}}
+\index{DMAMUX1\_RequestGenStatus\_BASE@{DMAMUX1\_RequestGenStatus\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{DMAMUX1\_RequestGenStatus\_BASE}{DMAMUX1\_RequestGenStatus\_BASE}}
+{\footnotesize\ttfamily \#define DMAMUX1\+\_\+\+Request\+Gen\+Status\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga67fc40a974f5bf83c2817d921ad95efd}{DMAMUX1\+\_\+\+BASE}} + 0x00000140\+UL)}
+
+AHB2 peripherals 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01031}{1031}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga095fdca1bad2c8db687b92d5dfa22d04}\label{group__Peripheral__memory__map_ga095fdca1bad2c8db687b92d5dfa22d04} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!ENGI\_BYTE\_END\_ADDR@{ENGI\_BYTE\_END\_ADDR}}
+\index{ENGI\_BYTE\_END\_ADDR@{ENGI\_BYTE\_END\_ADDR}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{ENGI\_BYTE\_END\_ADDR}{ENGI\_BYTE\_END\_ADDR}}
+{\footnotesize\ttfamily \#define ENGI\+\_\+\+BYTE\+\_\+\+END\+\_\+\+ADDR~(0x1\+FFF77\+FFUL)}
+
+Engi Bytes \+: 1kB (0x1\+FFF7400 -\/ 0x1\+FFF77\+FF) ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00947}{947}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}\label{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!ENGI\_BYTES\_BASE@{ENGI\_BYTES\_BASE}}
+\index{ENGI\_BYTES\_BASE@{ENGI\_BYTES\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{ENGI\_BYTES\_BASE}{ENGI\_BYTES\_BASE}}
+{\footnotesize\ttfamily \#define ENGI\+\_\+\+BYTES\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00007400\+UL)}
+
+Engi Bytes \+: 1kB (0x1\+FFF7400 -\/ 0x1\+FFF77\+FF) ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00936}{936}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga87371508b3bcdcd98cd1ec629be29061}\label{group__Peripheral__memory__map_ga87371508b3bcdcd98cd1ec629be29061} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!EXTI\_BASE@{EXTI\_BASE}}
+\index{EXTI\_BASE@{EXTI\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{EXTI\_BASE}{EXTI\_BASE}}
+{\footnotesize\ttfamily \#define EXTI\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01042}{1042}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db}\label{group__Peripheral__memory__map_ga23a9099a5f8fc9c6e253c0eecb2be8db} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!FLASH\_BASE@{FLASH\_BASE}}
+\index{FLASH\_BASE@{FLASH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{FLASH\_BASE}{FLASH\_BASE}}
+{\footnotesize\ttfamily \#define FLASH\+\_\+\+BASE~0x08000000\+UL}
+
+\texorpdfstring{$<$}{<} Boundary memory map \doxylink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH(up to 256 KB)} base address 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00923}{923}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga8311d9a635d57a643676ca37bf461dd3}\label{group__Peripheral__memory__map_ga8311d9a635d57a643676ca37bf461dd3} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!FLASH\_REG\_BASE@{FLASH\_REG\_BASE}}
+\index{FLASH\_REG\_BASE@{FLASH\_REG\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{FLASH\_REG\_BASE}{FLASH\_REG\_BASE}}
+{\footnotesize\ttfamily \#define FLASH\+\_\+\+REG\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00004000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01049}{1049}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7}\label{group__Peripheral__memory__map_gae69620948dea1b76e0ab7843ab719db7} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!FLASH\_SIZE@{FLASH\_SIZE}}
+\index{FLASH\_SIZE@{FLASH\_SIZE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{FLASH\_SIZE}{FLASH\_SIZE}}
+{\footnotesize\ttfamily \#define FLASH\+\_\+\+SIZE~(((\texorpdfstring{$\ast$}{*}((uint32\+\_\+t \texorpdfstring{$\ast$}{*})\mbox{\hyperlink{group__Peripheral__memory__map_ga776d985f2d4d40b588ef6ca9d573af78}{FLASHSIZE\+\_\+\+BASE}})) \& 0x\+FFFFU) $<$$<$ 10U)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00929}{929}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga776d985f2d4d40b588ef6ca9d573af78}\label{group__Peripheral__memory__map_ga776d985f2d4d40b588ef6ca9d573af78} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!FLASHSIZE\_BASE@{FLASHSIZE\_BASE}}
+\index{FLASHSIZE\_BASE@{FLASHSIZE\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{FLASHSIZE\_BASE}{FLASHSIZE\_BASE}}
+{\footnotesize\ttfamily \#define FLASHSIZE\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x000001\+E0\+UL)}
+
+Flash size data register base address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00943}{943}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gad7723846cc5db8e43a44d78cf21f6efa}\label{group__Peripheral__memory__map_gad7723846cc5db8e43a44d78cf21f6efa} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!GPIOA\_BASE@{GPIOA\_BASE}}
+\index{GPIOA\_BASE@{GPIOA\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{GPIOA\_BASE}{GPIOA\_BASE}}
+{\footnotesize\ttfamily \#define GPIOA\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01035}{1035}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gac944a89eb789000ece920c0f89cb6a68}\label{group__Peripheral__memory__map_gac944a89eb789000ece920c0f89cb6a68} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!GPIOB\_BASE@{GPIOB\_BASE}}
+\index{GPIOB\_BASE@{GPIOB\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{GPIOB\_BASE}{GPIOB\_BASE}}
+{\footnotesize\ttfamily \#define GPIOB\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00000400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01036}{1036}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga26f267dc35338eef219544c51f1e6b3f}\label{group__Peripheral__memory__map_ga26f267dc35338eef219544c51f1e6b3f} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!GPIOC\_BASE@{GPIOC\_BASE}}
+\index{GPIOC\_BASE@{GPIOC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{GPIOC\_BASE}{GPIOC\_BASE}}
+{\footnotesize\ttfamily \#define GPIOC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00000800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01037}{1037}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaee4716389f3a1c727495375b76645608}\label{group__Peripheral__memory__map_gaee4716389f3a1c727495375b76645608} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!GPIOH\_BASE@{GPIOH\_BASE}}
+\index{GPIOH\_BASE@{GPIOH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{GPIOH\_BASE}{GPIOH\_BASE}}
+{\footnotesize\ttfamily \#define GPIOH\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}{IOPORT\+\_\+\+BASE}} + 0x00001\+C00\+UL)}
+
+AHB3 peripherals 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01038}{1038}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga4a35a8d3629e4520a391715d23b1ba34}\label{group__Peripheral__memory__map_ga4a35a8d3629e4520a391715d23b1ba34} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!GTZC\_TZIC\_BASE@{GTZC\_TZIC\_BASE}}
+\index{GTZC\_TZIC\_BASE@{GTZC\_TZIC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{GTZC\_TZIC\_BASE}{GTZC\_TZIC\_BASE}}
+{\footnotesize\ttfamily \#define GTZC\+\_\+\+TZIC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00004800\+UL)}
+
+APB3 peripherals 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01051}{1051}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaee52ff501f1597677d8b5bae1e366b79}\label{group__Peripheral__memory__map_gaee52ff501f1597677d8b5bae1e366b79} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!GTZC\_TZSC\_BASE@{GTZC\_TZSC\_BASE}}
+\index{GTZC\_TZSC\_BASE@{GTZC\_TZSC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{GTZC\_TZSC\_BASE}{GTZC\_TZSC\_BASE}}
+{\footnotesize\ttfamily \#define GTZC\+\_\+\+TZSC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00004400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01050}{1050}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga9e052bfbb418ce4602669e714acd0c78}\label{group__Peripheral__memory__map_ga9e052bfbb418ce4602669e714acd0c78} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!HSEM\_BASE@{HSEM\_BASE}}
+\index{HSEM\_BASE@{HSEM\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{HSEM\_BASE}{HSEM\_BASE}}
+{\footnotesize\ttfamily \#define HSEM\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00001400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01046}{1046}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gacd72dbffb1738ca87c838545c4eb85a3}\label{group__Peripheral__memory__map_gacd72dbffb1738ca87c838545c4eb85a3} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!I2C1\_BASE@{I2C1\_BASE}}
+\index{I2C1\_BASE@{I2C1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{I2C1\_BASE}{I2C1\_BASE}}
+{\footnotesize\ttfamily \#define I2\+C1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00005400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00965}{965}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga04bda70f25c795fb79f163b633ad4a5d}\label{group__Peripheral__memory__map_ga04bda70f25c795fb79f163b633ad4a5d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!I2C2\_BASE@{I2C2\_BASE}}
+\index{I2C2\_BASE@{I2C2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{I2C2\_BASE}{I2C2\_BASE}}
+{\footnotesize\ttfamily \#define I2\+C2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00005800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00966}{966}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga4e8b9198748235a1729e1e8f8f24983b}\label{group__Peripheral__memory__map_ga4e8b9198748235a1729e1e8f8f24983b} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!I2C3\_BASE@{I2C3\_BASE}}
+\index{I2C3\_BASE@{I2C3\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{I2C3\_BASE}{I2C3\_BASE}}
+{\footnotesize\ttfamily \#define I2\+C3\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00005\+C00\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00967}{967}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19}\label{group__Peripheral__memory__map_ga86674438f184aee4c85b6f47d3125e19} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!IOPORT\_BASE@{IOPORT\_BASE}}
+\index{IOPORT\_BASE@{IOPORT\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{IOPORT\_BASE}{IOPORT\_BASE}}
+{\footnotesize\ttfamily \#define IOPORT\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaeedaa71d22a1948492365e2cd26cfd46}{AHB2\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01034}{1034}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga72f043283fdab6151718bdb9a5adf163}\label{group__Peripheral__memory__map_ga72f043283fdab6151718bdb9a5adf163} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!IPCC\_BASE@{IPCC\_BASE}}
+\index{IPCC\_BASE@{IPCC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{IPCC\_BASE}{IPCC\_BASE}}
+{\footnotesize\ttfamily \#define IPCC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000\+C00\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01043}{1043}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga8543ee4997296af5536b007cd4748f55}\label{group__Peripheral__memory__map_ga8543ee4997296af5536b007cd4748f55} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!IWDG\_BASE@{IWDG\_BASE}}
+\index{IWDG\_BASE@{IWDG\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{IWDG\_BASE}{IWDG\_BASE}}
+{\footnotesize\ttfamily \#define IWDG\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00003000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00962}{962}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga012ceb003fbb615eedb39a8d7f31c9c6}\label{group__Peripheral__memory__map_ga012ceb003fbb615eedb39a8d7f31c9c6} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!LPTIM1\_BASE@{LPTIM1\_BASE}}
+\index{LPTIM1\_BASE@{LPTIM1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{LPTIM1\_BASE}{LPTIM1\_BASE}}
+{\footnotesize\ttfamily \#define LPTIM1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00007\+C00\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00969}{969}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga74dc5e8a0008c0e16598591753b71b17}\label{group__Peripheral__memory__map_ga74dc5e8a0008c0e16598591753b71b17} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!LPTIM2\_BASE@{LPTIM2\_BASE}}
+\index{LPTIM2\_BASE@{LPTIM2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{LPTIM2\_BASE}{LPTIM2\_BASE}}
+{\footnotesize\ttfamily \#define LPTIM2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00009400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00971}{971}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga5cd6c66f06ccfbce4fe7d28d1839a23d}\label{group__Peripheral__memory__map_ga5cd6c66f06ccfbce4fe7d28d1839a23d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!LPTIM3\_BASE@{LPTIM3\_BASE}}
+\index{LPTIM3\_BASE@{LPTIM3\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{LPTIM3\_BASE}{LPTIM3\_BASE}}
+{\footnotesize\ttfamily \#define LPTIM3\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00009800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00972}{972}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga42584c807077cea9525819eaf29c7e34}\label{group__Peripheral__memory__map_ga42584c807077cea9525819eaf29c7e34} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!LPUART1\_BASE@{LPUART1\_BASE}}
+\index{LPUART1\_BASE@{LPUART1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{LPUART1\_BASE}{LPUART1\_BASE}}
+{\footnotesize\ttfamily \#define LPUART1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00008000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00970}{970}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga64ef48ca8fa11372812dab820cf32b9c}\label{group__Peripheral__memory__map_ga64ef48ca8fa11372812dab820cf32b9c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!OPTION\_BYTE\_END\_ADDR@{OPTION\_BYTE\_END\_ADDR}}
+\index{OPTION\_BYTE\_END\_ADDR@{OPTION\_BYTE\_END\_ADDR}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{OPTION\_BYTE\_END\_ADDR}{OPTION\_BYTE\_END\_ADDR}}
+{\footnotesize\ttfamily \#define OPTION\+\_\+\+BYTE\+\_\+\+END\+\_\+\+ADDR~(0x1\+FFF7\+FFFUL)}
+
+Option Bytes \+: 2KB (0x1\+FFF7800 -\/ 0x1\+FFF7\+FFF) ~\newline
+ Peripheral memory map 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00948}{948}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga5ff16ebf3cb918d88d2703d11b4fbd74}\label{group__Peripheral__memory__map_ga5ff16ebf3cb918d88d2703d11b4fbd74} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!OPTION\_BYTES\_BASE@{OPTION\_BYTES\_BASE}}
+\index{OPTION\_BYTES\_BASE@{OPTION\_BYTES\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{OPTION\_BYTES\_BASE}{OPTION\_BYTES\_BASE}}
+{\footnotesize\ttfamily \#define OPTION\+\_\+\+BYTES\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00007800\+UL)}
+
+Option Bytes \+: 2kB (0x1\+FFF7800 -\/ 0x1\+FFF7\+FFF) ~\newline
+ Device Electronic Signature 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00937}{937}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga19ec3af1dfdd2894a57864e5aa2d650b}\label{group__Peripheral__memory__map_ga19ec3af1dfdd2894a57864e5aa2d650b} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!OTP\_AREA\_BASE@{OTP\_AREA\_BASE}}
+\index{OTP\_AREA\_BASE@{OTP\_AREA\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{OTP\_AREA\_BASE}{OTP\_AREA\_BASE}}
+{\footnotesize\ttfamily \#define OTP\+\_\+\+AREA\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00007000\+UL)}
+
+OTP area \+: 1kB (0x1\+FFF7000 -\/ 0x1\+FFF73\+FF) ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00935}{935}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga3a35815d6a2ee963ad77302d5bbf43de}\label{group__Peripheral__memory__map_ga3a35815d6a2ee963ad77302d5bbf43de} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!OTP\_AREA\_END\_ADDR@{OTP\_AREA\_END\_ADDR}}
+\index{OTP\_AREA\_END\_ADDR@{OTP\_AREA\_END\_ADDR}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{OTP\_AREA\_END\_ADDR}{OTP\_AREA\_END\_ADDR}}
+{\footnotesize\ttfamily \#define OTP\+\_\+\+AREA\+\_\+\+END\+\_\+\+ADDR~(0x1\+FFF73\+FFUL)}
+
+OTP area \+: 1KB (0x1\+FFF7000 -\/ 0x1\+FFF73\+FF) ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00946}{946}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga88fc8a2912bd1ac72c6eddb456f0b096}\label{group__Peripheral__memory__map_ga88fc8a2912bd1ac72c6eddb456f0b096} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!PACKAGE\_BASE@{PACKAGE\_BASE}}
+\index{PACKAGE\_BASE@{PACKAGE\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{PACKAGE\_BASE}{PACKAGE\_BASE}}
+{\footnotesize\ttfamily \#define PACKAGE\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x00000100\+UL)}
+
+Package data register base address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00940}{940}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0}\label{group__Peripheral__memory__map_ga9171f49478fa86d932f89e78e73b88b0} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!PERIPH\_BASE@{PERIPH\_BASE}}
+\index{PERIPH\_BASE@{PERIPH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{PERIPH\_BASE}{PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define PERIPH\+\_\+\+BASE~0x40000000\+UL}
+
+Peripheral base address 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00927}{927}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga7399e83ebf73f4bb138963d04eb9e2bc}\label{group__Peripheral__memory__map_ga7399e83ebf73f4bb138963d04eb9e2bc} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!PKA\_BASE@{PKA\_BASE}}
+\index{PKA\_BASE@{PKA\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{PKA\_BASE}{PKA\_BASE}}
+{\footnotesize\ttfamily \#define PKA\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00002000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01048}{1048}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gac691ec23dace8b7a649a25acb110217a}\label{group__Peripheral__memory__map_gac691ec23dace8b7a649a25acb110217a} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!PWR\_BASE@{PWR\_BASE}}
+\index{PWR\_BASE@{PWR\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{PWR\_BASE}{PWR\_BASE}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01041}{1041}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga0e681b03f364532055d88f63fec0d99d}\label{group__Peripheral__memory__map_ga0e681b03f364532055d88f63fec0d99d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!RCC\_BASE@{RCC\_BASE}}
+\index{RCC\_BASE@{RCC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{RCC\_BASE}{RCC\_BASE}}
+{\footnotesize\ttfamily \#define RCC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01044}{1044}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gab92662976cfe62457141e5b4f83d541c}\label{group__Peripheral__memory__map_gab92662976cfe62457141e5b4f83d541c} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!RNG\_BASE@{RNG\_BASE}}
+\index{RNG\_BASE@{RNG\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{RNG\_BASE}{RNG\_BASE}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gaa27ad599cc2a027bb88877fec324bbf4}{AHB3\+PERIPH\+\_\+\+BASE}} + 0x00001000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01045}{1045}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga148a5fd1bea09c76ca35bc65fd878daf}\label{group__Peripheral__memory__map_ga148a5fd1bea09c76ca35bc65fd878daf} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!RSSLIB\_PFUNC\_BASE@{RSSLIB\_PFUNC\_BASE}}
+\index{RSSLIB\_PFUNC\_BASE@{RSSLIB\_PFUNC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{RSSLIB\_PFUNC\_BASE}{RSSLIB\_PFUNC\_BASE}}
+{\footnotesize\ttfamily \#define RSSLIB\+\_\+\+PFUNC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}{SYSTEM\+\_\+\+FLASH\+\_\+\+BASE}} + 0x00003\+A00\+UL)}
+
+RSS area ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00934}{934}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga4265e665d56225412e57a61d87417022}\label{group__Peripheral__memory__map_ga4265e665d56225412e57a61d87417022} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!RTC\_BASE@{RTC\_BASE}}
+\index{RTC\_BASE@{RTC\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{RTC\_BASE}{RTC\_BASE}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00002800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00960}{960}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga50cd8b47929f18b05efbd0f41253bf8d}\label{group__Peripheral__memory__map_ga50cd8b47929f18b05efbd0f41253bf8d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SPI1\_BASE@{SPI1\_BASE}}
+\index{SPI1\_BASE@{SPI1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SPI1\_BASE}{SPI1\_BASE}}
+{\footnotesize\ttfamily \#define SPI1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00003000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00983}{983}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gac3e357b4c25106ed375fb1affab6bb86}\label{group__Peripheral__memory__map_gac3e357b4c25106ed375fb1affab6bb86} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SPI2\_BASE@{SPI2\_BASE}}
+\index{SPI2\_BASE@{SPI2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SPI2\_BASE}{SPI2\_BASE}}
+{\footnotesize\ttfamily \#define SPI2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00003800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00963}{963}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga7d0fbfb8894012dbbb96754b95e562cd}\label{group__Peripheral__memory__map_ga7d0fbfb8894012dbbb96754b95e562cd} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SRAM1\_BASE@{SRAM1\_BASE}}
+\index{SRAM1\_BASE@{SRAM1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SRAM1\_BASE}{SRAM1\_BASE}}
+{\footnotesize\ttfamily \#define SRAM1\+\_\+\+BASE~0x20000000\+UL}
+
+SRAM1(up to 32 KB) base address 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00925}{925}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gacf1c7f7eb345f8e1b617fd1b16320111}\label{group__Peripheral__memory__map_gacf1c7f7eb345f8e1b617fd1b16320111} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SRAM1\_SIZE@{SRAM1\_SIZE}}
+\index{SRAM1\_SIZE@{SRAM1\_SIZE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SRAM1\_SIZE}{SRAM1\_SIZE}}
+{\footnotesize\ttfamily \#define SRAM1\+\_\+\+SIZE~0x00008000\+UL}
+
+SRAM1 default size \+: 32 kB 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00930}{930}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gadbb42a3d0a8a90a79d2146e4014241b1}\label{group__Peripheral__memory__map_gadbb42a3d0a8a90a79d2146e4014241b1} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SRAM2\_BASE@{SRAM2\_BASE}}
+\index{SRAM2\_BASE@{SRAM2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SRAM2\_BASE}{SRAM2\_BASE}}
+{\footnotesize\ttfamily \#define SRAM2\+\_\+\+BASE~0x20008000\+UL}
+
+SRAM2(up to 32 KB) base address 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00926}{926}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gad89e757d25db6160b1aedeb58fcdac09}\label{group__Peripheral__memory__map_gad89e757d25db6160b1aedeb58fcdac09} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SRAM2\_SIZE@{SRAM2\_SIZE}}
+\index{SRAM2\_SIZE@{SRAM2\_SIZE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SRAM2\_SIZE}{SRAM2\_SIZE}}
+{\footnotesize\ttfamily \#define SRAM2\+\_\+\+SIZE~0x00008000\+UL}
+
+SRAM2 default size \+: 32 kB ~\newline
+ Memory, OTP and Option bytes 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00931}{931}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga5b6f2197329ce798974feb54043f53c7}\label{group__Peripheral__memory__map_ga5b6f2197329ce798974feb54043f53c7} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SUBGHZSPI\_BASE@{SUBGHZSPI\_BASE}}
+\index{SUBGHZSPI\_BASE@{SUBGHZSPI\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SUBGHZSPI\_BASE}{SUBGHZSPI\_BASE}}
+{\footnotesize\ttfamily \#define SUBGHZSPI\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_gabd3b323bd62452ea4ac176bc88ea3ea5}{APB3\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)}
+
+Peripherals available on CPU1 external PPB bus 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l01054}{1054}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga62246020bf3b34b6a4d8d0e84ec79d3d}\label{group__Peripheral__memory__map_ga62246020bf3b34b6a4d8d0e84ec79d3d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SYSCFG\_BASE@{SYSCFG\_BASE}}
+\index{SYSCFG\_BASE@{SYSCFG\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SYSCFG\_BASE}{SYSCFG\_BASE}}
+{\footnotesize\ttfamily \#define SYSCFG\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00976}{976}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5}\label{group__Peripheral__memory__map_gab35622770eecff774471844a593176f5} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SYSTEM\_FLASH\_BASE@{SYSTEM\_FLASH\_BASE}}
+\index{SYSTEM\_FLASH\_BASE@{SYSTEM\_FLASH\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SYSTEM\_FLASH\_BASE}{SYSTEM\_FLASH\_BASE}}
+{\footnotesize\ttfamily \#define SYSTEM\+\_\+\+FLASH\+\_\+\+BASE~0x1\+FFF0000\+UL}
+
+System \doxylink{group__Peripheral__declaration_ga844ea28ba1e0a5a0e497f16b61ea306b}{FLASH(28\+Kb)} base address 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00924}{924}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaa3d08477cde132f1f20d1ea5bbf67ac2}\label{group__Peripheral__memory__map_gaa3d08477cde132f1f20d1ea5bbf67ac2} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!SYSTEM\_MEMORY\_END\_ADDR@{SYSTEM\_MEMORY\_END\_ADDR}}
+\index{SYSTEM\_MEMORY\_END\_ADDR@{SYSTEM\_MEMORY\_END\_ADDR}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{SYSTEM\_MEMORY\_END\_ADDR}{SYSTEM\_MEMORY\_END\_ADDR}}
+{\footnotesize\ttfamily \#define SYSTEM\+\_\+\+MEMORY\+\_\+\+END\+\_\+\+ADDR~(0x1\+FFF6\+FFFUL)}
+
+System Memory \+: 28KB (0x1\+FFF0000 -\/ 0x1\+FFF6\+FFF) ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00945}{945}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gab6c536f4e63f5f710948483a0ed95e0d}\label{group__Peripheral__memory__map_gab6c536f4e63f5f710948483a0ed95e0d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!TAMP\_BASE@{TAMP\_BASE}}
+\index{TAMP\_BASE@{TAMP\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{TAMP\_BASE}{TAMP\_BASE}}
+{\footnotesize\ttfamily \#define TAMP\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x0000\+B000\+UL)}
+
+APB2 peripherals 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00973}{973}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga16c97093a531d763b0794c3e6d09e1bf}\label{group__Peripheral__memory__map_ga16c97093a531d763b0794c3e6d09e1bf} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!TIM16\_BASE@{TIM16\_BASE}}
+\index{TIM16\_BASE@{TIM16\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{TIM16\_BASE}{TIM16\_BASE}}
+{\footnotesize\ttfamily \#define TIM16\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00004400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00985}{985}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaffbedbe30e8c4cffdea326d6c1800574}\label{group__Peripheral__memory__map_gaffbedbe30e8c4cffdea326d6c1800574} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!TIM17\_BASE@{TIM17\_BASE}}
+\index{TIM17\_BASE@{TIM17\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{TIM17\_BASE}{TIM17\_BASE}}
+{\footnotesize\ttfamily \#define TIM17\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00004800\+UL)}
+
+AHB1 peripherals 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00986}{986}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gaf8aa324ca5011b8173ab16585ed7324a}\label{group__Peripheral__memory__map_gaf8aa324ca5011b8173ab16585ed7324a} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!TIM1\_BASE@{TIM1\_BASE}}
+\index{TIM1\_BASE@{TIM1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{TIM1\_BASE}{TIM1\_BASE}}
+{\footnotesize\ttfamily \#define TIM1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00002\+C00\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00982}{982}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga00d0fe6ad532ab32f0f81cafca8d3aa5}\label{group__Peripheral__memory__map_ga00d0fe6ad532ab32f0f81cafca8d3aa5} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!TIM2\_BASE@{TIM2\_BASE}}
+\index{TIM2\_BASE@{TIM2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{TIM2\_BASE}{TIM2\_BASE}}
+{\footnotesize\ttfamily \#define TIM2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00000000\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00959}{959}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gabc07c2f08504c1b41274e4e55ae57e25}\label{group__Peripheral__memory__map_gabc07c2f08504c1b41274e4e55ae57e25} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!UID64\_BASE@{UID64\_BASE}}
+\index{UID64\_BASE@{UID64\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{UID64\_BASE}{UID64\_BASE}}
+{\footnotesize\ttfamily \#define UID64\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x00000180\+UL)}
+
+64-\/bit Unique device Identification ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00941}{941}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga664eda42b83c919b153b07b23348be67}\label{group__Peripheral__memory__map_ga664eda42b83c919b153b07b23348be67} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!UID\_BASE@{UID\_BASE}}
+\index{UID\_BASE@{UID\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{UID\_BASE}{UID\_BASE}}
+{\footnotesize\ttfamily \#define UID\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga2136cc3c557ec73c07f981c3d0b89f49}{ENGI\+\_\+\+BYTES\+\_\+\+BASE}} + 0x00000190\+UL)}
+
+Unique device ID register base address 
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00942}{942}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga86162ab3f740db9026c1320d46938b4d}\label{group__Peripheral__memory__map_ga86162ab3f740db9026c1320d46938b4d} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!USART1\_BASE@{USART1\_BASE}}
+\index{USART1\_BASE@{USART1\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{USART1\_BASE}{USART1\_BASE}}
+{\footnotesize\ttfamily \#define USART1\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00003800\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00984}{984}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_gade83162a04bca0b15b39018a8e8ec090}\label{group__Peripheral__memory__map_gade83162a04bca0b15b39018a8e8ec090} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!USART2\_BASE@{USART2\_BASE}}
+\index{USART2\_BASE@{USART2\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{USART2\_BASE}{USART2\_BASE}}
+{\footnotesize\ttfamily \#define USART2\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00004400\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00964}{964}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga206fcc501d1ab876346acc1a922f8dbe}\label{group__Peripheral__memory__map_ga206fcc501d1ab876346acc1a922f8dbe} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!VREFBUF\_BASE@{VREFBUF\_BASE}}
+\index{VREFBUF\_BASE@{VREFBUF\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{VREFBUF\_BASE}{VREFBUF\_BASE}}
+{\footnotesize\ttfamily \#define VREFBUF\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga25b99d6065f1c8f751e78f43ade652cb}{APB2\+PERIPH\+\_\+\+BASE}} + 0x00000030\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00977}{977}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+
+\Hypertarget{group__Peripheral__memory__map_ga9a5bf4728ab93dea5b569f5b972cbe62}\label{group__Peripheral__memory__map_ga9a5bf4728ab93dea5b569f5b972cbe62} 
+\index{Peripheral\_memory\_map@{Peripheral\_memory\_map}!WWDG\_BASE@{WWDG\_BASE}}
+\index{WWDG\_BASE@{WWDG\_BASE}!Peripheral\_memory\_map@{Peripheral\_memory\_map}}
+\doxysubsubsubsubsection{\texorpdfstring{WWDG\_BASE}{WWDG\_BASE}}
+{\footnotesize\ttfamily \#define WWDG\+\_\+\+BASE~(\mbox{\hyperlink{group__Peripheral__memory__map_ga45666d911f39addd4c8c0a0ac3388cfb}{APB1\+PERIPH\+\_\+\+BASE}} + 0x00002\+C00\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wl55xx_8h_source_l00961}{961}} of file \mbox{\hyperlink{stm32wl55xx_8h_source}{stm32wl55xx.\+h}}.
+

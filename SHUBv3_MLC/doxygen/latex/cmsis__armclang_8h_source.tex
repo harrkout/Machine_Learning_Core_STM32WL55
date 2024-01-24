@@ -1,0 +1,902 @@
+\doxysection{cmsis\+\_\+armclang.\+h}
+\hypertarget{cmsis__armclang_8h_source}{}\label{cmsis__armclang_8h_source}\index{Drivers/CMSIS/Include/cmsis\_armclang.h@{Drivers/CMSIS/Include/cmsis\_armclang.h}}
+\mbox{\hyperlink{cmsis__armclang_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00001}\mbox{\hyperlink{cmsis__armclang_8h_ade51b179ed6f69a6bacfab38b7b359b1}{00001}}\ \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00007}00007\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00008}00008\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2009-\/2019\ Arm\ Limited.\ All\ rights\ reserved.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00010}00010\ \textcolor{comment}{\ *\ SPDX-\/License-\/Identifier:\ Apache-\/2.0}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00012}00012\ \textcolor{comment}{\ *\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ License);\ you\ may}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00013}00013\ \textcolor{comment}{\ *\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00014}00014\ \textcolor{comment}{\ *\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00015}00015\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00016}00016\ \textcolor{comment}{\ *\ www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00017}00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00018}00018\ \textcolor{comment}{\ *\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00019}00019\ \textcolor{comment}{\ *\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ AS\ IS\ BASIS,\ WITHOUT}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00020}00020\ \textcolor{comment}{\ *\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00021}00021\ \textcolor{comment}{\ *\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00022}00022\ \textcolor{comment}{\ *\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00023}00023\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00025}00025\ \textcolor{comment}{/*lint\ -\/esym(9058,\ IRQn)*/}\ \textcolor{comment}{/*\ disable\ MISRA\ 2012\ Rule\ 2.4\ for\ IRQn\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00027}00027\ \textcolor{preprocessor}{\#ifndef\ \_\_CMSIS\_ARMCLANG\_H}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00028}00028\ \textcolor{preprocessor}{\#define\ \_\_CMSIS\_ARMCLANG\_H}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00030}00030\ \textcolor{preprocessor}{\#pragma\ clang\ system\_header\ \ \ }\textcolor{comment}{/*\ treat\ file\ as\ system\ include\ file\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00032}00032\ \textcolor{preprocessor}{\#ifndef\ \_\_ARM\_COMPAT\_H}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <arm\_compat.h>}\ \ \ \ \textcolor{comment}{/*\ Compatibility\ header\ for\ Arm\ Compiler\ 5\ intrinsics\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00034}00034\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00036}00036\ \textcolor{comment}{/*\ CMSIS\ compiler\ specific\ defines\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00037}00037\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_ASM}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00038}\mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{00038}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_ASM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_asm}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00039}00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00040}00040\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_INLINE}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00041}\mbox{\hyperlink{cmsis__armclang_8h_ade2d8d7118f8ff49547f60aa0c3382bb}{00041}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_INLINE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_inline}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00043}00043\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_STATIC\_INLINE}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00044}\mbox{\hyperlink{cmsis__armclang_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{00044}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_STATIC\_INLINE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ static\ \_\_inline}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00045}00045\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00046}00046\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_STATIC\_FORCEINLINE}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00047}\mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{00047}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_STATIC\_FORCEINLINE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_attribute\_\_((always\_inline))\ static\ \_\_inline}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00048}00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00049}00049\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_NO\_RETURN}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00050}\mbox{\hyperlink{cmsis__armclang_8h_a153a4a31b276a9758959580538720a51}{00050}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_NO\_RETURN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_attribute\_\_((\_\_noreturn\_\_))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00051}00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00052}00052\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_USED}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00053}\mbox{\hyperlink{cmsis__armclang_8h_a3e40e4c553fc11588f7a4c2a19e789e0}{00053}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_USED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_attribute\_\_((used))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00054}00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00055}00055\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_WEAK}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00056}\mbox{\hyperlink{cmsis__armclang_8h_ac607bf387b29162be6a9b77fc7999539}{00056}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_WEAK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_attribute\_\_((weak))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00057}00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00058}00058\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_PACKED}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00059}\mbox{\hyperlink{cmsis__armclang_8h_abe8996d3d985ee1529475443cc635bf1}{00059}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_PACKED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_attribute\_\_((packed,\ aligned(1)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00060}00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00061}00061\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_PACKED\_STRUCT}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00062}\mbox{\hyperlink{cmsis__armclang_8h_a4dbb70fab85207c27b581ecb6532b314}{00062}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_PACKED\_STRUCT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ struct\ \_\_attribute\_\_((packed,\ aligned(1)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00064}00064\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_PACKED\_UNION}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00065}\mbox{\hyperlink{cmsis__armclang_8h_a6fba34d08b0a526830b4231d2ea0b89a}{00065}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_PACKED\_UNION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ union\ \_\_attribute\_\_((packed,\ aligned(1)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00066}00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00067}00067\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_UNALIGNED\_UINT32\ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ deprecated\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00068}00068\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00069}00069\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ ignored\ "{}-\/Wpacked"{}}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00070}00070\ \textcolor{comment}{/*lint\ -\/esym(9058,\ T\_UINT32)*/}\ \textcolor{comment}{/*\ disable\ MISRA\ 2012\ Rule\ 2.4\ for\ T\_UINT32\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00071}00071\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{cmsis__armclang_8h_ade51b179ed6f69a6bacfab38b7b359b1}{\_\_attribute\_\_}}((packed))\ T\_UINT32\ \{\ uint32\_t\ v;\ \};}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00072}00072\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00073}\mbox{\hyperlink{cmsis__armclang_8h_ac8a13aacd0453758fdfd01a57a2a6a3d}{00073}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_UNALIGNED\_UINT32(x)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((struct\ T\_UINT32\ *)(x))-\/>v)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00074}00074\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00075}00075\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_UNALIGNED\_UINT16\_WRITE}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00076}00076\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00077}00077\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ ignored\ "{}-\/Wpacked"{}}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00078}00078\ \textcolor{comment}{/*lint\ -\/esym(9058,\ T\_UINT16\_WRITE)*/}\ \textcolor{comment}{/*\ disable\ MISRA\ 2012\ Rule\ 2.4\ for\ T\_UINT16\_WRITE\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00079}\mbox{\hyperlink{cmsis__armclang_8h_ac962a9aa89cef6e5cde0fe6b067f7de3}{00079}}\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a4dbb70fab85207c27b581ecb6532b314}{\_\_PACKED\_STRUCT}}\ \mbox{\hyperlink{cmsis__armclang_8h_ac962a9aa89cef6e5cde0fe6b067f7de3}{T\_UINT16\_WRITE}}\ \{\ uint16\_t\ v;\ \};}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00080}00080\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00081}\mbox{\hyperlink{cmsis__armclang_8h_a5103fb373cae9837cc4a384be55dc87f}{00081}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_UNALIGNED\_UINT16\_WRITE(addr,\ val)\ \ \ \ (void)((((struct\ T\_UINT16\_WRITE\ *)(void\ *)(addr))-\/>v)\ =\ (val))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00082}00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00083}00083\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_UNALIGNED\_UINT16\_READ}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00084}00084\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00085}00085\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ ignored\ "{}-\/Wpacked"{}}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00086}00086\ \textcolor{comment}{/*lint\ -\/esym(9058,\ T\_UINT16\_READ)*/}\ \textcolor{comment}{/*\ disable\ MISRA\ 2012\ Rule\ 2.4\ for\ T\_UINT16\_READ\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00087}\mbox{\hyperlink{cmsis__armclang_8h_a86899dc41c5b3b9ce6b8014ee0e852b9}{00087}}\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a4dbb70fab85207c27b581ecb6532b314}{\_\_PACKED\_STRUCT}}\ \mbox{\hyperlink{cmsis__armclang_8h_a86899dc41c5b3b9ce6b8014ee0e852b9}{T\_UINT16\_READ}}\ \{\ uint16\_t\ v;\ \};}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00088}00088\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00089}\mbox{\hyperlink{cmsis__armclang_8h_ab71b66e5ce403158d3dee62a59f9175f}{00089}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_UNALIGNED\_UINT16\_READ(addr)\ \ \ \ \ \ \ \ \ \ (((const\ struct\ T\_UINT16\_READ\ *)(const\ void\ *)(addr))-\/>v)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00090}00090\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00091}00091\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_UNALIGNED\_UINT32\_WRITE}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00092}00092\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00093}00093\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ ignored\ "{}-\/Wpacked"{}}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00094}00094\ \textcolor{comment}{/*lint\ -\/esym(9058,\ T\_UINT32\_WRITE)*/}\ \textcolor{comment}{/*\ disable\ MISRA\ 2012\ Rule\ 2.4\ for\ T\_UINT32\_WRITE\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00095}\mbox{\hyperlink{cmsis__armclang_8h_abbd193dec7cb45f1fbd05ff7e366ffe2}{00095}}\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a4dbb70fab85207c27b581ecb6532b314}{\_\_PACKED\_STRUCT}}\ \mbox{\hyperlink{cmsis__armclang_8h_abbd193dec7cb45f1fbd05ff7e366ffe2}{T\_UINT32\_WRITE}}\ \{\ uint32\_t\ v;\ \};}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00096}00096\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00097}\mbox{\hyperlink{cmsis__armclang_8h_a203f593d140ed88b81bc189edc861110}{00097}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_UNALIGNED\_UINT32\_WRITE(addr,\ val)\ \ \ \ (void)((((struct\ T\_UINT32\_WRITE\ *)(void\ *)(addr))-\/>v)\ =\ (val))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00098}00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00099}00099\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_UNALIGNED\_UINT32\_READ}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00100}00100\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ push}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00101}00101\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ ignored\ "{}-\/Wpacked"{}}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00102}00102\ \textcolor{comment}{/*lint\ -\/esym(9058,\ T\_UINT32\_READ)*/}\ \textcolor{comment}{/*\ disable\ MISRA\ 2012\ Rule\ 2.4\ for\ T\_UINT32\_READ\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00103}\mbox{\hyperlink{cmsis__armclang_8h_a9653a1cbf01ec418e8e940ee3996b8ca}{00103}}\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a4dbb70fab85207c27b581ecb6532b314}{\_\_PACKED\_STRUCT}}\ \mbox{\hyperlink{cmsis__armclang_8h_a9653a1cbf01ec418e8e940ee3996b8ca}{T\_UINT32\_READ}}\ \{\ uint32\_t\ v;\ \};}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00104}00104\ \textcolor{preprocessor}{\ \ \#pragma\ clang\ diagnostic\ pop}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00105}\mbox{\hyperlink{cmsis__armclang_8h_a3b931f0b051b8c1a6377a3dcc7559b5e}{00105}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_UNALIGNED\_UINT32\_READ(addr)\ \ \ \ \ \ \ \ \ \ (((const\ struct\ T\_UINT32\_READ\ *)(const\ void\ *)(addr))-\/>v)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00106}00106\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00107}00107\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_ALIGNED}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00108}\mbox{\hyperlink{cmsis__armclang_8h_aa65ef8f7a5e8b7a6ea6c1d48b4c78e55}{00108}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_ALIGNED(x)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_attribute\_\_((aligned(x)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00109}00109\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00110}00110\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_RESTRICT}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00111}\mbox{\hyperlink{cmsis__armclang_8h_a378ac21329d33f561f90265eef89f564}{00111}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_RESTRICT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_restrict}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00112}00112\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00113}00113\ \textcolor{preprocessor}{\#ifndef\ \ \ \_\_COMPILER\_BARRIER}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00114}\mbox{\hyperlink{cmsis__armclang_8h_a6516fb12ab0dd45c734f8cef7d921af6}{00114}}\ \textcolor{preprocessor}{\ \ \#define\ \_\_COMPILER\_BARRIER()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_ASM\ volatile("{}"{}:::"{}memory"{})}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00115}00115\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00117}00117\ \textcolor{comment}{/*\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ \ Startup\ and\ Lowlevel\ Init\ \ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00119}00119\ \textcolor{preprocessor}{\#ifndef\ \_\_PROGRAM\_START}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00120}\mbox{\hyperlink{cmsis__armclang_8h_a72db8b026c5e100254080fefabd9fd88}{00120}}\ \textcolor{preprocessor}{\#define\ \_\_PROGRAM\_START\ \ \ \ \ \ \ \ \ \ \ \_\_main}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00121}00121\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00123}00123\ \textcolor{preprocessor}{\#ifndef\ \_\_INITIAL\_SP}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00124}\mbox{\hyperlink{cmsis__armclang_8h_a1002e751427b1189f92787d4e4eef965}{00124}}\ \textcolor{preprocessor}{\#define\ \_\_INITIAL\_SP\ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\$\$ARM\_LIB\_STACK\$\$ZI\$\$Limit}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00125}00125\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00127}00127\ \textcolor{preprocessor}{\#ifndef\ \_\_STACK\_LIMIT}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00128}\mbox{\hyperlink{cmsis__armclang_8h_a84b0bad4aa39632d3faea46aa1e102a8}{00128}}\ \textcolor{preprocessor}{\#define\ \_\_STACK\_LIMIT\ \ \ \ \ \ \ \ \ \ \ \ \ Image\$\$ARM\_LIB\_STACK\$\$ZI\$\$Base}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00129}00129\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00131}00131\ \textcolor{preprocessor}{\#ifndef\ \_\_VECTOR\_TABLE}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00132}\mbox{\hyperlink{cmsis__armclang_8h_ab94ebeb20055f1848d7b707d3c7cfc5d}{00132}}\ \textcolor{preprocessor}{\#define\ \_\_VECTOR\_TABLE\ \ \ \ \ \ \ \ \ \ \ \ \_\_Vectors}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00133}00133\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00135}00135\ \textcolor{preprocessor}{\#ifndef\ \_\_VECTOR\_TABLE\_ATTRIBUTE}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00136}\mbox{\hyperlink{cmsis__armclang_8h_a4f65c96effa79fbd610fea43ee7d745b}{00136}}\ \textcolor{preprocessor}{\#define\ \_\_VECTOR\_TABLE\_ATTRIBUTE\ \ \_\_attribute((used,\ section("{}RESET"{})))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00137}00137\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00139}00139\ \textcolor{comment}{/*\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ \ Core\ Function\ Access\ \ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00150}00150\ \textcolor{comment}{/*\ intrinsic\ void\ \_\_enable\_irq();\ \ see\ arm\_compat.h\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00158}00158\ \textcolor{comment}{/*\ intrinsic\ void\ \_\_disable\_irq();\ \ see\ arm\_compat.h\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00166}00166\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga7dd5c942bee32f055b90153feb950f59}{\_\_get\_CONTROL}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00167}00167\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00168}00168\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00170}00170\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ control"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00171}00171\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00172}00172\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00175}00175\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00181}00181\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_CONTROL\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00182}00182\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00183}00183\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00185}00185\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ control\_ns"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00186}00186\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00187}00187\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00188}00188\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00196}00196\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga0102d0939d9b26c5c792be6bf5fd550f}{\_\_set\_CONTROL}}(uint32\_t\ control)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00197}00197\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00198}00198\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ control,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (control)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00199}00199\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00202}00202\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00208}00208\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_CONTROL\_NS(uint32\_t\ control)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00209}00209\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00210}00210\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ control\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (control)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00211}00211\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00212}00212\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00220}00220\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_gaf15a71855b9d731d11de92704c82bd18}{\_\_get\_IPSR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00221}00221\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00222}00222\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00224}00224\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ ipsr"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00225}00225\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00226}00226\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00234}00234\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_gadff4f1e599946e8ae96fba17b5245f04}{\_\_get\_APSR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00235}00235\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00236}00236\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00238}00238\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ apsr"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00239}00239\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00240}00240\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00248}00248\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{cmsis__iccarm_8h_ad0fa4773e9c51500ee78bc4daa88341b}{\_\_get\_xPSR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00249}00249\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00250}00250\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00252}00252\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ xpsr"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00253}00253\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00254}00254\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00262}00262\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga826c53e30812e350c77f58aac9f42bcb}{\_\_get\_PSP}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00263}00263\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00264}00264\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00266}00266\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ psp"{}}\ \ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00267}00267\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00268}00268\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00271}00271\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00277}00277\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_PSP\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00278}00278\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00279}00279\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00281}00281\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ psp\_ns"{}}\ \ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00282}00282\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00283}00283\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00284}00284\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00292}00292\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga21f50fc02c3927a8ebf0bc3678c06862}{\_\_set\_PSP}}(uint32\_t\ topOfProcStack)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00293}00293\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00294}00294\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ psp,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (topOfProcStack)\ :\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00295}00295\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00298}00298\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00304}00304\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_PSP\_NS(uint32\_t\ topOfProcStack)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00305}00305\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00306}00306\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ psp\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (topOfProcStack)\ :\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00307}00307\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00308}00308\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00309}00309\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00316}00316\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga667e7b8b97b4a30f445ae45d37588e45}{\_\_get\_MSP}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00317}00317\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00318}00318\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00320}00320\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ msp"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00321}00321\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00322}00322\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00325}00325\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00331}00331\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_MSP\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00332}00332\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00333}00333\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00335}00335\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ msp\_ns"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00336}00336\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00337}00337\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00338}00338\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00340}00340\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00346}00346\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga08b66e2b60a46fada36d90d2bc1e7c9b}{\_\_set\_MSP}}(uint32\_t\ topOfMainStack)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00347}00347\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00348}00348\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ msp,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (topOfMainStack)\ :\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00349}00349\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00350}00350\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00352}00352\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00358}00358\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_MSP\_NS(uint32\_t\ topOfMainStack)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00359}00359\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00360}00360\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ msp\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (topOfMainStack)\ :\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00361}00361\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00362}00362\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00363}00363\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00365}00365\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00371}00371\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_SP\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00372}00372\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00373}00373\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00374}00374\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00375}00375\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ sp\_ns"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00376}00376\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00377}00377\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00378}00378\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00379}00379\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00385}00385\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_SP\_NS(uint32\_t\ topOfStack)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00386}00386\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00387}00387\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ sp\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (topOfStack)\ :\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00388}00388\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00389}00389\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00391}00391\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00397}00397\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga4ff59fb9e280d19e79e6875863a65f0a}{\_\_get\_PRIMASK}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00398}00398\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00399}00399\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00400}00400\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00401}00401\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ primask"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00402}00402\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00403}00403\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00404}00404\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00405}00405\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00406}00406\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00412}00412\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_PRIMASK\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00413}00413\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00414}00414\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00415}00415\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00416}00416\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ primask\_ns"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00417}00417\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00418}00418\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00419}00419\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00420}00420\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00421}00421\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00427}00427\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_gaf4a17d3be7dbb066489836d849930d92}{\_\_set\_PRIMASK}}(uint32\_t\ priMask)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00428}00428\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00429}00429\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ primask,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (priMask)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00430}00430\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00431}00431\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00432}00432\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00433}00433\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00439}00439\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_PRIMASK\_NS(uint32\_t\ priMask)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00440}00440\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00441}00441\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ primask\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (priMask)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00442}00442\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00443}00443\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00444}00444\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00446}00446\ \textcolor{preprocessor}{\#if\ ((defined\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00447}00447\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00448}00448\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \ \ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00454}00454\ \textcolor{preprocessor}{\#define\ \_\_enable\_fault\_irq\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_enable\_fiq\ \ \ }\textcolor{comment}{/*\ see\ arm\_compat.h\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00456}00456\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00462}00462\ \textcolor{preprocessor}{\#define\ \_\_disable\_fault\_irq\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_disable\_fiq\ \ \ }\textcolor{comment}{/*\ see\ arm\_compat.h\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00463}00463\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00464}00464\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00470}00470\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_get\_BASEPRI(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00471}00471\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00472}00472\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00473}00473\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00474}00474\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ basepri"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00475}00475\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00476}00476\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00477}00477\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00478}00478\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00479}00479\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00485}00485\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_BASEPRI\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00486}00486\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00487}00487\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00488}00488\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00489}00489\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ basepri\_ns"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00490}00490\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00491}00491\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00492}00492\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00493}00493\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00494}00494\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00500}00500\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_set\_BASEPRI(uint32\_t\ basePri)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00501}00501\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00502}00502\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ basepri,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (basePri)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00503}00503\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00504}00504\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00505}00505\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00506}00506\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00512}00512\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_BASEPRI\_NS(uint32\_t\ basePri)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00513}00513\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00514}00514\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ basepri\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (basePri)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00515}00515\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00516}00516\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00517}00517\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00518}00518\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00525}00525\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_set\_BASEPRI\_MAX(uint32\_t\ basePri)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00526}00526\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00527}00527\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ basepri\_max,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (basePri)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00528}00528\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00529}00529\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00530}00530\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00536}00536\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_get\_FAULTMASK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00537}00537\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00538}00538\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00539}00539\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00540}00540\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ faultmask"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00541}00541\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00542}00542\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00543}00543\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00544}00544\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00545}00545\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00551}00551\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_FAULTMASK\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00552}00552\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00553}00553\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00554}00554\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00555}00555\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ faultmask\_ns"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00556}00556\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00557}00557\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00558}00558\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00559}00559\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00560}00560\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00566}00566\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_set\_FAULTMASK(uint32\_t\ faultMask)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00567}00567\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00568}00568\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ faultmask,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (faultMask)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00569}00569\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00570}00570\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00571}00571\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00572}00572\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00578}00578\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_FAULTMASK\_NS(uint32\_t\ faultMask)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00579}00579\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00580}00580\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ faultmask\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (faultMask)\ :\ \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00581}00581\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00582}00582\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00583}00583\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00584}00584\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ((defined\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00585}00585\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00586}00586\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \ \ \ )\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00587}00587\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00588}00588\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00589}00589\ \textcolor{preprocessor}{\#if\ ((defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00590}00590\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ ==\ 1))\ \ \ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00591}00591\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00601}00601\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_get\_PSPLIM(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00602}00602\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00603}00603\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00604}00604\ \textcolor{preprocessor}{\ \ \ \ (!defined\ (\_\_ARM\_FEATURE\_CMSE)\ ||\ (\_\_ARM\_FEATURE\_CMSE\ <\ 3)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00605}00605\ \ \ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ PSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00606}00606\ \ \ \textcolor{keywordflow}{return}\ 0U;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00607}00607\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00608}00608\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00609}00609\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ psplim"{}}\ \ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00610}00610\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00611}00611\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00612}00612\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00613}00613\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00614}00614\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE)\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00624}00624\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_PSPLIM\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00625}00625\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00626}00626\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00627}00627\ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ PSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00628}00628\ \ \ \textcolor{keywordflow}{return}\ 0U;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00629}00629\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00630}00630\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00631}00631\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ psplim\_ns"{}}\ \ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00632}00632\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00633}00633\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00634}00634\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00635}00635\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00636}00636\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00637}00637\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00647}00647\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_set\_PSPLIM(uint32\_t\ ProcStackPtrLimit)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00648}00648\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00649}00649\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00650}00650\ \textcolor{preprocessor}{\ \ \ \ (!defined\ (\_\_ARM\_FEATURE\_CMSE)\ ||\ (\_\_ARM\_FEATURE\_CMSE\ <\ 3)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00651}00651\ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ PSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00652}00652\ \ \ (void)ProcStackPtrLimit;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00653}00653\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00654}00654\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ psplim,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (ProcStackPtrLimit));}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00655}00655\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00656}00656\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00657}00657\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00658}00658\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00659}00659\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ \ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ \ \ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00669}00669\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_PSPLIM\_NS(uint32\_t\ ProcStackPtrLimit)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00670}00670\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00671}00671\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00672}00672\ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ PSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00673}00673\ \ \ (void)ProcStackPtrLimit;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00674}00674\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00675}00675\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ psplim\_ns,\ \%0\(\backslash\)n"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (ProcStackPtrLimit));}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00676}00676\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00677}00677\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00678}00678\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00679}00679\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00680}00680\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00689}00689\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_get\_MSPLIM(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00690}00690\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00691}00691\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00692}00692\ \textcolor{preprocessor}{\ \ \ \ (!defined\ (\_\_ARM\_FEATURE\_CMSE)\ ||\ (\_\_ARM\_FEATURE\_CMSE\ <\ 3)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00693}00693\ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ MSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00694}00694\ \ \ \textcolor{keywordflow}{return}\ 0U;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00695}00695\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00696}00696\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00697}00697\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ msplim"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00698}00698\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00699}00699\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00700}00700\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00701}00701\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00702}00702\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00703}00703\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ \ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ \ \ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00712}00712\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_TZ\_get\_MSPLIM\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00713}00713\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00714}00714\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00715}00715\ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ MSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00716}00716\ \ \ \textcolor{keywordflow}{return}\ 0U;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00717}00717\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00718}00718\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00719}00719\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MRS\ \%0,\ msplim\_ns"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00720}00720\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00721}00721\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00722}00722\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00723}00723\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00724}00724\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00725}00725\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00734}00734\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_set\_MSPLIM(uint32\_t\ MainStackPtrLimit)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00735}00735\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00736}00736\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00737}00737\ \textcolor{preprocessor}{\ \ \ \ (!defined\ (\_\_ARM\_FEATURE\_CMSE)\ ||\ (\_\_ARM\_FEATURE\_CMSE\ <\ 3)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00738}00738\ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ MSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00739}00739\ \ \ (void)MainStackPtrLimit;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00740}00740\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00741}00741\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ msplim,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (MainStackPtrLimit));}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00742}00742\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00743}00743\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00744}00744\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00745}00745\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00746}00746\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_CMSE\ \ )\ \&\&\ (\_\_ARM\_FEATURE\_CMSE\ \ \ ==\ 3))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00755}00755\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_TZ\_set\_MSPLIM\_NS(uint32\_t\ MainStackPtrLimit)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00756}00756\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00757}00757\ \textcolor{preprocessor}{\#if\ (!(defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1)))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00758}00758\ \ \ \textcolor{comment}{//\ without\ main\ extensions,\ the\ non-\/secure\ MSPLIM\ is\ RAZ/WI}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00759}00759\ \ \ (void)MainStackPtrLimit;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00760}00760\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00761}00761\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}MSR\ msplim\_ns,\ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}r"{}}\ (MainStackPtrLimit));}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00762}00762\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00763}00763\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00764}00764\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00765}00765\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00766}00766\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ((defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00767}00767\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ ==\ 1))\ \ \ \ )\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00768}00768\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00774}00774\ \textcolor{preprocessor}{\#if\ ((defined\ (\_\_FPU\_PRESENT)\ \&\&\ (\_\_FPU\_PRESENT\ ==\ 1U))\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00775}00775\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_FPU\_USED\ \ \ )\ \&\&\ (\_\_FPU\_USED\ \ \ \ ==\ 1U))\ \ \ \ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00776}00776\ \textcolor{preprocessor}{\#define\ \_\_get\_FPSCR\ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_get\_fpscr}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00777}00777\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00778}\mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga4d0739b1355ca5642a7ce76df1271f01}{00778}}\ \textcolor{preprocessor}{\#define\ \_\_get\_FPSCR()\ \ \ \ \ \ ((uint32\_t)0U)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00779}00779\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00780}00780\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00786}00786\ \textcolor{preprocessor}{\#if\ ((defined\ (\_\_FPU\_PRESENT)\ \&\&\ (\_\_FPU\_PRESENT\ ==\ 1U))\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00787}00787\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_FPU\_USED\ \ \ )\ \&\&\ (\_\_FPU\_USED\ \ \ \ ==\ 1U))\ \ \ \ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00788}00788\ \textcolor{preprocessor}{\#define\ \_\_set\_FPSCR\ \ \ \ \ \ \_\_builtin\_arm\_set\_fpscr}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00789}00789\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00790}\mbox{\hyperlink{group__CMSIS__Core__RegAccFunctions_ga3cd91c42ad2793c3f3ae553a1b975512}{00790}}\ \textcolor{preprocessor}{\#define\ \_\_set\_FPSCR(x)\ \ \ \ \ \ ((void)(x))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00791}00791\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00792}00792\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00793}00793\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00797}00797\ \textcolor{comment}{/*\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ \ Core\ Instruction\ Access\ \ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00803}00803\ \textcolor{comment}{/*\ Define\ macros\ for\ porting\ to\ both\ thumb1\ and\ thumb2.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00804}00804\ \textcolor{comment}{\ *\ For\ thumb1,\ use\ low\ register\ (r0-\/r7),\ specified\ by\ constraint\ "{}l"{}}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00805}00805\ \textcolor{comment}{\ *\ Otherwise,\ use\ general\ registers,\ specified\ by\ constraint\ "{}r"{}\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00806}00806\ \textcolor{preprocessor}{\#if\ defined\ (\_\_thumb\_\_)\ \&\&\ !defined\ (\_\_thumb2\_\_)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00807}00807\ \textcolor{preprocessor}{\#define\ \_\_CMSIS\_GCC\_OUT\_REG(r)\ "{}=l"{}\ (r)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00808}00808\ \textcolor{preprocessor}{\#define\ \_\_CMSIS\_GCC\_RW\_REG(r)\ "{}+l"{}\ (r)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00809}00809\ \textcolor{preprocessor}{\#define\ \_\_CMSIS\_GCC\_USE\_REG(r)\ "{}l"{}\ (r)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00810}00810\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00811}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gabc17e391c13c71702366c67cba39c276}{00811}}\ \textcolor{preprocessor}{\#define\ \_\_CMSIS\_GCC\_OUT\_REG(r)\ "{}=r"{}\ (r)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00812}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga03179f79efee45c226dddfb8d824ad83}{00812}}\ \textcolor{preprocessor}{\#define\ \_\_CMSIS\_GCC\_RW\_REG(r)\ "{}+r"{}\ (r)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00813}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga9d94dee7402367961d2cf0accc00fd97}{00813}}\ \textcolor{preprocessor}{\#define\ \_\_CMSIS\_GCC\_USE\_REG(r)\ "{}r"{}\ (r)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00814}00814\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00815}00815\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00820}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gabd585ddc865fb9b7f2493af1eee1a572}{00820}}\ \textcolor{preprocessor}{\#define\ \_\_NOP\ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_nop}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00821}00821\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00826}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gad23bf2b78a9a4524157c9de0d30b7448}{00826}}\ \textcolor{preprocessor}{\#define\ \_\_WFI\ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_wfi}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00827}00827\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00828}00828\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00834}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaac6cc7dd4325d9cb40d3290fa5244b3d}{00834}}\ \textcolor{preprocessor}{\#define\ \_\_WFE\ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_wfe}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00835}00835\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00836}00836\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00841}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaab4f296d0022b4b10dc0976eb22052f9}{00841}}\ \textcolor{preprocessor}{\#define\ \_\_SEV\ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_sev}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00842}00842\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00843}00843\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00850}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{00850}}\ \textcolor{preprocessor}{\#define\ \_\_ISB()\ \ \ \ \ \ \ \ \_\_builtin\_arm\_isb(0xF)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00851}00851\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00857}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{00857}}\ \textcolor{preprocessor}{\#define\ \_\_DSB()\ \ \ \ \ \ \ \ \_\_builtin\_arm\_dsb(0xF)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00858}00858\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00859}00859\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00865}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga671101179b5943990785f36f8c1e2269}{00865}}\ \textcolor{preprocessor}{\#define\ \_\_DMB()\ \ \ \ \ \ \ \ \_\_builtin\_arm\_dmb(0xF)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00866}00866\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00867}00867\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00874}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaca25a02e09983da5558f5242f2f635bc}{00874}}\ \textcolor{preprocessor}{\#define\ \_\_REV(value)\ \ \ \_\_builtin\_bswap32(value)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00875}00875\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00876}00876\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00883}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gad35497777af37e7809271b5e6f9510ba}{00883}}\ \textcolor{preprocessor}{\#define\ \_\_REV16(value)\ \_\_ROR(\_\_REV(value),\ 16)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00884}00884\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00885}00885\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00892}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gae580812686119c9c5cf3c11a7519a404}{00892}}\ \textcolor{preprocessor}{\#define\ \_\_REVSH(value)\ (int16\_t)\_\_builtin\_bswap16(value)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00893}00893\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00894}00894\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00902}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gab16acb6456176f1e87a4f2724c2b6028}{00902}}\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga95b9bd281ddeda378b85afdb8f2ced86}{\_\_ROR}}(uint32\_t\ op1,\ uint32\_t\ op2)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00903}00903\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00904}00904\ \ \ op2\ \%=\ 32U;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00905}00905\ \ \ \textcolor{keywordflow}{if}\ (op2\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00906}00906\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00907}00907\ \ \ \ \ \textcolor{keywordflow}{return}\ op1;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00908}00908\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00909}00909\ \ \ \textcolor{keywordflow}{return}\ (op1\ >>\ op2)\ |\ (op1\ <<\ (32U\ -\/\ op2));}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00910}00910\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00911}00911\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00912}00912\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00920}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga15ea6bd3c507d3e81c3b3a1258e46397}{00920}}\ \textcolor{preprocessor}{\#define\ \_\_BKPT(value)\ \ \ \ \ \_\_ASM\ volatile\ ("{}bkpt\ "{}\#value)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00921}00921\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00922}00922\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00929}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gab83768933a612816fad669db5488366f}{00929}}\ \textcolor{preprocessor}{\#define\ \_\_RBIT\ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_rbit}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00930}00930\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00937}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaf32ee2525f946bce31504904f3ef8243}{00937}}\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint8\_t\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga5d5bb1527e042be4a9fa5a33f65cc248}{\_\_CLZ}}(uint32\_t\ value)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00938}00938\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00939}00939\ \ \ \textcolor{comment}{/*\ Even\ though\ \_\_builtin\_clz\ produces\ a\ CLZ\ instruction\ on\ ARM,\ formally}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00940}00940\ \textcolor{comment}{\ \ \ \ \ \_\_builtin\_clz(0)\ is\ undefined\ behaviour,\ so\ handle\ this\ case\ specially.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00941}00941\ \textcolor{comment}{\ \ \ \ \ This\ guarantees\ ARM-\/compatible\ results\ if\ happening\ to\ compile\ on\ a\ non-\/ARM}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00942}00942\ \textcolor{comment}{\ \ \ \ \ target,\ and\ ensures\ the\ compiler\ doesn't\ decide\ to\ activate\ any}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00943}00943\ \textcolor{comment}{\ \ \ \ \ optimisations\ using\ the\ logic\ "{}value\ was\ passed\ to\ \_\_builtin\_clz,\ so\ it}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00944}00944\ \textcolor{comment}{\ \ \ \ \ is\ non-\/zero"{}.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00945}00945\ \textcolor{comment}{\ \ \ \ \ ARM\ Compiler\ 6.10\ and\ possibly\ earlier\ will\ optimise\ this\ test\ away,\ leaving\ a}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00946}00946\ \textcolor{comment}{\ \ \ \ \ single\ CLZ\ instruction.}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00947}00947\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00948}00948\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00949}00949\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00950}00950\ \ \ \ \ \textcolor{keywordflow}{return}\ 32U;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00951}00951\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00952}00952\ \ \ \textcolor{keywordflow}{return}\ \_\_builtin\_clz(value);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00953}00953\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00954}00954\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00955}00955\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00956}00956\ \textcolor{preprocessor}{\#if\ ((defined\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00957}00957\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00958}00958\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00959}00959\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ ==\ 1))\ \ \ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00966}00966\ \textcolor{preprocessor}{\#define\ \_\_LDREXB\ \ \ \ \ \ \ \ (uint8\_t)\_\_builtin\_arm\_ldrex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00967}00967\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00968}00968\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00975}00975\ \textcolor{preprocessor}{\#define\ \_\_LDREXH\ \ \ \ \ \ \ \ (uint16\_t)\_\_builtin\_arm\_ldrex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00976}00976\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00977}00977\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00984}00984\ \textcolor{preprocessor}{\#define\ \_\_LDREXW\ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_ldrex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00985}00985\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00986}00986\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00995}00995\ \textcolor{preprocessor}{\#define\ \_\_STREXB\ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_strex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00996}00996\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l00997}00997\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01006}01006\ \textcolor{preprocessor}{\#define\ \_\_STREXH\ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_strex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01007}01007\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01008}01008\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01017}01017\ \textcolor{preprocessor}{\#define\ \_\_STREXW\ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_strex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01018}01018\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01019}01019\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01024}01024\ \textcolor{preprocessor}{\#define\ \_\_CLREX\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_clrex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01025}01025\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01026}01026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ((defined\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01027}01027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01028}01028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01029}01029\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ ==\ 1))\ \ \ \ )\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01030}01030\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01031}01031\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01032}01032\ \textcolor{preprocessor}{\#if\ ((defined\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01033}01033\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01034}01034\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \ \ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01035}01035\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01043}01043\ \textcolor{preprocessor}{\#define\ \_\_SSAT\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_ssat}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01044}01044\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01045}01045\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01053}01053\ \textcolor{preprocessor}{\#define\ \_\_USAT\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_usat}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01054}01054\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01055}01055\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01063}01063\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_RRX(uint32\_t\ value)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01064}01064\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01065}01065\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01066}01066\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01067}01067\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}rrx\ \%0,\ \%1"{}}\ :\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gabc17e391c13c71702366c67cba39c276}{\_\_CMSIS\_GCC\_OUT\_REG}}\ (result)\ :\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga9d94dee7402367961d2cf0accc00fd97}{\_\_CMSIS\_GCC\_USE\_REG}}\ (value)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01068}01068\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01069}01069\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01070}01070\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01071}01071\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01078}01078\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint8\_t\ \_\_LDRBT(\textcolor{keyword}{volatile}\ uint8\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01079}01079\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01080}01080\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01081}01081\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01082}01082\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}ldrbt\ \%0,\ \%1"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ :\ \textcolor{stringliteral}{"{}Q"{}}\ (*ptr)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01083}01083\ \ \ \textcolor{keywordflow}{return}\ ((uint8\_t)\ result);\ \ \ \ \textcolor{comment}{/*\ Add\ explicit\ type\ cast\ here\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01084}01084\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01085}01085\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01086}01086\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01093}01093\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint16\_t\ \_\_LDRHT(\textcolor{keyword}{volatile}\ uint16\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01094}01094\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01095}01095\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01096}01096\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01097}01097\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}ldrht\ \%0,\ \%1"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ :\ \textcolor{stringliteral}{"{}Q"{}}\ (*ptr)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01098}01098\ \ \ \textcolor{keywordflow}{return}\ ((uint16\_t)\ result);\ \ \ \ \textcolor{comment}{/*\ Add\ explicit\ type\ cast\ here\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01099}01099\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01100}01100\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01101}01101\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01108}01108\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_LDRT(\textcolor{keyword}{volatile}\ uint32\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01109}01109\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01110}01110\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01111}01111\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01112}01112\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}ldrt\ \%0,\ \%1"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ :\ \textcolor{stringliteral}{"{}Q"{}}\ (*ptr)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01113}01113\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01114}01114\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01115}01115\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01116}01116\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01123}01123\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_STRBT(uint8\_t\ value,\ \textcolor{keyword}{volatile}\ uint8\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01124}01124\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01125}01125\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}strbt\ \%1,\ \%0"{}}\ :\ \textcolor{stringliteral}{"{}=Q"{}}\ (*ptr)\ :\ \textcolor{stringliteral}{"{}r"{}}\ ((uint32\_t)value)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01126}01126\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01127}01127\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01128}01128\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01135}01135\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_STRHT(uint16\_t\ value,\ \textcolor{keyword}{volatile}\ uint16\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01136}01136\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01137}01137\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}strht\ \%1,\ \%0"{}}\ :\ \textcolor{stringliteral}{"{}=Q"{}}\ (*ptr)\ :\ \textcolor{stringliteral}{"{}r"{}}\ ((uint32\_t)value)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01138}01138\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01139}01139\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01140}01140\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01147}01147\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_STRT(uint32\_t\ value,\ \textcolor{keyword}{volatile}\ uint32\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01148}01148\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01149}01149\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}strt\ \%1,\ \%0"{}}\ :\ \textcolor{stringliteral}{"{}=Q"{}}\ (*ptr)\ :\ \textcolor{stringliteral}{"{}r"{}}\ (value)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01150}01150\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01151}01151\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01152}01152\ \textcolor{preprocessor}{\#else\ \ }\textcolor{comment}{/*\ ((defined\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01153}01153\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01154}01154\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \ \ \ )\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01155}01155\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01163}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga372c0535573dde3e37f0f08c774a3487}{01163}}\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ int32\_t\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga372c0535573dde3e37f0f08c774a3487}{\_\_SSAT}}(int32\_t\ val,\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaafcad33f86db3a8e1f55925989f9d2dc}{sat}})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01164}01164\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01165}01165\ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaafcad33f86db3a8e1f55925989f9d2dc}{sat}}\ >=\ 1U)\ \&\&\ (\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaafcad33f86db3a8e1f55925989f9d2dc}{sat}}\ <=\ 32U))}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01166}01166\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01167}01167\ \ \ \ \ \textcolor{keyword}{const}\ int32\_t\ max\ =\ (int32\_t)((1U\ <<\ (\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaafcad33f86db3a8e1f55925989f9d2dc}{sat}}\ -\/\ 1U))\ -\/\ 1U);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01168}01168\ \ \ \ \ \textcolor{keyword}{const}\ int32\_t\ min\ =\ -\/1\ -\/\ max\ ;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01169}01169\ \ \ \ \ \textcolor{keywordflow}{if}\ (val\ >\ max)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01170}01170\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01171}01171\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ max;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01172}01172\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01173}01173\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (val\ <\ min)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01174}01174\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01175}01175\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ min;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01176}01176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01177}01177\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01178}01178\ \ \ \textcolor{keywordflow}{return}\ val;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01179}01179\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01180}01180\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01188}\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga6562dbd8182d1571e22dbca7ebdfa9bc}{01188}}\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga6562dbd8182d1571e22dbca7ebdfa9bc}{\_\_USAT}}(int32\_t\ val,\ uint32\_t\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaafcad33f86db3a8e1f55925989f9d2dc}{sat}})}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01189}01189\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01190}01190\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaafcad33f86db3a8e1f55925989f9d2dc}{sat}}\ <=\ 31U)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01191}01191\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01192}01192\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ max\ =\ ((1U\ <<\ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaafcad33f86db3a8e1f55925989f9d2dc}{sat}})\ -\/\ 1U);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01193}01193\ \ \ \ \ \textcolor{keywordflow}{if}\ (val\ >\ (int32\_t)max)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01194}01194\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01195}01195\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ max;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01196}01196\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01197}01197\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (val\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01198}01198\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01199}01199\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0U;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01200}01200\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01201}01201\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01202}01202\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)val;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01203}01203\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01204}01204\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01205}01205\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ((defined\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7M\_\_\ \ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01206}01206\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ )\ \&\&\ (\_\_ARM\_ARCH\_7EM\_\_\ \ \ \ \ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01207}01207\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ \ \ \ )\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01208}01208\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01209}01209\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01210}01210\ \textcolor{preprocessor}{\#if\ ((defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01211}01211\ \textcolor{preprocessor}{\ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ ==\ 1))\ \ \ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01218}01218\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint8\_t\ \_\_LDAB(\textcolor{keyword}{volatile}\ uint8\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01219}01219\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01220}01220\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01221}01221\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01222}01222\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}ldab\ \%0,\ \%1"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ :\ \textcolor{stringliteral}{"{}Q"{}}\ (*ptr)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01223}01223\ \ \ \textcolor{keywordflow}{return}\ ((uint8\_t)\ result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01224}01224\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01225}01225\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01226}01226\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01233}01233\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint16\_t\ \_\_LDAH(\textcolor{keyword}{volatile}\ uint16\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01234}01234\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01235}01235\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01236}01236\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01237}01237\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}ldah\ \%0,\ \%1"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ :\ \textcolor{stringliteral}{"{}Q"{}}\ (*ptr)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01238}01238\ \ \ \textcolor{keywordflow}{return}\ ((uint16\_t)\ result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01239}01239\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01240}01240\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01241}01241\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01248}01248\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ uint32\_t\ \_\_LDA(\textcolor{keyword}{volatile}\ uint32\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01249}01249\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01250}01250\ \ \ uint32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01251}01251\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01252}01252\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}lda\ \%0,\ \%1"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result)\ :\ \textcolor{stringliteral}{"{}Q"{}}\ (*ptr)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01253}01253\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01254}01254\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01255}01255\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01256}01256\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01263}01263\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_STLB(uint8\_t\ value,\ \textcolor{keyword}{volatile}\ uint8\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01264}01264\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01265}01265\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}stlb\ \%1,\ \%0"{}}\ :\ \textcolor{stringliteral}{"{}=Q"{}}\ (*ptr)\ :\ \textcolor{stringliteral}{"{}r"{}}\ ((uint32\_t)value)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01266}01266\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01267}01267\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01268}01268\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01275}01275\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_STLH(uint16\_t\ value,\ \textcolor{keyword}{volatile}\ uint16\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01276}01276\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01277}01277\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}stlh\ \%1,\ \%0"{}}\ :\ \textcolor{stringliteral}{"{}=Q"{}}\ (*ptr)\ :\ \textcolor{stringliteral}{"{}r"{}}\ ((uint32\_t)value)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01278}01278\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01279}01279\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01280}01280\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01287}01287\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ \textcolor{keywordtype}{void}\ \_\_STL(uint32\_t\ value,\ \textcolor{keyword}{volatile}\ uint32\_t\ *ptr)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01288}01288\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01289}01289\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}stl\ \%1,\ \%0"{}}\ :\ \textcolor{stringliteral}{"{}=Q"{}}\ (*ptr)\ :\ \textcolor{stringliteral}{"{}r"{}}\ ((uint32\_t)value)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01290}01290\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01291}01291\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01292}01292\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01299}01299\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_LDAEXB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t)\_\_builtin\_arm\_ldaex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01300}01300\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01301}01301\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01308}01308\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_LDAEXH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint16\_t)\_\_builtin\_arm\_ldaex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01309}01309\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01310}01310\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01317}01317\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_LDAEX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_ldaex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01318}01318\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01319}01319\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01328}01328\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_STLEXB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_stlex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01329}01329\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01330}01330\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01339}01339\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_STLEXH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_stlex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01340}01340\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01341}01341\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01350}01350\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_STLEX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)\_\_builtin\_arm\_stlex}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01351}01351\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01352}01352\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ((defined\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_MAIN\_\_\ ==\ 1))\ ||\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01353}01353\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ (defined\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ )\ \&\&\ (\_\_ARM\_ARCH\_8M\_BASE\_\_\ ==\ 1))\ \ \ \ )\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01354}01354\ \ \textcolor{comment}{/*\ end\ of\ group\ CMSIS\_Core\_InstructionInterface\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01356}01356\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01357}01357\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01358}01358\ \textcolor{comment}{/*\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ \ Compiler\ specific\ Intrinsics\ \ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\ */}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01364}01364\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_ARM\_FEATURE\_DSP)\ \&\&\ (\_\_ARM\_FEATURE\_DSP\ ==\ 1))}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01365}01365\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01366}01366\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SADD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_sadd8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01367}01367\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QADD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qadd8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01368}01368\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SHADD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_shadd8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01369}01369\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UADD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uadd8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01370}01370\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UQADD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uqadd8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01371}01371\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UHADD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uhadd8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01372}01372\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SSUB8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_ssub8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01373}01373\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QSUB8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qsub8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01374}01374\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SHSUB8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_shsub8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01375}01375\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_USUB8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_usub8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01376}01376\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UQSUB8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uqsub8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01377}01377\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UHSUB8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uhsub8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01378}01378\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SADD16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_sadd16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01379}01379\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QADD16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qadd16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01380}01380\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SHADD16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_shadd16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01381}01381\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UADD16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uadd16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01382}01382\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UQADD16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uqadd16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01383}01383\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UHADD16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uhadd16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01384}01384\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SSUB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_ssub16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01385}01385\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QSUB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qsub16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01386}01386\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SHSUB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_shsub16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01387}01387\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_USUB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_usub16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01388}01388\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UQSUB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uqsub16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01389}01389\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UHSUB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uhsub16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01390}01390\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SASX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_sasx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01391}01391\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QASX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qasx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01392}01392\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SHASX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_shasx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01393}01393\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UASX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uasx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01394}01394\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UQASX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uqasx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01395}01395\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UHASX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uhasx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01396}01396\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SSAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_ssax}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01397}01397\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QSAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qsax}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01398}01398\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SHSAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_shsax}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01399}01399\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_USAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_usax}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01400}01400\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UQSAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uqsax}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01401}01401\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UHSAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uhsax}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01402}01402\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_USAD8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_usad8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01403}01403\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_USADA8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_usada8}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01404}01404\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SSAT16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_ssat16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01405}01405\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_USAT16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_usat16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01406}01406\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UXTB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uxtb16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01407}01407\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_UXTAB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_uxtab16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01408}01408\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SXTB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_sxtb16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01409}01409\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SXTAB16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_sxtab16}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01410}01410\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMUAD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smuad}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01411}01411\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMUADX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smuadx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01412}01412\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLAD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smlad}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01413}01413\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLADX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smladx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01414}01414\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLALD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smlald}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01415}01415\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLALDX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smlaldx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01416}01416\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMUSD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smusd}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01417}01417\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMUSDX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smusdx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01418}01418\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLSD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smlsd}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01419}01419\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLSDX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smlsdx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01420}01420\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLSLD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smlsld}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01421}01421\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SMLSLDX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_smlsldx}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01422}01422\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_SEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_sel}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01423}01423\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QADD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qadd}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01424}01424\ \textcolor{preprocessor}{\#define\ \ \ \ \ \_\_QSUB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_builtin\_arm\_qsub}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01425}01425\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01426}01426\ \textcolor{preprocessor}{\#define\ \_\_PKHBT(ARG1,ARG2,ARG3)\ \ \ \ \ \ \ \ \ \ (\ ((((uint32\_t)(ARG1))\ \ \ \ \ \ \ \ \ \ )\ \&\ 0x0000FFFFUL)\ |\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01427}01427\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((uint32\_t)(ARG2))\ <<\ (ARG3))\ \&\ 0xFFFF0000UL)\ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01428}01428\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01429}01429\ \textcolor{preprocessor}{\#define\ \_\_PKHTB(ARG1,ARG2,ARG3)\ \ \ \ \ \ \ \ \ \ (\ ((((uint32\_t)(ARG1))\ \ \ \ \ \ \ \ \ \ )\ \&\ 0xFFFF0000UL)\ |\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01430}01430\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((uint32\_t)(ARG2))\ >>\ (ARG3))\ \&\ 0x0000FFFFUL)\ \ )}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01431}01431\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01432}01432\ \mbox{\hyperlink{cmsis__armclang_8h_ab904513442afdf77d4f8c74f23cbb040}{\_\_STATIC\_FORCEINLINE}}\ int32\_t\ \_\_SMMLA\ (int32\_t\ op1,\ int32\_t\ op2,\ int32\_t\ op3)}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01433}01433\ \{}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01434}01434\ \ \ int32\_t\ result;}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01435}01435\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01436}01436\ \ \ \mbox{\hyperlink{cmsis__armclang_8h_a1378040bcf22428955c6e3ce9c2053cd}{\_\_ASM}}\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}smmla\ \%0,\ \%1,\ \%2,\ \%3"{}}\ :\ \textcolor{stringliteral}{"{}=r"{}}\ (result):\ \textcolor{stringliteral}{"{}r"{}}\ \ (op1),\ \textcolor{stringliteral}{"{}r"{}}\ (op2),\ \textcolor{stringliteral}{"{}r"{}}\ (op3)\ );}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01437}01437\ \ \ \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01438}01438\ \}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01439}01439\ }
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01440}01440\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ (\_\_ARM\_FEATURE\_DSP\ ==\ 1)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cmsis__armclang_8h_source_l01444}01444\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CMSIS\_ARMCLANG\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

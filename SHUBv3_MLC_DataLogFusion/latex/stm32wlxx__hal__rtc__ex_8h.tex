@@ -1,0 +1,612 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.h File Reference}
+\hypertarget{stm32wlxx__hal__rtc__ex_8h}{}\label{stm32wlxx__hal__rtc__ex_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_rtc\_ex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_rtc\_ex.h}}
+
+
+Header file of RTC HAL Extended module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structRTC__TamperTypeDef}{RTC\+\_\+\+Tamper\+Type\+Def}}
+\item 
+struct \mbox{\hyperlink{structRTC__InternalTamperTypeDef}{RTC\+\_\+\+Internal\+Tamper\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Time__Stamp__Edges__definitions_gaae434219f837fa77058fdbfc0a4b24d0}{RTC\+\_\+\+TIMESTAMPEDGE\+\_\+\+RISING}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Time__Stamp__Edges__definitions_ga5ddd88325303593d4fbaf29123037c95}{RTC\+\_\+\+TIMESTAMPEDGE\+\_\+\+FALLING}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad076bde34be7d24f088fd2c003b7a7f7}{RTC\+\_\+\+CR\+\_\+\+TSEDGE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__TimeStamp__Pin__Selections_ga8ce8bdb904f1fef05ae3b59d6f59843a}{RTC\+\_\+\+TIMESTAMPPIN\+\_\+\+DEFAULT}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Wakeup__Timer__Definitions_ga3864a5d628a34118dfcc86e9b8958e51}{RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV16}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Wakeup__Timer__Definitions_gaaa4ec1d6b96e88b070899d0dd5d8869f}{RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6f03056e9aa78c133af90b60af72ba79}{RTC\+\_\+\+CR\+\_\+\+WUCKSEL\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Wakeup__Timer__Definitions_gade098ac6e923b02c06de003f61aafd2c}{RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV4}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga360f7ccf7a89c5091f4affe6d1019215}{RTC\+\_\+\+CR\+\_\+\+WUCKSEL\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Wakeup__Timer__Definitions_gab1013526c00cfab26015267f17b6553f}{RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV2}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6f03056e9aa78c133af90b60af72ba79}{RTC\+\_\+\+CR\+\_\+\+WUCKSEL\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga360f7ccf7a89c5091f4affe6d1019215}{RTC\+\_\+\+CR\+\_\+\+WUCKSEL\+\_\+1}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Wakeup__Timer__Definitions_ga2d75cf962faf3257ada7f102fccfcb62}{RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+CK\+\_\+\+SPRE\+\_\+16\+BITS}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad247ac722f6900744cdc16f8f45ed923}{RTC\+\_\+\+CR\+\_\+\+WUCKSEL\+\_\+2}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Wakeup__Timer__Definitions_gab4ff75ad48550530f95698f269a617dd}{RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+CK\+\_\+\+SPRE\+\_\+17\+BITS}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga360f7ccf7a89c5091f4affe6d1019215}{RTC\+\_\+\+CR\+\_\+\+WUCKSEL\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad247ac722f6900744cdc16f8f45ed923}{RTC\+\_\+\+CR\+\_\+\+WUCKSEL\+\_\+2}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Smooth__calib__period__Definitions_gaab8a844313898595cd72f86570198e5a}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PERIOD\+\_\+32\+SEC}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Smooth__calib__period__Definitions_ga0c192bdebd2496f60b8a4aa7db499262}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PERIOD\+\_\+16\+SEC}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga70857526590d6f7e25d9551187105583}{RTC\+\_\+\+CALR\+\_\+\+CALW16}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Smooth__calib__period__Definitions_ga0993db27ee5b25c8db41c8e58b478ffe}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PERIOD\+\_\+8\+SEC}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga28f8c7f5f5bf772c81170a2eab055557}{RTC\+\_\+\+CALR\+\_\+\+CALW8}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Smooth__calib__Plus__pulses__Definitions_ga53eabbf840a8631b955636bbfaf9bc83}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PLUSPULSES\+\_\+\+SET}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga9b13b9724302c25fbca76684f5968528}{RTC\+\_\+\+CALR\+\_\+\+CALP}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Smooth__calib__Plus__pulses__Definitions_gaed8a5d1a5400612bde6fe30b32f350e7}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PLUSPULSES\+\_\+\+RESET}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Smooth__calib__low__power__Definitions_ga5a6addbc515d21dafcfbf627eca37a32}{RTC\+\_\+\+LPCAL\+\_\+\+SET}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6e3f4cfc489f57c1b4c10c656fcf3e28}{RTC\+\_\+\+CALR\+\_\+\+LPCAL}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Smooth__calib__low__power__Definitions_ga101cd0057801ef157b43d1065255d2ed}{RTC\+\_\+\+LPCAL\+\_\+\+RESET}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Calib__Output__selection__Definitions_ga8647cd287c7dfe52f29793be07817bac}{RTC\+\_\+\+CALIBOUTPUT\+\_\+512\+HZ}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Calib__Output__selection__Definitions_gaf97fb10389fb13d16c2f2859f8d228c2}{RTC\+\_\+\+CALIBOUTPUT\+\_\+1\+HZ}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga197c587884b9c1dcb2970e9ec2589b41}{RTC\+\_\+\+CR\+\_\+\+COSEL}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Add__1__Second__Parameter__Definition_gaadc96f8fbcb4a576dc126c8a78476864}{RTC\+\_\+\+SHIFTADD1\+S\+\_\+\+RESET}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Add__1__Second__Parameter__Definition_gac22d753caa7eae6b1f4564eba3727900}{RTC\+\_\+\+SHIFTADD1\+S\+\_\+\+SET}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8fee932563d21382db9ecad458356af2}{RTC\+\_\+\+SHIFTR\+\_\+\+ADD1S}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pins_ga339f9515dea38efe31fbae679887c7b5}{RTC\+\_\+\+TAMPER\+\_\+1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1748f790cfef882104296b61031f205c}{TAMP\+\_\+\+CR1\+\_\+\+TAMP1E}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pins_gaca7aa22d4151651fe8c7d272ed1749f9}{RTC\+\_\+\+TAMPER\+\_\+2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafd29dbf6023df48f66962f9817f9b7ac}{TAMP\+\_\+\+CR1\+\_\+\+TAMP2E}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pins_ga1ea7cc93f024b443cfc3202aecdb961f}{RTC\+\_\+\+TAMPER\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga56354c0ec55dd7a3955fe6ae29d1f638}{TAMP\+\_\+\+CR1\+\_\+\+TAMP3E}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pins_ga99834a52e1fac9883b854186b84e7f55}{RTC\+\_\+\+TAMPER\+\_\+\+ALL}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1748f790cfef882104296b61031f205c}{TAMP\+\_\+\+CR1\+\_\+\+TAMP1E}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafd29dbf6023df48f66962f9817f9b7ac}{TAMP\+\_\+\+CR1\+\_\+\+TAMP2E}} \texorpdfstring{$\vert$}{|}  \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga56354c0ec55dd7a3955fe6ae29d1f638}{TAMP\+\_\+\+CR1\+\_\+\+TAMP3E}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Pins_ga4a9e85634a99339f9600942d871b442b}{RTC\+\_\+\+INT\+\_\+\+TAMPER\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4381d30702543c8b4e98701fa65e844f}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP3E}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Pins_ga1d608fd698e1c63d54644e98acb4a64e}{RTC\+\_\+\+INT\+\_\+\+TAMPER\+\_\+5}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga58793f51f8b8116aee207b93046dbbb4}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP5E}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Pins_ga404ea4f8e8d9fbc2e4b4a737d0ad658f}{RTC\+\_\+\+INT\+\_\+\+TAMPER\+\_\+6}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga20a6d0580f0587735433a4dae3745fa4}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP6E}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Pins_ga87ccf385e6e0d92c47a17cd138e684b8}{RTC\+\_\+\+INT\+\_\+\+TAMPER\+\_\+8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf7bb77a962be863e6462ef097caeb766}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP8E}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Pins_gabe3c774087e1ab2d9584a62e270760fe}{RTC\+\_\+\+INT\+\_\+\+TAMPER\+\_\+\+ALL}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4381d30702543c8b4e98701fa65e844f}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP3E}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga58793f51f8b8116aee207b93046dbbb4}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP5E}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga20a6d0580f0587735433a4dae3745fa4}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP6E}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf7bb77a962be863e6462ef097caeb766}{TAMP\+\_\+\+CR1\+\_\+\+ITAMP8E}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Trigger_ga7956947a7b9350248051fc077a525474}{RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+RISINGEDGE}}~0x00u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Trigger_gafdc500829e8f36346f1cbca1a52eb083}{RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+FALLINGEDGE}}~0x01u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Trigger_ga20c580db49e266f2295aeed5a6915b4e}{RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+LOWLEVEL}}~0x02u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Trigger_gae3a6644686f404fa94d23ccab6f5165b}{RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+HIGHLEVEL}}~0x03u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__MaskFlag_gaa98cf848e3852901d4da1f0825d96e22}{RTC\+\_\+\+TAMPERMASK\+\_\+\+FLAG\+\_\+\+DISABLE}}~0x00u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__MaskFlag_ga47f89348d65b405c745e525bc6d9f71b}{RTC\+\_\+\+TAMPERMASK\+\_\+\+FLAG\+\_\+\+ENABLE}}~0x01u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__EraseBackUp_gafc53f3568bee300d6ac014acb218a7ba}{RTC\+\_\+\+TAMPER\+\_\+\+ERASE\+\_\+\+BACKUP\+\_\+\+ENABLE}}~0x00u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__EraseBackUp_ga0d206d5e931150483145ed91872b0f33}{RTC\+\_\+\+TAMPER\+\_\+\+ERASE\+\_\+\+BACKUP\+\_\+\+DISABLE}}~0x01u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Filter_ga0809aebfef5642f8f2a8d04b0aed4d98}{RTC\+\_\+\+TAMPERFILTER\+\_\+\+DISABLE}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Filter_ga4338b957d061fa9d1d51d403275fe391}{RTC\+\_\+\+TAMPERFILTER\+\_\+2\+SAMPLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga23c756d1b062398ab07eb91427199ab3}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFLT\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Filter_gabd9f9f1c669c073d58bd71257faa079e}{RTC\+\_\+\+TAMPERFILTER\+\_\+4\+SAMPLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0e8c46e0b2a808d4ce1f23ec7eff9fba}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFLT\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Filter_ga3689ed6d70107f0acc92aae8b13600bd}{RTC\+\_\+\+TAMPERFILTER\+\_\+8\+SAMPLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4336408e093aa80a7a4e8f6331586537}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFLT}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_ga1d12bab8de77c51edc1b6a7a2e242991}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV32768}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_gab45c084cd1f2f36ecb19d7eb4e7c12b2}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV16384}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3667d4ea6dfd4223425d3c648332902d}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_ga48899e13c9b392c02278cd4166b49f4d}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV8192}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabfcb433cb1df98fe4643ee7650819fe1}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_gaa8257b2329aa2d170b66b7368c11943a}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV4096}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3667d4ea6dfd4223425d3c648332902d}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabfcb433cb1df98fe4643ee7650819fe1}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+1}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_ga681034d8247a44679e3ae277db187cb5}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV2048}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga624f5675e876069ce2864841fb5799a3}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+2}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_gaad315c353bdd84397cb1d7db46c71cd3}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV1024}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3667d4ea6dfd4223425d3c648332902d}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga624f5675e876069ce2864841fb5799a3}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+2}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_ga3748ae21496570bdc54354c7d9a8c91d}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV512}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabfcb433cb1df98fe4643ee7650819fe1}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga624f5675e876069ce2864841fb5799a3}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPFREQ\+\_\+2}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Sampling__Frequencies_ga05ce782cafcbf04e6854739041052a9e}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV256}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pin__Precharge__Duration_gac2a79623b1690b2e5893e6b53dad3480}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+1\+RTCCLK}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pin__Precharge__Duration_ga270be6ced6bafda4a94e5624a0bc3eab}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+2\+RTCCLK}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbb3d83271e00ddbd2394b30314d8af4}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPPRCH\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pin__Precharge__Duration_ga12497acabf044c2d1de7d735efdb2efc}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+4\+RTCCLK}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2641bd7a30e8897cd60dc4981ff1060c}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPPRCH\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pin__Precharge__Duration_ga353fca64c5b0e927ab024ed13a526e09}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+8\+RTCCLK}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbb3d83271e00ddbd2394b30314d8af4}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPPRCH\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2641bd7a30e8897cd60dc4981ff1060c}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPPRCH\+\_\+1}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pull__UP_gacf26dd43efe81fa45121580187705369}{RTC\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+ENABLE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__Pull__UP_ga60baa301b46be499bc7f827664df0300}{RTC\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+DISABLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafce860f7de28618278c7c3624ef1f1b0}{TAMP\+\_\+\+FLTCR\+\_\+\+TAMPPUDIS}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__TimeStampOnTamperDetection_ga11e98cb1fff680cf391398c40925f891}{RTC\+\_\+\+TIMESTAMPONTAMPERDETECTION\+\_\+\+DISABLE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper__TimeStampOnTamperDetection_ga5954385741ff0e2b250438c493bc0e36}{RTC\+\_\+\+TIMESTAMPONTAMPERDETECTION\+\_\+\+ENABLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa9951b9b5ab363c7c68e6b95418be1f5}{RTC\+\_\+\+CR\+\_\+\+TAMPTS}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_ga4b11149a0df94f0734df4862b5c6f358}{RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga792642e651d3a7ad078dd4676bd7e5a0}{TAMP\+\_\+\+IER\+\_\+\+TAMP1\+IE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_ga6261863829cc66295bc15525d7ecb676}{RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8bd83e8aa3da0e87d56f872593efab75}{TAMP\+\_\+\+IER\+\_\+\+TAMP2\+IE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_gad33fe88c3db8a84a59a62abb4bb7a7d3}{RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga618d85eaea4a5d7ed03912e591f45618}{TAMP\+\_\+\+IER\+\_\+\+TAMP3\+IE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_ga33ffa033913faeb2be2d3486d21da52c}{RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+\+ALL}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga792642e651d3a7ad078dd4676bd7e5a0}{TAMP\+\_\+\+IER\+\_\+\+TAMP1\+IE}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8bd83e8aa3da0e87d56f872593efab75}{TAMP\+\_\+\+IER\+\_\+\+TAMP2\+IE}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga618d85eaea4a5d7ed03912e591f45618}{TAMP\+\_\+\+IER\+\_\+\+TAMP3\+IE}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_gaa0efa3e02a01fb4911c4d5056ddcdd1b}{RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga54c9a70f2b95745866f4cc2cfc32a0b4}{TAMP\+\_\+\+IER\+\_\+\+ITAMP3\+IE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_gaa6d4510107f4ef93e824d78b29b6e022}{RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+5}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3ee1a0931de53ecd43cce3e6fd1f23a2}{TAMP\+\_\+\+IER\+\_\+\+ITAMP5\+IE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_ga2c2c6436a09490a3bcbb017c7913aa23}{RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+6}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4bd2ed81bffe206520efe169fa5425eb}{TAMP\+\_\+\+IER\+\_\+\+ITAMP6\+IE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_ga4f1daad6130f16e0c71ecc2527c80cee}{RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae5a80d50ea12dc9bb7ae6169c35fa3d5}{TAMP\+\_\+\+IER\+\_\+\+ITAMP8\+IE}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Internal__Tamper__Interrupt_ga919af77660344230a172c97259f97068}{RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga54c9a70f2b95745866f4cc2cfc32a0b4}{TAMP\+\_\+\+IER\+\_\+\+ITAMP3\+IE}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3ee1a0931de53ecd43cce3e6fd1f23a2}{TAMP\+\_\+\+IER\+\_\+\+ITAMP5\+IE}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4bd2ed81bffe206520efe169fa5425eb}{TAMP\+\_\+\+IER\+\_\+\+ITAMP6\+IE}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae5a80d50ea12dc9bb7ae6169c35fa3d5}{TAMP\+\_\+\+IER\+\_\+\+ITAMP8\+IE}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_ga994a0a4f2a49e0f29a8717ed6cfb075e}{RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga53d8c6348c70f7cb1b77ec230a7b327a}{TAMP\+\_\+\+SR\+\_\+\+TAMP1F}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_gaad1b62edb0ad6f678a1a0026f6369821}{RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaba906cb02b9c301a234c1d1056631931}{TAMP\+\_\+\+SR\+\_\+\+TAMP2F}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_gae373830aa913ab25761b04d08ce10fb3}{RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3d1dded47351f57f61e86ced4056ec9a}{TAMP\+\_\+\+SR\+\_\+\+TAMP3F}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_gafd73d0e6d6ae0eeb15703491ce693353}{RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+\+ALL}}~(RTC\+\_\+\+FLAG\+\_\+\+TAMP1 \texorpdfstring{$\vert$}{|} RTC\+\_\+\+FLAG\+\_\+\+TAMP2 \texorpdfstring{$\vert$}{|} RTC\+\_\+\+FLAG\+\_\+\+TAMP3 )
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_gaff46d592222a098cd9c4b5bc23b185de}{RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6add27bfd767ad4703d5a19db9f9a9dc}{TAMP\+\_\+\+SR\+\_\+\+ITAMP3F}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_gaf2f03b2ec15b2a225e3ee302d55a2f16}{RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+5}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1edccee40c1de260277d8f61641e5aa5}{TAMP\+\_\+\+SR\+\_\+\+ITAMP5F}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_ga29a7c43312152dad52e4042bc13b72ce}{RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+6}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8d5aa1aa48dca53d1c0926b4bdc43158}{TAMP\+\_\+\+SR\+\_\+\+ITAMP6F}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_ga8380727654499671499b58e0b377e97c}{RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6e1023f279ca7e2b1f688150f4520668}{TAMP\+\_\+\+SR\+\_\+\+ITAMP8F}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Flags_gafb421b68bb421e793b2bec851c787c48}{RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL}}~(RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP3 \texorpdfstring{$\vert$}{|} RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP5 \texorpdfstring{$\vert$}{|} RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP6 \texorpdfstring{$\vert$}{|} RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP8)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__MonotonicCounter__Instance_ga153143da35c1f9a0dc78859e83c81069}{RTC\+\_\+\+MONOTONIC\+\_\+\+COUNTER\+\_\+1}}~0u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga70de60adf3ddd7d029bb2c6ae26d9584}{RTC\+\_\+\+BKP\+\_\+\+NUMBER}}~\mbox{\hyperlink{group__Peripheral__registers__structures_gad20e9db91e94c57a943054850e29af8c}{RTC\+\_\+\+BACKUP\+\_\+\+NB}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga519bec4c7714e123cf2664f7394dc1ab}{RTC\+\_\+\+BKP\+\_\+\+DR0}}~0x00u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga6988b61b031e1407787095b0ff214ea8}{RTC\+\_\+\+BKP\+\_\+\+DR1}}~0x01u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga09963fdfb90ed5b7e32db13671447abb}{RTC\+\_\+\+BKP\+\_\+\+DR2}}~0x02u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga014a39228ba4783b62ac8f11929ecd6a}{RTC\+\_\+\+BKP\+\_\+\+DR3}}~0x03u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga97545ebe0827a8650f953c371368f3f5}{RTC\+\_\+\+BKP\+\_\+\+DR4}}~0x04u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_gacab50ce68839698c48b8e2e143656ae7}{RTC\+\_\+\+BKP\+\_\+\+DR5}}~0x05u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga538b0ac64fb4da2d54c12022a12243da}{RTC\+\_\+\+BKP\+\_\+\+DR6}}~0x06u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_gad2affc46e98b9ff69fc2af2c57c05a72}{RTC\+\_\+\+BKP\+\_\+\+DR7}}~0x07u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_gaba511d0dc16dedb9042081a9b905b597}{RTC\+\_\+\+BKP\+\_\+\+DR8}}~0x08u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga59e9b9ec6b37ff46e557a3be4cd4fadb}{RTC\+\_\+\+BKP\+\_\+\+DR9}}~0x09u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_gac34f41f78e5602c406abf8382e1bab0c}{RTC\+\_\+\+BKP\+\_\+\+DR10}}~0x0\+Au
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_gab7f34c893833149de14908f22827a5dc}{RTC\+\_\+\+BKP\+\_\+\+DR11}}~0x0\+Bu
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga45c34c6e6c42068b2dbdf312cb8f3515}{RTC\+\_\+\+BKP\+\_\+\+DR12}}~0x0\+Cu
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga492ace75e9be2cf43fde1ae911d9651d}{RTC\+\_\+\+BKP\+\_\+\+DR13}}~0x0\+Du
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga718011f7c07a8a734fd51de0161fcddb}{RTC\+\_\+\+BKP\+\_\+\+DR14}}~0x0\+Eu
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga01ad7db765e52ecd13f24bb09db27789}{RTC\+\_\+\+BKP\+\_\+\+DR15}}~0x0\+Fu
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga767f5e169b56f4a2364deb705d322a7b}{RTC\+\_\+\+BKP\+\_\+\+DR16}}~0x10u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_gabba03a6ab599f5f45db95244500177ff}{RTC\+\_\+\+BKP\+\_\+\+DR17}}~0x11u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga9fc8a8a86892e0c517a56b2804b53006}{RTC\+\_\+\+BKP\+\_\+\+DR18}}~0x12u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga384af548d7386c490e6a65b2600c8c2b}{RTC\+\_\+\+BKP\+\_\+\+DR19}}~0x13u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__Mode_ga48dc8e18e8962d9c553149c7938d4e18}{RTC\+\_\+\+BINARY\+\_\+\+NONE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__Mode_ga81a924cc2ddfa98d1bc27ecab4db6395}{RTC\+\_\+\+BINARY\+\_\+\+ONLY}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae6f0904f5c4f495878cb156fd9381204}{RTC\+\_\+\+ICSR\+\_\+\+BIN\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__Mode_ga6a296567aa561af7db33fe2f8216eae4}{RTC\+\_\+\+BINARY\+\_\+\+MIX}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad886bee901cd3a7377c6e00d7cbb175a}{RTC\+\_\+\+ICSR\+\_\+\+BIN\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_ga7b5ec8e583db425ac485ecf1255a1d70}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+0}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_ga399037663fe4d811d2a3ae0589dec444}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+1}}~(0x1\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae4ec241b9fa48c2fc982436acdd1754f}{RTC\+\_\+\+ICSR\+\_\+\+BCDU\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_gafa610ef5f2de267e10448361c992477f}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+2}}~(0x2\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae4ec241b9fa48c2fc982436acdd1754f}{RTC\+\_\+\+ICSR\+\_\+\+BCDU\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_gad7203ed80d3a3291b452b00f6336984c}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+3}}~(0x3\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae4ec241b9fa48c2fc982436acdd1754f}{RTC\+\_\+\+ICSR\+\_\+\+BCDU\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_ga11aae02250a1c81a3532aaa3afc5e7fd}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+4}}~(0x4\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae4ec241b9fa48c2fc982436acdd1754f}{RTC\+\_\+\+ICSR\+\_\+\+BCDU\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_gae7c93cdc36be0b74b7505a8ddeb8d5c1}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+5}}~(0x5\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae4ec241b9fa48c2fc982436acdd1754f}{RTC\+\_\+\+ICSR\+\_\+\+BCDU\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_ga94e1e8ae92d2dd7318ad1ebfdf9c9b1a}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+6}}~(0x6\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae4ec241b9fa48c2fc982436acdd1754f}{RTC\+\_\+\+ICSR\+\_\+\+BCDU\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Binary__mix__BCDU_ga0310067682ad3e0b7a5b1c768cbacdba}{RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU\+\_\+7}}~(0x7\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae4ec241b9fa48c2fc982436acdd1754f}{RTC\+\_\+\+ICSR\+\_\+\+BCDU\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga32bdf13f4dfdc78f0b1f7cc7757e9539}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+ALL}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga0a2e9e1306eaacd993aeb638dd21a1c6}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+1}}~(1UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga64429efde10492d38a166762c1d26d99}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+2}}~(2UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gab052eece3ebceec171a61c3726afcfea}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+3}}~(3UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga14e8f4e8a4ae85434d534bfda3ada5e5}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+4}}~(4UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga5384c71117f33e1cc5ebd94a392d1a4c}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+5}}~(5UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga92cb80a23bd2b6142894ed6cfb436067}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+6}}~(6UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gad78d6d7f5f676ded0ba22376dc331b3a}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+7}}~(7UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga0e9042a4e7812e957903b5565b7e7f36}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+8}}~(8UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gaf10f7dd0221a6712f79f1d0100f3b1bb}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+9}}~(9UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gaba6aa847028401899b58b0ffe0ad5754}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+10}}~(10\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga8b6b0708e660be603064f402266d14a6}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+11}}~(11UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga8916a0bb24a090b409d0930315eb7ef7}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+12}}~(12UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga1dd2dfff31778e39edf517a8a04a6668}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+13}}~(13UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga359490f431bb8aa8e82d41b2a965224e}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+14}}~(14UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga480895e6260a37319e651754e5220e07}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+15}}~(15UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga39d05a608c6b8c0e03c95572e47ef3eb}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+16}}~(16UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga714316cf8be211d20dc491ff3ca4d824}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+17}}~(17UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gae2572c962e039eeeb218c642308333d4}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+18}}~(18UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga44c249fa64c4d040299996d9c973cd46}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+19}}~(19UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gaff92d33822bb5b0c5e4bfe9430552640}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+20}}~(20\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga3622d3ad4a803a96fdb7f0089ec7181a}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+21}}~(21UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga79aaf618a62e29a2e0dcc5faf81040d3}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+22}}~(22UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gad338f67535babc140a2639422e8e3504}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+23}}~(23UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gabfb775d1a5a540384eecf5cf1c40e529}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+24}}~(24UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga2f4fbcd87f2a3b154a8a84b33a960ef5}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+25}}~(25UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga00d178bf8b55da03ee96d16a3275ffde}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+26}}~(26UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gac586a8368612e16d549406c772684e19}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+27}}~(27UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_gae25393c6de9063236206cf568fee05c2}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+28}}~(28UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga136eb7b92dafea81a5697b2099459b7e}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+29}}~(29UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga567fe5e9c0c1f4479ea1b4b79f224962}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31\+\_\+30}}~(30\+UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga12a6d643330bec30deafcbecaf78b2ed}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+SS31}}~(31UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Masks__Definitions_ga550b4064bc68718863f25fa12e124e99}{RTC\+\_\+\+ALARMSUBSECONDBINMASK\+\_\+\+NONE}}~(32UL $<$$<$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97b73051e1ea4d40a4877f9580c2eb63}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Clear__Definitions_gae35eeefa666830b725d98d37d1cb1b8f}{RTC\+\_\+\+ALARMSUBSECONDBIN\+\_\+\+AUTOCLR\+\_\+\+NO}}~0\+UL
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Alarm__Sub__Seconds__binary__Clear__Definitions_ga38c285022e7c167c6fb76b2f0063ea46}{RTC\+\_\+\+ALARMSUBSECONDBIN\+\_\+\+AUTOCLR\+\_\+\+YES}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga13a3b78ff4abb4ed79450ad67cc6705e}{RTC\+\_\+\+ALRMASSR\+\_\+\+SSCLR}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Exported__Macros_gace97da1a6822f0bc457fc11f269697b1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$SCR = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the specified RTC pending flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_ga9b3ce87851ab95b1ab508b524a1055c8}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga061be0d3cdea721e5cb695cda0699bc3}{RTC\+\_\+\+CR\+\_\+\+WUTE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Wake\+Up Timer peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_ga18822c018d0b07be72ca315220bb02df}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga061be0d3cdea721e5cb695cda0699bc3}{RTC\+\_\+\+CR\+\_\+\+WUTE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Wake\+Up Timer peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_gab02dbd4cbdcd1c544a5e45b37fad276b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Wake\+Up\+Timer interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_ga702b63d21958eab45856264c19ee6004}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Wake\+Up\+Timer interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_gaac6051af0e8efabdae50b7051554355b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$MISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 12U)) != 0\+UL) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Wake\+Up\+Timer interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_gafbe296c7719885437a245d5967194ac0}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0\+UL) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Wake Up timer interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_ga217666f5b1e27e24441e2e9a3b51f28e}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Wake\+Up\+Timers flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_gabb56cd29b62b414c5da34e2fc1cabf16}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_gab548542aeb7867207c9b66e5ae890412}{RTC\+\_\+\+CLEAR\+\_\+\+WUTF}}))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Wake Up timers pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_gae4c38c6e964650ef7ca83737f1995d13}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga1a1a58e244663850786c387bfa5474f2}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_ga28f230877e574a8f6b9fac1e56959dbd}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga1a1a58e244663850786c387bfa5474f2}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_gadc3d27024b156eb8bda551b479c3d324}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga1a1a58e244663850786c387bfa5474f2}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__WakeUp__Timer_ga751e44e4b43b1b47f9dfc6bad02e4567}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga1a1a58e244663850786c387bfa5474f2}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gad8400feb7b3dae2c552f2f4a7556bc6d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga94fa98ca8cac9078b9bb82c89593d3c0}{RTC\+\_\+\+CR\+\_\+\+TSE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga7281d85b199bee5eb74cc135208051fa}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga94fa98ca8cac9078b9bb82c89593d3c0}{RTC\+\_\+\+CR\+\_\+\+TSE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga054429581f55a80d922bb5c1e982c06f}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gab455d21f8afb5b3d49f2c25e34ce90c2}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gaaf023d7dd4c3068e8297187f2cc6b16e}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$MISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 12U)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Time\+Stamp interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga54100a14a01e1ebe8af226385d12ee57}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Time Stamp interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga72799940c34e70df0d33eca772794813}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+),(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Time\+Stamps flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gac9d386e61a572b0c9d0e58a04e1819ef}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Time Stamps pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga6aa2da9e2d850aaad27ae334e8a43207}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gae3b6c2a5070240641638157e2ffce3ae}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga34ba236d16e26d1fd51628223ffe3ac6}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga97f5112e67aa8e4558f28c40c04557fb}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gaf10e8c678225ae5479bc93858e9ee0d9}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2fe4c391ecbb12afa9d760cf4073dc3b}{RTC\+\_\+\+CR\+\_\+\+ITSE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC internal Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gab9d8fed58fc7ffbc47ba840f0ee1b56c}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2fe4c391ecbb12afa9d760cf4073dc3b}{RTC\+\_\+\+CR\+\_\+\+ITSE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC internal Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga02cbf534c2d752a488d9ce5e7e05f8d1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+),(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Internal Time Stamps flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga482c985660329762542f6d6a19fa9ef4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga15e4bb31fd3e4e206392a4f05d793821}{RTC\+\_\+\+CLEAR\+\_\+\+ITSF}}))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Internal Time Stamps pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gaeec7abbbf5d2357ac03ae6faa2f3e6de}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPTS\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa9951b9b5ab363c7c68e6b95418be1f5}{RTC\+\_\+\+CR\+\_\+\+TAMPTS}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp on Tamper detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga99a698af03a0ab86a3cb327341d643b9}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPTS\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa9951b9b5ab363c7c68e6b95418be1f5}{RTC\+\_\+\+CR\+\_\+\+TAMPTS}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp on Tamper detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga3ba01fe0f36b860d7a366a1ad60f2d48}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPOE\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dec31097c149b56a79149ba888e2dfa}{RTC\+\_\+\+CR\+\_\+\+TAMPOE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Tamper detection output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga9db68570405ba31042dc8769aca0a8fa}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPOE\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dec31097c149b56a79149ba888e2dfa}{RTC\+\_\+\+CR\+\_\+\+TAMPOE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Tamper detection output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Calibration_ga28ea614bae2c8b94cd3407535644e7a6}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CALIBRATION\+\_\+\+OUTPUT\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3cdfa862acfa6068b7ba847f77269d60}{RTC\+\_\+\+CR\+\_\+\+COE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC calibration output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Calibration_gab5c03b27e1117cf17be5df483b1211b8}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CALIBRATION\+\_\+\+OUTPUT\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3cdfa862acfa6068b7ba847f77269d60}{RTC\+\_\+\+CR\+\_\+\+COE}}))
+\begin{DoxyCompactList}\small\item\em Disable the calibration output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Calibration_ga3fcacefb24751dcb772582e59e50de5e}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLOCKREF\+\_\+\+DETECTION\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga646ef1071cacc2d30bbef5597c817021}{RTC\+\_\+\+CR\+\_\+\+REFCKON}}))
+\begin{DoxyCompactList}\small\item\em Enable the clock reference detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Calibration_ga8e989c42c1f4139cc1e021c42638d86b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLOCKREF\+\_\+\+DETECTION\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga646ef1071cacc2d30bbef5597c817021}{RTC\+\_\+\+CR\+\_\+\+REFCKON}}))
+\begin{DoxyCompactList}\small\item\em Disable the clock reference detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Calibration_ga5e1482310c213248d8416b24a5e6b3f3}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC shift operations flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga8a604eaec4fe8a5e7c3403d570e640b4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$CR1 \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the TAMP Tamper input detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga51dbacc8035bf3b5127e8d16282e2017}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$CR1 \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the TAMP Tamper input detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga5897843380c7fcf865131c6bdb0fc3a1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the TAMP Tamper interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga669a86ef4feb560e2059bf8cfe4fa253}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the TAMP Tamper interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga20424c15833e5665016e87d1c8a0fdf4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$MISR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Tamper interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gae1de3775214da8d45c4625d4ad2b6f28}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Tamper interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gafc2d73770375bd10cf6e4faa11adc7b1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$SR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Tampers flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gade364b4cf1214d66463c9fa4ce667095}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$SCR) = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Tamper\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga4aa5d8461ac922bea052db89234c623b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga0e88f257ee9ba052550d8b47ffc17369}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gaf5af2fdddc0aab72132dfc1c7b4a826a}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga3b25cfb5b0ff86d89a00732a5e5802ad}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_gab740ebb19f91d4a37c0b70fdc306608d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC SSRU interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga8968cb185a751cbfa790c1bf735726ea}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC SSRU interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga0a3ce1034a426d45be2c2534efd2afcf}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$MISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+) $>$$>$ 1) != 0U) ? 1U \+: 0U)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC SSRU interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga911190d7f40b0903f5f3ece215581b9d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1U \+: 0U)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Wake Up timer interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga6f8532598dc337e909fbda4fb3fe57df}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC SSRU\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga5ab99bcce8d4f2ec448046df137f55f9}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga3022255b9b856a32a706740f992b323c}{RTC\+\_\+\+CLEAR\+\_\+\+SSRUF}}))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Wake Up timer\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga58bb2f05148c26d0cc283be87b60d2ec}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaa15fdd97f36993774e6d001a72395583}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+SSRU\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_gac34680ff2c39ecaa76ca23e64a5cb13c}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaa15fdd97f36993774e6d001a72395583}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+SSRU\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga3a09ebca14d5c7acd95a011b5ac266c7}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaa15fdd97f36993774e6d001a72395583}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+SSRU\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__SSR__Underflow_ga83e105ab49f12cfc4ed8b17fd455ca32}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SSRU\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaa15fdd97f36993774e6d001a72395583}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+SSRU\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Private__Constants_gaa15fdd97f36993774e6d001a72395583}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+SSRU\+\_\+\+EVENT}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga226e1af2518349964010b359a27dea2e}{EXTI\+\_\+\+IMR1\+\_\+\+IM18}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab1f64187c69e561662e99b8d1cac3ac4}{EXTI\+\_\+\+IMR1\+\_\+\+IM19}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Private__Constants_ga1a1a58e244663850786c387bfa5474f2}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6c906952cfd83d59c5db12a50f0cd8d1}{EXTI\+\_\+\+IMR1\+\_\+\+IM20}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab1f64187c69e561662e99b8d1cac3ac4}{EXTI\+\_\+\+IMR1\+\_\+\+IM19}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga4fe0db6ab44713a1674702d867482f9a}{IS\+\_\+\+TIMESTAMP\+\_\+\+EDGE}}(EDGE)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga5558a9d932619b51a5a60fa4746dd852}{IS\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+PIN}}(PIN)~(((PIN) == \mbox{\hyperlink{group__RTCEx__TimeStamp__Pin__Selections_ga8ce8bdb904f1fef05ae3b59d6f59843a}{RTC\+\_\+\+TIMESTAMPPIN\+\_\+\+DEFAULT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga24b2952b289ab8de9df1bbf326ede05c}{IS\+\_\+\+RTC\+\_\+\+TIMESTAMPONTAMPER\+\_\+\+DETECTION}}(DETECTION)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gad7fa55c32d3650c457332dfc116a98ae}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+TAMPERDETECTIONOUTPUT}}(MODE)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gab847ce0346dc26930a3b2c1da3ed9e28}{IS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+CLOCK}}(CLOCK)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga6254b48843bdcb83b5b5cd640aeb6f9c}{IS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+COUNTER}}(COUNTER)~((COUNTER) $<$= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2e412c1448a7e20974f5b46129799eeb}{RTC\+\_\+\+WUTR\+\_\+\+WUT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga65c64189fd22cb803ffe35cce640071a}{IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PERIOD}}(PERIOD)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gad0081b479cf6d71ac588a483d09d7b75}{IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PLUS}}(PLUS)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga257f8bd6835bee480a80416bf086e200}{IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+MINUS}}(VALUE)~((VALUE) $<$= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga44fcacd12e1cfc1fa823c798cb6a7663}{RTC\+\_\+\+CALR\+\_\+\+CALM}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga421ecca3dba04e72a8e2f8e85f8cd3f1}{IS\+\_\+\+RTC\+\_\+\+LOW\+\_\+\+POWER\+\_\+\+CALIB}}(LPCAL)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga01051baf88be14af5376479b497fd627}{IS\+\_\+\+RTC\+\_\+\+TAMPER}}(\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gaed98b52eaca8f33b04410a74c1ab20e6}{IS\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TAMPER}}(\+\_\+\+\_\+\+INT\+\_\+\+TAMPER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gaad0e1dc3705f06f38978dc8f7d11bde6}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+TRIGGER}}(\+\_\+\+\_\+\+TRIGGER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga07007f6e25728e0f8421e9908b077c8b}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+ERASE\+\_\+\+MODE}}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gacacfedfa85dfd318c7c65b8d46144c29}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+MASKFLAG\+\_\+\+STATE}}(\+\_\+\+\_\+\+STATE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga7db46ad4323b3ae7f609a3fe743125f9}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+FILTER}}(\+\_\+\+\_\+\+FILTER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga35dbdb54e291fea84c445060666c3cd6}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+SAMPLING\+\_\+\+FREQ}}(\+\_\+\+\_\+\+FREQ\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga5f828e43a645fd6e50f458165e5b67c7}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PRECHARGE\+\_\+\+DURATION}}(\+\_\+\+\_\+\+DURATION\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gaec1daecdd7a4617520a2bbed645860d1}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+STATE}}(\+\_\+\+\_\+\+STATE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gae114944f3238c6e500bed1132edeeab6}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+TIMESTAMPONTAMPER\+\_\+\+DETECTION}}(DETECTION)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga81f2e5d17d75bd5e4d99d463a109dcf3}{IS\+\_\+\+RTC\+\_\+\+BKP}}(\+\_\+\+\_\+\+BKP\+\_\+\+\_\+)~((\+\_\+\+\_\+\+BKP\+\_\+\+\_\+) $<$ \mbox{\hyperlink{group__RTCEx__Backup__Registers_ga70de60adf3ddd7d029bb2c6ae26d9584}{RTC\+\_\+\+BKP\+\_\+\+NUMBER}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga26df4ba48afac04a9798cb24bb0a5823}{IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+ADD1S}}(SEL)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga8ad118d512f7dc9ce3d4b6669fd3f4b4}{IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+SUBFS}}(FS)~((FS) $<$= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6131eb8c293b98bc5a6c7a4bb1920450}{RTC\+\_\+\+SHIFTR\+\_\+\+SUBFS}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gae8326e278569669e6880388c85cd890a}{IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+OUTPUT}}(OUTPUT)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga15f4ba72dba0cf3c39cf42c8abb99bea}{IS\+\_\+\+RTC\+\_\+\+BINARY\+\_\+\+MODE}}(MODE)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga6976eb800bc98303ba9844b12fbd1d1c}{IS\+\_\+\+RTC\+\_\+\+BINARY\+\_\+\+MIX\+\_\+\+BCDU}}(BDCU)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_ga554ae94d5eac794d1c198ec532394096}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+BINARY\+\_\+\+MASK}}(MASK)
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__IS__RTC__Definitions_gab4374d6b8c76884dfe7f51558a64f51f}{IS\+\_\+\+RTC\+\_\+\+ALARMSUBSECONDBIN\+\_\+\+AUTOCLR}}(SEL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_ga750db6ed8e6afde87530736826554019}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Time\+Stamp\+Edge, uint32\+\_\+t RTC\+\_\+\+Time\+Stamp\+Pin)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_ga96faf756e9e07d06ff1d7b696c21a6a4}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp\+\_\+\+IT}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Time\+Stamp\+Edge, uint32\+\_\+t RTC\+\_\+\+Time\+Stamp\+Pin)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_ga1d7152fccc39480de86c555c94e222a0}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Time\+Stamp}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_ga606f699c7ba625689b387222e10cf6d2}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Internal\+Time\+Stamp}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_ga332c3629584ee57641413f5519c51fe6}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Internal\+Time\+Stamp}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_ga68d83277bafa5fcebd10f1bd83ef059e}{HAL\+\_\+\+RTCEx\+\_\+\+Get\+Time\+Stamp}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__TimeTypeDef}{RTC\+\_\+\+Time\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Time\+Stamp, \mbox{\hyperlink{structRTC__DateTypeDef}{RTC\+\_\+\+Date\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Time\+Stamp\+Date, uint32\+\_\+t Format)
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_ga2924f6933f8ac4a4d840b065ec6fbf5d}{HAL\+\_\+\+RTCEx\+\_\+\+Time\+Stamp\+IRQHandler}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_gaff8adc3d27b9c84c69b64ffa6ad43457}{HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Time\+Stamp\+Event}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Timeout)
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group1_gac9ef67f1f1698e9560a5ecd5e8c9a330}{HAL\+\_\+\+RTCEx\+\_\+\+Time\+Stamp\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group2_gab22373ae0d2eeb1322569c44c42ee9db}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Wake\+Up\+Counter, uint32\+\_\+t Wake\+Up\+Clock)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group2_ga91be5e1e476cbf8ec1bd0484d78cd372}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer\+\_\+\+IT}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Wake\+Up\+Counter, uint32\+\_\+t Wake\+Up\+Clock, uint32\+\_\+t Wake\+Up\+Auto\+Clr)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group2_ga5a0e07ff18e3f839b6a43693d024100d}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Wake\+Up\+Timer}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group2_gae2aa87c6544a982c4e7657d649e7a797}{HAL\+\_\+\+RTCEx\+\_\+\+Get\+Wake\+Up\+Timer}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group2_ga5e391424483012fe09827739dc53885f}{HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+IRQHandler}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group2_gac9ed5d6224b5c86f2845a9c1af7d94de}{HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group2_ga13cdc56c03d2d606ef8c635dcc25f555}{HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Wake\+Up\+Timer\+Event}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga46034902700cb75a4dfbc5c1cd48cae9}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Smooth\+Calib}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Smooth\+Calib\+Period, uint32\+\_\+t Smooth\+Calib\+Plus\+Pulses, uint32\+\_\+t Smooth\+Calib\+Minus\+Pulses\+Value)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga129abeea8fffc33cda6456dd3cb34aa0}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Low\+Power\+Calib}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Low\+Power\+Calib)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga07344e3d0f7e9f569ec02d4a75d158dc}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Synchro\+Shift}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Shift\+Add1S, uint32\+\_\+t Shift\+Sub\+FS)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_gafee5f33f43d10ae0b64aa073412de17e}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Calibration\+Out\+Put}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Calib\+Output)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga4cba173360f2993cafdd2c77fc51b7a9}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Calibration\+Out\+Put}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_gad3759b90bbf48597b2797411c72632dc}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Ref\+Clock}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga86ca6b8e7b4ea0fede8e1aceef36fdbe}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Ref\+Clock}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga77d4058fefb7d89481ca1af3b87a8a32}{HAL\+\_\+\+RTCEx\+\_\+\+Enable\+Bypass\+Shadow}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_gaabaf6726dca239445ea362554e0f8ce2}{HAL\+\_\+\+RTCEx\+\_\+\+Disable\+Bypass\+Shadow}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga77242dad909440d476938091f6f782bc}{HAL\+\_\+\+RTCEx\+\_\+\+Monotonic\+Counter\+Increment}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Instance)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga81efb2f70ddacf26eae5a223a730a3e1}{HAL\+\_\+\+RTCEx\+\_\+\+Monotonic\+Counter\+Get}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Instance, uint32\+\_\+t \texorpdfstring{$\ast$}{*}Value)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga191fde17ef690ec387bbf6823f5f6826}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+SSRU\+\_\+\+IT}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga63795bba632906a2c433240be84c3239}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+SSRU}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_gad42c8c27143b24b18d26e1e41e492cdc}{HAL\+\_\+\+RTCEx\+\_\+\+SSRUIRQHandler}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group3_ga77d6b8f12e9df0d05fc170a3d42a665a}{HAL\+\_\+\+RTCEx\+\_\+\+SSRUEvent\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group4_ga9da295aecbc4566dabc161437d1b95f2}{HAL\+\_\+\+RTCEx\+\_\+\+Alarm\+BEvent\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group4_gaec42cd894d63744c4914ec6a65510cae}{HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Alarm\+BEvent}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga4b819431e03c521285cf3e275d930707}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__TamperTypeDef}{RTC\+\_\+\+Tamper\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Tamper)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga4984cf38a5bbdf1f607cc94cfdf3797f}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper\+\_\+\+IT}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__TamperTypeDef}{RTC\+\_\+\+Tamper\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Tamper)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_gaf0c1b98177dbd9d20c460d6130dbad7e}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Tamper}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Tamper)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_gaa19b6b8acdc3aa1f3d2c1e500d224ea9}{HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Tamper\+Event}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Tamper, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_gad7ace242d796bf423fe25e457612d858}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Internal\+Tamper}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__InternalTamperTypeDef}{RTC\+\_\+\+Internal\+Tamper\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Int\+Tamper)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_gaf5b2c0b92bb0a4bca2c8b337421e81bb}{HAL\+\_\+\+RTCEx\+\_\+\+Set\+Internal\+Tamper\+\_\+\+IT}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__InternalTamperTypeDef}{RTC\+\_\+\+Internal\+Tamper\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Int\+Tamper)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga5335bfc4ef65a0f520baa75aca5e5d0d}{HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Internal\+Tamper}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Int\+Tamper)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga87431fb1fc7f8c6a04ca774891c93cb6}{HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Internal\+Tamper\+Event}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Int\+Tamper, uint32\+\_\+t Timeout)
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga98a5b74f60d90b7533827b2ec4962899}{HAL\+\_\+\+RTCEx\+\_\+\+Tamper\+IRQHandler}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_gad849caf1e7b4774af56388a13636ba73}{HAL\+\_\+\+RTCEx\+\_\+\+Tamper1\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga14086326964355aaf3793ad3157ea7c3}{HAL\+\_\+\+RTCEx\+\_\+\+Tamper2\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga60dcd53b9a5ce3ef03822fda3d09c0c0}{HAL\+\_\+\+RTCEx\+\_\+\+Tamper3\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga9378649d9e5e52abb608cadae128b1b8}{HAL\+\_\+\+RTCEx\+\_\+\+Internal\+Tamper3\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga0de3d49ac8053a9349ef8e4a6443bdeb}{HAL\+\_\+\+RTCEx\+\_\+\+Internal\+Tamper5\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga4802a170a371a0ca56338ffff73fde6f}{HAL\+\_\+\+RTCEx\+\_\+\+Internal\+Tamper6\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group5_ga9637c64b37add353f43d5760ec6564e0}{HAL\+\_\+\+RTCEx\+\_\+\+Internal\+Tamper8\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group6_gafb908a2f254ccff959c31ac70e957de4}{HAL\+\_\+\+RTCEx\+\_\+\+BKUPWrite}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Backup\+Register, uint32\+\_\+t Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__RTCEx__Exported__Functions__Group6_ga37ba612da141a2b443bf64210f981513}{HAL\+\_\+\+RTCEx\+\_\+\+BKUPRead}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Backup\+Register)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of RTC HAL Extended module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+

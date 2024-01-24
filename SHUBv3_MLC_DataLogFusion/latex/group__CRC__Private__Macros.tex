@@ -1,0 +1,86 @@
+\doxysubsubsection{CRC Private Macros}
+\hypertarget{group__CRC__Private__Macros}{}\label{group__CRC__Private__Macros}\index{CRC Private Macros@{CRC Private Macros}}
+\doxysubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__CRC__Private__Macros_ga32d8416e8f3ca5b4f9ea4f123c709bb3}{IS\+\_\+\+DEFAULT\+\_\+\+POLYNOMIAL}}(DEFAULT)
+\item 
+\#define \mbox{\hyperlink{group__CRC__Private__Macros_ga072e4b4d9fb9456ff43f4b3fe7ffcddd}{IS\+\_\+\+DEFAULT\+\_\+\+INIT\+\_\+\+VALUE}}(VALUE)
+\item 
+\#define \mbox{\hyperlink{group__CRC__Private__Macros_gad7ce4941893a7a73fc943153fd7adbca}{IS\+\_\+\+CRC\+\_\+\+POL\+\_\+\+LENGTH}}(LENGTH)
+\item 
+\#define \mbox{\hyperlink{group__CRC__Private__Macros_ga50346f3a18902e2b406cedc016bc2237}{IS\+\_\+\+CRC\+\_\+\+INPUTDATA\+\_\+\+FORMAT}}(FORMAT)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__CRC__Private__Macros_ga50346f3a18902e2b406cedc016bc2237}\label{group__CRC__Private__Macros_ga50346f3a18902e2b406cedc016bc2237} 
+\index{CRC Private Macros@{CRC Private Macros}!IS\_CRC\_INPUTDATA\_FORMAT@{IS\_CRC\_INPUTDATA\_FORMAT}}
+\index{IS\_CRC\_INPUTDATA\_FORMAT@{IS\_CRC\_INPUTDATA\_FORMAT}!CRC Private Macros@{CRC Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_CRC\_INPUTDATA\_FORMAT}{IS\_CRC\_INPUTDATA\_FORMAT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+CRC\+\_\+\+INPUTDATA\+\_\+\+FORMAT(\begin{DoxyParamCaption}\item[{}]{FORMAT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((FORMAT)\ ==\ \mbox{\hyperlink{group__CRC__Input__Buffer__Format_ga8cd184ddf6651b0235a50fde2f82f71c}{CRC\_INPUTDATA\_FORMAT\_BYTES}})\ \ \ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((FORMAT)\ ==\ \mbox{\hyperlink{group__CRC__Input__Buffer__Format_ga00a0b70660bdaf9495c5998da7d59160}{CRC\_INPUTDATA\_FORMAT\_HALFWORDS}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((FORMAT)\ ==\ \mbox{\hyperlink{group__CRC__Input__Buffer__Format_ga00c466197b04c123fee66985c88cc9a3}{CRC\_INPUTDATA\_FORMAT\_WORDS}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00279}{279}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{group__CRC__Private__Macros_gad7ce4941893a7a73fc943153fd7adbca}\label{group__CRC__Private__Macros_gad7ce4941893a7a73fc943153fd7adbca} 
+\index{CRC Private Macros@{CRC Private Macros}!IS\_CRC\_POL\_LENGTH@{IS\_CRC\_POL\_LENGTH}}
+\index{IS\_CRC\_POL\_LENGTH@{IS\_CRC\_POL\_LENGTH}!CRC Private Macros@{CRC Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_CRC\_POL\_LENGTH}{IS\_CRC\_POL\_LENGTH}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+CRC\+\_\+\+POL\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{LENGTH }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((LENGTH)\ ==\ \mbox{\hyperlink{group__CRC__Polynomial__Sizes_ga48296f63c36de0607cee59ef3c839619}{CRC\_POLYLENGTH\_32B}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((LENGTH)\ ==\ \mbox{\hyperlink{group__CRC__Polynomial__Sizes_ga465284112fe8fd9f816549b177e317ae}{CRC\_POLYLENGTH\_16B}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((LENGTH)\ ==\ \mbox{\hyperlink{group__CRC__Polynomial__Sizes_ga2d21b94b89c24c4279d1b1f4a733314d}{CRC\_POLYLENGTH\_8B}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((LENGTH)\ ==\ \mbox{\hyperlink{group__CRC__Polynomial__Sizes_gab2cccb837ec498fa4e90fa41183a754b}{CRC\_POLYLENGTH\_7B}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00274}{274}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{group__CRC__Private__Macros_ga072e4b4d9fb9456ff43f4b3fe7ffcddd}\label{group__CRC__Private__Macros_ga072e4b4d9fb9456ff43f4b3fe7ffcddd} 
+\index{CRC Private Macros@{CRC Private Macros}!IS\_DEFAULT\_INIT\_VALUE@{IS\_DEFAULT\_INIT\_VALUE}}
+\index{IS\_DEFAULT\_INIT\_VALUE@{IS\_DEFAULT\_INIT\_VALUE}!CRC Private Macros@{CRC Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_DEFAULT\_INIT\_VALUE}{IS\_DEFAULT\_INIT\_VALUE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+DEFAULT\+\_\+\+INIT\+\_\+\+VALUE(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((VALUE)\ ==\ \mbox{\hyperlink{group__CRC__Default__InitValue__Use_ga8b0195a27ee978df13f2489b59f3513b}{DEFAULT\_INIT\_VALUE\_ENABLE}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((VALUE)\ ==\ \mbox{\hyperlink{group__CRC__Default__InitValue__Use_ga29daf4c0f7c63b3f154f65a299663082}{DEFAULT\_INIT\_VALUE\_DISABLE}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00271}{271}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{group__CRC__Private__Macros_ga32d8416e8f3ca5b4f9ea4f123c709bb3}\label{group__CRC__Private__Macros_ga32d8416e8f3ca5b4f9ea4f123c709bb3} 
+\index{CRC Private Macros@{CRC Private Macros}!IS\_DEFAULT\_POLYNOMIAL@{IS\_DEFAULT\_POLYNOMIAL}}
+\index{IS\_DEFAULT\_POLYNOMIAL@{IS\_DEFAULT\_POLYNOMIAL}!CRC Private Macros@{CRC Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_DEFAULT\_POLYNOMIAL}{IS\_DEFAULT\_POLYNOMIAL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+DEFAULT\+\_\+\+POLYNOMIAL(\begin{DoxyParamCaption}\item[{}]{DEFAULT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((DEFAULT)\ ==\ \mbox{\hyperlink{group__CRC__Default__Polynomial_gab0832d9b81abb377d57b24ef582eaef1}{DEFAULT\_POLYNOMIAL\_ENABLE}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((DEFAULT)\ ==\ \mbox{\hyperlink{group__CRC__Default__Polynomial_gaf972020dc216dc6b0a6c2faf39bef2b8}{DEFAULT\_POLYNOMIAL\_DISABLE}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00268}{268}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+

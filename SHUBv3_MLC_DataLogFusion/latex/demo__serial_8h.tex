@@ -1,0 +1,374 @@
+\doxysection{MEMS/\+Target/demo\+\_\+serial.h File Reference}
+\hypertarget{demo__serial_8h}{}\label{demo__serial_8h}\index{MEMS/Target/demo\_serial.h@{MEMS/Target/demo\_serial.h}}
+
+
+Header for \doxylink{demo__serial_8c}{demo\+\_\+serial.\+c}.  
+
+
+{\ttfamily \#include "{}serial\+\_\+protocol.\+h"{}}\newline
+{\ttfamily \#include "{}serial\+\_\+cmd.\+h"{}}\newline
+{\ttfamily \#include "{}bsp\+\_\+ip\+\_\+conf.\+h"{}}\newline
+{\ttfamily \#include "{}motion\+\_\+fx\+\_\+manager.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structoffline__data__t}{offline\+\_\+data\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_ac44f5cca7e9d78c2fc5e975cff7ea9f6}{SENDER\+\_\+\+UART}}~0x01
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a7007946d92e7ff952996aabc7d425cd9}{SENDER\+\_\+\+USB}}~0x02
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a0b1028d863c94eb6a0868c05c3600112}{SENDER\+\_\+\+SPI}}~0x03
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a68c4ed924017f3a22265a40cc4e34b18}{DEV\+\_\+\+ADDR}}~50U
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a8085d5463ebd0479bbd5203cf14d6926}{I2\+C\+\_\+\+DATA\+\_\+\+MAX\+\_\+\+LENGTH\+\_\+\+BYTES}}~16
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_adcd021ac91d43a62b2cdecf9a5b971a7}{MIN}}(A,  B)~((A)$<$(B)?(A)\+:(B))
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\+\_\+\+DATA\+\_\+\+SIZE}}~8
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a3ebd68dc2ee694f72cc2e51ee4cdce7c}{PRESSURE\+\_\+\+SENSOR}}~0x00000001U
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a528da39d9618b46df97d266c87d43ad0}{TEMPERATURE\+\_\+\+SENSOR}}~0x00000002U
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a502a41fc1bb8bfe48cc2bcd48dd2e41c}{HUMIDITY\+\_\+\+SENSOR}}~0x00000004U
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_aa0cec0c1205d3d9a8f2a9b6fd6bcb4ae}{UV\+\_\+\+SENSOR}}~0x00000008U /\texorpdfstring{$\ast$}{*} for future use \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_ab8518075a3036924ae4f0f107c07897b}{ACCELEROMETER\+\_\+\+SENSOR}}~0x00000010U
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_afb11fa2899b96e40c6a009469f239146}{GYROSCOPE\+\_\+\+SENSOR}}~0x00000020U
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a4d825992de712f344187e8bcbed90d07}{MAGNETIC\+\_\+\+SENSOR}}~0x00000040U
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_aef04ecfab352f1fedcaa7e043f32c0fc}{STREAMING\+\_\+\+MSG\+\_\+\+LENGTH}}~119
+\item 
+\#define \mbox{\hyperlink{demo__serial_8h_a0edfe5584420f8eb787b5f9cf694c7f7}{REQUIRED\+\_\+\+DATA}}~(\mbox{\hyperlink{demo__serial_8h_ab8518075a3036924ae4f0f107c07897b}{ACCELEROMETER\+\_\+\+SENSOR}} + \mbox{\hyperlink{demo__serial_8h_afb11fa2899b96e40c6a009469f239146}{GYROSCOPE\+\_\+\+SENSOR}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\+\_\+\+REPLY\+\_\+\+HEADER}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Build the reply header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga93e2f792c7ac7e088eaa2cf6bbc21028}{INIT\+\_\+\+STREAMING\+\_\+\+HEADER}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Initialize the streaming header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga140b99c6cfd3935acaeedec0e26d1950}{INIT\+\_\+\+STREAMING\+\_\+\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Initialize the streaming message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga4eb41985a5b7a732924e74891950c19e}{Handle\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Handle a message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb}{RTC\+\_\+\+Date\+Regulate}} (uint8\+\_\+t y, uint8\+\_\+t m, uint8\+\_\+t d, uint8\+\_\+t dw)
+\begin{DoxyCompactList}\small\item\em Configures the current date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5}{RTC\+\_\+\+Time\+Regulate}} (uint8\+\_\+t hh, uint8\+\_\+t mm, uint8\+\_\+t ss)
+\begin{DoxyCompactList}\small\item\em Configures the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77}{Get\+\_\+\+Presentation\+String}} (char \texorpdfstring{$\ast$}{*}Presentation\+String, uint32\+\_\+t \texorpdfstring{$\ast$}{*}Length)
+\begin{DoxyCompactList}\small\item\em Gets Presentation string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{demo__serial_8h_ab54d52fbda5cdd117c7a755f454261de}{Data\+Logger\+Active}}
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{demo__serial_8h_a05f95f1a8ed6463148a373140e469b1e}{Sensors\+Enabled}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{demo__serial_8h_ad278b2f8cb00c50b308dd75c344809d1}{Sensor\+Read\+Request}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{demo__serial_8h_a633d5490b22d0ec9437a5dc4d6a76f8d}{Use\+Offline\+Data}}
+\item 
+\mbox{\hyperlink{structoffline__data__t}{offline\+\_\+data\+\_\+t}} \mbox{\hyperlink{demo__serial_8h_a15062e472693f23c93a197f62398fe86}{Offline\+Data}} \mbox{[}\mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\+\_\+\+DATA\+\_\+\+SIZE}}\mbox{]}
+\item 
+int \mbox{\hyperlink{demo__serial_8h_a817193084d8fcde8c84785b4e2c36729}{Offline\+Data\+Read\+Index}}
+\item 
+int \mbox{\hyperlink{demo__serial_8h_a4d9ec1fd2146797b6256cbc04b079313}{Offline\+Data\+Write\+Index}}
+\item 
+int \mbox{\hyperlink{demo__serial_8h_a326ea7f09480d172d9d51e2b126081d9}{Offline\+Data\+Count}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{demo__serial_8h_ac4a4343c5345def8433286e074933a9c}{Algo\+Freq}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{demo__serial_8h_af985acaf29e3e7402e0eae16e022745f}{Enabled6X}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for \doxylink{demo__serial_8c}{demo\+\_\+serial.\+c}. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{demo__serial_8h_ab8518075a3036924ae4f0f107c07897b}\label{demo__serial_8h_ab8518075a3036924ae4f0f107c07897b} 
+\index{demo\_serial.h@{demo\_serial.h}!ACCELEROMETER\_SENSOR@{ACCELEROMETER\_SENSOR}}
+\index{ACCELEROMETER\_SENSOR@{ACCELEROMETER\_SENSOR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{ACCELEROMETER\_SENSOR}{ACCELEROMETER\_SENSOR}}
+{\footnotesize\ttfamily \#define ACCELEROMETER\+\_\+\+SENSOR~0x00000010U}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00068}{68}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a68c4ed924017f3a22265a40cc4e34b18}\label{demo__serial_8h_a68c4ed924017f3a22265a40cc4e34b18} 
+\index{demo\_serial.h@{demo\_serial.h}!DEV\_ADDR@{DEV\_ADDR}}
+\index{DEV\_ADDR@{DEV\_ADDR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{DEV\_ADDR}{DEV\_ADDR}}
+{\footnotesize\ttfamily \#define DEV\+\_\+\+ADDR~50U}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00058}{58}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_afb11fa2899b96e40c6a009469f239146}\label{demo__serial_8h_afb11fa2899b96e40c6a009469f239146} 
+\index{demo\_serial.h@{demo\_serial.h}!GYROSCOPE\_SENSOR@{GYROSCOPE\_SENSOR}}
+\index{GYROSCOPE\_SENSOR@{GYROSCOPE\_SENSOR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{GYROSCOPE\_SENSOR}{GYROSCOPE\_SENSOR}}
+{\footnotesize\ttfamily \#define GYROSCOPE\+\_\+\+SENSOR~0x00000020U}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00069}{69}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a502a41fc1bb8bfe48cc2bcd48dd2e41c}\label{demo__serial_8h_a502a41fc1bb8bfe48cc2bcd48dd2e41c} 
+\index{demo\_serial.h@{demo\_serial.h}!HUMIDITY\_SENSOR@{HUMIDITY\_SENSOR}}
+\index{HUMIDITY\_SENSOR@{HUMIDITY\_SENSOR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{HUMIDITY\_SENSOR}{HUMIDITY\_SENSOR}}
+{\footnotesize\ttfamily \#define HUMIDITY\+\_\+\+SENSOR~0x00000004U}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00066}{66}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a8085d5463ebd0479bbd5203cf14d6926}\label{demo__serial_8h_a8085d5463ebd0479bbd5203cf14d6926} 
+\index{demo\_serial.h@{demo\_serial.h}!I2C\_DATA\_MAX\_LENGTH\_BYTES@{I2C\_DATA\_MAX\_LENGTH\_BYTES}}
+\index{I2C\_DATA\_MAX\_LENGTH\_BYTES@{I2C\_DATA\_MAX\_LENGTH\_BYTES}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_DATA\_MAX\_LENGTH\_BYTES}{I2C\_DATA\_MAX\_LENGTH\_BYTES}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+DATA\+\_\+\+MAX\+\_\+\+LENGTH\+\_\+\+BYTES~16}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00059}{59}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a4d825992de712f344187e8bcbed90d07}\label{demo__serial_8h_a4d825992de712f344187e8bcbed90d07} 
+\index{demo\_serial.h@{demo\_serial.h}!MAGNETIC\_SENSOR@{MAGNETIC\_SENSOR}}
+\index{MAGNETIC\_SENSOR@{MAGNETIC\_SENSOR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{MAGNETIC\_SENSOR}{MAGNETIC\_SENSOR}}
+{\footnotesize\ttfamily \#define MAGNETIC\+\_\+\+SENSOR~0x00000040U}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00070}{70}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_adcd021ac91d43a62b2cdecf9a5b971a7}\label{demo__serial_8h_adcd021ac91d43a62b2cdecf9a5b971a7} 
+\index{demo\_serial.h@{demo\_serial.h}!MIN@{MIN}}
+\index{MIN@{MIN}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define MIN(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~((A)$<$(B)?(A)\+:(B))}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00060}{60}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}\label{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199} 
+\index{demo\_serial.h@{demo\_serial.h}!OFFLINE\_DATA\_SIZE@{OFFLINE\_DATA\_SIZE}}
+\index{OFFLINE\_DATA\_SIZE@{OFFLINE\_DATA\_SIZE}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{OFFLINE\_DATA\_SIZE}{OFFLINE\_DATA\_SIZE}}
+{\footnotesize\ttfamily \#define OFFLINE\+\_\+\+DATA\+\_\+\+SIZE~8}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00061}{61}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a3ebd68dc2ee694f72cc2e51ee4cdce7c}\label{demo__serial_8h_a3ebd68dc2ee694f72cc2e51ee4cdce7c} 
+\index{demo\_serial.h@{demo\_serial.h}!PRESSURE\_SENSOR@{PRESSURE\_SENSOR}}
+\index{PRESSURE\_SENSOR@{PRESSURE\_SENSOR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{PRESSURE\_SENSOR}{PRESSURE\_SENSOR}}
+{\footnotesize\ttfamily \#define PRESSURE\+\_\+\+SENSOR~0x00000001U}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00064}{64}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a0edfe5584420f8eb787b5f9cf694c7f7}\label{demo__serial_8h_a0edfe5584420f8eb787b5f9cf694c7f7} 
+\index{demo\_serial.h@{demo\_serial.h}!REQUIRED\_DATA@{REQUIRED\_DATA}}
+\index{REQUIRED\_DATA@{REQUIRED\_DATA}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{REQUIRED\_DATA}{REQUIRED\_DATA}}
+{\footnotesize\ttfamily \#define REQUIRED\+\_\+\+DATA~(\mbox{\hyperlink{demo__serial_8h_ab8518075a3036924ae4f0f107c07897b}{ACCELEROMETER\+\_\+\+SENSOR}} + \mbox{\hyperlink{demo__serial_8h_afb11fa2899b96e40c6a009469f239146}{GYROSCOPE\+\_\+\+SENSOR}})}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00074}{74}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a0b1028d863c94eb6a0868c05c3600112}\label{demo__serial_8h_a0b1028d863c94eb6a0868c05c3600112} 
+\index{demo\_serial.h@{demo\_serial.h}!SENDER\_SPI@{SENDER\_SPI}}
+\index{SENDER\_SPI@{SENDER\_SPI}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{SENDER\_SPI}{SENDER\_SPI}}
+{\footnotesize\ttfamily \#define SENDER\+\_\+\+SPI~0x03}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00056}{56}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_ac44f5cca7e9d78c2fc5e975cff7ea9f6}\label{demo__serial_8h_ac44f5cca7e9d78c2fc5e975cff7ea9f6} 
+\index{demo\_serial.h@{demo\_serial.h}!SENDER\_UART@{SENDER\_UART}}
+\index{SENDER\_UART@{SENDER\_UART}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{SENDER\_UART}{SENDER\_UART}}
+{\footnotesize\ttfamily \#define SENDER\+\_\+\+UART~0x01}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00054}{54}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a7007946d92e7ff952996aabc7d425cd9}\label{demo__serial_8h_a7007946d92e7ff952996aabc7d425cd9} 
+\index{demo\_serial.h@{demo\_serial.h}!SENDER\_USB@{SENDER\_USB}}
+\index{SENDER\_USB@{SENDER\_USB}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{SENDER\_USB}{SENDER\_USB}}
+{\footnotesize\ttfamily \#define SENDER\+\_\+\+USB~0x02}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00055}{55}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_aef04ecfab352f1fedcaa7e043f32c0fc}\label{demo__serial_8h_aef04ecfab352f1fedcaa7e043f32c0fc} 
+\index{demo\_serial.h@{demo\_serial.h}!STREAMING\_MSG\_LENGTH@{STREAMING\_MSG\_LENGTH}}
+\index{STREAMING\_MSG\_LENGTH@{STREAMING\_MSG\_LENGTH}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{STREAMING\_MSG\_LENGTH}{STREAMING\_MSG\_LENGTH}}
+{\footnotesize\ttfamily \#define STREAMING\+\_\+\+MSG\+\_\+\+LENGTH~119}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00072}{72}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_a528da39d9618b46df97d266c87d43ad0}\label{demo__serial_8h_a528da39d9618b46df97d266c87d43ad0} 
+\index{demo\_serial.h@{demo\_serial.h}!TEMPERATURE\_SENSOR@{TEMPERATURE\_SENSOR}}
+\index{TEMPERATURE\_SENSOR@{TEMPERATURE\_SENSOR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{TEMPERATURE\_SENSOR}{TEMPERATURE\_SENSOR}}
+{\footnotesize\ttfamily \#define TEMPERATURE\+\_\+\+SENSOR~0x00000002U}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00065}{65}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+\Hypertarget{demo__serial_8h_aa0cec0c1205d3d9a8f2a9b6fd6bcb4ae}\label{demo__serial_8h_aa0cec0c1205d3d9a8f2a9b6fd6bcb4ae} 
+\index{demo\_serial.h@{demo\_serial.h}!UV\_SENSOR@{UV\_SENSOR}}
+\index{UV\_SENSOR@{UV\_SENSOR}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{UV\_SENSOR}{UV\_SENSOR}}
+{\footnotesize\ttfamily \#define UV\+\_\+\+SENSOR~0x00000008U /\texorpdfstring{$\ast$}{*} for future use \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{demo__serial_8h_source_l00067}{67}} of file \mbox{\hyperlink{demo__serial_8h_source}{demo\+\_\+serial.\+h}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{demo__serial_8h_ac4a4343c5345def8433286e074933a9c}\label{demo__serial_8h_ac4a4343c5345def8433286e074933a9c} 
+\index{demo\_serial.h@{demo\_serial.h}!AlgoFreq@{AlgoFreq}}
+\index{AlgoFreq@{AlgoFreq}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{AlgoFreq}{AlgoFreq}}
+{\footnotesize\ttfamily uint32\+\_\+t Algo\+Freq\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00062}{62}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_ab54d52fbda5cdd117c7a755f454261de}\label{demo__serial_8h_ab54d52fbda5cdd117c7a755f454261de} 
+\index{demo\_serial.h@{demo\_serial.h}!DataLoggerActive@{DataLoggerActive}}
+\index{DataLoggerActive@{DataLoggerActive}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{DataLoggerActive}{DataLoggerActive}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t Data\+Logger\+Active\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00052}{52}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_af985acaf29e3e7402e0eae16e022745f}\label{demo__serial_8h_af985acaf29e3e7402e0eae16e022745f} 
+\index{demo\_serial.h@{demo\_serial.h}!Enabled6X@{Enabled6X}}
+\index{Enabled6X@{Enabled6X}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{Enabled6X}{Enabled6X}}
+{\footnotesize\ttfamily uint8\+\_\+t Enabled6X\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00063}{63}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_a15062e472693f23c93a197f62398fe86}\label{demo__serial_8h_a15062e472693f23c93a197f62398fe86} 
+\index{demo\_serial.h@{demo\_serial.h}!OfflineData@{OfflineData}}
+\index{OfflineData@{OfflineData}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{OfflineData}{OfflineData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structoffline__data__t}{offline\+\_\+data\+\_\+t}} Offline\+Data\mbox{[}\mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\+\_\+\+DATA\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00058}{58}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_a326ea7f09480d172d9d51e2b126081d9}\label{demo__serial_8h_a326ea7f09480d172d9d51e2b126081d9} 
+\index{demo\_serial.h@{demo\_serial.h}!OfflineDataCount@{OfflineDataCount}}
+\index{OfflineDataCount@{OfflineDataCount}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{OfflineDataCount}{OfflineDataCount}}
+{\footnotesize\ttfamily int Offline\+Data\+Count\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00061}{61}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_a817193084d8fcde8c84785b4e2c36729}\label{demo__serial_8h_a817193084d8fcde8c84785b4e2c36729} 
+\index{demo\_serial.h@{demo\_serial.h}!OfflineDataReadIndex@{OfflineDataReadIndex}}
+\index{OfflineDataReadIndex@{OfflineDataReadIndex}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{OfflineDataReadIndex}{OfflineDataReadIndex}}
+{\footnotesize\ttfamily int Offline\+Data\+Read\+Index\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00059}{59}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_a4d9ec1fd2146797b6256cbc04b079313}\label{demo__serial_8h_a4d9ec1fd2146797b6256cbc04b079313} 
+\index{demo\_serial.h@{demo\_serial.h}!OfflineDataWriteIndex@{OfflineDataWriteIndex}}
+\index{OfflineDataWriteIndex@{OfflineDataWriteIndex}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{OfflineDataWriteIndex}{OfflineDataWriteIndex}}
+{\footnotesize\ttfamily int Offline\+Data\+Write\+Index\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00060}{60}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_ad278b2f8cb00c50b308dd75c344809d1}\label{demo__serial_8h_ad278b2f8cb00c50b308dd75c344809d1} 
+\index{demo\_serial.h@{demo\_serial.h}!SensorReadRequest@{SensorReadRequest}}
+\index{SensorReadRequest@{SensorReadRequest}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{SensorReadRequest}{SensorReadRequest}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t Sensor\+Read\+Request\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00056}{56}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_a05f95f1a8ed6463148a373140e469b1e}\label{demo__serial_8h_a05f95f1a8ed6463148a373140e469b1e} 
+\index{demo\_serial.h@{demo\_serial.h}!SensorsEnabled@{SensorsEnabled}}
+\index{SensorsEnabled@{SensorsEnabled}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{SensorsEnabled}{SensorsEnabled}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t Sensors\+Enabled\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00053}{53}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{demo__serial_8h_a633d5490b22d0ec9437a5dc4d6a76f8d}\label{demo__serial_8h_a633d5490b22d0ec9437a5dc4d6a76f8d} 
+\index{demo\_serial.h@{demo\_serial.h}!UseOfflineData@{UseOfflineData}}
+\index{UseOfflineData@{UseOfflineData}!demo\_serial.h@{demo\_serial.h}}
+\doxysubsubsection{\texorpdfstring{UseOfflineData}{UseOfflineData}}
+{\footnotesize\ttfamily uint8\+\_\+t Use\+Offline\+Data\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00057}{57}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+

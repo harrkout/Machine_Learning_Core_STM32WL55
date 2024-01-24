@@ -1,0 +1,522 @@
+\doxysection{LSM6\+DSOX\+\_\+finite\+\_\+state\+\_\+machine}
+\hypertarget{group__LSM6DSOX__finite__state__machine}{}\label{group__LSM6DSOX__finite__state__machine}\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+
+
+This section groups all the functions that manage the state\+\_\+machine.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga729fac8fb69cf0a13ec2f5bbb025a46a}{lsm6dsox\+\_\+long\+\_\+cnt\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt status bit for FSM long counter timeout interrupt event.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga092636158277fc04343b31d8f6ea0777}{lsm6dsox\+\_\+fsm\+\_\+enable\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__emb__fsm__enable__t}{lsm6dsox\+\_\+emb\+\_\+fsm\+\_\+enable\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Finite State Machine enable.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga06f6e1bc09022fbc98a7b126971cc03a}{lsm6dsox\+\_\+fsm\+\_\+enable\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__emb__fsm__enable__t}{lsm6dsox\+\_\+emb\+\_\+fsm\+\_\+enable\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Finite State Machine enable.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga9ca5617ceda82d8227ea61538a4a75b2}{lsm6dsox\+\_\+long\+\_\+cnt\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM long counter status register. Long counter value is an unsigned integer value (16-\/bit format).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga0f13a4d3b8c98265e4cda4e52d19f972}{lsm6dsox\+\_\+long\+\_\+cnt\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM long counter status register. Long counter value is an unsigned integer value (16-\/bit format).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga28bbc7c02374ef19ff21592bac65c815}{lsm6dsox\+\_\+long\+\_\+clr\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga4ced3b2fc4030ee918ab91cecc893113}{lsm6dsox\+\_\+fsm\+\_\+lc\+\_\+clr\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Clear FSM long counter value.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga3e8cea4c91f9f569b4cec2f0033c36f6}{lsm6dsox\+\_\+long\+\_\+clr\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga4ced3b2fc4030ee918ab91cecc893113}{lsm6dsox\+\_\+fsm\+\_\+lc\+\_\+clr\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Clear FSM long counter value.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_gae8ae5fae574ffa9dc1550cd2eecac06a}{lsm6dsox\+\_\+fsm\+\_\+out\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__fsm__out__t}{lsm6dsox\+\_\+fsm\+\_\+out\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM output registers\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga50474064b6dd59a16e0ddb9420d88886}{lsm6dsox\+\_\+fsm\+\_\+data\+\_\+rate\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gaf659378fc8dda2b0543b36d04527efc5}{lsm6dsox\+\_\+fsm\+\_\+odr\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Finite State Machine ODR configuration.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_gaaca9b841cf5601ca709790de37bd068e}{lsm6dsox\+\_\+fsm\+\_\+data\+\_\+rate\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gaf659378fc8dda2b0543b36d04527efc5}{lsm6dsox\+\_\+fsm\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Finite State Machine ODR configuration.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga0af1b54512389a93bb4ecbc76bb5bb44}{lsm6dsox\+\_\+fsm\+\_\+init\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM initialization request.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga9619af5baa3c6d84557b1dec2afe1488}{lsm6dsox\+\_\+fsm\+\_\+init\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM initialization request.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga4b58162ec808ef76763638a9a80df42c}{lsm6dsox\+\_\+long\+\_\+cnt\+\_\+int\+\_\+value\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM long counter timeout register (r/w). The long counter timeout value is an unsigned integer value (16-\/bit format). When the long counter value reached this value, the FSM generates an interrupt.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga3e2d7cfda0b8ef92d4c41c3766f65986}{lsm6dsox\+\_\+long\+\_\+cnt\+\_\+int\+\_\+value\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM long counter timeout register (r/w). The long counter timeout value is an unsigned integer value (16-\/bit format). When the long counter value reached this value, the FSM generates an interrupt.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_gabd2533e0513cb647ac7424f07648de4a}{lsm6dsox\+\_\+fsm\+\_\+number\+\_\+of\+\_\+programs\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM number of programs register.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_ga0d26742b93fc2536b237ee22caa62d7b}{lsm6dsox\+\_\+fsm\+\_\+number\+\_\+of\+\_\+programs\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM number of programs register.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_gacb23808cb72e0bc7a986ce8a80a70ccb}{lsm6dsox\+\_\+fsm\+\_\+start\+\_\+address\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM start address register (r/w). First available address is 0x033C.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__finite__state__machine_gaf28d26f58776915d9ec7170b2776ca31}{lsm6dsox\+\_\+fsm\+\_\+start\+\_\+address\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM start address register (r/w). First available address is 0x033C.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions that manage the state\+\_\+machine. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__finite__state__machine_gaaca9b841cf5601ca709790de37bd068e}\label{group__LSM6DSOX__finite__state__machine_gaaca9b841cf5601ca709790de37bd068e} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_data\_rate\_get@{lsm6dsox\_fsm\_data\_rate\_get}}
+\index{lsm6dsox\_fsm\_data\_rate\_get@{lsm6dsox\_fsm\_data\_rate\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_data\_rate\_get()}{lsm6dsox\_fsm\_data\_rate\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+data\+\_\+rate\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gaf659378fc8dda2b0543b36d04527efc5}{lsm6dsox\+\_\+fsm\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Finite State Machine ODR configuration.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of fsm\+\_\+odr in reg EMB\+\_\+\+FUNC\+\_\+\+ODR\+\_\+\+CFG\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09688}{9688}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga50474064b6dd59a16e0ddb9420d88886}\label{group__LSM6DSOX__finite__state__machine_ga50474064b6dd59a16e0ddb9420d88886} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_data\_rate\_set@{lsm6dsox\_fsm\_data\_rate\_set}}
+\index{lsm6dsox\_fsm\_data\_rate\_set@{lsm6dsox\_fsm\_data\_rate\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_data\_rate\_set()}{lsm6dsox\_fsm\_data\_rate\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+data\+\_\+rate\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gaf659378fc8dda2b0543b36d04527efc5}{lsm6dsox\+\_\+fsm\+\_\+odr\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Finite State Machine ODR configuration.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fsm\+\_\+odr in reg EMB\+\_\+\+FUNC\+\_\+\+ODR\+\_\+\+CFG\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09649}{9649}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga06f6e1bc09022fbc98a7b126971cc03a}\label{group__LSM6DSOX__finite__state__machine_ga06f6e1bc09022fbc98a7b126971cc03a} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_enable\_get@{lsm6dsox\_fsm\_enable\_get}}
+\index{lsm6dsox\_fsm\_enable\_get@{lsm6dsox\_fsm\_enable\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_enable\_get()}{lsm6dsox\_fsm\_enable\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+enable\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__emb__fsm__enable__t}{lsm6dsox\+\_\+emb\+\_\+fsm\+\_\+enable\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Finite State Machine enable.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & union of registers from FSM\+\_\+\+ENABLE\+\_\+A to FSM\+\_\+\+ENABLE\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09439}{9439}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga092636158277fc04343b31d8f6ea0777}\label{group__LSM6DSOX__finite__state__machine_ga092636158277fc04343b31d8f6ea0777} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_enable\_set@{lsm6dsox\_fsm\_enable\_set}}
+\index{lsm6dsox\_fsm\_enable\_set@{lsm6dsox\_fsm\_enable\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_enable\_set()}{lsm6dsox\_fsm\_enable\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+enable\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__emb__fsm__enable__t}{lsm6dsox\+\_\+emb\+\_\+fsm\+\_\+enable\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Finite State Machine enable.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & union of registers from FSM\+\_\+\+ENABLE\+\_\+A to FSM\+\_\+\+ENABLE\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09404}{9404}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga9619af5baa3c6d84557b1dec2afe1488}\label{group__LSM6DSOX__finite__state__machine_ga9619af5baa3c6d84557b1dec2afe1488} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_init\_get@{lsm6dsox\_fsm\_init\_get}}
+\index{lsm6dsox\_fsm\_init\_get@{lsm6dsox\_fsm\_init\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_init\_get()}{lsm6dsox\_fsm\_init\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+init\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM initialization request.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fsm\+\_\+init in reg FSM\+\_\+\+INIT \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09777}{9777}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga0af1b54512389a93bb4ecbc76bb5bb44}\label{group__LSM6DSOX__finite__state__machine_ga0af1b54512389a93bb4ecbc76bb5bb44} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_init\_set@{lsm6dsox\_fsm\_init\_set}}
+\index{lsm6dsox\_fsm\_init\_set@{lsm6dsox\_fsm\_init\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_init\_set()}{lsm6dsox\_fsm\_init\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+init\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM initialization request.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fsm\+\_\+init in reg FSM\+\_\+\+INIT \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09741}{9741}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga0d26742b93fc2536b237ee22caa62d7b}\label{group__LSM6DSOX__finite__state__machine_ga0d26742b93fc2536b237ee22caa62d7b} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_number\_of\_programs\_get@{lsm6dsox\_fsm\_number\_of\_programs\_get}}
+\index{lsm6dsox\_fsm\_number\_of\_programs\_get@{lsm6dsox\_fsm\_number\_of\_programs\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_number\_of\_programs\_get()}{lsm6dsox\_fsm\_number\_of\_programs\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+number\+\_\+of\+\_\+programs\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM number of programs register.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & buffer that stores data read. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09890}{9890}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_gabd2533e0513cb647ac7424f07648de4a}\label{group__LSM6DSOX__finite__state__machine_gabd2533e0513cb647ac7424f07648de4a} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_number\_of\_programs\_set@{lsm6dsox\_fsm\_number\_of\_programs\_set}}
+\index{lsm6dsox\_fsm\_number\_of\_programs\_set@{lsm6dsox\_fsm\_number\_of\_programs\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_number\_of\_programs\_set()}{lsm6dsox\_fsm\_number\_of\_programs\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+number\+\_\+of\+\_\+programs\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM number of programs register.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & value to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09872}{9872}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_gae8ae5fae574ffa9dc1550cd2eecac06a}\label{group__LSM6DSOX__finite__state__machine_gae8ae5fae574ffa9dc1550cd2eecac06a} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_out\_get@{lsm6dsox\_fsm\_out\_get}}
+\index{lsm6dsox\_fsm\_out\_get@{lsm6dsox\_fsm\_out\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_out\_get()}{lsm6dsox\_fsm\_out\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+out\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__fsm__out__t}{lsm6dsox\+\_\+fsm\+\_\+out\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM output registers\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & struct of registers from FSM\+\_\+\+OUTS1 to FSM\+\_\+\+OUTS16 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09621}{9621}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_gaf28d26f58776915d9ec7170b2776ca31}\label{group__LSM6DSOX__finite__state__machine_gaf28d26f58776915d9ec7170b2776ca31} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_start\_address\_get@{lsm6dsox\_fsm\_start\_address\_get}}
+\index{lsm6dsox\_fsm\_start\_address\_get@{lsm6dsox\_fsm\_start\_address\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_start\_address\_get()}{lsm6dsox\_fsm\_start\_address\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+start\+\_\+address\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM start address register (r/w). First available address is 0x033C.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & buffer the value of start address. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09939}{9939}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_gacb23808cb72e0bc7a986ce8a80a70ccb}\label{group__LSM6DSOX__finite__state__machine_gacb23808cb72e0bc7a986ce8a80a70ccb} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_fsm\_start\_address\_set@{lsm6dsox\_fsm\_start\_address\_set}}
+\index{lsm6dsox\_fsm\_start\_address\_set@{lsm6dsox\_fsm\_start\_address\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_fsm\_start\_address\_set()}{lsm6dsox\_fsm\_start\_address\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+fsm\+\_\+start\+\_\+address\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM start address register (r/w). First available address is 0x033C.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & the value of start address \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09909}{9909}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga3e8cea4c91f9f569b4cec2f0033c36f6}\label{group__LSM6DSOX__finite__state__machine_ga3e8cea4c91f9f569b4cec2f0033c36f6} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_long\_clr\_get@{lsm6dsox\_long\_clr\_get}}
+\index{lsm6dsox\_long\_clr\_get@{lsm6dsox\_long\_clr\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_long\_clr\_get()}{lsm6dsox\_long\_clr\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+long\+\_\+clr\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga4ced3b2fc4030ee918ab91cecc893113}{lsm6dsox\+\_\+fsm\+\_\+lc\+\_\+clr\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Clear FSM long counter value.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of fsm\+\_\+lc\+\_\+clr in reg FSM\+\_\+\+LONG\+\_\+\+COUNTER\+\_\+\+CLEAR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09569}{9569}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga28bbc7c02374ef19ff21592bac65c815}\label{group__LSM6DSOX__finite__state__machine_ga28bbc7c02374ef19ff21592bac65c815} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_long\_clr\_set@{lsm6dsox\_long\_clr\_set}}
+\index{lsm6dsox\_long\_clr\_set@{lsm6dsox\_long\_clr\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_long\_clr\_set()}{lsm6dsox\_long\_clr\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+long\+\_\+clr\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga4ced3b2fc4030ee918ab91cecc893113}{lsm6dsox\+\_\+fsm\+\_\+lc\+\_\+clr\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Clear FSM long counter value.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fsm\+\_\+lc\+\_\+clr in reg FSM\+\_\+\+LONG\+\_\+\+COUNTER\+\_\+\+CLEAR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09531}{9531}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga729fac8fb69cf0a13ec2f5bbb025a46a}\label{group__LSM6DSOX__finite__state__machine_ga729fac8fb69cf0a13ec2f5bbb025a46a} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_long\_cnt\_flag\_data\_ready\_get@{lsm6dsox\_long\_cnt\_flag\_data\_ready\_get}}
+\index{lsm6dsox\_long\_cnt\_flag\_data\_ready\_get@{lsm6dsox\_long\_cnt\_flag\_data\_ready\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_long\_cnt\_flag\_data\_ready\_get()}{lsm6dsox\_long\_cnt\_flag\_data\_ready\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+long\+\_\+cnt\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Interrupt status bit for FSM long counter timeout interrupt event.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of is\+\_\+fsm\+\_\+lc in reg EMB\+\_\+\+FUNC\+\_\+\+STATUS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09373}{9373}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga0f13a4d3b8c98265e4cda4e52d19f972}\label{group__LSM6DSOX__finite__state__machine_ga0f13a4d3b8c98265e4cda4e52d19f972} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_long\_cnt\_get@{lsm6dsox\_long\_cnt\_get}}
+\index{lsm6dsox\_long\_cnt\_get@{lsm6dsox\_long\_cnt\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_long\_cnt\_get()}{lsm6dsox\_long\_cnt\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+long\+\_\+cnt\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM long counter status register. Long counter value is an unsigned integer value (16-\/bit format).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09500}{9500}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga3e2d7cfda0b8ef92d4c41c3766f65986}\label{group__LSM6DSOX__finite__state__machine_ga3e2d7cfda0b8ef92d4c41c3766f65986} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_long\_cnt\_int\_value\_get@{lsm6dsox\_long\_cnt\_int\_value\_get}}
+\index{lsm6dsox\_long\_cnt\_int\_value\_get@{lsm6dsox\_long\_cnt\_int\_value\_get}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_long\_cnt\_int\_value\_get()}{lsm6dsox\_long\_cnt\_int\_value\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+long\+\_\+cnt\+\_\+int\+\_\+value\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM long counter timeout register (r/w). The long counter timeout value is an unsigned integer value (16-\/bit format). When the long counter value reached this value, the FSM generates an interrupt.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & buffer that stores the value of long counter \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09842}{9842}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga4b58162ec808ef76763638a9a80df42c}\label{group__LSM6DSOX__finite__state__machine_ga4b58162ec808ef76763638a9a80df42c} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_long\_cnt\_int\_value\_set@{lsm6dsox\_long\_cnt\_int\_value\_set}}
+\index{lsm6dsox\_long\_cnt\_int\_value\_set@{lsm6dsox\_long\_cnt\_int\_value\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_long\_cnt\_int\_value\_set()}{lsm6dsox\_long\_cnt\_int\_value\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+long\+\_\+cnt\+\_\+int\+\_\+value\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM long counter timeout register (r/w). The long counter timeout value is an unsigned integer value (16-\/bit format). When the long counter value reached this value, the FSM generates an interrupt.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & the value of long counter \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09810}{9810}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__finite__state__machine_ga9ca5617ceda82d8227ea61538a4a75b2}\label{group__LSM6DSOX__finite__state__machine_ga9ca5617ceda82d8227ea61538a4a75b2} 
+\index{LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}!lsm6dsox\_long\_cnt\_set@{lsm6dsox\_long\_cnt\_set}}
+\index{lsm6dsox\_long\_cnt\_set@{lsm6dsox\_long\_cnt\_set}!LSM6DSOX\_finite\_state\_machine@{LSM6DSOX\_finite\_state\_machine}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_long\_cnt\_set()}{lsm6dsox\_long\_cnt\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+long\+\_\+cnt\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+FSM long counter status register. Long counter value is an unsigned integer value (16-\/bit format).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09469}{9469}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

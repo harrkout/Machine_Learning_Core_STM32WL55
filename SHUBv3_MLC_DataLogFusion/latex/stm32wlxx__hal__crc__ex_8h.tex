@@ -1,0 +1,59 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+crc\+\_\+ex.h File Reference}
+\hypertarget{stm32wlxx__hal__crc__ex_8h}{}\label{stm32wlxx__hal__crc__ex_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_crc\_ex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_crc\_ex.h}}
+
+
+Header file of CRC HAL extended module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Input__Data__Inversion_gaef0c058a5f7441857e6be133907054cc}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+NONE}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Input__Data__Inversion_ga084b67040f6451515ecda8f9c58be186}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+BYTE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga92fda6ff4d3290ee41e59a13e2e8037b}{CRC\+\_\+\+CR\+\_\+\+REV\+\_\+\+IN\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Input__Data__Inversion_ga167d77d863bf663b3ff41da62b047b55}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+HALFWORD}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3ffd71a81205713ba49123a7c4e7a7ef}{CRC\+\_\+\+CR\+\_\+\+REV\+\_\+\+IN\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Input__Data__Inversion_gaf38ebb4f56cc12653d96ce27cdf84848}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+WORD}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4c5a6e8ab7464ff35f1e5f424b76c15a}{CRC\+\_\+\+CR\+\_\+\+REV\+\_\+\+IN}}
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Output__Data__Inversion_gaf9c124a0394099724aa2f009480354fd}{CRC\+\_\+\+OUTPUTDATA\+\_\+\+INVERSION\+\_\+\+DISABLE}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Output__Data__Inversion_ga84ed3508d3d6b0d03965183db2147ec4}{CRC\+\_\+\+OUTPUTDATA\+\_\+\+INVERSION\+\_\+\+ENABLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga62d72fcad54fe50ab75d2895d6e155f7}{CRC\+\_\+\+CR\+\_\+\+REV\+\_\+\+OUT}}
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Exported__Macros_ga260d1889690fbb69503e9c93340b554d}{\+\_\+\+\_\+\+HAL\+\_\+\+CRC\+\_\+\+OUTPUTREVERSAL\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga62d72fcad54fe50ab75d2895d6e155f7}{CRC\+\_\+\+CR\+\_\+\+REV\+\_\+\+OUT}})
+\begin{DoxyCompactList}\small\item\em Set CRC output reversal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRCEx__Exported__Macros_ga3568e4344c4a326d468bedea8ea3878a}{\+\_\+\+\_\+\+HAL\+\_\+\+CRC\+\_\+\+OUTPUTREVERSAL\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga62d72fcad54fe50ab75d2895d6e155f7}{CRC\+\_\+\+CR\+\_\+\+REV\+\_\+\+OUT}}))
+\begin{DoxyCompactList}\small\item\em Unset CRC output reversal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRCEx__Exported__Macros_gaeb2f150caad9693b143b10719231db4f}{\+\_\+\+\_\+\+HAL\+\_\+\+CRC\+\_\+\+POLYNOMIAL\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+POLYNOMIAL\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$POL = (\+\_\+\+\_\+\+POLYNOMIAL\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Set CRC non-\/default polynomial. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRCEx__Private__Macros_gaf8519bd346cc32a1e5e5718b179b01bd}{IS\+\_\+\+CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+MODE}}(MODE)
+\item 
+\#define \mbox{\hyperlink{group__CRCEx__Private__Macros_ga5f975f5bdce7cda64decd9102725b498}{IS\+\_\+\+CRC\+\_\+\+OUTPUTDATA\+\_\+\+INVERSION\+\_\+\+MODE}}(MODE)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__CRCEx__Exported__Functions__Group1_ga555548abe867ecb11fd60309075d73a1}{HAL\+\_\+\+CRCEx\+\_\+\+Polynomial\+\_\+\+Set}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{CRC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_ae3358c54a01c6487322df1275618d6b1}{hcrc}}, uint32\+\_\+t Pol, uint32\+\_\+t Poly\+Length)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__CRCEx__Exported__Functions__Group1_ga026fab0d47210c4de4602b0363e404ea}{HAL\+\_\+\+CRCEx\+\_\+\+Input\+\_\+\+Data\+\_\+\+Reverse}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{CRC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_ae3358c54a01c6487322df1275618d6b1}{hcrc}}, uint32\+\_\+t Input\+Reverse\+Mode)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__CRCEx__Exported__Functions__Group1_gacf9618694a44a4116fda182d43842514}{HAL\+\_\+\+CRCEx\+\_\+\+Output\+\_\+\+Data\+\_\+\+Reverse}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{CRC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_ae3358c54a01c6487322df1275618d6b1}{hcrc}}, uint32\+\_\+t Output\+Reverse\+Mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of CRC HAL extended module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__crc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc\+\_\+ex.\+h}}.
+

@@ -1,0 +1,1435 @@
+\doxysection{LSM6\+DSOX\+\_\+\+Sensor\+\_\+hub}
+\hypertarget{group__LSM6DSOX__Sensor__hub}{}\label{group__LSM6DSOX__Sensor__hub}\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+
+
+This section groups all the functions that manage the sensor hub.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga7d8b0dc100bfee2cc7c787f0188fc260}{lsm6dsox\+\_\+sh\+\_\+read\+\_\+data\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__emb__sh__read__t}{lsm6dsox\+\_\+emb\+\_\+sh\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Sensor hub output registers.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gafef8da4d58e98351dca037621df6e954}{lsm6dsox\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gaf4139b2a23d3adc588a6d4d97b54114b}{lsm6dsox\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Number of external sensors to be read by the sensor hub.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga11fcfb4070a710f4cf514ec9c17b859e}{lsm6dsox\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gaf4139b2a23d3adc588a6d4d97b54114b}{lsm6dsox\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Number of external sensors to be read by the sensor hub.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gaff0d824743b6f2e630c2fd0820493b6d}{lsm6dsox\+\_\+sh\+\_\+master\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sensor hub I2C master enable.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga9b6cc508a916a3901432368ccb658c2e}{lsm6dsox\+\_\+sh\+\_\+master\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub I2C master enable.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga36ccf457fea62db10dc1c63ee35e97f5}{lsm6dsox\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gadcccd9bee4ae9540731e1bcfdad8ac70}{lsm6dsox\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Master I2C pull-\/up enable.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga24e64d67aa2ab7f29e00afe8808ddbdd}{lsm6dsox\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gadcccd9bee4ae9540731e1bcfdad8ac70}{lsm6dsox\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Master I2C pull-\/up enable.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gabfcecd45fbefe5fd7f4b7e7745896199}{lsm6dsox\+\_\+sh\+\_\+pass\+\_\+through\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em I2C interface pass-\/through.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gaa66f82fa1603ffaec87450909ad7b944}{lsm6dsox\+\_\+sh\+\_\+pass\+\_\+through\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em I2C interface pass-\/through.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga8fe87bfe7fd1349b2fd45bdbbac4917b}{lsm6dsox\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0e2f9fae1dd120f94a48359498cbf13e}{lsm6dsox\+\_\+start\+\_\+config\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Sensor hub trigger signal selection.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gaf9f91a104e1767fb4cf537007e28a933}{lsm6dsox\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0e2f9fae1dd120f94a48359498cbf13e}{lsm6dsox\+\_\+start\+\_\+config\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub trigger signal selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga47889074459167213b304386cd315108}{lsm6dsox\+\_\+sh\+\_\+write\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga3a2fb963749e2313bf2510512905f4e4}{lsm6dsox\+\_\+write\+\_\+once\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Slave 0 write operation is performed only at the first sensor hub cycle.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga1247fe649c3df84c057153a5399b7235}{lsm6dsox\+\_\+sh\+\_\+write\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga3a2fb963749e2313bf2510512905f4e4}{lsm6dsox\+\_\+write\+\_\+once\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Slave 0 write operation is performed only at the first sensor hub cycle.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga0f53df78c2e02face82c985d5a1cd3a7}{lsm6dsox\+\_\+sh\+\_\+reset\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Reset Master logic and output registers.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga665d3e0ae76104ec7c53d3d0fbe98e72}{lsm6dsox\+\_\+sh\+\_\+reset\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Reset Master logic and output registers.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gac9a7908715ccad89e4cfb112da1de17e}{lsm6dsox\+\_\+sh\+\_\+data\+\_\+rate\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga4e8c8cb8fa7a1e113ffa6373b014df08}{lsm6dsox\+\_\+shub\+\_\+odr\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Rate at which the master communicates.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gae1047c673b1920c4c92a150633a6f2fc}{lsm6dsox\+\_\+sh\+\_\+data\+\_\+rate\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga4e8c8cb8fa7a1e113ffa6373b014df08}{lsm6dsox\+\_\+shub\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Rate at which the master communicates.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga43822872a251e6a4df8174e0ff216d4b}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+write}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__sh__cfg__write__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+write\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga763b34e99c9de6309bcc24ba1edf1e5d}{lsm6dsox\+\_\+sh\+\_\+slv0\+\_\+cfg\+\_\+read}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a read.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga322c34cee7f2e8f769594acba0cfc698}{lsm6dsox\+\_\+sh\+\_\+slv1\+\_\+cfg\+\_\+read}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/read.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga3aba8b5250a0a70517a28824144169e4}{lsm6dsox\+\_\+sh\+\_\+slv2\+\_\+cfg\+\_\+read}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/read.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_ga97c819a85d0ab5b63464fae8ee7e6fa7}{lsm6dsox\+\_\+sh\+\_\+slv3\+\_\+cfg\+\_\+read}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/read.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Sensor__hub_gaf0e143a330a5ef500b6de6b2408cfd01}{lsm6dsox\+\_\+sh\+\_\+status\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__status__master__t}{lsm6dsox\+\_\+status\+\_\+master\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub source register.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions that manage the sensor hub. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga43822872a251e6a4df8174e0ff216d4b}\label{group__LSM6DSOX__Sensor__hub_ga43822872a251e6a4df8174e0ff216d4b} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_cfg\_write@{lsm6dsox\_sh\_cfg\_write}}
+\index{lsm6dsox\_sh\_cfg\_write@{lsm6dsox\_sh\_cfg\_write}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_cfg\_write()}{lsm6dsox\_sh\_cfg\_write()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__sh__cfg__write__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+write\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & a structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv1\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv1\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv1\+\_\+data; 8 bit data to write 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10741}{10741}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10743\ \{}
+\DoxyCodeLine{10744\ \ \ \mbox{\hyperlink{structlsm6dsox__slv0__add__t}{lsm6dsox\_slv0\_add\_t}}\ reg;}
+\DoxyCodeLine{10745\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10746\ }
+\DoxyCodeLine{10747\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10748\ }
+\DoxyCodeLine{10749\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10750\ \ \ \{}
+\DoxyCodeLine{10751\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__slv0__add__t_ae949b7b992b3c61f81b27a4d26b35ed9}{slave0}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__write__t_a91900323d748b5e43df0acdd739afb5c}{slv0\_add}};}
+\DoxyCodeLine{10752\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__slv0__add__t_a0391d695ec6af1143cd63f386994de6e}{rw\_0}}\ =\ 0;}
+\DoxyCodeLine{10753\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga19facdd9201fdc97bcc6ed4a3ed01a44}{LSM6DSOX\_SLV0\_ADD}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10754\ \ \ \}}
+\DoxyCodeLine{10755\ }
+\DoxyCodeLine{10756\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10757\ \ \ \{}
+\DoxyCodeLine{10758\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga92bf1251c7c1cf5853aa27da4eaf2ea4}{LSM6DSOX\_SLV0\_SUBADD}},}
+\DoxyCodeLine{10759\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&(val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__write__t_ac39d6d3c683d4a40bd72f8cfe1cd1063}{slv0\_subadd}}),\ 1);}
+\DoxyCodeLine{10760\ \ \ \}}
+\DoxyCodeLine{10761\ }
+\DoxyCodeLine{10762\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10763\ \ \ \{}
+\DoxyCodeLine{10764\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gaa172bbd8146ffad96a24c41b7fd7f8d9}{LSM6DSOX\_DATAWRITE\_SLV0}},}
+\DoxyCodeLine{10765\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&(val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__write__t_a56a4be97dd6ac2dac0e7bf1ac90932e4}{slv0\_data}}),\ 1);}
+\DoxyCodeLine{10766\ \ \ \}}
+\DoxyCodeLine{10767\ }
+\DoxyCodeLine{10768\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10769\ \ \ \{}
+\DoxyCodeLine{10770\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10771\ \ \ \}}
+\DoxyCodeLine{10772\ }
+\DoxyCodeLine{10773\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10774\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gae1047c673b1920c4c92a150633a6f2fc}\label{group__LSM6DSOX__Sensor__hub_gae1047c673b1920c4c92a150633a6f2fc} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_data\_rate\_get@{lsm6dsox\_sh\_data\_rate\_get}}
+\index{lsm6dsox\_sh\_data\_rate\_get@{lsm6dsox\_sh\_data\_rate\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_data\_rate\_get()}{lsm6dsox\_sh\_data\_rate\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+data\+\_\+rate\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga4e8c8cb8fa7a1e113ffa6373b014df08}{lsm6dsox\+\_\+shub\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Rate at which the master communicates.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of shub\+\_\+odr in reg slv1\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10686}{10686}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10688\ \{}
+\DoxyCodeLine{10689\ \ \ \mbox{\hyperlink{structlsm6dsox__slv0__config__t}{lsm6dsox\_slv0\_config\_t}}\ reg;}
+\DoxyCodeLine{10690\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10691\ }
+\DoxyCodeLine{10692\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10693\ }
+\DoxyCodeLine{10694\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10695\ \ \ \{}
+\DoxyCodeLine{10696\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga236910cbdc82ebdcaaa566d4a079ef6f}{LSM6DSOX\_SLV0\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10697\ \ \ \}}
+\DoxyCodeLine{10698\ }
+\DoxyCodeLine{10699\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10700\ \ \ \{}
+\DoxyCodeLine{10701\ \ \ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__slv0__config__t_a93019a1decfa75679a75dae3c86b6023}{shub\_odr}})}
+\DoxyCodeLine{10702\ \ \ \ \ \{}
+\DoxyCodeLine{10703\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08af577131b5e8e32f2956fba1cbc5b5464}{LSM6DSOX\_SH\_ODR\_104Hz}}:}
+\DoxyCodeLine{10704\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08af577131b5e8e32f2956fba1cbc5b5464}{LSM6DSOX\_SH\_ODR\_104Hz}};}
+\DoxyCodeLine{10705\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10706\ }
+\DoxyCodeLine{10707\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08a9b4374789e94c05a8b7ce6b0d2c1a275}{LSM6DSOX\_SH\_ODR\_52Hz}}:}
+\DoxyCodeLine{10708\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08a9b4374789e94c05a8b7ce6b0d2c1a275}{LSM6DSOX\_SH\_ODR\_52Hz}};}
+\DoxyCodeLine{10709\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10710\ }
+\DoxyCodeLine{10711\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08af5358761d189882764aef9abd363f742}{LSM6DSOX\_SH\_ODR\_26Hz}}:}
+\DoxyCodeLine{10712\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08af5358761d189882764aef9abd363f742}{LSM6DSOX\_SH\_ODR\_26Hz}};}
+\DoxyCodeLine{10713\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10714\ }
+\DoxyCodeLine{10715\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08a338f100f846dd2d060760211ddfe3f95}{LSM6DSOX\_SH\_ODR\_13Hz}}:}
+\DoxyCodeLine{10716\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08a338f100f846dd2d060760211ddfe3f95}{LSM6DSOX\_SH\_ODR\_13Hz}};}
+\DoxyCodeLine{10717\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10718\ }
+\DoxyCodeLine{10719\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{10720\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga4e8c8cb8fa7a1e113ffa6373b014df08af577131b5e8e32f2956fba1cbc5b5464}{LSM6DSOX\_SH\_ODR\_104Hz}};}
+\DoxyCodeLine{10721\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10722\ \ \ \ \ \}}
+\DoxyCodeLine{10723\ }
+\DoxyCodeLine{10724\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10725\ \ \ \}}
+\DoxyCodeLine{10726\ }
+\DoxyCodeLine{10727\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10728\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gac9a7908715ccad89e4cfb112da1de17e}\label{group__LSM6DSOX__Sensor__hub_gac9a7908715ccad89e4cfb112da1de17e} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_data\_rate\_set@{lsm6dsox\_sh\_data\_rate\_set}}
+\index{lsm6dsox\_sh\_data\_rate\_set@{lsm6dsox\_sh\_data\_rate\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_data\_rate\_set()}{lsm6dsox\_sh\_data\_rate\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+data\+\_\+rate\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga4e8c8cb8fa7a1e113ffa6373b014df08}{lsm6dsox\+\_\+shub\+\_\+odr\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Rate at which the master communicates.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of shub\+\_\+odr in reg slv1\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10651}{10651}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10653\ \{}
+\DoxyCodeLine{10654\ \ \ \mbox{\hyperlink{structlsm6dsox__slv0__config__t}{lsm6dsox\_slv0\_config\_t}}\ reg;}
+\DoxyCodeLine{10655\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10656\ }
+\DoxyCodeLine{10657\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10658\ }
+\DoxyCodeLine{10659\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10660\ \ \ \{}
+\DoxyCodeLine{10661\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga236910cbdc82ebdcaaa566d4a079ef6f}{LSM6DSOX\_SLV0\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10662\ \ \ \}}
+\DoxyCodeLine{10663\ }
+\DoxyCodeLine{10664\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10665\ \ \ \{}
+\DoxyCodeLine{10666\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__slv0__config__t_a93019a1decfa75679a75dae3c86b6023}{shub\_odr}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{10667\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga236910cbdc82ebdcaaa566d4a079ef6f}{LSM6DSOX\_SLV0\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10668\ \ \ \}}
+\DoxyCodeLine{10669\ }
+\DoxyCodeLine{10670\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10671\ \ \ \{}
+\DoxyCodeLine{10672\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10673\ \ \ \}}
+\DoxyCodeLine{10674\ }
+\DoxyCodeLine{10675\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10676\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga9b6cc508a916a3901432368ccb658c2e}\label{group__LSM6DSOX__Sensor__hub_ga9b6cc508a916a3901432368ccb658c2e} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_master\_get@{lsm6dsox\_sh\_master\_get}}
+\index{lsm6dsox\_sh\_master\_get@{lsm6dsox\_sh\_master\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_master\_get()}{lsm6dsox\_sh\_master\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+master\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensor hub I2C master enable.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of master\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10250}{10250}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10251\ \{}
+\DoxyCodeLine{10252\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10253\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10254\ }
+\DoxyCodeLine{10255\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10256\ }
+\DoxyCodeLine{10257\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10258\ \ \ \{}
+\DoxyCodeLine{10259\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10260\ \ \ \}}
+\DoxyCodeLine{10261\ }
+\DoxyCodeLine{10262\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10263\ \ \ \{}
+\DoxyCodeLine{10264\ \ \ \ \ *val\ =\ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a09884e97eaf834c356abcc1cea2b3403}{master\_on}};}
+\DoxyCodeLine{10265\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10266\ \ \ \}}
+\DoxyCodeLine{10267\ }
+\DoxyCodeLine{10268\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10269\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gaff0d824743b6f2e630c2fd0820493b6d}\label{group__LSM6DSOX__Sensor__hub_gaff0d824743b6f2e630c2fd0820493b6d} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_master\_set@{lsm6dsox\_sh\_master\_set}}
+\index{lsm6dsox\_sh\_master\_set@{lsm6dsox\_sh\_master\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_master\_set()}{lsm6dsox\_sh\_master\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+master\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensor hub I2C master enable.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of master\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10216}{10216}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10217\ \{}
+\DoxyCodeLine{10218\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10219\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10220\ }
+\DoxyCodeLine{10221\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10222\ }
+\DoxyCodeLine{10223\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10224\ \ \ \{}
+\DoxyCodeLine{10225\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10226\ \ \ \}}
+\DoxyCodeLine{10227\ }
+\DoxyCodeLine{10228\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10229\ \ \ \{}
+\DoxyCodeLine{10230\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a09884e97eaf834c356abcc1cea2b3403}{master\_on}}\ =\ val;}
+\DoxyCodeLine{10231\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10232\ \ \ \}}
+\DoxyCodeLine{10233\ }
+\DoxyCodeLine{10234\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10235\ \ \ \{}
+\DoxyCodeLine{10236\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10237\ \ \ \}}
+\DoxyCodeLine{10238\ }
+\DoxyCodeLine{10239\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10240\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gaa66f82fa1603ffaec87450909ad7b944}\label{group__LSM6DSOX__Sensor__hub_gaa66f82fa1603ffaec87450909ad7b944} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_pass\_through\_get@{lsm6dsox\_sh\_pass\_through\_get}}
+\index{lsm6dsox\_sh\_pass\_through\_get@{lsm6dsox\_sh\_pass\_through\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_pass\_through\_get()}{lsm6dsox\_sh\_pass\_through\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+pass\+\_\+through\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+I2C interface pass-\/through.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of pass\+\_\+through\+\_\+mode in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10394}{10394}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10395\ \{}
+\DoxyCodeLine{10396\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10397\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10398\ }
+\DoxyCodeLine{10399\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10400\ }
+\DoxyCodeLine{10401\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10402\ \ \ \{}
+\DoxyCodeLine{10403\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10404\ \ \ \}}
+\DoxyCodeLine{10405\ }
+\DoxyCodeLine{10406\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10407\ \ \ \{}
+\DoxyCodeLine{10408\ \ \ \ \ *val\ =\ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a390ef321f8a9ccf800c82b91f08f6683}{pass\_through\_mode}};}
+\DoxyCodeLine{10409\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10410\ \ \ \}}
+\DoxyCodeLine{10411\ }
+\DoxyCodeLine{10412\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10413\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gabfcecd45fbefe5fd7f4b7e7745896199}\label{group__LSM6DSOX__Sensor__hub_gabfcecd45fbefe5fd7f4b7e7745896199} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_pass\_through\_set@{lsm6dsox\_sh\_pass\_through\_set}}
+\index{lsm6dsox\_sh\_pass\_through\_set@{lsm6dsox\_sh\_pass\_through\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_pass\_through\_set()}{lsm6dsox\_sh\_pass\_through\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+pass\+\_\+through\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+I2C interface pass-\/through.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of pass\+\_\+through\+\_\+mode in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10359}{10359}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10360\ \{}
+\DoxyCodeLine{10361\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10362\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10363\ }
+\DoxyCodeLine{10364\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10365\ }
+\DoxyCodeLine{10366\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10367\ \ \ \{}
+\DoxyCodeLine{10368\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10369\ \ \ \}}
+\DoxyCodeLine{10370\ }
+\DoxyCodeLine{10371\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10372\ \ \ \{}
+\DoxyCodeLine{10373\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a390ef321f8a9ccf800c82b91f08f6683}{pass\_through\_mode}}\ =\ val;}
+\DoxyCodeLine{10374\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10375\ \ \ \}}
+\DoxyCodeLine{10376\ }
+\DoxyCodeLine{10377\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10378\ \ \ \{}
+\DoxyCodeLine{10379\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10380\ \ \ \}}
+\DoxyCodeLine{10381\ }
+\DoxyCodeLine{10382\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10383\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga24e64d67aa2ab7f29e00afe8808ddbdd}\label{group__LSM6DSOX__Sensor__hub_ga24e64d67aa2ab7f29e00afe8808ddbdd} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_pin\_mode\_get@{lsm6dsox\_sh\_pin\_mode\_get}}
+\index{lsm6dsox\_sh\_pin\_mode\_get@{lsm6dsox\_sh\_pin\_mode\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_pin\_mode\_get()}{lsm6dsox\_sh\_pin\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gadcccd9bee4ae9540731e1bcfdad8ac70}{lsm6dsox\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Master I2C pull-\/up enable.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of shub\+\_\+pu\+\_\+en in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10314}{10314}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10316\ \{}
+\DoxyCodeLine{10317\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10318\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10319\ }
+\DoxyCodeLine{10320\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10321\ }
+\DoxyCodeLine{10322\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10323\ \ \ \{}
+\DoxyCodeLine{10324\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10325\ \ \ \}}
+\DoxyCodeLine{10326\ }
+\DoxyCodeLine{10327\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10328\ \ \ \{}
+\DoxyCodeLine{10329\ \ \ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_ac53cca3971de5ceddd5b8a849c4c0118}{shub\_pu\_en}})}
+\DoxyCodeLine{10330\ \ \ \ \ \{}
+\DoxyCodeLine{10331\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggadcccd9bee4ae9540731e1bcfdad8ac70a3f115036dbf7f01f3cbc2788d0edc2e6}{LSM6DSOX\_EXT\_PULL\_UP}}:}
+\DoxyCodeLine{10332\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggadcccd9bee4ae9540731e1bcfdad8ac70a3f115036dbf7f01f3cbc2788d0edc2e6}{LSM6DSOX\_EXT\_PULL\_UP}};}
+\DoxyCodeLine{10333\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10334\ }
+\DoxyCodeLine{10335\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggadcccd9bee4ae9540731e1bcfdad8ac70ac053e0bc29367fc74df9f6bd79ceefe4}{LSM6DSOX\_INTERNAL\_PULL\_UP}}:}
+\DoxyCodeLine{10336\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggadcccd9bee4ae9540731e1bcfdad8ac70ac053e0bc29367fc74df9f6bd79ceefe4}{LSM6DSOX\_INTERNAL\_PULL\_UP}};}
+\DoxyCodeLine{10337\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10338\ }
+\DoxyCodeLine{10339\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{10340\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggadcccd9bee4ae9540731e1bcfdad8ac70a3f115036dbf7f01f3cbc2788d0edc2e6}{LSM6DSOX\_EXT\_PULL\_UP}};}
+\DoxyCodeLine{10341\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10342\ \ \ \ \ \}}
+\DoxyCodeLine{10343\ }
+\DoxyCodeLine{10344\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10345\ \ \ \}}
+\DoxyCodeLine{10346\ }
+\DoxyCodeLine{10347\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10348\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga36ccf457fea62db10dc1c63ee35e97f5}\label{group__LSM6DSOX__Sensor__hub_ga36ccf457fea62db10dc1c63ee35e97f5} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_pin\_mode\_set@{lsm6dsox\_sh\_pin\_mode\_set}}
+\index{lsm6dsox\_sh\_pin\_mode\_set@{lsm6dsox\_sh\_pin\_mode\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_pin\_mode\_set()}{lsm6dsox\_sh\_pin\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gadcccd9bee4ae9540731e1bcfdad8ac70}{lsm6dsox\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Master I2C pull-\/up enable.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of shub\+\_\+pu\+\_\+en in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10279}{10279}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10281\ \{}
+\DoxyCodeLine{10282\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10283\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10284\ }
+\DoxyCodeLine{10285\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10286\ }
+\DoxyCodeLine{10287\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10288\ \ \ \{}
+\DoxyCodeLine{10289\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10290\ \ \ \}}
+\DoxyCodeLine{10291\ }
+\DoxyCodeLine{10292\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10293\ \ \ \{}
+\DoxyCodeLine{10294\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_ac53cca3971de5ceddd5b8a849c4c0118}{shub\_pu\_en}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{10295\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10296\ \ \ \}}
+\DoxyCodeLine{10297\ }
+\DoxyCodeLine{10298\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10299\ \ \ \{}
+\DoxyCodeLine{10300\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10301\ \ \ \}}
+\DoxyCodeLine{10302\ }
+\DoxyCodeLine{10303\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10304\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga7d8b0dc100bfee2cc7c787f0188fc260}\label{group__LSM6DSOX__Sensor__hub_ga7d8b0dc100bfee2cc7c787f0188fc260} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_read\_data\_raw\_get@{lsm6dsox\_sh\_read\_data\_raw\_get}}
+\index{lsm6dsox\_sh\_read\_data\_raw\_get@{lsm6dsox\_sh\_read\_data\_raw\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_read\_data\_raw\_get()}{lsm6dsox\_sh\_read\_data\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+read\+\_\+data\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__emb__sh__read__t}{lsm6dsox\+\_\+emb\+\_\+sh\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val,  }\item[{uint8\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Sensor hub output registers.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & union of registers from SENSOR\+\_\+\+HUB\+\_\+1 to SENSOR\+\_\+\+HUB\+\_\+18 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10099}{10099}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10102\ \{}
+\DoxyCodeLine{10103\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10104\ }
+\DoxyCodeLine{10105\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10106\ }
+\DoxyCodeLine{10107\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10108\ \ \ \{}
+\DoxyCodeLine{10109\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac4fbae1d7964a7e4b93bff45167ff799}{LSM6DSOX\_SENSOR\_HUB\_1}},\ (uint8\_t\ *)\ val,}
+\DoxyCodeLine{10110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ len);}
+\DoxyCodeLine{10111\ \ \ \}}
+\DoxyCodeLine{10112\ }
+\DoxyCodeLine{10113\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10114\ \ \ \{}
+\DoxyCodeLine{10115\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10116\ \ \ \}}
+\DoxyCodeLine{10117\ }
+\DoxyCodeLine{10118\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10119\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga665d3e0ae76104ec7c53d3d0fbe98e72}\label{group__LSM6DSOX__Sensor__hub_ga665d3e0ae76104ec7c53d3d0fbe98e72} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_reset\_get@{lsm6dsox\_sh\_reset\_get}}
+\index{lsm6dsox\_sh\_reset\_get@{lsm6dsox\_sh\_reset\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_reset\_get()}{lsm6dsox\_sh\_reset\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+reset\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Reset Master logic and output registers.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of rst\+\_\+master\+\_\+regs in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10622}{10622}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10623\ \{}
+\DoxyCodeLine{10624\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10625\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10626\ }
+\DoxyCodeLine{10627\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10628\ }
+\DoxyCodeLine{10629\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10630\ \ \ \{}
+\DoxyCodeLine{10631\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10632\ \ \ \}}
+\DoxyCodeLine{10633\ }
+\DoxyCodeLine{10634\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10635\ \ \ \{}
+\DoxyCodeLine{10636\ \ \ \ \ *val\ =\ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_abc74f9006e320ddaba3946e588ebe016}{rst\_master\_regs}};}
+\DoxyCodeLine{10637\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10638\ \ \ \}}
+\DoxyCodeLine{10639\ }
+\DoxyCodeLine{10640\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10641\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga0f53df78c2e02face82c985d5a1cd3a7}\label{group__LSM6DSOX__Sensor__hub_ga0f53df78c2e02face82c985d5a1cd3a7} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_reset\_set@{lsm6dsox\_sh\_reset\_set}}
+\index{lsm6dsox\_sh\_reset\_set@{lsm6dsox\_sh\_reset\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_reset\_set()}{lsm6dsox\_sh\_reset\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+reset\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Reset Master logic and output registers.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10582}{10582}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10583\ \{}
+\DoxyCodeLine{10584\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10585\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10586\ }
+\DoxyCodeLine{10587\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10588\ }
+\DoxyCodeLine{10589\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10590\ \ \ \{}
+\DoxyCodeLine{10591\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10592\ \ \ \}}
+\DoxyCodeLine{10593\ }
+\DoxyCodeLine{10594\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10595\ \ \ \{}
+\DoxyCodeLine{10596\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_abc74f9006e320ddaba3946e588ebe016}{rst\_master\_regs}}\ =\ \mbox{\hyperlink{group__STMicroelectronics_ga4ea818a6722d4343385eb33341a443d0}{PROPERTY\_ENABLE}};}
+\DoxyCodeLine{10597\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10598\ \ \ \}}
+\DoxyCodeLine{10599\ }
+\DoxyCodeLine{10600\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10601\ \ \ \{}
+\DoxyCodeLine{10602\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_abc74f9006e320ddaba3946e588ebe016}{rst\_master\_regs}}\ =\ \mbox{\hyperlink{group__STMicroelectronics_gac7679d271b8a2f12f8ed0aa0731dc13a}{PROPERTY\_DISABLE}};}
+\DoxyCodeLine{10603\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10604\ \ \ \}}
+\DoxyCodeLine{10605\ }
+\DoxyCodeLine{10606\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10607\ \ \ \{}
+\DoxyCodeLine{10608\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10609\ \ \ \}}
+\DoxyCodeLine{10610\ }
+\DoxyCodeLine{10611\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10612\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga11fcfb4070a710f4cf514ec9c17b859e}\label{group__LSM6DSOX__Sensor__hub_ga11fcfb4070a710f4cf514ec9c17b859e} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_slave\_connected\_get@{lsm6dsox\_sh\_slave\_connected\_get}}
+\index{lsm6dsox\_sh\_slave\_connected\_get@{lsm6dsox\_sh\_slave\_connected\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_slave\_connected\_get()}{lsm6dsox\_sh\_slave\_connected\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gaf4139b2a23d3adc588a6d4d97b54114b}{lsm6dsox\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Number of external sensors to be read by the sensor hub.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of aux\+\_\+sens\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10164}{10164}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10166\ \{}
+\DoxyCodeLine{10167\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10168\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10169\ }
+\DoxyCodeLine{10170\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10171\ }
+\DoxyCodeLine{10172\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10173\ \ \ \{}
+\DoxyCodeLine{10174\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10175\ \ \ \}}
+\DoxyCodeLine{10176\ }
+\DoxyCodeLine{10177\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10178\ \ \ \{}
+\DoxyCodeLine{10179\ \ \ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a82d4ac0666a22af74e90529573a5007a}{aux\_sens\_on}})}
+\DoxyCodeLine{10180\ \ \ \ \ \{}
+\DoxyCodeLine{10181\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114ba7836c3e9636b8fb6d4c68d720e3abeb1}{LSM6DSOX\_SLV\_0}}:}
+\DoxyCodeLine{10182\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114ba7836c3e9636b8fb6d4c68d720e3abeb1}{LSM6DSOX\_SLV\_0}};}
+\DoxyCodeLine{10183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10184\ }
+\DoxyCodeLine{10185\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114baba7bad25604defc221d95d0014ae5e33}{LSM6DSOX\_SLV\_0\_1}}:}
+\DoxyCodeLine{10186\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114baba7bad25604defc221d95d0014ae5e33}{LSM6DSOX\_SLV\_0\_1}};}
+\DoxyCodeLine{10187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10188\ }
+\DoxyCodeLine{10189\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114ba59db965b29c1afaf3a1a890a2af1e687}{LSM6DSOX\_SLV\_0\_1\_2}}:}
+\DoxyCodeLine{10190\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114ba59db965b29c1afaf3a1a890a2af1e687}{LSM6DSOX\_SLV\_0\_1\_2}};}
+\DoxyCodeLine{10191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10192\ }
+\DoxyCodeLine{10193\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114ba4088c38e1e8b5d0dca6f8db95d7b23f3}{LSM6DSOX\_SLV\_0\_1\_2\_3}}:}
+\DoxyCodeLine{10194\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114ba4088c38e1e8b5d0dca6f8db95d7b23f3}{LSM6DSOX\_SLV\_0\_1\_2\_3}};}
+\DoxyCodeLine{10195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10196\ }
+\DoxyCodeLine{10197\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{10198\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggaf4139b2a23d3adc588a6d4d97b54114ba7836c3e9636b8fb6d4c68d720e3abeb1}{LSM6DSOX\_SLV\_0}};}
+\DoxyCodeLine{10199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10200\ \ \ \ \ \}}
+\DoxyCodeLine{10201\ }
+\DoxyCodeLine{10202\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10203\ \ \ \}}
+\DoxyCodeLine{10204\ }
+\DoxyCodeLine{10205\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10206\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gafef8da4d58e98351dca037621df6e954}\label{group__LSM6DSOX__Sensor__hub_gafef8da4d58e98351dca037621df6e954} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_slave\_connected\_set@{lsm6dsox\_sh\_slave\_connected\_set}}
+\index{lsm6dsox\_sh\_slave\_connected\_set@{lsm6dsox\_sh\_slave\_connected\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_slave\_connected\_set()}{lsm6dsox\_sh\_slave\_connected\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gaf4139b2a23d3adc588a6d4d97b54114b}{lsm6dsox\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Number of external sensors to be read by the sensor hub.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of aux\+\_\+sens\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10129}{10129}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10131\ \{}
+\DoxyCodeLine{10132\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10133\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10134\ }
+\DoxyCodeLine{10135\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10136\ }
+\DoxyCodeLine{10137\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10138\ \ \ \{}
+\DoxyCodeLine{10139\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10140\ \ \ \}}
+\DoxyCodeLine{10141\ }
+\DoxyCodeLine{10142\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10143\ \ \ \{}
+\DoxyCodeLine{10144\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a82d4ac0666a22af74e90529573a5007a}{aux\_sens\_on}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{10145\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10146\ \ \ \}}
+\DoxyCodeLine{10147\ }
+\DoxyCodeLine{10148\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10149\ \ \ \{}
+\DoxyCodeLine{10150\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10151\ \ \ \}}
+\DoxyCodeLine{10152\ }
+\DoxyCodeLine{10153\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10154\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga763b34e99c9de6309bcc24ba1edf1e5d}\label{group__LSM6DSOX__Sensor__hub_ga763b34e99c9de6309bcc24ba1edf1e5d} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_slv0\_cfg\_read@{lsm6dsox\_sh\_slv0\_cfg\_read}}
+\index{lsm6dsox\_sh\_slv0\_cfg\_read@{lsm6dsox\_sh\_slv0\_cfg\_read}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_slv0\_cfg\_read()}{lsm6dsox\_sh\_slv0\_cfg\_read()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+slv0\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a read.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv1\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv1\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv1\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10787}{10787}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10789\ \{}
+\DoxyCodeLine{10790\ \ \ \mbox{\hyperlink{structlsm6dsox__slv0__add__t}{lsm6dsox\_slv0\_add\_t}}\ slv0\_add;}
+\DoxyCodeLine{10791\ \ \ \mbox{\hyperlink{structlsm6dsox__slv0__config__t}{lsm6dsox\_slv0\_config\_t}}\ slv0\_config;}
+\DoxyCodeLine{10792\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10793\ }
+\DoxyCodeLine{10794\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10795\ }
+\DoxyCodeLine{10796\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10797\ \ \ \{}
+\DoxyCodeLine{10798\ \ \ \ \ slv0\_add.\mbox{\hyperlink{structlsm6dsox__slv0__add__t_ae949b7b992b3c61f81b27a4d26b35ed9}{slave0}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_aeb74b5077209aee27de84fde2356bfdc}{slv\_add}};}
+\DoxyCodeLine{10799\ \ \ \ \ slv0\_add.\mbox{\hyperlink{structlsm6dsox__slv0__add__t_a0391d695ec6af1143cd63f386994de6e}{rw\_0}}\ =\ 1;}
+\DoxyCodeLine{10800\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga19facdd9201fdc97bcc6ed4a3ed01a44}{LSM6DSOX\_SLV0\_ADD}},\ (uint8\_t\ *)\&slv0\_add,\ 1);}
+\DoxyCodeLine{10801\ \ \ \}}
+\DoxyCodeLine{10802\ }
+\DoxyCodeLine{10803\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10804\ \ \ \{}
+\DoxyCodeLine{10805\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga92bf1251c7c1cf5853aa27da4eaf2ea4}{LSM6DSOX\_SLV0\_SUBADD}},}
+\DoxyCodeLine{10806\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&(val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_ae1f608aba04ad2721e292912e3c8fcbb}{slv\_subadd}}),\ 1);}
+\DoxyCodeLine{10807\ \ \ \}}
+\DoxyCodeLine{10808\ }
+\DoxyCodeLine{10809\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10810\ \ \ \{}
+\DoxyCodeLine{10811\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga236910cbdc82ebdcaaa566d4a079ef6f}{LSM6DSOX\_SLV0\_CONFIG}},}
+\DoxyCodeLine{10812\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv0\_config,\ 1);}
+\DoxyCodeLine{10813\ \ \ \}}
+\DoxyCodeLine{10814\ }
+\DoxyCodeLine{10815\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10816\ \ \ \{}
+\DoxyCodeLine{10817\ \ \ \ \ slv0\_config.\mbox{\hyperlink{structlsm6dsox__slv0__config__t_aa3cf84d34475fb620e378720594f3b42}{slave0\_numop}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_a22a2992398da4865e97ede0b11490234}{slv\_len}};}
+\DoxyCodeLine{10818\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga236910cbdc82ebdcaaa566d4a079ef6f}{LSM6DSOX\_SLV0\_CONFIG}},}
+\DoxyCodeLine{10819\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv0\_config,\ 1);}
+\DoxyCodeLine{10820\ \ \ \}}
+\DoxyCodeLine{10821\ }
+\DoxyCodeLine{10822\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10823\ \ \ \{}
+\DoxyCodeLine{10824\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10825\ \ \ \}}
+\DoxyCodeLine{10826\ }
+\DoxyCodeLine{10827\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10828\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga322c34cee7f2e8f769594acba0cfc698}\label{group__LSM6DSOX__Sensor__hub_ga322c34cee7f2e8f769594acba0cfc698} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_slv1\_cfg\_read@{lsm6dsox\_sh\_slv1\_cfg\_read}}
+\index{lsm6dsox\_sh\_slv1\_cfg\_read@{lsm6dsox\_sh\_slv1\_cfg\_read}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_slv1\_cfg\_read()}{lsm6dsox\_sh\_slv1\_cfg\_read()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+slv1\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write/read.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv1\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv1\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv1\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10841}{10841}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10843\ \{}
+\DoxyCodeLine{10844\ \ \ \mbox{\hyperlink{structlsm6dsox__slv1__add__t}{lsm6dsox\_slv1\_add\_t}}\ slv1\_add;}
+\DoxyCodeLine{10845\ \ \ \mbox{\hyperlink{structlsm6dsox__slv1__config__t}{lsm6dsox\_slv1\_config\_t}}\ slv1\_config;}
+\DoxyCodeLine{10846\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10847\ }
+\DoxyCodeLine{10848\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10849\ }
+\DoxyCodeLine{10850\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10851\ \ \ \{}
+\DoxyCodeLine{10852\ \ \ \ \ slv1\_add.\mbox{\hyperlink{structlsm6dsox__slv1__add__t_a3a0e6fd2fb3eb0bad7482bb53e6cc537}{slave1\_add}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_aeb74b5077209aee27de84fde2356bfdc}{slv\_add}};}
+\DoxyCodeLine{10853\ \ \ \ \ slv1\_add.\mbox{\hyperlink{structlsm6dsox__slv1__add__t_a2a65c0d97013edd02385128c10050898}{r\_1}}\ =\ 1;}
+\DoxyCodeLine{10854\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gafc0fc321a54b1b7cfaefa7913790d7bd}{LSM6DSOX\_SLV1\_ADD}},\ (uint8\_t\ *)\&slv1\_add,\ 1);}
+\DoxyCodeLine{10855\ \ \ \}}
+\DoxyCodeLine{10856\ }
+\DoxyCodeLine{10857\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10858\ \ \ \{}
+\DoxyCodeLine{10859\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga4b3b382d5df689671261c51165217d1e}{LSM6DSOX\_SLV1\_SUBADD}},}
+\DoxyCodeLine{10860\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&(val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_ae1f608aba04ad2721e292912e3c8fcbb}{slv\_subadd}}),\ 1);}
+\DoxyCodeLine{10861\ \ \ \}}
+\DoxyCodeLine{10862\ }
+\DoxyCodeLine{10863\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10864\ \ \ \{}
+\DoxyCodeLine{10865\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga05918db27c1ce4b2e688a1054a4d79d5}{LSM6DSOX\_SLV1\_CONFIG}},}
+\DoxyCodeLine{10866\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv1\_config,\ 1);}
+\DoxyCodeLine{10867\ \ \ \}}
+\DoxyCodeLine{10868\ }
+\DoxyCodeLine{10869\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10870\ \ \ \{}
+\DoxyCodeLine{10871\ \ \ \ \ slv1\_config.\mbox{\hyperlink{structlsm6dsox__slv1__config__t_a0fa1226e3eba6e86d829e4ed427e52a8}{slave1\_numop}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_a22a2992398da4865e97ede0b11490234}{slv\_len}};}
+\DoxyCodeLine{10872\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga05918db27c1ce4b2e688a1054a4d79d5}{LSM6DSOX\_SLV1\_CONFIG}},}
+\DoxyCodeLine{10873\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv1\_config,\ 1);}
+\DoxyCodeLine{10874\ \ \ \}}
+\DoxyCodeLine{10875\ }
+\DoxyCodeLine{10876\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10877\ \ \ \{}
+\DoxyCodeLine{10878\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10879\ \ \ \}}
+\DoxyCodeLine{10880\ }
+\DoxyCodeLine{10881\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10882\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga3aba8b5250a0a70517a28824144169e4}\label{group__LSM6DSOX__Sensor__hub_ga3aba8b5250a0a70517a28824144169e4} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_slv2\_cfg\_read@{lsm6dsox\_sh\_slv2\_cfg\_read}}
+\index{lsm6dsox\_sh\_slv2\_cfg\_read@{lsm6dsox\_sh\_slv2\_cfg\_read}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_slv2\_cfg\_read()}{lsm6dsox\_sh\_slv2\_cfg\_read()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+slv2\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write/read.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv2\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv2\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv2\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10895}{10895}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10897\ \{}
+\DoxyCodeLine{10898\ \ \ \mbox{\hyperlink{structlsm6dsox__slv2__add__t}{lsm6dsox\_slv2\_add\_t}}\ slv2\_add;}
+\DoxyCodeLine{10899\ \ \ \mbox{\hyperlink{structlsm6dsox__slv2__config__t}{lsm6dsox\_slv2\_config\_t}}\ slv2\_config;}
+\DoxyCodeLine{10900\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10901\ }
+\DoxyCodeLine{10902\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10903\ }
+\DoxyCodeLine{10904\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10905\ \ \ \{}
+\DoxyCodeLine{10906\ \ \ \ \ slv2\_add.\mbox{\hyperlink{structlsm6dsox__slv2__add__t_aa86f902e3daf3a6927333d116db7392b}{slave2\_add}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_aeb74b5077209aee27de84fde2356bfdc}{slv\_add}};}
+\DoxyCodeLine{10907\ \ \ \ \ slv2\_add.\mbox{\hyperlink{structlsm6dsox__slv2__add__t_a09618bdedeac447907dd84207998a29f}{r\_2}}\ =\ 1;}
+\DoxyCodeLine{10908\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gaf20e0b09d151fd89c570000b78bd0c1e}{LSM6DSOX\_SLV2\_ADD}},\ (uint8\_t\ *)\&slv2\_add,\ 1);}
+\DoxyCodeLine{10909\ \ \ \}}
+\DoxyCodeLine{10910\ }
+\DoxyCodeLine{10911\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10912\ \ \ \{}
+\DoxyCodeLine{10913\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga35444e8bb8ae4ab966c502b292ab6959}{LSM6DSOX\_SLV2\_SUBADD}},}
+\DoxyCodeLine{10914\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&(val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_ae1f608aba04ad2721e292912e3c8fcbb}{slv\_subadd}}),\ 1);}
+\DoxyCodeLine{10915\ \ \ \}}
+\DoxyCodeLine{10916\ }
+\DoxyCodeLine{10917\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10918\ \ \ \{}
+\DoxyCodeLine{10919\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga35114d2b344bc58d8fc69bc23b80b1a6}{LSM6DSOX\_SLV2\_CONFIG}},}
+\DoxyCodeLine{10920\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv2\_config,\ 1);}
+\DoxyCodeLine{10921\ \ \ \}}
+\DoxyCodeLine{10922\ }
+\DoxyCodeLine{10923\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10924\ \ \ \{}
+\DoxyCodeLine{10925\ \ \ \ \ slv2\_config.\mbox{\hyperlink{structlsm6dsox__slv2__config__t_afd749c927a2753714d8e18478ac65158}{slave2\_numop}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_a22a2992398da4865e97ede0b11490234}{slv\_len}};}
+\DoxyCodeLine{10926\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga35114d2b344bc58d8fc69bc23b80b1a6}{LSM6DSOX\_SLV2\_CONFIG}},}
+\DoxyCodeLine{10927\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv2\_config,\ 1);}
+\DoxyCodeLine{10928\ \ \ \}}
+\DoxyCodeLine{10929\ }
+\DoxyCodeLine{10930\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10931\ \ \ \{}
+\DoxyCodeLine{10932\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10933\ \ \ \}}
+\DoxyCodeLine{10934\ }
+\DoxyCodeLine{10935\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10936\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga97c819a85d0ab5b63464fae8ee7e6fa7}\label{group__LSM6DSOX__Sensor__hub_ga97c819a85d0ab5b63464fae8ee7e6fa7} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_slv3\_cfg\_read@{lsm6dsox\_sh\_slv3\_cfg\_read}}
+\index{lsm6dsox\_sh\_slv3\_cfg\_read@{lsm6dsox\_sh\_slv3\_cfg\_read}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_slv3\_cfg\_read()}{lsm6dsox\_sh\_slv3\_cfg\_read()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+slv3\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t}{lsm6dsox\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write/read.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv3\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv3\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv3\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10949}{10949}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10951\ \{}
+\DoxyCodeLine{10952\ \ \ \mbox{\hyperlink{structlsm6dsox__slv3__add__t}{lsm6dsox\_slv3\_add\_t}}\ slv3\_add;}
+\DoxyCodeLine{10953\ \ \ \mbox{\hyperlink{structlsm6dsox__slv3__config__t}{lsm6dsox\_slv3\_config\_t}}\ slv3\_config;}
+\DoxyCodeLine{10954\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10955\ }
+\DoxyCodeLine{10956\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10957\ }
+\DoxyCodeLine{10958\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10959\ \ \ \{}
+\DoxyCodeLine{10960\ \ \ \ \ slv3\_add.\mbox{\hyperlink{structlsm6dsox__slv3__add__t_ac3d664e56058dd49b5287bbd6c02493c}{slave3\_add}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_aeb74b5077209aee27de84fde2356bfdc}{slv\_add}};}
+\DoxyCodeLine{10961\ \ \ \ \ slv3\_add.\mbox{\hyperlink{structlsm6dsox__slv3__add__t_a6984d290b22220a29bfddab30efd337b}{r\_3}}\ =\ 1;}
+\DoxyCodeLine{10962\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga9e0cf0a0abdb832094b44a9975c6d488}{LSM6DSOX\_SLV3\_ADD}},\ (uint8\_t\ *)\&slv3\_add,\ 1);}
+\DoxyCodeLine{10963\ \ \ \}}
+\DoxyCodeLine{10964\ }
+\DoxyCodeLine{10965\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10966\ \ \ \{}
+\DoxyCodeLine{10967\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gadea0bf914a6035c08a7df7797256e350}{LSM6DSOX\_SLV3\_SUBADD}},}
+\DoxyCodeLine{10968\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&(val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_ae1f608aba04ad2721e292912e3c8fcbb}{slv\_subadd}}),\ 1);}
+\DoxyCodeLine{10969\ \ \ \}}
+\DoxyCodeLine{10970\ }
+\DoxyCodeLine{10971\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10972\ \ \ \{}
+\DoxyCodeLine{10973\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac9e09e84be005aaf4f8e12f4eb07a99d}{LSM6DSOX\_SLV3\_CONFIG}},}
+\DoxyCodeLine{10974\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv3\_config,\ 1);}
+\DoxyCodeLine{10975\ \ \ \}}
+\DoxyCodeLine{10976\ }
+\DoxyCodeLine{10977\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10978\ \ \ \{}
+\DoxyCodeLine{10979\ \ \ \ \ slv3\_config.\mbox{\hyperlink{structlsm6dsox__slv3__config__t_a0790bd9da44932480e1d09828dc93617}{slave3\_numop}}\ =\ val-\/>\mbox{\hyperlink{structlsm6dsox__sh__cfg__read__t_a22a2992398da4865e97ede0b11490234}{slv\_len}};}
+\DoxyCodeLine{10980\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac9e09e84be005aaf4f8e12f4eb07a99d}{LSM6DSOX\_SLV3\_CONFIG}},}
+\DoxyCodeLine{10981\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&slv3\_config,\ 1);}
+\DoxyCodeLine{10982\ \ \ \}}
+\DoxyCodeLine{10983\ }
+\DoxyCodeLine{10984\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10985\ \ \ \{}
+\DoxyCodeLine{10986\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10987\ \ \ \}}
+\DoxyCodeLine{10988\ }
+\DoxyCodeLine{10989\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10990\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gaf0e143a330a5ef500b6de6b2408cfd01}\label{group__LSM6DSOX__Sensor__hub_gaf0e143a330a5ef500b6de6b2408cfd01} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_status\_get@{lsm6dsox\_sh\_status\_get}}
+\index{lsm6dsox\_sh\_status\_get@{lsm6dsox\_sh\_status\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_status\_get()}{lsm6dsox\_sh\_status\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+status\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__status__master__t}{lsm6dsox\+\_\+status\+\_\+master\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensor hub source register.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & union of registers from STATUS\+\_\+\+MASTER to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l11000}{11000}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11002\ \{}
+\DoxyCodeLine{11003\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{11004\ }
+\DoxyCodeLine{11005\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{11006\ }
+\DoxyCodeLine{11007\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{11008\ \ \ \{}
+\DoxyCodeLine{11009\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gad185225e58d6fc4dc46488c7772c2dca}{LSM6DSOX\_STATUS\_MASTER}},\ (uint8\_t\ *)\ val,\ 1);}
+\DoxyCodeLine{11010\ \ \ \}}
+\DoxyCodeLine{11011\ }
+\DoxyCodeLine{11012\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{11013\ \ \ \{}
+\DoxyCodeLine{11014\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{11015\ \ \ \}}
+\DoxyCodeLine{11016\ }
+\DoxyCodeLine{11017\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{11018\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_gaf9f91a104e1767fb4cf537007e28a933}\label{group__LSM6DSOX__Sensor__hub_gaf9f91a104e1767fb4cf537007e28a933} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_syncro\_mode\_get@{lsm6dsox\_sh\_syncro\_mode\_get}}
+\index{lsm6dsox\_sh\_syncro\_mode\_get@{lsm6dsox\_sh\_syncro\_mode\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_syncro\_mode\_get()}{lsm6dsox\_sh\_syncro\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0e2f9fae1dd120f94a48359498cbf13e}{lsm6dsox\+\_\+start\+\_\+config\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensor hub trigger signal selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of start\+\_\+config in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10458}{10458}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10460\ \{}
+\DoxyCodeLine{10461\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10462\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10463\ }
+\DoxyCodeLine{10464\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10465\ }
+\DoxyCodeLine{10466\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10467\ \ \ \{}
+\DoxyCodeLine{10468\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10469\ \ \ \}}
+\DoxyCodeLine{10470\ }
+\DoxyCodeLine{10471\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10472\ \ \ \{}
+\DoxyCodeLine{10473\ \ \ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a192727fca515f40f10635e824688364c}{start\_config}})}
+\DoxyCodeLine{10474\ \ \ \ \ \{}
+\DoxyCodeLine{10475\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga0e2f9fae1dd120f94a48359498cbf13eab0dff1e41dd28c49278c42c5d0fc299b}{LSM6DSOX\_EXT\_ON\_INT2\_PIN}}:}
+\DoxyCodeLine{10476\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga0e2f9fae1dd120f94a48359498cbf13eab0dff1e41dd28c49278c42c5d0fc299b}{LSM6DSOX\_EXT\_ON\_INT2\_PIN}};}
+\DoxyCodeLine{10477\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10478\ }
+\DoxyCodeLine{10479\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga0e2f9fae1dd120f94a48359498cbf13ea49365ac73fffb20dbef4fa0b2b3ab1f5}{LSM6DSOX\_XL\_GY\_DRDY}}:}
+\DoxyCodeLine{10480\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga0e2f9fae1dd120f94a48359498cbf13ea49365ac73fffb20dbef4fa0b2b3ab1f5}{LSM6DSOX\_XL\_GY\_DRDY}};}
+\DoxyCodeLine{10481\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10482\ }
+\DoxyCodeLine{10483\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{10484\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga0e2f9fae1dd120f94a48359498cbf13eab0dff1e41dd28c49278c42c5d0fc299b}{LSM6DSOX\_EXT\_ON\_INT2\_PIN}};}
+\DoxyCodeLine{10485\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10486\ \ \ \ \ \}}
+\DoxyCodeLine{10487\ }
+\DoxyCodeLine{10488\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10489\ \ \ \}}
+\DoxyCodeLine{10490\ }
+\DoxyCodeLine{10491\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10492\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga8fe87bfe7fd1349b2fd45bdbbac4917b}\label{group__LSM6DSOX__Sensor__hub_ga8fe87bfe7fd1349b2fd45bdbbac4917b} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_syncro\_mode\_set@{lsm6dsox\_sh\_syncro\_mode\_set}}
+\index{lsm6dsox\_sh\_syncro\_mode\_set@{lsm6dsox\_sh\_syncro\_mode\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_syncro\_mode\_set()}{lsm6dsox\_sh\_syncro\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0e2f9fae1dd120f94a48359498cbf13e}{lsm6dsox\+\_\+start\+\_\+config\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Sensor hub trigger signal selection.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of start\+\_\+config in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10423}{10423}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10425\ \{}
+\DoxyCodeLine{10426\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10427\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10428\ }
+\DoxyCodeLine{10429\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10430\ }
+\DoxyCodeLine{10431\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10432\ \ \ \{}
+\DoxyCodeLine{10433\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10434\ \ \ \}}
+\DoxyCodeLine{10435\ }
+\DoxyCodeLine{10436\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10437\ \ \ \{}
+\DoxyCodeLine{10438\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_a192727fca515f40f10635e824688364c}{start\_config}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{10439\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10440\ \ \ \}}
+\DoxyCodeLine{10441\ }
+\DoxyCodeLine{10442\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10443\ \ \ \{}
+\DoxyCodeLine{10444\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10445\ \ \ \}}
+\DoxyCodeLine{10446\ }
+\DoxyCodeLine{10447\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10448\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga1247fe649c3df84c057153a5399b7235}\label{group__LSM6DSOX__Sensor__hub_ga1247fe649c3df84c057153a5399b7235} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_write\_mode\_get@{lsm6dsox\_sh\_write\_mode\_get}}
+\index{lsm6dsox\_sh\_write\_mode\_get@{lsm6dsox\_sh\_write\_mode\_get}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_write\_mode\_get()}{lsm6dsox\_sh\_write\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+write\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga3a2fb963749e2313bf2510512905f4e4}{lsm6dsox\+\_\+write\+\_\+once\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Slave 0 write operation is performed only at the first sensor hub cycle.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of write\+\_\+once in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10539}{10539}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10541\ \{}
+\DoxyCodeLine{10542\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10543\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10544\ }
+\DoxyCodeLine{10545\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10546\ }
+\DoxyCodeLine{10547\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10548\ \ \ \{}
+\DoxyCodeLine{10549\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10550\ \ \ \}}
+\DoxyCodeLine{10551\ }
+\DoxyCodeLine{10552\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10553\ \ \ \{}
+\DoxyCodeLine{10554\ \ \ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_ae5585ff448df81a073b96b338814c465}{write\_once}})}
+\DoxyCodeLine{10555\ \ \ \ \ \{}
+\DoxyCodeLine{10556\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga3a2fb963749e2313bf2510512905f4e4a09cd836ce4932fe87b3aa750cf43b531}{LSM6DSOX\_EACH\_SH\_CYCLE}}:}
+\DoxyCodeLine{10557\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga3a2fb963749e2313bf2510512905f4e4a09cd836ce4932fe87b3aa750cf43b531}{LSM6DSOX\_EACH\_SH\_CYCLE}};}
+\DoxyCodeLine{10558\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10559\ }
+\DoxyCodeLine{10560\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga3a2fb963749e2313bf2510512905f4e4a803c63c13453e513a80b7a0d2be34c2b}{LSM6DSOX\_ONLY\_FIRST\_CYCLE}}:}
+\DoxyCodeLine{10561\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga3a2fb963749e2313bf2510512905f4e4a803c63c13453e513a80b7a0d2be34c2b}{LSM6DSOX\_ONLY\_FIRST\_CYCLE}};}
+\DoxyCodeLine{10562\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10563\ }
+\DoxyCodeLine{10564\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{10565\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga3a2fb963749e2313bf2510512905f4e4a09cd836ce4932fe87b3aa750cf43b531}{LSM6DSOX\_EACH\_SH\_CYCLE}};}
+\DoxyCodeLine{10566\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10567\ \ \ \ \ \}}
+\DoxyCodeLine{10568\ }
+\DoxyCodeLine{10569\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10570\ \ \ \}}
+\DoxyCodeLine{10571\ }
+\DoxyCodeLine{10572\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10573\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__Sensor__hub_ga47889074459167213b304386cd315108}\label{group__LSM6DSOX__Sensor__hub_ga47889074459167213b304386cd315108} 
+\index{LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}!lsm6dsox\_sh\_write\_mode\_set@{lsm6dsox\_sh\_write\_mode\_set}}
+\index{lsm6dsox\_sh\_write\_mode\_set@{lsm6dsox\_sh\_write\_mode\_set}!LSM6DSOX\_Sensor\_hub@{LSM6DSOX\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_write\_mode\_set()}{lsm6dsox\_sh\_write\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+write\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga3a2fb963749e2313bf2510512905f4e4}{lsm6dsox\+\_\+write\+\_\+once\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Slave 0 write operation is performed only at the first sensor hub cycle.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of write\+\_\+once in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10503}{10503}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10505\ \{}
+\DoxyCodeLine{10506\ \ \ \mbox{\hyperlink{structlsm6dsox__master__config__t}{lsm6dsox\_master\_config\_t}}\ reg;}
+\DoxyCodeLine{10507\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10508\ }
+\DoxyCodeLine{10509\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a6345d49118d747aaf0fe19b820cfe79a}{LSM6DSOX\_SENSOR\_HUB\_BANK}});}
+\DoxyCodeLine{10510\ }
+\DoxyCodeLine{10511\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10512\ \ \ \{}
+\DoxyCodeLine{10513\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10514\ \ \ \}}
+\DoxyCodeLine{10515\ }
+\DoxyCodeLine{10516\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10517\ \ \ \{}
+\DoxyCodeLine{10518\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__master__config__t_ae5585ff448df81a073b96b338814c465}{write\_once}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{10519\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga64902ad5be900f59a235c3f3fe87b890}{LSM6DSOX\_MASTER\_CONFIG}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10520\ \ \ \}}
+\DoxyCodeLine{10521\ }
+\DoxyCodeLine{10522\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10523\ \ \ \{}
+\DoxyCodeLine{10524\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10525\ \ \ \}}
+\DoxyCodeLine{10526\ }
+\DoxyCodeLine{10527\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10528\ \}}
+
+\end{DoxyCode}

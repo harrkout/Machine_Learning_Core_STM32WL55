@@ -1,0 +1,27 @@
+var group__TIMEx__Remap =
+[
+    [ "TIM_TIM16_TI1_GPIO", "group__TIMEx__Remap.html#gaf4435f9a5d0eb16d1b2b1192ad004392", null ],
+    [ "TIM_TIM16_TI1_LSE", "group__TIMEx__Remap.html#gabff23fbb0cd0a7f09de517b0469038b0", null ],
+    [ "TIM_TIM16_TI1_LSI", "group__TIMEx__Remap.html#ga671abe85f9feb1fcee7c2bf05e9245cd", null ],
+    [ "TIM_TIM16_TI1_RTC", "group__TIMEx__Remap.html#ga23533444072953152f7e9600db5437a6", null ],
+    [ "TIM_TIM17_TI1_GPIO", "group__TIMEx__Remap.html#gab97c8da0527e5686a80a50f906225e02", null ],
+    [ "TIM_TIM17_TI1_HSE", "group__TIMEx__Remap.html#ga9ab23553152276bb3151f22fee9ba87b", null ],
+    [ "TIM_TIM17_TI1_MCO", "group__TIMEx__Remap.html#ga1d6fcc0f18c7208728ea9702d2caf434", null ],
+    [ "TIM_TIM17_TI1_MSI", "group__TIMEx__Remap.html#gae0cb9d4bfcf7ea14d6999e5b4f6b137c", null ],
+    [ "TIM_TIM1_ETR_ADC_AWD1", "group__TIMEx__Remap.html#ga7ee505d5bb6597f4b9430e10ccc82029", null ],
+    [ "TIM_TIM1_ETR_ADC_AWD2", "group__TIMEx__Remap.html#ga35f007160ef8ee4d2f0452bf676dbf25", null ],
+    [ "TIM_TIM1_ETR_ADC_AWD3", "group__TIMEx__Remap.html#ga3651aea15bad2cab82536fd5d3e9327d", null ],
+    [ "TIM_TIM1_ETR_COMP1", "group__TIMEx__Remap.html#ga2e3eb3f4f99db6c14b3ce91bebfe8d07", null ],
+    [ "TIM_TIM1_ETR_COMP2", "group__TIMEx__Remap.html#ga734d16e8c8e368bedc159f97422e26b9", null ],
+    [ "TIM_TIM1_ETR_GPIO", "group__TIMEx__Remap.html#ga5156e463b51b1a7d92e6d87c2be4563a", null ],
+    [ "TIM_TIM1_TI1_COMP1", "group__TIMEx__Remap.html#gabba4a562a6e0f83acf57807e50de0de4", null ],
+    [ "TIM_TIM1_TI1_GPIO", "group__TIMEx__Remap.html#ga4d3d7a7e977f98110d2833d2feb7236a", null ],
+    [ "TIM_TIM2_ETR_COMP1", "group__TIMEx__Remap.html#ga79a125bc7559dc01f8de056e19f11972", null ],
+    [ "TIM_TIM2_ETR_COMP2", "group__TIMEx__Remap.html#ga76dfe019f143b4bff5ba2c2e1a38a387", null ],
+    [ "TIM_TIM2_ETR_GPIO", "group__TIMEx__Remap.html#ga05e1c800a3f8e7eb60b50f446cf321f7", null ],
+    [ "TIM_TIM2_ETR_LSE", "group__TIMEx__Remap.html#ga906f5f281fa8283e5574b5ec7cb95b62", null ],
+    [ "TIM_TIM2_TI4_COMP1", "group__TIMEx__Remap.html#ga10665a31da680e9c23ff66b4e9f85b1e", null ],
+    [ "TIM_TIM2_TI4_COMP1_COMP2", "group__TIMEx__Remap.html#ga0449ea1c33b15b3f91222fcb3a239559", null ],
+    [ "TIM_TIM2_TI4_COMP2", "group__TIMEx__Remap.html#ga4d384c8a9c0687b64290b54c256a5152", null ],
+    [ "TIM_TIM2_TI4_GPIO", "group__TIMEx__Remap.html#ga11cd0b8d94b5ab46488aa3f2c3769d1f", null ]
+];

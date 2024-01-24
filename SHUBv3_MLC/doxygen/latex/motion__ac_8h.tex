@@ -1,0 +1,64 @@
+\doxysection{Middlewares/\+ST/\+STM32\+\_\+\+Motion\+AC\+\_\+\+Library/\+Inc/motion\+\_\+ac.h File Reference}
+\hypertarget{motion__ac_8h}{}\label{motion__ac_8h}\index{Middlewares/ST/STM32\_MotionAC\_Library/Inc/motion\_ac.h@{Middlewares/ST/STM32\_MotionAC\_Library/Inc/motion\_ac.h}}
+
+
+Header for motion\+\_\+ac module.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMAC__input__t}{MAC\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMAC__output__t}{MAC\+\_\+output\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMAC__knobs__t}{MAC\+\_\+knobs\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__MOTION__AC__Exported__Types_ga8d8603e7a01b406fa689809dbfd936eb}{MAC\+\_\+cal\+\_\+quality\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__AC__Exported__Types_gga8d8603e7a01b406fa689809dbfd936ebafd14317180728c39a5e70db44b17235e}{MAC\+\_\+\+CALQSTATUSUNKNOWN}} = 0
+, \mbox{\hyperlink{group__MOTION__AC__Exported__Types_gga8d8603e7a01b406fa689809dbfd936ebab7c23307c3829c7f958b86b3c9e6ee8c}{MAC\+\_\+\+CALQSTATUSPOOR}}
+, \mbox{\hyperlink{group__MOTION__AC__Exported__Types_gga8d8603e7a01b406fa689809dbfd936eba62a13e9adbe258f139e05a3e147ac0d6}{MAC\+\_\+\+CALQSTATUSOK}}
+, \mbox{\hyperlink{group__MOTION__AC__Exported__Types_gga8d8603e7a01b406fa689809dbfd936eba89b53e3826dd455c4375946a44d5f410}{MAC\+\_\+\+CALQSTATUSGOOD}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga52bc2585704ebfb9c595f9a53966df8a}{Motion\+AC\+\_\+\+Initialize}} (uint8\+\_\+t enable)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+AC engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga72a146dc1767c0daa89013a7720b2aca}{Motion\+AC\+\_\+\+Update}} (\mbox{\hyperlink{structMAC__input__t}{MAC\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, uint8\+\_\+t \texorpdfstring{$\ast$}{*}is\+\_\+calibrated)
+\begin{DoxyCompactList}\small\item\em Run accelerometer calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_gad8d23d08e39aa29bf4055043b51a5ad3}{Motion\+AC\+\_\+\+Get\+Cal\+Params}} (\mbox{\hyperlink{structMAC__output__t}{MAC\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Get the accelerometer compensation parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga57a17ac719ed37bfe1bf76a2e4475f57}{Motion\+AC\+\_\+\+Get\+Knobs}} (\mbox{\hyperlink{structMAC__knobs__t}{MAC\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Get current knobs settings. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_gab623cba691503146270881c12d464074}{Motion\+AC\+\_\+\+Set\+Knobs}} (\mbox{\hyperlink{structMAC__knobs__t}{MAC\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Set new knobs settings. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga30185b266ae6d52b5369a69fb90daeb8}{Motion\+AC\+\_\+\+Get\+Lib\+Version}} (char \texorpdfstring{$\ast$}{*}version)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for motion\+\_\+ac module. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+6.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/August-\/2021 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2016-\/2017 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{motion__ac_8h_source}{motion\+\_\+ac.\+h}}.
+

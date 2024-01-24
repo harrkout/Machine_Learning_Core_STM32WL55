@@ -1,0 +1,121 @@
+\doxysection{CRC\+\_\+\+Init\+Type\+Def Struct Reference}
+\hypertarget{structCRC__InitTypeDef}{}\label{structCRC__InitTypeDef}\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+
+
+CRC Init Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32wlxx\+\_\+hal\+\_\+crc.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structCRC__InitTypeDef_a310c3780f74e347a909fd5629011d4ed}{Default\+Polynomial\+Use}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structCRC__InitTypeDef_a995114f44b6488f784f24a9faa184813}{Default\+Init\+Value\+Use}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCRC__InitTypeDef_a8eba50c4d083261700ecd9fdf9906124}{Generating\+Polynomial}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCRC__InitTypeDef_aba709d1ebebac9b3385fb61d6eeb79a2}{CRCLength}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCRC__InitTypeDef_ac60396fcb8285f785650dc65530d9077}{Init\+Value}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCRC__InitTypeDef_ae78b0467ba2913d30b23dd7e30c2f87e}{Input\+Data\+Inversion\+Mode}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCRC__InitTypeDef_a70287496add23b9e3dbaaf370a83040a}{Output\+Data\+Inversion\+Mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CRC Init Structure definition. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00058}{58}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structCRC__InitTypeDef_aba709d1ebebac9b3385fb61d6eeb79a2}\label{structCRC__InitTypeDef_aba709d1ebebac9b3385fb61d6eeb79a2} 
+\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}!CRCLength@{CRCLength}}
+\index{CRCLength@{CRCLength}!CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{CRCLength}{CRCLength}}
+{\footnotesize\ttfamily uint32\+\_\+t CRCLength}
+
+This parameter is a value of \doxylink{group__CRC__Polynomial__Sizes}{Polynomial sizes to configure the peripheral} and indicates CRC length. Value can be either one of \begin{DoxyItemize}
+\item \doxylink{group__CRC__Polynomial__Sizes_ga48296f63c36de0607cee59ef3c839619}{CRC\+\_\+\+POLYLENGTH\+\_\+32B} (32-\/bit CRC), \item \doxylink{group__CRC__Polynomial__Sizes_ga465284112fe8fd9f816549b177e317ae}{CRC\+\_\+\+POLYLENGTH\+\_\+16B} (16-\/bit CRC), \item \doxylink{group__CRC__Polynomial__Sizes_ga2d21b94b89c24c4279d1b1f4a733314d}{CRC\+\_\+\+POLYLENGTH\+\_\+8B} (8-\/bit CRC), \item \doxylink{group__CRC__Polynomial__Sizes_gab2cccb837ec498fa4e90fa41183a754b}{CRC\+\_\+\+POLYLENGTH\+\_\+7B} (7-\/bit CRC). \end{DoxyItemize}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00079}{79}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__InitTypeDef_a995114f44b6488f784f24a9faa184813}\label{structCRC__InitTypeDef_a995114f44b6488f784f24a9faa184813} 
+\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}!DefaultInitValueUse@{DefaultInitValueUse}}
+\index{DefaultInitValueUse@{DefaultInitValueUse}!CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{DefaultInitValueUse}{DefaultInitValueUse}}
+{\footnotesize\ttfamily uint8\+\_\+t Default\+Init\+Value\+Use}
+
+This parameter is a value of \doxylink{group__CRC__Default__InitValue__Use}{Indicates whether or not default init value is used} and indicates if default init value is used. If set to DEFAULT\+\_\+\+INIT\+\_\+\+VALUE\+\_\+\+ENABLE, resort to default 0x\+FFFFFFFF value. In that case, there is no need to set Init\+Value field. If otherwise set to DEFAULT\+\_\+\+INIT\+\_\+\+VALUE\+\_\+\+DISABLE, Init\+Value field must be set. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00068}{68}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__InitTypeDef_a310c3780f74e347a909fd5629011d4ed}\label{structCRC__InitTypeDef_a310c3780f74e347a909fd5629011d4ed} 
+\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}!DefaultPolynomialUse@{DefaultPolynomialUse}}
+\index{DefaultPolynomialUse@{DefaultPolynomialUse}!CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{DefaultPolynomialUse}{DefaultPolynomialUse}}
+{\footnotesize\ttfamily uint8\+\_\+t Default\+Polynomial\+Use}
+
+This parameter is a value of \doxylink{group__CRC__Default__Polynomial}{Indicates whether or not default polynomial is used} and indicates if default polynomial is used. If set to DEFAULT\+\_\+\+POLYNOMIAL\+\_\+\+ENABLE, resort to default X\texorpdfstring{$^\wedge$}{\string^}32 + X\texorpdfstring{$^\wedge$}{\string^}26 + X\texorpdfstring{$^\wedge$}{\string^}23 + X\texorpdfstring{$^\wedge$}{\string^}22 + X\texorpdfstring{$^\wedge$}{\string^}16 + X\texorpdfstring{$^\wedge$}{\string^}12 + X\texorpdfstring{$^\wedge$}{\string^}11 + X\texorpdfstring{$^\wedge$}{\string^}10 +X\texorpdfstring{$^\wedge$}{\string^}8 + X\texorpdfstring{$^\wedge$}{\string^}7 + X\texorpdfstring{$^\wedge$}{\string^}5 + X\texorpdfstring{$^\wedge$}{\string^}4 + X\texorpdfstring{$^\wedge$}{\string^}2+ X +1. In that case, there is no need to set Generating\+Polynomial field. If otherwise set to DEFAULT\+\_\+\+POLYNOMIAL\+\_\+\+DISABLE, Generating\+Polynomial and CRCLength fields must be set. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00060}{60}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__InitTypeDef_a8eba50c4d083261700ecd9fdf9906124}\label{structCRC__InitTypeDef_a8eba50c4d083261700ecd9fdf9906124} 
+\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}!GeneratingPolynomial@{GeneratingPolynomial}}
+\index{GeneratingPolynomial@{GeneratingPolynomial}!CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{GeneratingPolynomial}{GeneratingPolynomial}}
+{\footnotesize\ttfamily uint32\+\_\+t Generating\+Polynomial}
+
+Set CRC generating polynomial as a 7, 8, 16 or 32-\/bit long value for a polynomial degree respectively equal to 7, 8, 16 or 32. This field is written in normal, representation e.\+g., for a polynomial of degree 7, X\texorpdfstring{$^\wedge$}{\string^}7 + X\texorpdfstring{$^\wedge$}{\string^}6 + X\texorpdfstring{$^\wedge$}{\string^}5 + X\texorpdfstring{$^\wedge$}{\string^}2 + 1 is written 0x65. No need to specify it if Default\+Polynomial\+Use is set to DEFAULT\+\_\+\+POLYNOMIAL\+\_\+\+ENABLE. ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00073}{73}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__InitTypeDef_ac60396fcb8285f785650dc65530d9077}\label{structCRC__InitTypeDef_ac60396fcb8285f785650dc65530d9077} 
+\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}!InitValue@{InitValue}}
+\index{InitValue@{InitValue}!CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{InitValue}{InitValue}}
+{\footnotesize\ttfamily uint32\+\_\+t Init\+Value}
+
+Init value to initiate CRC computation. No need to specify it if Default\+Init\+Value\+Use is set to DEFAULT\+\_\+\+INIT\+\_\+\+VALUE\+\_\+\+ENABLE. ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00086}{86}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__InitTypeDef_ae78b0467ba2913d30b23dd7e30c2f87e}\label{structCRC__InitTypeDef_ae78b0467ba2913d30b23dd7e30c2f87e} 
+\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}!InputDataInversionMode@{InputDataInversionMode}}
+\index{InputDataInversionMode@{InputDataInversionMode}!CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{InputDataInversionMode}{InputDataInversionMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Data\+Inversion\+Mode}
+
+This parameter is a value of \doxylink{group__CRCEx__Input__Data__Inversion}{Input Data Inversion Modes} and specifies input data inversion mode. Can be either one of the following values \begin{DoxyItemize}
+\item \doxylink{group__CRCEx__Input__Data__Inversion_gaef0c058a5f7441857e6be133907054cc}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+NONE} no input data inversion \item \doxylink{group__CRCEx__Input__Data__Inversion_ga084b67040f6451515ecda8f9c58be186}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+BYTE} byte-\/wise inversion, 0x1\+A2\+B3\+C4D becomes 0x58\+D43\+CB2 \item \doxylink{group__CRCEx__Input__Data__Inversion_ga167d77d863bf663b3ff41da62b047b55}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+HALFWORD} halfword-\/wise inversion, 0x1\+A2\+B3\+C4D becomes 0x\+D458\+B23C \item \doxylink{group__CRCEx__Input__Data__Inversion_gaf38ebb4f56cc12653d96ce27cdf84848}{CRC\+\_\+\+INPUTDATA\+\_\+\+INVERSION\+\_\+\+WORD} word-\/wise inversion, 0x1\+A2\+B3\+C4D becomes 0x\+B23\+CD458 \end{DoxyItemize}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00089}{89}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__InitTypeDef_a70287496add23b9e3dbaaf370a83040a}\label{structCRC__InitTypeDef_a70287496add23b9e3dbaaf370a83040a} 
+\index{CRC\_InitTypeDef@{CRC\_InitTypeDef}!OutputDataInversionMode@{OutputDataInversionMode}}
+\index{OutputDataInversionMode@{OutputDataInversionMode}!CRC\_InitTypeDef@{CRC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OutputDataInversionMode}{OutputDataInversionMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Output\+Data\+Inversion\+Mode}
+
+This parameter is a value of \doxylink{group__CRCEx__Output__Data__Inversion}{Output Data Inversion Modes} and specifies output data (i.\+e. CRC) inversion mode. Can be either \begin{DoxyItemize}
+\item \doxylink{group__CRCEx__Output__Data__Inversion_gaf9c124a0394099724aa2f009480354fd}{CRC\+\_\+\+OUTPUTDATA\+\_\+\+INVERSION\+\_\+\+DISABLE} no CRC inversion, \item \doxylink{group__CRCEx__Output__Data__Inversion_ga84ed3508d3d6b0d03965183db2147ec4}{CRC\+\_\+\+OUTPUTDATA\+\_\+\+INVERSION\+\_\+\+ENABLE} CRC 0x11223344 is converted into 0x22\+CC4488 \end{DoxyItemize}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00099}{99}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32wlxx__hal__crc_8h}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}\end{DoxyCompactItemize}

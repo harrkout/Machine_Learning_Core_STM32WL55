@@ -1,0 +1,225 @@
+\doxysection{stm32wlxx\+\_\+hal\+\_\+cortex.\+c}
+\hypertarget{stm32wlxx__hal__cortex_8c_source}{}\label{stm32wlxx__hal__cortex_8c_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_cortex.c@{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_cortex.c}}
+\mbox{\hyperlink{stm32wlxx__hal__cortex_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00104}00104\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00105}00105\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__hal_8h}{stm32wlxx\_hal.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00115}00115\ \textcolor{preprocessor}{\#ifdef\ HAL\_CORTEX\_MODULE\_ENABLED}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00117}00117\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00118}00118\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00119}00119\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00120}00120\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00121}00121\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00122}00122\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00144}00144\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00158}00158\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga8581a82025a4780efd00876a66e3e91b}{HAL\_NVIC\_SetPriority}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn,\ uint32\_t\ PreemptPriority,\ uint32\_t\ SubPriority)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00159}00159\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00160}00160\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00161}00161\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_gaf30fd8f5960c2e28a772d8f16bb156dd}{IS\_NVIC\_PREEMPTION\_PRIORITY}}(PreemptPriority));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00162}00162\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gae0e9d0e2f7b6133828c71b57d4941c35}{NVIC\_SetPriority}}(IRQn,\ PreemptPriority);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00163}00163\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00164}00164\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00184}00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gad9be53e08b1498adea006e5e037f238f}{HAL\_NVIC\_SetPriorityGrouping}}(uint32\_t\ PriorityGroup)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00185}00185\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00186}00186\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00187}00187\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga6569304a39fe4f91bd59b6a586c8ede9}{IS\_NVIC\_PRIORITY\_GROUP}}(PriorityGroup));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00189}00189\ \ \ \textcolor{comment}{/*\ Set\ the\ PRIGROUP[10:8]\ bits\ according\ to\ the\ PriorityGroup\ parameter\ value\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00190}00190\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_ga0e798d5aec68cdd8263db86a76df788f}{NVIC\_SetPriorityGrouping}}(PriorityGroup);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00191}00191\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00207}00207\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga8581a82025a4780efd00876a66e3e91b}{HAL\_NVIC\_SetPriority}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn,\ uint32\_t\ PreemptPriority,\ uint32\_t\ SubPriority)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00208}00208\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00209}00209\ \ \ uint32\_t\ prioritygroup;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00211}00211\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00212}00212\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga010705bc997dcff935b965b372cba61d}{IS\_NVIC\_SUB\_PRIORITY}}(SubPriority));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00213}00213\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_gaf30fd8f5960c2e28a772d8f16bb156dd}{IS\_NVIC\_PREEMPTION\_PRIORITY}}(PreemptPriority));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00215}00215\ \ \ prioritygroup\ =\ \mbox{\hyperlink{group__CMSIS__CORE_ga4eeb9214f2264fc23c34ad5de2d3fa11}{NVIC\_GetPriorityGrouping}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00217}00217\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gae0e9d0e2f7b6133828c71b57d4941c35}{NVIC\_SetPriority}}(IRQn,\ \mbox{\hyperlink{group__CMSIS__Core__NVICFunctions_gadb94ac5d892b376e4f3555ae0418ebac}{NVIC\_EncodePriority}}(prioritygroup,\ PreemptPriority,\ SubPriority));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00218}00218\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00219}00219\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00231}00231\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gaaad4492c1b25e006d69948a15790352a}{HAL\_NVIC\_EnableIRQ}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00232}00232\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00233}00233\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00234}00234\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}{IS\_NVIC\_DEVICE\_IRQ}}(IRQn));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00236}00236\ \ \ \textcolor{comment}{/*\ Enable\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00237}00237\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_ga57b3064413dbc7459d9646020fdd8bef}{NVIC\_EnableIRQ}}(IRQn);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00238}00238\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00248}00248\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga50ca6290e068821cb84aa168f3e13967}{HAL\_NVIC\_DisableIRQ}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00249}00249\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00250}00250\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00251}00251\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}{IS\_NVIC\_DEVICE\_IRQ}}(IRQn));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00253}00253\ \ \ \textcolor{comment}{/*\ Disable\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00254}00254\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_ga73b4e251f59cab4e9a5e234aac02ae57}{NVIC\_DisableIRQ}}(IRQn);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00255}00255\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00261}00261\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gac83d89028fabdf5d4c38ecf4fbfbefdc}{HAL\_NVIC\_SystemReset}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00262}00262\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00263}00263\ \ \ \textcolor{comment}{/*\ System\ Reset\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00264}00264\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_ga6aa0367d3642575610476bf0366f0c48}{NVIC\_SystemReset}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00265}00265\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00274}00274\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gac3a3f0d53c315523a8e6e7bcac1940cf}{HAL\_SYSTICK\_Config}}(uint32\_t\ TicksNumb)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00275}00275\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00276}00276\ \ \ \textcolor{keywordflow}{return}\ SysTick\_Config(TicksNumb);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00277}00277\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00298}00298\ \textcolor{preprocessor}{\#ifdef\ CORE\_CM0PLUS}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00307}00307\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga6a21c9d904b0bcf4cb060f7c5c39b6f5}{HAL\_NVIC\_GetPriority}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00308}00308\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00309}00309\ \ \ \textcolor{comment}{/*\ Get\ priority\ for\ Cortex-\/M\ system\ or\ device\ specific\ interrupts\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00310}00310\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__CMSIS__CORE_gaf59b9d0a791d2157abb319753953eceb}{NVIC\_GetPriority}}(IRQn);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00311}00311\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00312}00312\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00318}00318\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_gaa02bc953fd4fce22248c491a93c4ce40}{HAL\_NVIC\_GetPriorityGrouping}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00319}00319\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00320}00320\ \ \ \textcolor{comment}{/*\ Get\ the\ PRIGROUP[10:8]\ field\ value\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00321}00321\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__CMSIS__CORE_ga4eeb9214f2264fc23c34ad5de2d3fa11}{NVIC\_GetPriorityGrouping}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00322}00322\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00346}00346\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga6a21c9d904b0bcf4cb060f7c5c39b6f5}{HAL\_NVIC\_GetPriority}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn,\ uint32\_t\ PriorityGroup,\ uint32\_t\ *pPreemptPriority,\ uint32\_t\ *pSubPriority)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00347}00347\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00348}00348\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00349}00349\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga6569304a39fe4f91bd59b6a586c8ede9}{IS\_NVIC\_PRIORITY\_GROUP}}(PriorityGroup));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00350}00350\ \ \ \textcolor{comment}{/*\ Get\ priority\ for\ Cortex-\/M\ system\ or\ device\ specific\ interrupts\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00351}00351\ \ \ \mbox{\hyperlink{group__CMSIS__Core__NVICFunctions_ga3387607fd8a1a32cccd77d2ac672dd96}{NVIC\_DecodePriority}}(\mbox{\hyperlink{group__CMSIS__CORE_gaf59b9d0a791d2157abb319753953eceb}{NVIC\_GetPriority}}(IRQn),\ PriorityGroup,\ pPreemptPriority,\ pSubPriority);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00352}00352\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00353}00353\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00363}00363\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_gad3f7598e54fb3d74eaf9abedef704c57}{HAL\_NVIC\_GetActive}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00364}00364\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00365}00365\ \ \ \textcolor{comment}{/*\ Return\ 1\ if\ active\ else\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00366}00366\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__CMSIS__CORE_ga58ad3f352f832235ab3b192ff4745320}{NVIC\_GetActive}}(IRQn);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00367}00367\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00369}00369\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00379}00379\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_gaecf50f6c6d0e1fa5f8bd8c1b45309f18}{HAL\_NVIC\_SetPendingIRQ}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00380}00380\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00381}00381\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00382}00382\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}{IS\_NVIC\_DEVICE\_IRQ}}(IRQn));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00383}00383\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00384}00384\ \ \ \textcolor{comment}{/*\ Set\ interrupt\ pending\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00385}00385\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_ga2b47e2e52cf5c48a5c3348636434b3ac}{NVIC\_SetPendingIRQ}}(IRQn);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00386}00386\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00387}00387\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00398}00398\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga3bd5802a96f0dcbc00ac3b89b134da3b}{HAL\_NVIC\_GetPendingIRQ}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00399}00399\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00400}00400\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00401}00401\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}{IS\_NVIC\_DEVICE\_IRQ}}(IRQn));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00403}00403\ \ \ \textcolor{comment}{/*\ Return\ 1\ if\ pending\ else\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00404}00404\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__CMSIS__CORE_gac608957a239466e9e0cbc30aa64feb3b}{NVIC\_GetPendingIRQ}}(IRQn);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00405}00405\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00406}00406\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00415}00415\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga0c7d007acf1339ca1bb46f3c6e018ff5}{HAL\_NVIC\_ClearPendingIRQ}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ IRQn)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00416}00416\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00417}00417\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00418}00418\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}{IS\_NVIC\_DEVICE\_IRQ}}(IRQn));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00419}00419\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00420}00420\ \ \ \textcolor{comment}{/*\ Clear\ pending\ interrupt\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00421}00421\ \ \ \mbox{\hyperlink{group__CMSIS__CORE_ga590cf113000a079b1f0ea3dcd5b5316c}{NVIC\_ClearPendingIRQ}}(IRQn);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00422}00422\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00423}00423\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00432}00432\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga3284dc8428996f5b6aa6b3b99e643788}{HAL\_SYSTICK\_CLKSourceConfig}}(uint32\_t\ CLKSource)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00433}00433\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00434}00434\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00435}00435\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__CORTEX__Private__Macros_ga22d6291f6aed29442cf4cd9098fa0784}{IS\_SYSTICK\_CLK\_SOURCE}}(CLKSource));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00436}00436\ \ \ \textcolor{keywordflow}{if}\ (CLKSource\ ==\ \mbox{\hyperlink{group__CORTEX__SysTick__clock__source_ga6f6582df23b6fbc578325e453b9893b7}{SYSTICK\_CLKSOURCE\_HCLK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00437}00437\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00438}00438\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL\ |=\ \mbox{\hyperlink{group__CORTEX__SysTick__clock__source_ga6f6582df23b6fbc578325e453b9893b7}{SYSTICK\_CLKSOURCE\_HCLK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00439}00439\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00440}00440\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00441}00441\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00442}00442\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL\ \&=\ \string~SYSTICK\_CLKSOURCE\_HCLK;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00443}00443\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00444}00444\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00450}00450\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga5b66b62383261c1e0acef98d344aa4c1}{HAL\_SYSTICK\_IRQHandler}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00451}00451\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00452}00452\ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga5033855e81ba2071231b60599a3ce9a1}{HAL\_SYSTICK\_Callback}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00453}00453\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00454}00454\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00459}00459\ \_\_weak\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group2_ga5033855e81ba2071231b60599a3ce9a1}{HAL\_SYSTICK\_Callback}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00460}00460\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00461}00461\ \ \ \textcolor{comment}{/*\ NOTE\ :\ This\ function\ should\ not\ be\ modified,\ when\ the\ callback\ is\ needed,}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00462}00462\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ the\ HAL\_SYSTICK\_Callback\ could\ be\ implemented\ in\ the\ user\ file}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00463}00463\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00464}00464\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00466}00466\ \textcolor{preprocessor}{\#if\ (\_\_MPU\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00467}00467\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00479}00479\ \textcolor{keywordtype}{void}\ HAL\_MPU\_Enable(uint32\_t\ MPU\_Control)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00480}00480\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00481}00481\ \ \ \textcolor{comment}{/*\ Enable\ the\ MPU\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00482}00482\ \ \ MPU-\/>CTRL\ =\ (MPU\_Control\ |\ MPU\_CTRL\_ENABLE\_Msk);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00483}00483\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00484}00484\ \ \ \textcolor{comment}{/*\ Ensure\ MPU\ setting\ take\ effects\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00485}00485\ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00486}00486\ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00487}00487\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00488}00488\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00494}00494\ \textcolor{keywordtype}{void}\ HAL\_MPU\_Disable(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00495}00495\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00496}00496\ \ \ \textcolor{comment}{/*\ Make\ sure\ outstanding\ transfers\ are\ done\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00497}00497\ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga671101179b5943990785f36f8c1e2269}{\_\_DMB}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00498}00498\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00499}00499\ \ \ \textcolor{comment}{/*\ Disable\ the\ MPU\ and\ clear\ the\ control\ register*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00500}00500\ \ \ MPU-\/>CTRL\ \ =\ 0;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00501}00501\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00502}00502\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00503}00503\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00510}00510\ \textcolor{keywordtype}{void}\ HAL\_MPU\_ConfigRegion(MPU\_Region\_InitTypeDef\ *MPU\_Init)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00511}00511\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00512}00512\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00513}00513\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_REGION\_NUMBER(MPU\_Init-\/>Number));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00514}00514\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_REGION\_ENABLE(MPU\_Init-\/>Enable));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00515}00515\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00516}00516\ \ \ \textcolor{comment}{/*\ Set\ the\ Region\ number\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00517}00517\ \ \ MPU-\/>RNR\ =\ MPU\_Init-\/>Number;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00518}00518\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00519}00519\ \ \ \textcolor{keywordflow}{if}\ ((MPU\_Init-\/>Enable)\ !=\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00520}00520\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00521}00521\ \ \ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00522}00522\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_INSTRUCTION\_ACCESS(MPU\_Init-\/>DisableExec));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00523}00523\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_REGION\_PERMISSION\_ATTRIBUTE(MPU\_Init-\/>AccessPermission));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00524}00524\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_TEX\_LEVEL(MPU\_Init-\/>TypeExtField));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00525}00525\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_ACCESS\_SHAREABLE(MPU\_Init-\/>IsShareable));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00526}00526\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_ACCESS\_CACHEABLE(MPU\_Init-\/>IsCacheable));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00527}00527\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_ACCESS\_BUFFERABLE(MPU\_Init-\/>IsBufferable));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00528}00528\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_SUB\_REGION\_DISABLE(MPU\_Init-\/>SubRegionDisable));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00529}00529\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(IS\_MPU\_REGION\_SIZE(MPU\_Init-\/>Size));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00530}00530\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00531}00531\ \ \ \ \ MPU-\/>RBAR\ =\ MPU\_Init-\/>BaseAddress;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00532}00532\ \ \ \ \ MPU-\/>RASR\ =\ ((uint32\_t)MPU\_Init-\/>DisableExec\ \ \ \ \ \ \ \ <<\ MPU\_RASR\_XN\_Pos)\ \ \ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00533}00533\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>AccessPermission\ \ \ <<\ MPU\_RASR\_AP\_Pos)\ \ \ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00534}00534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>TypeExtField\ \ \ \ \ \ \ <<\ MPU\_RASR\_TEX\_Pos)\ \ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00535}00535\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>IsShareable\ \ \ \ \ \ \ \ <<\ MPU\_RASR\_S\_Pos)\ \ \ \ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00536}00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>IsCacheable\ \ \ \ \ \ \ \ <<\ MPU\_RASR\_C\_Pos)\ \ \ \ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00537}00537\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>IsBufferable\ \ \ \ \ \ \ <<\ MPU\_RASR\_B\_Pos)\ \ \ \ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00538}00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>SubRegionDisable\ \ \ <<\ MPU\_RASR\_SRD\_Pos)\ \ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00539}00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>Size\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ MPU\_RASR\_SIZE\_Pos)\ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00540}00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)MPU\_Init-\/>Enable\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ MPU\_RASR\_ENABLE\_Pos);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00541}00541\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00542}00542\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00543}00543\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00544}00544\ \ \ \ \ MPU-\/>RBAR\ =\ 0x00U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00545}00545\ \ \ \ \ MPU-\/>RASR\ =\ 0x00U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00546}00546\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00547}00547\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00548}00548\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MPU\_PRESENT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00549}00549\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__cortex_8c_source_l00558}00558\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_CORTEX\_MODULE\_ENABLED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

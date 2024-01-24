@@ -1,0 +1,586 @@
+\doxysection{LSM6\+DSOX\+\_\+common}
+\hypertarget{group__LSM6DSOX__common}{}\label{group__LSM6DSOX__common}\index{LSM6DSOX\_common@{LSM6DSOX\_common}}
+
+
+This section groups common useful functions.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gaf2e0c066746a999607ecc5356ae3fe3d}{lsm6dsox\+\_\+odr\+\_\+cal\+\_\+reg\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Difference in percentage of the effective ODR(and timestamp rate) with respect to the typical. Step\+: 0.\+15\%. 8-\/bit format, 2\textquotesingle{}s complement.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gab526863c0ef3f0fe0592758173d1127e}{lsm6dsox\+\_\+odr\+\_\+cal\+\_\+reg\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Difference in percentage of the effective ODR(and timestamp rate) with respect to the typical. Step\+: 0.\+15\%. 8-\/bit format, 2\textquotesingle{}s complement.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\+\_\+mem\+\_\+bank\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga2f33e8710fca0e1326aabd5112fe2b56}{lsm6dsox\+\_\+reg\+\_\+access\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Enable access to the embedded functions/sensor hub configuration registers.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga67965b7c2e0673d5339b5ad4b755cec8}{lsm6dsox\+\_\+mem\+\_\+bank\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga2f33e8710fca0e1326aabd5112fe2b56}{lsm6dsox\+\_\+reg\+\_\+access\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable access to the embedded functions/sensor hub configuration registers.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9}{lsm6dsox\+\_\+ln\+\_\+pg\+\_\+write\+\_\+byte}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Write a line(byte) in a page.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gae4813a4fdc32849969898dc79b55a2e4}{lsm6dsox\+\_\+ln\+\_\+pg\+\_\+write}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write buffer in a page.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}{lsm6dsox\+\_\+ln\+\_\+pg\+\_\+read\+\_\+byte}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Read a line(byte) in a page.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga3fa98aad2de0e76b1e0e369b27cf11a4}{lsm6dsox\+\_\+data\+\_\+ready\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gad81d2f4b3fd49fcb78bbba9fb757030b}{lsm6dsox\+\_\+dataready\+\_\+pulsed\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Data-\/ready pulsed / letched mode.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga616c92a29cd9392e31b7b94a1b6a05f5}{lsm6dsox\+\_\+data\+\_\+ready\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gad81d2f4b3fd49fcb78bbba9fb757030b}{lsm6dsox\+\_\+dataready\+\_\+pulsed\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Data-\/ready pulsed / letched mode.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga0a1d03a26e247a2371ef8ab6b1ba1169}{lsm6dsox\+\_\+device\+\_\+id\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Device "{}\+Who am I"{}.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gaf2320333b174201e17a14c0e72d639c2}{lsm6dsox\+\_\+reset\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Software reset. Restore the default values in user registers\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga0bee4cc35d2260f08a73867b9a7095a1}{lsm6dsox\+\_\+reset\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Software reset. Restore the default values in user registers.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gadb379b87e89e31a2299f46b685f957af}{lsm6dsox\+\_\+auto\+\_\+increment\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Register address automatically incremented during a multiple byte access with a serial interface.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gaa94bc200efb583ae50272c8b9e23515e}{lsm6dsox\+\_\+auto\+\_\+increment\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Register address automatically incremented during a multiple byte access with a serial interface.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gab5e4f456878f1e027ad0ce01d7ef099d}{lsm6dsox\+\_\+boot\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Reboot memory content. Reload the calibration parameters.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gaac579764ccd85289f02efdcd82124b39}{lsm6dsox\+\_\+boot\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Reboot memory content. Reload the calibration parameters.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga321539fd88a84ad098064fc354504bd9}{lsm6dsox\+\_\+xl\+\_\+self\+\_\+test\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga6078f784c6c090d61b9e0189ea542b7e}{lsm6dsox\+\_\+st\+\_\+xl\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Linear acceleration sensor self-\/test enable.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gace0214a02ee96482f3e51e69ca604fa2}{lsm6dsox\+\_\+xl\+\_\+self\+\_\+test\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga6078f784c6c090d61b9e0189ea542b7e}{lsm6dsox\+\_\+st\+\_\+xl\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Linear acceleration sensor self-\/test enable.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_ga92ac7b29048cb5e09804523d058f969d}{lsm6dsox\+\_\+gy\+\_\+self\+\_\+test\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gad7ae9dbd6e1012f466b7b54ada3542da}{lsm6dsox\+\_\+st\+\_\+g\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Angular rate sensor self-\/test enable.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__common_gaf708f78ab820efefafb97eb6c02e026a}{lsm6dsox\+\_\+gy\+\_\+self\+\_\+test\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gad7ae9dbd6e1012f466b7b54ada3542da}{lsm6dsox\+\_\+st\+\_\+g\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Angular rate sensor self-\/test enable.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups common useful functions. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__common_gaa94bc200efb583ae50272c8b9e23515e}\label{group__LSM6DSOX__common_gaa94bc200efb583ae50272c8b9e23515e} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_auto\_increment\_get@{lsm6dsox\_auto\_increment\_get}}
+\index{lsm6dsox\_auto\_increment\_get@{lsm6dsox\_auto\_increment\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_auto\_increment\_get()}{lsm6dsox\_auto\_increment\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+auto\+\_\+increment\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Register address automatically incremented during a multiple byte access with a serial interface.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of if\+\_\+inc in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02564}{2564}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gadb379b87e89e31a2299f46b685f957af}\label{group__LSM6DSOX__common_gadb379b87e89e31a2299f46b685f957af} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_auto\_increment\_set@{lsm6dsox\_auto\_increment\_set}}
+\index{lsm6dsox\_auto\_increment\_set@{lsm6dsox\_auto\_increment\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_auto\_increment\_set()}{lsm6dsox\_auto\_increment\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+auto\+\_\+increment\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Register address automatically incremented during a multiple byte access with a serial interface.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of if\+\_\+inc in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02539}{2539}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gaac579764ccd85289f02efdcd82124b39}\label{group__LSM6DSOX__common_gaac579764ccd85289f02efdcd82124b39} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_boot\_get@{lsm6dsox\_boot\_get}}
+\index{lsm6dsox\_boot\_get@{lsm6dsox\_boot\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_boot\_get()}{lsm6dsox\_boot\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+boot\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Reboot memory content. Reload the calibration parameters.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of boot in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02607}{2607}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gab5e4f456878f1e027ad0ce01d7ef099d}\label{group__LSM6DSOX__common_gab5e4f456878f1e027ad0ce01d7ef099d} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_boot\_set@{lsm6dsox\_boot\_set}}
+\index{lsm6dsox\_boot\_set@{lsm6dsox\_boot\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_boot\_set()}{lsm6dsox\_boot\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+boot\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Reboot memory content. Reload the calibration parameters.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of boot in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02583}{2583}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga616c92a29cd9392e31b7b94a1b6a05f5}\label{group__LSM6DSOX__common_ga616c92a29cd9392e31b7b94a1b6a05f5} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_data\_ready\_mode\_get@{lsm6dsox\_data\_ready\_mode\_get}}
+\index{lsm6dsox\_data\_ready\_mode\_get@{lsm6dsox\_data\_ready\_mode\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_data\_ready\_mode\_get()}{lsm6dsox\_data\_ready\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+data\+\_\+ready\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gad81d2f4b3fd49fcb78bbba9fb757030b}{lsm6dsox\+\_\+dataready\+\_\+pulsed\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Data-\/ready pulsed / letched mode.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of dataready\+\_\+pulsed in reg COUNTER\+\_\+\+BDR\+\_\+\+REG1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02442}{2442}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga3fa98aad2de0e76b1e0e369b27cf11a4}\label{group__LSM6DSOX__common_ga3fa98aad2de0e76b1e0e369b27cf11a4} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_data\_ready\_mode\_set@{lsm6dsox\_data\_ready\_mode\_set}}
+\index{lsm6dsox\_data\_ready\_mode\_set@{lsm6dsox\_data\_ready\_mode\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_data\_ready\_mode\_set()}{lsm6dsox\_data\_ready\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+data\+\_\+ready\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gad81d2f4b3fd49fcb78bbba9fb757030b}{lsm6dsox\+\_\+dataready\+\_\+pulsed\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Data-\/ready pulsed / letched mode.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of dataready\+\_\+pulsed in reg COUNTER\+\_\+\+BDR\+\_\+\+REG1 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02413}{2413}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga0a1d03a26e247a2371ef8ab6b1ba1169}\label{group__LSM6DSOX__common_ga0a1d03a26e247a2371ef8ab6b1ba1169} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_device\_id\_get@{lsm6dsox\_device\_id\_get}}
+\index{lsm6dsox\_device\_id\_get@{lsm6dsox\_device\_id\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_device\_id\_get()}{lsm6dsox\_device\_id\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+device\+\_\+id\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff }\end{DoxyParamCaption})}
+
+
+
+Device "{}\+Who am I"{}.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02477}{2477}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gaf708f78ab820efefafb97eb6c02e026a}\label{group__LSM6DSOX__common_gaf708f78ab820efefafb97eb6c02e026a} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_gy\_self\_test\_get@{lsm6dsox\_gy\_self\_test\_get}}
+\index{lsm6dsox\_gy\_self\_test\_get@{lsm6dsox\_gy\_self\_test\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_gy\_self\_test\_get()}{lsm6dsox\_gy\_self\_test\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+gy\+\_\+self\+\_\+test\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gad7ae9dbd6e1012f466b7b54ada3542da}{lsm6dsox\+\_\+st\+\_\+g\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Angular rate sensor self-\/test enable.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of st\+\_\+g in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02714}{2714}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga92ac7b29048cb5e09804523d058f969d}\label{group__LSM6DSOX__common_ga92ac7b29048cb5e09804523d058f969d} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_gy\_self\_test\_set@{lsm6dsox\_gy\_self\_test\_set}}
+\index{lsm6dsox\_gy\_self\_test\_set@{lsm6dsox\_gy\_self\_test\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_gy\_self\_test\_set()}{lsm6dsox\_gy\_self\_test\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+gy\+\_\+self\+\_\+test\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gad7ae9dbd6e1012f466b7b54ada3542da}{lsm6dsox\+\_\+st\+\_\+g\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Angular rate sensor self-\/test enable.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of st\+\_\+g in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02689}{2689}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64}\label{group__LSM6DSOX__common_ga7ab5acd805255699ca7cd3af28657b64} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_ln\_pg\_read\_byte@{lsm6dsox\_ln\_pg\_read\_byte}}
+\index{lsm6dsox\_ln\_pg\_read\_byte@{lsm6dsox\_ln\_pg\_read\_byte}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ln\_pg\_read\_byte()}{lsm6dsox\_ln\_pg\_read\_byte()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ln\+\_\+pg\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{address,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Read a line(byte) in a page.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & address\+: page line address \\
+\hline
+{\em val} & read value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02338}{2338}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gae4813a4fdc32849969898dc79b55a2e4}\label{group__LSM6DSOX__common_gae4813a4fdc32849969898dc79b55a2e4} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_ln\_pg\_write@{lsm6dsox\_ln\_pg\_write}}
+\index{lsm6dsox\_ln\_pg\_write@{lsm6dsox\_ln\_pg\_write}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ln\_pg\_write()}{lsm6dsox\_ln\_pg\_write()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ln\+\_\+pg\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{address,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{uint8\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Write buffer in a page.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & address\+: page line address \\
+\hline
+{\em uint8\+\_\+t} & \texorpdfstring{$\ast$}{*}buf\+: buffer to write \\
+\hline
+{\em uint8\+\_\+t} & len\+: buffer len \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02236}{2236}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9}\label{group__LSM6DSOX__common_gaef58bffadb972711287ec6f01399f3f9} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_ln\_pg\_write\_byte@{lsm6dsox\_ln\_pg\_write\_byte}}
+\index{lsm6dsox\_ln\_pg\_write\_byte@{lsm6dsox\_ln\_pg\_write\_byte}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ln\_pg\_write\_byte()}{lsm6dsox\_ln\_pg\_write\_byte()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ln\+\_\+pg\+\_\+write\+\_\+byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{address,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Write a line(byte) in a page.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em uint8\+\_\+t} & address\+: page line address \\
+\hline
+{\em val} & value to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02161}{2161}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga67965b7c2e0673d5339b5ad4b755cec8}\label{group__LSM6DSOX__common_ga67965b7c2e0673d5339b5ad4b755cec8} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_mem\_bank\_get@{lsm6dsox\_mem\_bank\_get}}
+\index{lsm6dsox\_mem\_bank\_get@{lsm6dsox\_mem\_bank\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mem\_bank\_get()}{lsm6dsox\_mem\_bank\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mem\+\_\+bank\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga2f33e8710fca0e1326aabd5112fe2b56}{lsm6dsox\+\_\+reg\+\_\+access\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable access to the embedded functions/sensor hub configuration registers.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of reg\+\_\+access in reg FUNC\+\_\+\+CFG\+\_\+\+ACCESS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02121}{2121}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}\label{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_mem\_bank\_set@{lsm6dsox\_mem\_bank\_set}}
+\index{lsm6dsox\_mem\_bank\_set@{lsm6dsox\_mem\_bank\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mem\_bank\_set()}{lsm6dsox\_mem\_bank\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mem\+\_\+bank\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga2f33e8710fca0e1326aabd5112fe2b56}{lsm6dsox\+\_\+reg\+\_\+access\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable access to the embedded functions/sensor hub configuration registers.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of reg\+\_\+access in reg FUNC\+\_\+\+CFG\+\_\+\+ACCESS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02092}{2092}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gab526863c0ef3f0fe0592758173d1127e}\label{group__LSM6DSOX__common_gab526863c0ef3f0fe0592758173d1127e} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_odr\_cal\_reg\_get@{lsm6dsox\_odr\_cal\_reg\_get}}
+\index{lsm6dsox\_odr\_cal\_reg\_get@{lsm6dsox\_odr\_cal\_reg\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_odr\_cal\_reg\_get()}{lsm6dsox\_odr\_cal\_reg\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+odr\+\_\+cal\+\_\+reg\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Difference in percentage of the effective ODR(and timestamp rate) with respect to the typical. Step\+: 0.\+15\%. 8-\/bit format, 2\textquotesingle{}s complement.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of freq\+\_\+fine in reg INTERNAL\+\_\+\+FREQ\+\_\+\+FINE \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02069}{2069}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gaf2e0c066746a999607ecc5356ae3fe3d}\label{group__LSM6DSOX__common_gaf2e0c066746a999607ecc5356ae3fe3d} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_odr\_cal\_reg\_set@{lsm6dsox\_odr\_cal\_reg\_set}}
+\index{lsm6dsox\_odr\_cal\_reg\_set@{lsm6dsox\_odr\_cal\_reg\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_odr\_cal\_reg\_set()}{lsm6dsox\_odr\_cal\_reg\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+odr\+\_\+cal\+\_\+reg\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Difference in percentage of the effective ODR(and timestamp rate) with respect to the typical. Step\+: 0.\+15\%. 8-\/bit format, 2\textquotesingle{}s complement.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of freq\+\_\+fine in reg INTERNAL\+\_\+\+FREQ\+\_\+\+FINE \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02041}{2041}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga0bee4cc35d2260f08a73867b9a7095a1}\label{group__LSM6DSOX__common_ga0bee4cc35d2260f08a73867b9a7095a1} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_reset\_get@{lsm6dsox\_reset\_get}}
+\index{lsm6dsox\_reset\_get@{lsm6dsox\_reset\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_reset\_get()}{lsm6dsox\_reset\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+reset\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Software reset. Restore the default values in user registers.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sw\+\_\+reset in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02519}{2519}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gaf2320333b174201e17a14c0e72d639c2}\label{group__LSM6DSOX__common_gaf2320333b174201e17a14c0e72d639c2} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_reset\_set@{lsm6dsox\_reset\_set}}
+\index{lsm6dsox\_reset\_set@{lsm6dsox\_reset\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_reset\_set()}{lsm6dsox\_reset\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+reset\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Software reset. Restore the default values in user registers\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sw\+\_\+reset in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02495}{2495}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_gace0214a02ee96482f3e51e69ca604fa2}\label{group__LSM6DSOX__common_gace0214a02ee96482f3e51e69ca604fa2} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_xl\_self\_test\_get@{lsm6dsox\_xl\_self\_test\_get}}
+\index{lsm6dsox\_xl\_self\_test\_get@{lsm6dsox\_xl\_self\_test\_get}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_xl\_self\_test\_get()}{lsm6dsox\_xl\_self\_test\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+xl\+\_\+self\+\_\+test\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga6078f784c6c090d61b9e0189ea542b7e}{lsm6dsox\+\_\+st\+\_\+xl\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Linear acceleration sensor self-\/test enable.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of st\+\_\+xl in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02651}{2651}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__common_ga321539fd88a84ad098064fc354504bd9}\label{group__LSM6DSOX__common_ga321539fd88a84ad098064fc354504bd9} 
+\index{LSM6DSOX\_common@{LSM6DSOX\_common}!lsm6dsox\_xl\_self\_test\_set@{lsm6dsox\_xl\_self\_test\_set}}
+\index{lsm6dsox\_xl\_self\_test\_set@{lsm6dsox\_xl\_self\_test\_set}!LSM6DSOX\_common@{LSM6DSOX\_common}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_xl\_self\_test\_set()}{lsm6dsox\_xl\_self\_test\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+xl\+\_\+self\+\_\+test\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga6078f784c6c090d61b9e0189ea542b7e}{lsm6dsox\+\_\+st\+\_\+xl\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Linear acceleration sensor self-\/test enable.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of st\+\_\+xl in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l02626}{2626}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

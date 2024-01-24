@@ -1,0 +1,183 @@
+\doxysection{stm32wlxx\+\_\+hal\+\_\+i2c\+\_\+ex.\+c}
+\hypertarget{stm32wlxx__hal__i2c__ex_8c_source}{}\label{stm32wlxx__hal__i2c__ex_8c_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_i2c\_ex.c@{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_i2c\_ex.c}}
+\mbox{\hyperlink{stm32wlxx__hal__i2c__ex_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00050}00050\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00051}00051\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__hal_8h}{stm32wlxx\_hal.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00062}00062\ \textcolor{preprocessor}{\#ifdef\ HAL\_I2C\_MODULE\_ENABLED}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00064}00064\ \textcolor{comment}{/*\ Private\ typedef\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00065}00065\ \textcolor{comment}{/*\ Private\ define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00066}00066\ \textcolor{comment}{/*\ Private\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00067}00067\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00068}00068\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00069}00069\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00096}00096\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group1_ga2f0b5fc42fca412214f3968e528e2b9e}{HAL\_I2CEx\_ConfigAnalogFilter}}(\mbox{\hyperlink{struct____I2C__HandleTypeDef}{I2C\_HandleTypeDef}}\ *hi2c,\ uint32\_t\ AnalogFilter)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00097}00097\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00098}00098\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00099}00099\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__Exported__macros_gacdf0149a4e8c41a6814c13613c38a6b2}{IS\_I2C\_ALL\_INSTANCE}}(hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00100}00100\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__I2CEx__Private__Macro_ga2ca73a919482ef22e5f3bcd5e4a0c820}{IS\_I2C\_ANALOG\_FILTER}}(AnalogFilter));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00102}00102\ \ \ \textcolor{keywordflow}{if}\ (hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ ==\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00103}00103\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00104}00104\ \ \ \ \ \textcolor{comment}{/*\ Process\ Locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00105}00105\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00107}00107\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a}{HAL\_I2C\_STATE\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00109}00109\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ selected\ I2C\ peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00110}00110\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_ga3d6a35da02ca72537a15570912c80412}{\_\_HAL\_I2C\_DISABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00112}00112\ \ \ \ \ \textcolor{comment}{/*\ Reset\ I2Cx\ ANOFF\ bit\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00113}00113\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}}\ \&=\ \string~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4b33b8e33fa18fd49d6d1d8a69777289}{I2C\_CR1\_ANFOFF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00115}00115\ \ \ \ \ \textcolor{comment}{/*\ Set\ analog\ filter\ bit*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00116}00116\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}}\ |=\ AnalogFilter;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00118}00118\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_gacff412c47b0c1d63ef3b2a07f65988b7}{\_\_HAL\_I2C\_ENABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00120}00120\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00122}00122\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00123}00123\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00126}00126\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00127}00127\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00128}00128\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}{HAL\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00130}00130\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00131}00131\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00140}00140\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group1_ga474acc9b92626a0f690bf9aa8991a476}{HAL\_I2CEx\_ConfigDigitalFilter}}(\mbox{\hyperlink{struct____I2C__HandleTypeDef}{I2C\_HandleTypeDef}}\ *hi2c,\ uint32\_t\ DigitalFilter)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00141}00141\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00142}00142\ \ \ uint32\_t\ tmpreg;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00144}00144\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00145}00145\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__Exported__macros_gacdf0149a4e8c41a6814c13613c38a6b2}{IS\_I2C\_ALL\_INSTANCE}}(hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00146}00146\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__I2CEx__Private__Macro_gac10d26772d885184a7a30d9a2adee453}{IS\_I2C\_DIGITAL\_FILTER}}(DigitalFilter));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00148}00148\ \ \ \textcolor{keywordflow}{if}\ (hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ ==\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00149}00149\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00150}00150\ \ \ \ \ \textcolor{comment}{/*\ Process\ Locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00151}00151\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00153}00153\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a}{HAL\_I2C\_STATE\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00155}00155\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ selected\ I2C\ peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00156}00156\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_ga3d6a35da02ca72537a15570912c80412}{\_\_HAL\_I2C\_DISABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00158}00158\ \ \ \ \ \textcolor{comment}{/*\ Get\ the\ old\ register\ value\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00159}00159\ \ \ \ \ tmpreg\ =\ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00161}00161\ \ \ \ \ \textcolor{comment}{/*\ Reset\ I2Cx\ DNF\ bits\ [11:8]\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00162}00162\ \ \ \ \ tmpreg\ \&=\ \string~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae2ee714428013b4a48aba608f6922bd6}{I2C\_CR1\_DNF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00164}00164\ \ \ \ \ \textcolor{comment}{/*\ Set\ I2Cx\ DNF\ coefficient\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00165}00165\ \ \ \ \ tmpreg\ |=\ DigitalFilter\ <<\ 8U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00167}00167\ \ \ \ \ \textcolor{comment}{/*\ Store\ the\ new\ register\ value\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00168}00168\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}}\ =\ tmpreg;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00170}00170\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_gacff412c47b0c1d63ef3b2a07f65988b7}{\_\_HAL\_I2C\_ENABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00172}00172\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00174}00174\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00177}00177\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00178}00178\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00179}00179\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00180}00180\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00181}00181\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}{HAL\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00182}00182\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00183}00183\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00208}00208\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group2_ga117747a05be1298f16154b9c4a526336}{HAL\_I2CEx\_EnableWakeUp}}(\mbox{\hyperlink{struct____I2C__HandleTypeDef}{I2C\_HandleTypeDef}}\ *hi2c)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00209}00209\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00210}00210\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00211}00211\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__Exported__macros_gadf692bda16bac3264bccff7f59ddaab9}{IS\_I2C\_WAKEUP\_FROMSTOP\_INSTANCE}}(hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00213}00213\ \ \ \textcolor{keywordflow}{if}\ (hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ ==\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00214}00214\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00215}00215\ \ \ \ \ \textcolor{comment}{/*\ Process\ Locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00216}00216\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00218}00218\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a}{HAL\_I2C\_STATE\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00220}00220\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ selected\ I2C\ peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00221}00221\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_ga3d6a35da02ca72537a15570912c80412}{\_\_HAL\_I2C\_DISABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00223}00223\ \ \ \ \ \textcolor{comment}{/*\ Enable\ wakeup\ from\ stop\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00224}00224\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}}\ |=\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75a226d059143573fab07f866853ce75}{I2C\_CR1\_WUPEN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00226}00226\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_gacff412c47b0c1d63ef3b2a07f65988b7}{\_\_HAL\_I2C\_ENABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00228}00228\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00230}00230\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00231}00231\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00233}00233\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00234}00234\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00235}00235\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00236}00236\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00237}00237\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}{HAL\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00238}00238\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00239}00239\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00247}00247\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group2_ga8e761e304c77fa623824bb297ea626b3}{HAL\_I2CEx\_DisableWakeUp}}(\mbox{\hyperlink{struct____I2C__HandleTypeDef}{I2C\_HandleTypeDef}}\ *hi2c)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00248}00248\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00249}00249\ \ \ \textcolor{comment}{/*\ Check\ the\ parameters\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00250}00250\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__Exported__macros_gadf692bda16bac3264bccff7f59ddaab9}{IS\_I2C\_WAKEUP\_FROMSTOP\_INSTANCE}}(hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00252}00252\ \ \ \textcolor{keywordflow}{if}\ (hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ ==\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00253}00253\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00254}00254\ \ \ \ \ \textcolor{comment}{/*\ Process\ Locked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00255}00255\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\_\_HAL\_LOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00257}00257\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a}{HAL\_I2C\_STATE\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00259}00259\ \ \ \ \ \textcolor{comment}{/*\ Disable\ the\ selected\ I2C\ peripheral\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00260}00260\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_ga3d6a35da02ca72537a15570912c80412}{\_\_HAL\_I2C\_DISABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00262}00262\ \ \ \ \ \textcolor{comment}{/*\ Enable\ wakeup\ from\ stop\ mode\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00263}00263\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}}\ \&=\ \string~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75a226d059143573fab07f866853ce75}{I2C\_CR1\_WUPEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00265}00265\ \ \ \ \ \mbox{\hyperlink{group__I2C__Exported__Macros_gacff412c47b0c1d63ef3b2a07f65988b7}{\_\_HAL\_I2C\_ENABLE}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00267}00267\ \ \ \ \ hi2c-\/>\mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}\ =\ \mbox{\hyperlink{group__HAL__state__structure__definition_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\_I2C\_STATE\_READY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00269}00269\ \ \ \ \ \textcolor{comment}{/*\ Process\ Unlocked\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00270}00270\ \ \ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\_\_HAL\_UNLOCK}}(hi2c);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00272}00272\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00273}00273\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00274}00274\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00275}00275\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00276}00276\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}{HAL\_BUSY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00277}00277\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00278}00278\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00312}00312\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group3_ga4002aa7dd388a6c1a4d6a3ff27b65942}{HAL\_I2CEx\_EnableFastModePlus}}(uint32\_t\ ConfigFastModePlus)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00313}00313\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00314}00314\ \ \ \textcolor{comment}{/*\ Check\ the\ parameter\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00315}00315\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__I2CEx__Private__Macro_ga834beb1e67c16ce8e161c6d4047665d1}{IS\_I2C\_FASTMODEPLUS}}(ConfigFastModePlus));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00317}00317\ \ \ \textcolor{comment}{/*\ Enable\ fast\ mode\ plus\ driving\ capability\ for\ selected\ pin\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00318}00318\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR1,\ (uint32\_t)ConfigFastModePlus);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00319}00319\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00336}00336\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group3_ga3ad1ae2b495e02f6c750871d283cef44}{HAL\_I2CEx\_DisableFastModePlus}}(uint32\_t\ ConfigFastModePlus)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00337}00337\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00338}00338\ \ \ \textcolor{comment}{/*\ Check\ the\ parameter\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00339}00339\ \ \ \mbox{\hyperlink{stm32wlxx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}{assert\_param}}(\mbox{\hyperlink{group__I2CEx__Private__Macro_ga834beb1e67c16ce8e161c6d4047665d1}{IS\_I2C\_FASTMODEPLUS}}(ConfigFastModePlus));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00340}00340\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00341}00341\ \ \ \textcolor{comment}{/*\ Disable\ fast\ mode\ plus\ driving\ capability\ for\ selected\ pin\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00342}00342\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/>CFGR1,\ (uint32\_t)ConfigFastModePlus);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00343}00343\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__hal__i2c__ex_8c_source_l00351}00351\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_I2C\_MODULE\_ENABLED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

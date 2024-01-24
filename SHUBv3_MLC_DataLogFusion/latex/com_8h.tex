@@ -1,0 +1,78 @@
+\doxysection{MEMS/\+Target/com.h File Reference}
+\hypertarget{com_8h}{}\label{com_8h}\index{MEMS/Target/com.h@{MEMS/Target/com.h}}
+
+
+header for \doxylink{com_8c}{com.\+c}  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}serial\+\_\+protocol.\+h"{}}\newline
+{\ttfamily \#include "{}bsp\+\_\+ip\+\_\+conf.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTUart__Engine}{TUart\+\_\+\+Engine}}
+\begin{DoxyCompactList}\small\item\em Serial message engine structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{com_8h_a566ad7c668661f2b4e70ad6673519507}{UART\+\_\+\+Rx\+Buffer\+Size}}~(2 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\+\_\+\+Max\+Len}})
+\item 
+\#define \mbox{\hyperlink{com_8h_a5ea5b27ce3d1063f41b7a12c15ad167a}{UART\+\_\+\+Tx\+Buffer\+Size}}~(2 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\+\_\+\+Max\+Len}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga0b26bd6e23b2426297bc1ef2bea9ca6f}{UART\+\_\+\+Start\+Receive\+Msg}} (void)
+\begin{DoxyCompactList}\small\item\em Start receiving messages via DMA. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaa3ca702c66e1272c143ddfcbe3a93e7b}{UART\+\_\+\+Received\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Check if a message is received via UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\+\_\+\+Send\+Msg}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Send a message via UART. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga27a1b0ece17d629a9628d0209e168435}{Uart\+Rx\+Buffer}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{structTUart__Engine}{TUart\+\_\+\+Engine}} \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga44d3e8cd0b3ddfd2f7fa0f14f0870c21}{Uart\+Engine}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+header for \doxylink{com_8c}{com.\+c} 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{com_8h_source}{com.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{com_8h_a566ad7c668661f2b4e70ad6673519507}\label{com_8h_a566ad7c668661f2b4e70ad6673519507} 
+\index{com.h@{com.h}!UART\_RxBufferSize@{UART\_RxBufferSize}}
+\index{UART\_RxBufferSize@{UART\_RxBufferSize}!com.h@{com.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RxBufferSize}{UART\_RxBufferSize}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+Rx\+Buffer\+Size~(2 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\+\_\+\+Max\+Len}})}
+
+
+
+Definition at line \mbox{\hyperlink{com_8h_source_l00043}{43}} of file \mbox{\hyperlink{com_8h_source}{com.\+h}}.
+
+\Hypertarget{com_8h_a5ea5b27ce3d1063f41b7a12c15ad167a}\label{com_8h_a5ea5b27ce3d1063f41b7a12c15ad167a} 
+\index{com.h@{com.h}!UART\_TxBufferSize@{UART\_TxBufferSize}}
+\index{UART\_TxBufferSize@{UART\_TxBufferSize}!com.h@{com.h}}
+\doxysubsubsection{\texorpdfstring{UART\_TxBufferSize}{UART\_TxBufferSize}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+Tx\+Buffer\+Size~(2 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\+\_\+\+Max\+Len}})}
+
+
+
+Definition at line \mbox{\hyperlink{com_8h_source_l00044}{44}} of file \mbox{\hyperlink{com_8h_source}{com.\+h}}.
+

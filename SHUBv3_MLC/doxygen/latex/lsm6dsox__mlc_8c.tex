@@ -1,0 +1,166 @@
+\doxysection{Core/\+Src/lsm6dsox\+\_\+mlc.c File Reference}
+\hypertarget{lsm6dsox__mlc_8c}{}\label{lsm6dsox__mlc_8c}\index{Core/Src/lsm6dsox\_mlc.c@{Core/Src/lsm6dsox\_mlc.c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}falling.\+h"{}}\newline
+{\ttfamily \#include "{}lsm6dsox\+\_\+reg.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+nucleo\+\_\+bus.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}app\+\_\+mems.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lsm6dsox__mlc_8c_a5ab03916aa2a1644de4a108701c277f1}{BOOT\+\_\+\+TIME}}~10
+\item 
+\#define \mbox{\hyperlink{lsm6dsox__mlc_8c_a870377cd93fbe2a32bcdc3264f7ceca2}{SENSOR\+\_\+\+BUS}}~\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}
+\item 
+\#define \mbox{\hyperlink{lsm6dsox__mlc_8c_a4a424f06c65a4e6fd4f3ce51a7099d4b}{PWM\+\_\+3\+V3}}~915
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lsm6dsox__mlc_8c_ab83a820ad11912902c87e34c8d4eeda8}{lsm6dsox\+\_\+mlc}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{lsm6dsox__mlc_8c_a5ab03916aa2a1644de4a108701c277f1}\label{lsm6dsox__mlc_8c_a5ab03916aa2a1644de4a108701c277f1} 
+\index{lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}!BOOT\_TIME@{BOOT\_TIME}}
+\index{BOOT\_TIME@{BOOT\_TIME}!lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}}
+\doxysubsubsection{\texorpdfstring{BOOT\_TIME}{BOOT\_TIME}}
+{\footnotesize\ttfamily \#define BOOT\+\_\+\+TIME~10}
+
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__mlc_8c_source_l00071}{71}} of file \mbox{\hyperlink{lsm6dsox__mlc_8c_source}{lsm6dsox\+\_\+mlc.\+c}}.
+
+\Hypertarget{lsm6dsox__mlc_8c_a4a424f06c65a4e6fd4f3ce51a7099d4b}\label{lsm6dsox__mlc_8c_a4a424f06c65a4e6fd4f3ce51a7099d4b} 
+\index{lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}!PWM\_3V3@{PWM\_3V3}}
+\index{PWM\_3V3@{PWM\_3V3}!lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}}
+\doxysubsubsection{\texorpdfstring{PWM\_3V3}{PWM\_3V3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+3\+V3~915}
+
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__mlc_8c_source_l00073}{73}} of file \mbox{\hyperlink{lsm6dsox__mlc_8c_source}{lsm6dsox\+\_\+mlc.\+c}}.
+
+\Hypertarget{lsm6dsox__mlc_8c_a870377cd93fbe2a32bcdc3264f7ceca2}\label{lsm6dsox__mlc_8c_a870377cd93fbe2a32bcdc3264f7ceca2} 
+\index{lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}!SENSOR\_BUS@{SENSOR\_BUS}}
+\index{SENSOR\_BUS@{SENSOR\_BUS}!lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_BUS}{SENSOR\_BUS}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+BUS~\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Variables_gac379bcc152d860f08b1279fd3e232295}{hi2c2}}}
+
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__mlc_8c_source_l00072}{72}} of file \mbox{\hyperlink{lsm6dsox__mlc_8c_source}{lsm6dsox\+\_\+mlc.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lsm6dsox__mlc_8c_ab83a820ad11912902c87e34c8d4eeda8}\label{lsm6dsox__mlc_8c_ab83a820ad11912902c87e34c8d4eeda8} 
+\index{lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}!lsm6dsox\_mlc@{lsm6dsox\_mlc}}
+\index{lsm6dsox\_mlc@{lsm6dsox\_mlc}!lsm6dsox\_mlc.c@{lsm6dsox\_mlc.c}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc()}{lsm6dsox\_mlc()}}
+{\footnotesize\ttfamily void lsm6dsox\+\_\+mlc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__mlc_8c_source_l00098}{98}} of file \mbox{\hyperlink{lsm6dsox__mlc_8c_source}{lsm6dsox\+\_\+mlc.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \textcolor{comment}{/*\ Variable\ declaration\ */}}
+\DoxyCodeLine{00101\ \ \ \mbox{\hyperlink{structlsm6dsox__pin__int1__route__t}{lsm6dsox\_pin\_int1\_route\_t}}\ pin\_int1\_route;}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{structlsm6dsox__all__sources__t}{lsm6dsox\_all\_sources\_t}}\ status;}
+\DoxyCodeLine{00103\ \ \ \mbox{\hyperlink{structlsm6dsox__emb__sens__t}{lsm6dsox\_emb\_sens\_t}}\ emb\_sens;}
+\DoxyCodeLine{00104\ \ \ \mbox{\hyperlink{structstmdev__ctx__t}{stmdev\_ctx\_t}}\ dev\_ctx;}
+\DoxyCodeLine{00105\ \ \ uint8\_t\ mlc\_out[8];}
+\DoxyCodeLine{00106\ \ \ uint32\_t\ i;}
+\DoxyCodeLine{00107\ \ \ \textcolor{comment}{/*\ Initialize\ mems\ driver\ interface\ */}}
+\DoxyCodeLine{00108\ \ \ dev\_ctx.\mbox{\hyperlink{structstmdev__ctx__t_a0e246992b5b3c87a6f4447e21224f9e4}{write\_reg}}\ =\ platform\_write;}
+\DoxyCodeLine{00109\ \ \ dev\_ctx.\mbox{\hyperlink{structstmdev__ctx__t_ae8d16a80f8d2f60240ea39748312c4aa}{read\_reg}}\ \ =\ platform\_read;}
+\DoxyCodeLine{00110\ \ \ dev\_ctx.\mbox{\hyperlink{structstmdev__ctx__t_a81011b79683fab64ce3aff71114f8fdd}{handle}}\ \ \ \ =\ \&\mbox{\hyperlink{lsm6dsox__mlc_8c_a870377cd93fbe2a32bcdc3264f7ceca2}{SENSOR\_BUS}};}
+\DoxyCodeLine{00111\ \ \ \textcolor{comment}{/*\ Init\ test\ platform\ */}}
+\DoxyCodeLine{00112\ \ \ platform\_init();}
+\DoxyCodeLine{00113\ \ \ \textcolor{comment}{/*\ Wait\ sensor\ boot\ time\ */}}
+\DoxyCodeLine{00114\ \ \ platform\_delay(\mbox{\hyperlink{lsm6dsox__mlc_8c_a5ab03916aa2a1644de4a108701c277f1}{BOOT\_TIME}});}
+\DoxyCodeLine{00115\ \ \ \textcolor{comment}{/*\ Check\ device\ ID\ */}}
+\DoxyCodeLine{00116\ \ \ \mbox{\hyperlink{group__LSM6DSOX__common_ga0a1d03a26e247a2371ef8ab6b1ba1169}{lsm6dsox\_device\_id\_get}}(\&dev\_ctx,\ \&whoamI);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \textcolor{keywordflow}{if}\ (whoamI\ !=\ \mbox{\hyperlink{group__LSM6DSOX__Infos_gab16d5e1f23307e870b293a098c5c7ef9}{LSM6DSOX\_ID}})}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{while}\ (1);}
+\DoxyCodeLine{00120\ \textcolor{comment}{/*\ \ Debugging\ prints}}
+\DoxyCodeLine{00121\ \textcolor{comment}{}}
+\DoxyCodeLine{00122\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ \ \ \ \ \ sprintf("{}MLC\_WHOAMI:\ \%d\(\backslash\)r\(\backslash\)n"{},\ whoamI);}}
+\DoxyCodeLine{00124\ \textcolor{comment}{\ \ \ \ \ \ sprintf("{}lsm6dsox\_device\_id\_get:\ \%d\(\backslash\)r\(\backslash\)n"{},\ lsm6dsox\_device\_id\_get);}}
+\DoxyCodeLine{00125\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00126\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \textcolor{comment}{/*\ Restore\ default\ configuration\ */}}
+\DoxyCodeLine{00129\ \ \ \mbox{\hyperlink{group__LSM6DSOX__common_gaf2320333b174201e17a14c0e72d639c2}{lsm6dsox\_reset\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__STMicroelectronics_ga4ea818a6722d4343385eb33341a443d0}{PROPERTY\_ENABLE}});}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{group__LSM6DSOX__common_ga0bee4cc35d2260f08a73867b9a7095a1}{lsm6dsox\_reset\_get}}(\&dev\_ctx,\ \&rst);}
+\DoxyCodeLine{00133\ \ \ \}\ \textcolor{keywordflow}{while}\ (rst);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \textcolor{comment}{/*\ Change\ 'falling'\ with\ the\ name\ of\ the\ function\ of\ the\ header\ for\ the\ Machile\ Learning\ Core\ Dataset\ \ */}}
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordflow}{for}\ (\ i\ =\ 0;\ i\ <\ (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{falling_8h_a67718d4e28b46e6f69409dfa99831f17}{falling}})\ /}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structucf__line__t}{ucf\_line\_t}})\ );\ i++\ )\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(\&dev\_ctx,\ \mbox{\hyperlink{falling_8h_a67718d4e28b46e6f69409dfa99831f17}{falling}}[i].address,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&\mbox{\hyperlink{falling_8h_a67718d4e28b46e6f69409dfa99831f17}{falling}}[i].data,\ 1);}
+\DoxyCodeLine{00140\ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \textcolor{comment}{/*\ End\ Machine\ Learning\ Core\ configuration\ */}}
+\DoxyCodeLine{00143\ \ \ \textcolor{comment}{/*\ At\ this\ point\ the\ device\ is\ ready\ to\ run\ but\ if\ you\ need\ you\ can\ also}}
+\DoxyCodeLine{00144\ \textcolor{comment}{\ \ \ *\ interact\ with\ the\ device\ but\ taking\ in\ account\ the\ MLC\ configuration.}}
+\DoxyCodeLine{00145\ \textcolor{comment}{\ \ \ *}}
+\DoxyCodeLine{00146\ \textcolor{comment}{\ \ \ *\ For\ more\ information\ about\ Machine\ Learning\ Core\ tool\ please\ refer}}
+\DoxyCodeLine{00147\ \textcolor{comment}{\ \ \ *\ to\ AN5259\ "{}LSM6DSOX:\ Machine\ Learning\ Core"{}.}}
+\DoxyCodeLine{00148\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{00149\ \ \ \textcolor{comment}{/*\ Turn\ off\ embedded\ features\ */}}
+\DoxyCodeLine{00150\ \ \ \mbox{\hyperlink{group__Basic_ga3cf451a6c88a6c0e23152520a77eb892}{lsm6dsox\_embedded\_sens\_get}}(\&dev\_ctx,\ \&emb\_sens);}
+\DoxyCodeLine{00151\ \ \ \mbox{\hyperlink{group__Basic_ga541538c1d420f0fabee2306049d5b85b}{lsm6dsox\_embedded\_sens\_off}}(\&dev\_ctx);}
+\DoxyCodeLine{00152\ \ \ platform\_delay(10);}
+\DoxyCodeLine{00153\ \ \ \textcolor{comment}{/*\ Turn\ off\ Sensors\ */}}
+\DoxyCodeLine{00154\ \ \ \mbox{\hyperlink{group__LSM6DSOX_ga2cd886d6f11d2739b222d803b54298c2}{lsm6dsox\_xl\_data\_rate\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga747052dcc81bc225d0d31fd790f6c586a3d6172c6cbe56fb436b84f065c66aa6b}{LSM6DSOX\_XL\_ODR\_OFF}});}
+\DoxyCodeLine{00155\ \ \ \mbox{\hyperlink{group__LSM6DSOX_ga322469263318e0cdb5b816e8da50209f}{lsm6dsox\_gy\_data\_rate\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga079b47c958373e0792f7e9117dc615d2a0d65b48f3973f66a6dd4a7ca7cc3abc8}{LSM6DSOX\_GY\_ODR\_OFF}});}
+\DoxyCodeLine{00156\ \ \ \textcolor{comment}{/*\ Disable\ I3C\ interface\ */}}
+\DoxyCodeLine{00157\ \ \ \mbox{\hyperlink{group__LSM6DSOX___ga07b520ca6f8429e8eed1e4795f29b979}{lsm6dsox\_i3c\_disable\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ggaa6cc937a08c85e293438747d76f9e5cea67111533d34b7dde13ef40e94f199b4a}{LSM6DSOX\_I3C\_DISABLE}});}
+\DoxyCodeLine{00158\ \ \ \textcolor{comment}{/*\ Enable\ Block\ Data\ Update\ */}}
+\DoxyCodeLine{00159\ \ \ \mbox{\hyperlink{group__LSM6DSOX_gaf9bf2077ddec8e9194febff8aafbdbb9}{lsm6dsox\_block\_data\_update\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__STMicroelectronics_ga4ea818a6722d4343385eb33341a443d0}{PROPERTY\_ENABLE}});}
+\DoxyCodeLine{00160\ \ \ \textcolor{comment}{/*\ Set\ full\ scale\ */}}
+\DoxyCodeLine{00161\ \ \ \mbox{\hyperlink{group__LSM6DSOX_ga9a45ccc83179792fc101fabc6ee6def1}{lsm6dsox\_xl\_full\_scale\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga076ba2b7c6f88a9bd1deff051c044b10a39102e1146dcefd279ec0150df4bbd96}{LSM6DSOX\_4g}});}
+\DoxyCodeLine{00162\ \ \ \mbox{\hyperlink{group__LSM6DSOX_ga5366f6be8130be452d6e7c25a0ffb710}{lsm6dsox\_gy\_full\_scale\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ggad99edc42796122de157943a96744566ea4ac704d3b61249ab15fb152d2f63124b}{LSM6DSOX\_2000dps}});}
+\DoxyCodeLine{00163\ \ \ \textcolor{comment}{/*\ Route\ signals\ on\ interrupt\ pin\ 1\ */}}
+\DoxyCodeLine{00164\ \ \ \mbox{\hyperlink{group__Basic_ga51fe440da6d0bddd86c4cf08249818e2}{lsm6dsox\_pin\_int1\_route\_get}}(\&dev\_ctx,\ \&pin\_int1\_route);}
+\DoxyCodeLine{00165\ \ \ pin\_int1\_route.\mbox{\hyperlink{structlsm6dsox__pin__int1__route__t_a889a1d0fc7070b82f52015fef72516bf}{mlc1}}\ =\ \mbox{\hyperlink{group__STMicroelectronics_ga4ea818a6722d4343385eb33341a443d0}{PROPERTY\_ENABLE}};}
+\DoxyCodeLine{00166\ \ \ \mbox{\hyperlink{group__Basic_ga79345b8cadf08cf71b18ee309af27c57}{lsm6dsox\_pin\_int1\_route\_set}}(\&dev\_ctx,\ pin\_int1\_route);}
+\DoxyCodeLine{00167\ \ \ \textcolor{comment}{/*\ Configure\ interrupt\ pin\ mode\ notification\ */}}
+\DoxyCodeLine{00168\ \ \ \mbox{\hyperlink{group__LSM6DSOX__interrupt__pins_gaf10cf474e948c5167fa6ca86e90b3c50}{lsm6dsox\_int\_notification\_set}}(\&dev\_ctx,}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__LSM6DSOX_gga6d47c211c692af2cdf28edeb2f351454a0e05bca7fc18b15e545b5197249111a0}{LSM6DSOX\_BASE\_PULSED\_EMB\_LATCHED}});}
+\DoxyCodeLine{00170\ \ \ \textcolor{comment}{/*\ Enable\ embedded\ features\ */}}
+\DoxyCodeLine{00171\ \ \ \mbox{\hyperlink{group__Basic_gac62d11ae200049849a169f7f01064eb1}{lsm6dsox\_embedded\_sens\_set}}(\&dev\_ctx,\ \&emb\_sens);}
+\DoxyCodeLine{00172\ \ \ \textcolor{comment}{/*\ Set\ Output\ Data\ Rate.}}
+\DoxyCodeLine{00173\ \textcolor{comment}{\ \ \ *\ Selected\ data\ rate\ have\ to\ be\ equal\ or\ greater\ with\ respect}}
+\DoxyCodeLine{00174\ \textcolor{comment}{\ \ \ *\ with\ MLC\ data\ rate.}}
+\DoxyCodeLine{00175\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{00176\ \ \ \mbox{\hyperlink{group__LSM6DSOX_ga2cd886d6f11d2739b222d803b54298c2}{lsm6dsox\_xl\_data\_rate\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga747052dcc81bc225d0d31fd790f6c586a4d2454cf39c5bef876ad8436999e1bd5}{LSM6DSOX\_XL\_ODR\_26Hz}});}
+\DoxyCodeLine{00177\ \ \ \mbox{\hyperlink{group__LSM6DSOX_ga322469263318e0cdb5b816e8da50209f}{lsm6dsox\_gy\_data\_rate\_set}}(\&dev\_ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga079b47c958373e0792f7e9117dc615d2a0d65b48f3973f66a6dd4a7ca7cc3abc8}{LSM6DSOX\_GY\_ODR\_OFF}});}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \textcolor{comment}{/*\ Main\ loop\ */}}
+\DoxyCodeLine{00180\ \ \ \textcolor{keywordflow}{while}\ (1)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{/*\ Read\ interrupt\ source\ registers\ in\ polling\ mode\ (no\ int)\ */}}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{group__Basic_ga71c625c1e04c2b9dd939d911c62af5cf}{lsm6dsox\_all\_sources\_get}}(\&dev\_ctx,\ \&status);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{if}\ (status.\mbox{\hyperlink{structlsm6dsox__all__sources__t_a889a1d0fc7070b82f52015fef72516bf}{mlc1}})\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \mbox{\hyperlink{group__LSM6DSOX__Data_gace1fdf1008c62de175e24f0db95ed7df}{lsm6dsox\_mlc\_out\_get}}(\&dev\_ctx,\ mlc\_out);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ sprintf((\textcolor{keywordtype}{char}\ *)tx\_buffer,\ \textcolor{stringliteral}{"{}Detect\ MLC\ interrupt\ code:\ \%02X\(\backslash\)r\(\backslash\)n"{}},}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mlc\_out[0]);}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ tx\_com(tx\_buffer,\ strlen((\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *)tx\_buffer));}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ \ \ \}}
+\DoxyCodeLine{00191\ \}}
+
+\end{DoxyCode}

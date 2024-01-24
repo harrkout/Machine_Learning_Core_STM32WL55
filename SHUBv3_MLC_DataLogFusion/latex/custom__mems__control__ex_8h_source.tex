@@ -1,0 +1,77 @@
+\doxysection{custom\+\_\+mems\+\_\+control\+\_\+ex.\+h}
+\hypertarget{custom__mems__control__ex_8h_source}{}\label{custom__mems__control__ex_8h_source}\index{MEMS/Target/custom\_mems\_control\_ex.h@{MEMS/Target/custom\_mems\_control\_ex.h}}
+\mbox{\hyperlink{custom__mems__control__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00019}00019\ \ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ CUSTOM\_MEMS\_CONTROL\_EX\_H}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ CUSTOM\_MEMS\_CONTROL\_EX\_H}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00024}00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RTE__Components_8h}{RTE\_Components.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00029}00029\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__motion__sensors_8h}{custom\_motion\_sensors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00031}00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__motion__sensors__ex_8h}{custom\_motion\_sensors\_ex.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00032}00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00034}00034\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00035}00035\ \textcolor{preprocessor}{\#include\ "{}custom\_env\_sensors.h"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ "{}custom\_env\_sensors\_ex.h"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00037}00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00039}00039\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00040}00040\ \textcolor{preprocessor}{\#include\ "{}custom\_hybrid\_sensors.h"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00041}00041\ \textcolor{preprocessor}{\#include\ "{}custom\_hybrid\_sensors\_ex.h"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00044}00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_a92ae35af0f07798ef7e68b4101a6a152}{BSP\_SENSOR\_ACC\_Read\_Register}}(uint8\_t\ Reg,\ uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00045}00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_afcb7fdf81649c5ffbb69c6cbdc6de944}{BSP\_SENSOR\_GYR\_Read\_Register}}(uint8\_t\ Reg,\ uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00046}00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_ab1c7a4fb5cee2dca4083c868e2c9f293}{BSP\_SENSOR\_MAG\_Read\_Register}}(uint8\_t\ Reg,\ uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00047}00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_ae42b550130f82d7849434f8724bf45fb}{BSP\_SENSOR\_PRESS\_Read\_Register}}(uint8\_t\ Reg,\ uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00048}00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_a90a0c0e8719a2f1bf416bbedf7966acc}{BSP\_SENSOR\_TEMP\_Read\_Register}}(uint8\_t\ Reg,\ uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00049}00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_a4ec00a04b18bfc3fc1f569e27bb5e9c8}{BSP\_SENSOR\_HUM\_Read\_Register}}(uint8\_t\ Reg,\ uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00051}00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_ae433bb5b1d71eb5b57759b68ccbf6584}{BSP\_SENSOR\_ACC\_Write\_Register}}(uint8\_t\ Reg,\ uint8\_t\ Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00052}00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_afdd9036257f2a144effeb2b2fc76fdc6}{BSP\_SENSOR\_GYR\_Write\_Register}}(uint8\_t\ Reg,\ uint8\_t\ Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00053}00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_a06ffe6fd0287d6e6942a712730737f92}{BSP\_SENSOR\_MAG\_Write\_Register}}(uint8\_t\ Reg,\ uint8\_t\ Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00054}00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_aeded00e78776d208bd466eda83f5771f}{BSP\_SENSOR\_PRESS\_Write\_Register}}(uint8\_t\ Reg,\ uint8\_t\ Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00055}00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_a74f58a5218b3d016fa0c11787190785c}{BSP\_SENSOR\_TEMP\_Write\_Register}}(uint8\_t\ Reg,\ uint8\_t\ Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00056}00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control__ex_8h_ab7d9bb462a4f89c6a239b1868272f91c}{BSP\_SENSOR\_HUM\_Write\_Register}}(uint8\_t\ Reg,\ uint8\_t\ Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00058}00058\ \textcolor{preprocessor}{\#if\ ((defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)\ ||\ (defined\ CUSTOM\_DATALOGFUSION\_DEMO)\ ||\ (defined\ CUSTOM\_TILTSENSING\_DEMO)\ ||\ (defined\ CUSTOM\_GESTURERECOGNITION\_DEMO)\ ||\ (defined\ CUSTOM\_CARRYPOSITION\_DEMO)\ ||\ (defined\ CUSTOM\_ECOMPASS\_DEMO)\ ||\ (defined\ CUSTOM\_DYNAMICINCLINOMETER\_DEMO)\ ||\ (defined\ CUSTOM\_ACTIVITYRECOGNITION\_DEMO)\ ||\ (defined\ CUSTOM\_ACTIVITYRECOGNITIONWRIST\_DEMO)\ ||\ (defined\ CUSTOM\_FITNESSACTIVITIES\_DEMO)\ ||\ (defined\ CUSTOM\_PEDOMETERWRIST\_DEMO)\ ||\ (defined\ CUSTOM\_POSEESTIMATION\_DEMO)\ ||\ (defined\ CUSTOM\_STANDINGSITTINGDESK\_DEMO))}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00059}00059\ \textcolor{keywordtype}{void}\ BSP\_SENSOR\_ACC\_GetOrientation(\textcolor{keywordtype}{char}\ *Orientation);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00060}00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00061}00061\ \textcolor{preprocessor}{\#if\ ((defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)\ ||\ (defined\ CUSTOM\_DATALOGFUSION\_DEMO)\ ||\ (defined\ CUSTOM\_DYNAMICINCLINOMETER\_DEMO)\ ||\ (defined\ CUSTOM\_FITNESSACTIVITIES\_DEMO))}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00062}00062\ \textcolor{keywordtype}{void}\ BSP\_SENSOR\_GYR\_GetOrientation(\textcolor{keywordtype}{char}\ *Orientation);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00064}00064\ \textcolor{preprocessor}{\#if\ ((defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)\ ||\ (defined\ CUSTOM\_DATALOGFUSION\_DEMO)\ ||\ (defined\ CUSTOM\_ECOMPASS\_DEMO))}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00065}00065\ \textcolor{keywordtype}{void}\ BSP\_SENSOR\_MAG\_GetOrientation(\textcolor{keywordtype}{char}\ *Orientation);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00066}00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00068}00068\ \textcolor{preprocessor}{\#if\ (defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00069}00069\ \textcolor{keywordtype}{void}\ BSP\_SENSOR\_ACC\_SetDRDYMode(uint8\_t\ Mode);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00071}00071\ \textcolor{preprocessor}{\#if\ (defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00072}00072\ \textcolor{keywordtype}{void}\ BSP\_SENSOR\_GYR\_SetDRDYMode(uint8\_t\ Mode);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00073}00073\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00074}00074\ \textcolor{preprocessor}{\#if\ (defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00075}00075\ \textcolor{keywordtype}{void}\ BSP\_SENSOR\_ACC\_SetDRDYInt(uint8\_t\ Enable);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00076}00076\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00077}00077\ \textcolor{preprocessor}{\#if\ (defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00078}00078\ \textcolor{keywordtype}{void}\ BSP\_SENSOR\_GYR\_SetDRDYInt(uint8\_t\ Enable);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00079}00079\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00081}00081\ \textcolor{preprocessor}{\#if\ (defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00082}00082\ \textcolor{keywordtype}{void}\ BSP\_ACC\_GYR\_Read\_FSM\_Data(uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00083}00083\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00084}00084\ \textcolor{preprocessor}{\#if\ (defined\ CUSTOM\_ALGOBUILDER\_FW\_TEMPLATE)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00085}00085\ \textcolor{keywordtype}{void}\ BSP\_ACC\_GYR\_Read\_MLC\_Data(uint8\_t\ *Data);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00086}00086\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control__ex_8h_source_l00088}00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CUSTOM\_MEMS\_CONTROL\_EX\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

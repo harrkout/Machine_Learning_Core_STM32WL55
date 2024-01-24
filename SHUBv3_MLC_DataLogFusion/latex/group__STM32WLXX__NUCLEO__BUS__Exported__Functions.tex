@@ -1,0 +1,308 @@
+\doxysubsubsubsubsection{STM32\+WLXX\+\_\+\+NUCLEO\+\_\+\+BUS Exported Functions}
+\hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions}{}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions}\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaf9561f743106eb833f296e9122e242aa}{MX\+\_\+\+I2\+C2\+\_\+\+Init}} (\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hi2c)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga8a9170aef00741af96f90ef9bfc1833e}{BSP\+\_\+\+I2\+C2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize I2C HAL. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga82a8bbc7fa87e06619bc02c511ed5cea}{BSP\+\_\+\+I2\+C2\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initialize I2C HAL. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gab5c4becb0e6b8d70e1b69646f6149dd1}{BSP\+\_\+\+I2\+C2\+\_\+\+Is\+Ready}} (uint16\+\_\+t Dev\+Addr, uint32\+\_\+t Trials)
+\begin{DoxyCompactList}\small\item\em Check whether the I2C bus is ready. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gad5850679744cce10042e00c1c4ec80cb}{BSP\+\_\+\+I2\+C2\+\_\+\+Write\+Reg}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Write a value in a register of the device through BUS. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gac0d7856d7cb61d97aea6449c4978e6c0}{BSP\+\_\+\+I2\+C2\+\_\+\+Read\+Reg}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Read a register of the device through BUS. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga137a61947958a40d0b2aa5f950f57686}{BSP\+\_\+\+I2\+C2\+\_\+\+Write\+Reg16}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Write a value in a register of the device through BUS. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaedb4a68216a2693af5f2ef05e749b071}{BSP\+\_\+\+I2\+C2\+\_\+\+Read\+Reg16}} (uint16\+\_\+t Dev\+Addr, uint16\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Read registers through a bus (16 bits) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga5b97e6c9eed913c1b07b720085d82770}{BSP\+\_\+\+I2\+C2\+\_\+\+Send}} (uint16\+\_\+t Dev\+Addr, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Send an amount width data through bus (Simplex) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga2271923231d60168d13546f56c4f005d}{BSP\+\_\+\+I2\+C2\+\_\+\+Recv}} (uint16\+\_\+t Dev\+Addr, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Receive an amount of data through a bus (Simplex) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga0868704a9e440de0e642e8230df6dcdf}{BSP\+\_\+\+I2\+C2\+\_\+\+Send\+Recv}} (uint16\+\_\+t Dev\+Addr, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Txdata, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Rxdata, uint16\+\_\+t Length)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gae47e142551a4ef16e926c245d4292297}{BSP\+\_\+\+Get\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Return system tick in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsubsubsection{Function Documentation}
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gae47e142551a4ef16e926c245d4292297}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gae47e142551a4ef16e926c245d4292297} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_GetTick@{BSP\_GetTick}}
+\index{BSP\_GetTick@{BSP\_GetTick}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_GetTick()}{BSP\_GetTick()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+Get\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return system tick in ms. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Current} & HAL time base time stamp \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00392}{392}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga82a8bbc7fa87e06619bc02c511ed5cea}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga82a8bbc7fa87e06619bc02c511ed5cea} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_DeInit@{BSP\_I2C2\_DeInit}}
+\index{BSP\_I2C2\_DeInit@{BSP\_I2C2\_DeInit}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_DeInit()}{BSP\_I2C2\_DeInit()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De\+Initialize I2C HAL. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00139}{139}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga8a9170aef00741af96f90ef9bfc1833e}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga8a9170aef00741af96f90ef9bfc1833e} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_Init@{BSP\_I2C2\_Init}}
+\index{BSP\_I2C2\_Init@{BSP\_I2C2\_Init}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_Init()}{BSP\_I2C2\_Init()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize I2C HAL. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00091}{91}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gab5c4becb0e6b8d70e1b69646f6149dd1}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gab5c4becb0e6b8d70e1b69646f6149dd1} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_IsReady@{BSP\_I2C2\_IsReady}}
+\index{BSP\_I2C2\_IsReady@{BSP\_I2C2\_IsReady}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_IsReady()}{BSP\_I2C2\_IsReady()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Is\+Ready (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint32\+\_\+t}]{Trials }\end{DoxyParamCaption})}
+
+
+
+Check whether the I2C bus is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Addr} & \+: I2C device address \\
+\hline
+{\em Trials} & \+: Check trials number \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00167}{167}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gac0d7856d7cb61d97aea6449c4978e6c0}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gac0d7856d7cb61d97aea6449c4978e6c0} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_ReadReg@{BSP\_I2C2\_ReadReg}}
+\index{BSP\_I2C2\_ReadReg@{BSP\_I2C2\_ReadReg}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_ReadReg()}{BSP\_I2C2\_ReadReg()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Read\+Reg (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint16\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Read a register of the device through BUS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Addr} & Device address on Bus. \\
+\hline
+{\em Reg} & The target register address to read \\
+\hline
+{\em p\+Data} & Pointer to data buffer to read \\
+\hline
+{\em Length} & Data Length \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00214}{214}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaedb4a68216a2693af5f2ef05e749b071}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaedb4a68216a2693af5f2ef05e749b071} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_ReadReg16@{BSP\_I2C2\_ReadReg16}}
+\index{BSP\_I2C2\_ReadReg16@{BSP\_I2C2\_ReadReg16}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_ReadReg16()}{BSP\_I2C2\_ReadReg16()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Read\+Reg16 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint16\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Read registers through a bus (16 bits) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Addr} & Device address on BUS \\
+\hline
+{\em Reg} & The target register address to read \\
+\hline
+{\em Length} & Data Length \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00267}{267}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga2271923231d60168d13546f56c4f005d}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga2271923231d60168d13546f56c4f005d} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_Recv@{BSP\_I2C2\_Recv}}
+\index{BSP\_I2C2\_Recv@{BSP\_I2C2\_Recv}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_Recv()}{BSP\_I2C2\_Recv()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Recv (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Receive an amount of data through a bus (Simplex) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Addr} & Device address on Bus. \\
+\hline
+{\em p\+Data} & Data pointer \\
+\hline
+{\em Length} & Data length \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00317}{317}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga5b97e6c9eed913c1b07b720085d82770}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga5b97e6c9eed913c1b07b720085d82770} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_Send@{BSP\_I2C2\_Send}}
+\index{BSP\_I2C2\_Send@{BSP\_I2C2\_Send}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_Send()}{BSP\_I2C2\_Send()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Send (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Send an amount width data through bus (Simplex) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Addr} & Device address on Bus. \\
+\hline
+{\em p\+Data} & Data pointer \\
+\hline
+{\em Length} & Data length \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00292}{292}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga0868704a9e440de0e642e8230df6dcdf}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga0868704a9e440de0e642e8230df6dcdf} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_SendRecv@{BSP\_I2C2\_SendRecv}}
+\index{BSP\_I2C2\_SendRecv@{BSP\_I2C2\_SendRecv}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_SendRecv()}{BSP\_I2C2\_SendRecv()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Send\+Recv (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Txdata,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Rxdata,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gad5850679744cce10042e00c1c4ec80cb}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gad5850679744cce10042e00c1c4ec80cb} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_WriteReg@{BSP\_I2C2\_WriteReg}}
+\index{BSP\_I2C2\_WriteReg@{BSP\_I2C2\_WriteReg}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_WriteReg()}{BSP\_I2C2\_WriteReg()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Write\+Reg (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint16\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Write a value in a register of the device through BUS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Addr} & Device address on Bus. \\
+\hline
+{\em Reg} & The target register address to write \\
+\hline
+{\em p\+Data} & Pointer to data buffer to write \\
+\hline
+{\em Length} & Data Length \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00188}{188}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga137a61947958a40d0b2aa5f950f57686}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_ga137a61947958a40d0b2aa5f950f57686} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!BSP\_I2C2\_WriteReg16@{BSP\_I2C2\_WriteReg16}}
+\index{BSP\_I2C2\_WriteReg16@{BSP\_I2C2\_WriteReg16}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{BSP\_I2C2\_WriteReg16()}{BSP\_I2C2\_WriteReg16()}}
+{\footnotesize\ttfamily int32\+\_\+t BSP\+\_\+\+I2\+C2\+\_\+\+Write\+Reg16 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Dev\+Addr,  }\item[{uint16\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Write a value in a register of the device through BUS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dev\+Addr} & Device address on Bus. \\
+\hline
+{\em Reg} & The target register address to write\\
+\hline
+{\em p\+Data} & Pointer to data buffer to write \\
+\hline
+{\em Length} & Data Length \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & statu \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00242}{242}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+
+\Hypertarget{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaf9561f743106eb833f296e9122e242aa}\label{group__STM32WLXX__NUCLEO__BUS__Exported__Functions_gaf9561f743106eb833f296e9122e242aa} 
+\index{STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}!MX\_I2C2\_Init@{MX\_I2C2\_Init}}
+\index{MX\_I2C2\_Init@{MX\_I2C2\_Init}!STM32WLXX\_NUCLEO\_BUS Exported Functions@{STM32WLXX\_NUCLEO\_BUS Exported Functions}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{MX\_I2C2\_Init()}{MX\_I2C2\_Init()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} MX\+\_\+\+I2\+C2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}}]{hi2c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source_l00398}{398}} of file \mbox{\hyperlink{stm32wlxx__nucleo__bus_8c_source}{stm32wlxx\+\_\+nucleo\+\_\+bus.\+c}}.
+

@@ -1,0 +1,439 @@
+\doxysubsubsubsection{RTC Private macros to check input parameters}
+\hypertarget{group__RTC__IS__RTC__Definitions}{}\label{group__RTC__IS__RTC__Definitions}\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gabc8a868f360abe629c8d8de8b44b3b63}{IS\+\_\+\+RTC\+\_\+\+OUTPUT}}(OUTPUT)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga597042eec4479e028c32973bc69f4a26}{IS\+\_\+\+RTC\+\_\+\+HOUR\+\_\+\+FORMAT}}(FORMAT)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga1bc0fee899de25a9c1bcbb6c2b21b35d}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+POL}}(POL)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga69e263212d90ca91ccfc72e930f26cd8}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+TYPE}}(TYPE)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gaa1336882300816817a165743a28c24b1}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+PULLUP}}(TYPE)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga92c8b87d716244b6f49723f7a741114d}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+REMAP}}(REMAP)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gaac5777b612cdee4c43d4399f40b1bd3a}{IS\+\_\+\+RTC\+\_\+\+HOURFORMAT12}}(PM)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga4922f8f31df54481bc002b16bc1effc3}{IS\+\_\+\+RTC\+\_\+\+DAYLIGHT\+\_\+\+SAVING}}(SAVE)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga550da5c8a2382badcb391507fd6f07f4}{IS\+\_\+\+RTC\+\_\+\+STORE\+\_\+\+OPERATION}}(OPERATION)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga05a1ca8558058d71322ccf1045b8fb1c}{IS\+\_\+\+RTC\+\_\+\+FORMAT}}(FORMAT)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gae59c9cfe6f9532ab26d74c25bcbe814b}{IS\+\_\+\+RTC\+\_\+\+YEAR}}(YEAR)~((YEAR) $<$= 99u)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga7fa60f17b2ae529c35b1fa3dd4d6853f}{IS\+\_\+\+RTC\+\_\+\+MONTH}}(MONTH)~(((MONTH) $>$= 1u) \&\& ((MONTH) $<$= 12u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga3b6e966e144cb0495563ef0283d16510}{IS\+\_\+\+RTC\+\_\+\+DATE}}(DATE)~(((DATE) $>$= 1u) \&\& ((DATE) $<$= 31u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gaf17712ffb0834287f23c19235d53c7ec}{IS\+\_\+\+RTC\+\_\+\+WEEKDAY}}(WEEKDAY)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga8b6cb39fac113de7c5d2b05a93093243}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+DATE}}(DATE)~(((DATE) $>$0u) \&\& ((DATE) $<$= 31u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gabc968cd70cf33e06b8e2886c98099021}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+WEEKDAY}}(WEEKDAY)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gac5d3e2182217ad6c5a75eba5c88cb335}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+SEL}}(SEL)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga166108e7bf226d4ea345822eb81ea358}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+MASK}}(MASK)~(((MASK) \& \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTC__AlarmMask__Definitions_gae5a5dc7b33c51c572ebc9cb58723fdd3}{RTC\+\_\+\+ALARMMASK\+\_\+\+ALL}})) == 0\+UL)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gab101ad18b0bcde557eb8caac469d7725}{IS\+\_\+\+RTC\+\_\+\+ALARM}}(ALARM)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gae7cd07c18cdb2946a2b06f6606ede93c}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+VALUE}}(VALUE)~((VALUE) $<$= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4a6b683531fded4e2a77d047da7eb203}{RTC\+\_\+\+ALRMASSR\+\_\+\+SS}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gae6814af31d0cc72b784bc85f63ec4de7}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+MASK}}(MASK)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gac20f6c94ede2d474df8ba4acb7328d93}{IS\+\_\+\+RTC\+\_\+\+ASYNCH\+\_\+\+PREDIV}}(PREDIV)~((PREDIV) $<$= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad248dca1e9532ba31f98d3ec9d2f8711}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+A}} $>$$>$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae8240c029696ad91531c3fec1ef1e7fe}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+\+A\+\_\+\+Pos}}))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga32fccaa6ec65f9fceb3e6e4f31ab11cf}{IS\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PREDIV}}(PREDIV)~((PREDIV) $<$= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17bbd4e569a76446df089752cb41b1cb}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+S}} $>$$>$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga234f46098c91b34aa12502d70cdb93bf}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+\+S\+\_\+\+Pos}}))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga6bdfe3bed0a57dfafc2d1de785d48a62}{IS\+\_\+\+RTC\+\_\+\+HOUR12}}(HOUR)~(((HOUR) $>$ 0u) \&\& ((HOUR) $<$= 12u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga4883613bec76074ac62608b89e3f48a8}{IS\+\_\+\+RTC\+\_\+\+HOUR24}}(HOUR)~((HOUR) $<$= 23u)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga8475ceaf2d35d98be0b3401812aef445}{IS\+\_\+\+RTC\+\_\+\+MINUTES}}(MINUTES)~((MINUTES) $<$= 59u)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gadb5a39d98fc906a8ea035bd29308bc5c}{IS\+\_\+\+RTC\+\_\+\+SECONDS}}(SECONDS)~((SECONDS) $<$= 59u)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__RTC__IS__RTC__Definitions_gab101ad18b0bcde557eb8caac469d7725}\label{group__RTC__IS__RTC__Definitions_gab101ad18b0bcde557eb8caac469d7725} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM@{IS\_RTC\_ALARM}}
+\index{IS\_RTC\_ALARM@{IS\_RTC\_ALARM}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ALARM}{IS\_RTC\_ALARM}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM(\begin{DoxyParamCaption}\item[{}]{ALARM }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((ALARM)\ ==\ \mbox{\hyperlink{group__RTC__Alarms__Definitions_ga916bcb75517157e284344f96ac275639}{RTC\_ALARM\_A}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ALARM)\ ==\ \mbox{\hyperlink{group__RTC__Alarms__Definitions_ga55b831e961f8f4b91ec17939eb78b440}{RTC\_ALARM\_B}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00905}{905}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga8b6cb39fac113de7c5d2b05a93093243}\label{group__RTC__IS__RTC__Definitions_ga8b6cb39fac113de7c5d2b05a93093243} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE}}
+\index{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE}{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+DATE(\begin{DoxyParamCaption}\item[{}]{DATE }\end{DoxyParamCaption})~(((DATE) $>$0u) \&\& ((DATE) $<$= 31u))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00890}{890}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gac5d3e2182217ad6c5a75eba5c88cb335}\label{group__RTC__IS__RTC__Definitions_gac5d3e2182217ad6c5a75eba5c88cb335} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL}}
+\index{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL}{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+SEL(\begin{DoxyParamCaption}\item[{}]{SEL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((SEL)\ ==\ \mbox{\hyperlink{group__RTC__AlarmDateWeekDay__Definitions_ga038032416e6bcf81e842f60dcfe91e15}{RTC\_ALARMDATEWEEKDAYSEL\_DATE}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SEL)\ ==\ \mbox{\hyperlink{group__RTC__AlarmDateWeekDay__Definitions_ga3dfe8546eb760b9928900ac80a27e625}{RTC\_ALARMDATEWEEKDAYSEL\_WEEKDAY}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00900}{900}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gabc968cd70cf33e06b8e2886c98099021}\label{group__RTC__IS__RTC__Definitions_gabc968cd70cf33e06b8e2886c98099021} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY}}
+\index{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY}{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+WEEKDAY(\begin{DoxyParamCaption}\item[{}]{WEEKDAY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga9d74c5e20a481db4f4da69f083b768bf}{RTC\_WEEKDAY\_MONDAY}})\ \ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gaf6b6e124a2e74317448abbfb1943e8cc}{RTC\_WEEKDAY\_TUESDAY}})\ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga0e8a7c338ffda7c9dd47003762d7054c}{RTC\_WEEKDAY\_WEDNESDAY}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gab166c84a54ace04f6849a8d0e1764107}{RTC\_WEEKDAY\_THURSDAY}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga3755707d628f4664c30d02fd2a2f0182}{RTC\_WEEKDAY\_FRIDAY}})\ \ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga3acccb86a8429fea22f2ac46470b5e55}{RTC\_WEEKDAY\_SATURDAY}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gadab2da4b8aa50c86d68781b379b75783}{RTC\_WEEKDAY\_SUNDAY}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00892}{892}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga166108e7bf226d4ea345822eb81ea358}\label{group__RTC__IS__RTC__Definitions_ga166108e7bf226d4ea345822eb81ea358} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_MASK@{IS\_RTC\_ALARM\_MASK}}
+\index{IS\_RTC\_ALARM\_MASK@{IS\_RTC\_ALARM\_MASK}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ALARM\_MASK}{IS\_RTC\_ALARM\_MASK}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+MASK(\begin{DoxyParamCaption}\item[{}]{MASK }\end{DoxyParamCaption})~(((MASK) \& \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTC__AlarmMask__Definitions_gae5a5dc7b33c51c572ebc9cb58723fdd3}{RTC\+\_\+\+ALARMMASK\+\_\+\+ALL}})) == 0\+UL)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00903}{903}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gae6814af31d0cc72b784bc85f63ec4de7}\label{group__RTC__IS__RTC__Definitions_gae6814af31d0cc72b784bc85f63ec4de7} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_SUB\_SECOND\_MASK@{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK}}
+\index{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK@{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK}{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+MASK(\begin{DoxyParamCaption}\item[{}]{MASK }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((MASK)\ ==\ 0UL)\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((MASK)\ >=\ \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga382ddfaca27c4b547c69878a320aab43}{RTC\_ALARMSUBSECONDMASK\_SS14\_1}})\ \&\&\ ((MASK)\ <=\ \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga2c3802d48626766a3fc85ad910caea02}{RTC\_ALARMSUBSECONDMASK\_NONE}})))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00910}{910}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gae7cd07c18cdb2946a2b06f6606ede93c}\label{group__RTC__IS__RTC__Definitions_gae7cd07c18cdb2946a2b06f6606ede93c} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE@{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE}}
+\index{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE@{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE}{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+VALUE(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})~((VALUE) $<$= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4a6b683531fded4e2a77d047da7eb203}{RTC\+\_\+\+ALRMASSR\+\_\+\+SS}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00908}{908}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gac20f6c94ede2d474df8ba4acb7328d93}\label{group__RTC__IS__RTC__Definitions_gac20f6c94ede2d474df8ba4acb7328d93} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ASYNCH\_PREDIV@{IS\_RTC\_ASYNCH\_PREDIV}}
+\index{IS\_RTC\_ASYNCH\_PREDIV@{IS\_RTC\_ASYNCH\_PREDIV}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_ASYNCH\_PREDIV}{IS\_RTC\_ASYNCH\_PREDIV}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ASYNCH\+\_\+\+PREDIV(\begin{DoxyParamCaption}\item[{}]{PREDIV }\end{DoxyParamCaption})~((PREDIV) $<$= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad248dca1e9532ba31f98d3ec9d2f8711}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+A}} $>$$>$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae8240c029696ad91531c3fec1ef1e7fe}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+\+A\+\_\+\+Pos}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00913}{913}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga3b6e966e144cb0495563ef0283d16510}\label{group__RTC__IS__RTC__Definitions_ga3b6e966e144cb0495563ef0283d16510} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_DATE@{IS\_RTC\_DATE}}
+\index{IS\_RTC\_DATE@{IS\_RTC\_DATE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_DATE}{IS\_RTC\_DATE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+DATE(\begin{DoxyParamCaption}\item[{}]{DATE }\end{DoxyParamCaption})~(((DATE) $>$= 1u) \&\& ((DATE) $<$= 31u))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00880}{880}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga4922f8f31df54481bc002b16bc1effc3}\label{group__RTC__IS__RTC__Definitions_ga4922f8f31df54481bc002b16bc1effc3} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_DAYLIGHT\_SAVING@{IS\_RTC\_DAYLIGHT\_SAVING}}
+\index{IS\_RTC\_DAYLIGHT\_SAVING@{IS\_RTC\_DAYLIGHT\_SAVING}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_DAYLIGHT\_SAVING}{IS\_RTC\_DAYLIGHT\_SAVING}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+DAYLIGHT\+\_\+\+SAVING(\begin{DoxyParamCaption}\item[{}]{SAVE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((SAVE)\ ==\ \mbox{\hyperlink{group__RTC__DayLightSaving__Definitions_ga7ccaea4cb9cb5fbd21b97dce1e2e887d}{RTC\_DAYLIGHTSAVING\_SUB1H}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SAVE)\ ==\ \mbox{\hyperlink{group__RTC__DayLightSaving__Definitions_gabd374c3ce0fb1b3ec96a3a71155151ae}{RTC\_DAYLIGHTSAVING\_ADD1H}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SAVE)\ ==\ \mbox{\hyperlink{group__RTC__DayLightSaving__Definitions_gafef31f6f6d924dededc4589d2dd16a5c}{RTC\_DAYLIGHTSAVING\_NONE}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00866}{866}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga05a1ca8558058d71322ccf1045b8fb1c}\label{group__RTC__IS__RTC__Definitions_ga05a1ca8558058d71322ccf1045b8fb1c} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_FORMAT@{IS\_RTC\_FORMAT}}
+\index{IS\_RTC\_FORMAT@{IS\_RTC\_FORMAT}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_FORMAT}{IS\_RTC\_FORMAT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+FORMAT(\begin{DoxyParamCaption}\item[{}]{FORMAT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((FORMAT)\ ==\ \mbox{\hyperlink{group__RTC__Input__parameter__format__definitions_gadf5ce0bf2d5b4814fb3911f63d7ffb17}{RTC\_FORMAT\_BIN}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((FORMAT)\ ==\ \mbox{\hyperlink{group__RTC__Input__parameter__format__definitions_ga20d772c2e0ba75287a3655780fd0c39b}{RTC\_FORMAT\_BCD}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00873}{873}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga6bdfe3bed0a57dfafc2d1de785d48a62}\label{group__RTC__IS__RTC__Definitions_ga6bdfe3bed0a57dfafc2d1de785d48a62} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOUR12@{IS\_RTC\_HOUR12}}
+\index{IS\_RTC\_HOUR12@{IS\_RTC\_HOUR12}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_HOUR12}{IS\_RTC\_HOUR12}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOUR12(\begin{DoxyParamCaption}\item[{}]{HOUR }\end{DoxyParamCaption})~(((HOUR) $>$ 0u) \&\& ((HOUR) $<$= 12u))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00917}{917}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga4883613bec76074ac62608b89e3f48a8}\label{group__RTC__IS__RTC__Definitions_ga4883613bec76074ac62608b89e3f48a8} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOUR24@{IS\_RTC\_HOUR24}}
+\index{IS\_RTC\_HOUR24@{IS\_RTC\_HOUR24}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_HOUR24}{IS\_RTC\_HOUR24}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOUR24(\begin{DoxyParamCaption}\item[{}]{HOUR }\end{DoxyParamCaption})~((HOUR) $<$= 23u)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00919}{919}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga597042eec4479e028c32973bc69f4a26}\label{group__RTC__IS__RTC__Definitions_ga597042eec4479e028c32973bc69f4a26} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOUR\_FORMAT@{IS\_RTC\_HOUR\_FORMAT}}
+\index{IS\_RTC\_HOUR\_FORMAT@{IS\_RTC\_HOUR\_FORMAT}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_HOUR\_FORMAT}{IS\_RTC\_HOUR\_FORMAT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOUR\+\_\+\+FORMAT(\begin{DoxyParamCaption}\item[{}]{FORMAT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((FORMAT)\ ==\ \mbox{\hyperlink{group__RTC__Hour__Formats_ga8da8ecb55e286c410dbf1297a81125ae}{RTC\_HOURFORMAT\_12}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((FORMAT)\ ==\ \mbox{\hyperlink{group__RTC__Hour__Formats_gab1a861fd858a55a6e815be4585c413d5}{RTC\_HOURFORMAT\_24}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00848}{848}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gaac5777b612cdee4c43d4399f40b1bd3a}\label{group__RTC__IS__RTC__Definitions_gaac5777b612cdee4c43d4399f40b1bd3a} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOURFORMAT12@{IS\_RTC\_HOURFORMAT12}}
+\index{IS\_RTC\_HOURFORMAT12@{IS\_RTC\_HOURFORMAT12}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_HOURFORMAT12}{IS\_RTC\_HOURFORMAT12}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOURFORMAT12(\begin{DoxyParamCaption}\item[{}]{PM }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((PM)\ ==\ \mbox{\hyperlink{group__RTC__AM__PM__Definitions_ga5be28b0dd8d5d12a6b055a70c46ce24a}{RTC\_HOURFORMAT12\_AM}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((PM)\ ==\ \mbox{\hyperlink{group__RTC__AM__PM__Definitions_gae8662cf2f3080b992d3b119f74f60162}{RTC\_HOURFORMAT12\_PM}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00863}{863}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga8475ceaf2d35d98be0b3401812aef445}\label{group__RTC__IS__RTC__Definitions_ga8475ceaf2d35d98be0b3401812aef445} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_MINUTES@{IS\_RTC\_MINUTES}}
+\index{IS\_RTC\_MINUTES@{IS\_RTC\_MINUTES}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_MINUTES}{IS\_RTC\_MINUTES}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+MINUTES(\begin{DoxyParamCaption}\item[{}]{MINUTES }\end{DoxyParamCaption})~((MINUTES) $<$= 59u)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00921}{921}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga7fa60f17b2ae529c35b1fa3dd4d6853f}\label{group__RTC__IS__RTC__Definitions_ga7fa60f17b2ae529c35b1fa3dd4d6853f} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_MONTH@{IS\_RTC\_MONTH}}
+\index{IS\_RTC\_MONTH@{IS\_RTC\_MONTH}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_MONTH}{IS\_RTC\_MONTH}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+MONTH(\begin{DoxyParamCaption}\item[{}]{MONTH }\end{DoxyParamCaption})~(((MONTH) $>$= 1u) \&\& ((MONTH) $<$= 12u))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00878}{878}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gabc8a868f360abe629c8d8de8b44b3b63}\label{group__RTC__IS__RTC__Definitions_gabc8a868f360abe629c8d8de8b44b3b63} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT@{IS\_RTC\_OUTPUT}}
+\index{IS\_RTC\_OUTPUT@{IS\_RTC\_OUTPUT}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_OUTPUT}{IS\_RTC\_OUTPUT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT(\begin{DoxyParamCaption}\item[{}]{OUTPUT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((OUTPUT)\ ==\ \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_ga2c2347927c96e0db36e16d865a33a5e9}{RTC\_OUTPUT\_DISABLE}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((OUTPUT)\ ==\ \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_gab5decd99536cc483960c47de13d2cdf1}{RTC\_OUTPUT\_ALARMA}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((OUTPUT)\ ==\ \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_gad0ee3ae5e03aada25ee96ca797d94a9d}{RTC\_OUTPUT\_ALARMB}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((OUTPUT)\ ==\ \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_gaa670c4221f0e1d6611bc477bfcb8b124}{RTC\_OUTPUT\_WAKEUP}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((OUTPUT)\ ==\ \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_ga5cc6f3f39c700b8ae6acc9ac35ac2522}{RTC\_OUTPUT\_TAMPER}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00842}{842}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga1bc0fee899de25a9c1bcbb6c2b21b35d}\label{group__RTC__IS__RTC__Definitions_ga1bc0fee899de25a9c1bcbb6c2b21b35d} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT\_POL@{IS\_RTC\_OUTPUT\_POL}}
+\index{IS\_RTC\_OUTPUT\_POL@{IS\_RTC\_OUTPUT\_POL}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_OUTPUT\_POL}{IS\_RTC\_OUTPUT\_POL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+POL(\begin{DoxyParamCaption}\item[{}]{POL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((POL)\ ==\ \mbox{\hyperlink{group__RTC__Output__Polarity__Definitions_ga093c938e6067080b264878bc99a43dd5}{RTC\_OUTPUT\_POLARITY\_HIGH}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((POL)\ ==\ \mbox{\hyperlink{group__RTC__Output__Polarity__Definitions_ga97a5745b07442aa338c2a3b81c93048b}{RTC\_OUTPUT\_POLARITY\_LOW}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00851}{851}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gaa1336882300816817a165743a28c24b1}\label{group__RTC__IS__RTC__Definitions_gaa1336882300816817a165743a28c24b1} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT\_PULLUP@{IS\_RTC\_OUTPUT\_PULLUP}}
+\index{IS\_RTC\_OUTPUT\_PULLUP@{IS\_RTC\_OUTPUT\_PULLUP}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_OUTPUT\_PULLUP}{IS\_RTC\_OUTPUT\_PULLUP}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+PULLUP(\begin{DoxyParamCaption}\item[{}]{TYPE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((TYPE)\ ==\ \mbox{\hyperlink{group__RTC__Output__PullUp__ALARM__OUT_ga2257a67f04d21343195bd3e1e4a8ec45}{RTC\_OUTPUT\_PULLUP\_NONE}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ \mbox{\hyperlink{group__RTC__Output__PullUp__ALARM__OUT_ga40d94287feb9f115743ac1613848928c}{RTC\_OUTPUT\_PULLUP\_ON}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00857}{857}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga92c8b87d716244b6f49723f7a741114d}\label{group__RTC__IS__RTC__Definitions_ga92c8b87d716244b6f49723f7a741114d} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT\_REMAP@{IS\_RTC\_OUTPUT\_REMAP}}
+\index{IS\_RTC\_OUTPUT\_REMAP@{IS\_RTC\_OUTPUT\_REMAP}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_OUTPUT\_REMAP}{IS\_RTC\_OUTPUT\_REMAP}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+REMAP(\begin{DoxyParamCaption}\item[{}]{REMAP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((REMAP)\ ==\ \mbox{\hyperlink{group__RTC__Output__ALARM__OUT__Remap_ga213962edffa2fa28d91440dd91259db1}{RTC\_OUTPUT\_REMAP\_NONE}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((REMAP)\ ==\ \mbox{\hyperlink{group__RTC__Output__ALARM__OUT__Remap_gaba40dc2134cca0fa763da09201723b6d}{RTC\_OUTPUT\_REMAP\_POS1}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00860}{860}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga69e263212d90ca91ccfc72e930f26cd8}\label{group__RTC__IS__RTC__Definitions_ga69e263212d90ca91ccfc72e930f26cd8} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT\_TYPE@{IS\_RTC\_OUTPUT\_TYPE}}
+\index{IS\_RTC\_OUTPUT\_TYPE@{IS\_RTC\_OUTPUT\_TYPE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_OUTPUT\_TYPE}{IS\_RTC\_OUTPUT\_TYPE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{TYPE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((TYPE)\ ==\ \mbox{\hyperlink{group__RTC__Output__Type__ALARM__OUT_gaa2505e0038154990024b533160bd46bd}{RTC\_OUTPUT\_TYPE\_OPENDRAIN}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ \mbox{\hyperlink{group__RTC__Output__Type__ALARM__OUT_ga3e0b4512d6531cb0bb428163d7bd927d}{RTC\_OUTPUT\_TYPE\_PUSHPULL}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00854}{854}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gadb5a39d98fc906a8ea035bd29308bc5c}\label{group__RTC__IS__RTC__Definitions_gadb5a39d98fc906a8ea035bd29308bc5c} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_SECONDS@{IS\_RTC\_SECONDS}}
+\index{IS\_RTC\_SECONDS@{IS\_RTC\_SECONDS}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_SECONDS}{IS\_RTC\_SECONDS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SECONDS(\begin{DoxyParamCaption}\item[{}]{SECONDS }\end{DoxyParamCaption})~((SECONDS) $<$= 59u)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00923}{923}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga550da5c8a2382badcb391507fd6f07f4}\label{group__RTC__IS__RTC__Definitions_ga550da5c8a2382badcb391507fd6f07f4} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_STORE\_OPERATION@{IS\_RTC\_STORE\_OPERATION}}
+\index{IS\_RTC\_STORE\_OPERATION@{IS\_RTC\_STORE\_OPERATION}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_STORE\_OPERATION}{IS\_RTC\_STORE\_OPERATION}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+STORE\+\_\+\+OPERATION(\begin{DoxyParamCaption}\item[{}]{OPERATION }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((OPERATION)\ ==\ \mbox{\hyperlink{group__RTC__StoreOperation__Definitions_ga0c0fb2efa26fd29872759f6162fafefa}{RTC\_STOREOPERATION\_RESET}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((OPERATION)\ ==\ \mbox{\hyperlink{group__RTC__StoreOperation__Definitions_ga984ee81edc6b876d035683d65a5c60d8}{RTC\_STOREOPERATION\_SET}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00870}{870}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_ga32fccaa6ec65f9fceb3e6e4f31ab11cf}\label{group__RTC__IS__RTC__Definitions_ga32fccaa6ec65f9fceb3e6e4f31ab11cf} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_SYNCH\_PREDIV@{IS\_RTC\_SYNCH\_PREDIV}}
+\index{IS\_RTC\_SYNCH\_PREDIV@{IS\_RTC\_SYNCH\_PREDIV}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_SYNCH\_PREDIV}{IS\_RTC\_SYNCH\_PREDIV}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PREDIV(\begin{DoxyParamCaption}\item[{}]{PREDIV }\end{DoxyParamCaption})~((PREDIV) $<$= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17bbd4e569a76446df089752cb41b1cb}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+S}} $>$$>$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga234f46098c91b34aa12502d70cdb93bf}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+\+S\+\_\+\+Pos}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00915}{915}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gaf17712ffb0834287f23c19235d53c7ec}\label{group__RTC__IS__RTC__Definitions_gaf17712ffb0834287f23c19235d53c7ec} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_WEEKDAY@{IS\_RTC\_WEEKDAY}}
+\index{IS\_RTC\_WEEKDAY@{IS\_RTC\_WEEKDAY}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_WEEKDAY}{IS\_RTC\_WEEKDAY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+WEEKDAY(\begin{DoxyParamCaption}\item[{}]{WEEKDAY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga9d74c5e20a481db4f4da69f083b768bf}{RTC\_WEEKDAY\_MONDAY}})\ \ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gaf6b6e124a2e74317448abbfb1943e8cc}{RTC\_WEEKDAY\_TUESDAY}})\ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga0e8a7c338ffda7c9dd47003762d7054c}{RTC\_WEEKDAY\_WEDNESDAY}})\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gab166c84a54ace04f6849a8d0e1764107}{RTC\_WEEKDAY\_THURSDAY}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga3755707d628f4664c30d02fd2a2f0182}{RTC\_WEEKDAY\_FRIDAY}})\ \ \ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga3acccb86a8429fea22f2ac46470b5e55}{RTC\_WEEKDAY\_SATURDAY}})\ \ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((WEEKDAY)\ ==\ \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gadab2da4b8aa50c86d68781b379b75783}{RTC\_WEEKDAY\_SUNDAY}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00882}{882}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{group__RTC__IS__RTC__Definitions_gae59c9cfe6f9532ab26d74c25bcbe814b}\label{group__RTC__IS__RTC__Definitions_gae59c9cfe6f9532ab26d74c25bcbe814b} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_YEAR@{IS\_RTC\_YEAR}}
+\index{IS\_RTC\_YEAR@{IS\_RTC\_YEAR}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsubsubsubsection{\texorpdfstring{IS\_RTC\_YEAR}{IS\_RTC\_YEAR}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+YEAR(\begin{DoxyParamCaption}\item[{}]{YEAR }\end{DoxyParamCaption})~((YEAR) $<$= 99u)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00876}{876}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+

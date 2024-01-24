@@ -1,0 +1,130 @@
+\doxysection{LSM6\+DSOX\+\_\+free\+\_\+fall}
+\hypertarget{group__LSM6DSOX__free__fall}{}\label{group__LSM6DSOX__free__fall}\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+
+
+This section group all the functions concerning the free fall detection.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_gaa6c61b67d77169e15fbfa4b08948d69e}{lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Free fall threshold setting.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_ga1c576bf3c7b2bb6a254c2b02551f21ad}{lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Free fall threshold setting.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_ga0aaddc9637582c43c3bcefcd76549b77}{lsm6dsox\+\_\+ff\+\_\+dur\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Free-\/fall duration event.\mbox{[}set\mbox{]} 1LSb = 1 / ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_gaacdf903575f9ae5673a8683edded4fd8}{lsm6dsox\+\_\+ff\+\_\+dur\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Free-\/fall duration event.\mbox{[}get\mbox{]} 1LSb = 1 / ODR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section group all the functions concerning the free fall detection. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__free__fall_gaacdf903575f9ae5673a8683edded4fd8}\label{group__LSM6DSOX__free__fall_gaacdf903575f9ae5673a8683edded4fd8} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_dur\_get@{lsm6dsox\_ff\_dur\_get}}
+\index{lsm6dsox\_ff\_dur\_get@{lsm6dsox\_ff\_dur\_get}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_dur\_get()}{lsm6dsox\_ff\_dur\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+dur\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Free-\/fall duration event.\mbox{[}get\mbox{]} 1LSb = 1 / ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ff\+\_\+dur in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06397}{6397}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__free__fall_ga0aaddc9637582c43c3bcefcd76549b77}\label{group__LSM6DSOX__free__fall_ga0aaddc9637582c43c3bcefcd76549b77} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_dur\_set@{lsm6dsox\_ff\_dur\_set}}
+\index{lsm6dsox\_ff\_dur\_set@{lsm6dsox\_ff\_dur\_set}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_dur\_set()}{lsm6dsox\_ff\_dur\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+dur\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Free-\/fall duration event.\mbox{[}set\mbox{]} 1LSb = 1 / ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ff\+\_\+dur in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06356}{6356}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__free__fall_ga1c576bf3c7b2bb6a254c2b02551f21ad}\label{group__LSM6DSOX__free__fall_ga1c576bf3c7b2bb6a254c2b02551f21ad} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_threshold\_get@{lsm6dsox\_ff\_threshold\_get}}
+\index{lsm6dsox\_ff\_threshold\_get@{lsm6dsox\_ff\_threshold\_get}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_threshold\_get()}{lsm6dsox\_ff\_threshold\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Free fall threshold setting.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of ff\+\_\+ths in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06297}{6297}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__free__fall_gaa6c61b67d77169e15fbfa4b08948d69e}\label{group__LSM6DSOX__free__fall_gaa6c61b67d77169e15fbfa4b08948d69e} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_threshold\_set@{lsm6dsox\_ff\_threshold\_set}}
+\index{lsm6dsox\_ff\_threshold\_set@{lsm6dsox\_ff\_threshold\_set}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_threshold\_set()}{lsm6dsox\_ff\_threshold\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Free fall threshold setting.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ff\+\_\+ths in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06272}{6272}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

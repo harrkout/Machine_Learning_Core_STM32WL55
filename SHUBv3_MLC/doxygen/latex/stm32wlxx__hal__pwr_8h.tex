@@ -1,0 +1,162 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+pwr.h File Reference}
+\hypertarget{stm32wlxx__hal__pwr_8h}{}\label{stm32wlxx__hal__pwr_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_pwr.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_pwr.h}}
+
+
+Header file of PWR HAL module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+ll\+\_\+pwr.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPWR__PVDTypeDef}{PWR\+\_\+\+PVDType\+Def}}
+\begin{DoxyCompactList}\small\item\em PWR PVD configuration structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_gaddf4616a143ac3481f3043f2a4c21c18}{PWR\+\_\+\+PVDLEVEL\+\_\+0}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_ga06e55b20a8777594f1a91ee71fac1f79}{PWR\+\_\+\+PVDLEVEL\+\_\+1}}~(                                \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabb5eb8b44b74d4df38c982be6f104e2d}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+0}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_gab26bb78650bbaef26ac9f9123c791cc7}{PWR\+\_\+\+PVDLEVEL\+\_\+2}}~(                \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3dba11231fdbecc30b96fb870e3d9eab}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+1}}                )
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_ga7b751743b3e29c237e6a0e1d7bdd0503}{PWR\+\_\+\+PVDLEVEL\+\_\+3}}~(                \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3dba11231fdbecc30b96fb870e3d9eab}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabb5eb8b44b74d4df38c982be6f104e2d}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+0}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_ga03c0d3ae547deb1a51b8acafac101698}{PWR\+\_\+\+PVDLEVEL\+\_\+4}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad76bf9b1919a25147bdd816372e4b941}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+2}}                                )
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_ga46a1476440945c2b6426b4973172f24b}{PWR\+\_\+\+PVDLEVEL\+\_\+5}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad76bf9b1919a25147bdd816372e4b941}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+2}}                 \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabb5eb8b44b74d4df38c982be6f104e2d}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+0}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_ga5dda7d0ac3fd3d606666455ca3c8f537}{PWR\+\_\+\+PVDLEVEL\+\_\+6}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad76bf9b1919a25147bdd816372e4b941}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3dba11231fdbecc30b96fb870e3d9eab}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+1}}                )
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__detection__level_ga2c5cd8dd26b13bdf0164c1f7596b4bfd}{PWR\+\_\+\+PVDLEVEL\+\_\+7}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad76bf9b1919a25147bdd816372e4b941}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3dba11231fdbecc30b96fb870e3d9eab}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabb5eb8b44b74d4df38c982be6f104e2d}{PWR\+\_\+\+CR2\+\_\+\+PLS\+\_\+0}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode_ga3a4bf701a36a14a4edf4dc5a28153277}{PWR\+\_\+\+PVD\+\_\+\+MODE\+\_\+\+NORMAL}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode_ga102d7b8354419990a2a780f61cd020a6}{PWR\+\_\+\+PVD\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING}}~(\mbox{\hyperlink{group__PWR__PVD__Mode__Mask_gac0819467cdffadf93b803af38636a2e1}{PVD\+\_\+\+MODE\+\_\+\+IT}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__PVD__Mode__Mask_ga00a60e6dec3ba6a274cd208ad17b3023}{PVD\+\_\+\+RISING\+\_\+\+EDGE}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode_gab600a54f3a588de836cfe4b727ab8a53}{PWR\+\_\+\+PVD\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING}}~(\mbox{\hyperlink{group__PWR__PVD__Mode__Mask_gac0819467cdffadf93b803af38636a2e1}{PVD\+\_\+\+MODE\+\_\+\+IT}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__PVD__Mode__Mask_ga5d9ed3c13a2bf7365c22d40bfedb1ba5}{PVD\+\_\+\+FALLING\+\_\+\+EDGE}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode_gac531fbf14457e6595505354fad521b67}{PWR\+\_\+\+PVD\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+FALLING}}~(\mbox{\hyperlink{group__PWR__PVD__Mode__Mask_gac0819467cdffadf93b803af38636a2e1}{PVD\+\_\+\+MODE\+\_\+\+IT}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__PVD__Mode__Mask_ga58d20839347aece7dc801c782a5d0990}{PVD\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_gae163dddadea03ea51d61e4d86c6efe86}{PWR\+\_\+\+LOWPOWERMODE\+\_\+\+STOP0}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_ga6e436b19d68a17f664de329633049aa9}{PWR\+\_\+\+LOWPOWERMODE\+\_\+\+STOP1}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabce752abd8bb8fcf2292868e67bdd590}{PWR\+\_\+\+CR1\+\_\+\+LPMS\+\_\+0}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_gaaf2adaf215178cc2462b4c1a7413502e}{PWR\+\_\+\+LOWPOWERMODE\+\_\+\+STOP2}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga606cc4cd7b7b88aff883479b84917a3c}{PWR\+\_\+\+CR1\+\_\+\+LPMS\+\_\+1}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_ga2174d41ab7c2a94ce6d059aa739e388b}{PWR\+\_\+\+LOWPOWERMODE\+\_\+\+STANDBY}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabce752abd8bb8fcf2292868e67bdd590}{PWR\+\_\+\+CR1\+\_\+\+LPMS\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga606cc4cd7b7b88aff883479b84917a3c}{PWR\+\_\+\+CR1\+\_\+\+LPMS\+\_\+1}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__Low__Power__Mode__Selection_ga08c9eb792f1e5e9c7f49ec936a5c39eb}{PWR\+\_\+\+LOWPOWERMODE\+\_\+\+SHUTDOWN}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7c03dcac3c3875675552229e02b9840a}{PWR\+\_\+\+CR1\+\_\+\+LPMS\+\_\+2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga606cc4cd7b7b88aff883479b84917a3c}{PWR\+\_\+\+CR1\+\_\+\+LPMS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabce752abd8bb8fcf2292868e67bdd590}{PWR\+\_\+\+CR1\+\_\+\+LPMS\+\_\+0}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__Regulator__state__in__SLEEP__STOP__mode_ga1d5b4e1482184286e28c16162f530039}{PWR\+\_\+\+MAINREGULATOR\+\_\+\+ON}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__Regulator__state__in__SLEEP__STOP__mode_gab9922a15f8414818d736d5e7fcace963}{PWR\+\_\+\+LOWPOWERREGULATOR\+\_\+\+ON}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa4f44f2d21d09b8200203851c6b7bac5}{PWR\+\_\+\+CR1\+\_\+\+LPR}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__SLEEP__mode__entry_ga4f0f99a3526c57efb3501b016639fa45}{PWR\+\_\+\+SLEEPENTRY\+\_\+\+WFI}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{group__PWR__SLEEP__mode__entry_ga2ef4bd42ad37dcfcd0813676087d559e}{PWR\+\_\+\+SLEEPENTRY\+\_\+\+WFE}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group__PWR__STOP__mode__entry_ga3bdb1a9c9b421b73ab148d45eb90fa9b}{PWR\+\_\+\+STOPENTRY\+\_\+\+WFI}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{group__PWR__STOP__mode__entry_ga2e1ee5c9577cc322474a826fa97de798}{PWR\+\_\+\+STOPENTRY\+\_\+\+WFE}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}}~(LL\+\_\+\+EXTI\+\_\+\+LINE\+\_\+16)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode__Mask_gac0819467cdffadf93b803af38636a2e1}{PVD\+\_\+\+MODE\+\_\+\+IT}}~(0x00010000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode__Mask_ga00a60e6dec3ba6a274cd208ad17b3023}{PVD\+\_\+\+RISING\+\_\+\+EDGE}}~(0x00000001\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode__Mask_ga5d9ed3c13a2bf7365c22d40bfedb1ba5}{PVD\+\_\+\+FALLING\+\_\+\+EDGE}}~(0x00000002\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVD__Mode__Mask_ga58d20839347aece7dc801c782a5d0990}{PVD\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}}~(0x00000003\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga2977135bbea35b786805eea640d1c884}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check whether or not a specific PWR flag is set. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga96f24bf4b16c9f944cd829100bf746e5}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear a specific PWR flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga3180f039cf14ef78a64089f387f8f9c2}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~LL\+\_\+\+EXTI\+\_\+\+Enable\+IT\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Enable the PVD Extended Interrupt line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_gad240d7bf8f15191b068497b9aead1f1f}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~LL\+\_\+\+EXTI\+\_\+\+Disable\+IT\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Disable the PVD Extended Interrupt line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga7bef3f30c9fe267c99d5240fbf3f878c}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Enable\+Falling\+Trig\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Enable the PVD Extended Interrupt Rising Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga1ca8fd7f3286a176f6be540c75a004c6}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Disable\+Falling\+Trig\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Disable the PVD Extended Interrupt Rising Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga5b971478563a00e1ee1a9d8ca8054e08}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+FALLING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Enable\+Rising\+Trig\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Enable the PVD Extended Interrupt Falling Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga1ca57168205f8cd8d1014e6eb9465f2d}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+FALLING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Disable\+Rising\+Trig\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Disable the PVD Extended Interrupt Falling Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga638033d236eb78c1e5ecb9b49c4e7f36}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}}()
+\begin{DoxyCompactList}\small\item\em Enable the PVD Extended Interrupt Rising \& Falling Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga3f66c9c0c214cd08c24674904dcdc4e0}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}}()
+\begin{DoxyCompactList}\small\item\em Disable the PVD Extended Interrupt Rising \& Falling Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_gaba4a7968f5c4c4ca6a7047b147ba18d4}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+GENERATE\+\_\+\+SWIT}}()~LL\+\_\+\+EXTI\+\_\+\+Generate\+SWI\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Generate a Software interrupt on selected EXTI line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_ga5e66fa75359b51066e0731ac1e5ae438}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+GET\+\_\+\+FLAG}}()~LL\+\_\+\+EXTI\+\_\+\+Read\+Flag\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Check whether or not the PVD EXTI interrupt flag is set. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Exported__Macros_gac0fb2218bc050f5d8fdb1a3f28590352}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+EXTI\+\_\+\+CLEAR\+\_\+\+FLAG}}()~LL\+\_\+\+EXTI\+\_\+\+Clear\+Flag\+\_\+0\+\_\+31(\mbox{\hyperlink{group__PWR__PVD__EXTI__LINE_ga43a49255649e03d2d2b6b12c5c379d2b}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVD}})
+\begin{DoxyCompactList}\small\item\em Clear the PVD EXTI interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWR__Private__Macros_ga1fa8e84a3ba5d538595befc0731f2252}{IS\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+LEVEL}}(\+\_\+\+\_\+\+LEVEL\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWR__Private__Macros_ga0de8c53a7cb81c6060fa2c36b07d17c9}{IS\+\_\+\+PWR\+\_\+\+PVD\+\_\+\+MODE}}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWR__Private__Macros_ga0e50fc2980a2c70246c1cfd2e1cceb01}{IS\+\_\+\+PWR\+\_\+\+REGULATOR}}(\+\_\+\+\_\+\+REGULATOR\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWR__Private__Macros_ga32587f5ca2d8b0b809496de3cd484e2a}{IS\+\_\+\+PWR\+\_\+\+SLEEP\+\_\+\+ENTRY}}(\+\_\+\+\_\+\+ENTRY\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWR__Private__Macros_ga421f248d4e2c8f86188bd6134af53541}{IS\+\_\+\+PWR\+\_\+\+STOP\+\_\+\+ENTRY}}(\+\_\+\+\_\+\+ENTRY\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group1_ga7edb99b94a46448c34f0301b0a077ff5}{HAL\+\_\+\+PWR\+\_\+\+De\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group1_ga3d07cef39bf294db4aed7e06e5dbf9af}{HAL\+\_\+\+PWR\+\_\+\+Enable\+Bk\+Up\+Access}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group1_ga1513de5f2e4b72e094fb04bab786fec8}{HAL\+\_\+\+PWR\+\_\+\+Disable\+Bk\+Up\+Access}} (void)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_gad7dac916270a2ac987f19413f8aedd87}{HAL\+\_\+\+PWR\+\_\+\+Config\+PVD}} (\mbox{\hyperlink{structPWR__PVDTypeDef}{PWR\+\_\+\+PVDType\+Def}} \texorpdfstring{$\ast$}{*}s\+Config\+PVD)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga729c254eac1847073d8a55621384107d}{HAL\+\_\+\+PWR\+\_\+\+Enable\+PVD}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga3a843cc2fd1a1bb02c7f2dfa355bf9ec}{HAL\+\_\+\+PWR\+\_\+\+Disable\+PVD}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_gab821ac9058a5feb78491bff15d9ae591}{HAL\+\_\+\+PWR\+\_\+\+Enable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pin\+Polarity)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_gab12ca816929e23e36f5ed8f4ccdb1472}{HAL\+\_\+\+PWR\+\_\+\+Disable\+Wake\+Up\+Pin}} (uint32\+\_\+t Wake\+Up\+Pinx)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_gacfca5f1062274423e08317c0a5a225fa}{HAL\+\_\+\+PWR\+\_\+\+Enter\+STOPMode}} (uint32\+\_\+t Regulator, uint8\+\_\+t STOPEntry)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga5c84f4e046525c22d233c8a3443fab5f}{HAL\+\_\+\+PWR\+\_\+\+Enter\+SLEEPMode}} (uint32\+\_\+t Regulator, uint8\+\_\+t SLEEPEntry)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga40736f74c169077fcd08f34470559aa2}{HAL\+\_\+\+PWR\+\_\+\+Enter\+STANDBYMode}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga85d0154c96068b286072a64fca4c7e6a}{HAL\+\_\+\+PWR\+\_\+\+Enable\+Sleep\+On\+Exit}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga1da299e8186a3e08a694865bd41c3bb0}{HAL\+\_\+\+PWR\+\_\+\+Disable\+Sleep\+On\+Exit}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga6f33b1c8c8cc85129c68ac302a281033}{HAL\+\_\+\+PWR\+\_\+\+Enable\+SEVOn\+Pend}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_ga7811014def9b864dd490a63ada4bab68}{HAL\+\_\+\+PWR\+\_\+\+Disable\+SEVOn\+Pend}} (void)
+\item 
+void \mbox{\hyperlink{group__PWR__Exported__Functions__Group2_gaa4843b3eb7989f5b95e1218af4086940}{HAL\+\_\+\+PWR\+\_\+\+PVDCallback}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of PWR HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__pwr_8h_source}{stm32wlxx\+\_\+hal\+\_\+pwr.\+h}}.
+

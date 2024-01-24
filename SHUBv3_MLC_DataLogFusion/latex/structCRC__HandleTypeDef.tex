@@ -1,0 +1,95 @@
+\doxysection{CRC\+\_\+\+Handle\+Type\+Def Struct Reference}
+\hypertarget{structCRC__HandleTypeDef}{}\label{structCRC__HandleTypeDef}\index{CRC\_HandleTypeDef@{CRC\_HandleTypeDef}}
+
+
+CRC Handle Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32wlxx\+\_\+hal\+\_\+crc.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCRC__TypeDef}{CRC\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structCRC__HandleTypeDef_ad47f94224843c74bd605a4299349798a}{Instance}}
+\item 
+\mbox{\hyperlink{structCRC__InitTypeDef}{CRC\+\_\+\+Init\+Type\+Def}} \mbox{\hyperlink{structCRC__HandleTypeDef_a5c36434cd514a1d1d2201f4cec5f46d1}{Init}}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\+\_\+\+Lock\+Type\+Def}} \mbox{\hyperlink{structCRC__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}{Lock}}
+\item 
+\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group__CRC__Exported__Types_ga1021d6f27a072d45f6f3b233eefd8bbe}{HAL\+\_\+\+CRC\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{structCRC__HandleTypeDef_a5d303997b28e27531cbcff9d51113dc6}{State}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCRC__HandleTypeDef_a4edbae35710a51deebfbbbb329186fd3}{Input\+Data\+Format}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CRC Handle Structure definition. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00109}{109}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structCRC__HandleTypeDef_a5c36434cd514a1d1d2201f4cec5f46d1}\label{structCRC__HandleTypeDef_a5c36434cd514a1d1d2201f4cec5f46d1} 
+\index{CRC\_HandleTypeDef@{CRC\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!CRC\_HandleTypeDef@{CRC\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCRC__InitTypeDef}{CRC\+\_\+\+Init\+Type\+Def}} Init}
+
+CRC configuration parameters 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00113}{113}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__HandleTypeDef_a4edbae35710a51deebfbbbb329186fd3}\label{structCRC__HandleTypeDef_a4edbae35710a51deebfbbbb329186fd3} 
+\index{CRC\_HandleTypeDef@{CRC\_HandleTypeDef}!InputDataFormat@{InputDataFormat}}
+\index{InputDataFormat@{InputDataFormat}!CRC\_HandleTypeDef@{CRC\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{InputDataFormat}{InputDataFormat}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Data\+Format}
+
+This parameter is a value of \doxylink{group__CRC__Input__Buffer__Format}{Input Buffer Format} and specifies input data format. Can be either \begin{DoxyItemize}
+\item \doxylink{group__CRC__Input__Buffer__Format_ga8cd184ddf6651b0235a50fde2f82f71c}{CRC\+\_\+\+INPUTDATA\+\_\+\+FORMAT\+\_\+\+BYTES} input data is a stream of bytes (8-\/bit data) \item \doxylink{group__CRC__Input__Buffer__Format_ga00a0b70660bdaf9495c5998da7d59160}{CRC\+\_\+\+INPUTDATA\+\_\+\+FORMAT\+\_\+\+HALFWORDS} input data is a stream of half-\/words (16-\/bit data) \item \doxylink{group__CRC__Input__Buffer__Format_ga00c466197b04c123fee66985c88cc9a3}{CRC\+\_\+\+INPUTDATA\+\_\+\+FORMAT\+\_\+\+WORDS} input data is a stream of words (32-\/bit data)\end{DoxyItemize}
+Note that constant CRC\+\_\+\+INPUT\+\_\+\+FORMAT\+\_\+\+UNDEFINED is defined but an initialization error must occur if Input\+Buffer\+Format is not one of the three values listed above ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00119}{119}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__HandleTypeDef_ad47f94224843c74bd605a4299349798a}\label{structCRC__HandleTypeDef_ad47f94224843c74bd605a4299349798a} 
+\index{CRC\_HandleTypeDef@{CRC\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!CRC\_HandleTypeDef@{CRC\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCRC__TypeDef}{CRC\+\_\+\+Type\+Def}}\texorpdfstring{$\ast$}{*} Instance}
+
+Register base address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00111}{111}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}\label{structCRC__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b} 
+\index{CRC\_HandleTypeDef@{CRC\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!CRC\_HandleTypeDef@{CRC\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32wlxx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\+\_\+\+Lock\+Type\+Def}} Lock}
+
+CRC Locking object ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00115}{115}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+\Hypertarget{structCRC__HandleTypeDef_a5d303997b28e27531cbcff9d51113dc6}\label{structCRC__HandleTypeDef_a5d303997b28e27531cbcff9d51113dc6} 
+\index{CRC\_HandleTypeDef@{CRC\_HandleTypeDef}!State@{State}}
+\index{State@{State}!CRC\_HandleTypeDef@{CRC\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group__CRC__Exported__Types_ga1021d6f27a072d45f6f3b233eefd8bbe}{HAL\+\_\+\+CRC\+\_\+\+State\+Type\+Def}} State}
+
+CRC communication state ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source_l00117}{117}} of file \mbox{\hyperlink{stm32wlxx__hal__crc_8h_source}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32wlxx__hal__crc_8h}{stm32wlxx\+\_\+hal\+\_\+crc.\+h}}\end{DoxyCompactItemize}

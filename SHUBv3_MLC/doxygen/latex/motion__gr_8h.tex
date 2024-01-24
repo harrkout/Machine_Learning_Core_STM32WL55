@@ -1,0 +1,56 @@
+\doxysection{Middlewares/\+ST/\+STM32\+\_\+\+Motion\+GR\+\_\+\+Library/\+Inc/motion\+\_\+gr.h File Reference}
+\hypertarget{motion__gr_8h}{}\label{motion__gr_8h}\index{Middlewares/ST/STM32\_MotionGR\_Library/Inc/motion\_gr.h@{Middlewares/ST/STM32\_MotionGR\_Library/Inc/motion\_gr.h}}
+
+
+Header for motion\+\_\+gr module.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMGR__input__t}{MGR\+\_\+input\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__MOTION__GR__Exported__Types_gabb9957bbd014d299a6c3d3ec63e5d12c}{MGR\+\_\+output\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__GR__Exported__Types_ggabb9957bbd014d299a6c3d3ec63e5d12ca402866814325a91ed73b8ed235c1e50d}{MGR\+\_\+\+NOGESTURE}} = 0x00
+, \mbox{\hyperlink{group__MOTION__GR__Exported__Types_ggabb9957bbd014d299a6c3d3ec63e5d12caeaf196a9775a8b1624e68f30c326e366}{MGR\+\_\+\+PICKUP}} = 0x01
+, \mbox{\hyperlink{group__MOTION__GR__Exported__Types_ggabb9957bbd014d299a6c3d3ec63e5d12ca249b31c25655acf150da8024b63b64e0}{MGR\+\_\+\+GLANCE}} = 0x02
+, \mbox{\hyperlink{group__MOTION__GR__Exported__Types_ggabb9957bbd014d299a6c3d3ec63e5d12ca593286f717508331e41eb63a82c2991b}{MGR\+\_\+\+WAKEUP}} = 0x03
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__GR__Exported__Functions_gab85e9a2167d317aff9693228358356a0}{Motion\+GR\+\_\+\+Initialize}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+GR engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__GR__Exported__Functions_ga000787f08e6623764325c59f54600866}{Motion\+GR\+\_\+\+Set\+Orientation\+\_\+\+Acc}} (const char \texorpdfstring{$\ast$}{*}acc\+\_\+orientation)
+\begin{DoxyCompactList}\small\item\em Set the Motion\+GR accelerometer data orientation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__GR__Exported__Functions_ga2fad23c834644fc260733bbcb1420226}{Motion\+GR\+\_\+\+Update}} (\mbox{\hyperlink{structMGR__input__t}{MGR\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, \mbox{\hyperlink{group__MOTION__GR__Exported__Types_gabb9957bbd014d299a6c3d3ec63e5d12c}{MGR\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Run gesture recognition algorithm. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__GR__Exported__Functions_ga078025ce0c42d86395a82ac9dd3dcd35}{Motion\+GR\+\_\+\+Get\+Lib\+Version}} (char \texorpdfstring{$\ast$}{*}version)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for motion\+\_\+gr module. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+2.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/August-\/2021 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2016-\/2017 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{motion__gr_8h_source}{motion\+\_\+gr.\+h}}.
+

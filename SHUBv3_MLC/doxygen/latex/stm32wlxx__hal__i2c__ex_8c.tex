@@ -1,0 +1,56 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Src/stm32wlxx\+\_\+hal\+\_\+i2c\+\_\+ex.c File Reference}
+\hypertarget{stm32wlxx__hal__i2c__ex_8c}{}\label{stm32wlxx__hal__i2c__ex_8c}\index{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_i2c\_ex.c@{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_i2c\_ex.c}}
+
+
+I2C Extended HAL module driver. This file provides firmware functions to manage the following functionalities of I2C Extended peripheral\+:  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal.\+h"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+I2C Extended HAL module driver. This file provides firmware functions to manage the following functionalities of I2C Extended peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\begin{DoxyItemize}
+\item Filter Mode Functions
+\item Wake\+Up Mode Functions
+\item Fast\+Mode\+Plus Functions
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS.
+
+\begin{DoxyVerb}==============================================================================
+             ##### I2C peripheral Extended features  #####
+==============================================================================
+
+[..] Comparing to other previous devices, the I2C interface for STM32WLxx
+     devices contains the following additional features
+
+     (+) Possibility to disable or enable Analog Noise Filter
+     (+) Use of a configured Digital Noise Filter
+     (+) Disable or enable wakeup from Stop mode(s)
+     (+) Disable or enable Fast Mode Plus
+
+                   ##### How to use this driver #####
+==============================================================================
+[..] This driver provides functions to configure Noise Filter and Wake Up Feature
+  (#) Configure I2C Analog noise filter using the function HAL_I2CEx_ConfigAnalogFilter()
+  (#) Configure I2C Digital noise filter using the function HAL_I2CEx_ConfigDigitalFilter()
+  (#) Configure the enable or disable of I2C Wake Up Mode using the functions :
+        (++) HAL_I2CEx_EnableWakeUp()
+        (++) HAL_I2CEx_DisableWakeUp()
+  (#) Configure the enable or disable of fast mode plus driving capability using the functions :
+        (++) HAL_I2CEx_EnableFastModePlus()
+        (++) HAL_I2CEx_DisableFastModePlus()
+\end{DoxyVerb}
+ 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__i2c__ex_8c_source}{stm32wlxx\+\_\+hal\+\_\+i2c\+\_\+ex.\+c}}.
+

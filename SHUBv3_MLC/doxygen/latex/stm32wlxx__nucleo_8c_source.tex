@@ -1,0 +1,516 @@
+\doxysection{stm32wlxx\+\_\+nucleo.\+c}
+\hypertarget{stm32wlxx__nucleo_8c_source}{}\label{stm32wlxx__nucleo_8c_source}\index{Drivers/BSP/STM32WLxx\_Nucleo/stm32wlxx\_nucleo.c@{Drivers/BSP/STM32WLxx\_Nucleo/stm32wlxx\_nucleo.c}}
+\mbox{\hyperlink{stm32wlxx__nucleo_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00001}00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00018}00018\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00020}00020\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__nucleo_8h}{stm32wlxx\_nucleo.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__hal__exti_8h}{stm32wlxx\_hal\_exti.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00049}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__FunctionPrototypes_ga74ba8e94f06214f3093f2c7a0fecabce}{00049}}\ \textcolor{keyword}{typedef}\ void\ (*\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__FunctionPrototypes_ga74ba8e94f06214f3093f2c7a0fecabce}{BSP\_EXTI\_LineCallback}})\ (void);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00050}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__FunctionPrototypes_gae8c455545d99625284367bf2cc7401f1}{00050}}\ \textcolor{keyword}{typedef}\ void\ (*\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__FunctionPrototypes_gae8c455545d99625284367bf2cc7401f1}{BSP\_BUTTON\_GPIO\_Init}})\ (void);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00059}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_gafe6b5fa08b8918b6a4268ba4f8c2ab50}{00059}}\ \textcolor{keyword}{typedef}\ void\ (*\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_gafe6b5fa08b8918b6a4268ba4f8c2ab50}{BSP\_LED\_GPIO\_Init}})\ (void);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00060}00060\ \textcolor{keyword}{static}\ \mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}*\ \ LED\_PORT[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gab4be2480bf7d44d52aab1190a65a733c}{LEDn}}]\ =\ \{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gaf88822ae4b79d37c7735ce1160b59f68}{LED2\_GPIO\_PORT}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00061}00061\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint16\_t\ LED\_PIN[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gab4be2480bf7d44d52aab1190a65a733c}{LEDn}}]\ \ =\ \{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gaf6f84078113b55354d20585131b386f7}{LED2\_PIN}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00062}00062\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LED\_USER\_GPIO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00064}00064\ \textcolor{keyword}{static}\ \mbox{\hyperlink{structGPIO__TypeDef}{GPIO\_TypeDef}}*\ \ \ BUTTON\_PORT[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ =\ \{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gae2e6fc2fdfda22b4eed3667375a8bd81}{USER\_BUTTON\_GPIO\_PORT}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00065}00065\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint16\_t\ \ BUTTON\_PIN[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ \ =\ \{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga34df6915e3013d6a0c74131d3946b659}{USER\_BUTTON\_PIN}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00066}00066\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}}\ BUTTON\_IRQn[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ =\ \{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga2e6e65a053529869d1c370610825d98f}{USER\_BUTTON\_EXTI\_IRQn}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00067}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga0fa6be53a0678a888f0bb620b9ba0757}{00067}}\ \mbox{\hyperlink{structEXTI__HandleTypeDef}{EXTI\_HandleTypeDef}}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga0fa6be53a0678a888f0bb620b9ba0757}{hpb\_exti}}[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ =\ \{\{.\mbox{\hyperlink{structEXTI__HandleTypeDef_a9c7a78e876a7dfb279a16029f915463f}{Line}}\ =\ \mbox{\hyperlink{group__EXTI__Line_gac1a9cd58d76e9f497abecc832e3294c8}{EXTI\_LINE\_0}}\}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00068}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga802d8757ac88fdf4fdba221ef0ad3ea8}{00068}}\ \mbox{\hyperlink{structUSART__TypeDef}{USART\_TypeDef}}*\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga802d8757ac88fdf4fdba221ef0ad3ea8}{COM\_USART}}[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}}]\ =\ \{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga664acafea688582aea600a52e04c785f}{COM1\_UART}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00069}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{00069}}\ \mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}}];}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00070}00070\ \textcolor{preprocessor}{\#if\ (USE\_COM\_LOG\ >\ 0)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00071}00071\ \textcolor{keyword}{static}\ COM\_TypeDef\ COM\_ActiveLogPort;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00072}00072\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00073}00073\ \textcolor{preprocessor}{\#if\ (USE\_HAL\_UART\_REGISTER\_CALLBACKS\ ==\ 1U)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00074}00074\ \textcolor{keyword}{static}\ uint32\_t\ IslpUart1MspCbValid\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00075}00075\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00076}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_gaad593428d34be80f9df86357fd09e4be}{00076}}\ \_\_weak\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_gaad593428d34be80f9df86357fd09e4be}{MX\_LPUART1\_UART\_Init}}(\mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}*\ huart);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00084}00084\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BUTTON\_USER\_EXTI\_Callback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00085}00085\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BUTTON\_USER\_GPIO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00086}00086\ \textcolor{preprocessor}{\#if\ (USE\_BSP\_COM\_FEATURE\ >\ 0)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00087}00087\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LPUART1\_MspInit(\mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}\ *huart);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00088}00088\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LPUART1\_MspDeInit(\mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}\ *huart);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00089}00089\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00094}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gac791c242a2365c81b3e2c3da94fc8bc2}{00094}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gac791c242a2365c81b3e2c3da94fc8bc2}{BSP\_GetVersion}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00095}00095\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00096}00096\ \ \ \textcolor{keywordflow}{return}\ (int32\_t)\mbox{\hyperlink{group__STM32L4XX__NUCLEO__LOW__LEVEL__Exported__Constants_gaf0dcb8db88078a415efa0fa8663177b3}{\_\_STM32WLXX\_NUCLEO\_BSP\_VERSION}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00106}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gabdaab4f270e422a9b4c51ab0b46805d6}{00106}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gabdaab4f270e422a9b4c51ab0b46805d6}{BSP\_LED\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}}\ Led)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00107}00107\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00108}00108\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_gafe6b5fa08b8918b6a4268ba4f8c2ab50}{BSP\_LED\_GPIO\_Init}}\ LedGpioInit[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_gab4be2480bf7d44d52aab1190a65a733c}{LEDn}}]\ =\ \{LED\_USER\_GPIO\_Init\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00109}00109\ \ \ LedGpioInit[Led]();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00110}00110\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00111}00111\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00121}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga6e75d0d61e97bab0a93f0d9735c38a82}{00121}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga6e75d0d61e97bab0a93f0d9735c38a82}{BSP\_LED\_DeInit}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}}\ Led)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00122}00122\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00123}00123\ \ \ \mbox{\hyperlink{structGPIO__InitTypeDef}{GPIO\_InitTypeDef}}\ \ gpio\_init\_structure;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00125}00125\ \ \ \textcolor{comment}{/*\ Turn\ off\ LED\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00126}00126\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group2_gaf4b97bdf533a02f51ef696d43b6da5c4}{HAL\_GPIO\_WritePin}}(LED\_PORT[Led],\ LED\_PIN[Led],\ \mbox{\hyperlink{group__GPIO__Exported__Types_gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2}{GPIO\_PIN\_RESET}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00127}00127\ \ \ \textcolor{comment}{/*\ DeInit\ the\ GPIO\_LED\ pin\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00128}00128\ \ \ gpio\_init\_structure.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ LED\_PIN[Led];}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00129}00129\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_gafe9c756b5aa18961032a3f8aa572959b}{HAL\_GPIO\_DeInit}}(LED\_PORT[Led],\ gpio\_init\_structure.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00131}00131\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00132}00132\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00144}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga3e213ea9b2686f5c20d81e9137b5a0d0}{00144}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga3e213ea9b2686f5c20d81e9137b5a0d0}{BSP\_LED\_On}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}}\ Led)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00145}00145\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00146}00146\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group2_gaf4b97bdf533a02f51ef696d43b6da5c4}{HAL\_GPIO\_WritePin}}(LED\_PORT\ [Led],\ LED\_PIN\ [Led],\ \mbox{\hyperlink{group__GPIO__Exported__Types_gga5b3ef0486b179415581eb342e0ea6b43a746c062509db3ad1e47beed7527f9f8a}{GPIO\_PIN\_SET}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00148}00148\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00149}00149\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00161}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaea34e7387bd59481a5995f6dc99dfcfe}{00161}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaea34e7387bd59481a5995f6dc99dfcfe}{BSP\_LED\_Off}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}}\ Led)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00162}00162\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00163}00163\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group2_gaf4b97bdf533a02f51ef696d43b6da5c4}{HAL\_GPIO\_WritePin}}(LED\_PORT\ [Led],\ LED\_PIN\ [Led],\ \mbox{\hyperlink{group__GPIO__Exported__Types_gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2}{GPIO\_PIN\_RESET}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00165}00165\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00166}00166\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00178}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga9cfb0f9b27e11a3efce50bcc045e8938}{00178}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga9cfb0f9b27e11a3efce50bcc045e8938}{BSP\_LED\_Toggle}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}}\ Led)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00179}00179\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00180}00180\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group2_gaf5e0c89f752de5cdedcc30db068133f6}{HAL\_GPIO\_TogglePin}}(LED\_PORT[Led],\ LED\_PIN[Led]);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00182}00182\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00183}00183\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00195}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga621cb57dc226c380bc12bc24300675e7}{00195}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga621cb57dc226c380bc12bc24300675e7}{BSP\_LED\_GetState}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gaa059704b7ca945eb9c1e7f2c3d03fecd}{Led\_TypeDef}}\ Led)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00196}00196\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00197}00197\ \ \ \textcolor{keywordflow}{return}\ (int32\_t)(\mbox{\hyperlink{group__GPIO__Exported__Functions__Group2_gaf2b819ea6551319ddd5670db318d2e4e}{HAL\_GPIO\_ReadPin}}\ (LED\_PORT\ [Led],\ LED\_PIN\ [Led])\ ==\ \mbox{\hyperlink{group__GPIO__Exported__Types_gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2}{GPIO\_PIN\_RESET}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00198}00198\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00203}00203\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LED\_USER\_GPIO\_Init(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00205}00205\ \ \ \textcolor{comment}{/*\ GPIO\ Ports\ Clock\ Enable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00206}00206\ \ \ \mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga5ad43f3f4d8163d40f7d402ef75d27c5}{\_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00208}00208\ \ \ \mbox{\hyperlink{structGPIO__InitTypeDef}{GPIO\_InitTypeDef}}\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00210}00210\ \ \ \textcolor{comment}{/*\ GPIO\ Ports\ Clock\ Enable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00211}00211\ \ \ \mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga5ad43f3f4d8163d40f7d402ef75d27c5}{\_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00213}00213\ \ \ \textcolor{comment}{/*Configure\ GPIO\ pin\ Output\ Level\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00214}00214\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group2_gaf4b97bdf533a02f51ef696d43b6da5c4}{HAL\_GPIO\_WritePin}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga42f00df0002e44285df42043eb2c65f6}{BUS\_BSP\_LED\_GPIO\_PORT}},\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga7b541caaeeda0bd8449ccaba10b85df5}{BUS\_BSP\_LED\_GPIO\_PIN}},\ \mbox{\hyperlink{group__GPIO__Exported__Types_gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2}{GPIO\_PIN\_RESET}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00216}00216\ \ \ \textcolor{comment}{/*Configure\ GPIO\ pin\ :\ PTPIN\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00217}00217\ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga7b541caaeeda0bd8449ccaba10b85df5}{BUS\_BSP\_LED\_GPIO\_PIN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00218}00218\ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__GPIO__mode_ga1013838a64cec2f8c88f079c449d1982}{GPIO\_MODE\_OUTPUT\_PP}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00219}00219\ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a6cdde08eb507b710f8179a4326548e26}{Pull}}\ =\ \mbox{\hyperlink{group__GPIO__pull_ga5c2862579882c1cc64e36d38fbd07a4c}{GPIO\_NOPULL}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00220}00220\ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_ad04b2041f59d32492ec36a891418f3fd}{Speed}}\ =\ \mbox{\hyperlink{group__GPIO__speed_gaef5898db71cdb957cd41f940b0087af8}{GPIO\_SPEED\_FREQ\_HIGH}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00221}00221\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_ga41bda93b6dd639e4905fdb1454eff98e}{HAL\_GPIO\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__LED_ga42f00df0002e44285df42043eb2c65f6}{BUS\_BSP\_LED\_GPIO\_PORT}},\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00223}00223\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00237}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga36ae7750be3904a4eac9465368fb8c95}{00237}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga36ae7750be3904a4eac9465368fb8c95}{BSP\_PB\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\_TypeDef}}\ Button,\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga48825b7c7d851c440ef8e808fd9d8f0a}{ButtonMode\_TypeDef}}\ ButtonMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00238}00238\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00239}00239\ \ \ int32\_t\ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00241}00241\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__FunctionPrototypes_ga74ba8e94f06214f3093f2c7a0fecabce}{BSP\_EXTI\_LineCallback}}\ ButtonCallback[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ =\{BUTTON\_USER\_EXTI\_Callback\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00242}00242\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ \ BSP\_BUTTON\_PRIO\ [\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ =\{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__CONFIG__Exported__Constants_ga08276683c87b1e200ca1e457937cbb12}{BSP\_BUTTON\_USER\_IT\_PRIORITY}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00243}00243\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ BUTTON\_EXTI\_LINE[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ =\{\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gac41d04c2244ba780e4749991c85d1e9a}{USER\_BUTTON\_EXTI\_LINE}}\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00244}00244\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__FunctionPrototypes_gae8c455545d99625284367bf2cc7401f1}{BSP\_BUTTON\_GPIO\_Init}}\ ButtonGpioInit[\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_ga43d47e509ada64329393005c3be15d64}{BUTTONn}}]\ =\ \{BUTTON\_USER\_GPIO\_Init\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00246}00246\ \ \ ButtonGpioInit[Button]();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00248}00248\ \ \ \textcolor{keywordflow}{if}\ (ButtonMode\ ==\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga48825b7c7d851c440ef8e808fd9d8f0aa13c1ad97bc3db33d7f2b5a7c116bc8f5}{BUTTON\_MODE\_EXTI}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00249}00249\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00250}00250\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{group__EXTI__Exported__Functions__Group1_gaa5856ee92dc1265db144af025673ee46}{HAL\_EXTI\_GetHandle}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga0fa6be53a0678a888f0bb620b9ba0757}{hpb\_exti}}[Button],\ BUTTON\_EXTI\_LINE[Button])\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00251}00251\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00252}00252\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00253}00253\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00254}00254\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__EXTI__Exported__Functions__Group1_gacb6ee7e9f2429c3c3a1c99d4fe2d26d7}{HAL\_EXTI\_RegisterCallback}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga0fa6be53a0678a888f0bb620b9ba0757}{hpb\_exti}}[Button],\ \ \mbox{\hyperlink{group__EXTI__Exported__Types_gga0ff36e8796a6ad3f2fc211e534c54c0ea9e0259c6eb4e5da890544489f133294b}{HAL\_EXTI\_COMMON\_CB\_ID}},\ ButtonCallback[Button])\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00255}00255\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00256}00256\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00257}00257\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00258}00258\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00259}00259\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00260}00260\ \ \ \ \ \ \ \textcolor{comment}{/*\ Enable\ and\ set\ Button\ EXTI\ Interrupt\ to\ the\ lowest\ priority\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00261}00261\ \ \ \ \ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga8581a82025a4780efd00876a66e3e91b}{HAL\_NVIC\_SetPriority}}((BUTTON\_IRQn[Button]),\ BSP\_BUTTON\_PRIO[Button],\ 0x00);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00262}00262\ \ \ \ \ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gaaad4492c1b25e006d69948a15790352a}{HAL\_NVIC\_EnableIRQ}}((BUTTON\_IRQn[Button]));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00263}00263\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00264}00264\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00266}00266\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00267}00267\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00277}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaf682838f957fe4c9c2299342f404f78e}{00277}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaf682838f957fe4c9c2299342f404f78e}{BSP\_PB\_DeInit}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\_TypeDef}}\ Button)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00278}00278\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00279}00279\ \ \ \mbox{\hyperlink{structGPIO__InitTypeDef}{GPIO\_InitTypeDef}}\ gpio\_init\_structure;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00281}00281\ \ \ gpio\_init\_structure.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ BUTTON\_PIN[Button];}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00282}00282\ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga50ca6290e068821cb84aa168f3e13967}{HAL\_NVIC\_DisableIRQ}}((\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}})(BUTTON\_IRQn[Button]));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00283}00283\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_gafe9c756b5aa18961032a3f8aa572959b}{HAL\_GPIO\_DeInit}}(BUTTON\_PORT[Button],\ gpio\_init\_structure.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00285}00285\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00286}00286\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00295}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga2a873fc1a9478adb9f92027cf3f31f00}{00295}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga2a873fc1a9478adb9f92027cf3f31f00}{BSP\_PB\_GetState}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\_TypeDef}}\ Button)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00296}00296\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00297}00297\ \ \ \textcolor{keywordflow}{return}\ (int32\_t)(\mbox{\hyperlink{group__GPIO__Exported__Functions__Group2_gaf2b819ea6551319ddd5670db318d2e4e}{HAL\_GPIO\_ReadPin}}(BUTTON\_PORT[Button],\ BUTTON\_PIN[Button])\ ==\ \mbox{\hyperlink{group__GPIO__Exported__Types_gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2}{GPIO\_PIN\_RESET}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00298}00298\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00304}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gafc9200e75ead474a8953b027735787e9}{00304}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gafc9200e75ead474a8953b027735787e9}{BSP\_PB\_IRQHandler}}\ (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\_TypeDef}}\ Button)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00305}00305\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00306}00306\ \ \ \mbox{\hyperlink{group__EXTI__Exported__Functions__Group2_ga241422a810a8e2aeb0cd8467145d33bb}{HAL\_EXTI\_IRQHandler}}(\ \&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga0fa6be53a0678a888f0bb620b9ba0757}{hpb\_exti}}[Button]\ );}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00307}00307\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00314}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga2459f0b545225456efd6fc68f561ae0d}{00314}}\ \_\_weak\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga2459f0b545225456efd6fc68f561ae0d}{BSP\_PB\_Callback}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\_TypeDef}}\ Button)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00315}00315\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00316}00316\ \ \ \textcolor{comment}{/*\ Prevent\ unused\ argument(s)\ compilation\ warning\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00317}00317\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a6bc306171da085f4c7df2c66d2ff8e47}{UNUSED}}(Button);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00319}00319\ \ \ \textcolor{comment}{/*\ This\ function\ should\ be\ implemented\ by\ the\ user\ application.}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00320}00320\ \textcolor{comment}{\ \ \ \ \ It\ is\ called\ into\ this\ driver\ when\ an\ event\ on\ Button\ is\ triggered.\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00321}00321\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00327}00327\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BUTTON\_USER\_EXTI\_Callback(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00328}00328\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00329}00329\ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga2459f0b545225456efd6fc68f561ae0d}{BSP\_PB\_Callback}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gga643816dfbad5c734fc25a29ce8d35bb1a6454f3dfd31c55a877e1b6684451d076}{BUTTON\_USER}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00330}00330\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00331}00331\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00336}00336\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BUTTON\_USER\_GPIO\_Init(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00337}00337\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00338}00338\ \ \ \textcolor{comment}{/*\ GPIO\ Ports\ Clock\ Enable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00339}00339\ \ \ \mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga1fde58d775fd2458002df817a68f486e}{\_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00340}00340\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00341}00341\ \ \ \textcolor{comment}{/*\ EXTI\ interrupt\ init*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00342}00342\ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga8581a82025a4780efd00876a66e3e91b}{HAL\_NVIC\_SetPriority}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}{EXTI0\_IRQn}},\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00343}00343\ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gaaad4492c1b25e006d69948a15790352a}{HAL\_NVIC\_EnableIRQ}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}{EXTI0\_IRQn}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00345}00345\ \ \ \mbox{\hyperlink{structGPIO__InitTypeDef}{GPIO\_InitTypeDef}}\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00346}00346\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00347}00347\ \ \ \textcolor{comment}{/*\ GPIO\ Ports\ Clock\ Enable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00348}00348\ \ \ \mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga1fde58d775fd2458002df817a68f486e}{\_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00350}00350\ \ \ \textcolor{comment}{/*Configure\ GPIO\ pin\ :\ PTPIN\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00351}00351\ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gae5cea78873c5c229d2854d1a350c5a56}{BUS\_BSP\_BUTTON\_GPIO\_PIN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00352}00352\ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__GPIO__mode_ga088659562e68426d9a72821ea4fd8d50}{GPIO\_MODE\_IT\_RISING}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00353}00353\ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a6cdde08eb507b710f8179a4326548e26}{Pull}}\ =\ \mbox{\hyperlink{group__GPIO__pull_ga5c2862579882c1cc64e36d38fbd07a4c}{GPIO\_NOPULL}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00354}00354\ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_ga41bda93b6dd639e4905fdb1454eff98e}{HAL\_GPIO\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__BUTTON_gaba24eaf9e6a7df3f15b3ff2731d167d0}{BUS\_BSP\_BUTTON\_GPIO\_PORT}},\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00356}00356\ \ \ \textcolor{comment}{/*\ EXTI\ interrupt\ init*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00357}00357\ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_ga8581a82025a4780efd00876a66e3e91b}{HAL\_NVIC\_SetPriority}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}{EXTI0\_IRQn}},\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00358}00358\ \ \ \mbox{\hyperlink{group__CORTEX__Exported__Functions__Group1_gaaad4492c1b25e006d69948a15790352a}{HAL\_NVIC\_EnableIRQ}}(\mbox{\hyperlink{group__Peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}{EXTI0\_IRQn}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00359}00359\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00360}00360\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00361}00361\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00362}00362\ \textcolor{preprocessor}{\#if\ (USE\_BSP\_COM\_FEATURE\ >\ 0)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00371}00371\ int32\_t\ BSP\_COM\_Init(COM\_TypeDef\ COM)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00372}00372\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00373}00373\ \ \ int32\_t\ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00374}00374\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00375}00375\ \ \ \textcolor{keywordflow}{if}(COM\ >\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00376}00376\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00377}00377\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00378}00378\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00379}00379\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00380}00380\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00381}00381\ \ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM].\mbox{\hyperlink{struct____UART__HandleTypeDef_a2b30b6d22df80fbebd8ceefc6f162310}{Instance}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga802d8757ac88fdf4fdba221ef0ad3ea8}{COM\_USART}}[COM];}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00382}00382\ \textcolor{preprocessor}{\#if\ (USE\_HAL\_UART\_REGISTER\_CALLBACKS\ ==\ 0U)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00383}00383\ \ \ \ \ \textcolor{comment}{/*\ Init\ the\ UART\ Msp\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00384}00384\ \ \ \ \ LPUART1\_MspInit(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM]);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00385}00385\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00386}00386\ \ \ \ \ \textcolor{keywordflow}{if}(IslpUart1MspCbValid\ ==\ 0U)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00387}00387\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00388}00388\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(BSP\_COM\_RegisterDefaultMspCallbacks(COM)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00389}00389\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00390}00390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a5d44e83bbd6c394f4b4c2a2d4bfd28a9}{BSP\_ERROR\_MSP\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00391}00391\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00392}00392\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00393}00393\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00394}00394\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_gaad593428d34be80f9df86357fd09e4be}{MX\_LPUART1\_UART\_Init}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM]))}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00395}00395\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00396}00396\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00397}00397\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00398}00398\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00399}00399\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00400}00400\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00401}00401\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00409}00409\ int32\_t\ BSP\_COM\_DeInit(COM\_TypeDef\ COM)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00410}00410\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00411}00411\ \ \ int32\_t\ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00412}00412\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00413}00413\ \ \ \textcolor{keywordflow}{if}(COM\ >\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00414}00414\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00415}00415\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00416}00416\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00417}00417\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00418}00418\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00419}00419\ \ \ \ \ \textcolor{comment}{/*\ USART\ configuration\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00420}00420\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM].\mbox{\hyperlink{struct____UART__HandleTypeDef_a2b30b6d22df80fbebd8ceefc6f162310}{Instance}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga802d8757ac88fdf4fdba221ef0ad3ea8}{COM\_USART}}[COM];}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00421}00421\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00422}00422\ \textcolor{preprocessor}{\ \ \ \ \#if\ (USE\_HAL\_UART\_REGISTER\_CALLBACKS\ ==\ 0U)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00423}00423\ \ \ \ \ \ \ LPUART1\_MspDeInit(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM]);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00424}00424\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{/*\ (USE\_HAL\_UART\_REGISTER\_CALLBACKS\ ==\ 0U)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00425}00425\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00426}00426\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{group__UART__Exported__Functions__Group1_ga8d98eaab25e61ae12e2e240c3388c57b}{HAL\_UART\_DeInit}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM])\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00427}00427\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00428}00428\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00429}00429\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00430}00430\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00431}00431\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00432}00432\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00433}00433\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00434}00434\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00444}00444\ \textcolor{comment}{/*\ LPUART1\ init\ function\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00446}00446\ \_\_weak\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_gaad593428d34be80f9df86357fd09e4be}{MX\_LPUART1\_UART\_Init}}(\mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}*\ hlpuart)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00447}00447\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00448}00448\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ ret\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00449}00449\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00450}00450\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a2b30b6d22df80fbebd8ceefc6f162310}{Instance}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_ga73eb37d103f4e4f2d18ec3d3f5208ab9}{LPUART1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00451}00451\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_aaad609733f3fd8146c8745e953a91b2a}{BaudRate}}\ =\ 921600;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00452}00452\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_ae5e60b9a021fe0009588fc86c7584a5a}{WordLength}}\ =\ \mbox{\hyperlink{group__UARTEx__Word__Length_gaf394e9abaf17932ee89591f990fe6407}{UART\_WORDLENGTH\_8B}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00453}00453\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_a8394ba239444e3e5fe1ada1c37cb1019}{StopBits}}\ =\ \mbox{\hyperlink{group__UART__Stop__Bits_ga7cf97e555292d574de8abc596ba0e2ce}{UART\_STOPBITS\_1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00454}00454\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_a1d60a99b8f3965f01ab23444b154ba79}{Parity}}\ =\ \mbox{\hyperlink{group__UART__Parity_ga270dea6e1a92dd83fe58802450bdd60c}{UART\_PARITY\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00455}00455\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__UART__Mode_gab47c162935901e89322e2ce6700b6744}{UART\_MODE\_TX\_RX}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00456}00456\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_a0a933d213b17470c582c8fec23a24d09}{HwFlowCtl}}\ =\ \mbox{\hyperlink{group__UART__Hardware__Flow__Control_gae0569001c06b7760cd38c481f84116cf}{UART\_HWCONTROL\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00457}00457\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_af699e096fa74b5f58c1ee172025981ba}{OneBitSampling}}\ =\ \mbox{\hyperlink{group__UART__OneBit__Sampling_gadfcb0e9db2719321048b249b2c5cc15f}{UART\_ONE\_BIT\_SAMPLE\_DISABLE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00458}00458\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a6b5ab0619ea07655a7f3bc92f78fafaa}{Init}}.\mbox{\hyperlink{structUART__InitTypeDef_ab791f8fac403d508e1c53b6f27cf1f24}{ClockPrescaler}}\ =\ \mbox{\hyperlink{group__UART__ClockPrescaler_ga7e210157853228d94668b5ee7233087d}{UART\_PRESCALER\_DIV1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00459}00459\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_a4785c6c4b0e998062a50b706a739c6c5}{AdvancedInit}}.\mbox{\hyperlink{structUART__AdvFeatureInitTypeDef_ad3ebc9a49be4aa143250abfbe6c427d1}{AdvFeatureInit}}\ =\ \mbox{\hyperlink{group__UART__Advanced__Features__Initialization__Type_gab696b28f33174d038e0bfd300c1b2a77}{UART\_ADVFEATURE\_NO\_INIT}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00460}00460\ \ \ hlpuart-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_af1e1c91773389b7106a54bcc8d48b64e}{FifoMode}}\ =\ \mbox{\hyperlink{group__UARTEx__FIFO__mode_gaf55427ab3ae02f380954508d80b6dea3}{UART\_FIFOMODE\_DISABLE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00461}00461\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__UART__Exported__Functions__Group1_gabe47045024787099b0bfa82bbe7b0b6a}{HAL\_UART\_Init}}(hlpuart)\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00462}00462\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00463}00463\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00464}00464\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00466}00466\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__UARTEx__Exported__Functions__Group3_gae2e0da62ac7e71641ee696f6b6a3de11}{HAL\_UARTEx\_SetTxFifoThreshold}}(hlpuart,\ \mbox{\hyperlink{group__UARTEx__TXFIFO__threshold__level_gac0167b844b8cc2d183b55a0b296b2803}{UART\_TXFIFO\_THRESHOLD\_1\_8}})\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00467}00467\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00468}00468\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00469}00469\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00470}00470\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00471}00471\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__UARTEx__Exported__Functions__Group3_ga7aa1f7a62351e140b6bc74a26ce14e5e}{HAL\_UARTEx\_SetRxFifoThreshold}}(hlpuart,\ \mbox{\hyperlink{group__UARTEx__RXFIFO__threshold__level_ga9cabde9885fe477df3625fa8fdc7a99a}{UART\_RXFIFO\_THRESHOLD\_1\_8}})\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00472}00472\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00473}00473\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00474}00474\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00475}00475\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00476}00476\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__UARTEx__Exported__Functions__Group3_ga5f321105c87423e7156dbab60826b37a}{HAL\_UARTEx\_DisableFifoMode}}(hlpuart)\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00477}00477\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00478}00478\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{HAL\_ERROR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00479}00479\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00481}00481\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00482}00482\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00483}00483\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00484}00484\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00485}00485\ \textcolor{preprocessor}{\#if\ (USE\_HAL\_UART\_REGISTER\_CALLBACKS\ ==\ 1U)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00490}00490\ int32\_t\ BSP\_COM\_RegisterDefaultMspCallbacks(COM\_TypeDef\ COM)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00491}00491\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00492}00492\ \ \ int32\_t\ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00493}00493\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00494}00494\ \ \ \textcolor{keywordflow}{if}(COM\ >=\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00495}00495\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00496}00496\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00497}00497\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00498}00498\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00499}00499\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00500}00500\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00501}00501\ \ \ \ \ \mbox{\hyperlink{group__UART__Exported__Macros_ga19deab848407b106998416c78092fa9b}{\_\_HAL\_UART\_RESET\_HANDLE\_STATE}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM]);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00502}00502\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00503}00503\ \ \ \ \ \textcolor{comment}{/*\ Register\ default\ MspInit/MspDeInit\ Callback\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00504}00504\ \ \ \ \ \textcolor{keywordflow}{if}(HAL\_UART\_RegisterCallback(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM],\ HAL\_UART\_MSPINIT\_CB\_ID,\ LPUART1\_MspInit)\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00505}00505\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00506}00506\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00507}00507\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00508}00508\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(HAL\_UART\_RegisterCallback(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM],\ HAL\_UART\_MSPDEINIT\_CB\_ID,\ LPUART1\_MspDeInit)\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00509}00509\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00510}00510\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00511}00511\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00512}00512\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00513}00513\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00514}00514\ \ \ \ \ \ \ IslpUart1MspCbValid\ =\ 1U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00515}00515\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00516}00516\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00517}00517\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00518}00518\ \ \ \textcolor{comment}{/*\ BSP\ status\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00519}00519\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00520}00520\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00521}00521\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00527}00527\ int32\_t\ BSP\_COM\_RegisterMspCallbacks\ (COM\_TypeDef\ COM\ ,\ BSP\_COM\_Cb\_t\ *Callback)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00528}00528\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00529}00529\ \ \ int32\_t\ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00530}00530\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00531}00531\ \ \ \textcolor{keywordflow}{if}(COM\ >=\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga0f2aa41d83898d7dd8601e08cfacf738}{COMn}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00532}00532\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00533}00533\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00534}00534\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00535}00535\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00536}00536\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00537}00537\ \ \ \ \ \mbox{\hyperlink{group__UART__Exported__Macros_ga19deab848407b106998416c78092fa9b}{\_\_HAL\_UART\_RESET\_HANDLE\_STATE}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM]);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00538}00538\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00539}00539\ \ \ \ \ \textcolor{comment}{/*\ Register\ MspInit/MspDeInit\ Callbacks\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00540}00540\ \ \ \ \ \textcolor{keywordflow}{if}(HAL\_UART\_RegisterCallback(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM],\ HAL\_UART\_MSPINIT\_CB\_ID,\ Callback-\/>pMspInitCb)\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00541}00541\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00542}00542\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00543}00543\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00544}00544\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(HAL\_UART\_RegisterCallback(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM],\ HAL\_UART\_MSPDEINIT\_CB\_ID,\ Callback-\/>pMspDeInitCb)\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00545}00545\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00546}00546\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af26405dbc959d3a0a8ac54a870eb9b5c}{BSP\_ERROR\_PERIPH\_FAILURE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00547}00547\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00548}00548\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00549}00549\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00550}00550\ \ \ \ \ \ \ IslpUart1MspCbValid\ =\ 1U;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00551}00551\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00552}00552\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00553}00553\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00554}00554\ \ \ \textcolor{comment}{/*\ BSP\ status\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00555}00555\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00556}00556\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00557}00557\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_HAL\_UART\_REGISTER\_CALLBACKS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00558}00558\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00559}00559\ \textcolor{preprocessor}{\#if\ (USE\_COM\_LOG\ >\ 0)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00566}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga88f2724b35dad8d0f1a31bfacce40d90}{00566}}\ int32\_t\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_ga88f2724b35dad8d0f1a31bfacce40d90}{BSP\_COM\_SelectLogPort}}(COM\_TypeDef\ COM)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00567}00567\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00568}00568\ \ \ \textcolor{keywordflow}{if}(COM\_ActiveLogPort\ !=\ COM)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00569}00569\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00570}00570\ \ \ \ \ COM\_ActiveLogPort\ =\ COM;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00571}00571\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00572}00572\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00573}00573\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00574}00574\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00575}00575\ \textcolor{preprocessor}{\#if\ defined(\_\_CC\_ARM)\ }\textcolor{comment}{/*\ For\ arm\ compiler\ 5\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00576}00576\ \textcolor{preprocessor}{\#if\ !defined(\_\_MICROLIB)\ }\textcolor{comment}{/*\ If\ not\ Microlib\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00577}00577\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00578}00578\ \textcolor{keyword}{struct\ }\_\_FILE}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00579}00579\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00580}00580\ \ \ \textcolor{keywordtype}{int}\ dummyVar;\ \textcolor{comment}{//Just\ for\ the\ sake\ of\ redefining\ \_\_FILE,\ we\ won't\ we\ using\ it\ anyways\ ;)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00581}00581\ \};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00582}00582\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00583}00583\ FILE\ \_\_stdout;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00584}00584\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00585}00585\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ If\ not\ Microlib\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00586}00586\ \textcolor{preprocessor}{\#elif\ defined(\_\_ARMCC\_VERSION)\ \&\&\ (\_\_ARMCC\_VERSION\ >=\ 6010050)\ }\textcolor{comment}{/*\ For\ arm\ compiler\ 6\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00587}00587\ \textcolor{preprocessor}{\#if\ !defined(\_\_MICROLIB)\ }\textcolor{comment}{/*\ If\ not\ Microlib\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00588}00588\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00589}00589\ FILE\ \_\_stdout;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00590}00590\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00591}00591\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ If\ not\ Microlib\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00592}00592\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ For\ arm\ compiler\ 5\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00593}00593\ \textcolor{preprocessor}{\#if\ defined(\_\_ICCARM\_\_)\ }\textcolor{comment}{/*\ For\ IAR\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00594}00594\ \textcolor{keywordtype}{size\_t}\ \_\_write(\textcolor{keywordtype}{int}\ Handle,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *Buf,\ \textcolor{keywordtype}{size\_t}\ Bufsize)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00595}00595\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00596}00596\ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00597}00597\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00598}00598\ \ \ \textcolor{keywordflow}{for}(i=0;\ i<Bufsize;\ i++)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00599}00599\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00600}00600\ \ \ \ \ (void)\mbox{\hyperlink{group__UART__Exported__Functions__Group2_ga01a7a7ac3cf0a262814ba44ee7580ddb}{HAL\_UART\_Transmit}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM\_ActiveLogPort],\ (uint8\_t\ *)\&Buf[i],\ 1,\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gae15ba11d8352fc1eeac46d34aafad1ee}{COM\_POLL\_TIMEOUT}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00601}00601\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00602}00602\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00603}00603\ \ \ \textcolor{keywordflow}{return}\ Bufsize;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00604}00604\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00605}00605\ \textcolor{preprocessor}{\#elif\ defined(\_\_CC\_ARM)\ ||\ (defined(\_\_ARMCC\_VERSION)\ \&\&\ (\_\_ARMCC\_VERSION\ >=\ 6010050))\ }\textcolor{comment}{/*\ For\ ARM\ Compiler\ 5\ and\ 6\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00606}00606\ \textcolor{keywordtype}{int}\ fputc\ (\textcolor{keywordtype}{int}\ ch,\ FILE\ *f)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00607}00607\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00608}00608\ \ \ (void)\mbox{\hyperlink{group__UART__Exported__Functions__Group2_ga01a7a7ac3cf0a262814ba44ee7580ddb}{HAL\_UART\_Transmit}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM\_ActiveLogPort],\ (uint8\_t\ *)\&ch,\ 1,\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gae15ba11d8352fc1eeac46d34aafad1ee}{COM\_POLL\_TIMEOUT}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00609}00609\ \ \ \textcolor{keywordflow}{return}\ ch;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00610}00610\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00611}00611\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{/*\ For\ GCC\ Toolchains\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00612}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gabc513dd972081ae765b6949a62872eb7}{00612}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gabc513dd972081ae765b6949a62872eb7}{\_\_io\_putchar}}\ (\textcolor{keywordtype}{int}\ ch)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00613}00613\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00614}00614\ \ \ (void)\mbox{\hyperlink{group__UART__Exported__Functions__Group2_ga01a7a7ac3cf0a262814ba44ee7580ddb}{HAL\_UART\_Transmit}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Variables_ga8200aacd20eb23e9c91f99b0a81f1db7}{hcom\_uart}}[COM\_ActiveLogPort],\ (uint8\_t\ *)\&ch,\ 1,\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_gae15ba11d8352fc1eeac46d34aafad1ee}{COM\_POLL\_TIMEOUT}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00615}00615\ \ \ \textcolor{keywordflow}{return}\ ch;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00616}00616\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00617}00617\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ For\ IAR\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00618}00618\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_COM\_LOG\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00624}\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{00624}}\ \mbox{\hyperlink{struct____DMA__HandleTypeDef}{DMA\_HandleTypeDef}}\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00625}00625\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00626}00626\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LPUART1\_MspInit(\mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}*\ uartHandle)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00627}00627\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00628}00628\ \ \ \mbox{\hyperlink{structGPIO__InitTypeDef}{GPIO\_InitTypeDef}}\ GPIO\_InitStruct;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00629}00629\ \ \ \mbox{\hyperlink{structRCC__PeriphCLKInitTypeDef}{RCC\_PeriphCLKInitTypeDef}}\ PeriphClkInitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00630}00630\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ LPUART1\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00631}00631\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00632}00632\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ LPUART1\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00633}00633\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00636}00636\ \ \ \ \ PeriphClkInitStruct.\mbox{\hyperlink{structRCC__PeriphCLKInitTypeDef_a82dae3f6a5ae6c184bd1b95a88d41fc2}{PeriphClockSelection}}\ =\ \mbox{\hyperlink{group__RCCEx__Periph__Clock__Selection_ga26dd46ff44eb9a532070bb3790ce0086}{RCC\_PERIPHCLK\_LPUART1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00637}00637\ \ \ \ \ PeriphClkInitStruct.\mbox{\hyperlink{structRCC__PeriphCLKInitTypeDef_a85cccba6173592abc09b69859459de55}{Lpuart1ClockSelection}}\ =\ \mbox{\hyperlink{group__RCCEx__LPUART1__Clock__Source_ga8158f86dafbb5879aed91b766f64f360}{RCC\_LPUART1CLKSOURCE\_PCLK1}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00638}00638\ \ \ \ \ \mbox{\hyperlink{group__RCCEx__Exported__Functions__Group1_ga0c0f61a1e2f47cc81bc43d83ba3e0d95}{HAL\_RCCEx\_PeriphCLKConfig}}(\&PeriphClkInitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00639}00639\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00640}00640\ \ \ \ \ \textcolor{comment}{/*\ Enable\ Peripheral\ clock\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00641}00641\ \ \ \ \ \mbox{\hyperlink{group__RCC__APB1__Clock__Enable__Disable_ga4411749d5b9d76cf908e26239e4b213d}{\_\_HAL\_RCC\_LPUART1\_CLK\_ENABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00642}00642\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00643}00643\ \ \ \ \ \mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga5ad43f3f4d8163d40f7d402ef75d27c5}{\_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00644}00644\ \ \ \ \ \mbox{\hyperlink{group__RCC__AHB2__Peripheral__Clock__Enable__Disable_ga1fde58d775fd2458002df817a68f486e}{\_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00651}00651\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga234b6fddd2a7a501c0eb9c20761163d3}{BUS\_LPUART1\_CTS\_GPIO\_PIN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00652}00652\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__GPIO__mode_ga526c72c5264316fc05c775b6cad4aa6a}{GPIO\_MODE\_AF\_PP}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00653}00653\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a6cdde08eb507b710f8179a4326548e26}{Pull}}\ =\ \mbox{\hyperlink{group__GPIO__pull_ga5c2862579882c1cc64e36d38fbd07a4c}{GPIO\_NOPULL}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00654}00654\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_ad04b2041f59d32492ec36a891418f3fd}{Speed}}\ =\ \mbox{\hyperlink{group__GPIO__speed_gab7916c4265bfa1b26a5205ea9c1caa4e}{GPIO\_SPEED\_FREQ\_LOW}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00655}00655\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a9a352764836bb14ec56a94f77697b52d}{Alternate}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga7053abb713b9318d899fae3ea7b9881c}{BUS\_LPUART1\_CTS\_GPIO\_AF}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00656}00656\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_ga41bda93b6dd639e4905fdb1454eff98e}{HAL\_GPIO\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gacfb0750d0adcf8e860c43b59fe1a1cea}{BUS\_LPUART1\_CTS\_GPIO\_PORT}},\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00657}00657\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00658}00658\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gae9baaf96032a5cf93da4a522b24b5511}{BUS\_LPUART1\_RTS\_GPIO\_PIN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00659}00659\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__GPIO__mode_ga526c72c5264316fc05c775b6cad4aa6a}{GPIO\_MODE\_AF\_PP}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00660}00660\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a6cdde08eb507b710f8179a4326548e26}{Pull}}\ =\ \mbox{\hyperlink{group__GPIO__pull_ga5c2862579882c1cc64e36d38fbd07a4c}{GPIO\_NOPULL}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00661}00661\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_ad04b2041f59d32492ec36a891418f3fd}{Speed}}\ =\ \mbox{\hyperlink{group__GPIO__speed_gab7916c4265bfa1b26a5205ea9c1caa4e}{GPIO\_SPEED\_FREQ\_LOW}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00662}00662\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a9a352764836bb14ec56a94f77697b52d}{Alternate}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga4180394dcab06e2d6ce0705f68af48f6}{BUS\_LPUART1\_RTS\_GPIO\_AF}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00663}00663\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_ga41bda93b6dd639e4905fdb1454eff98e}{HAL\_GPIO\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga94cd285f9a138e49abb544d8f5d6de8e}{BUS\_LPUART1\_RTS\_GPIO\_PORT}},\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00664}00664\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00665}00665\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gaad87c80001f46757d2dc0a00d07c0d79}{BUS\_LPUART1\_RX\_GPIO\_PIN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00666}00666\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__GPIO__mode_ga526c72c5264316fc05c775b6cad4aa6a}{GPIO\_MODE\_AF\_PP}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00667}00667\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a6cdde08eb507b710f8179a4326548e26}{Pull}}\ =\ \mbox{\hyperlink{group__GPIO__pull_ga5c2862579882c1cc64e36d38fbd07a4c}{GPIO\_NOPULL}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00668}00668\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_ad04b2041f59d32492ec36a891418f3fd}{Speed}}\ =\ \mbox{\hyperlink{group__GPIO__speed_gab7916c4265bfa1b26a5205ea9c1caa4e}{GPIO\_SPEED\_FREQ\_LOW}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00669}00669\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a9a352764836bb14ec56a94f77697b52d}{Alternate}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga1b9e73df5fcb7e5999bf719a6738b695}{BUS\_LPUART1\_RX\_GPIO\_AF}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00670}00670\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_ga41bda93b6dd639e4905fdb1454eff98e}{HAL\_GPIO\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga72dc69bdeb7980575387c78ab0a121f3}{BUS\_LPUART1\_RX\_GPIO\_PORT}},\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00671}00671\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00672}00672\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a871d0ab74071724e96b7cc9ae2a7532b}{Pin}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga4c6423346aa7226da6dc43e741f7d7c4}{BUS\_LPUART1\_TX\_GPIO\_PIN}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00673}00673\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__GPIO__mode_ga526c72c5264316fc05c775b6cad4aa6a}{GPIO\_MODE\_AF\_PP}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00674}00674\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a6cdde08eb507b710f8179a4326548e26}{Pull}}\ =\ \mbox{\hyperlink{group__GPIO__pull_ga5c2862579882c1cc64e36d38fbd07a4c}{GPIO\_NOPULL}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00675}00675\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_ad04b2041f59d32492ec36a891418f3fd}{Speed}}\ =\ \mbox{\hyperlink{group__GPIO__speed_gab7916c4265bfa1b26a5205ea9c1caa4e}{GPIO\_SPEED\_FREQ\_LOW}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00676}00676\ \ \ \ \ GPIO\_InitStruct.\mbox{\hyperlink{structGPIO__InitTypeDef_a9a352764836bb14ec56a94f77697b52d}{Alternate}}\ =\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga98149616f29e19bd45830dbc261985d1}{BUS\_LPUART1\_TX\_GPIO\_AF}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00677}00677\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_ga41bda93b6dd639e4905fdb1454eff98e}{HAL\_GPIO\_Init}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gae9cef43be57b56a3d1c932efc82cee2a}{BUS\_LPUART1\_TX\_GPIO\_PORT}},\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00678}00678\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00679}00679\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ DMA\ init*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00680}00680\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00681}00681\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}\ =\ \mbox{\hyperlink{group__Peripheral__declaration_gac013c4376e4797831b5ddd2a09519df8}{DMA1\_Channel6}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00682}00682\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a59f46df02cf1237d6888518fe2100209}{Request}}\ =\ \mbox{\hyperlink{group__DMA__request_gae4f283a37baea99f95712c685275386a}{DMA\_REQUEST\_LPUART1\_RX}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00683}00683\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_ab94410c1333b512e271b1c135fe50916}{Direction}}\ =\ \mbox{\hyperlink{group__DMA__Data__transfer__direction_gacb2cbf03ecae6804ae4a6f60a3e37c12}{DMA\_PERIPH\_TO\_MEMORY}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00684}00684\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a4925ca3ceb52340daddc92817dc304d9}{PeriphInc}}\ =\ \mbox{\hyperlink{group__DMA__Peripheral__incremented__mode_ga63e2aff2973d1a8f01d5d7b6e4894f39}{DMA\_PINC\_DISABLE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00685}00685\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a831756fbcd64feb1e570a9bf743b5b8d}{MemInc}}\ =\ \mbox{\hyperlink{group__DMA__Memory__incremented__mode_ga43d30885699cc8378562316ff4fed1cd}{DMA\_MINC\_ENABLE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00686}00686\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_aca5b89241171c093fd0fc6dacf72683c}{PeriphDataAlignment}}\ =\ \mbox{\hyperlink{group__DMA__Peripheral__data__size_ga55b8c8f5ec95f10d26d6c5b1c9136730}{DMA\_PDATAALIGN\_BYTE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00687}00687\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_afe3adac32f5411b1a744c030f398aa5e}{MemDataAlignment}}\ =\ \mbox{\hyperlink{group__DMA__Memory__data__size_ga9ed07bddf736298eba11508382ea4d51}{DMA\_MDATAALIGN\_BYTE}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00688}00688\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}\ =\ \mbox{\hyperlink{group__DMA__mode_ga4c4f425cba13edffb3c831c036c91e01}{DMA\_CIRCULAR}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00689}00689\ \ \ \ \ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}}.\mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}.\mbox{\hyperlink{structDMA__InitTypeDef_a72acf77c0b19359eb70764505ae4bd70}{Priority}}\ =\ \mbox{\hyperlink{group__DMA__Priority__level_gad6fbeee76fd4a02cbed64365bb4c1781}{DMA\_PRIORITY\_MEDIUM}};}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00690}00690\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Functions__Group1_ga0fbcb690074233a03f2fa366dc22ff01}{HAL\_DMA\_Init}}(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00691}00691\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00692}00692\ \ \ \ \ HAL\_DMA\_ConfigChannelAttributes(\&\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}},\ DMA\_CHANNEL\_NPRIV);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00693}00693\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00694}00694\ \ \ \mbox{\hyperlink{stm32wlxx__hal__def_8h_af5b3b3d0eff8c4cb59d4d3909c247311}{\_\_HAL\_LINKDMA}}(uartHandle,hdmarx,\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Private__Functions_gaa9b86e4c707a7423dbe0c49ba8fa7e0a}{hdma\_lpuart1\_rx}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00695}00695\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00696}00696\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ LPUART1\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00697}00697\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00698}00698\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ LPUART1\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00699}00699\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00700}00700\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00701}00701\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LPUART1\_MspDeInit(\mbox{\hyperlink{struct____UART__HandleTypeDef}{UART\_HandleTypeDef}}*\ uartHandle)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00702}00702\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00703}00703\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ LPUART1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00704}00704\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00705}00705\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ LPUART1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00706}00706\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00707}00707\ \ \ \ \ \mbox{\hyperlink{group__RCC__APB1__Clock__Enable__Disable_gaa2a258a48face94f421a9bf3777e6aa7}{\_\_HAL\_RCC\_LPUART1\_CLK\_DISABLE}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00708}00708\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00715}00715\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_gafe9c756b5aa18961032a3f8aa572959b}{HAL\_GPIO\_DeInit}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gacfb0750d0adcf8e860c43b59fe1a1cea}{BUS\_LPUART1\_CTS\_GPIO\_PORT}},\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga234b6fddd2a7a501c0eb9c20761163d3}{BUS\_LPUART1\_CTS\_GPIO\_PIN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00716}00716\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00717}00717\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_gafe9c756b5aa18961032a3f8aa572959b}{HAL\_GPIO\_DeInit}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga94cd285f9a138e49abb544d8f5d6de8e}{BUS\_LPUART1\_RTS\_GPIO\_PORT}},\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gae9baaf96032a5cf93da4a522b24b5511}{BUS\_LPUART1\_RTS\_GPIO\_PIN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00718}00718\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00719}00719\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_gafe9c756b5aa18961032a3f8aa572959b}{HAL\_GPIO\_DeInit}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga72dc69bdeb7980575387c78ab0a121f3}{BUS\_LPUART1\_RX\_GPIO\_PORT}},\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gaad87c80001f46757d2dc0a00d07c0d79}{BUS\_LPUART1\_RX\_GPIO\_PIN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00720}00720\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00721}00721\ \ \ \ \ \mbox{\hyperlink{group__GPIO__Exported__Functions__Group1_gafe9c756b5aa18961032a3f8aa572959b}{HAL\_GPIO\_DeInit}}(\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_gae9cef43be57b56a3d1c932efc82cee2a}{BUS\_LPUART1\_TX\_GPIO\_PORT}},\ \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__COM_ga4c6423346aa7226da6dc43e741f7d7c4}{BUS\_LPUART1\_TX\_GPIO\_PIN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00722}00722\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00723}00723\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ DMA\ DeInit*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00724}00724\ \ \ \ \ \mbox{\hyperlink{group__DMA__Exported__Functions__Group1_ga7bb8587d642da11252a97f5c41c389ef}{HAL\_DMA\_DeInit}}(uartHandle-\/>\mbox{\hyperlink{struct____UART__HandleTypeDef_abd0aeec20298a55d89a440320e35634f}{hdmarx}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00725}00725\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ LPUART1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00726}00726\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00727}00727\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ LPUART1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00728}00728\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__nucleo_8c_source_l00729}00729\ }
+
+\end{DoxyCode}

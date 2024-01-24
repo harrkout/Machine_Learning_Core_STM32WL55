@@ -1,0 +1,496 @@
+\doxysection{custom\+\_\+mems\+\_\+control.\+c}
+\hypertarget{custom__mems__control_8c_source}{}\label{custom__mems__control_8c_source}\index{MEMS/Target/custom\_mems\_control.c@{MEMS/Target/custom\_mems\_control.c}}
+\mbox{\hyperlink{custom__mems__control_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__mems__conf_8h}{custom\_mems\_conf.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__mems__conf__app_8h}{custom\_mems\_conf\_app.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__mems__control_8h}{custom\_mems\_control.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00028}\mbox{\hyperlink{custom__mems__control_8c_a493cf6d35e31a37b007a9d425db2084e}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a493cf6d35e31a37b007a9d425db2084e}{BSP\_SENSOR\_ACC\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00030}00030\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00031}00031\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00032}00032\ \ \ (void)CUSTOM\_HYBRID\_SENSOR\_Init(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00033}00033\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00034}00034\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00035}00035\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00036}00036\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00037}00037\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a95465dcb10737d67b068b6173a5a9542}{CUSTOM\_MOTION\_SENSOR\_Init}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00038}00038\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00039}00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00048}\mbox{\hyperlink{custom__mems__control_8c_aa74027284fbabf0a0df88993dd3cfe20}{00048}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_aa74027284fbabf0a0df88993dd3cfe20}{BSP\_SENSOR\_GYR\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00050}00050\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00051}00051\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00052}00052\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a95465dcb10737d67b068b6173a5a9542}{CUSTOM\_MOTION\_SENSOR\_Init}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00053}00053\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00054}00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00062}\mbox{\hyperlink{custom__mems__control_8c_a479a5b231946116c85e7a3abd16810b7}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a479a5b231946116c85e7a3abd16810b7}{BSP\_SENSOR\_MAG\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00063}00063\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00064}00064\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00065}00065\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00066}00066\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a95465dcb10737d67b068b6173a5a9542}{CUSTOM\_MOTION\_SENSOR\_Init}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00067}00067\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00068}00068\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00076}\mbox{\hyperlink{custom__mems__control_8c_ada0e34eb93d797b48b8455b87de6194d}{00076}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ada0e34eb93d797b48b8455b87de6194d}{BSP\_SENSOR\_PRESS\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00077}00077\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00078}00078\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00079}00079\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_PRESS\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00080}00080\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Init(CUSTOM\_PRESS\_INSTANCE\_0,\ ENV\_PRESSURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00081}00081\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00082}00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00090}\mbox{\hyperlink{custom__mems__control_8c_a6b8533a5553e2b34c4121d732a1f94bc}{00090}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a6b8533a5553e2b34c4121d732a1f94bc}{BSP\_SENSOR\_TEMP\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00091}00091\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00092}00092\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00093}00093\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00094}00094\ \ \ (void)CUSTOM\_HYBRID\_SENSOR\_Init(CUSTOM\_TEMP\_INSTANCE\_0,\ HYBRID\_TEMPERATURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00095}00095\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00096}00096\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00097}00097\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00098}00098\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00099}00099\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Init(CUSTOM\_TEMP\_INSTANCE\_0,\ ENV\_TEMPERATURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00100}00100\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00101}00101\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00102}00102\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00110}\mbox{\hyperlink{custom__mems__control_8c_a3fe0b96d3c068cc0e2959ac988fd26b1}{00110}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a3fe0b96d3c068cc0e2959ac988fd26b1}{BSP\_SENSOR\_HUM\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00111}00111\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00112}00112\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00113}00113\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_HUM\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00114}00114\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Init(CUSTOM\_HUM\_INSTANCE\_0,\ ENV\_HUMIDITY);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00115}00115\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00116}00116\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00117}00117\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00124}\mbox{\hyperlink{custom__mems__control_8c_a7ae41a41e4dda79eefcdd415064e0e43}{00124}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a7ae41a41e4dda79eefcdd415064e0e43}{BSP\_SENSOR\_ACC\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00125}00125\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00126}00126\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00127}00127\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00128}00128\ \ \ (void)CUSTOM\_HYBRID\_MOTION\_SENSOR\_Enable(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00129}00129\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00130}00130\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00131}00131\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00132}00132\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00133}00133\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_accf1770cc2a24bed9c39dba335c0289b}{CUSTOM\_MOTION\_SENSOR\_Enable}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00134}00134\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00135}00135\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00136}00136\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00137}00137\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00144}\mbox{\hyperlink{custom__mems__control_8c_a81d4189aa01109319783e561f8ff27ec}{00144}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a81d4189aa01109319783e561f8ff27ec}{BSP\_SENSOR\_GYR\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00145}00145\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00146}00146\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00147}00147\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00148}00148\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_accf1770cc2a24bed9c39dba335c0289b}{CUSTOM\_MOTION\_SENSOR\_Enable}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00149}00149\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00150}00150\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00151}00151\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00158}\mbox{\hyperlink{custom__mems__control_8c_ab91da864b62db86ffe39dca34b809ef1}{00158}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ab91da864b62db86ffe39dca34b809ef1}{BSP\_SENSOR\_MAG\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00159}00159\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00160}00160\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00161}00161\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00162}00162\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_accf1770cc2a24bed9c39dba335c0289b}{CUSTOM\_MOTION\_SENSOR\_Enable}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00163}00163\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00164}00164\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00165}00165\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00172}\mbox{\hyperlink{custom__mems__control_8c_ac31a534da603af82cbea2e81a5d8cbed}{00172}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ac31a534da603af82cbea2e81a5d8cbed}{BSP\_SENSOR\_PRESS\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00173}00173\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00174}00174\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00175}00175\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_PRESS\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00176}00176\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Enable(CUSTOM\_PRESS\_INSTANCE\_0,\ ENV\_PRESSURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00177}00177\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00178}00178\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00179}00179\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00186}\mbox{\hyperlink{custom__mems__control_8c_a7dc09986995f9f42107f5ebe8be8a212}{00186}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a7dc09986995f9f42107f5ebe8be8a212}{BSP\_SENSOR\_TEMP\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00187}00187\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00188}00188\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00189}00189\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00190}00190\ \ \ (void)CUSTOM\_HYBRID\_ENV\_SENSOR\_Enable(CUSTOM\_TEMP\_INSTANCE\_0,\ HYBRID\_TEMPERATURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00191}00191\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00192}00192\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00193}00193\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00194}00194\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00195}00195\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Enable(CUSTOM\_TEMP\_INSTANCE\_0,\ ENV\_TEMPERATURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00196}00196\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00197}00197\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00198}00198\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00199}00199\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00206}\mbox{\hyperlink{custom__mems__control_8c_a780139edfd8216665a27d69dbc40dee2}{00206}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a780139edfd8216665a27d69dbc40dee2}{BSP\_SENSOR\_HUM\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00207}00207\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00208}00208\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00209}00209\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_HUM\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00210}00210\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Enable(CUSTOM\_HUM\_INSTANCE\_0,\ ENV\_HUMIDITY);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00211}00211\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00212}00212\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00213}00213\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00220}\mbox{\hyperlink{custom__mems__control_8c_a4cf50c5fa6c19c128cfc7afd2c957c02}{00220}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a4cf50c5fa6c19c128cfc7afd2c957c02}{BSP\_SENSOR\_ACC\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00221}00221\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00222}00222\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00223}00223\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00224}00224\ \ \ (void)CUSTOM\_HYBRID\_MOTION\_SENSOR\_Disable(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00225}00225\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00226}00226\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00227}00227\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00228}00228\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00229}00229\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aeafc990dca6e22133e2b3f8a92b733ae}{CUSTOM\_MOTION\_SENSOR\_Disable}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00230}00230\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00231}00231\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00232}00232\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00233}00233\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00240}\mbox{\hyperlink{custom__mems__control_8c_a52f6080f0eff84639dfdc809c06d2883}{00240}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a52f6080f0eff84639dfdc809c06d2883}{BSP\_SENSOR\_GYR\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00241}00241\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00242}00242\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00243}00243\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00244}00244\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aeafc990dca6e22133e2b3f8a92b733ae}{CUSTOM\_MOTION\_SENSOR\_Disable}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00245}00245\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00246}00246\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00247}00247\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00254}\mbox{\hyperlink{custom__mems__control_8c_a06d959f0d05a71dc934cd86d75feb6f5}{00254}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a06d959f0d05a71dc934cd86d75feb6f5}{BSP\_SENSOR\_MAG\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00255}00255\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00256}00256\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00257}00257\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00258}00258\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aeafc990dca6e22133e2b3f8a92b733ae}{CUSTOM\_MOTION\_SENSOR\_Disable}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}});}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00259}00259\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00260}00260\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00261}00261\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00268}\mbox{\hyperlink{custom__mems__control_8c_a17b1aaa450a71c9b000e1b8b89c21862}{00268}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a17b1aaa450a71c9b000e1b8b89c21862}{BSP\_SENSOR\_PRESS\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00269}00269\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00270}00270\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00271}00271\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_PRESS\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00272}00272\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Disable(CUSTOM\_PRESS\_INSTANCE\_0,\ ENV\_PRESSURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00273}00273\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00274}00274\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00275}00275\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00282}\mbox{\hyperlink{custom__mems__control_8c_aa0976f6b6c526d8d2dfa157113d39310}{00282}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_aa0976f6b6c526d8d2dfa157113d39310}{BSP\_SENSOR\_TEMP\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00283}00283\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00284}00284\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00285}00285\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00286}00286\ \ \ (void)CUSTOM\_HYBRID\_ENV\_SENSOR\_Disable(CUSTOM\_TEMP\_INSTANCE\_0,\ HYBRID\_TEMPERATURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00287}00287\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00288}00288\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00289}00289\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00290}00290\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00291}00291\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Disable(CUSTOM\_TEMP\_INSTANCE\_0,\ ENV\_TEMPERATURE);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00292}00292\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00293}00293\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00294}00294\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00295}00295\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00302}\mbox{\hyperlink{custom__mems__control_8c_a32da60d14961a761841b86ca2fe9fa39}{00302}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a32da60d14961a761841b86ca2fe9fa39}{BSP\_SENSOR\_HUM\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00303}00303\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00304}00304\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00305}00305\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_HUM\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00306}00306\ \ \ (void)CUSTOM\_ENV\_SENSOR\_Disable(CUSTOM\_HUM\_INSTANCE\_0,\ ENV\_HUMIDITY);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00307}00307\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00308}00308\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00309}00309\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00316}\mbox{\hyperlink{custom__mems__control_8c_ad207eaa0dbebf93016a6b31bfe1abfe7}{00316}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ad207eaa0dbebf93016a6b31bfe1abfe7}{BSP\_SENSOR\_ACC\_GetAxes}}(\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\_SENSOR\_Axes\_t}}\ *Axes)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00317}00317\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00318}00318\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00319}00319\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00320}00320\ \ \ (void)CUSTOM\_HYBRID\_MOTION\_SENSOR\_GetAxes(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO,\ (CUSTOM\_HYBRID\_MOTION\_SENSOR\_Axes\_t\ *)Axes);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00321}00321\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00322}00322\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af6d3062751bd565decb1a2cd3b63bdb2}{x}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00323}00323\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af64066d134a77e01b3d6eb8da813627a}{y}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00324}00324\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_ac2fb30be1b894e32b31b68bb513262a3}{z}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00325}00325\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00326}00326\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00327}00327\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00328}00328\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00329}00329\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a054f13f7bcc8962d8414309c90eebcf6}{CUSTOM\_MOTION\_SENSOR\_GetAxes}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ (\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\_MOTION\_SENSOR\_Axes\_t}}\ *)Axes);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00330}00330\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00331}00331\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af6d3062751bd565decb1a2cd3b63bdb2}{x}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00332}00332\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af64066d134a77e01b3d6eb8da813627a}{y}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00333}00333\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_ac2fb30be1b894e32b31b68bb513262a3}{z}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00334}00334\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00335}00335\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00336}00336\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00337}00337\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00344}\mbox{\hyperlink{custom__mems__control_8c_a6ef6654b653c394442df4f5f1c75d6c9}{00344}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a6ef6654b653c394442df4f5f1c75d6c9}{BSP\_SENSOR\_GYR\_GetAxes}}(\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\_SENSOR\_Axes\_t}}\ *Axes)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00345}00345\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00346}00346\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00347}00347\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00348}00348\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a054f13f7bcc8962d8414309c90eebcf6}{CUSTOM\_MOTION\_SENSOR\_GetAxes}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ (\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\_MOTION\_SENSOR\_Axes\_t}}\ *)Axes);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00349}00349\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00350}00350\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af6d3062751bd565decb1a2cd3b63bdb2}{x}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00351}00351\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af64066d134a77e01b3d6eb8da813627a}{y}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00352}00352\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_ac2fb30be1b894e32b31b68bb513262a3}{z}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00353}00353\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00354}00354\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00355}00355\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00362}\mbox{\hyperlink{custom__mems__control_8c_a84323cc59f9d8e1e071e730da1f8cc23}{00362}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a84323cc59f9d8e1e071e730da1f8cc23}{BSP\_SENSOR\_MAG\_GetAxes}}(\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\_SENSOR\_Axes\_t}}\ *Axes)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00363}00363\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00364}00364\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00365}00365\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00366}00366\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a054f13f7bcc8962d8414309c90eebcf6}{CUSTOM\_MOTION\_SENSOR\_GetAxes}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ (\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\_MOTION\_SENSOR\_Axes\_t}}\ *)Axes);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00367}00367\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00368}00368\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af6d3062751bd565decb1a2cd3b63bdb2}{x}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00369}00369\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_af64066d134a77e01b3d6eb8da813627a}{y}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00370}00370\ \ \ Axes-\/>\mbox{\hyperlink{structMOTION__SENSOR__Axes__t_ac2fb30be1b894e32b31b68bb513262a3}{z}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00371}00371\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00372}00372\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00373}00373\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00374}00374\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00380}\mbox{\hyperlink{custom__mems__control_8c_a8fa35e3db752d729175dafde1dcf2282}{00380}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a8fa35e3db752d729175dafde1dcf2282}{BSP\_SENSOR\_PRESS\_GetValue}}(\textcolor{keywordtype}{float}\ *Value)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00381}00381\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00382}00382\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00383}00383\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_PRESS\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00384}00384\ \ \ (void)CUSTOM\_ENV\_SENSOR\_GetValue(CUSTOM\_PRESS\_INSTANCE\_0,\ ENV\_PRESSURE,\ Value);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00385}00385\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00386}00386\ \ \ *Value\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00387}00387\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00388}00388\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00389}00389\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00396}\mbox{\hyperlink{custom__mems__control_8c_a28dace814ef1c2d959a6d41aa0488d75}{00396}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a28dace814ef1c2d959a6d41aa0488d75}{BSP\_SENSOR\_TEMP\_GetValue}}(\textcolor{keywordtype}{float}\ *Value)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00397}00397\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00398}00398\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00399}00399\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00400}00400\ \ \ (void)CUSTOM\_HYBRID\_ENV\_SENSOR\_GetValue(CUSTOM\_TEMP\_INSTANCE\_0,\ HYBRID\_TEMPERATURE,\ Value);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00401}00401\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00402}00402\ \ \ *Value\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00403}00403\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00404}00404\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00405}00405\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00406}00406\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00407}00407\ \ \ (void)CUSTOM\_ENV\_SENSOR\_GetValue(CUSTOM\_TEMP\_INSTANCE\_0,\ ENV\_TEMPERATURE,\ Value);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00408}00408\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00409}00409\ \ \ *Value\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00410}00410\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00411}00411\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00412}00412\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00413}00413\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00414}00414\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00420}\mbox{\hyperlink{custom__mems__control_8c_ae9e1ab33509258684c043c967adbe821}{00420}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ae9e1ab33509258684c043c967adbe821}{BSP\_SENSOR\_HUM\_GetValue}}(\textcolor{keywordtype}{float}\ *Value)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00421}00421\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00422}00422\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00423}00423\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_HUM\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00424}00424\ \ \ (void)CUSTOM\_ENV\_SENSOR\_GetValue(CUSTOM\_HUM\_INSTANCE\_0,\ ENV\_HUMIDITY,\ Value);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00425}00425\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00426}00426\ \ \ *Value\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00427}00427\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00428}00428\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00429}00429\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00430}00430\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00436}\mbox{\hyperlink{custom__mems__control_8c_a03894cb736f2cbdc239bf1a967d03970}{00436}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a03894cb736f2cbdc239bf1a967d03970}{BSP\_SENSOR\_ACC\_SetOutputDataRate}}(\textcolor{keywordtype}{float}\ Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00437}00437\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00438}00438\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00439}00439\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00440}00440\ \ \ (void)CUSTOM\_HYBRID\_MOTION\_SENSOR\_SetOutputDataRate(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00441}00441\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00442}00442\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00443}00443\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00444}00444\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00445}00445\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aa2399dbd3d1183a1fafabf440c4cd93e}{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00446}00446\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00447}00447\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00448}00448\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00449}00449\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00450}00450\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00456}\mbox{\hyperlink{custom__mems__control_8c_ab0c7a38b7d5380b147125d6eb396eb27}{00456}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ab0c7a38b7d5380b147125d6eb396eb27}{BSP\_SENSOR\_GYR\_SetOutputDataRate}}(\textcolor{keywordtype}{float}\ Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00457}00457\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00458}00458\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00459}00459\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00460}00460\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aa2399dbd3d1183a1fafabf440c4cd93e}{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00461}00461\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00462}00462\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00463}00463\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00464}00464\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00470}\mbox{\hyperlink{custom__mems__control_8c_ae46d4df7e0ff8a25909619410b334e62}{00470}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ae46d4df7e0ff8a25909619410b334e62}{BSP\_SENSOR\_MAG\_SetOutputDataRate}}(\textcolor{keywordtype}{float}\ Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00471}00471\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00472}00472\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00473}00473\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00474}00474\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aa2399dbd3d1183a1fafabf440c4cd93e}{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00475}00475\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00476}00476\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00477}00477\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00478}00478\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00484}\mbox{\hyperlink{custom__mems__control_8c_adc7336533ca8b940f14791e78c26679b}{00484}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_adc7336533ca8b940f14791e78c26679b}{BSP\_SENSOR\_PRESS\_SetOutputDataRate}}(\textcolor{keywordtype}{float}\ Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00485}00485\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00486}00486\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00487}00487\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_PRESS\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00488}00488\ \ \ (void)CUSTOM\_ENV\_SENSOR\_SetOutputDataRate(CUSTOM\_PRESS\_INSTANCE\_0,\ ENV\_PRESSURE,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00489}00489\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00490}00490\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00491}00491\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00492}00492\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00498}\mbox{\hyperlink{custom__mems__control_8c_af74731f0f34b02f663f7ad65930cd452}{00498}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_af74731f0f34b02f663f7ad65930cd452}{BSP\_SENSOR\_TEMP\_SetOutputDataRate}}(\textcolor{keywordtype}{float}\ Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00499}00499\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00500}00500\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00501}00501\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00502}00502\ \ \ (void)CUSTOM\_HYBRID\_ENV\_SENSOR\_SetOutputDataRate(CUSTOM\_TEMP\_INSTANCE\_0,\ HYBRID\_TEMPERATURE,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00503}00503\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00504}00504\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00505}00505\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00506}00506\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00507}00507\ \ \ (void)CUSTOM\_ENV\_SENSOR\_SetOutputDataRate(CUSTOM\_TEMP\_INSTANCE\_0,\ ENV\_TEMPERATURE,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00508}00508\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00509}00509\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00510}00510\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00511}00511\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00512}00512\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00518}\mbox{\hyperlink{custom__mems__control_8c_a7b8226970a82503a56688781406ed47a}{00518}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a7b8226970a82503a56688781406ed47a}{BSP\_SENSOR\_HUM\_SetOutputDataRate}}(\textcolor{keywordtype}{float}\ Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00519}00519\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00520}00520\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00521}00521\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_HUM\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00522}00522\ \ \ (void)CUSTOM\_ENV\_SENSOR\_SetOutputDataRate(CUSTOM\_HUM\_INSTANCE\_0,\ ENV\_HUMIDITY,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00523}00523\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00524}00524\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00525}00525\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00526}00526\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00532}\mbox{\hyperlink{custom__mems__control_8c_af29dafe2553cd8f48d6118dac09001b8}{00532}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_af29dafe2553cd8f48d6118dac09001b8}{BSP\_SENSOR\_ACC\_GetOutputDataRate}}(\textcolor{keywordtype}{float}\ *Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00533}00533\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00534}00534\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00535}00535\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00536}00536\ \ \ (void)CUSTOM\_HYBRID\_MOTION\_SENSOR\_GetOutputDataRate(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00537}00537\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00538}00538\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00539}00539\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00540}00540\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00541}00541\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a2cf70a22cb835bac74c53213f9a59c3f}{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00542}00542\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00543}00543\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00544}00544\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00545}00545\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00546}00546\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00552}\mbox{\hyperlink{custom__mems__control_8c_a8816455d2acab67c1d0264f034bfe0c0}{00552}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a8816455d2acab67c1d0264f034bfe0c0}{BSP\_SENSOR\_GYR\_GetOutputDataRate}}(\textcolor{keywordtype}{float}\ *Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00553}00553\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00554}00554\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00555}00555\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00556}00556\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a2cf70a22cb835bac74c53213f9a59c3f}{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00557}00557\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00558}00558\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00559}00559\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00560}00560\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00566}\mbox{\hyperlink{custom__mems__control_8c_a37882e578f5c2f692b164372412c7834}{00566}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a37882e578f5c2f692b164372412c7834}{BSP\_SENSOR\_MAG\_GetOutputDataRate}}(\textcolor{keywordtype}{float}\ *Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00567}00567\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00568}00568\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00569}00569\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00570}00570\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a2cf70a22cb835bac74c53213f9a59c3f}{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00571}00571\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00572}00572\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00573}00573\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00574}00574\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00580}\mbox{\hyperlink{custom__mems__control_8c_ae01439ba184da3ff2f4d68fe67f9b8f4}{00580}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ae01439ba184da3ff2f4d68fe67f9b8f4}{BSP\_SENSOR\_PRESS\_GetOutputDataRate}}(\textcolor{keywordtype}{float}\ *Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00581}00581\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00582}00582\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00583}00583\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_PRESS\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00584}00584\ \ \ (void)CUSTOM\_ENV\_SENSOR\_GetOutputDataRate(CUSTOM\_PRESS\_INSTANCE\_0,\ ENV\_PRESSURE,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00585}00585\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00586}00586\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00587}00587\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00588}00588\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00594}\mbox{\hyperlink{custom__mems__control_8c_a7e726dd34949f66b6b0b738d4825c636}{00594}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a7e726dd34949f66b6b0b738d4825c636}{BSP\_SENSOR\_TEMP\_GetOutputDataRate}}(\textcolor{keywordtype}{float}\ *Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00595}00595\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00596}00596\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00597}00597\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00598}00598\ \ \ (void)CUSTOM\_HYBRID\_ENV\_SENSOR\_GetOutputDataRate(CUSTOM\_TEMP\_INSTANCE\_0,\ HYBRID\_TEMPERATURE,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00599}00599\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00600}00600\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00601}00601\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00602}00602\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_TEMP\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00603}00603\ \ \ (void)CUSTOM\_ENV\_SENSOR\_GetOutputDataRate(CUSTOM\_TEMP\_INSTANCE\_0,\ ENV\_TEMPERATURE,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00604}00604\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00605}00605\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00606}00606\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00607}00607\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00608}00608\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00614}\mbox{\hyperlink{custom__mems__control_8c_a04c3347c5e5dc54ee2592c3dcdd73cfe}{00614}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a04c3347c5e5dc54ee2592c3dcdd73cfe}{BSP\_SENSOR\_HUM\_GetOutputDataRate}}(\textcolor{keywordtype}{float}\ *Odr)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00615}00615\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00616}00616\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_ENV\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00617}00617\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_HUM\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00618}00618\ \ \ (void)CUSTOM\_ENV\_SENSOR\_GetOutputDataRate(CUSTOM\_HUM\_INSTANCE\_0,\ ENV\_HUMIDITY,\ Odr);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00619}00619\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00620}00620\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00621}00621\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00622}00622\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00628}\mbox{\hyperlink{custom__mems__control_8c_ac304f5b2aaa26e54363c24cc19058594}{00628}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_ac304f5b2aaa26e54363c24cc19058594}{BSP\_SENSOR\_ACC\_SetFullScale}}(int32\_t\ Fullscale)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00629}00629\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00630}00630\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00631}00631\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00632}00632\ \ \ (void)CUSTOM\_HYBRID\_MOTION\_SENSOR\_SetFullScale(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO,\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00633}00633\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00634}00634\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00635}00635\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00636}00636\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00637}00637\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aebdf0db01a505b7c788cba9f2ce749cb}{CUSTOM\_MOTION\_SENSOR\_SetFullScale}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00638}00638\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00639}00639\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00640}00640\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00641}00641\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00642}00642\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00648}\mbox{\hyperlink{custom__mems__control_8c_a8bc32a702eef04a77a366b76d801e18b}{00648}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a8bc32a702eef04a77a366b76d801e18b}{BSP\_SENSOR\_GYR\_SetFullScale}}(int32\_t\ Fullscale)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00649}00649\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00650}00650\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00651}00651\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00652}00652\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aebdf0db01a505b7c788cba9f2ce749cb}{CUSTOM\_MOTION\_SENSOR\_SetFullScale}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00653}00653\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00654}00654\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00655}00655\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00656}00656\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00662}\mbox{\hyperlink{custom__mems__control_8c_a9c40897f7081a12cbdd9674b39d9257f}{00662}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a9c40897f7081a12cbdd9674b39d9257f}{BSP\_SENSOR\_MAG\_SetFullScale}}(int32\_t\ Fullscale)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00663}00663\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00664}00664\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00665}00665\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00666}00666\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_aebdf0db01a505b7c788cba9f2ce749cb}{CUSTOM\_MOTION\_SENSOR\_SetFullScale}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00667}00667\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00668}00668\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00669}00669\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00670}00670\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00676}\mbox{\hyperlink{custom__mems__control_8c_af2d791875a074ed66ea1448e2dafaceb}{00676}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_af2d791875a074ed66ea1448e2dafaceb}{BSP\_SENSOR\_ACC\_GetFullScale}}(int32\_t\ *Fullscale)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00677}00677\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00678}00678\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_HYBRID\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00679}00679\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00680}00680\ \ \ (void)CUSTOM\_HYBRID\_MOTION\_SENSOR\_GetFullScale(CUSTOM\_ACC\_INSTANCE\_0,\ HYBRID\_ACCELERO,\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00681}00681\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00682}00682\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00683}00683\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00684}00684\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_ACC\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00685}00685\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a1f4a417a0e38fc846d5a9d4c4aaff41a}{CUSTOM\_MOTION\_SENSOR\_GetFullScale}}(CUSTOM\_ACC\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}},\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00686}00686\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00687}00687\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00688}00688\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00689}00689\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00690}00690\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00696}\mbox{\hyperlink{custom__mems__control_8c_a48808f6eeba73c5741e23afc7be0dc52}{00696}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a48808f6eeba73c5741e23afc7be0dc52}{BSP\_SENSOR\_GYR\_GetFullScale}}(int32\_t\ *Fullscale)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00697}00697\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00698}00698\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00699}00699\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_GYR\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00700}00700\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a1f4a417a0e38fc846d5a9d4c4aaff41a}{CUSTOM\_MOTION\_SENSOR\_GetFullScale}}(CUSTOM\_GYR\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}},\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00701}00701\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00702}00702\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00703}00703\ \}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00704}00704\ }
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00710}\mbox{\hyperlink{custom__mems__control_8c_a9d0624c1f1a0819401fd6b71f79fd808}{00710}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{custom__mems__control_8c_a9d0624c1f1a0819401fd6b71f79fd808}{BSP\_SENSOR\_MAG\_GetFullScale}}(int32\_t\ *Fullscale)}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00711}00711\ \{}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00712}00712\ \textcolor{preprocessor}{\#if\ (defined\ BSP\_MOTION\_SENSORS)}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00713}00713\ \textcolor{preprocessor}{\ \ \#ifdef\ CUSTOM\_MAG\_INSTANCE\_0}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00714}00714\ \ \ (void)\mbox{\hyperlink{custom__motion__sensors_8c_a1f4a417a0e38fc846d5a9d4c4aaff41a}{CUSTOM\_MOTION\_SENSOR\_GetFullScale}}(CUSTOM\_MAG\_INSTANCE\_0,\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}},\ Fullscale);}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00715}00715\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00716}00716\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{custom__mems__control_8c_source_l00717}00717\ \}}
+
+\end{DoxyCode}

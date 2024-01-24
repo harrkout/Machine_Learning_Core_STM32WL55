@@ -1,0 +1,101 @@
+\doxysubsubsection{RTCEx Exported Macros}
+\hypertarget{group__RTCEx__Exported__Macros}{}\label{group__RTCEx__Exported__Macros}\index{RTCEx Exported Macros@{RTCEx Exported Macros}}
+\doxysubsubsubsubsection*{Topics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__RTCEx__WakeUp__Timer}{RTC Wake\+Up Timer}}
+\item 
+\mbox{\hyperlink{group__RTCEx__Timestamp}{RTC Timestamp}}
+\item 
+\mbox{\hyperlink{group__RTCEx__Calibration}{RTC Calibration}}
+\item 
+\mbox{\hyperlink{group__RTCEx__Tamper}{RTCEx tamper}}
+\item 
+\mbox{\hyperlink{group__RTCEx__SSR__Underflow}{RTC SSR Underflow}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Exported__Macros_gace97da1a6822f0bc457fc11f269697b1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$SCR = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the specified RTC pending flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC flag is set or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__RTCEx__Exported__Macros_gace97da1a6822f0bc457fc11f269697b1}\label{group__RTCEx__Exported__Macros_gace97da1a6822f0bc457fc11f269697b1} 
+\index{RTCEx Exported Macros@{RTCEx Exported Macros}!\_\_HAL\_RTC\_CLEAR\_FLAG@{\_\_HAL\_RTC\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_CLEAR\_FLAG@{\_\_HAL\_RTC\_CLEAR\_FLAG}!RTCEx Exported Macros@{RTCEx Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_CLEAR\_FLAG}{\_\_HAL\_RTC\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$SCR = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Clear the specified RTC pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC Handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the flag to check. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Clear__Flags__Definitions_ga15e4bb31fd3e4e206392a4f05d793821}{RTC\+\_\+\+CLEAR\+\_\+\+ITSF} Clear Internal Time-\/stamp flag \item \doxylink{group__RTC__Clear__Flags__Definitions_ga3bc967d5a756587d3935496f45bcd0d1}{RTC\+\_\+\+CLEAR\+\_\+\+TSOVF} Clear Time-\/stamp overflow flag \item \doxylink{group__RTC__Clear__Flags__Definitions_ga8e977be70852980fcb75ddce6260adce}{RTC\+\_\+\+CLEAR\+\_\+\+TSF} Clear Time-\/stamp flag \item \doxylink{group__RTC__Clear__Flags__Definitions_gab548542aeb7867207c9b66e5ae890412}{RTC\+\_\+\+CLEAR\+\_\+\+WUTF} Clear Wakeup timer flag \item \doxylink{group__RTC__Clear__Flags__Definitions_ga185e170997d1c90dd1ac2b04a6cd12a1}{RTC\+\_\+\+CLEAR\+\_\+\+ALRBF} Clear Alarm B flag \item \doxylink{group__RTC__Clear__Flags__Definitions_ga15d97a2bd2bbadf104030501ffd4af44}{RTC\+\_\+\+CLEAR\+\_\+\+ALRAF} Clear Alarm A flag \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00521}{521}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}\label{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679} 
+\index{RTCEx Exported Macros@{RTCEx Exported Macros}!\_\_HAL\_RTC\_GET\_FLAG@{\_\_HAL\_RTC\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_GET\_FLAG@{\_\_HAL\_RTC\_GET\_FLAG}!RTCEx Exported Macros@{RTCEx Exported Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_GET\_FLAG}{\_\_HAL\_RTC\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((((\_\_FLAG\_\_))\ >>\ 8U)\ ==\ 1U)\ ?\ (\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/>ICSR\ \&\ (1U\ <<\ (((uint16\_t)(\_\_FLAG\_\_))\ \&\ \mbox{\hyperlink{group__RTC__Flag__Mask_ga9117140e04d3eef2359dbfa01e8981f4}{RTC\_FLAG\_MASK}})))\ :\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/>SR\ \&\ (1U\ <<\ (((uint16\_t)(\_\_FLAG\_\_))\ \&\ \mbox{\hyperlink{group__RTC__Flag__Mask_ga9117140e04d3eef2359dbfa01e8981f4}{RTC\_FLAG\_MASK}}))))}
+
+\end{DoxyCode}
+
+
+Check whether the specified RTC flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC Handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the flag to check. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Flags__Definitions_ga01cba90a7ca51a928f72d28b6fe0d2ac}{RTC\+\_\+\+FLAG\+\_\+\+RECALPF} Recalibration pending Flag \item \doxylink{group__RTC__Flags__Definitions_ga8d973d7f6b07e80743e05d6822ff2147}{RTC\+\_\+\+FLAG\+\_\+\+INITF} Initialization flag \item \doxylink{group__RTC__Flags__Definitions_ga78c4245996bef8d5f39226b6e37ed9c0}{RTC\+\_\+\+FLAG\+\_\+\+RSF} Registers synchronization flag \item \doxylink{group__RTC__Flags__Definitions_gae6a2d26d4b10670f6506b14971f52fd2}{RTC\+\_\+\+FLAG\+\_\+\+INITS} Initialization status flag \item \doxylink{group__RTC__Flags__Definitions_ga8fd11878d6285ab5d35966d598d5e6f9}{RTC\+\_\+\+FLAG\+\_\+\+SHPF} Shift operation pending flag \item \doxylink{group__RTC__Flags__Definitions_ga24648116b32442d30da74c497e2e88ae}{RTC\+\_\+\+FLAG\+\_\+\+WUTWF} Wakeup timer write flag \item \doxylink{group__RTC__Flags__Definitions_gacd382de4c1767401535170a0695061fd}{RTC\+\_\+\+FLAG\+\_\+\+ITSF} Internal Time-\/stamp flag \item \doxylink{group__RTC__Flags__Definitions_ga74656ea8ff41be61a3734dc27367e039}{RTC\+\_\+\+FLAG\+\_\+\+TSOVF} Time-\/stamp overflow flag \item \doxylink{group__RTC__Flags__Definitions_ga9b9ac7de7718bfe0ff77e1fd1193744b}{RTC\+\_\+\+FLAG\+\_\+\+TSF} Time-\/stamp flag \item \doxylink{group__RTC__Flags__Definitions_gafcadab331b0193e82c7f6b037044f194}{RTC\+\_\+\+FLAG\+\_\+\+WUTF} Wakeup timer flag \item \doxylink{group__RTC__Flags__Definitions_gabb7bd65e83b346f42e28091ef1e643f5}{RTC\+\_\+\+FLAG\+\_\+\+ALRBF} Alarm B flag \item \doxylink{group__RTC__Flags__Definitions_gaf9e1a4b5eedd674d7b35ae334877ba12}{RTC\+\_\+\+FLAG\+\_\+\+ALRAF} Alarm A flag \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00541}{541}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00541\ \textcolor{preprocessor}{\#define\ \_\_HAL\_RTC\_GET\_FLAG(\_\_HANDLE\_\_,\ \_\_FLAG\_\_)\ \ \ \ (((((\_\_FLAG\_\_))\ >>\ 8U)\ ==\ 1U)\ ?\ (RTC-\/>ICSR\ \&\ (1U\ <<\ (((uint16\_t)(\_\_FLAG\_\_))\ \&\ RTC\_FLAG\_MASK)))\ :\ \(\backslash\)}}
+\DoxyCodeLine{00542\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (RTC-\/>SR\ \&\ (1U\ <<\ (((uint16\_t)(\_\_FLAG\_\_))\ \&\ RTC\_FLAG\_MASK))))}}
+
+\end{DoxyCode}
+\input{group__RTCEx__WakeUp__Timer}
+\input{group__RTCEx__Timestamp}
+\input{group__RTCEx__Calibration}
+\input{group__RTCEx__Tamper}
+\input{group__RTCEx__SSR__Underflow}

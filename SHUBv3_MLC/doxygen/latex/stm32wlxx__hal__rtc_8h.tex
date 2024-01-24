@@ -1,0 +1,405 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+rtc.h File Reference}
+\hypertarget{stm32wlxx__hal__rtc_8h}{}\label{stm32wlxx__hal__rtc_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_rtc.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_rtc.h}}
+
+
+Header file of RTC HAL module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structRTC__InitTypeDef}{RTC\+\_\+\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RTC Configuration Structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structRTC__IsEnabledTypeDef}{RTC\+\_\+\+Is\+Enabled\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RTC Enabled features Structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structRTC__TimeTypeDef}{RTC\+\_\+\+Time\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RTC Time structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structRTC__DateTypeDef}{RTC\+\_\+\+Date\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RTC Date structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structRTC__AlarmTypeDef}{RTC\+\_\+\+Alarm\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RTC Alarm structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RTC Handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Hour__Formats_gab1a861fd858a55a6e815be4585c413d5}{RTC\+\_\+\+HOURFORMAT\+\_\+24}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__Hour__Formats_ga8da8ecb55e286c410dbf1297a81125ae}{RTC\+\_\+\+HOURFORMAT\+\_\+12}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab2706e31a1bc8d95b682fe47611e0dd3}{RTC\+\_\+\+CR\+\_\+\+FMT}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_ga2c2347927c96e0db36e16d865a33a5e9}{RTC\+\_\+\+OUTPUT\+\_\+\+DISABLE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_gab5decd99536cc483960c47de13d2cdf1}{RTC\+\_\+\+OUTPUT\+\_\+\+ALARMA}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabe506838823e3b172a9ed4a3fec7321a}{RTC\+\_\+\+CR\+\_\+\+OSEL\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_gad0ee3ae5e03aada25ee96ca797d94a9d}{RTC\+\_\+\+OUTPUT\+\_\+\+ALARMB}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga15fb33aaad62c71bbba2f96652eefb8c}{RTC\+\_\+\+CR\+\_\+\+OSEL\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_gaa670c4221f0e1d6611bc477bfcb8b124}{RTC\+\_\+\+OUTPUT\+\_\+\+WAKEUP}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8f81115ef3fd366de73e84ab667d369b}{RTC\+\_\+\+CR\+\_\+\+OSEL}}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Output__selection__Definitions_ga5cc6f3f39c700b8ae6acc9ac35ac2522}{RTC\+\_\+\+OUTPUT\+\_\+\+TAMPER}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dec31097c149b56a79149ba888e2dfa}{RTC\+\_\+\+CR\+\_\+\+TAMPOE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__Polarity__Definitions_ga093c938e6067080b264878bc99a43dd5}{RTC\+\_\+\+OUTPUT\+\_\+\+POLARITY\+\_\+\+HIGH}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__Polarity__Definitions_ga97a5745b07442aa338c2a3b81c93048b}{RTC\+\_\+\+OUTPUT\+\_\+\+POLARITY\+\_\+\+LOW}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga53f21b5adadbcc5eb255683d5decc9cb}{RTC\+\_\+\+CR\+\_\+\+POL}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__Type__ALARM__OUT_ga3e0b4512d6531cb0bb428163d7bd927d}{RTC\+\_\+\+OUTPUT\+\_\+\+TYPE\+\_\+\+PUSHPULL}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__Type__ALARM__OUT_gaa2505e0038154990024b533160bd46bd}{RTC\+\_\+\+OUTPUT\+\_\+\+TYPE\+\_\+\+OPENDRAIN}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga892e6abf4b08f178e932c3ca2aa4f391}{RTC\+\_\+\+CR\+\_\+\+TAMPALRM\+\_\+\+TYPE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__PullUp__ALARM__OUT_ga2257a67f04d21343195bd3e1e4a8ec45}{RTC\+\_\+\+OUTPUT\+\_\+\+PULLUP\+\_\+\+NONE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__PullUp__ALARM__OUT_ga40d94287feb9f115743ac1613848928c}{RTC\+\_\+\+OUTPUT\+\_\+\+PULLUP\+\_\+\+ON}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga352a9cb8aec3a7a72a1fe42522d60a7e}{RTC\+\_\+\+CR\+\_\+\+TAMPALRM\+\_\+\+PU}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__ALARM__OUT__Remap_ga213962edffa2fa28d91440dd91259db1}{RTC\+\_\+\+OUTPUT\+\_\+\+REMAP\+\_\+\+NONE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__Output__ALARM__OUT__Remap_gaba40dc2134cca0fa763da09201723b6d}{RTC\+\_\+\+OUTPUT\+\_\+\+REMAP\+\_\+\+POS1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17707eb6fa39c0b51d394b5a0e9c144e}{RTC\+\_\+\+CR\+\_\+\+OUT2\+EN}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__AM__PM__Definitions_ga5be28b0dd8d5d12a6b055a70c46ce24a}{RTC\+\_\+\+HOURFORMAT12\+\_\+\+AM}}~0x0u
+\item 
+\#define \mbox{\hyperlink{group__RTC__AM__PM__Definitions_gae8662cf2f3080b992d3b119f74f60162}{RTC\+\_\+\+HOURFORMAT12\+\_\+\+PM}}~0x1u
+\item 
+\#define \mbox{\hyperlink{group__RTC__DayLightSaving__Definitions_ga7ccaea4cb9cb5fbd21b97dce1e2e887d}{RTC\+\_\+\+DAYLIGHTSAVING\+\_\+\+SUB1H}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga220cf6237eac208acc8ae4c55e0b5e6f}{RTC\+\_\+\+CR\+\_\+\+SUB1H}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__DayLightSaving__Definitions_gabd374c3ce0fb1b3ec96a3a71155151ae}{RTC\+\_\+\+DAYLIGHTSAVING\+\_\+\+ADD1H}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaae1a8439d08e28289398dcf3c2b4b47b}{RTC\+\_\+\+CR\+\_\+\+ADD1H}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__DayLightSaving__Definitions_gafef31f6f6d924dededc4589d2dd16a5c}{RTC\+\_\+\+DAYLIGHTSAVING\+\_\+\+NONE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__StoreOperation__Definitions_ga0c0fb2efa26fd29872759f6162fafefa}{RTC\+\_\+\+STOREOPERATION\+\_\+\+RESET}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__StoreOperation__Definitions_ga984ee81edc6b876d035683d65a5c60d8}{RTC\+\_\+\+STOREOPERATION\+\_\+\+SET}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0e7a474de1a01816bc9d9b6fa7272289}{RTC\+\_\+\+CR\+\_\+\+BKP}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Input__parameter__format__definitions_gadf5ce0bf2d5b4814fb3911f63d7ffb17}{RTC\+\_\+\+FORMAT\+\_\+\+BIN}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Input__parameter__format__definitions_ga20d772c2e0ba75287a3655780fd0c39b}{RTC\+\_\+\+FORMAT\+\_\+\+BCD}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gabc94e7ef324c7d181c54302938138aab}{RTC\+\_\+\+MONTH\+\_\+\+JANUARY}}~((uint8\+\_\+t)0x01U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gadcec3575c8a670a948a3929a2e9f1b6b}{RTC\+\_\+\+MONTH\+\_\+\+FEBRUARY}}~((uint8\+\_\+t)0x02U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gaa0ebba4b64b5591cd434b076c922a164}{RTC\+\_\+\+MONTH\+\_\+\+MARCH}}~((uint8\+\_\+t)0x03U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gac15a5a2164c0e536c579e7f16bd9f1b4}{RTC\+\_\+\+MONTH\+\_\+\+APRIL}}~((uint8\+\_\+t)0x04U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_ga44814b4fb8311b5842675769937129ec}{RTC\+\_\+\+MONTH\+\_\+\+MAY}}~((uint8\+\_\+t)0x05U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gad3439b4b8c19720c01ef6c35d9bb99fa}{RTC\+\_\+\+MONTH\+\_\+\+JUNE}}~((uint8\+\_\+t)0x06U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gae710e500c34c042a263fcb47edeec29f}{RTC\+\_\+\+MONTH\+\_\+\+JULY}}~((uint8\+\_\+t)0x07U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_ga4118ea385d30d3f75c2f879faf019f37}{RTC\+\_\+\+MONTH\+\_\+\+AUGUST}}~((uint8\+\_\+t)0x08U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_ga2a4d94eeb920cb994cd11e169d086d28}{RTC\+\_\+\+MONTH\+\_\+\+SEPTEMBER}}~((uint8\+\_\+t)0x09U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gab4e8870c5a2fe6fc632d2050d490ef9f}{RTC\+\_\+\+MONTH\+\_\+\+OCTOBER}}~((uint8\+\_\+t)0x10U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_ga2f04d521214ea447155faff077725212}{RTC\+\_\+\+MONTH\+\_\+\+NOVEMBER}}~((uint8\+\_\+t)0x11U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__Month__Date__Definitions_gaa2d8ee14bdc0c6b01be7c72b82ae64e5}{RTC\+\_\+\+MONTH\+\_\+\+DECEMBER}}~((uint8\+\_\+t)0x12U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga9d74c5e20a481db4f4da69f083b768bf}{RTC\+\_\+\+WEEKDAY\+\_\+\+MONDAY}}~((uint8\+\_\+t)0x01U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gaf6b6e124a2e74317448abbfb1943e8cc}{RTC\+\_\+\+WEEKDAY\+\_\+\+TUESDAY}}~((uint8\+\_\+t)0x02U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga0e8a7c338ffda7c9dd47003762d7054c}{RTC\+\_\+\+WEEKDAY\+\_\+\+WEDNESDAY}}~((uint8\+\_\+t)0x03U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gab166c84a54ace04f6849a8d0e1764107}{RTC\+\_\+\+WEEKDAY\+\_\+\+THURSDAY}}~((uint8\+\_\+t)0x04U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga3755707d628f4664c30d02fd2a2f0182}{RTC\+\_\+\+WEEKDAY\+\_\+\+FRIDAY}}~((uint8\+\_\+t)0x05U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__WeekDay__Definitions_ga3acccb86a8429fea22f2ac46470b5e55}{RTC\+\_\+\+WEEKDAY\+\_\+\+SATURDAY}}~((uint8\+\_\+t)0x06U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__WeekDay__Definitions_gadab2da4b8aa50c86d68781b379b75783}{RTC\+\_\+\+WEEKDAY\+\_\+\+SUNDAY}}~((uint8\+\_\+t)0x07U)
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmDateWeekDay__Definitions_ga038032416e6bcf81e842f60dcfe91e15}{RTC\+\_\+\+ALARMDATEWEEKDAYSEL\+\_\+\+DATE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmDateWeekDay__Definitions_ga3dfe8546eb760b9928900ac80a27e625}{RTC\+\_\+\+ALARMDATEWEEKDAYSEL\+\_\+\+WEEKDAY}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5a7fdc1719b3159e099c3979da26dd92}{RTC\+\_\+\+ALRMAR\+\_\+\+WDSEL}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmMask__Definitions_ga051c19c4a3c3f12bcf672f35d03254ae}{RTC\+\_\+\+ALARMMASK\+\_\+\+NONE}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmMask__Definitions_ga0bcc63ed1fe29a90fa8745cd3b98f73c}{RTC\+\_\+\+ALARMMASK\+\_\+\+DATEWEEKDAY}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8ed557e4451ffd3e869bb9ca393d47f9}{RTC\+\_\+\+ALRMAR\+\_\+\+MSK4}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmMask__Definitions_gaa8bfd0f98f4f53930a34a43af093af37}{RTC\+\_\+\+ALARMMASK\+\_\+\+HOURS}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga337fba397cab4beb204f4f6e6ddc4bf3}{RTC\+\_\+\+ALRMAR\+\_\+\+MSK3}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmMask__Definitions_gafe9215f55d86f2f959af686539c5aa0a}{RTC\+\_\+\+ALARMMASK\+\_\+\+MINUTES}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga478d62d55a42779c558e9ba16aec74cc}{RTC\+\_\+\+ALRMAR\+\_\+\+MSK2}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmMask__Definitions_gad404276351a285f7ede5a1ec53009353}{RTC\+\_\+\+ALARMMASK\+\_\+\+SECONDS}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8862250866a358ff3095852f45a160c1}{RTC\+\_\+\+ALRMAR\+\_\+\+MSK1}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__AlarmMask__Definitions_gae5a5dc7b33c51c572ebc9cb58723fdd3}{RTC\+\_\+\+ALARMMASK\+\_\+\+ALL}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarms__Definitions_ga916bcb75517157e284344f96ac275639}{RTC\+\_\+\+ALARM\+\_\+A}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8a8cdeac61f06e4737800b64a901d584}{RTC\+\_\+\+CR\+\_\+\+ALRAE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarms__Definitions_ga55b831e961f8f4b91ec17939eb78b440}{RTC\+\_\+\+ALARM\+\_\+B}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17d0850002ed42742ff75a82dc4e8586}{RTC\+\_\+\+CR\+\_\+\+ALRBE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_gaf96ae2bcfc62e92473372c4510d517d5}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+ALL}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga382ddfaca27c4b547c69878a320aab43}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeebbc0dfc0a20887ef3582feaa5f1c2b}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_gad627f4e6c83537e1d5b8c657f91d6bcf}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbdb202f388835593843f480c3b3af57}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_gaeb5fb21c4ef0d54ca1515564563c0487}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+3}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeebbc0dfc0a20887ef3582feaa5f1c2b}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbdb202f388835593843f480c3b3af57}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+1}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga6f9b0a78f9723a20b1f94b5581e04194}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+4}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95feb5de45a74d7c75c1fc6515c32870}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+2}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_gafc0252b2f8a935811dadd3d6b8ea3574}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+5}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeebbc0dfc0a20887ef3582feaa5f1c2b}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95feb5de45a74d7c75c1fc6515c32870}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+2}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga60fab8d647e6f8500926a0db2dff94d8}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+6}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbdb202f388835593843f480c3b3af57}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95feb5de45a74d7c75c1fc6515c32870}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+2}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_gac0f57cb99c0a40708e3dd44eafa7f8e6}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+7}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeebbc0dfc0a20887ef3582feaa5f1c2b}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbdb202f388835593843f480c3b3af57}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95feb5de45a74d7c75c1fc6515c32870}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+2}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga0f7cdfed3ad8bbe33fc2c4c2b8d5d2ce}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae94c65876a1baf0984a6f85aa836b8d0}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+3}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga173d153f6543cd34062d8ca14fb04975}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+9}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeebbc0dfc0a20887ef3582feaa5f1c2b}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae94c65876a1baf0984a6f85aa836b8d0}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+3}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga7cb4d4abdac134b508cbb6e9b5d21638}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+10}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbdb202f388835593843f480c3b3af57}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae94c65876a1baf0984a6f85aa836b8d0}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+3}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_gaf67fcaa5c58e46e47d97be746c9dec24}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+11}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeebbc0dfc0a20887ef3582feaa5f1c2b}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbdb202f388835593843f480c3b3af57}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae94c65876a1baf0984a6f85aa836b8d0}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+3}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga37c03d1ef098287fa559af1a28bd8ba5}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+12}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95feb5de45a74d7c75c1fc6515c32870}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae94c65876a1baf0984a6f85aa836b8d0}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+3}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_gada3b5b45dbdabf604340b0c09bdbdc2c}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+13}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeebbc0dfc0a20887ef3582feaa5f1c2b}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95feb5de45a74d7c75c1fc6515c32870}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae94c65876a1baf0984a6f85aa836b8d0}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+3}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga91e1225dc11de4ce4bd74eb18fc155f7}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabbdb202f388835593843f480c3b3af57}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95feb5de45a74d7c75c1fc6515c32870}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae94c65876a1baf0984a6f85aa836b8d0}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS\+\_\+3}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions_ga2c3802d48626766a3fc85ad910caea02}{RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+NONE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7b0550ccc175ff54e560cc5fb96fbb2c}{RTC\+\_\+\+ALRMASSR\+\_\+\+MASKSS}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Interrupts__Definitions_ga2c4632667c515e366a79df6341d5f3d1}{RTC\+\_\+\+IT\+\_\+\+TS}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf376dffb9f2777ef275f23410e35600d}{RTC\+\_\+\+CR\+\_\+\+TSIE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Interrupts__Definitions_gadc90686ace99992f4775c0198a1c6591}{RTC\+\_\+\+IT\+\_\+\+WUT}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5e0a1419830a16667cea4f6454913226}{RTC\+\_\+\+CR\+\_\+\+WUTIE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Interrupts__Definitions_gae45f7a66d211f33d9d4b3b1fa63648d9}{RTC\+\_\+\+IT\+\_\+\+SSRU}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf20ad2421dd28e8359f7d0623cab7a66}{RTC\+\_\+\+CR\+\_\+\+SSRUIE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Interrupts__Definitions_ga0ba352559e4eb6a5430e1254851a0dfb}{RTC\+\_\+\+IT\+\_\+\+ALRA}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga9138f75267bd93f8de6738225217d583}{RTC\+\_\+\+CR\+\_\+\+ALRAIE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Interrupts__Definitions_gaeb47520af65e995ddad232f3a846aba8}{RTC\+\_\+\+IT\+\_\+\+ALRB}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac6269c9dd5cee650024ede0b0c42e87d}{RTC\+\_\+\+CR\+\_\+\+ALRBIE}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flag__Mask_ga9117140e04d3eef2359dbfa01e8981f4}{RTC\+\_\+\+FLAG\+\_\+\+MASK}}~0x001\+Fu
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_ga01cba90a7ca51a928f72d28b6fe0d2ac}{RTC\+\_\+\+FLAG\+\_\+\+RECALPF}}~(0x00000100U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga50176e9aad653ce5f16828a686a4cd5c}{RTC\+\_\+\+ICSR\+\_\+\+RECALPF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_ga8d973d7f6b07e80743e05d6822ff2147}{RTC\+\_\+\+FLAG\+\_\+\+INITF}}~(0x00000100U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac4160e0bca02137c4125d8a420fcae95}{RTC\+\_\+\+ICSR\+\_\+\+INITF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_ga78c4245996bef8d5f39226b6e37ed9c0}{RTC\+\_\+\+FLAG\+\_\+\+RSF}}~(0x00000100U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6cc3f013ee9718ae69dd861c899a78a7}{RTC\+\_\+\+ICSR\+\_\+\+RSF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_gae6a2d26d4b10670f6506b14971f52fd2}{RTC\+\_\+\+FLAG\+\_\+\+INITS}}~(0x00000100U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga32c0d3a3ca75b3e47d19ec237f07ac26}{RTC\+\_\+\+ICSR\+\_\+\+INITS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_ga8fd11878d6285ab5d35966d598d5e6f9}{RTC\+\_\+\+FLAG\+\_\+\+SHPF}}~(0x00000100U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae1b13041150c5a3fa4ca1e9b7b6882b1}{RTC\+\_\+\+ICSR\+\_\+\+SHPF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_ga24648116b32442d30da74c497e2e88ae}{RTC\+\_\+\+FLAG\+\_\+\+WUTWF}}~(0x00000100U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17987642401a314f72e2415d10485fa1}{RTC\+\_\+\+ICSR\+\_\+\+WUTWF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_gab39f2a92b2d849845b9fb5ca60bf56d5}{RTC\+\_\+\+FLAG\+\_\+\+SSRUF}}~(0x00000200U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab771340c759c8de0946e2584bd987374}{RTC\+\_\+\+SR\+\_\+\+SSRUF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_gacd382de4c1767401535170a0695061fd}{RTC\+\_\+\+FLAG\+\_\+\+ITSF}}~(0x00000200U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga465a7af4efbcfba11a655a4aa31cfee1}{RTC\+\_\+\+SR\+\_\+\+ITSF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_ga74656ea8ff41be61a3734dc27367e039}{RTC\+\_\+\+FLAG\+\_\+\+TSOVF}}~(0x00000200U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab93a5efd62091459bba0dc124118208c}{RTC\+\_\+\+SR\+\_\+\+TSOVF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_ga9b9ac7de7718bfe0ff77e1fd1193744b}{RTC\+\_\+\+FLAG\+\_\+\+TSF}}~(0x00000200U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga74bf968b86cf3d5a193b9ac2c29e48d4}{RTC\+\_\+\+SR\+\_\+\+TSF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_gafcadab331b0193e82c7f6b037044f194}{RTC\+\_\+\+FLAG\+\_\+\+WUTF}}~(0x00000200U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga209d901c04142c5c4ce7f735837872c2}{RTC\+\_\+\+SR\+\_\+\+WUTF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_gabb7bd65e83b346f42e28091ef1e643f5}{RTC\+\_\+\+FLAG\+\_\+\+ALRBF}}~(0x00000200U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8c7492a36d99bde2ed3c4dccaf63bd55}{RTC\+\_\+\+SR\+\_\+\+ALRBF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Flags__Definitions_gaf9e1a4b5eedd674d7b35ae334877ba12}{RTC\+\_\+\+FLAG\+\_\+\+ALRAF}}~(0x00000200U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa3c2c59753defddeca43e3c8d24e433a}{RTC\+\_\+\+SR\+\_\+\+ALRAF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga3022255b9b856a32a706740f992b323c}{RTC\+\_\+\+CLEAR\+\_\+\+SSRUF}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad33d71846cc222265ab3b2d2548cfc1f}{RTC\+\_\+\+SCR\+\_\+\+CSSRUF}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga15e4bb31fd3e4e206392a4f05d793821}{RTC\+\_\+\+CLEAR\+\_\+\+ITSF}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga375ec23d31dff4d3fdf77bfc79b8744d}{RTC\+\_\+\+SCR\+\_\+\+CITSF}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga3bc967d5a756587d3935496f45bcd0d1}{RTC\+\_\+\+CLEAR\+\_\+\+TSOVF}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae158f920db6192a5cea298c413eaa638}{RTC\+\_\+\+SCR\+\_\+\+CTSOVF}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga8e977be70852980fcb75ddce6260adce}{RTC\+\_\+\+CLEAR\+\_\+\+TSF}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gacaf0454cf14feb21eea98dde44587346}{RTC\+\_\+\+SCR\+\_\+\+CTSF}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_gab548542aeb7867207c9b66e5ae890412}{RTC\+\_\+\+CLEAR\+\_\+\+WUTF}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7b90f9a88cae4496854e72899c27b71b}{RTC\+\_\+\+SCR\+\_\+\+CWUTF}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga185e170997d1c90dd1ac2b04a6cd12a1}{RTC\+\_\+\+CLEAR\+\_\+\+ALRBF}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gacd1312fe3012372d9559db7a11150343}{RTC\+\_\+\+SCR\+\_\+\+CALRBF}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga15d97a2bd2bbadf104030501ffd4af44}{RTC\+\_\+\+CLEAR\+\_\+\+ALRAF}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8689ea45bac4bd6c90fb459de3c59e2d}{RTC\+\_\+\+SCR\+\_\+\+CALRAF}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gaf20c09cfca416d79777562ccf7c994a2}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group__RTC__Exported__Types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba69cd05758f5129525749b65bee6f939f}{HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+RESET}})
+\begin{DoxyCompactList}\small\item\em Reset RTC handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gae150645fb78c1d175b9e0f88fc3f4ad4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WRITEPROTECTION\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Disable the write protection for RTC registers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga9eaed4a4db3b3232c1ca5d8ffa6ff4d8}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WRITEPROTECTION\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enable the write protection for RTC registers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga44e3b4eb2a7388689081a45c10d8dd98}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+DAYLIGHT\+\_\+\+SAVING\+\_\+\+TIME\+\_\+\+ADD1H}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+BKP\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Add 1 hour (summer time change). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gaba7b61d3cd0163749d66a65c697e323a}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+DAYLIGHT\+\_\+\+SAVING\+\_\+\+TIME\+\_\+\+SUB1H}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+BKP\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Subtract 1 hour (winter time change). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga88aa460d4d8a7a65acf4b3dbcd0a2813}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMA\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8a8cdeac61f06e4737800b64a901d584}{RTC\+\_\+\+CR\+\_\+\+ALRAE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC ALARMA peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga8679ec8def03e05fa39474d83b156699}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMA\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8a8cdeac61f06e4737800b64a901d584}{RTC\+\_\+\+CR\+\_\+\+ALRAE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC ALARMA peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gad643ef2342067f140114d49f28709e92}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMB\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17d0850002ed42742ff75a82dc4e8586}{RTC\+\_\+\+CR\+\_\+\+ALRBE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC ALARMB peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga09c7dd312682d270a8b74bcac3450f8b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMB\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17d0850002ed42742ff75a82dc4e8586}{RTC\+\_\+\+CR\+\_\+\+ALRBE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC ALARMB peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gab40f07ff2cdf6fc98ccfdd856ba934e4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Alarm interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gadc2d6dc4a75136bdd2b67c1b35d04b10}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Alarm interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gaf748b95b91cca959f79f441a90678c60}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$MISR)\& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 12U)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Alarm interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga8068a537190e4c142b6d5bf41252ed01}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Alarm interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga9f908cb1fd0f270c66f5deed82e019de}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Alarms flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga93d88df67428f617157346d7cbdb4069}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the RTC Alarms pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga47fd0b2d9a8679d49ae554d482231780}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTC__Private__Constants_gaeffe9b89372b06df1c0eff2f4346682b}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gaa6cd8249ed39c941d83f77ce507b8e0a}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTC__Private__Constants_gaeffe9b89372b06df1c0eff2f4346682b}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_gad80750a7f77e40f636c61d85c01df489}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTC__Private__Constants_gaeffe9b89372b06df1c0eff2f4346682b}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__Exported__Macros_ga7dea6f849766dd02e03f0ef05191c4d3}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTC__Private__Constants_gaeffe9b89372b06df1c0eff2f4346682b}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTC__Private__Constants_gacc08d7d212e235f4b04bb88f5567fa54}{RTC\+\_\+\+TR\+\_\+\+RESERVED\+\_\+\+MASK}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Private__Constants_ga16855eaae542f992c93170492822d058}{RTC\+\_\+\+DR\+\_\+\+RESERVED\+\_\+\+MASK}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__Private__Constants_ga0dbaf639bc171f2055c9055d538f13df}{RTC\+\_\+\+INIT\+\_\+\+MASK}}~0x\+FFFFFFFFu
+\item 
+\#define \mbox{\hyperlink{group__RTC__Private__Constants_ga3a1033490aaf8304e1522d551bd1a7b9}{RTC\+\_\+\+RSF\+\_\+\+MASK}}~(\texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2237e7a42cee007a2619d3b330f4da98}{RTC\+\_\+\+ICSR\+\_\+\+INIT}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga271ed3f5bed03ab8a770cccb6647358b}{RTC\+\_\+\+ICSR\+\_\+\+RSF}}))
+\item 
+\#define \mbox{\hyperlink{group__RTC__Private__Constants_gaca17c243759056a49a411f6324dd6123}{RTC\+\_\+\+TIMEOUT\+\_\+\+VALUE}}~1000u
+\item 
+\#define \mbox{\hyperlink{group__RTC__Private__Constants_gaeffe9b89372b06df1c0eff2f4346682b}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga279a6b8fad429681c2d78085cb0c6f5a}{EXTI\+\_\+\+IMR1\+\_\+\+IM17}}
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gabc8a868f360abe629c8d8de8b44b3b63}{IS\+\_\+\+RTC\+\_\+\+OUTPUT}}(OUTPUT)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga597042eec4479e028c32973bc69f4a26}{IS\+\_\+\+RTC\+\_\+\+HOUR\+\_\+\+FORMAT}}(FORMAT)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga1bc0fee899de25a9c1bcbb6c2b21b35d}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+POL}}(POL)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga69e263212d90ca91ccfc72e930f26cd8}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+TYPE}}(TYPE)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gaa1336882300816817a165743a28c24b1}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+PULLUP}}(TYPE)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga92c8b87d716244b6f49723f7a741114d}{IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+REMAP}}(REMAP)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gaac5777b612cdee4c43d4399f40b1bd3a}{IS\+\_\+\+RTC\+\_\+\+HOURFORMAT12}}(PM)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga4922f8f31df54481bc002b16bc1effc3}{IS\+\_\+\+RTC\+\_\+\+DAYLIGHT\+\_\+\+SAVING}}(SAVE)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga550da5c8a2382badcb391507fd6f07f4}{IS\+\_\+\+RTC\+\_\+\+STORE\+\_\+\+OPERATION}}(OPERATION)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga05a1ca8558058d71322ccf1045b8fb1c}{IS\+\_\+\+RTC\+\_\+\+FORMAT}}(FORMAT)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gae59c9cfe6f9532ab26d74c25bcbe814b}{IS\+\_\+\+RTC\+\_\+\+YEAR}}(YEAR)~((YEAR) $<$= 99u)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga7fa60f17b2ae529c35b1fa3dd4d6853f}{IS\+\_\+\+RTC\+\_\+\+MONTH}}(MONTH)~(((MONTH) $>$= 1u) \&\& ((MONTH) $<$= 12u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga3b6e966e144cb0495563ef0283d16510}{IS\+\_\+\+RTC\+\_\+\+DATE}}(DATE)~(((DATE) $>$= 1u) \&\& ((DATE) $<$= 31u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gaf17712ffb0834287f23c19235d53c7ec}{IS\+\_\+\+RTC\+\_\+\+WEEKDAY}}(WEEKDAY)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga8b6cb39fac113de7c5d2b05a93093243}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+DATE}}(DATE)~(((DATE) $>$0u) \&\& ((DATE) $<$= 31u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gabc968cd70cf33e06b8e2886c98099021}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+WEEKDAY}}(WEEKDAY)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gac5d3e2182217ad6c5a75eba5c88cb335}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+SEL}}(SEL)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga166108e7bf226d4ea345822eb81ea358}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+MASK}}(MASK)~(((MASK) \& \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTC__AlarmMask__Definitions_gae5a5dc7b33c51c572ebc9cb58723fdd3}{RTC\+\_\+\+ALARMMASK\+\_\+\+ALL}})) == 0\+UL)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gab101ad18b0bcde557eb8caac469d7725}{IS\+\_\+\+RTC\+\_\+\+ALARM}}(ALARM)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gae7cd07c18cdb2946a2b06f6606ede93c}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+VALUE}}(VALUE)~((VALUE) $<$= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4a6b683531fded4e2a77d047da7eb203}{RTC\+\_\+\+ALRMASSR\+\_\+\+SS}})
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gae6814af31d0cc72b784bc85f63ec4de7}{IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+MASK}}(MASK)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gac20f6c94ede2d474df8ba4acb7328d93}{IS\+\_\+\+RTC\+\_\+\+ASYNCH\+\_\+\+PREDIV}}(PREDIV)~((PREDIV) $<$= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad248dca1e9532ba31f98d3ec9d2f8711}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+A}} $>$$>$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae8240c029696ad91531c3fec1ef1e7fe}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+\+A\+\_\+\+Pos}}))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga32fccaa6ec65f9fceb3e6e4f31ab11cf}{IS\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PREDIV}}(PREDIV)~((PREDIV) $<$= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga17bbd4e569a76446df089752cb41b1cb}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+S}} $>$$>$ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga234f46098c91b34aa12502d70cdb93bf}{RTC\+\_\+\+PRER\+\_\+\+PREDIV\+\_\+\+S\+\_\+\+Pos}}))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga6bdfe3bed0a57dfafc2d1de785d48a62}{IS\+\_\+\+RTC\+\_\+\+HOUR12}}(HOUR)~(((HOUR) $>$ 0u) \&\& ((HOUR) $<$= 12u))
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga4883613bec76074ac62608b89e3f48a8}{IS\+\_\+\+RTC\+\_\+\+HOUR24}}(HOUR)~((HOUR) $<$= 23u)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_ga8475ceaf2d35d98be0b3401812aef445}{IS\+\_\+\+RTC\+\_\+\+MINUTES}}(MINUTES)~((MINUTES) $<$= 59u)
+\item 
+\#define \mbox{\hyperlink{group__RTC__IS__RTC__Definitions_gadb5a39d98fc906a8ea035bd29308bc5c}{IS\+\_\+\+RTC\+\_\+\+SECONDS}}(SECONDS)~((SECONDS) $<$= 59u)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__RTC__Exported__Types_ga1e2460a2d13c4efc7a2a1ab2a1ebd32b}{HAL\+\_\+\+RTCState\+Type\+Def}} \{ \newline
+\mbox{\hyperlink{group__RTC__Exported__Types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba69cd05758f5129525749b65bee6f939f}{HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+RESET}} = 0x00U
+, \mbox{\hyperlink{group__RTC__Exported__Types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba466484cd22333d8c8758ae12890b862f}{HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+READY}} = 0x01U
+, \mbox{\hyperlink{group__RTC__Exported__Types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba5e0a8c8e4731ac8f80e9a219413d6f9b}{HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+BUSY}} = 0x02U
+, \mbox{\hyperlink{group__RTC__Exported__Types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba062e7947b5f5f0c2acb7be96207e3d58}{HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+TIMEOUT}} = 0x03U
+, \newline
+\mbox{\hyperlink{group__RTC__Exported__Types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba21f381f99f437c340f79407e3d71bb31}{HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+ERROR}} = 0x04U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL State structures definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group1_gaa6b53830aa3e2efaf210c0b1d3e5f4a4}{HAL\+\_\+\+RTC\+\_\+\+Init}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group1_ga24a8aac7bd6d9bac9f211d24ff6930ec}{HAL\+\_\+\+RTC\+\_\+\+De\+Init}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group1_gaee6eddaa309c8c9829f1ca794d8f99c5}{HAL\+\_\+\+RTC\+\_\+\+Msp\+Init}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\begin{DoxyCompactList}\small\item\em RTC MSP Initialization This function configures the hardware resources used in this example. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group1_ga8767bc3a4d472d39a688090ab10ba6ce}{HAL\+\_\+\+RTC\+\_\+\+Msp\+De\+Init}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\begin{DoxyCompactList}\small\item\em RTC MSP De-\/\+Initialization This function freeze the hardware resources used in this example. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_gafe0fed98171a564decd2a6c9be9781d8}{HAL\+\_\+\+RTC\+\_\+\+Set\+Time}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__TimeTypeDef}{RTC\+\_\+\+Time\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Time, uint32\+\_\+t Format)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_gae478ca2647e8d2f7dd1828ce43889a9e}{HAL\+\_\+\+RTC\+\_\+\+Get\+Time}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__TimeTypeDef}{RTC\+\_\+\+Time\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Time, uint32\+\_\+t Format)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_ga6cf6c70227337a564ccef82f64d6268f}{HAL\+\_\+\+RTC\+\_\+\+Set\+Date}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__DateTypeDef}{RTC\+\_\+\+Date\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Date, uint32\+\_\+t Format)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_ga07ec2e43a305aa55e8c2442a349fc505}{HAL\+\_\+\+RTC\+\_\+\+Get\+Date}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__DateTypeDef}{RTC\+\_\+\+Date\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Date, uint32\+\_\+t Format)
+\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_ga25cdbf1dc89192cc3ebc99adc01b61af}{HAL\+\_\+\+RTC\+\_\+\+DST\+\_\+\+Add1\+Hour}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_ga8402f6c86f0075bd8fecc912e86cfbab}{HAL\+\_\+\+RTC\+\_\+\+DST\+\_\+\+Sub1\+Hour}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_gad303dd6673e92098aee23144f2f16fe3}{HAL\+\_\+\+RTC\+\_\+\+DST\+\_\+\+Set\+Store\+Operation}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_gac3c5e6ac0bff75aee5e1b1b85ae1fed5}{HAL\+\_\+\+RTC\+\_\+\+DST\+\_\+\+Clear\+Store\+Operation}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__RTC__Exported__Functions__Group2_ga970ebd0d96bde2ea42c3e03c77033100}{HAL\+\_\+\+RTC\+\_\+\+DST\+\_\+\+Read\+Store\+Operation}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group3_gafd78015b93b16dcb9e41a4655a7ea972}{HAL\+\_\+\+RTC\+\_\+\+Set\+Alarm}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__AlarmTypeDef}{RTC\+\_\+\+Alarm\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Alarm, uint32\+\_\+t Format)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group3_gab66a7fec05e9d9374de95d5f61e16c16}{HAL\+\_\+\+RTC\+\_\+\+Set\+Alarm\+\_\+\+IT}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__AlarmTypeDef}{RTC\+\_\+\+Alarm\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Alarm, uint32\+\_\+t Format)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group3_ga186d852f8aee8a4d0dfeec778be35482}{HAL\+\_\+\+RTC\+\_\+\+Deactivate\+Alarm}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Alarm)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group3_ga4786b652ffee2d59da2c65dd78646405}{HAL\+\_\+\+RTC\+\_\+\+Get\+Alarm}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, \mbox{\hyperlink{structRTC__AlarmTypeDef}{RTC\+\_\+\+Alarm\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Alarm, uint32\+\_\+t Alarm, uint32\+\_\+t Format)
+\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group3_gac185f2ce34fe566418d0978a48e0c199}{HAL\+\_\+\+RTC\+\_\+\+Alarm\+IRQHandler}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group3_gaedc27fe412f45d999d74a0b98dce4d09}{HAL\+\_\+\+RTC\+\_\+\+Poll\+For\+Alarm\+AEvent}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, uint32\+\_\+t Timeout)
+\item 
+void \mbox{\hyperlink{group__RTC__Exported__Functions__Group3_ga11aeff83fd498cddbed3bcddcf017e0a}{HAL\+\_\+\+RTC\+\_\+\+Alarm\+AEvent\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group4_ga62efc08017f7dc4db0bc72f7c68085ad}{HAL\+\_\+\+RTC\+\_\+\+Wait\+For\+Synchro}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{group__RTC__Exported__Types_ga1e2460a2d13c4efc7a2a1ab2a1ebd32b}{HAL\+\_\+\+RTCState\+Type\+Def}} \mbox{\hyperlink{group__RTC__Exported__Functions__Group5_ga527ac04240b47a22bf5ff469609eaa4d}{HAL\+\_\+\+RTC\+\_\+\+Get\+State}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Private__Functions_ga50b2ead8d1755be360de2d624beaf9a0}{RTC\+\_\+\+Enter\+Init\+Mode}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__RTC__Private__Functions_ga36f8ecad0ea31f8ef0d0479f3efe195c}{RTC\+\_\+\+Exit\+Init\+Mode}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__RTC__Private__Functions_ga8c33f1358a98db0c7c829c38538bf7ba}{RTC\+\_\+\+Byte\+To\+Bcd2}} (uint8\+\_\+t Value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__RTC__Private__Functions_gaf1bcb309bb9e7ac4a1b4e95a11cfb26f}{RTC\+\_\+\+Bcd2\+To\+Byte}} (uint8\+\_\+t Value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of RTC HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+

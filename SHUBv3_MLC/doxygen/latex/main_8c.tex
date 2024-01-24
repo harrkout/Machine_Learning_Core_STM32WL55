@@ -1,0 +1,279 @@
+\doxysection{Core/\+Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}app\+\_\+mems.\+h"{}}\newline
+{\ttfamily \#include "{}shub\+\_\+v3\+\_\+0.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCRC__HandleTypeDef}{CRC\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_ae3358c54a01c6487322df1275618d6b1}{hcrc}}
+\item 
+\mbox{\hyperlink{group__UART__Exported__Types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}
+\item 
+\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a25fc663547539bc49fecc0011bd76ab5}{htim1}}
+\item 
+\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a2c80fd5510e2990a59a5c90d745c716c}{htim2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00528}{528}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00529\ \{}
+\DoxyCodeLine{00530\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Error\_Handler\_Debug\ */}}
+\DoxyCodeLine{00531\ \ \ \textcolor{comment}{/*\ User\ can\ add\ his\ own\ implementation\ to\ report\ the\ HAL\ error\ return\ state\ */}}
+\DoxyCodeLine{00532\ \ \ \mbox{\hyperlink{cmsis__iccarm_8h_a6cb98c1adc8a28bc3b48649a3421195d}{\_\_disable\_irq}}();}
+\DoxyCodeLine{00533\ \ \ \textcolor{keywordflow}{while}\ (1)}
+\DoxyCodeLine{00534\ \ \ \{}
+\DoxyCodeLine{00535\ \ \ \}}
+\DoxyCodeLine{00536\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ Error\_Handler\_Debug\ */}}
+\DoxyCodeLine{00537\ \}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00093}{93}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \{}
+\DoxyCodeLine{00095\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 1\ */}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ 1\ */}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{comment}{/*\ MCU\ Configuration-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{comment}{/*\ Reset\ of\ all\ peripherals,\ Initializes\ the\ Flash\ interface\ and\ the\ Systick.\ */}}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_gaecac54d350c3730e6831eb404e557dc4}{HAL\_Init}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Init\ */}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ Init\ */}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \textcolor{comment}{/*\ Configure\ the\ system\ clock\ */}}
+\DoxyCodeLine{00109\ \ \ \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{SystemClock\_Config}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SysInit\ */}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SysInit\ */}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \textcolor{comment}{/*\ Initialize\ all\ configured\ peripherals\ */}}
+\DoxyCodeLine{00116\ \ \ MX\_GPIO\_Init();}
+\DoxyCodeLine{00117\ \ \ MX\_DMA\_Init();}
+\DoxyCodeLine{00118\ \ \ MX\_CRC\_Init();}
+\DoxyCodeLine{00119\ \ \ MX\_RTC\_Init();}
+\DoxyCodeLine{00120\ \ \ MX\_TIM1\_Init();}
+\DoxyCodeLine{00121\ \ \ MX\_USART1\_UART\_Init();}
+\DoxyCodeLine{00122\ \ \ MX\_TIM2\_Init();}
+\DoxyCodeLine{00123\ \ \ \mbox{\hyperlink{app__mems_8c_a366fad6b5f3194944230fa746def0ef1}{MX\_MEMS\_Init}}();}
+\DoxyCodeLine{00124\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 2\ */}}
+\DoxyCodeLine{00125\ \ \ shub\_init();}
+\DoxyCodeLine{00126\ \ \ shub\_power\_i2c\_on();}
+\DoxyCodeLine{00127\ \ \ shub\_power\_i2c\_mlc\_on();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ 2\ */}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{comment}{/*\ Infinite\ loop\ */}}
+\DoxyCodeLine{00132\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ WHILE\ */}}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordflow}{while}\ (1)}
+\DoxyCodeLine{00134\ \ \ \{}
+\DoxyCodeLine{00135\ \textcolor{comment}{//\ \ \ \ lsm6dsox\_mlc();}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ WHILE\ */}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \mbox{\hyperlink{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9}{MX\_MEMS\_Process}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 3\ */}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{/*\ Call\ the\ MLC\ function\ inside\ the\ while(1)\ to\ have\ output\ of\ the\ Registers\ }}
+\DoxyCodeLine{00142\ \textcolor{comment}{\ \ \ \ \ *\ for\ the\ Machine\ Learning\ Core*/}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \mbox{\hyperlink{lsm6dsox__mlc_8c_ab83a820ad11912902c87e34c8d4eeda8}{lsm6dsox\_mlc}}();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ 3\ */}}
+\DoxyCodeLine{00149\ \}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure LSE Drive Capability
+
+Configure the main internal regulator output voltage
+
+Initializes the CPU, AHB and APB buses clocks
+
+Configure the SYSCLKSource, HCLK, PCLK1 and PCLK2 clocks dividers
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00155}{155}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \{}
+\DoxyCodeLine{00157\ \ \ \mbox{\hyperlink{structRCC__OscInitTypeDef}{RCC\_OscInitTypeDef}}\ RCC\_OscInitStruct\ =\ \{0\};}
+\DoxyCodeLine{00158\ \ \ \mbox{\hyperlink{structRCC__ClkInitTypeDef}{RCC\_ClkInitTypeDef}}\ RCC\_ClkInitStruct\ =\ \{0\};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00162\ \ \ \mbox{\hyperlink{group__PWR__Exported__Functions__Group1_ga3d07cef39bf294db4aed7e06e5dbf9af}{HAL\_PWR\_EnableBkUpAccess}}();}
+\DoxyCodeLine{00163\ \ \ \mbox{\hyperlink{group__RCC__Exported__Macros_gad6731530ebbbcc0696e9bd94eb0d2724}{\_\_HAL\_RCC\_LSEDRIVE\_CONFIG}}(\mbox{\hyperlink{group__RCC__LSEDrive__Config_gab5fa5b50304710db2d7f6d583a225da3}{RCC\_LSEDRIVE\_LOW}});}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00167\ \ \ \mbox{\hyperlink{group__PWREx__Exported__Macros_ga1ee778f7ff494723bd0ef04ec44b0f77}{\_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG}}(\mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_gaa0d38e304a0adfdbb58a61c96bdb95e9}{PWR\_REGULATOR\_VOLTAGE\_SCALE2}});}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00171\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_a23b9d1da2a92936c618d2416406275a3}{OscillatorType}}\ =\ \mbox{\hyperlink{group__RCC__Oscillator__Type_ga3b7abb8ce0544cca0aa4550540194ce2}{RCC\_OSCILLATORTYPE\_LSI}}|\mbox{\hyperlink{group__RCC__Oscillator__Type_ga7036aec5659343c695d795e04d9152ba}{RCC\_OSCILLATORTYPE\_LSE}}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\mbox{\hyperlink{group__RCC__Oscillator__Type_ga967ab49a19c9c88b4d7a85faf4707243}{RCC\_OSCILLATORTYPE\_MSI}};}
+\DoxyCodeLine{00173\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_abb72dd5bfb99667e36d99b6887f80a0a}{LSEState}}\ =\ \mbox{\hyperlink{group__RCC__LSE__Config_gac981ea636c2f215e4473901e0912f55a}{RCC\_LSE\_ON}};}
+\DoxyCodeLine{00174\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_a22386cc7873d5993a054701e437d4630}{MSIState}}\ =\ \mbox{\hyperlink{group__RCC__MSI__Config_gabf942d45be1bc843650abc9e79426739}{RCC\_MSI\_ON}};}
+\DoxyCodeLine{00175\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_adce78a18ff5bb83159ef532c761a1778}{MSICalibrationValue}}\ =\ \mbox{\hyperlink{group__RCC__MSI__Config_ga70bb1809b5ba2dd69171f8f1c4d91728}{RCC\_MSICALIBRATION\_DEFAULT}};}
+\DoxyCodeLine{00176\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_a985435ce5ed5793b56050140ce8f3f66}{MSIClockRange}}\ =\ \mbox{\hyperlink{group__RCC__MSI__Clock__Range_ga7f6e3de13b041244869fba14585c43fe}{RCC\_MSIRANGE\_6}};}
+\DoxyCodeLine{00177\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_afabbe8f06b887114946fccf0c315d306}{LSIDiv}}\ =\ \mbox{\hyperlink{group__RCC__LSI__Div_ga8f91b4aefa87631f879183b2bce4da42}{RCC\_LSI\_DIV1}};}
+\DoxyCodeLine{00178\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_a9acc15f6278f950ef02d5d6f819f68e8}{LSIState}}\ =\ \mbox{\hyperlink{group__RCC__LSI__Config_ga6b364ac3500e60b6bff695ee518c87d6}{RCC\_LSI\_ON}};}
+\DoxyCodeLine{00179\ \ \ RCC\_OscInitStruct.\mbox{\hyperlink{structRCC__OscInitTypeDef_a7ec4025786fa81e2a4bfc42832c0eddf}{PLL}}.\mbox{\hyperlink{structRCC__PLLInitTypeDef_ab3bb33f461bb409576e1c899c962e0b0}{PLLState}}\ =\ \mbox{\hyperlink{group__RCC__PLL__Config_gae47a612f8e15c32917ee2181362d88f3}{RCC\_PLL\_NONE}};}
+\DoxyCodeLine{00180\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__RCC__Exported__Functions__Group1_ga9c504088722e03830df6caad932ad06b}{HAL\_RCC\_OscConfig}}(\&RCC\_OscInitStruct)\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{00181\ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{00183\ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00187\ \ \ RCC\_ClkInitStruct.\mbox{\hyperlink{structRCC__ClkInitTypeDef_afe92b105bff8e698233c286bb3018384}{ClockType}}\ =\ \mbox{\hyperlink{group__RCC__System__Clock__Type_ga36126cf1ba06545faec8050078f4edd9}{RCC\_CLOCKTYPE\_HCLK3}}|\mbox{\hyperlink{group__RCC__System__Clock__Type_gaa5330efbd790632856a2b15851517ef9}{RCC\_CLOCKTYPE\_HCLK}}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\mbox{\hyperlink{group__RCC__System__Clock__Type_ga7e721f5bf3fe925f78dae0356165332e}{RCC\_CLOCKTYPE\_SYSCLK}}|\mbox{\hyperlink{group__RCC__System__Clock__Type_gab00c7b70f0770a616be4b5df45a454c4}{RCC\_CLOCKTYPE\_PCLK1}}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\mbox{\hyperlink{group__RCC__System__Clock__Type_gaef7e78706e597a6551d71f5f9ad60cc0}{RCC\_CLOCKTYPE\_PCLK2}};}
+\DoxyCodeLine{00190\ \ \ RCC\_ClkInitStruct.\mbox{\hyperlink{structRCC__ClkInitTypeDef_a02b70c23b593a55814d887f483ea0871}{SYSCLKSource}}\ =\ \mbox{\hyperlink{group__RCC__System__Clock__Source_ga1e02722521eb426d481d52ba9f79afef}{RCC\_SYSCLKSOURCE\_MSI}};}
+\DoxyCodeLine{00191\ \ \ RCC\_ClkInitStruct.\mbox{\hyperlink{structRCC__ClkInitTypeDef_a082c91ea9f270509aca7ae6ec42c2a54}{AHBCLKDivider}}\ =\ \mbox{\hyperlink{group__RCC__AHBx__Clock__Source_ga226f5bf675015ea677868132b6b83494}{RCC\_SYSCLK\_DIV1}};}
+\DoxyCodeLine{00192\ \ \ RCC\_ClkInitStruct.\mbox{\hyperlink{structRCC__ClkInitTypeDef_a994aca51c40decfc340e045da1a6ca19}{APB1CLKDivider}}\ =\ \mbox{\hyperlink{group__RCC__APBx__Clock__Source_ga8e3fcdef0e5d77bb61a52420fe1e9fbc}{RCC\_HCLK\_DIV1}};}
+\DoxyCodeLine{00193\ \ \ RCC\_ClkInitStruct.\mbox{\hyperlink{structRCC__ClkInitTypeDef_a9bbc30e9f4ddf462bc1fa6ea273eb4db}{APB2CLKDivider}}\ =\ \mbox{\hyperlink{group__RCC__APBx__Clock__Source_ga8e3fcdef0e5d77bb61a52420fe1e9fbc}{RCC\_HCLK\_DIV1}};}
+\DoxyCodeLine{00194\ \ \ RCC\_ClkInitStruct.\mbox{\hyperlink{structRCC__ClkInitTypeDef_a774212f4dadc19bd25a764f082f1d70e}{AHBCLK3Divider}}\ =\ \mbox{\hyperlink{group__RCC__AHBx__Clock__Source_ga226f5bf675015ea677868132b6b83494}{RCC\_SYSCLK\_DIV1}};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__RCC__Exported__Functions__Group1_gad0a4b5c7459219fafc15f3f867563ef3}{HAL\_RCC\_ClockConfig}}(\&RCC\_ClkInitStruct,\ \mbox{\hyperlink{group__FLASH__LATENCY_ga1276f51e97dc9857ca261fae4eb890f3}{FLASH\_LATENCY\_0}})\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{00197\ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{00199\ \ \ \}}
+\DoxyCodeLine{00200\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_ae3358c54a01c6487322df1275618d6b1}\label{main_8c_ae3358c54a01c6487322df1275618d6b1} 
+\index{main.c@{main.c}!hcrc@{hcrc}}
+\index{hcrc@{hcrc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hcrc}{hcrc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCRC__HandleTypeDef}{CRC\+\_\+\+Handle\+Type\+Def}} hcrc}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00058}{58}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}\label{main_8c_aa0c7fca836406ade332e1e3f1039d8ab} 
+\index{main.c@{main.c}!hrtc@{hrtc}}
+\index{hrtc@{hrtc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hrtc}{hrtc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} hrtc}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5} 
+\index{main.c@{main.c}!htim1@{htim1}}
+\index{htim1@{htim1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim1}{htim1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} htim1}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00064}{64}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2c80fd5510e2990a59a5c90d745c716c}\label{main_8c_a2c80fd5510e2990a59a5c90d745c716c} 
+\index{main.c@{main.c}!htim2@{htim2}}
+\index{htim2@{htim2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim2}{htim2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} htim2}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00065}{65}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+\index{main.c@{main.c}!huart1@{huart1}}
+\index{huart1@{huart1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__UART__Exported__Types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} huart1}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00060}{60}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

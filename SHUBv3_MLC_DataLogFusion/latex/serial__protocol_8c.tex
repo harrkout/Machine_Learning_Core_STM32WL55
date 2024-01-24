@@ -1,0 +1,53 @@
+\doxysection{MEMS/\+Target/serial\+\_\+protocol.c File Reference}
+\hypertarget{serial__protocol_8c}{}\label{serial__protocol_8c}\index{MEMS/Target/serial\_protocol.c@{MEMS/Target/serial\_protocol.c}}
+
+
+This file implements some utilities for the serial protocol.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}serial\+\_\+protocol.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga01a28ff7c262d833418b799faaabb1f3}{Byte\+Stuff\+Copy\+Byte}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Byte stuffing process for one byte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf6e45bca9826260db57c60ae16416a74}{Byte\+Stuff\+Copy}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, \mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Source)
+\begin{DoxyCompactList}\small\item\em Byte stuffing process for a Msg. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaae0bc6cd28e1428bf2eff428b0eb1768}{Reverse\+Byte\+Stuff\+Copy\+Byte}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest)
+\begin{DoxyCompactList}\small\item\em Reverse Byte stuffing process for one byte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga25ab7e28ed8848f9c01dacbcaf098ee8}{Reverse\+Byte\+Stuff\+Copy\+Byte2}} (uint8\+\_\+t Source0, uint8\+\_\+t Source1, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest)
+\begin{DoxyCompactList}\small\item\em Reverse Byte stuffing process for two input data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabf31baf1506c3e9c2d65283dae7bbdbb}{Reverse\+Byte\+Stuff\+Copy}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Dest, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source)
+\begin{DoxyCompactList}\small\item\em Reverse Byte stuffing process for a Msg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e855d70731e181b4434206177b29583}{CHK\+\_\+\+Compute\+And\+Add}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Compute and add checksum. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga1d26d784869262c1b26e1575e243bb58}{CHK\+\_\+\+Check\+And\+Remove}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Compute and remove checksum. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gafcfd1af2fbe326e409de2714619638ab}{Serialize}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, uint32\+\_\+t Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Build an array from the uint32\+\_\+t (LSB first) \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga035bebfe269f424d70df46fb016df489}{Deserialize}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Unbuild a Number from an array (LSB first) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\+\_\+s32}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, int32\+\_\+t Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Build an array from the uint32\+\_\+t (LSB first) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e0f8016b226dacdb2f49091ad9cd543}{Deserialize\+\_\+s32}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Source, uint32\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em Unbuild a Number from an array (LSB first) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga58aacda60a9822ef818fcec6f380e326}{Float\+To\+Array}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}Dest, float Data)
+\begin{DoxyCompactList}\small\item\em Build an array from the float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file implements some utilities for the serial protocol. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{serial__protocol_8c_source}{serial\+\_\+protocol.\+c}}.
+

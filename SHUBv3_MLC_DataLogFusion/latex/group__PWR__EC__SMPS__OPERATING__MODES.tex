@@ -1,0 +1,36 @@
+\doxysubsubsubsection{SMPS Step down converter operating modes}
+\hypertarget{group__PWR__EC__SMPS__OPERATING__MODES}{}\label{group__PWR__EC__SMPS__OPERATING__MODES}\index{SMPS Step down converter operating modes@{SMPS Step down converter operating modes}}
+\doxysubsubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__SMPS__OPERATING__MODES_ga01d776b77a9ed6b366cd589e527e5177}{PWR\+\_\+\+SMPS\+\_\+\+BYPASS}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__SMPS__OPERATING__MODES_ga171f5accb909da9bea89cdb5b1278cbc}{PWR\+\_\+\+SMPS\+\_\+\+STEP\+\_\+\+DOWN}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad56cd8b6a4178a44439c09243b64703c}{PWR\+\_\+\+CR5\+\_\+\+SMPSEN}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__PWR__EC__SMPS__OPERATING__MODES_ga01d776b77a9ed6b366cd589e527e5177}\label{group__PWR__EC__SMPS__OPERATING__MODES_ga01d776b77a9ed6b366cd589e527e5177} 
+\index{SMPS Step down converter operating modes@{SMPS Step down converter operating modes}!PWR\_SMPS\_BYPASS@{PWR\_SMPS\_BYPASS}}
+\index{PWR\_SMPS\_BYPASS@{PWR\_SMPS\_BYPASS}!SMPS Step down converter operating modes@{SMPS Step down converter operating modes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{PWR\_SMPS\_BYPASS}{PWR\_SMPS\_BYPASS}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+SMPS\+\_\+\+BYPASS~(0x00000000\+UL)}
+
+SMPS step down in bypass mode ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__pwr__ex_8h_source_l00234}{234}} of file \mbox{\hyperlink{stm32wlxx__hal__pwr__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h}}.
+
+\Hypertarget{group__PWR__EC__SMPS__OPERATING__MODES_ga171f5accb909da9bea89cdb5b1278cbc}\label{group__PWR__EC__SMPS__OPERATING__MODES_ga171f5accb909da9bea89cdb5b1278cbc} 
+\index{SMPS Step down converter operating modes@{SMPS Step down converter operating modes}!PWR\_SMPS\_STEP\_DOWN@{PWR\_SMPS\_STEP\_DOWN}}
+\index{PWR\_SMPS\_STEP\_DOWN@{PWR\_SMPS\_STEP\_DOWN}!SMPS Step down converter operating modes@{SMPS Step down converter operating modes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{PWR\_SMPS\_STEP\_DOWN}{PWR\_SMPS\_STEP\_DOWN}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+SMPS\+\_\+\+STEP\+\_\+\+DOWN~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad56cd8b6a4178a44439c09243b64703c}{PWR\+\_\+\+CR5\+\_\+\+SMPSEN}})}
+
+SMPS step down in step down mode if system low power mode is run, LP run or stop0. If system low power mode is stop1, stop2, standby, shutdown, then SMPS is forced in mode open to preserve energy stored in decoupling capacitor as long as possible. Note\+: In case of a board without SMPS coil mounted, SMPS should not be activated. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__pwr__ex_8h_source_l00235}{235}} of file \mbox{\hyperlink{stm32wlxx__hal__pwr__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h}}.
+

@@ -1,0 +1,158 @@
+\doxysection{stm32wlxx\+\_\+ll\+\_\+crc.\+h}
+\hypertarget{stm32wlxx__ll__crc_8h_source}{}\label{stm32wlxx__ll__crc_8h_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_crc.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_crc.h}}
+\mbox{\hyperlink{stm32wlxx__ll__crc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00019}00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ STM32WLxx\_LL\_CRC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ STM32WLxx\_LL\_CRC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00024}00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00027}00027\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx_8h}{stm32wlxx.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00034}00034\ \textcolor{preprocessor}{\#if\ defined(CRC)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00040}00040\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00041}00041\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00042}00042\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00043}00043\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00045}00045\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00046}00046\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00054}00054\ \textcolor{preprocessor}{\#define\ LL\_CRC\_POLYLENGTH\_32B\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00055}00055\ \textcolor{preprocessor}{\#define\ LL\_CRC\_POLYLENGTH\_16B\ \ \ \ \ \ \ \ \ \ \ \ \ \ CRC\_CR\_POLYSIZE\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00056}00056\ \textcolor{preprocessor}{\#define\ LL\_CRC\_POLYLENGTH\_8B\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CRC\_CR\_POLYSIZE\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00057}00057\ \textcolor{preprocessor}{\#define\ LL\_CRC\_POLYLENGTH\_7B\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (CRC\_CR\_POLYSIZE\_1\ |\ CRC\_CR\_POLYSIZE\_0)\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00065}00065\ \textcolor{preprocessor}{\#define\ LL\_CRC\_INDATA\_REVERSE\_NONE\ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00066}00066\ \textcolor{preprocessor}{\#define\ LL\_CRC\_INDATA\_REVERSE\_BYTE\ \ \ \ \ \ \ \ \ CRC\_CR\_REV\_IN\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00067}00067\ \textcolor{preprocessor}{\#define\ LL\_CRC\_INDATA\_REVERSE\_HALFWORD\ \ \ \ \ CRC\_CR\_REV\_IN\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00068}00068\ \textcolor{preprocessor}{\#define\ LL\_CRC\_INDATA\_REVERSE\_WORD\ \ \ \ \ \ \ \ \ (CRC\_CR\_REV\_IN\_1\ |\ CRC\_CR\_REV\_IN\_0)\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00076}00076\ \textcolor{preprocessor}{\#define\ LL\_CRC\_OUTDATA\_REVERSE\_NONE\ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00077}00077\ \textcolor{preprocessor}{\#define\ LL\_CRC\_OUTDATA\_REVERSE\_BIT\ \ \ \ \ \ \ \ \ CRC\_CR\_REV\_OUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00087}00087\ \textcolor{preprocessor}{\#define\ LL\_CRC\_DEFAULT\_CRC32\_POLY\ \ \ \ \ \ \ \ \ \ 0x04C11DB7U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00095}00095\ \textcolor{preprocessor}{\#define\ LL\_CRC\_DEFAULT\_CRC\_INITVALUE\ \ \ \ \ \ \ 0xFFFFFFFFU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00104}00104\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00120}00120\ \textcolor{preprocessor}{\#define\ LL\_CRC\_WriteReg(\_\_INSTANCE\_\_,\ \_\_REG\_\_,\ \_\_VALUE\_\_)\ WRITE\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_,\ \_\_VALUE\_\_)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00128}00128\ \textcolor{preprocessor}{\#define\ LL\_CRC\_ReadReg(\_\_INSTANCE\_\_,\ \_\_REG\_\_)\ READ\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00138}00138\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00156}00156\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_ResetCRCCalculationUnit(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00157}00157\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00158}00158\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_ab40c89c59391aaa9d9a8ec011dd0907a}{CR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7d57481fb891a0964b40f721354c56d7}{CRC\_CR\_RESET}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00159}00159\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00172}00172\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_SetPolynomialSize(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint32\_t\ PolySize)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00173}00173\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00174}00174\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_ab40c89c59391aaa9d9a8ec011dd0907a}{CR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa59a490e24d6d3775e71cf03e347ff03}{CRC\_CR\_POLYSIZE}},\ PolySize);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00175}00175\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00187}00187\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_CRC\_GetPolynomialSize(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00188}00188\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00189}00189\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_ab40c89c59391aaa9d9a8ec011dd0907a}{CR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa59a490e24d6d3775e71cf03e347ff03}{CRC\_CR\_POLYSIZE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00190}00190\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00203}00203\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_SetInputDataReverseMode(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint32\_t\ ReverseMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00204}00204\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00205}00205\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_ab40c89c59391aaa9d9a8ec011dd0907a}{CR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4c5a6e8ab7464ff35f1e5f424b76c15a}{CRC\_CR\_REV\_IN}},\ ReverseMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00206}00206\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00218}00218\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_CRC\_GetInputDataReverseMode(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00219}00219\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00220}00220\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_ab40c89c59391aaa9d9a8ec011dd0907a}{CR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4c5a6e8ab7464ff35f1e5f424b76c15a}{CRC\_CR\_REV\_IN}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00221}00221\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00232}00232\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_SetOutputDataReverseMode(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint32\_t\ ReverseMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00233}00233\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00234}00234\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_ab40c89c59391aaa9d9a8ec011dd0907a}{CR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga62d72fcad54fe50ab75d2895d6e155f7}{CRC\_CR\_REV\_OUT}},\ ReverseMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00235}00235\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00245}00245\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_CRC\_GetOutputDataReverseMode(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00246}00246\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00247}00247\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_ab40c89c59391aaa9d9a8ec011dd0907a}{CR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga62d72fcad54fe50ab75d2895d6e155f7}{CRC\_CR\_REV\_OUT}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00248}00248\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00260}00260\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_SetInitialData(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint32\_t\ InitCrc)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00261}00261\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00262}00262\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_af29f59e3e9149946df6717c205eaac7c}{INIT}},\ InitCrc);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00263}00263\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00273}00273\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_CRC\_GetInitialData(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00274}00274\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00275}00275\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_af29f59e3e9149946df6717c205eaac7c}{INIT}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00276}00276\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00290}00290\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_SetPolynomialCoef(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint32\_t\ PolynomCoef)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00291}00291\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00292}00292\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a9037a11797290aef4ac48048c07e2e89}{POL}},\ PolynomCoef);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00293}00293\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00304}00304\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_CRC\_GetPolynomialCoef(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00305}00305\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00306}00306\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a9037a11797290aef4ac48048c07e2e89}{POL}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00307}00307\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00324}00324\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_FeedData32(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint32\_t\ InData)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00325}00325\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00326}00326\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a3df0d8dfcd1ec958659ffe21eb64fa94}{DR}},\ InData);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00327}00327\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00336}00336\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_FeedData16(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint16\_t\ InData)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00337}00337\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00338}00338\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ *pReg;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00340}00340\ \ \ pReg\ =\ (\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ *)(\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ \textcolor{keywordtype}{void}\ *)(\&CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a3df0d8dfcd1ec958659ffe21eb64fa94}{DR}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Derogation\ MisraC2012\ R.11.5\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00341}00341\ \ \ *pReg\ =\ InData;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00342}00342\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00343}00343\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00351}00351\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_FeedData8(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint8\_t\ InData)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00352}00352\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00353}00353\ \ \ *(uint8\_t\ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ *)(\&CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a3df0d8dfcd1ec958659ffe21eb64fa94}{DR}})\ =\ (uint8\_t)\ InData;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00354}00354\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00362}00362\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_CRC\_ReadData32(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00363}00363\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00364}00364\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a3df0d8dfcd1ec958659ffe21eb64fa94}{DR}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00365}00365\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00366}00366\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00374}00374\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint16\_t\ LL\_CRC\_ReadData16(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00375}00375\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00376}00376\ \ \ \textcolor{keywordflow}{return}\ (uint16\_t)\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a3df0d8dfcd1ec958659ffe21eb64fa94}{DR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00377}00377\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00378}00378\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00386}00386\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint8\_t\ LL\_CRC\_ReadData8(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00387}00387\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00388}00388\ \ \ \textcolor{keywordflow}{return}\ (uint8\_t)\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a3df0d8dfcd1ec958659ffe21eb64fa94}{DR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00389}00389\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00398}00398\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint8\_t\ LL\_CRC\_ReadData7(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00399}00399\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00400}00400\ \ \ \textcolor{keywordflow}{return}\ (uint8\_t)(\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a3df0d8dfcd1ec958659ffe21eb64fa94}{DR}})\ \&\ 0x7FU);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00401}00401\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00410}00410\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_CRC\_Read\_IDR(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00411}00411\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00412}00412\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_gae7f188a4d26c9e713a48414783421071}{READ\_REG}}(CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a328d2fe9ef1d513c3a97d30f98f0047c}{IDR}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00413}00413\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00414}00414\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00423}00423\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_CRC\_Write\_IDR(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx,\ uint32\_t\ InData)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00424}00424\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00425}00425\ \ \ *((uint32\_t\ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ *)(\&CRCx-\/>\mbox{\hyperlink{structCRC__TypeDef_a328d2fe9ef1d513c3a97d30f98f0047c}{IDR}}))\ =\ (uint32\_t)\ InData;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00426}00426\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00431}00431\ \textcolor{preprocessor}{\#if\ defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00436}00436\ \mbox{\hyperlink{group__Exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{ErrorStatus}}\ LL\_CRC\_DeInit(\mbox{\hyperlink{structCRC__TypeDef}{CRC\_TypeDef}}\ *CRCx);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00437}00437\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00441}00441\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_FULL\_LL\_DRIVER\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00442}00442\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00451}00451\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ defined(CRC)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00452}00452\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00457}00457\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00458}00458\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00459}00459\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00460}00460\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__crc_8h_source_l00461}00461\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ STM32WLxx\_LL\_CRC\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

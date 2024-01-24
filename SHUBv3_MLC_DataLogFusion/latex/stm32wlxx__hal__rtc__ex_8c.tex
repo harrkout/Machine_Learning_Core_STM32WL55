@@ -1,0 +1,114 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Src/stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.c File Reference}
+\hypertarget{stm32wlxx__hal__rtc__ex_8c}{}\label{stm32wlxx__hal__rtc__ex_8c}\index{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_rtc\_ex.c@{Drivers/STM32WLxx\_HAL\_Driver/Src/stm32wlxx\_hal\_rtc\_ex.c}}
+
+
+Extended RTC HAL module driver. This file provides firmware functions to manage the following functionalities of the Real Time Clock (RTC) Extended peripheral\+:  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal.\+h"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+Extended RTC HAL module driver. This file provides firmware functions to manage the following functionalities of the Real Time Clock (RTC) Extended peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\begin{DoxyItemize}
+\item RTC Time Stamp functions
+\item RTC Tamper functions
+\item RTC Wake-\/up functions
+\item Extended Control functions
+\item Extended RTC features functions
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS.
+
+\begin{DoxyVerb}==============================================================================
+                ##### How to use this driver #####
+==============================================================================
+[..]
+  (+) Enable the RTC domain access.
+  (+) Configure the RTC Prescaler (Asynchronous and Synchronous) and RTC hour
+      format using the HAL_RTC_Init() function.
+
+*** RTC Wakeup configuration ***
+================================
+[..]
+  (+) To configure the RTC Wakeup Clock source and Counter use the HAL_RTCEx_SetWakeUpTimer()
+      function. You can also configure the RTC Wakeup timer with interrupt mode
+      using the HAL_RTCEx_SetWakeUpTimer_IT() function.
+  (+) To read the RTC WakeUp Counter register, use the HAL_RTCEx_GetWakeUpTimer()
+      function.
+
+*** Outputs configuration ***
+=============================
+[..]  The RTC has 2 different outputs:
+  (+) RTC_ALARM: this output is used to manage the RTC Alarm A, Alarm B
+      and WaKeUp signals.
+      To output the selected RTC signal, use the HAL_RTC_Init() function.
+  (+) RTC_CALIB: this output is 512Hz signal or 1Hz.
+      To enable the RTC_CALIB, use the HAL_RTCEx_SetCalibrationOutPut() function.
+  (+) Two pins can be used as RTC_ALARM or RTC_CALIB (PC13, PB2) managed on
+      the RTC_OR register.
+  (+) When the RTC_CALIB or RTC_ALARM output is selected, the RTC_OUT pin is
+      automatically configured in output alternate function.
+
+*** Smooth digital Calibration configuration ***
+================================================
+[..]
+  (+) Configure the RTC Original Digital Calibration Value and the corresponding
+      calibration cycle period (32s,16s and 8s) using the HAL_RTCEx_SetSmoothCalib()
+      function.
+
+*** TimeStamp configuration ***
+===============================
+[..]
+  (+) Enable the RTC TimeStamp using the HAL_RTCEx_SetTimeStamp() function.
+      You can also configure the RTC TimeStamp with interrupt mode using the
+      HAL_RTCEx_SetTimeStamp_IT() function.
+  (+) To read the RTC TimeStamp Time and Date register, use the HAL_RTCEx_GetTimeStamp()
+      function.
+
+*** Internal TimeStamp configuration ***
+===============================
+[..]
+  (+) Enable the RTC internal TimeStamp using the HAL_RTCEx_SetInternalTimeStamp() function.
+      User has to check internal timestamp occurrence using __HAL_RTC_INTERNAL_TIMESTAMP_GET_FLAG.
+  (+) To read the RTC TimeStamp Time and Date register, use the HAL_RTCEx_GetTimeStamp()
+      function.
+
+ *** Tamper configuration ***
+ ============================
+ [..]
+   (+) Enable the RTC Tamper and configure the Tamper filter count, trigger Edge
+       or Level according to the Tamper filter (if equal to 0 Edge else Level)
+       value, sampling frequency, NoErase, MaskFlag,  precharge or discharge and
+       Pull-UP using the HAL_RTCEx_SetTamper() function. You can configure RTC Tamper
+       with interrupt mode using HAL_RTCEx_SetTamper_IT() function.
+   (+) The default configuration of the Tamper erases the backup registers. To avoid
+       erase, enable the NoErase field on the RTC_TAMPCR register.
+   (+) With new RTC tamper configuration, you have to call HAL_RTC_Init() in order to
+       perform TAMP base address offset calculation.
+   (+) If you do not intend to have tamper using RTC clock, you can bypass its initialization
+       by setting ClockEnable inti field to RTC_CLOCK_DISABLE.
+   (+) Enable Internal tamper using HAL_RTCEx_SetInternalTamper. IT mode can be chosen using
+       setting Interrupt field.
+
+ *** Backup Data Registers configuration ***
+ ===========================================
+ [..]
+   (+) To write to the RTC Backup Data registers, use the HAL_RTCEx_BKUPWrite()
+       function.
+   (+) To read the RTC Backup Data registers, use the HAL_RTCEx_BKUPRead()
+       function.
+   (+) Before calling these functions you have to call HAL_RTC_Init() in order to
+       perform TAMP base address offset calculation.\end{DoxyVerb}
+ 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8c_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+c}}.
+

@@ -1,0 +1,120 @@
+\doxysection{RCC\+\_\+\+PLLInit\+Type\+Def Struct Reference}
+\hypertarget{structRCC__PLLInitTypeDef}{}\label{structRCC__PLLInitTypeDef}\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+
+
+RCC PLL configuration structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32wlxx\+\_\+hal\+\_\+rcc.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__PLLInitTypeDef_ab3bb33f461bb409576e1c899c962e0b0}{PLLState}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__PLLInitTypeDef_a418ecda4a355c6a161e4893a7bc1897f}{PLLSource}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__PLLInitTypeDef_adb1ffaed93a1680042e24b5442b90af4}{PLLM}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__PLLInitTypeDef_a2e8a73f7961f8d6570193c68daba88a6}{PLLN}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__PLLInitTypeDef_ae2047a6040de6fcd43e0033a7b09a226}{PLLP}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__PLLInitTypeDef_a4f9e0db99adb7afb9d2a87a2b4f433ab}{PLLQ}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__PLLInitTypeDef_a5777f8788531e0fc3f35b0e5d1c7a445}{PLLR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RCC PLL configuration structure definition. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00225}{225}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structRCC__PLLInitTypeDef_adb1ffaed93a1680042e24b5442b90af4}\label{structRCC__PLLInitTypeDef_adb1ffaed93a1680042e24b5442b90af4} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLM@{PLLM}}
+\index{PLLM@{PLLM}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLM}{PLLM}}
+{\footnotesize\ttfamily uint32\+\_\+t PLLM}
+
+PLLM\+: Division factor for PLL VCO input clock. This parameter must be a value of \doxylink{group__RCC__PLLM__Clock__Divider}{PLLM Clock Divider} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00233}{233}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+\Hypertarget{structRCC__PLLInitTypeDef_a2e8a73f7961f8d6570193c68daba88a6}\label{structRCC__PLLInitTypeDef_a2e8a73f7961f8d6570193c68daba88a6} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLN@{PLLN}}
+\index{PLLN@{PLLN}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLN}{PLLN}}
+{\footnotesize\ttfamily uint32\+\_\+t PLLN}
+
+PLLN\+: Multiplication factor for PLL VCO output clock. This parameter must be a number between Min\+\_\+\+Data = 6 and Max\+\_\+\+Data = 127 ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00236}{236}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+\Hypertarget{structRCC__PLLInitTypeDef_ae2047a6040de6fcd43e0033a7b09a226}\label{structRCC__PLLInitTypeDef_ae2047a6040de6fcd43e0033a7b09a226} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLP@{PLLP}}
+\index{PLLP@{PLLP}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLP}{PLLP}}
+{\footnotesize\ttfamily uint32\+\_\+t PLLP}
+
+PLLP\+: Division factor for ADC clock. This parameter must be a value of \doxylink{group__RCC__PLLP__Clock__Divider}{PLLP Clock Divider} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00239}{239}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+\Hypertarget{structRCC__PLLInitTypeDef_a4f9e0db99adb7afb9d2a87a2b4f433ab}\label{structRCC__PLLInitTypeDef_a4f9e0db99adb7afb9d2a87a2b4f433ab} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLQ@{PLLQ}}
+\index{PLLQ@{PLLQ}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLQ}{PLLQ}}
+{\footnotesize\ttfamily uint32\+\_\+t PLLQ}
+
+PLLQ\+: Division factor for I2\+S2 and RNG clock. This parameter must be a value of \doxylink{group__RCC__PLLQ__Clock__Divider}{PLLQ Clock Divider} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00242}{242}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+\Hypertarget{structRCC__PLLInitTypeDef_a5777f8788531e0fc3f35b0e5d1c7a445}\label{structRCC__PLLInitTypeDef_a5777f8788531e0fc3f35b0e5d1c7a445} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLR@{PLLR}}
+\index{PLLR@{PLLR}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLR}{PLLR}}
+{\footnotesize\ttfamily uint32\+\_\+t PLLR}
+
+PLLR\+: Division for the main system clock. User has to set the PLLR parameter correctly to not exceed max frequency 48 MHZ. This parameter must be a value of \doxylink{group__RCC__PLLR__Clock__Divider}{PLLR Clock Divider} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00245}{245}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+\Hypertarget{structRCC__PLLInitTypeDef_a418ecda4a355c6a161e4893a7bc1897f}\label{structRCC__PLLInitTypeDef_a418ecda4a355c6a161e4893a7bc1897f} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLSource@{PLLSource}}
+\index{PLLSource@{PLLSource}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLSource}{PLLSource}}
+{\footnotesize\ttfamily uint32\+\_\+t PLLSource}
+
+RCC\+\_\+\+PLLSource\+: PLL entry clock source. This parameter must be a value of \doxylink{group__RCC__PLL__Clock__Source}{PLL Clock Source} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00230}{230}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+\Hypertarget{structRCC__PLLInitTypeDef_ab3bb33f461bb409576e1c899c962e0b0}\label{structRCC__PLLInitTypeDef_ab3bb33f461bb409576e1c899c962e0b0} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLState@{PLLState}}
+\index{PLLState@{PLLState}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLState}{PLLState}}
+{\footnotesize\ttfamily uint32\+\_\+t PLLState}
+
+The new state of the PLL. This parameter must be a value of \doxylink{group__RCC__PLL__Config}{PLL Config} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source_l00227}{227}} of file \mbox{\hyperlink{stm32wlxx__hal__rcc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32wlxx__hal__rcc_8h}{stm32wlxx\+\_\+hal\+\_\+rcc.\+h}}\end{DoxyCompactItemize}

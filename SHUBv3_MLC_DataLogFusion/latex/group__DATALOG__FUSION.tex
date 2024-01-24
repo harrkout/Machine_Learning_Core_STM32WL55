@@ -1,0 +1,411 @@
+\doxysubsection{DATALOG FUSION}
+\hypertarget{group__DATALOG__FUSION}{}\label{group__DATALOG__FUSION}\index{DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__DATALOG__FUSION_ga7e3ce397037c8f4f14f7adc0b969b662}{STATE\+\_\+\+SIZE}}~(size\+\_\+t)(2432)
+\item 
+\#define \mbox{\hyperlink{group__DATALOG__FUSION_gac3ef1ff59e96c826b3a84f5ac5bb183a}{SAMPLETODISCARD}}~15
+\item 
+\#define \mbox{\hyperlink{group__DATALOG__FUSION_ga4feb7a541189f14fb935e9dd1e1ff771}{GBIAS\+\_\+\+ACC\+\_\+\+TH\+\_\+\+SC}}~(2.\+0f\texorpdfstring{$\ast$}{*}0.\+000765f)
+\item 
+\#define \mbox{\hyperlink{group__DATALOG__FUSION_ga64e6a51843b13c7ba18f65085d659cfa}{GBIAS\+\_\+\+GYRO\+\_\+\+TH\+\_\+\+SC}}~(2.\+0f\texorpdfstring{$\ast$}{*}0.\+002f)
+\item 
+\#define \mbox{\hyperlink{group__DATALOG__FUSION_gac1949c60468f6025fcd5d94abbf242ff}{GBIAS\+\_\+\+MAG\+\_\+\+TH\+\_\+\+SC}}~(2.\+0f\texorpdfstring{$\ast$}{*}0.\+001500f)
+\item 
+\#define \mbox{\hyperlink{group__DATALOG__FUSION_ga8b0b0ebd19cb978bcd825b842558c31a}{DECIMATION}}~1U
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga0ee2e2b7eb7d1b9a0e4ac6e9e76ec66c}{Motion\+FX\+\_\+manager\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gad0f84309b27041796341a83b4aaff5d7}{Motion\+FX\+\_\+manager\+\_\+run}} (\mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, \mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Run Motion Sensor Data Fusion algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b}{Motion\+FX\+\_\+manager\+\_\+start\+\_\+6X}} (void)
+\begin{DoxyCompactList}\small\item\em Start 6 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9}{Motion\+FX\+\_\+manager\+\_\+stop\+\_\+6X}} (void)
+\begin{DoxyCompactList}\small\item\em Stop 6 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03}{Motion\+FX\+\_\+manager\+\_\+start\+\_\+9X}} (void)
+\begin{DoxyCompactList}\small\item\em Start 9 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef}{Motion\+FX\+\_\+manager\+\_\+stop\+\_\+9X}} (void)
+\begin{DoxyCompactList}\small\item\em Stop 9 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e}{Motion\+FX\+\_\+manager\+\_\+get\+\_\+version}} (char \texorpdfstring{$\ast$}{*}version, int \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gabf081bdf9df90c8bf1341346c7186cd7}{Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+run}} (\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, \mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Run magnetometer calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga6997aefa86be797fecde7d1221ef1703}{Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+start}} (int sampletime)
+\begin{DoxyCompactList}\small\item\em Start magnetometer calibration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gaf9afa8abcc8f404e2996c3fe9f5a92a5}{Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+stop}} (int sampletime)
+\begin{DoxyCompactList}\small\item\em Stop magnetometer calibration. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group__DATALOG__FUSION_gac63a393f1993db7c79e6a49b86bd2afc}{Motion\+FX\+\_\+\+Load\+Mag\+Cal\+From\+NVM}} (unsigned short int data\+Size, unsigned int \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Load calibration parameter from memory. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group__DATALOG__FUSION_ga6e6d0d1a369699ba3281be0586586eab}{Motion\+FX\+\_\+\+Save\+Mag\+Cal\+In\+NVM}} (unsigned short int data\+Size, unsigned int \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Save calibration parameter to memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+
+
+\doxysubsubsection{Macro Definition Documentation}
+\Hypertarget{group__DATALOG__FUSION_ga8b0b0ebd19cb978bcd825b842558c31a}\label{group__DATALOG__FUSION_ga8b0b0ebd19cb978bcd825b842558c31a} 
+\index{DATALOG FUSION@{DATALOG FUSION}!DECIMATION@{DECIMATION}}
+\index{DECIMATION@{DECIMATION}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{DECIMATION}{DECIMATION}}
+{\footnotesize\ttfamily \#define DECIMATION~1U}
+
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00041}{41}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga4feb7a541189f14fb935e9dd1e1ff771}\label{group__DATALOG__FUSION_ga4feb7a541189f14fb935e9dd1e1ff771} 
+\index{DATALOG FUSION@{DATALOG FUSION}!GBIAS\_ACC\_TH\_SC@{GBIAS\_ACC\_TH\_SC}}
+\index{GBIAS\_ACC\_TH\_SC@{GBIAS\_ACC\_TH\_SC}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{GBIAS\_ACC\_TH\_SC}{GBIAS\_ACC\_TH\_SC}}
+{\footnotesize\ttfamily \#define GBIAS\+\_\+\+ACC\+\_\+\+TH\+\_\+\+SC~(2.\+0f\texorpdfstring{$\ast$}{*}0.\+000765f)}
+
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00037}{37}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga64e6a51843b13c7ba18f65085d659cfa}\label{group__DATALOG__FUSION_ga64e6a51843b13c7ba18f65085d659cfa} 
+\index{DATALOG FUSION@{DATALOG FUSION}!GBIAS\_GYRO\_TH\_SC@{GBIAS\_GYRO\_TH\_SC}}
+\index{GBIAS\_GYRO\_TH\_SC@{GBIAS\_GYRO\_TH\_SC}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{GBIAS\_GYRO\_TH\_SC}{GBIAS\_GYRO\_TH\_SC}}
+{\footnotesize\ttfamily \#define GBIAS\+\_\+\+GYRO\+\_\+\+TH\+\_\+\+SC~(2.\+0f\texorpdfstring{$\ast$}{*}0.\+002f)}
+
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00038}{38}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_gac1949c60468f6025fcd5d94abbf242ff}\label{group__DATALOG__FUSION_gac1949c60468f6025fcd5d94abbf242ff} 
+\index{DATALOG FUSION@{DATALOG FUSION}!GBIAS\_MAG\_TH\_SC@{GBIAS\_MAG\_TH\_SC}}
+\index{GBIAS\_MAG\_TH\_SC@{GBIAS\_MAG\_TH\_SC}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{GBIAS\_MAG\_TH\_SC}{GBIAS\_MAG\_TH\_SC}}
+{\footnotesize\ttfamily \#define GBIAS\+\_\+\+MAG\+\_\+\+TH\+\_\+\+SC~(2.\+0f\texorpdfstring{$\ast$}{*}0.\+001500f)}
+
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00039}{39}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_gac3ef1ff59e96c826b3a84f5ac5bb183a}\label{group__DATALOG__FUSION_gac3ef1ff59e96c826b3a84f5ac5bb183a} 
+\index{DATALOG FUSION@{DATALOG FUSION}!SAMPLETODISCARD@{SAMPLETODISCARD}}
+\index{SAMPLETODISCARD@{SAMPLETODISCARD}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{SAMPLETODISCARD}{SAMPLETODISCARD}}
+{\footnotesize\ttfamily \#define SAMPLETODISCARD~15}
+
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00035}{35}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga7e3ce397037c8f4f14f7adc0b969b662}\label{group__DATALOG__FUSION_ga7e3ce397037c8f4f14f7adc0b969b662} 
+\index{DATALOG FUSION@{DATALOG FUSION}!STATE\_SIZE@{STATE\_SIZE}}
+\index{STATE\_SIZE@{STATE\_SIZE}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{STATE\_SIZE}{STATE\_SIZE}}
+{\footnotesize\ttfamily \#define STATE\+\_\+\+SIZE~(size\+\_\+t)(2432)}
+
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00033}{33}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\Hypertarget{group__DATALOG__FUSION_gac63a393f1993db7c79e6a49b86bd2afc}\label{group__DATALOG__FUSION_gac63a393f1993db7c79e6a49b86bd2afc} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_LoadMagCalFromNVM@{MotionFX\_LoadMagCalFromNVM}}
+\index{MotionFX\_LoadMagCalFromNVM@{MotionFX\_LoadMagCalFromNVM}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_LoadMagCalFromNVM()}{MotionFX\_LoadMagCalFromNVM()}}
+{\footnotesize\ttfamily char Motion\+FX\+\_\+\+Load\+Mag\+Cal\+From\+NVM (\begin{DoxyParamCaption}\item[{unsigned short int}]{data\+Size,  }\item[{unsigned int \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Load calibration parameter from memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Size} & length ot the data \\
+\hline
+{\em data} & pointer to the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em (1)} & fail, (0) success \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00195}{195}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e}\label{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_get\_version@{MotionFX\_manager\_get\_version}}
+\index{MotionFX\_manager\_get\_version@{MotionFX\_manager\_get\_version}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_get\_version()}{MotionFX\_manager\_get\_version()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+get\+\_\+version (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{version,  }\item[{int \texorpdfstring{$\ast$}{*}}]{length }\end{DoxyParamCaption})}
+
+
+
+Get the library version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Library version string (must be array of 35 char) \\
+\hline
+{\em length} & Library version string length \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00153}{153}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga0ee2e2b7eb7d1b9a0e4ac6e9e76ec66c}\label{group__DATALOG__FUSION_ga0ee2e2b7eb7d1b9a0e4ac6e9e76ec66c} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_init@{MotionFX\_manager\_init}}
+\index{MotionFX\_manager\_init@{MotionFX\_manager\_init}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_init()}{MotionFX\_manager\_init()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the Motion\+FX engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00060}{60}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_gabf081bdf9df90c8bf1341346c7186cd7}\label{group__DATALOG__FUSION_gabf081bdf9df90c8bf1341346c7186cd7} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_MagCal\_run@{MotionFX\_manager\_MagCal\_run}}
+\index{MotionFX\_manager\_MagCal\_run@{MotionFX\_manager\_MagCal\_run}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_MagCal\_run()}{MotionFX\_manager\_MagCal\_run()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in,  }\item[{\mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Run magnetometer calibration algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00163}{163}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga6997aefa86be797fecde7d1221ef1703}\label{group__DATALOG__FUSION_ga6997aefa86be797fecde7d1221ef1703} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_MagCal\_start@{MotionFX\_manager\_MagCal\_start}}
+\index{MotionFX\_manager\_MagCal\_start@{MotionFX\_manager\_MagCal\_start}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_MagCal\_start()}{MotionFX\_manager\_MagCal\_start()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+start (\begin{DoxyParamCaption}\item[{int}]{sampletime }\end{DoxyParamCaption})}
+
+
+
+Start magnetometer calibration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00174}{174}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_gaf9afa8abcc8f404e2996c3fe9f5a92a5}\label{group__DATALOG__FUSION_gaf9afa8abcc8f404e2996c3fe9f5a92a5} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_MagCal\_stop@{MotionFX\_manager\_MagCal\_stop}}
+\index{MotionFX\_manager\_MagCal\_stop@{MotionFX\_manager\_MagCal\_stop}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_MagCal\_stop()}{MotionFX\_manager\_MagCal\_stop()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+stop (\begin{DoxyParamCaption}\item[{int}]{sampletime }\end{DoxyParamCaption})}
+
+
+
+Stop magnetometer calibration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00184}{184}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_gad0f84309b27041796341a83b4aaff5d7}\label{group__DATALOG__FUSION_gad0f84309b27041796341a83b4aaff5d7} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_run@{MotionFX\_manager\_run}}
+\index{MotionFX\_manager\_run@{MotionFX\_manager\_run}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_run()}{MotionFX\_manager\_run()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in,  }\item[{\mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out,  }\item[{float}]{delta\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Run Motion Sensor Data Fusion algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & Structure containing input data \\
+\hline
+{\em data\+\_\+out} & Structure containing output data \\
+\hline
+{\em delta\+\_\+time} & Delta time \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00094}{94}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b}\label{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_start\_6X@{MotionFX\_manager\_start\_6X}}
+\index{MotionFX\_manager\_start\_6X@{MotionFX\_manager\_start\_6X}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_start\_6X()}{MotionFX\_manager\_start\_6X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+start\+\_\+6X (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Start 6 axes Motion\+FX engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00112}{112}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03}\label{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_start\_9X@{MotionFX\_manager\_start\_9X}}
+\index{MotionFX\_manager\_start\_9X@{MotionFX\_manager\_start\_9X}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_start\_9X()}{MotionFX\_manager\_start\_9X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+start\+\_\+9X (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Start 9 axes Motion\+FX engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00132}{132}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9}\label{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_stop\_6X@{MotionFX\_manager\_stop\_6X}}
+\index{MotionFX\_manager\_stop\_6X@{MotionFX\_manager\_stop\_6X}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_stop\_6X()}{MotionFX\_manager\_stop\_6X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+stop\+\_\+6X (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop 6 axes Motion\+FX engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00122}{122}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef}\label{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_manager\_stop\_9X@{MotionFX\_manager\_stop\_9X}}
+\index{MotionFX\_manager\_stop\_9X@{MotionFX\_manager\_stop\_9X}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_manager\_stop\_9X()}{MotionFX\_manager\_stop\_9X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+manager\+\_\+stop\+\_\+9X (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop 9 axes Motion\+FX engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00142}{142}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+
+\Hypertarget{group__DATALOG__FUSION_ga6e6d0d1a369699ba3281be0586586eab}\label{group__DATALOG__FUSION_ga6e6d0d1a369699ba3281be0586586eab} 
+\index{DATALOG FUSION@{DATALOG FUSION}!MotionFX\_SaveMagCalInNVM@{MotionFX\_SaveMagCalInNVM}}
+\index{MotionFX\_SaveMagCalInNVM@{MotionFX\_SaveMagCalInNVM}!DATALOG FUSION@{DATALOG FUSION}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_SaveMagCalInNVM()}{MotionFX\_SaveMagCalInNVM()}}
+{\footnotesize\ttfamily char Motion\+FX\+\_\+\+Save\+Mag\+Cal\+In\+NVM (\begin{DoxyParamCaption}\item[{unsigned short int}]{data\+Size,  }\item[{unsigned int \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Save calibration parameter to memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Size} & length ot the data \\
+\hline
+{\em data} & pointer to the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em (1)} & fail, (0) success \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{motion__fx__manager_8c_source_l00206}{206}} of file \mbox{\hyperlink{motion__fx__manager_8c_source}{motion\+\_\+fx\+\_\+manager.\+c}}.
+

@@ -1,0 +1,145 @@
+\doxysubsubsection{MOTION\+\_\+\+AC\+\_\+\+Exported\+\_\+\+Functions}
+\hypertarget{group__MOTION__AC__Exported__Functions}{}\label{group__MOTION__AC__Exported__Functions}\index{MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}}
+\doxysubsubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga52bc2585704ebfb9c595f9a53966df8a}{Motion\+AC\+\_\+\+Initialize}} (uint8\+\_\+t enable)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+AC engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga72a146dc1767c0daa89013a7720b2aca}{Motion\+AC\+\_\+\+Update}} (\mbox{\hyperlink{structMAC__input__t}{MAC\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, uint8\+\_\+t \texorpdfstring{$\ast$}{*}is\+\_\+calibrated)
+\begin{DoxyCompactList}\small\item\em Run accelerometer calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_gad8d23d08e39aa29bf4055043b51a5ad3}{Motion\+AC\+\_\+\+Get\+Cal\+Params}} (\mbox{\hyperlink{structMAC__output__t}{MAC\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Get the accelerometer compensation parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga57a17ac719ed37bfe1bf76a2e4475f57}{Motion\+AC\+\_\+\+Get\+Knobs}} (\mbox{\hyperlink{structMAC__knobs__t}{MAC\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Get current knobs settings. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_gab623cba691503146270881c12d464074}{Motion\+AC\+\_\+\+Set\+Knobs}} (\mbox{\hyperlink{structMAC__knobs__t}{MAC\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Set new knobs settings. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__AC__Exported__Functions_ga30185b266ae6d52b5369a69fb90daeb8}{Motion\+AC\+\_\+\+Get\+Lib\+Version}} (char \texorpdfstring{$\ast$}{*}version)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsection{Function Documentation}
+\Hypertarget{group__MOTION__AC__Exported__Functions_gad8d23d08e39aa29bf4055043b51a5ad3}\label{group__MOTION__AC__Exported__Functions_gad8d23d08e39aa29bf4055043b51a5ad3} 
+\index{MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}!MotionAC\_GetCalParams@{MotionAC\_GetCalParams}}
+\index{MotionAC\_GetCalParams@{MotionAC\_GetCalParams}!MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}}
+\doxysubsubsubsubsection{\texorpdfstring{MotionAC\_GetCalParams()}{MotionAC\_GetCalParams()}}
+{\footnotesize\ttfamily void Motion\+AC\+\_\+\+Get\+Cal\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMAC__output__t}{MAC\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Get the accelerometer compensation parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & pointer to actual accelerometer offset \mbox{[}g\mbox{]}, scale factor correction matrix \mbox{[}-\/\mbox{]} and quality factor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__AC__Exported__Functions_ga57a17ac719ed37bfe1bf76a2e4475f57}\label{group__MOTION__AC__Exported__Functions_ga57a17ac719ed37bfe1bf76a2e4475f57} 
+\index{MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}!MotionAC\_GetKnobs@{MotionAC\_GetKnobs}}
+\index{MotionAC\_GetKnobs@{MotionAC\_GetKnobs}!MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}}
+\doxysubsubsubsubsection{\texorpdfstring{MotionAC\_GetKnobs()}{MotionAC\_GetKnobs()}}
+{\footnotesize\ttfamily void Motion\+AC\+\_\+\+Get\+Knobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMAC__knobs__t}{MAC\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{knobs }\end{DoxyParamCaption})}
+
+
+
+Get current knobs settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em knobs} & pointer to current knobs settings \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__AC__Exported__Functions_ga30185b266ae6d52b5369a69fb90daeb8}\label{group__MOTION__AC__Exported__Functions_ga30185b266ae6d52b5369a69fb90daeb8} 
+\index{MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}!MotionAC\_GetLibVersion@{MotionAC\_GetLibVersion}}
+\index{MotionAC\_GetLibVersion@{MotionAC\_GetLibVersion}!MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}}
+\doxysubsubsubsubsection{\texorpdfstring{MotionAC\_GetLibVersion()}{MotionAC\_GetLibVersion()}}
+{\footnotesize\ttfamily uint8\+\_\+t Motion\+AC\+\_\+\+Get\+Lib\+Version (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{version }\end{DoxyParamCaption})}
+
+
+
+Get the library version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & pointer to an array of 35 char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Number} & of characters in the version string \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__AC__Exported__Functions_ga52bc2585704ebfb9c595f9a53966df8a}\label{group__MOTION__AC__Exported__Functions_ga52bc2585704ebfb9c595f9a53966df8a} 
+\index{MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}!MotionAC\_Initialize@{MotionAC\_Initialize}}
+\index{MotionAC\_Initialize@{MotionAC\_Initialize}!MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}}
+\doxysubsubsubsubsection{\texorpdfstring{MotionAC\_Initialize()}{MotionAC\_Initialize()}}
+{\footnotesize\ttfamily void Motion\+AC\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{enable }\end{DoxyParamCaption})}
+
+
+
+Initialize the Motion\+AC engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & enable or disable the library \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__AC__Exported__Functions_gab623cba691503146270881c12d464074}\label{group__MOTION__AC__Exported__Functions_gab623cba691503146270881c12d464074} 
+\index{MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}!MotionAC\_SetKnobs@{MotionAC\_SetKnobs}}
+\index{MotionAC\_SetKnobs@{MotionAC\_SetKnobs}!MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}}
+\doxysubsubsubsubsection{\texorpdfstring{MotionAC\_SetKnobs()}{MotionAC\_SetKnobs()}}
+{\footnotesize\ttfamily uint8\+\_\+t Motion\+AC\+\_\+\+Set\+Knobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMAC__knobs__t}{MAC\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{knobs }\end{DoxyParamCaption})}
+
+
+
+Set new knobs settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em knobs} & pointer to new knobs settings \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if success =\texorpdfstring{$>$}{>} library is running, 0 otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__AC__Exported__Functions_ga72a146dc1767c0daa89013a7720b2aca}\label{group__MOTION__AC__Exported__Functions_ga72a146dc1767c0daa89013a7720b2aca} 
+\index{MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}!MotionAC\_Update@{MotionAC\_Update}}
+\index{MotionAC\_Update@{MotionAC\_Update}!MOTION\_AC\_Exported\_Functions@{MOTION\_AC\_Exported\_Functions}}
+\doxysubsubsubsubsection{\texorpdfstring{MotionAC\_Update()}{MotionAC\_Update()}}
+{\footnotesize\ttfamily void Motion\+AC\+\_\+\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMAC__input__t}{MAC\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{is\+\_\+calibrated }\end{DoxyParamCaption})}
+
+
+
+Run accelerometer calibration algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & pointer to acceleration \mbox{[}g\mbox{]} and timestamp values \mbox{[}ms\mbox{]} \\
+\hline
+{\em is\+\_\+calibrated} & pointer value returns 1 if calibration is done with current sample, 0 otherwise \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

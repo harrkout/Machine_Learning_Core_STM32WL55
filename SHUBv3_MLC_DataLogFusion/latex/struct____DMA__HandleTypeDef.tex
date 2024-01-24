@@ -1,0 +1,262 @@
+\doxysection{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def Struct Reference}
+\hypertarget{struct____DMA__HandleTypeDef}{}\label{struct____DMA__HandleTypeDef}\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+
+
+DMA handle Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32wlxx\+\_\+hal\+\_\+dma.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structDMA__Channel__TypeDef}{DMA\+\_\+\+Channel\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}{Instance}}
+\item 
+\mbox{\hyperlink{structDMA__InitTypeDef}{DMA\+\_\+\+Init\+Type\+Def}} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}{Init}}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\+\_\+\+Lock\+Type\+Def}} \mbox{\hyperlink{struct____DMA__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}{Lock}}
+\item 
+\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group__DMA__Exported__Types_ga9c012af359987a240826f29073bbe463}{HAL\+\_\+\+DMA\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}{State}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a6ee5f2130887847bbc051932ea43b73d}{Parent}}
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}{Xfer\+Cplt\+Callback}} )(struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}{Xfer\+Half\+Cplt\+Callback}} )(struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}{Xfer\+Error\+Callback}} )(struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}{Xfer\+Abort\+Callback}} )(struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)
+\item 
+\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{Error\+Code}}
+\item 
+\mbox{\hyperlink{structDMA__TypeDef}{DMA\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}{Dma\+Base\+Address}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}{Channel\+Index}}
+\item 
+\mbox{\hyperlink{structDMAMUX__Channel__TypeDef}{DMAMUX\+\_\+\+Channel\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}{DMAmux\+Channel}}
+\item 
+\mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef}{DMAMUX\+\_\+\+Channel\+Status\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}{DMAmux\+Channel\+Status}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}{DMAmux\+Channel\+Status\+Mask}}
+\item 
+\mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef}{DMAMUX\+\_\+\+Request\+Gen\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}{DMAmux\+Request\+Gen}}
+\item 
+\mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef}{DMAMUX\+\_\+\+Request\+Gen\+Status\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}{DMAmux\+Request\+Gen\+Status}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}{DMAmux\+Request\+Gen\+Status\+Mask}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DMA handle Structure definition. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00113}{113}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31}\label{struct____DMA__HandleTypeDef_ae2d85e64eb57a8bccd3f70e74db09c31} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!ChannelIndex@{ChannelIndex}}
+\index{ChannelIndex@{ChannelIndex}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{ChannelIndex}{ChannelIndex}}
+{\footnotesize\ttfamily uint32\+\_\+t Channel\+Index}
+
+DMA Channel Index ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00137}{137}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992}\label{struct____DMA__HandleTypeDef_adaadecc05539a447843606e1e511d992} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DmaBaseAddress@{DmaBaseAddress}}
+\index{DmaBaseAddress@{DmaBaseAddress}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DmaBaseAddress}{DmaBaseAddress}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDMA__TypeDef}{DMA\+\_\+\+Type\+Def}}\texorpdfstring{$\ast$}{*} Dma\+Base\+Address}
+
+DMA Channel Base Address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00135}{135}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb}\label{struct____DMA__HandleTypeDef_a63aa7a453f14433a93bfc300db7e8eeb} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxChannel@{DMAmuxChannel}}
+\index{DMAmuxChannel@{DMAmuxChannel}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxChannel}{DMAmuxChannel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDMAMUX__Channel__TypeDef}{DMAMUX\+\_\+\+Channel\+\_\+\+Type\+Def}}\texorpdfstring{$\ast$}{*} DMAmux\+Channel}
+
+Register base address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00139}{139}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93}\label{struct____DMA__HandleTypeDef_a382fc8a5a3c3eb587b7c75ece3448c93} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxChannelStatus@{DMAmuxChannelStatus}}
+\index{DMAmuxChannelStatus@{DMAmuxChannelStatus}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxChannelStatus}{DMAmuxChannelStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDMAMUX__ChannelStatus__TypeDef}{DMAMUX\+\_\+\+Channel\+Status\+\_\+\+Type\+Def}}\texorpdfstring{$\ast$}{*} DMAmux\+Channel\+Status}
+
+DMAMUX Channels Status Base Address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00141}{141}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984}\label{struct____DMA__HandleTypeDef_aa96798fa1c9d4cb63d4f80835de42984} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxChannelStatusMask@{DMAmuxChannelStatusMask}}
+\index{DMAmuxChannelStatusMask@{DMAmuxChannelStatusMask}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxChannelStatusMask}{DMAmuxChannelStatusMask}}
+{\footnotesize\ttfamily uint32\+\_\+t DMAmux\+Channel\+Status\+Mask}
+
+DMAMUX Channel Status Mask ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00143}{143}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83}\label{struct____DMA__HandleTypeDef_a7a9b5a2cdc6c1f7adbba53d8e4d86b83} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxRequestGen@{DMAmuxRequestGen}}
+\index{DMAmuxRequestGen@{DMAmuxRequestGen}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxRequestGen}{DMAmuxRequestGen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDMAMUX__RequestGen__TypeDef}{DMAMUX\+\_\+\+Request\+Gen\+\_\+\+Type\+Def}}\texorpdfstring{$\ast$}{*} DMAmux\+Request\+Gen}
+
+DMAMUX request generator Base Address 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00145}{145}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010}\label{struct____DMA__HandleTypeDef_ad3f4a59882ebacecb280c8569c9e9010} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxRequestGenStatus@{DMAmuxRequestGenStatus}}
+\index{DMAmuxRequestGenStatus@{DMAmuxRequestGenStatus}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxRequestGenStatus}{DMAmuxRequestGenStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDMAMUX__RequestGenStatus__TypeDef}{DMAMUX\+\_\+\+Request\+Gen\+Status\+\_\+\+Type\+Def}}\texorpdfstring{$\ast$}{*} DMAmux\+Request\+Gen\+Status}
+
+DMAMUX request generator Address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00147}{147}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02}\label{struct____DMA__HandleTypeDef_a38f76cde279730ad689ac03a85fffc02} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxRequestGenStatusMask@{DMAmuxRequestGenStatusMask}}
+\index{DMAmuxRequestGenStatusMask@{DMAmuxRequestGenStatusMask}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxRequestGenStatusMask}{DMAmuxRequestGenStatusMask}}
+{\footnotesize\ttfamily uint32\+\_\+t DMAmux\+Request\+Gen\+Status\+Mask}
+
+DMAMUX request generator Status mask ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00149}{149}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}\label{struct____DMA__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t Error\+Code}
+
+DMA Error code ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00133}{133}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62}\label{struct____DMA__HandleTypeDef_a4352c7144ad5e1e4ab54a87d3be6eb62} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDMA__InitTypeDef}{DMA\+\_\+\+Init\+Type\+Def}} Init}
+
+DMA communication parameters ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00117}{117}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b}\label{struct____DMA__HandleTypeDef_adc5940b5bbf1fc712118cd40ff3ea69b} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDMA__Channel__TypeDef}{DMA\+\_\+\+Channel\+\_\+\+Type\+Def}}\texorpdfstring{$\ast$}{*} Instance}
+
+Register base address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00115}{115}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}\label{struct____DMA__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32wlxx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\+\_\+\+Lock\+Type\+Def}} Lock}
+
+DMA locking object ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00119}{119}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a6ee5f2130887847bbc051932ea43b73d}\label{struct____DMA__HandleTypeDef_a6ee5f2130887847bbc051932ea43b73d} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Parent@{Parent}}
+\index{Parent@{Parent}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Parent}{Parent}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} Parent}
+
+Parent object state ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00123}{123}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8}\label{struct____DMA__HandleTypeDef_a2263083d2bfa96222f3d7b8339c6faf8} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!State@{State}}
+\index{State@{State}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group__DMA__Exported__Types_ga9c012af359987a240826f29073bbe463}{HAL\+\_\+\+DMA\+\_\+\+State\+Type\+Def}} State}
+
+DMA transfer state ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00121}{121}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d}\label{struct____DMA__HandleTypeDef_a6253dc8680e566bbc244228374dd647d} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferAbortCallback@{XferAbortCallback}}
+\index{XferAbortCallback@{XferAbortCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferAbortCallback}{XferAbortCallback}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} Xfer\+Abort\+Callback) (struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)}
+
+DMA transfer abort callback ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00131}{131}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864}\label{struct____DMA__HandleTypeDef_a3d7716d1d7a5717f09525efd19334864} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferCpltCallback@{XferCpltCallback}}
+\index{XferCpltCallback@{XferCpltCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferCpltCallback}{XferCpltCallback}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} Xfer\+Cplt\+Callback) (struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)}
+
+DMA transfer complete callback ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00125}{125}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0}\label{struct____DMA__HandleTypeDef_a695c6fe664a7baf827e461652ebdb9e0} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferErrorCallback@{XferErrorCallback}}
+\index{XferErrorCallback@{XferErrorCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferErrorCallback}{XferErrorCallback}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} Xfer\+Error\+Callback) (struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)}
+
+DMA transfer error callback ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00129}{129}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+\Hypertarget{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a}\label{struct____DMA__HandleTypeDef_aea6af14bab20d3f9a82f08df1abea01a} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferHalfCpltCallback@{XferHalfCpltCallback}}
+\index{XferHalfCpltCallback@{XferHalfCpltCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferHalfCpltCallback}{XferHalfCpltCallback}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} Xfer\+Half\+Cplt\+Callback) (struct \mbox{\hyperlink{struct____DMA__HandleTypeDef}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)}
+
+DMA Half transfer complete callback ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source_l00127}{127}} of file \mbox{\hyperlink{stm32wlxx__hal__dma_8h_source}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32wlxx__hal__dma_8h}{stm32wlxx\+\_\+hal\+\_\+dma.\+h}}\end{DoxyCompactItemize}

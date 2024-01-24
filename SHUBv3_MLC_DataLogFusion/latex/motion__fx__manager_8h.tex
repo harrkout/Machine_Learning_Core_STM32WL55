@@ -1,0 +1,54 @@
+\doxysection{MEMS/\+Target/motion\+\_\+fx\+\_\+manager.h File Reference}
+\hypertarget{motion__fx__manager_8h}{}\label{motion__fx__manager_8h}\index{MEMS/Target/motion\_fx\_manager.h@{MEMS/Target/motion\_fx\_manager.h}}
+
+
+This file contains definitions for the \doxylink{motion__fx__manager_8c}{motion\+\_\+fx\+\_\+manager.\+c} file.  
+
+
+{\ttfamily \#include "{}string.\+h"{}}\newline
+{\ttfamily \#include "{}motion\+\_\+fx.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga0ee2e2b7eb7d1b9a0e4ac6e9e76ec66c}{Motion\+FX\+\_\+manager\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gad0f84309b27041796341a83b4aaff5d7}{Motion\+FX\+\_\+manager\+\_\+run}} (\mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, \mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, float delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Run Motion Sensor Data Fusion algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b}{Motion\+FX\+\_\+manager\+\_\+start\+\_\+6X}} (void)
+\begin{DoxyCompactList}\small\item\em Start 6 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9}{Motion\+FX\+\_\+manager\+\_\+stop\+\_\+6X}} (void)
+\begin{DoxyCompactList}\small\item\em Stop 6 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03}{Motion\+FX\+\_\+manager\+\_\+start\+\_\+9X}} (void)
+\begin{DoxyCompactList}\small\item\em Start 9 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef}{Motion\+FX\+\_\+manager\+\_\+stop\+\_\+9X}} (void)
+\begin{DoxyCompactList}\small\item\em Stop 9 axes Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e}{Motion\+FX\+\_\+manager\+\_\+get\+\_\+version}} (char \texorpdfstring{$\ast$}{*}version, int \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gabf081bdf9df90c8bf1341346c7186cd7}{Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+run}} (\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, \mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Run magnetometer calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_ga6997aefa86be797fecde7d1221ef1703}{Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+start}} (int sampletime)
+\begin{DoxyCompactList}\small\item\em Start magnetometer calibration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DATALOG__FUSION_gaf9afa8abcc8f404e2996c3fe9f5a92a5}{Motion\+FX\+\_\+manager\+\_\+\+Mag\+Cal\+\_\+stop}} (int sampletime)
+\begin{DoxyCompactList}\small\item\em Stop magnetometer calibration. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group__DATALOG__FUSION_gac63a393f1993db7c79e6a49b86bd2afc}{Motion\+FX\+\_\+\+Load\+Mag\+Cal\+From\+NVM}} (unsigned short int data\+Size, unsigned int \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Load calibration parameter from memory. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group__DATALOG__FUSION_ga6e6d0d1a369699ba3281be0586586eab}{Motion\+FX\+\_\+\+Save\+Mag\+Cal\+In\+NVM}} (unsigned short int data\+Size, unsigned int \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Save calibration parameter to memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains definitions for the \doxylink{motion__fx__manager_8c}{motion\+\_\+fx\+\_\+manager.\+c} file. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{motion__fx__manager_8h_source}{motion\+\_\+fx\+\_\+manager.\+h}}.
+

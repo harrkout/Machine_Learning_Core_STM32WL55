@@ -1,0 +1,28 @@
+var structPWR__TypeDef =
+[
+    [ "C2CR1", "structPWR__TypeDef.html#aacce4e99fd4d45862a1f81251abf9457", null ],
+    [ "C2CR3", "structPWR__TypeDef.html#aac08e044942a48e01334e4fa5e56bba3", null ],
+    [ "CR1", "structPWR__TypeDef.html#ab0ec7102960640751d44e92ddac994f0", null ],
+    [ "CR2", "structPWR__TypeDef.html#afdfa307571967afb1d97943e982b6586", null ],
+    [ "CR3", "structPWR__TypeDef.html#add5b8e29a64c55dcd65ca4201118e9d1", null ],
+    [ "CR4", "structPWR__TypeDef.html#aad73b4746976ca75f784db4062482f07", null ],
+    [ "CR5", "structPWR__TypeDef.html#a0bbbf567fcfbb44116c5ae184dca8b58", null ],
+    [ "EXTSCR", "structPWR__TypeDef.html#a5307ccc16bd5ea41c2d7ee3821588e28", null ],
+    [ "PDCRA", "structPWR__TypeDef.html#a2676bf9a592b8a6befd85ae98ea597b0", null ],
+    [ "PDCRB", "structPWR__TypeDef.html#a1bc6c88bc9f84bd8b0f527cb86bfabe0", null ],
+    [ "PDCRC", "structPWR__TypeDef.html#a8b419b22309c807ea4e6f1121c1afc12", null ],
+    [ "PDCRH", "structPWR__TypeDef.html#a331f512e0a904c7e356e9ab2a7c1769f", null ],
+    [ "PUCRA", "structPWR__TypeDef.html#aeead890c47f378dffcb852b99d303ee6", null ],
+    [ "PUCRB", "structPWR__TypeDef.html#ab72f8959a6bd611677cd4afbe9cf07d9", null ],
+    [ "PUCRC", "structPWR__TypeDef.html#a5c4eba2c90ea7bf1ceb653301a77e8bf", null ],
+    [ "PUCRH", "structPWR__TypeDef.html#a83c60692b67555ed20c6ea990698242e", null ],
+    [ "RESERVED0", "structPWR__TypeDef.html#a9d4fec652de15d2b4ea87fa1b80ec82c", null ],
+    [ "RESERVED1", "structPWR__TypeDef.html#a005fc2236e87de1efbef0fbd506ab5a1", null ],
+    [ "RESERVED2", "structPWR__TypeDef.html#a4c9b972a304c0e08ca27cbe57627c496", null ],
+    [ "RSSCMDR", "structPWR__TypeDef.html#aba7e25109836cea76da27f3aeed47c4a", null ],
+    [ "SCR", "structPWR__TypeDef.html#a64a95891ad3e904dd5548112539c1c98", null ],
+    [ "SECCFGR", "structPWR__TypeDef.html#af02167f064f76326d181f4456aa92647", null ],
+    [ "SR1", "structPWR__TypeDef.html#acefca4fd83c4b7846ae6d3cfe7bb8df9", null ],
+    [ "SR2", "structPWR__TypeDef.html#a89623ee198737b29dc0a803310605a83", null ],
+    [ "SUBGHZSPICR", "structPWR__TypeDef.html#a01da8362dc3687f77323c3e64734d21f", null ]
+];

@@ -1,0 +1,45 @@
+\doxysection{motion\+\_\+fx\+\_\+manager.\+h}
+\hypertarget{motion__fx__manager_8h_source}{}\label{motion__fx__manager_8h_source}\index{MEMS/Target/motion\_fx\_manager.h@{MEMS/Target/motion\_fx\_manager.h}}
+\mbox{\hyperlink{motion__fx__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00019}00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ MOTION\_FX\_MANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ MOTION\_FX\_MANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00024}00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00027}00027\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}string.h"{}}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{motion__fx_8h}{motion\_fx.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00032}00032\ \textcolor{comment}{/*\ Extern\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00033}00033\ \textcolor{comment}{/*\ Exported\ Macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00034}00034\ \textcolor{comment}{/*\ Exported\ Types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00035}00035\ \textcolor{comment}{/*\ Imported\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00036}00036\ \textcolor{comment}{/*\ Exported\ Functions\ Prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga0ee2e2b7eb7d1b9a0e4ac6e9e76ec66c}{MotionFX\_manager\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00038}00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gad0f84309b27041796341a83b4aaff5d7}{MotionFX\_manager\_run}}(\mbox{\hyperlink{structMFX__input__t}{MFX\_input\_t}}\ *data\_in,\ \mbox{\hyperlink{structMFX__output__t}{MFX\_output\_t}}\ *data\_out,\ \textcolor{keywordtype}{float}\ delta\_time);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00039}00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b}{MotionFX\_manager\_start\_6X}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00040}00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9}{MotionFX\_manager\_stop\_6X}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00041}00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03}{MotionFX\_manager\_start\_9X}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00042}00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef}{MotionFX\_manager\_stop\_9X}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00043}00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e}{MotionFX\_manager\_get\_version}}(\textcolor{keywordtype}{char}\ *version,\ \textcolor{keywordtype}{int}\ *length);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00044}00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gabf081bdf9df90c8bf1341346c7186cd7}{MotionFX\_manager\_MagCal\_run}}(\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\_MagCal\_input\_t}}\ *data\_in,\ \mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\_MagCal\_output\_t}}\ *data\_out);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00045}00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga6997aefa86be797fecde7d1221ef1703}{MotionFX\_manager\_MagCal\_start}}(\textcolor{keywordtype}{int}\ sampletime);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00046}00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gaf9afa8abcc8f404e2996c3fe9f5a92a5}{MotionFX\_manager\_MagCal\_stop}}(\textcolor{keywordtype}{int}\ sampletime);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00048}00048\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{group__DATALOG__FUSION_gac63a393f1993db7c79e6a49b86bd2afc}{MotionFX\_LoadMagCalFromNVM}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ dataSize,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *data);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00049}00049\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga6e6d0d1a369699ba3281be0586586eab}{MotionFX\_SaveMagCalInNVM}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ dataSize,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *data);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00051}00051\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MOTION\_FX\_MANAGER\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8h_source_l00056}00056\ }
+
+\end{DoxyCode}

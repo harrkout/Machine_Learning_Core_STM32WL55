@@ -1,0 +1,360 @@
+\doxysection{MEMS/\+App/app\+\_\+mems.c File Reference}
+\hypertarget{app__mems_8c}{}\label{app__mems_8c}\index{MEMS/App/app\_mems.c@{MEMS/App/app\_mems.c}}
+{\ttfamily \#include "{}app\+\_\+mems.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+nucleo.\+h"{}}\newline
+{\ttfamily \#include "{}com.\+h"{}}\newline
+{\ttfamily \#include "{}demo\+\_\+serial.\+h"{}}\newline
+{\ttfamily \#include "{}bsp\+\_\+ip\+\_\+conf.\+h"{}}\newline
+{\ttfamily \#include "{}fw\+\_\+version.\+h"{}}\newline
+{\ttfamily \#include "{}motion\+\_\+fx\+\_\+manager.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a9161c758bc6c9b4b279e5ea718366853}{DWT\+\_\+\+LAR\+\_\+\+KEY}}~0x\+C5\+ACCE55 /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__CMSIS__CORE_gabbe5a060185e1d5afa3f85b14e10a6ce}{DWT}} register unlock key \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}{ALGO\+\_\+\+FREQ}}~100U /\texorpdfstring{$\ast$}{*} Algorithm frequency 100\+Hz \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a8f70d036e0fc3127bbd1ac81e241d110}{ACC\+\_\+\+ODR}}~((float)\mbox{\hyperlink{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}{ALGO\+\_\+\+FREQ}})
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a252265fa37d1f7abc418892c120aa31e}{ACC\+\_\+\+FS}}~4 /\texorpdfstring{$\ast$}{*} FS = $<$-\/4g, 4g$>$ \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a373abc713bbd437ade78818a5e6e29b3}{ALGO\+\_\+\+PERIOD}}~(1000U / \mbox{\hyperlink{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}{ALGO\+\_\+\+FREQ}}) /\texorpdfstring{$\ast$}{*} Algorithm period \mbox{[}ms\mbox{]} \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a5b46ea694cf31dca40d50c909f6f2f11}{MOTION\+\_\+\+FX\+\_\+\+ENGINE\+\_\+\+DELTATIME}}~0.\+01f
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a7f934aa421eac0827bc822f0895e1373}{FROM\+\_\+\+MG\+\_\+\+TO\+\_\+G}}~0.\+001f
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a879f00e4614cda1cb0fb05c1e2cbd6e3}{FROM\+\_\+\+G\+\_\+\+TO\+\_\+\+MG}}~1000.\+0f
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_afda805e7cba4e414e3701842d7561b9e}{FROM\+\_\+\+MDPS\+\_\+\+TO\+\_\+\+DPS}}~0.\+001f
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_ae0227335959b343a2e074901696dacf3}{FROM\+\_\+\+DPS\+\_\+\+TO\+\_\+\+MDPS}}~1000.\+0f
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a4655699f525a7f2e65974d8f3272a60f}{FROM\+\_\+\+MGAUSS\+\_\+\+TO\+\_\+\+UT50}}~(0.\+1f/50.\+0f)
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a36fa4604b0888755a20c1a9a45efc7ab}{FROM\+\_\+\+UT50\+\_\+\+TO\+\_\+\+MGAUSS}}~500.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{app__mems_8c_a366fad6b5f3194944230fa746def0ef1}{MX\+\_\+\+MEMS\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9}{MX\+\_\+\+MEMS\+\_\+\+Process}} (void)
+\item 
+void \mbox{\hyperlink{group__TIM__Exported__Functions__Group9_ga8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga6b81100f595935ad2744a6b09a3e52e1}{BSP\+\_\+\+PB\+\_\+\+Callback}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} Button)
+\begin{DoxyCompactList}\small\item\em BSP Push Button callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{app__mems_8c_ab54d52fbda5cdd117c7a755f454261de}{Data\+Logger\+Active}} = 0
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{Sensors\+Enabled}} = 0
+\item 
+char \mbox{\hyperlink{app__mems_8c_a9a7b0f6fa9a071b054aaf3c80809190f}{Lib\+Version}} \mbox{[}35\mbox{]}
+\item 
+int \mbox{\hyperlink{app__mems_8c_a1a06d395643c67dd145ef7ad04efde13}{Lib\+Version\+Len}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{app__mems_8c_ad278b2f8cb00c50b308dd75c344809d1}{Sensor\+Read\+Request}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d}{Use\+Offline\+Data}} = 0
+\item 
+\mbox{\hyperlink{structoffline__data__t}{offline\+\_\+data\+\_\+t}} \mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{Offline\+Data}} \mbox{[}\mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\+\_\+\+DATA\+\_\+\+SIZE}}\mbox{]}
+\item 
+int \mbox{\hyperlink{app__mems_8c_a817193084d8fcde8c84785b4e2c36729}{Offline\+Data\+Read\+Index}} = 0
+\item 
+int \mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{Offline\+Data\+Write\+Index}} = 0
+\item 
+int \mbox{\hyperlink{app__mems_8c_a326ea7f09480d172d9d51e2b126081d9}{Offline\+Data\+Count}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{app__mems_8c_ac4a4343c5345def8433286e074933a9c}{Algo\+Freq}} = \mbox{\hyperlink{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}{ALGO\+\_\+\+FREQ}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{app__mems_8c_af985acaf29e3e7402e0eae16e022745f}{Enabled6X}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{app__mems_8c_a252265fa37d1f7abc418892c120aa31e}\label{app__mems_8c_a252265fa37d1f7abc418892c120aa31e} 
+\index{app\_mems.c@{app\_mems.c}!ACC\_FS@{ACC\_FS}}
+\index{ACC\_FS@{ACC\_FS}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{ACC\_FS}{ACC\_FS}}
+{\footnotesize\ttfamily \#define ACC\+\_\+\+FS~4 /\texorpdfstring{$\ast$}{*} FS = $<$-\/4g, 4g$>$ \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00041}{41}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a8f70d036e0fc3127bbd1ac81e241d110}\label{app__mems_8c_a8f70d036e0fc3127bbd1ac81e241d110} 
+\index{app\_mems.c@{app\_mems.c}!ACC\_ODR@{ACC\_ODR}}
+\index{ACC\_ODR@{ACC\_ODR}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{ACC\_ODR}{ACC\_ODR}}
+{\footnotesize\ttfamily \#define ACC\+\_\+\+ODR~((float)\mbox{\hyperlink{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}{ALGO\+\_\+\+FREQ}})}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00040}{40}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}\label{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8} 
+\index{app\_mems.c@{app\_mems.c}!ALGO\_FREQ@{ALGO\_FREQ}}
+\index{ALGO\_FREQ@{ALGO\_FREQ}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{ALGO\_FREQ}{ALGO\_FREQ}}
+{\footnotesize\ttfamily \#define ALGO\+\_\+\+FREQ~100U /\texorpdfstring{$\ast$}{*} Algorithm frequency 100\+Hz \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00039}{39}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a373abc713bbd437ade78818a5e6e29b3}\label{app__mems_8c_a373abc713bbd437ade78818a5e6e29b3} 
+\index{app\_mems.c@{app\_mems.c}!ALGO\_PERIOD@{ALGO\_PERIOD}}
+\index{ALGO\_PERIOD@{ALGO\_PERIOD}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{ALGO\_PERIOD}{ALGO\_PERIOD}}
+{\footnotesize\ttfamily \#define ALGO\+\_\+\+PERIOD~(1000U / \mbox{\hyperlink{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}{ALGO\+\_\+\+FREQ}}) /\texorpdfstring{$\ast$}{*} Algorithm period \mbox{[}ms\mbox{]} \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00042}{42}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a9161c758bc6c9b4b279e5ea718366853}\label{app__mems_8c_a9161c758bc6c9b4b279e5ea718366853} 
+\index{app\_mems.c@{app\_mems.c}!DWT\_LAR\_KEY@{DWT\_LAR\_KEY}}
+\index{DWT\_LAR\_KEY@{DWT\_LAR\_KEY}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{DWT\_LAR\_KEY}{DWT\_LAR\_KEY}}
+{\footnotesize\ttfamily \#define DWT\+\_\+\+LAR\+\_\+\+KEY~0x\+C5\+ACCE55 /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__CMSIS__CORE_gabbe5a060185e1d5afa3f85b14e10a6ce}{DWT}} register unlock key \texorpdfstring{$\ast$}{*}/}
+
+File Name \+: \doxylink{app__mems_8c}{app\+\_\+mems.\+c} Description \+: This file provides code for the configuration of the STMicroelectronics.\+X-\/\+CUBE-\/\+MEMS1.\+9.\+3.\+0 instances.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00038}{38}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_ae0227335959b343a2e074901696dacf3}\label{app__mems_8c_ae0227335959b343a2e074901696dacf3} 
+\index{app\_mems.c@{app\_mems.c}!FROM\_DPS\_TO\_MDPS@{FROM\_DPS\_TO\_MDPS}}
+\index{FROM\_DPS\_TO\_MDPS@{FROM\_DPS\_TO\_MDPS}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{FROM\_DPS\_TO\_MDPS}{FROM\_DPS\_TO\_MDPS}}
+{\footnotesize\ttfamily \#define FROM\+\_\+\+DPS\+\_\+\+TO\+\_\+\+MDPS~1000.\+0f}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00047}{47}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a879f00e4614cda1cb0fb05c1e2cbd6e3}\label{app__mems_8c_a879f00e4614cda1cb0fb05c1e2cbd6e3} 
+\index{app\_mems.c@{app\_mems.c}!FROM\_G\_TO\_MG@{FROM\_G\_TO\_MG}}
+\index{FROM\_G\_TO\_MG@{FROM\_G\_TO\_MG}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{FROM\_G\_TO\_MG}{FROM\_G\_TO\_MG}}
+{\footnotesize\ttfamily \#define FROM\+\_\+\+G\+\_\+\+TO\+\_\+\+MG~1000.\+0f}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00045}{45}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_afda805e7cba4e414e3701842d7561b9e}\label{app__mems_8c_afda805e7cba4e414e3701842d7561b9e} 
+\index{app\_mems.c@{app\_mems.c}!FROM\_MDPS\_TO\_DPS@{FROM\_MDPS\_TO\_DPS}}
+\index{FROM\_MDPS\_TO\_DPS@{FROM\_MDPS\_TO\_DPS}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{FROM\_MDPS\_TO\_DPS}{FROM\_MDPS\_TO\_DPS}}
+{\footnotesize\ttfamily \#define FROM\+\_\+\+MDPS\+\_\+\+TO\+\_\+\+DPS~0.\+001f}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00046}{46}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a7f934aa421eac0827bc822f0895e1373}\label{app__mems_8c_a7f934aa421eac0827bc822f0895e1373} 
+\index{app\_mems.c@{app\_mems.c}!FROM\_MG\_TO\_G@{FROM\_MG\_TO\_G}}
+\index{FROM\_MG\_TO\_G@{FROM\_MG\_TO\_G}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{FROM\_MG\_TO\_G}{FROM\_MG\_TO\_G}}
+{\footnotesize\ttfamily \#define FROM\+\_\+\+MG\+\_\+\+TO\+\_\+G~0.\+001f}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00044}{44}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a4655699f525a7f2e65974d8f3272a60f}\label{app__mems_8c_a4655699f525a7f2e65974d8f3272a60f} 
+\index{app\_mems.c@{app\_mems.c}!FROM\_MGAUSS\_TO\_UT50@{FROM\_MGAUSS\_TO\_UT50}}
+\index{FROM\_MGAUSS\_TO\_UT50@{FROM\_MGAUSS\_TO\_UT50}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{FROM\_MGAUSS\_TO\_UT50}{FROM\_MGAUSS\_TO\_UT50}}
+{\footnotesize\ttfamily \#define FROM\+\_\+\+MGAUSS\+\_\+\+TO\+\_\+\+UT50~(0.\+1f/50.\+0f)}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00048}{48}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a36fa4604b0888755a20c1a9a45efc7ab}\label{app__mems_8c_a36fa4604b0888755a20c1a9a45efc7ab} 
+\index{app\_mems.c@{app\_mems.c}!FROM\_UT50\_TO\_MGAUSS@{FROM\_UT50\_TO\_MGAUSS}}
+\index{FROM\_UT50\_TO\_MGAUSS@{FROM\_UT50\_TO\_MGAUSS}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{FROM\_UT50\_TO\_MGAUSS}{FROM\_UT50\_TO\_MGAUSS}}
+{\footnotesize\ttfamily \#define FROM\+\_\+\+UT50\+\_\+\+TO\+\_\+\+MGAUSS~500.\+0f}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00049}{49}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a5b46ea694cf31dca40d50c909f6f2f11}\label{app__mems_8c_a5b46ea694cf31dca40d50c909f6f2f11} 
+\index{app\_mems.c@{app\_mems.c}!MOTION\_FX\_ENGINE\_DELTATIME@{MOTION\_FX\_ENGINE\_DELTATIME}}
+\index{MOTION\_FX\_ENGINE\_DELTATIME@{MOTION\_FX\_ENGINE\_DELTATIME}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{MOTION\_FX\_ENGINE\_DELTATIME}{MOTION\_FX\_ENGINE\_DELTATIME}}
+{\footnotesize\ttfamily \#define MOTION\+\_\+\+FX\+\_\+\+ENGINE\+\_\+\+DELTATIME~0.\+01f}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00043}{43}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{app__mems_8c_a366fad6b5f3194944230fa746def0ef1}\label{app__mems_8c_a366fad6b5f3194944230fa746def0ef1} 
+\index{app\_mems.c@{app\_mems.c}!MX\_MEMS\_Init@{MX\_MEMS\_Init}}
+\index{MX\_MEMS\_Init@{MX\_MEMS\_Init}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{MX\_MEMS\_Init()}{MX\_MEMS\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+MEMS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+File Name \+: \doxylink{app__mems_8h}{app\+\_\+mems.\+h} Description \+: This file provides code for the configuration of the STMicroelectronics.\+X-\/\+CUBE-\/\+MEMS1.\+9.\+3.\+0 instances.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00102}{102}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9}\label{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9} 
+\index{app\_mems.c@{app\_mems.c}!MX\_MEMS\_Process@{MX\_MEMS\_Process}}
+\index{MX\_MEMS\_Process@{MX\_MEMS\_Process}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{MX\_MEMS\_Process()}{MX\_MEMS\_Process()}}
+{\footnotesize\ttfamily void MX\+\_\+\+MEMS\+\_\+\+Process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00124}{124}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{app__mems_8c_ac4a4343c5345def8433286e074933a9c}\label{app__mems_8c_ac4a4343c5345def8433286e074933a9c} 
+\index{app\_mems.c@{app\_mems.c}!AlgoFreq@{AlgoFreq}}
+\index{AlgoFreq@{AlgoFreq}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{AlgoFreq}{AlgoFreq}}
+{\footnotesize\ttfamily uint32\+\_\+t Algo\+Freq = \mbox{\hyperlink{app__mems_8c_ae5e3b7b015dc7b085e0932f2af23e7a8}{ALGO\+\_\+\+FREQ}}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00062}{62}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_ab54d52fbda5cdd117c7a755f454261de}\label{app__mems_8c_ab54d52fbda5cdd117c7a755f454261de} 
+\index{app\_mems.c@{app\_mems.c}!DataLoggerActive@{DataLoggerActive}}
+\index{DataLoggerActive@{DataLoggerActive}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{DataLoggerActive}{DataLoggerActive}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t Data\+Logger\+Active = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00052}{52}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_af985acaf29e3e7402e0eae16e022745f}\label{app__mems_8c_af985acaf29e3e7402e0eae16e022745f} 
+\index{app\_mems.c@{app\_mems.c}!Enabled6X@{Enabled6X}}
+\index{Enabled6X@{Enabled6X}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{Enabled6X}{Enabled6X}}
+{\footnotesize\ttfamily uint8\+\_\+t Enabled6X = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00063}{63}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a9a7b0f6fa9a071b054aaf3c80809190f}\label{app__mems_8c_a9a7b0f6fa9a071b054aaf3c80809190f} 
+\index{app\_mems.c@{app\_mems.c}!LibVersion@{LibVersion}}
+\index{LibVersion@{LibVersion}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{LibVersion}{LibVersion}}
+{\footnotesize\ttfamily char Lib\+Version\mbox{[}35\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00054}{54}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a1a06d395643c67dd145ef7ad04efde13}\label{app__mems_8c_a1a06d395643c67dd145ef7ad04efde13} 
+\index{app\_mems.c@{app\_mems.c}!LibVersionLen@{LibVersionLen}}
+\index{LibVersionLen@{LibVersionLen}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{LibVersionLen}{LibVersionLen}}
+{\footnotesize\ttfamily int Lib\+Version\+Len}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00055}{55}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a15062e472693f23c93a197f62398fe86}\label{app__mems_8c_a15062e472693f23c93a197f62398fe86} 
+\index{app\_mems.c@{app\_mems.c}!OfflineData@{OfflineData}}
+\index{OfflineData@{OfflineData}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{OfflineData}{OfflineData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structoffline__data__t}{offline\+\_\+data\+\_\+t}} Offline\+Data\mbox{[}\mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\+\_\+\+DATA\+\_\+\+SIZE}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00058}{58}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a326ea7f09480d172d9d51e2b126081d9}\label{app__mems_8c_a326ea7f09480d172d9d51e2b126081d9} 
+\index{app\_mems.c@{app\_mems.c}!OfflineDataCount@{OfflineDataCount}}
+\index{OfflineDataCount@{OfflineDataCount}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{OfflineDataCount}{OfflineDataCount}}
+{\footnotesize\ttfamily int Offline\+Data\+Count = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00061}{61}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a817193084d8fcde8c84785b4e2c36729}\label{app__mems_8c_a817193084d8fcde8c84785b4e2c36729} 
+\index{app\_mems.c@{app\_mems.c}!OfflineDataReadIndex@{OfflineDataReadIndex}}
+\index{OfflineDataReadIndex@{OfflineDataReadIndex}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{OfflineDataReadIndex}{OfflineDataReadIndex}}
+{\footnotesize\ttfamily int Offline\+Data\+Read\+Index = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00059}{59}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}\label{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313} 
+\index{app\_mems.c@{app\_mems.c}!OfflineDataWriteIndex@{OfflineDataWriteIndex}}
+\index{OfflineDataWriteIndex@{OfflineDataWriteIndex}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{OfflineDataWriteIndex}{OfflineDataWriteIndex}}
+{\footnotesize\ttfamily int Offline\+Data\+Write\+Index = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00060}{60}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_ad278b2f8cb00c50b308dd75c344809d1}\label{app__mems_8c_ad278b2f8cb00c50b308dd75c344809d1} 
+\index{app\_mems.c@{app\_mems.c}!SensorReadRequest@{SensorReadRequest}}
+\index{SensorReadRequest@{SensorReadRequest}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{SensorReadRequest}{SensorReadRequest}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t Sensor\+Read\+Request = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00056}{56}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}\label{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e} 
+\index{app\_mems.c@{app\_mems.c}!SensorsEnabled@{SensorsEnabled}}
+\index{SensorsEnabled@{SensorsEnabled}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{SensorsEnabled}{SensorsEnabled}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t Sensors\+Enabled = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00053}{53}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+\Hypertarget{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d}\label{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d} 
+\index{app\_mems.c@{app\_mems.c}!UseOfflineData@{UseOfflineData}}
+\index{UseOfflineData@{UseOfflineData}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{UseOfflineData}{UseOfflineData}}
+{\footnotesize\ttfamily uint8\+\_\+t Use\+Offline\+Data = 0}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00057}{57}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+

@@ -1,0 +1,244 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal.h File Reference}
+\hypertarget{stm32wlxx__hal_8h}{}\label{stm32wlxx__hal_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal.h}}
+
+
+This file contains all the functions prototypes for the HAL module driver.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+conf.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+ll\+\_\+system.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__BootMode_ga1cfa68f41fcdf064fe4f57424067581c}{SYSCFG\+\_\+\+BOOT\+\_\+\+MAINFLASH}}~LL\+\_\+\+SYSCFG\+\_\+\+REMAP\+\_\+\+FLASH
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__BootMode_ga603891dcd1d145e4ffbaa2873181974a}{SYSCFG\+\_\+\+BOOT\+\_\+\+SYSTEMFLASH}}~LL\+\_\+\+SYSCFG\+\_\+\+REMAP\+\_\+\+SYSTEMFLASH
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__BootMode_gab5f9d82b9c7af24984cb807d22ea0996}{SYSCFG\+\_\+\+BOOT\+\_\+\+SRAM}}~LL\+\_\+\+SYSCFG\+\_\+\+REMAP\+\_\+\+SRAM
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gabf00114107366b86ecc895eb8f446678}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE0}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE0
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gaeab24454164565d0c7d0804e662d5cf0}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE1}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE1
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga160dc565b877c28c5fd48100c0ac7e0e}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE2}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE2
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga4e0674a0159075b369331ddc45aaad3e}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE3}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE3
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga04709d7e7342fa629018c108d852f91b}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE4}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE4
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga03dc5630579fa65b1f76479c0a602836}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE5}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE5
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga821fde4958a1969d030e57e2b0c27e40}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE6}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE6
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga10a84fcc662c8fa4231866df804a74c5}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE7}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE7
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gab6c17a7ed209fc6f988b21925c581083}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE8}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE8
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga197fa949939da9833495acb9ad0ef6bc}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE9}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE9
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga27546c7bc5af1a57bef19044441cdb83}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE10}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE10
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga0c5ed2b18a68d5ba9d0bafb5eb53d951}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE11}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE11
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gaec862b4239d0fe86978dc390d4832e7a}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE12}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE12
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga14d023d5066f32742438ad70330c61f8}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE13}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE13
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga6e15abac64d43b73c5b00185671fd858}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE14}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE14
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga3744d7dec2d221402d7ded02cbb50905}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE15}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE15
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gad0934e5f7be36551e156d5b86b983b26}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE16}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE16
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gab388439dad5d364285e3032e46b54b27}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE17}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE17
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gae649836c99ac9e549474e1831ba47e18}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE18}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE18
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga231d5ca8880da6d8b399c239fcda53d1}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE19}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE19
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga888fb841d39662600728c6b73ba2d012}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE20}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE20
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga6d4476ec9a44fc433af1b479ef370fe9}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE21}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE21
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga0d70d29a9d5cdca694a98d5c0ef5421c}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE22}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE22
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga5cca2410a6c5542954aef0fdfa66a4ab}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE23}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE23
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gabd769ba84ee9abcd32ae90eb63f30c90}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE24}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE24
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga92cfb147482f9922b998830b01be450a}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE25}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE25
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga82686c0a4ca7df42c9f52dc019514eb0}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE26}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE26
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga67fd2f003fa5ba95b6c9c4115c4682c1}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE27}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE27
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga23b9697f3789fd4ae0fe45c086c13cbc}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE28}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE28
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga5125f8f293e4a2d5e83179b6ad2f3b79}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE29}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE29
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_gac788c2b56abc9687921ec2b4691652e0}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE30}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE30
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM2WRP_ga663eea4d9614236527b011739c2164ba}{SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE31}}~LL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE31
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM__flags__definition_ga3a2f0d6e19b37bbddaaf9d1ac478f8e2}{SYSCFG\+\_\+\+FLAG\+\_\+\+SRAM2\+\_\+\+PE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga155014fba33b6dc281892ec1ff27e4da}{SYSCFG\+\_\+\+CFGR2\+\_\+\+SPF}}
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM__flags__definition_gac7f87f7d55d04e6919aaf9d8f65de684}{SYSCFG\+\_\+\+FLAG\+\_\+\+SRAM\+\_\+\+BUSY}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga10c2cd41bfae3186f6611e02a03fd565}{SYSCFG\+\_\+\+SCSR\+\_\+\+SRAMBSY}}
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__SRAM__flags__definition_ga12831364f8246b621bf8f3776200abed}{SYSCFG\+\_\+\+FLAG\+\_\+\+PKASRAM\+\_\+\+BUSY}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga378c3b64e5e7deba02f5804d759b4fea}{SYSCFG\+\_\+\+SCSR\+\_\+\+PKASRAMBSY}}
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__FastModePlus__GPIO_ga1f9beaf68b00ae5598cb8d930da05704}{SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+PB6}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaee5a1ca3b0408d359907fdc8ae1e44ae}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB6\+\_\+\+FMP}}
+\begin{DoxyCompactList}\small\item\em Fast-\/mode Plus driving capability on a specific GPIO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__FastModePlus__GPIO_ga4b939ef5ec69e81277ef2323d5917eb5}{SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+PB7}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga218ec7f8116e53121ba41a9a57f2ab9c}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB7\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__FastModePlus__GPIO_ga2cd8442a02f25ed8e7e0ba6e5723edd4}{SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+PB8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1aa82a8f51624e4fa343996c0d6166c2}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB8\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__FastModePlus__GPIO_ga71c50ae2406cd9b6dff73cd9cd189c3d}{SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+PB9}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gadbc009692a61536e59a135d5a6b63afc}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB9\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga9500619e1ec21659bd32b1dfecd5afc1}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+FLASH}}()~LL\+\_\+\+SYSCFG\+\_\+\+Set\+Remap\+Memory(LL\+\_\+\+SYSCFG\+\_\+\+REMAP\+\_\+\+FLASH)
+\begin{DoxyCompactList}\small\item\em Main Flash memory mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga59782d94690fd538b25def536c81c3ed}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+SYSTEMFLASH}}()~LL\+\_\+\+SYSCFG\+\_\+\+Set\+Remap\+Memory(LL\+\_\+\+SYSCFG\+\_\+\+REMAP\+\_\+\+SYSTEMFLASH)
+\begin{DoxyCompactList}\small\item\em System Flash memory mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga86d36fdb1571fd56ffeecfaed80c6805}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+SRAM}}()~LL\+\_\+\+SYSCFG\+\_\+\+Set\+Remap\+Memory(LL\+\_\+\+SYSCFG\+\_\+\+REMAP\+\_\+\+SRAM)
+\begin{DoxyCompactList}\small\item\em Embedded SRAM mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga0e71eb2b553f1a7b8172710184a89caa}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+GET\+\_\+\+BOOT\+\_\+\+MODE}}()~LL\+\_\+\+SYSCFG\+\_\+\+Get\+Remap\+Memory()
+\begin{DoxyCompactList}\small\item\em Return the boot mode as configured by user. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_gaa620ec224bc8c0a2525cfaac060f3e61}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+\_\+\+WRP\+\_\+1\+\_\+31\+\_\+\+ENABLE}}~\mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga18c008f54c05e9fcf185104eae03115b}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+\_\+\+WRP\+\_\+0\+\_\+31\+\_\+\+ENABLE}}
+\begin{DoxyCompactList}\small\item\em SRAM2 page 0 to 31 write protection enable macro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga18c008f54c05e9fcf185104eae03115b}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+\_\+\+WRP\+\_\+0\+\_\+31\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+SRAM2\+WRP\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_gab381eee41325e7d983bd18101d06b443}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+\_\+\+WRP\+\_\+\+UNLOCK}}()~LL\+\_\+\+SYSCFG\+\_\+\+Unlock\+SRAM2\+WRP()
+\begin{DoxyCompactList}\small\item\em SRAM2 page write protection unlock prior to erase. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga11762a9476301c5e2623053aba3acbb8}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+\_\+\+ERASE}}()~LL\+\_\+\+SYSCFG\+\_\+\+Enable\+SRAM2\+Erase()
+\begin{DoxyCompactList}\small\item\em SRAM2 erase. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_gab24317e13f473c7c93771ac11ad893c3}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+ECC\+\_\+\+LOCK}}()~LL\+\_\+\+SYSCFG\+\_\+\+Set\+TIMBreak\+Inputs(LL\+\_\+\+SYSCFG\+\_\+\+TIMBREAK\+\_\+\+ECC)
+\begin{DoxyCompactList}\small\item\em SYSCFG Break ECC lock. Enable and lock the connection of Flash ECC error connection to TIM1/16/17 Break input. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_gaf8339b79c4009bcc95d2582b990d56ec}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+LOCKUP\+\_\+\+LOCK}}()~LL\+\_\+\+SYSCFG\+\_\+\+Set\+TIMBreak\+Inputs(LL\+\_\+\+SYSCFG\+\_\+\+TIMBREAK\+\_\+\+LOCKUP)
+\begin{DoxyCompactList}\small\item\em SYSCFG Break Cortex-\/\+M4 Lockup lock. Enable and lock the connection of Cortex-\/\+M4 LOCKUP (Hardfault) output to TIM1/16/17 Break input. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_gadfaca1cb2ee6df46e27aead12fe01e0c}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+PVD\+\_\+\+LOCK}}()~LL\+\_\+\+SYSCFG\+\_\+\+Set\+TIMBreak\+Inputs(LL\+\_\+\+SYSCFG\+\_\+\+TIMBREAK\+\_\+\+PVD)
+\begin{DoxyCompactList}\small\item\em SYSCFG Break PVD lock. Enable and lock the PVD connection to Timer1/16/17 Break input, as well as the PVDE and PLS\mbox{[}2\+:0\mbox{]} in the PWR\+\_\+\+CR2 register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga39c538c18927e8123f43301cae843f3a}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+SRAM2\+PARITY\+\_\+\+LOCK}}()~LL\+\_\+\+SYSCFG\+\_\+\+Set\+TIMBreak\+Inputs(LL\+\_\+\+SYSCFG\+\_\+\+TIMBREAK\+\_\+\+SRAM2\+\_\+\+PARITY)
+\begin{DoxyCompactList}\small\item\em SYSCFG Break SRAM2 parity lock. Enable and lock the SRAM2 parity error signal connection to TIM1/16/17 Break input. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga558077cbd3fbb7ed10ff16f58eaebf77}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((((((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) == \mbox{\hyperlink{group__SYSCFG__SRAM__flags__definition_ga3a2f0d6e19b37bbddaaf9d1ac478f8e2}{SYSCFG\+\_\+\+FLAG\+\_\+\+SRAM2\+\_\+\+PE}})? \mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/$>$CFGR2 \+: \mbox{\hyperlink{group__Peripheral__declaration_ga3c833fe1c486cb62250ccbca32899cb8}{SYSCFG}}-\/$>$SCSR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))!= 0) ? 1 \+: 0)
+\begin{DoxyCompactList}\small\item\em Check SYSCFG flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga78c5423e17aa4c8cda0872ca3003e71c}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+CLEAR\+\_\+\+FLAG}}()~LL\+\_\+\+SYSCFG\+\_\+\+Clear\+Flag\+\_\+\+SP()
+\begin{DoxyCompactList}\small\item\em Set the SPF bit to clear the SRAM Parity Error Flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga61181f4b4955f17858475485f8cd366c}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+FASTMODEPLUS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Fast mode Plus driving capability enable/disable macros. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Exported__Macros_ga5f20cbc8ad78101d527209003dc014f2}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+FASTMODEPLUS\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Private__Macros_gace31099042c6246a1f42521a3be73a86}{IS\+\_\+\+SYSCFG\+\_\+\+SRAM2\+WRP\+\_\+\+PAGE}}(\+\_\+\+\_\+\+PAGE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+PAGE\+\_\+\+\_\+) $>$ 0U) \&\& ((\+\_\+\+\_\+\+PAGE\+\_\+\+\_\+) $<$= 0x\+FFFFFFFFU))
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Private__Macros_ga1891f0fe07f2af737633642e92c18bde}{IS\+\_\+\+SYSCFG\+\_\+\+VREFBUF\+\_\+\+VOLTAGE\+\_\+\+SCALE}}(\+\_\+\+\_\+\+SCALE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Private__Macros_gabc82321a98a875a13137b16726997eef}{IS\+\_\+\+SYSCFG\+\_\+\+VREFBUF\+\_\+\+HIGH\+\_\+\+IMPEDANCE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Private__Macros_gac3e38cc911cf905a034b5bf7a68d95e6}{IS\+\_\+\+SYSCFG\+\_\+\+VREFBUF\+\_\+\+TRIMMING}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$ 0U) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga352e19b53b9986eb54de8fd79b27d052}{VREFBUF\+\_\+\+CCR\+\_\+\+TRIM}}))
+\item 
+\#define \mbox{\hyperlink{group__SYSCFG__Private__Macros_ga2d44c67961ec9f4feecec777364c13a0}{IS\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS}}(\+\_\+\+\_\+\+PIN\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__HAL__Private__Macros_ga2a86bf8a89ad75716cd92e932a8ae71e}{IS\+\_\+\+TICKFREQ}}(FREQ)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__HAL__TICK__FREQ_gab36ec81674817249c46734772ff3b73a}{HAL\+\_\+\+Tick\+Freq\+Type\+Def}} \{ \mbox{\hyperlink{group__HAL__TICK__FREQ_ggab36ec81674817249c46734772ff3b73aabf4d022d85adb437a57c1f45d6345092}{HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+10\+HZ}} = 100U
+, \mbox{\hyperlink{group__HAL__TICK__FREQ_ggab36ec81674817249c46734772ff3b73aacb1ef3a0e9632aafe0fd162e2cd88408}{HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+100\+HZ}} = 10U
+, \mbox{\hyperlink{group__HAL__TICK__FREQ_ggab36ec81674817249c46734772ff3b73aabef41c8ee13ca1d48eb49dac912f9689}{HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ}} = 1U
+, \mbox{\hyperlink{group__HAL__TICK__FREQ_ggab36ec81674817249c46734772ff3b73aa94e043d780eb1c36291338f6d6314e42}{HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+\+DEFAULT}} = HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_gaecac54d350c3730e6831eb404e557dc4}{HAL\+\_\+\+Init}} (void)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_ga95911129a26afb05232caaaefa31956f}{HAL\+\_\+\+De\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_gae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_gadd10d026ef02d00e32e80c9eab9db830}{HAL\+\_\+\+Msp\+De\+Init}} (void)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_ga879cdb21ef051eb81ec51c18147397d5}{HAL\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaa8361d44d76b7f6256834f828165837a}{HAL\+\_\+\+Inc\+Tick}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gae63b34eea12780ca2e1100c2402da18e}{HAL\+\_\+\+Delay}} (uint32\+\_\+t Delay)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaf2c4f03d53e997a54e1fd5e80daa55c4}{HAL\+\_\+\+Get\+Tick}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gacdcc8b5d33b9f97fe1b0abd6a86a3d4b}{HAL\+\_\+\+Get\+Tick\+Prio}} (void)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga47f2dd240b2aed823a76b11496f37690}{HAL\+\_\+\+Set\+Tick\+Freq}} (\mbox{\hyperlink{group__HAL__TICK__FREQ_gab36ec81674817249c46734772ff3b73a}{HAL\+\_\+\+Tick\+Freq\+Type\+Def}} Freq)
+\item 
+\mbox{\hyperlink{group__HAL__TICK__FREQ_gab36ec81674817249c46734772ff3b73a}{HAL\+\_\+\+Tick\+Freq\+Type\+Def}} \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga803cdbcc0883bcf5f5c98c50024c97e6}{HAL\+\_\+\+Get\+Tick\+Freq}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaaf651af2afe688a991c657f64f8fa5f9}{HAL\+\_\+\+Suspend\+Tick}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga24e0ee9dae1ec0f9d19200f5575ff790}{HAL\+\_\+\+Resume\+Tick}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gafb139b375512ad2a234e4619b129b966}{HAL\+\_\+\+Get\+Hal\+Version}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gae051ef9e932404b21f5877c7186406b8}{HAL\+\_\+\+Get\+REVID}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaff785f069ed650de77ff82ac407f7c84}{HAL\+\_\+\+Get\+DEVID}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaf982aa0a575eef3758c0840a24077506}{HAL\+\_\+\+Get\+UIDw0}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga52720dd92ed2bd4314a2a129855d766c}{HAL\+\_\+\+Get\+UIDw1}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga5785ae5ec8d4c5a7dadb1359f0778700}{HAL\+\_\+\+Get\+UIDw2}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group3_gaf031bcc71ebad9b7edf405547efd762b}{HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGSleep\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group3_gac7820d0561f19999a68d714655b901b5}{HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGSleep\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group3_gadf25043b17de4bef38a95a75fd03e5c4}{HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group3_ga2c93dcee35e5983d74f1000de7c042d5}{HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStop\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group3_ga28a1323b2eeb0a408c1cfdbfa0db5ead}{HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStandby\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group3_ga7faa58d8508ea3123b9f247a70379779}{HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStandby\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_gaa1bda45e550d89db1bc107c1249cf4c8}{HAL\+\_\+\+SYSCFG\+\_\+\+SRAM2\+Erase}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_ga79b8e839deeb200f22ab3f6d21359338}{HAL\+\_\+\+SYSCFG\+\_\+\+VREFBUF\+\_\+\+Voltage\+Scaling\+Config}} (uint32\+\_\+t Voltage\+Scaling)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_ga7de0a1fcafa18030af600b0ed908b805}{HAL\+\_\+\+SYSCFG\+\_\+\+VREFBUF\+\_\+\+High\+Impedance\+Config}} (uint32\+\_\+t Mode)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_gae0317419d084f9d40b32c1dd6037925f}{HAL\+\_\+\+SYSCFG\+\_\+\+VREFBUF\+\_\+\+Trimming\+Config}} (uint32\+\_\+t Trimming\+Value)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_ga3a184f1a037585ba7a1d931abff30275}{HAL\+\_\+\+SYSCFG\+\_\+\+Enable\+VREFBUF}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_ga26991b4078e8f985b1caced43b6cfb9c}{HAL\+\_\+\+SYSCFG\+\_\+\+Disable\+VREFBUF}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_gac22593c32829479d739cf1e17e3eee9b}{HAL\+\_\+\+SYSCFG\+\_\+\+Enable\+IOAnalog\+Switch\+Booster}} (void)
+\item 
+void \mbox{\hyperlink{group__HAL__Exported__Functions__Group4_ga82d49eb550bc6c4357b570acfd6aed1c}{HAL\+\_\+\+SYSCFG\+\_\+\+Disable\+IOAnalog\+Switch\+Booster}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Variables_ga9d411ea525781e633bf7ea7ef2f90728}{uw\+Tick}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__HAL__Exported__Variables_ga3000c5e83924ed2debb1849c738d4be2}{uw\+Tick\+Prio}}
+\item 
+\mbox{\hyperlink{group__HAL__TICK__FREQ_gab36ec81674817249c46734772ff3b73a}{HAL\+\_\+\+Tick\+Freq\+Type\+Def}} \mbox{\hyperlink{group__HAL__Exported__Variables_ga84a0c55c4d0bff06a085b4fcfd6531cd}{uw\+Tick\+Freq}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the HAL module driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal_8h_source}{stm32wlxx\+\_\+hal.\+h}}.
+

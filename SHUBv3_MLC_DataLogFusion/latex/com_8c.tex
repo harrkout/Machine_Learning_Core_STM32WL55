@@ -1,0 +1,46 @@
+\doxysection{MEMS/\+Target/com.c File Reference}
+\hypertarget{com_8c}{}\label{com_8c}\index{MEMS/Target/com.c@{MEMS/Target/com.c}}
+
+
+This file provides communication functions.  
+
+
+{\ttfamily \#include "{}com.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga354ef6d002fe5d4532dcf26c070e0392}{Uart\+\_\+\+Msg\+\_\+\+Max\+\_\+\+Size}}~\mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\+\_\+\+Max\+Len}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaa3ca702c66e1272c143ddfcbe3a93e7b}{UART\+\_\+\+Received\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Check if a message is received via UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\+\_\+\+Send\+Msg}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Send a message via UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga0b26bd6e23b2426297bc1ef2bea9ca6f}{UART\+\_\+\+Start\+Receive\+Msg}} (void)
+\begin{DoxyCompactList}\small\item\em Start receiving messages via DMA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga27a1b0ece17d629a9628d0209e168435}{Uart\+Rx\+Buffer}} \mbox{[}\mbox{\hyperlink{com_8h_a566ad7c668661f2b4e70ad6673519507}{UART\+\_\+\+Rx\+Buffer\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{structTUart__Engine}{TUart\+\_\+\+Engine}} \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga44d3e8cd0b3ddfd2f7fa0f14f0870c21}{Uart\+Engine}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides communication functions. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{com_8c_source}{com.\+c}}.
+

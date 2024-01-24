@@ -1,0 +1,82 @@
+\doxysection{Core/\+Src/system\+\_\+stm32wlxx.c File Reference}
+\hypertarget{system__stm32wlxx_8c}{}\label{system__stm32wlxx_8c}\index{Core/Src/system\_stm32wlxx.c@{Core/Src/system\_stm32wlxx.c}}
+
+
+CMSIS Cortex Device Peripheral Access Layer System Source File.  
+
+
+{\ttfamily \#include "{}stm32wlxx.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__stm32WLxx__System__Private__Includes_gaeafcff4f57440c60e64812dddd13e7cb}{HSE\+\_\+\+VALUE}}~(32000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__stm32WLxx__System__Private__Includes_ga90e2a73d7fe4a7425c6e31fef5ce7263}{MSI\+\_\+\+VALUE}}~(4000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__stm32WLxx__System__Private__Includes_gaaa8c76e274d0f6dd2cefb5d0b17fbc37}{HSI\+\_\+\+VALUE}}~(16000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__stm32WLxx__System__Private__Includes_ga4872023e65449c0506aac3ea6bec99e9}{LSI\+\_\+\+VALUE}}~(32000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__stm32WLxx__System__Private__Includes_ga7bbb9d19e5189a6ccd0fb6fa6177d20d}{LSE\+\_\+\+VALUE}}~(32768UL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__STM32WLxx__System__Private__Functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__STM32WLxx__System__Private__Functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Update System\+Core\+Clock variable according to Clock Register Values. The System\+Core\+Clock variable contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__STM32WLxx__System__Private__Variables_gaa3cd3e43291e81e795d642b79b6088e6}{System\+Core\+Clock}} = 4000000\+UL
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{group__STM32WLxx__System__Private__Variables_ga094c87a4ec51afe55595514d0b40e6fa}{AHBPresc\+Table}} \mbox{[}16UL\mbox{]} = \{1UL, 3UL, 5UL, 1UL, 1UL, 6UL, 10\+UL, 32UL, 2UL, 4UL, 8UL, 16UL, 64UL, 128UL, 256UL, 512UL\}
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{group__STM32WLxx__System__Private__Variables_gaedf64a04048e826a42c4eac37c2ecda0}{APBPresc\+Table}} \mbox{[}8UL\mbox{]} = \{0\+UL, 0\+UL, 0\+UL, 0\+UL, 1UL, 2UL, 3UL, 4UL\}
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{group__STM32WLxx__System__Private__Variables_ga97fd1cc016516302e2915d3154b980b5}{MSIRange\+Table}} \mbox{[}16UL\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CMSIS Cortex Device Peripheral Access Layer System Source File. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020-\/2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS.
+
+This file provides two functions and one global variable to be called from user application\+:
+\begin{DoxyItemize}
+\item \doxylink{group__STM32WLxx__System__Private__Functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()}\+: This function is called at startup just after reset and before branch to main program. This call is made inside the "{}startup\+\_\+stm32wlxx.\+s"{} file.
+\item System\+Core\+Clock variable\+: Contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters.
+\item \doxylink{group__STM32WLxx__System__Private__Functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update()}\+: Updates the variable System\+Core\+Clock and must be called whenever the core clock is changed during program execution.
+\end{DoxyItemize}
+
+After each device reset the MSI (4 MHz) is used as system clock source. Then \doxylink{group__STM32WLxx__System__Private__Functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()} function is called, in "{}startup\+\_\+stm32wlxx.\+s"{} file, to configure the system clock before to branch to main program.\hypertarget{system__stm32wlxx_8c_this-file-configures-the-system-clock-as-follows}{}\doxysubsection{\texorpdfstring{This file configures the system clock as follows\+:}{This file configures the system clock as follows\+:}}\label{system__stm32wlxx_8c_this-file-configures-the-system-clock-as-follows}
+\DoxyHorRuler{0}
+ \hypertarget{system__stm32wlxx_8c_system-clock-source---------------------msi}{}\doxysubsubsection{\texorpdfstring{System Clock source \texorpdfstring{$\vert$}{|} MSI}{System Clock source \texorpdfstring{$\vert$}{|} MSI}}\label{system__stm32wlxx_8c_system-clock-source---------------------msi}
+\hypertarget{system__stm32wlxx_8c_sysclkhz------------------------------4000000}{}\doxysubsubsection{\texorpdfstring{SYSCLK(\+Hz) \texorpdfstring{$\vert$}{|} 4000000}{SYSCLK(\+Hz) \texorpdfstring{$\vert$}{|} 4000000}}\label{system__stm32wlxx_8c_sysclkhz------------------------------4000000}
+\hypertarget{system__stm32wlxx_8c_hclkhz--------------------------------4000000}{}\doxysubsubsection{\texorpdfstring{HCLK(\+Hz) \texorpdfstring{$\vert$}{|} 4000000}{HCLK(\+Hz) \texorpdfstring{$\vert$}{|} 4000000}}\label{system__stm32wlxx_8c_hclkhz--------------------------------4000000}
+\hypertarget{system__stm32wlxx_8c_ahb-prescaler---------------------------1}{}\doxysubsubsection{\texorpdfstring{AHB Prescaler \texorpdfstring{$\vert$}{|} 1}{AHB Prescaler \texorpdfstring{$\vert$}{|} 1}}\label{system__stm32wlxx_8c_ahb-prescaler---------------------------1}
+\hypertarget{system__stm32wlxx_8c_apb1-prescaler--------------------------1}{}\doxysubsubsection{\texorpdfstring{APB1 Prescaler \texorpdfstring{$\vert$}{|} 1}{APB1 Prescaler \texorpdfstring{$\vert$}{|} 1}}\label{system__stm32wlxx_8c_apb1-prescaler--------------------------1}
+\hypertarget{system__stm32wlxx_8c_apb2-prescaler--------------------------1}{}\doxysubsubsection{\texorpdfstring{APB2 Prescaler \texorpdfstring{$\vert$}{|} 1}{APB2 Prescaler \texorpdfstring{$\vert$}{|} 1}}\label{system__stm32wlxx_8c_apb2-prescaler--------------------------1}
+\hypertarget{system__stm32wlxx_8c_pll_m-----------------------------------1}{}\doxysubsubsection{\texorpdfstring{PLL\+\_\+M \texorpdfstring{$\vert$}{|} 1}{PLL\+\_\+M \texorpdfstring{$\vert$}{|} 1}}\label{system__stm32wlxx_8c_pll_m-----------------------------------1}
+\hypertarget{system__stm32wlxx_8c_pll_n-----------------------------------8}{}\doxysubsubsection{\texorpdfstring{PLL\+\_\+N \texorpdfstring{$\vert$}{|} 8}{PLL\+\_\+N \texorpdfstring{$\vert$}{|} 8}}\label{system__stm32wlxx_8c_pll_n-----------------------------------8}
+\hypertarget{system__stm32wlxx_8c_pll_p-----------------------------------7}{}\doxysubsubsection{\texorpdfstring{PLL\+\_\+P \texorpdfstring{$\vert$}{|} 7}{PLL\+\_\+P \texorpdfstring{$\vert$}{|} 7}}\label{system__stm32wlxx_8c_pll_p-----------------------------------7}
+\hypertarget{system__stm32wlxx_8c_pll_q-----------------------------------2}{}\doxysubsubsection{\texorpdfstring{PLL\+\_\+Q \texorpdfstring{$\vert$}{|} 2}{PLL\+\_\+Q \texorpdfstring{$\vert$}{|} 2}}\label{system__stm32wlxx_8c_pll_q-----------------------------------2}
+\hypertarget{system__stm32wlxx_8c_pll_r-----------------------------------2}{}\doxysubsubsection{\texorpdfstring{PLL\+\_\+R \texorpdfstring{$\vert$}{|} 2}{PLL\+\_\+R \texorpdfstring{$\vert$}{|} 2}}\label{system__stm32wlxx_8c_pll_r-----------------------------------2}
+\hypertarget{system__stm32wlxx_8c_pllsai1_p-------------------------------na}{}\doxysubsubsection{\texorpdfstring{PLLSAI1\+\_\+P \texorpdfstring{$\vert$}{|} NA}{PLLSAI1\+\_\+P \texorpdfstring{$\vert$}{|} NA}}\label{system__stm32wlxx_8c_pllsai1_p-------------------------------na}
+\hypertarget{system__stm32wlxx_8c_pllsai1_q-------------------------------na}{}\doxysubsubsection{\texorpdfstring{PLLSAI1\+\_\+Q \texorpdfstring{$\vert$}{|} NA}{PLLSAI1\+\_\+Q \texorpdfstring{$\vert$}{|} NA}}\label{system__stm32wlxx_8c_pllsai1_q-------------------------------na}
+\hypertarget{system__stm32wlxx_8c_pllsai1_r-------------------------------na}{}\doxysubsubsection{\texorpdfstring{PLLSAI1\+\_\+R \texorpdfstring{$\vert$}{|} NA}{PLLSAI1\+\_\+R \texorpdfstring{$\vert$}{|} NA}}\label{system__stm32wlxx_8c_pllsai1_r-------------------------------na}
+Require 48MHz for USB OTG FS, \texorpdfstring{$\vert$}{|} Disabled \hypertarget{system__stm32wlxx_8c_sdio-and-rng-clock---------------------}{}\doxysubsubsection{\texorpdfstring{SDIO and RNG clock \texorpdfstring{$\vert$}{|}}{SDIO and RNG clock \texorpdfstring{$\vert$}{|}}}\label{system__stm32wlxx_8c_sdio-and-rng-clock---------------------}
+============================================================================= 
+
+Definition in file \mbox{\hyperlink{system__stm32wlxx_8c_source}{system\+\_\+stm32wlxx.\+c}}.
+

@@ -1,0 +1,507 @@
+\doxysubsubsubsection{RTC Timestamp}
+\hypertarget{group__RTCEx__Timestamp}{}\label{group__RTCEx__Timestamp}\index{RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gad8400feb7b3dae2c552f2f4a7556bc6d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga94fa98ca8cac9078b9bb82c89593d3c0}{RTC\+\_\+\+CR\+\_\+\+TSE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga7281d85b199bee5eb74cc135208051fa}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga94fa98ca8cac9078b9bb82c89593d3c0}{RTC\+\_\+\+CR\+\_\+\+TSE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga054429581f55a80d922bb5c1e982c06f}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gab455d21f8afb5b3d49f2c25e34ce90c2}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gaaf023d7dd4c3068e8297187f2cc6b16e}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$MISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 12U)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Time\+Stamp interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga54100a14a01e1ebe8af226385d12ee57}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Time Stamp interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga72799940c34e70df0d33eca772794813}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+),(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Time\+Stamps flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gac9d386e61a572b0c9d0e58a04e1819ef}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Time Stamps pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga6aa2da9e2d850aaad27ae334e8a43207}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gae3b6c2a5070240641638157e2ffce3ae}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga34ba236d16e26d1fd51628223ffe3ac6}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga97f5112e67aa8e4558f28c40c04557fb}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gaf10e8c678225ae5479bc93858e9ee0d9}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2fe4c391ecbb12afa9d760cf4073dc3b}{RTC\+\_\+\+CR\+\_\+\+ITSE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC internal Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gab9d8fed58fc7ffbc47ba840f0ee1b56c}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2fe4c391ecbb12afa9d760cf4073dc3b}{RTC\+\_\+\+CR\+\_\+\+ITSE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC internal Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga02cbf534c2d752a488d9ce5e7e05f8d1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+),(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Internal Time Stamps flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga482c985660329762542f6d6a19fa9ef4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga15e4bb31fd3e4e206392a4f05d793821}{RTC\+\_\+\+CLEAR\+\_\+\+ITSF}}))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Internal Time Stamps pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_gaeec7abbbf5d2357ac03ae6faa2f3e6de}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPTS\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa9951b9b5ab363c7c68e6b95418be1f5}{RTC\+\_\+\+CR\+\_\+\+TAMPTS}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp on Tamper detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga99a698af03a0ab86a3cb327341d643b9}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPTS\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa9951b9b5ab363c7c68e6b95418be1f5}{RTC\+\_\+\+CR\+\_\+\+TAMPTS}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp on Tamper detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga3ba01fe0f36b860d7a366a1ad60f2d48}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPOE\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dec31097c149b56a79149ba888e2dfa}{RTC\+\_\+\+CR\+\_\+\+TAMPOE}}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Tamper detection output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Timestamp_ga9db68570405ba31042dc8769aca0a8fa}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPOE\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dec31097c149b56a79149ba888e2dfa}{RTC\+\_\+\+CR\+\_\+\+TAMPOE}}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Tamper detection output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__RTCEx__Timestamp_ga482c985660329762542f6d6a19fa9ef4}\label{group__RTCEx__Timestamp_ga482c985660329762542f6d6a19fa9ef4} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_CLEAR\_FLAG@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_CLEAR\_FLAG@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_CLEAR\_FLAG}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_CLEAR\_FLAG}{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), \mbox{\hyperlink{group__RTC__Clear__Flags__Definitions_ga15e4bb31fd3e4e206392a4f05d793821}{RTC\+\_\+\+CLEAR\+\_\+\+ITSF}}))}
+
+
+
+Clear the RTC Internal Time Stamps pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the RTC Internal Time Stamp Flag source to clear. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Flags__Definitions_gacd382de4c1767401535170a0695061fd}{RTC\+\_\+\+FLAG\+\_\+\+ITSF} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00770}{770}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gab9d8fed58fc7ffbc47ba840f0ee1b56c}\label{group__RTCEx__Timestamp_gab9d8fed58fc7ffbc47ba840f0ee1b56c} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_DISABLE@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_DISABLE}}
+\index{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_DISABLE@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_DISABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_DISABLE}{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2fe4c391ecbb12afa9d760cf4073dc3b}{RTC\+\_\+\+CR\+\_\+\+ITSE}}))}
+
+
+
+Disable the RTC internal Time\+Stamp peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00750}{750}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gaf10e8c678225ae5479bc93858e9ee0d9}\label{group__RTCEx__Timestamp_gaf10e8c678225ae5479bc93858e9ee0d9} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_ENABLE@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_ENABLE}}
+\index{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_ENABLE@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_ENABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_ENABLE}{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2fe4c391ecbb12afa9d760cf4073dc3b}{RTC\+\_\+\+CR\+\_\+\+ITSE}}))}
+
+
+
+Enable the RTC internal Time\+Stamp peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00743}{743}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga02cbf534c2d752a488d9ce5e7e05f8d1}\label{group__RTCEx__Timestamp_ga02cbf534c2d752a488d9ce5e7e05f8d1} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_GET\_FLAG@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_GET\_FLAG@{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_GET\_FLAG}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_GET\_FLAG}{\_\_HAL\_RTC\_INTERNAL\_TIMESTAMP\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+INTERNAL\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+),(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))}
+
+
+
+Get the selected RTC Internal Time Stamps flag status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the RTC Internal Time Stamp Flag is pending or not. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Flags__Definitions_gacd382de4c1767401535170a0695061fd}{RTC\+\_\+\+FLAG\+\_\+\+ITSF} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00760}{760}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga9db68570405ba31042dc8769aca0a8fa}\label{group__RTCEx__Timestamp_ga9db68570405ba31042dc8769aca0a8fa} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TAMPOE\_DISABLE@{\_\_HAL\_RTC\_TAMPOE\_DISABLE}}
+\index{\_\_HAL\_RTC\_TAMPOE\_DISABLE@{\_\_HAL\_RTC\_TAMPOE\_DISABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPOE\_DISABLE}{\_\_HAL\_RTC\_TAMPOE\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPOE\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dec31097c149b56a79149ba888e2dfa}{RTC\+\_\+\+CR\+\_\+\+TAMPOE}}))}
+
+
+
+Disable the RTC Tamper detection output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00798}{798}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga3ba01fe0f36b860d7a366a1ad60f2d48}\label{group__RTCEx__Timestamp_ga3ba01fe0f36b860d7a366a1ad60f2d48} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TAMPOE\_ENABLE@{\_\_HAL\_RTC\_TAMPOE\_ENABLE}}
+\index{\_\_HAL\_RTC\_TAMPOE\_ENABLE@{\_\_HAL\_RTC\_TAMPOE\_ENABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPOE\_ENABLE}{\_\_HAL\_RTC\_TAMPOE\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPOE\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dec31097c149b56a79149ba888e2dfa}{RTC\+\_\+\+CR\+\_\+\+TAMPOE}}))}
+
+
+
+Enable the RTC Tamper detection output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00791}{791}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga99a698af03a0ab86a3cb327341d643b9}\label{group__RTCEx__Timestamp_ga99a698af03a0ab86a3cb327341d643b9} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TAMPTS\_DISABLE@{\_\_HAL\_RTC\_TAMPTS\_DISABLE}}
+\index{\_\_HAL\_RTC\_TAMPTS\_DISABLE@{\_\_HAL\_RTC\_TAMPTS\_DISABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPTS\_DISABLE}{\_\_HAL\_RTC\_TAMPTS\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPTS\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa9951b9b5ab363c7c68e6b95418be1f5}{RTC\+\_\+\+CR\+\_\+\+TAMPTS}}))}
+
+
+
+Disable the RTC Time\+Stamp on Tamper detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00784}{784}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gaeec7abbbf5d2357ac03ae6faa2f3e6de}\label{group__RTCEx__Timestamp_gaeec7abbbf5d2357ac03ae6faa2f3e6de} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TAMPTS\_ENABLE@{\_\_HAL\_RTC\_TAMPTS\_ENABLE}}
+\index{\_\_HAL\_RTC\_TAMPTS\_ENABLE@{\_\_HAL\_RTC\_TAMPTS\_ENABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPTS\_ENABLE}{\_\_HAL\_RTC\_TAMPTS\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPTS\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa9951b9b5ab363c7c68e6b95418be1f5}{RTC\+\_\+\+CR\+\_\+\+TAMPTS}}))}
+
+
+
+Enable the RTC Time\+Stamp on Tamper detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00777}{777}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gac9d386e61a572b0c9d0e58a04e1819ef}\label{group__RTCEx__Timestamp_gac9d386e61a572b0c9d0e58a04e1819ef} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG}{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__HAL__RTC__Aliased__Macros_gaf8b41c0f2f096d2e71f304c00d183e4d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLEAR\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))}
+
+
+
+Clear the RTC Time Stamps pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the RTC Time\+Stamp Flag to clear. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Flags__Definitions_ga9b9ac7de7718bfe0ff77e1fd1193744b}{RTC\+\_\+\+FLAG\+\_\+\+TSF} \item \doxylink{group__RTC__Flags__Definitions_ga74656ea8ff41be61a3734dc27367e039}{RTC\+\_\+\+FLAG\+\_\+\+TSOVF} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00722}{722}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga7281d85b199bee5eb74cc135208051fa}\label{group__RTCEx__Timestamp_ga7281d85b199bee5eb74cc135208051fa} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_DISABLE@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE}{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga94fa98ca8cac9078b9bb82c89593d3c0}{RTC\+\_\+\+CR\+\_\+\+TSE}}))}
+
+
+
+Disable the RTC Time\+Stamp peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00661}{661}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gab455d21f8afb5b3d49f2c25e34ce90c2}\label{group__RTCEx__Timestamp_gab455d21f8afb5b3d49f2c25e34ce90c2} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT}{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable the RTC Time\+Stamp interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Time\+Stamp interrupt source to be disabled. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Interrupts__Definitions_ga2c4632667c515e366a79df6341d5f3d1}{RTC\+\_\+\+IT\+\_\+\+TS} Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00681}{681}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gad8400feb7b3dae2c552f2f4a7556bc6d}\label{group__RTCEx__Timestamp_gad8400feb7b3dae2c552f2f4a7556bc6d} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_ENABLE@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE}{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga94fa98ca8cac9078b9bb82c89593d3c0}{RTC\+\_\+\+CR\+\_\+\+TSE}}))}
+
+
+
+Enable the RTC Time\+Stamp peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00654}{654}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga054429581f55a80d922bb5c1e982c06f}\label{group__RTCEx__Timestamp_ga054429581f55a80d922bb5c1e982c06f} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT}{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable the RTC Time\+Stamp interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Time\+Stamp interrupt source to be enabled. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Interrupts__Definitions_ga2c4632667c515e366a79df6341d5f3d1}{RTC\+\_\+\+IT\+\_\+\+TS} Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00671}{671}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga97f5112e67aa8e4558f28c40c04557fb}\label{group__RTCEx__Timestamp_ga97f5112e67aa8e4558f28c40c04557fb} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_EVENT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_EVENT}{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_EVENT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00735}{735}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gae3b6c2a5070240641638157e2ffce3ae}\label{group__RTCEx__Timestamp_gae3b6c2a5070240641638157e2ffce3ae} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_IT}{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00733}{733}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga34ba236d16e26d1fd51628223ffe3ac6}\label{group__RTCEx__Timestamp_ga34ba236d16e26d1fd51628223ffe3ac6} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_EVENT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_EVENT}{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_EVENT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00734}{734}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga6aa2da9e2d850aaad27ae334e8a43207}\label{group__RTCEx__Timestamp_ga6aa2da9e2d850aaad27ae334e8a43207} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_IT}{\_\_HAL\_RTC\_TIMESTAMP\_EXTI\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_gaaaf5ac7911bcd1627a49341221d202a1}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TIMESTAMP\+\_\+\+EVENT}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00732}{732}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga72799940c34e70df0d33eca772794813}\label{group__RTCEx__Timestamp_ga72799940c34e70df0d33eca772794813} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG}{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__RTCEx__Exported__Macros_ga8ae640fed087096c56f6419091897679}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+GET\+\_\+\+FLAG}}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+),(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))}
+
+
+
+Get the selected RTC Time\+Stamps flag status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the RTC Time\+Stamp Flag is pending or not. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Flags__Definitions_ga9b9ac7de7718bfe0ff77e1fd1193744b}{RTC\+\_\+\+FLAG\+\_\+\+TSF} \item \doxylink{group__RTC__Flags__Definitions_ga74656ea8ff41be61a3734dc27367e039}{RTC\+\_\+\+FLAG\+\_\+\+TSOVF} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00711}{711}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_gaaf023d7dd4c3068e8297187f2cc6b16e}\label{group__RTCEx__Timestamp_gaaf023d7dd4c3068e8297187f2cc6b16e} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT}{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$MISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 12U)) != 0U) ? 1UL \+: 0\+UL)}
+
+
+
+Check whether the specified RTC Time\+Stamp interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Time\+Stamp interrupt to check. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Interrupts__Definitions_ga2c4632667c515e366a79df6341d5f3d1}{RTC\+\_\+\+IT\+\_\+\+TS} Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00691}{691}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Timestamp_ga54100a14a01e1ebe8af226385d12ee57}\label{group__RTCEx__Timestamp_ga54100a14a01e1ebe8af226385d12ee57} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE}{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)}
+
+
+
+Check whether the specified RTC Time Stamp interrupt has been enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Time Stamp interrupt source to check. This parameter can be\+: \begin{DoxyItemize}
+\item \doxylink{group__RTC__Interrupts__Definitions_ga2c4632667c515e366a79df6341d5f3d1}{RTC\+\_\+\+IT\+\_\+\+TS} Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00700}{700}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+

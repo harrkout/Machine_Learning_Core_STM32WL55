@@ -1,0 +1,149 @@
+\doxysection{RTC\+\_\+\+Init\+Type\+Def Struct Reference}
+\hypertarget{structRTC__InitTypeDef}{}\label{structRTC__InitTypeDef}\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+
+
+RTC Configuration Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32wlxx\+\_\+hal\+\_\+rtc.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_a6443afafaf63b709dad618a85502ef08}{Hour\+Format}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_a765786c156872cccaeb4c34f6200a83b}{Asynch\+Prediv}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_ae501e595c4cae92e73132b065baf726c}{Synch\+Prediv}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_a1ac04944c56d427908f5dec0bd80155f}{Out\+Put}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_a4acbd76552c69452f4c8ce0862cc6c1e}{Out\+Put\+Remap}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_a1db55b29ddfca7107f6ef6389e13d423}{Out\+Put\+Polarity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_ad01c869fb5e798c037f1d0b04a52d80d}{Out\+Put\+Type}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_ae2c88b9e05b2adaa676bd66a717dd109}{Out\+Put\+Pull\+Up}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_aab8d6c1c1c86d2a0e6dc7ebb55695d4e}{Bin\+Mode}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__InitTypeDef_a4e12117806efea97f0dd58a8a43e6441}{Bin\+Mix\+BcdU}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RTC Configuration Structure definition. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00059}{59}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structRTC__InitTypeDef_a765786c156872cccaeb4c34f6200a83b}\label{structRTC__InitTypeDef_a765786c156872cccaeb4c34f6200a83b} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!AsynchPrediv@{AsynchPrediv}}
+\index{AsynchPrediv@{AsynchPrediv}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{AsynchPrediv}{AsynchPrediv}}
+{\footnotesize\ttfamily uint32\+\_\+t Asynch\+Prediv}
+
+Specifies the RTC Asynchronous Predivider value. This parameter must be a number between Min\+\_\+\+Data = 0x00 and Max\+\_\+\+Data = 0x7F 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00064}{64}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_a4e12117806efea97f0dd58a8a43e6441}\label{structRTC__InitTypeDef_a4e12117806efea97f0dd58a8a43e6441} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!BinMixBcdU@{BinMixBcdU}}
+\index{BinMixBcdU@{BinMixBcdU}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{BinMixBcdU}{BinMixBcdU}}
+{\footnotesize\ttfamily uint32\+\_\+t Bin\+Mix\+BcdU}
+
+Specifies the BCD calendar update if and only if Bin\+Mode = RTC\+\_\+\+BINARY\+\_\+\+MIX. This parameter can be a value of \doxylink{group__RTCEx__Binary__mix__BCDU}{If Binary mode is RTC\+\_\+\+BINARY\+\_\+\+MIX, the BCD calendar second is incremented using the SSR Least Significant Bits.} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00088}{88}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_aab8d6c1c1c86d2a0e6dc7ebb55695d4e}\label{structRTC__InitTypeDef_aab8d6c1c1c86d2a0e6dc7ebb55695d4e} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!BinMode@{BinMode}}
+\index{BinMode@{BinMode}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{BinMode}{BinMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Bin\+Mode}
+
+Specifies the RTC binary mode. This parameter can be a value of \doxylink{group__RTCEx__Binary__Mode}{RTC Binary Mode (32-\/bit free-\/running counter configuration).} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00085}{85}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_a6443afafaf63b709dad618a85502ef08}\label{structRTC__InitTypeDef_a6443afafaf63b709dad618a85502ef08} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!HourFormat@{HourFormat}}
+\index{HourFormat@{HourFormat}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{HourFormat}{HourFormat}}
+{\footnotesize\ttfamily uint32\+\_\+t Hour\+Format}
+
+Specifies the RTC Hour Format. This parameter can be a value of \doxylink{group__RTC__Hour__Formats}{RTC Hour Formats} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00061}{61}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_a1ac04944c56d427908f5dec0bd80155f}\label{structRTC__InitTypeDef_a1ac04944c56d427908f5dec0bd80155f} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!OutPut@{OutPut}}
+\index{OutPut@{OutPut}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OutPut}{OutPut}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put}
+
+Specifies which signal will be routed to the RTC output. This parameter can be a value of \doxylink{group__RTCEx__Output__selection__Definitions}{RTCEx Output Selection Definition} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00070}{70}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_a1db55b29ddfca7107f6ef6389e13d423}\label{structRTC__InitTypeDef_a1db55b29ddfca7107f6ef6389e13d423} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!OutPutPolarity@{OutPutPolarity}}
+\index{OutPutPolarity@{OutPutPolarity}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OutPutPolarity}{OutPutPolarity}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put\+Polarity}
+
+Specifies the polarity of the output signal. This parameter can be a value of \doxylink{group__RTC__Output__Polarity__Definitions}{RTC Output Polarity Definitions} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00076}{76}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_ae2c88b9e05b2adaa676bd66a717dd109}\label{structRTC__InitTypeDef_ae2c88b9e05b2adaa676bd66a717dd109} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!OutPutPullUp@{OutPutPullUp}}
+\index{OutPutPullUp@{OutPutPullUp}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OutPutPullUp}{OutPutPullUp}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put\+Pull\+Up}
+
+Specifies the RTC Output Pull-\/\+Up mode. This parameter can be a value of \doxylink{group__RTC__Output__PullUp__ALARM__OUT}{RTC Output Pull-\/\+Up ALARM OUT} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00082}{82}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_a4acbd76552c69452f4c8ce0862cc6c1e}\label{structRTC__InitTypeDef_a4acbd76552c69452f4c8ce0862cc6c1e} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!OutPutRemap@{OutPutRemap}}
+\index{OutPutRemap@{OutPutRemap}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OutPutRemap}{OutPutRemap}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put\+Remap}
+
+Specifies the remap for RTC output. This parameter can be a value of \doxylink{group__RTC__Output__ALARM__OUT__Remap}{RTC Output ALARM OUT Remap} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00073}{73}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_ad01c869fb5e798c037f1d0b04a52d80d}\label{structRTC__InitTypeDef_ad01c869fb5e798c037f1d0b04a52d80d} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!OutPutType@{OutPutType}}
+\index{OutPutType@{OutPutType}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OutPutType}{OutPutType}}
+{\footnotesize\ttfamily uint32\+\_\+t Out\+Put\+Type}
+
+Specifies the RTC Output Pin mode. This parameter can be a value of \doxylink{group__RTC__Output__Type__ALARM__OUT}{RTC Output Type ALARM OUT} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00079}{79}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__InitTypeDef_ae501e595c4cae92e73132b065baf726c}\label{structRTC__InitTypeDef_ae501e595c4cae92e73132b065baf726c} 
+\index{RTC\_InitTypeDef@{RTC\_InitTypeDef}!SynchPrediv@{SynchPrediv}}
+\index{SynchPrediv@{SynchPrediv}!RTC\_InitTypeDef@{RTC\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{SynchPrediv}{SynchPrediv}}
+{\footnotesize\ttfamily uint32\+\_\+t Synch\+Prediv}
+
+Specifies the RTC Synchronous Predivider value. This parameter must be a number between Min\+\_\+\+Data = 0x00 and Max\+\_\+\+Data = 0x7\+FFF 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00067}{67}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32wlxx__hal__rtc_8h}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}\end{DoxyCompactItemize}

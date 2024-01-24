@@ -1,3 +1,8 @@
+@mainpage 
+Code documentation. 
+  
+- ReadMe
+
 **Machine Learning Core with STM MEMS**
 
 **Sensor LSM6DSOX**

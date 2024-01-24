@@ -1,0 +1,842 @@
+\doxysection{stm32wlxx\+\_\+ll\+\_\+i2c.\+h}
+\hypertarget{stm32wlxx__ll__i2c_8h_source}{}\label{stm32wlxx__ll__i2c_8h_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_i2c.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_i2c.h}}
+\mbox{\hyperlink{stm32wlxx__ll__i2c_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00019}00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ STM32WLxx\_LL\_I2C\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ STM32WLxx\_LL\_I2C\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00024}00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00027}00027\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx_8h}{stm32wlxx.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00034}00034\ \textcolor{preprocessor}{\#if\ defined\ (I2C1)\ ||\ defined\ (I2C2)\ ||\ defined\ (I2C3)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00040}00040\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00041}00041\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00043}00043\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00051}00051\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00052}00052\ \textcolor{preprocessor}{\#if\ defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*USE\_FULL\_LL\_DRIVER*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00061}00061\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00062}00062\ \textcolor{preprocessor}{\#if\ defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00066}00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00067}00067\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00068}00068\ \ \ uint32\_t\ PeripheralMode;\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00074}00074\ \ \ uint32\_t\ Timing;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00081}00081\ \ \ uint32\_t\ AnalogFilter;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00087}00087\ \ \ uint32\_t\ DigitalFilter;\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00093}00093\ \ \ uint32\_t\ OwnAddress1;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00099}00099\ \ \ uint32\_t\ TypeAcknowledge;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00106}00106\ \ \ uint32\_t\ OwnAddrSize;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00111}00111\ \}\ LL\_I2C\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00115}00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*USE\_FULL\_LL\_DRIVER*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00117}00117\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00126}00126\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_ADDRCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_ADDRCF\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00127}00127\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_NACKCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_NACKCF\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00128}00128\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_STOPCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_STOPCF\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00129}00129\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_BERRCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_BERRCF\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00130}00130\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_ARLOCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_ARLOCF\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00131}00131\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_OVRCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_OVRCF\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00132}00132\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_PECCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_PECCF\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00133}00133\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_TIMOUTCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_TIMOUTCF\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00134}00134\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ICR\_ALERTCF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ICR\_ALERTCF\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00143}00143\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_TXE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_TXE\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00144}00144\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_TXIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_TXIS\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00145}00145\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_RXNE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_RXNE\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00146}00146\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_ADDR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_ADDR\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00147}00147\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_NACKF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_NACKF\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00148}00148\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_STOPF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_STOPF\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00149}00149\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_TC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_TC\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00150}00150\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_TCR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_TCR\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00151}00151\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_BERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_BERR\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00152}00152\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_ARLO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_ARLO\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00153}00153\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_OVR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_OVR\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00154}00154\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_PECERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_PECERR\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00155}00155\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_TIMEOUT\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00156}00156\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_ALERT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_ALERT\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00157}00157\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ISR\_BUSY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_BUSY\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00166}00166\ \textcolor{preprocessor}{\#define\ LL\_I2C\_CR1\_TXIE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_TXIE\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00167}00167\ \textcolor{preprocessor}{\#define\ LL\_I2C\_CR1\_RXIE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_RXIE\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00168}00168\ \textcolor{preprocessor}{\#define\ LL\_I2C\_CR1\_ADDRIE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_ADDRIE\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00169}00169\ \textcolor{preprocessor}{\#define\ LL\_I2C\_CR1\_NACKIE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_NACKIE\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00170}00170\ \textcolor{preprocessor}{\#define\ LL\_I2C\_CR1\_STOPIE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_STOPIE\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00171}00171\ \textcolor{preprocessor}{\#define\ LL\_I2C\_CR1\_TCIE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_TCIE\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00172}00172\ \textcolor{preprocessor}{\#define\ LL\_I2C\_CR1\_ERRIE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_ERRIE\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00180}00180\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_I2C\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00181}00181\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_HOST\ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR1\_SMBHEN\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00182}00182\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_DEVICE\ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00184}00184\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_DEVICE\_ARP\ \ \ \ \ \ \ I2C\_CR1\_SMBDEN\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00192}00192\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ANALOGFILTER\_ENABLE\ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00193}00193\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ANALOGFILTER\_DISABLE\ \ \ \ \ \ \ \ \ I2C\_CR1\_ANFOFF\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00201}00201\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ADDRESSING\_MODE\_7BIT\ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00202}00202\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ADDRESSING\_MODE\_10BIT\ \ \ \ \ \ \ \ I2C\_CR2\_ADD10\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00210}00210\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS1\_7BIT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00211}00211\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS1\_10BIT\ \ \ \ \ \ \ \ \ \ \ \ I2C\_OAR1\_OA1MODE\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00219}00219\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_NOMASK\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2NOMASK\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00220}00220\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_MASK01\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2MASK01\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00221}00221\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_MASK02\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2MASK02\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00222}00222\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_MASK03\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2MASK03\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00223}00223\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_MASK04\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2MASK04\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00224}00224\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_MASK05\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2MASK05\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00225}00225\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_MASK06\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2MASK06\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00226}00226\ \textcolor{preprocessor}{\#define\ LL\_I2C\_OWNADDRESS2\_MASK07\ \ \ \ \ \ \ \ \ \ \ I2C\_OAR2\_OA2MASK07\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00235}00235\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ACK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00236}00236\ \textcolor{preprocessor}{\#define\ LL\_I2C\_NACK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR2\_NACK\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00244}00244\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ADDRSLAVE\_7BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00245}00245\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ADDRSLAVE\_10BIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR2\_ADD10\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00253}00253\ \textcolor{preprocessor}{\#define\ LL\_I2C\_REQUEST\_WRITE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00254}00254\ \textcolor{preprocessor}{\#define\ LL\_I2C\_REQUEST\_READ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR2\_RD\_WRN\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00262}00262\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_RELOAD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR2\_RELOAD\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00263}00263\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_AUTOEND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR2\_AUTOEND\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00265}00265\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SOFTEND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00267}00267\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_RELOAD\ \ \ \ \ \ \ \ \ \ \ \ LL\_I2C\_MODE\_RELOAD\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00269}00269\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_AUTOEND\_NO\_PEC\ \ \ \ LL\_I2C\_MODE\_AUTOEND\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00271}00271\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_SOFTEND\_NO\_PEC\ \ \ \ LL\_I2C\_MODE\_SOFTEND\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00273}00273\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_AUTOEND\_WITH\_PEC\ \ (uint32\_t)(LL\_I2C\_MODE\_AUTOEND\ |\ I2C\_CR2\_PECBYTE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00275}00275\ \textcolor{preprocessor}{\#define\ LL\_I2C\_MODE\_SMBUS\_SOFTEND\_WITH\_PEC\ \ (uint32\_t)(LL\_I2C\_MODE\_SOFTEND\ |\ I2C\_CR2\_PECBYTE)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00284}00284\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_NOSTARTSTOP\ \ \ \ \ \ \ \ \ 0x00000000U}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00286}00286\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)(0x80000000U\ |\ I2C\_CR2\_STOP)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00288}00288\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_START\_READ\ \ \ \ \ \ \ \ \ \ (uint32\_t)(0x80000000U\ |\ I2C\_CR2\_START\ |\ I2C\_CR2\_RD\_WRN)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00290}00290\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_START\_WRITE\ \ \ \ \ \ \ \ \ (uint32\_t)(0x80000000U\ |\ I2C\_CR2\_START)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00292}00292\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_RESTART\_7BIT\_READ\ \ \ (uint32\_t)(0x80000000U\ |\ I2C\_CR2\_START\ |\ I2C\_CR2\_RD\_WRN)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00294}00294\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_RESTART\_7BIT\_WRITE\ \ (uint32\_t)(0x80000000U\ |\ I2C\_CR2\_START)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00296}00296\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_RESTART\_10BIT\_READ\ \ (uint32\_t)(0x80000000U\ |\ I2C\_CR2\_START\ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00297}00297\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_CR2\_RD\_WRN\ |\ I2C\_CR2\_HEAD10R)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00299}00299\ \textcolor{preprocessor}{\#define\ LL\_I2C\_GENERATE\_RESTART\_10BIT\_WRITE\ (uint32\_t)(0x80000000U\ |\ I2C\_CR2\_START)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00308}00308\ \textcolor{preprocessor}{\#define\ LL\_I2C\_DIRECTION\_WRITE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00310}00310\ \textcolor{preprocessor}{\#define\ LL\_I2C\_DIRECTION\_READ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_ISR\_DIR\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00319}00319\ \textcolor{preprocessor}{\#define\ LL\_I2C\_DMA\_REG\_DATA\_TRANSMIT\ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00321}00321\ \textcolor{preprocessor}{\#define\ LL\_I2C\_DMA\_REG\_DATA\_RECEIVE\ \ \ \ \ \ \ \ \ 0x00000001U\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00330}00330\ \textcolor{preprocessor}{\#define\ LL\_I2C\_SMBUS\_TIMEOUTA\_MODE\_SCL\_LOW\ \ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00332}00332\ \textcolor{preprocessor}{\#define\ LL\_I2C\_SMBUS\_TIMEOUTA\_MODE\_SDA\_SCL\_HIGH\ I2C\_TIMEOUTR\_TIDLE\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00341}00341\ \textcolor{preprocessor}{\#define\ LL\_I2C\_SMBUS\_TIMEOUTA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_TIMEOUTR\_TIMOUTEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00342}00342\ \textcolor{preprocessor}{\#define\ LL\_I2C\_SMBUS\_TIMEOUTB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_TIMEOUTR\_TEXTEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00344}00344\ \textcolor{preprocessor}{\#define\ LL\_I2C\_SMBUS\_ALL\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ \ (uint32\_t)(I2C\_TIMEOUTR\_TIMOUTEN\ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00345}00345\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_TIMEOUTR\_TEXTEN)\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00355}00355\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00371}00371\ \textcolor{preprocessor}{\#define\ LL\_I2C\_WriteReg(\_\_INSTANCE\_\_,\ \_\_REG\_\_,\ \_\_VALUE\_\_)\ WRITE\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_,\ (\_\_VALUE\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00372}00372\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00379}00379\ \textcolor{preprocessor}{\#define\ LL\_I2C\_ReadReg(\_\_INSTANCE\_\_,\ \_\_REG\_\_)\ READ\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00400}00400\ \textcolor{preprocessor}{\#define\ \_\_LL\_I2C\_CONVERT\_TIMINGS(\_\_PRESCALER\_\_,\ \_\_SETUP\_TIME\_\_,\ \_\_HOLD\_TIME\_\_,\ \_\_SCLH\_PERIOD\_\_,\ \_\_SCLL\_PERIOD\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00401}00401\ \textcolor{preprocessor}{\ \ ((((uint32\_t)(\_\_PRESCALER\_\_)\ \ \ \ <<\ I2C\_TIMINGR\_PRESC\_Pos)\ \ \&\ I2C\_TIMINGR\_PRESC)\ \ \ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00402}00402\ \textcolor{preprocessor}{\ \ \ (((uint32\_t)(\_\_SETUP\_TIME\_\_)\ \ \ <<\ I2C\_TIMINGR\_SCLDEL\_Pos)\ \&\ I2C\_TIMINGR\_SCLDEL)\ \ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00403}00403\ \textcolor{preprocessor}{\ \ \ (((uint32\_t)(\_\_HOLD\_TIME\_\_)\ \ \ \ <<\ I2C\_TIMINGR\_SDADEL\_Pos)\ \&\ I2C\_TIMINGR\_SDADEL)\ \ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00404}00404\ \textcolor{preprocessor}{\ \ \ (((uint32\_t)(\_\_SCLH\_PERIOD\_\_)\ \ <<\ I2C\_TIMINGR\_SCLH\_Pos)\ \ \ \&\ I2C\_TIMINGR\_SCLH)\ \ \ \ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00405}00405\ \textcolor{preprocessor}{\ \ \ (((uint32\_t)(\_\_SCLL\_PERIOD\_\_)\ \ <<\ I2C\_TIMINGR\_SCLL\_Pos)\ \ \ \&\ I2C\_TIMINGR\_SCLL))}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00414}00414\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00429}00429\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_Enable(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00430}00430\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00431}00431\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga953b0d38414808db79da116842ed3262}{I2C\_CR1\_PE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00432}00432\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00433}00433\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00443}00443\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_Disable(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00444}00444\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00445}00445\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga953b0d38414808db79da116842ed3262}{I2C\_CR1\_PE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00446}00446\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00447}00447\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00454}00454\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabled(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00455}00455\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00456}00456\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga953b0d38414808db79da116842ed3262}{I2C\_CR1\_PE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga953b0d38414808db79da116842ed3262}{I2C\_CR1\_PE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00457}00457\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00458}00458\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00475}00475\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ConfigFilters(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ AnalogFilter,\ uint32\_t\ DigitalFilter)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00476}00476\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00477}00477\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4b33b8e33fa18fd49d6d1d8a69777289}{I2C\_CR1\_ANFOFF}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae2ee714428013b4a48aba608f6922bd6}{I2C\_CR1\_DNF}},\ AnalogFilter\ |\ (DigitalFilter\ <<\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad6e1d618bee79c5c11437517409ce1ab}{I2C\_CR1\_DNF\_Pos}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00478}00478\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00479}00479\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00492}00492\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetDigitalFilter(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ DigitalFilter)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00493}00493\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00494}00494\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae2ee714428013b4a48aba608f6922bd6}{I2C\_CR1\_DNF}},\ DigitalFilter\ <<\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad6e1d618bee79c5c11437517409ce1ab}{I2C\_CR1\_DNF\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00495}00495\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00496}00496\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00503}00503\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetDigitalFilter(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00504}00504\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00505}00505\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae2ee714428013b4a48aba608f6922bd6}{I2C\_CR1\_DNF}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad6e1d618bee79c5c11437517409ce1ab}{I2C\_CR1\_DNF\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00506}00506\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00507}00507\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00515}00515\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableAnalogFilter(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00516}00516\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00517}00517\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4b33b8e33fa18fd49d6d1d8a69777289}{I2C\_CR1\_ANFOFF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00518}00518\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00519}00519\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00527}00527\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableAnalogFilter(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00528}00528\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00529}00529\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4b33b8e33fa18fd49d6d1d8a69777289}{I2C\_CR1\_ANFOFF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00530}00530\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00531}00531\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00538}00538\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledAnalogFilter(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00539}00539\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00540}00540\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4b33b8e33fa18fd49d6d1d8a69777289}{I2C\_CR1\_ANFOFF}})\ !=\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4b33b8e33fa18fd49d6d1d8a69777289}{I2C\_CR1\_ANFOFF}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00541}00541\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00542}00542\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00549}00549\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableDMAReq\_TX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00550}00550\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00551}00551\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1da363db8ccde4108cf707cf86170650}{I2C\_CR1\_TXDMAEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00552}00552\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00553}00553\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00560}00560\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableDMAReq\_TX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00561}00561\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00562}00562\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1da363db8ccde4108cf707cf86170650}{I2C\_CR1\_TXDMAEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00563}00563\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00564}00564\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00571}00571\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledDMAReq\_TX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00572}00572\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00573}00573\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1da363db8ccde4108cf707cf86170650}{I2C\_CR1\_TXDMAEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1da363db8ccde4108cf707cf86170650}{I2C\_CR1\_TXDMAEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00574}00574\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00575}00575\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00582}00582\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableDMAReq\_RX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00583}00583\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00584}00584\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga85a60efaeebfb879bec280f46beb30ea}{I2C\_CR1\_RXDMAEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00585}00585\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00586}00586\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00593}00593\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableDMAReq\_RX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00594}00594\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00595}00595\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga85a60efaeebfb879bec280f46beb30ea}{I2C\_CR1\_RXDMAEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00596}00596\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00597}00597\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00604}00604\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledDMAReq\_RX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00605}00605\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00606}00606\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga85a60efaeebfb879bec280f46beb30ea}{I2C\_CR1\_RXDMAEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga85a60efaeebfb879bec280f46beb30ea}{I2C\_CR1\_RXDMAEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00607}00607\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00608}00608\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00619}00619\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_DMA\_GetRegAddr(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ Direction)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00620}00620\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00621}00621\ \ \ uint32\_t\ data\_reg\_addr;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00622}00622\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00623}00623\ \ \ \textcolor{keywordflow}{if}\ (Direction\ ==\ LL\_I2C\_DMA\_REG\_DATA\_TRANSMIT)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00624}00624\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00625}00625\ \ \ \ \ \textcolor{comment}{/*\ return\ address\ of\ TXDR\ register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00626}00626\ \ \ \ \ data\_reg\_addr\ =\ (uint32\_t)\ \&(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ad7e8d785fff2acfeb8814e43bda8dd72}{TXDR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00627}00627\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00628}00628\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00629}00629\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00630}00630\ \ \ \ \ \textcolor{comment}{/*\ return\ address\ of\ RXDR\ register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00631}00631\ \ \ \ \ data\_reg\_addr\ =\ (uint32\_t)\ \&(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a9bf29a9104cb5569823ab892174f9c8c}{RXDR}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00632}00632\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00633}00633\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00634}00634\ \ \ \textcolor{keywordflow}{return}\ data\_reg\_addr;}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00635}00635\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00636}00636\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00644}00644\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableClockStretching(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00645}00645\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00646}00646\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga197aaca79f64e832af3a0a0864c2a08c}{I2C\_CR1\_NOSTRETCH}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00647}00647\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00648}00648\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00656}00656\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableClockStretching(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00657}00657\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00658}00658\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga197aaca79f64e832af3a0a0864c2a08c}{I2C\_CR1\_NOSTRETCH}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00659}00659\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00660}00660\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00667}00667\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledClockStretching(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00668}00668\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00669}00669\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga197aaca79f64e832af3a0a0864c2a08c}{I2C\_CR1\_NOSTRETCH}})\ !=\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga197aaca79f64e832af3a0a0864c2a08c}{I2C\_CR1\_NOSTRETCH}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00670}00670\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00671}00671\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00678}00678\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableSlaveByteControl(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00679}00679\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00680}00680\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga973b09b232a3f758409353fd6ed765a2}{I2C\_CR1\_SBC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00681}00681\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00682}00682\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00689}00689\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableSlaveByteControl(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00690}00690\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00691}00691\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga973b09b232a3f758409353fd6ed765a2}{I2C\_CR1\_SBC}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00692}00692\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00693}00693\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00700}00700\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledSlaveByteControl(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00701}00701\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00702}00702\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga973b09b232a3f758409353fd6ed765a2}{I2C\_CR1\_SBC}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga973b09b232a3f758409353fd6ed765a2}{I2C\_CR1\_SBC}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00703}00703\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00704}00704\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00714}00714\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableWakeUpFromStop(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00715}00715\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00716}00716\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75a226d059143573fab07f866853ce75}{I2C\_CR1\_WUPEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00717}00717\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00718}00718\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00727}00727\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableWakeUpFromStop(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00728}00728\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00729}00729\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75a226d059143573fab07f866853ce75}{I2C\_CR1\_WUPEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00730}00730\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00731}00731\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00740}00740\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledWakeUpFromStop(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00741}00741\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00742}00742\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75a226d059143573fab07f866853ce75}{I2C\_CR1\_WUPEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75a226d059143573fab07f866853ce75}{I2C\_CR1\_WUPEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00743}00743\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00744}00744\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00752}00752\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableGeneralCall(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00753}00753\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00754}00754\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac28d4f433e501e727c91097dccc4616c}{I2C\_CR1\_GCEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00755}00755\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00756}00756\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00764}00764\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableGeneralCall(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00765}00765\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00766}00766\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac28d4f433e501e727c91097dccc4616c}{I2C\_CR1\_GCEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00767}00767\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00768}00768\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00775}00775\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledGeneralCall(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00776}00776\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00777}00777\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac28d4f433e501e727c91097dccc4616c}{I2C\_CR1\_GCEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac28d4f433e501e727c91097dccc4616c}{I2C\_CR1\_GCEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00778}00778\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00779}00779\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00790}00790\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetMasterAddressingMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ AddressingMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00791}00791\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00792}00792\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5454de5709c0e68a0068f9f5d39e5674}{I2C\_CR2\_ADD10}},\ AddressingMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00793}00793\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00794}00794\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00803}00803\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetMasterAddressingMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00804}00804\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00805}00805\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5454de5709c0e68a0068f9f5d39e5674}{I2C\_CR2\_ADD10}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00806}00806\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00807}00807\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00819}00819\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetOwnAddress1(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ OwnAddress1,\ uint32\_t\ OwnAddrSize)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00820}00820\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00821}00821\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a08b4be0d626a00f26bc295b379b3bba6}{OAR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabb954a9a0e3e3898574643b6d725a70f}{I2C\_OAR1\_OA1}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5edd56eaa7593073d586caef6f90ef09}{I2C\_OAR1\_OA1MODE}},\ OwnAddress1\ |\ OwnAddrSize);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00822}00822\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00823}00823\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00830}00830\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableOwnAddress1(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00831}00831\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00832}00832\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a08b4be0d626a00f26bc295b379b3bba6}{OAR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab3bb2ec380e9f35b474eaf148cefc552}{I2C\_OAR1\_OA1EN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00833}00833\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00834}00834\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00841}00841\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableOwnAddress1(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00842}00842\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00843}00843\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a08b4be0d626a00f26bc295b379b3bba6}{OAR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab3bb2ec380e9f35b474eaf148cefc552}{I2C\_OAR1\_OA1EN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00844}00844\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00845}00845\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00852}00852\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledOwnAddress1(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00853}00853\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00854}00854\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a08b4be0d626a00f26bc295b379b3bba6}{OAR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab3bb2ec380e9f35b474eaf148cefc552}{I2C\_OAR1\_OA1EN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab3bb2ec380e9f35b474eaf148cefc552}{I2C\_OAR1\_OA1EN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00855}00855\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00856}00856\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00875}00875\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetOwnAddress2(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ OwnAddress2,\ uint32\_t\ OwnAddrMask)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00876}00876\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00877}00877\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab5c57ffed0351fa064038939a6c0bbf6}{OAR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4627c5a89a3cbe9546321418f8cb9da2}{I2C\_OAR2\_OA2}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2d9fa47c0b7a4b893e1a1d8ab891b0e5}{I2C\_OAR2\_OA2MSK}},\ OwnAddress2\ |\ OwnAddrMask);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00878}00878\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00879}00879\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00886}00886\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableOwnAddress2(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00887}00887\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00888}00888\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab5c57ffed0351fa064038939a6c0bbf6}{OAR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa6ec62ffdf8a682e5e0983add8fdfa26}{I2C\_OAR2\_OA2EN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00889}00889\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00890}00890\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00897}00897\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableOwnAddress2(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00898}00898\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00899}00899\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab5c57ffed0351fa064038939a6c0bbf6}{OAR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa6ec62ffdf8a682e5e0983add8fdfa26}{I2C\_OAR2\_OA2EN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00900}00900\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00901}00901\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00908}00908\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledOwnAddress2(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00909}00909\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00910}00910\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab5c57ffed0351fa064038939a6c0bbf6}{OAR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa6ec62ffdf8a682e5e0983add8fdfa26}{I2C\_OAR2\_OA2EN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa6ec62ffdf8a682e5e0983add8fdfa26}{I2C\_OAR2\_OA2EN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00911}00911\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00912}00912\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00922}00922\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetTiming(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ Timing)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00923}00923\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00924}00924\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a5576a30ffbe0a0800ce7788610327677}{TIMINGR}},\ Timing);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00925}00925\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00926}00926\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00933}00933\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetTimingPrescaler(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00934}00934\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00935}00935\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a5576a30ffbe0a0800ce7788610327677}{TIMINGR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae5cfdc434959893555b392e7f07bfff7}{I2C\_TIMINGR\_PRESC}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1331841a70ef826b762e9d96df38703b}{I2C\_TIMINGR\_PRESC\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00936}00936\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00937}00937\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00944}00944\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetClockLowPeriod(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00945}00945\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00946}00946\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a5576a30ffbe0a0800ce7788610327677}{TIMINGR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad2d52eba6adbdaa16094d8241aeb2b20}{I2C\_TIMINGR\_SCLL}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga30e63a7bc531a8a74283dd0db04d82f8}{I2C\_TIMINGR\_SCLL\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00947}00947\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00948}00948\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00955}00955\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetClockHighPeriod(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00956}00956\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00957}00957\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a5576a30ffbe0a0800ce7788610327677}{TIMINGR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1eb185e660b02392b3faac65bae0c8df}{I2C\_TIMINGR\_SCLH}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga76876f2b0ee371ae51c7edaf49b7908e}{I2C\_TIMINGR\_SCLH\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00958}00958\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00959}00959\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00966}00966\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetDataHoldTime(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00967}00967\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00968}00968\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a5576a30ffbe0a0800ce7788610327677}{TIMINGR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga40f8fd2508d3b30a732c759443b306e6}{I2C\_TIMINGR\_SDADEL}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6bb99d8fff5aaa5694f8f73dd80ca911}{I2C\_TIMINGR\_SDADEL\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00969}00969\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00970}00970\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00977}00977\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetDataSetupTime(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00978}00978\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00979}00979\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a5576a30ffbe0a0800ce7788610327677}{TIMINGR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga952e8751cb0c5f6be6c14cf97d9530d0}{I2C\_TIMINGR\_SCLDEL}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga161f0eb0b81cabc49a410634c104269e}{I2C\_TIMINGR\_SCLDEL\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00980}00980\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00981}00981\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00996}00996\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ PeripheralMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00997}00997\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00998}00998\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaca44767df3368d7f0a9a17c20c55d27b}{I2C\_CR1\_SMBHEN}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga656e66b079528ed6d5c282010e51a263}{I2C\_CR1\_SMBDEN}},\ PeripheralMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l00999}00999\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01000}01000\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01014}01014\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01015}01015\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01016}01016\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaca44767df3368d7f0a9a17c20c55d27b}{I2C\_CR1\_SMBHEN}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga656e66b079528ed6d5c282010e51a263}{I2C\_CR1\_SMBDEN}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01017}01017\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01018}01018\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01032}01032\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableSMBusAlert(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01033}01033\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01034}01034\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2062e827a9d1d14c8c1b58ad6dbbf762}{I2C\_CR1\_ALERTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01035}01035\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01036}01036\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01050}01050\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableSMBusAlert(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01051}01051\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01052}01052\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2062e827a9d1d14c8c1b58ad6dbbf762}{I2C\_CR1\_ALERTEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01053}01053\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01054}01054\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01063}01063\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledSMBusAlert(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01064}01064\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01065}01065\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2062e827a9d1d14c8c1b58ad6dbbf762}{I2C\_CR1\_ALERTEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2062e827a9d1d14c8c1b58ad6dbbf762}{I2C\_CR1\_ALERTEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01066}01066\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01067}01067\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01076}01076\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableSMBusPEC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01077}01077\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01078}01078\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga393649f17391feae45fa0db955b3fdf5}{I2C\_CR1\_PECEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01079}01079\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01080}01080\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01089}01089\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableSMBusPEC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01090}01090\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01091}01091\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga393649f17391feae45fa0db955b3fdf5}{I2C\_CR1\_PECEN}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01092}01092\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01093}01093\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01102}01102\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledSMBusPEC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01103}01103\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01104}01104\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga393649f17391feae45fa0db955b3fdf5}{I2C\_CR1\_PECEN}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga393649f17391feae45fa0db955b3fdf5}{I2C\_CR1\_PECEN}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01105}01105\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01106}01106\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01123}01123\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ConfigSMBusTimeout(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ TimeoutA,\ uint32\_t\ TimeoutAMode,}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01124}01124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ TimeoutB)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01125}01125\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01126}01126\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac5a924e7fc2b71c82158224870f9d453}{I2C\_TIMEOUTR\_TIMEOUTA}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab0f7b6650f592e9ddc482648a1ea91f2}{I2C\_TIMEOUTR\_TIDLE}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5defcd355ce513e94e5f040b2dad75a6}{I2C\_TIMEOUTR\_TIMEOUTB}},}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01127}01127\ \ \ \ \ \ \ \ \ \ \ \ \ \ TimeoutA\ |\ TimeoutAMode\ |\ (TimeoutB\ <<\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2b7f58db7b232337697e4eb77a6c3506}{I2C\_TIMEOUTR\_TIMEOUTB\_Pos}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01128}01128\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01129}01129\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01140}01140\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetSMBusTimeoutA(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ TimeoutA)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01141}01141\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01142}01142\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ TimeoutA);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01143}01143\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01144}01144\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01153}01153\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetSMBusTimeoutA(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01154}01154\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01155}01155\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac5a924e7fc2b71c82158224870f9d453}{I2C\_TIMEOUTR\_TIMEOUTA}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01156}01156\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01157}01157\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01170}01170\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetSMBusTimeoutAMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ TimeoutAMode)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01171}01171\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01172}01172\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ TimeoutAMode);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01173}01173\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01174}01174\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01185}01185\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetSMBusTimeoutAMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01186}01186\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01187}01187\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab0f7b6650f592e9ddc482648a1ea91f2}{I2C\_TIMEOUTR\_TIDLE}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01188}01188\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01189}01189\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01200}01200\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetSMBusTimeoutB(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ TimeoutB)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01201}01201\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01202}01202\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ TimeoutB\ <<\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2b7f58db7b232337697e4eb77a6c3506}{I2C\_TIMEOUTR\_TIMEOUTB\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01203}01203\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01204}01204\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01213}01213\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetSMBusTimeoutB(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01214}01214\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01215}01215\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5defcd355ce513e94e5f040b2dad75a6}{I2C\_TIMEOUTR\_TIMEOUTB}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2b7f58db7b232337697e4eb77a6c3506}{I2C\_TIMEOUTR\_TIMEOUTB\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01216}01216\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01217}01217\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01231}01231\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableSMBusTimeout(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ ClockTimeout)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01232}01232\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01233}01233\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ ClockTimeout);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01234}01234\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01235}01235\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01249}01249\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableSMBusTimeout(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ ClockTimeout)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01250}01250\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01251}01251\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ ClockTimeout);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01252}01252\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01253}01253\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01267}01267\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledSMBusTimeout(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ ClockTimeout)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01268}01268\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01269}01269\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a95187d83f061ebbddd8668d0db3fbaa5}{TIMEOUTR}},\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga48d81bce8d2faf7acbef9a38510a8542}{I2C\_TIMEOUTR\_TIMOUTEN}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga95aa3d29b8e59de06a45d15d03f721af}{I2C\_TIMEOUTR\_TEXTEN}}))\ ==\ \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01270}01270\ \ \ \ \ \ \ \ \ \ \ \ (ClockTimeout))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01271}01271\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01272}01272\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01287}01287\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableIT\_TX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01288}01288\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01289}01289\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8bd36da8f72bc91040e63af07dd6b5a4}{I2C\_CR1\_TXIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01290}01290\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01291}01291\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01298}01298\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableIT\_TX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01299}01299\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01300}01300\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8bd36da8f72bc91040e63af07dd6b5a4}{I2C\_CR1\_TXIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01301}01301\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01302}01302\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01309}01309\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledIT\_TX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01310}01310\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01311}01311\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8bd36da8f72bc91040e63af07dd6b5a4}{I2C\_CR1\_TXIE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8bd36da8f72bc91040e63af07dd6b5a4}{I2C\_CR1\_TXIE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01312}01312\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01313}01313\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01320}01320\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableIT\_RX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01321}01321\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01322}01322\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf1fc89bf142bfc08ee78763e6e27cd80}{I2C\_CR1\_RXIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01323}01323\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01324}01324\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01331}01331\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableIT\_RX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01332}01332\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01333}01333\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf1fc89bf142bfc08ee78763e6e27cd80}{I2C\_CR1\_RXIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01334}01334\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01335}01335\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01342}01342\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledIT\_RX(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01343}01343\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01344}01344\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf1fc89bf142bfc08ee78763e6e27cd80}{I2C\_CR1\_RXIE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf1fc89bf142bfc08ee78763e6e27cd80}{I2C\_CR1\_RXIE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01345}01345\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01346}01346\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01353}01353\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableIT\_ADDR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01354}01354\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01355}01355\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga275e85befdb3d7ea7b5eb402cec574ec}{I2C\_CR1\_ADDRIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01356}01356\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01357}01357\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01364}01364\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableIT\_ADDR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01365}01365\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01366}01366\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga275e85befdb3d7ea7b5eb402cec574ec}{I2C\_CR1\_ADDRIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01367}01367\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01368}01368\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01375}01375\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledIT\_ADDR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01376}01376\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01377}01377\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga275e85befdb3d7ea7b5eb402cec574ec}{I2C\_CR1\_ADDRIE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga275e85befdb3d7ea7b5eb402cec574ec}{I2C\_CR1\_ADDRIE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01378}01378\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01379}01379\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01386}01386\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableIT\_NACK(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01387}01387\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01388}01388\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae3f71f7a55e13a467b2a5ed639e0fe18}{I2C\_CR1\_NACKIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01389}01389\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01390}01390\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01397}01397\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableIT\_NACK(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01398}01398\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01399}01399\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae3f71f7a55e13a467b2a5ed639e0fe18}{I2C\_CR1\_NACKIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01400}01400\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01401}01401\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01408}01408\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledIT\_NACK(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01409}01409\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01410}01410\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae3f71f7a55e13a467b2a5ed639e0fe18}{I2C\_CR1\_NACKIE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae3f71f7a55e13a467b2a5ed639e0fe18}{I2C\_CR1\_NACKIE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01411}01411\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01412}01412\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01419}01419\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableIT\_STOP(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01420}01420\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01421}01421\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1f1576cb1a2cd847f55fe2a0820bb166}{I2C\_CR1\_STOPIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01422}01422\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01423}01423\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01430}01430\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableIT\_STOP(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01431}01431\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01432}01432\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1f1576cb1a2cd847f55fe2a0820bb166}{I2C\_CR1\_STOPIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01433}01433\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01434}01434\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01441}01441\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledIT\_STOP(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01442}01442\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01443}01443\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1f1576cb1a2cd847f55fe2a0820bb166}{I2C\_CR1\_STOPIE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1f1576cb1a2cd847f55fe2a0820bb166}{I2C\_CR1\_STOPIE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01444}01444\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01445}01445\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01455}01455\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableIT\_TC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01456}01456\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01457}01457\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6b37e64bdf6399ef12c3df77bcb1634f}{I2C\_CR1\_TCIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01458}01458\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01459}01459\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01469}01469\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableIT\_TC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01470}01470\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01471}01471\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6b37e64bdf6399ef12c3df77bcb1634f}{I2C\_CR1\_TCIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01472}01472\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01473}01473\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01480}01480\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledIT\_TC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01481}01481\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01482}01482\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6b37e64bdf6399ef12c3df77bcb1634f}{I2C\_CR1\_TCIE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6b37e64bdf6399ef12c3df77bcb1634f}{I2C\_CR1\_TCIE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01483}01483\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01484}01484\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01500}01500\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableIT\_ERR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01501}01501\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01502}01502\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75e971012a02f9dad47a1629c6f5d956}{I2C\_CR1\_ERRIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01503}01503\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01504}01504\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01520}01520\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableIT\_ERR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01521}01521\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01522}01522\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75e971012a02f9dad47a1629c6f5d956}{I2C\_CR1\_ERRIE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01523}01523\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01524}01524\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01531}01531\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledIT\_ERR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01532}01532\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01533}01533\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab0ec7102960640751d44e92ddac994f0}{CR1}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75e971012a02f9dad47a1629c6f5d956}{I2C\_CR1\_ERRIE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75e971012a02f9dad47a1629c6f5d956}{I2C\_CR1\_ERRIE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01534}01534\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01535}01535\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01552}01552\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_TXE(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01553}01553\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01554}01554\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dfec198395c0f88454a86bacff60351}{I2C\_ISR\_TXE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dfec198395c0f88454a86bacff60351}{I2C\_ISR\_TXE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01555}01555\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01556}01556\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01565}01565\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_TXIS(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01566}01566\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01567}01567\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa848ab3d120a27401203329941c9dcb5}{I2C\_ISR\_TXIS}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa848ab3d120a27401203329941c9dcb5}{I2C\_ISR\_TXIS}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01568}01568\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01569}01569\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01578}01578\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_RXNE(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01579}01579\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01580}01580\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0afd4e99e26dcec57a0f3be4dae2c022}{I2C\_ISR\_RXNE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0afd4e99e26dcec57a0f3be4dae2c022}{I2C\_ISR\_RXNE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01581}01581\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01582}01582\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01591}01591\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_ADDR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01592}01592\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01593}01593\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0c1a844fb3e55ca9db318d0bc2db4a07}{I2C\_ISR\_ADDR}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0c1a844fb3e55ca9db318d0bc2db4a07}{I2C\_ISR\_ADDR}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01594}01594\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01595}01595\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01604}01604\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_NACK(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01605}01605\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01606}01606\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad2fb99c13292fc510cfe85bf45ac6b77}{I2C\_ISR\_NACKF}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad2fb99c13292fc510cfe85bf45ac6b77}{I2C\_ISR\_NACKF}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01607}01607\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01608}01608\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01617}01617\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_STOP(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01618}01618\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01619}01619\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga24dee623aba3059485449f8ce7d061b7}{I2C\_ISR\_STOPF}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga24dee623aba3059485449f8ce7d061b7}{I2C\_ISR\_STOPF}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01620}01620\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01621}01621\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01630}01630\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_TC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01631}01631\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01632}01632\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac47bed557caa744aa763e1a8d0eba04d}{I2C\_ISR\_TC}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac47bed557caa744aa763e1a8d0eba04d}{I2C\_ISR\_TC}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01633}01633\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01634}01634\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01643}01643\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_TCR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01644}01644\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01645}01645\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga76008be670a9a4829aaf3753c79b3bbd}{I2C\_ISR\_TCR}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga76008be670a9a4829aaf3753c79b3bbd}{I2C\_ISR\_TCR}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01646}01646\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01647}01647\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01656}01656\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_BERR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01657}01657\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01658}01658\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0dd0d8fdc41303a1c31fc7466301be07}{I2C\_ISR\_BERR}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0dd0d8fdc41303a1c31fc7466301be07}{I2C\_ISR\_BERR}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01659}01659\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01660}01660\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01669}01669\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_ARLO(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01670}01670\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01671}01671\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga54ae33fec99aa351621ba6b483fbead3}{I2C\_ISR\_ARLO}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga54ae33fec99aa351621ba6b483fbead3}{I2C\_ISR\_ARLO}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01672}01672\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01673}01673\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01682}01682\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_OVR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01683}01683\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01684}01684\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf5976110d93d2f36f50c4c6467510914}{I2C\_ISR\_OVR}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf5976110d93d2f36f50c4c6467510914}{I2C\_ISR\_OVR}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01685}01685\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01686}01686\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01697}01697\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveSMBusFlag\_PECERR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01698}01698\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01699}01699\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8b1d42968194fb42f9cc9bb2c2806281}{I2C\_ISR\_PECERR}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8b1d42968194fb42f9cc9bb2c2806281}{I2C\_ISR\_PECERR}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01700}01700\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01701}01701\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01712}01712\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveSMBusFlag\_TIMEOUT(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01713}01713\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01714}01714\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga63fc8ce165c42d0d719c45e58a82f574}{I2C\_ISR\_TIMEOUT}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga63fc8ce165c42d0d719c45e58a82f574}{I2C\_ISR\_TIMEOUT}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01715}01715\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01716}01716\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01728}01728\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveSMBusFlag\_ALERT(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01729}01729\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01730}01730\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4c6c779bca999450c595fc797a1fdeec}{I2C\_ISR\_ALERT}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4c6c779bca999450c595fc797a1fdeec}{I2C\_ISR\_ALERT}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01731}01731\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01732}01732\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01741}01741\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsActiveFlag\_BUSY(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01742}01742\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01743}01743\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga12ba21dc10ca08a2063a1c4672ffb886}{I2C\_ISR\_BUSY}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga12ba21dc10ca08a2063a1c4672ffb886}{I2C\_ISR\_BUSY}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01744}01744\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01745}01745\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01752}01752\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearFlag\_ADDR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01753}01753\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01754}01754\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac46e27edee02106eec30ede46a143e92}{I2C\_ICR\_ADDRCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01755}01755\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01756}01756\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01763}01763\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearFlag\_NACK(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01764}01764\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01765}01765\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab68515e7c5c0796da616c92943a17472}{I2C\_ICR\_NACKCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01766}01766\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01767}01767\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01774}01774\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearFlag\_STOP(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01775}01775\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01776}01776\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabe59e51ed40569ab397e2cf9da3a347f}{I2C\_ICR\_STOPCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01777}01777\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01778}01778\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01786}01786\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearFlag\_TXE(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01787}01787\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01788}01788\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1dfec198395c0f88454a86bacff60351}{I2C\_ISR\_TXE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01789}01789\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01790}01790\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01797}01797\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearFlag\_BERR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01798}01798\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01799}01799\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga9a64f0841ce0f5d234a72b968705c416}{I2C\_ICR\_BERRCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01800}01800\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01801}01801\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01808}01808\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearFlag\_ARLO(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01809}01809\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01810}01810\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1bc8765152bfd75d343a06e3b696805d}{I2C\_ICR\_ARLOCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01811}01811\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01812}01812\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01819}01819\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearFlag\_OVR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01820}01820\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01821}01821\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5d46a31811a8b9489ca63f1c8e4c1021}{I2C\_ICR\_OVRCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01822}01822\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01823}01823\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01832}01832\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearSMBusFlag\_PECERR(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01833}01833\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01834}01834\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7b8f2f138f5a1dea3c54801a2750ef9d}{I2C\_ICR\_PECCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01835}01835\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01836}01836\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01845}01845\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearSMBusFlag\_TIMEOUT(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01846}01846\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01847}01847\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga9a76993c176007a7353a33b53e7d3136}{I2C\_ICR\_TIMOUTCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01848}01848\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01849}01849\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01858}01858\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_ClearSMBusFlag\_ALERT(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01859}01859\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01860}01860\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a0a8c8230846fd8ff154b9fde8dfa0399}{ICR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaed440bb0bdb9b1134d7a21ebdf7d3ac3}{I2C\_ICR\_ALERTCF}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01861}01861\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01862}01862\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01879}01879\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableAutoEndMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01880}01880\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01881}01881\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabcf789c74e217ec8967bcabc156a6c54}{I2C\_CR2\_AUTOEND}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01882}01882\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01883}01883\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01891}01891\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableAutoEndMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01892}01892\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01893}01893\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabcf789c74e217ec8967bcabc156a6c54}{I2C\_CR2\_AUTOEND}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01894}01894\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01895}01895\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01902}01902\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledAutoEndMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01903}01903\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01904}01904\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabcf789c74e217ec8967bcabc156a6c54}{I2C\_CR2\_AUTOEND}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabcf789c74e217ec8967bcabc156a6c54}{I2C\_CR2\_AUTOEND}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01905}01905\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01906}01906\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01914}01914\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableReloadMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01915}01915\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01916}01916\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga21a796045451013c964ef8b12ca6c9bb}{I2C\_CR2\_RELOAD}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01917}01917\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01918}01918\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01926}01926\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableReloadMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01927}01927\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01928}01928\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga21a796045451013c964ef8b12ca6c9bb}{I2C\_CR2\_RELOAD}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01929}01929\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01930}01930\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01937}01937\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledReloadMode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01938}01938\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01939}01939\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga21a796045451013c964ef8b12ca6c9bb}{I2C\_CR2\_RELOAD}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga21a796045451013c964ef8b12ca6c9bb}{I2C\_CR2\_RELOAD}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01940}01940\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01941}01941\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01950}01950\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetTransferSize(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ TransferSize)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01951}01951\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01952}01952\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga23a58895a897ccc34a8cbbe36b412b69}{I2C\_CR2\_NBYTES}},\ TransferSize\ <<\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga543bf3506a45a9d3bd2f07a7381a27d0}{I2C\_CR2\_NBYTES\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01953}01953\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01954}01954\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01961}01961\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetTransferSize(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01962}01962\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01963}01963\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga23a58895a897ccc34a8cbbe36b412b69}{I2C\_CR2\_NBYTES}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga543bf3506a45a9d3bd2f07a7381a27d0}{I2C\_CR2\_NBYTES\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01964}01964\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01965}01965\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01977}01977\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_AcknowledgeNextData(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ TypeAcknowledge)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01978}01978\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01979}01979\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga8bcbbaf564cb68e3afed79c3cd34aa1f}{I2C\_CR2\_NACK}},\ TypeAcknowledge);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01980}01980\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01981}01981\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01990}01990\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_GenerateStartCondition(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01991}01991\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01992}01992\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ac78b87a12a9eaf564f5a3f99928478}{I2C\_CR2\_START}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01993}01993\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l01994}01994\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02001}02001\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_GenerateStopCondition(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02002}02002\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02003}02003\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga37007be453dd8a637be2d793d3b5f2a2}{I2C\_CR2\_STOP}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02004}02004\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02005}02005\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02015}02015\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableAuto10BitRead(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02016}02016\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02017}02017\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2de0f12e6fb297c2c29bee5504e54377}{I2C\_CR2\_HEAD10R}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02018}02018\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02019}02019\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02027}02027\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_DisableAuto10BitRead(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02028}02028\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02029}02029\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2de0f12e6fb297c2c29bee5504e54377}{I2C\_CR2\_HEAD10R}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02030}02030\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02031}02031\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02038}02038\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledAuto10BitRead(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02039}02039\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02040}02040\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2de0f12e6fb297c2c29bee5504e54377}{I2C\_CR2\_HEAD10R}})\ !=\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2de0f12e6fb297c2c29bee5504e54377}{I2C\_CR2\_HEAD10R}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02041}02041\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02042}02042\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02053}02053\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetTransferRequest(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ TransferRequest)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02054}02054\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02055}02055\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga268ec714bbe4a75ea098c0e230a87697}{I2C\_CR2\_RD\_WRN}},\ TransferRequest);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02056}02056\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02057}02057\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02066}02066\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetTransferRequest(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02067}02067\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02068}02068\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga268ec714bbe4a75ea098c0e230a87697}{I2C\_CR2\_RD\_WRN}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02069}02069\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02070}02070\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02079}02079\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_SetSlaveAddr(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ SlaveAddr)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02080}02080\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02081}02081\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1a0478d3d85fc6aba608390ee2ea2d1c}{I2C\_CR2\_SADD}},\ SlaveAddr);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02082}02082\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02083}02083\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02090}02090\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetSlaveAddr(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02091}02091\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02092}02092\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1a0478d3d85fc6aba608390ee2ea2d1c}{I2C\_CR2\_SADD}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02093}02093\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02094}02094\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02133}02133\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_HandleTransfer(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint32\_t\ SlaveAddr,\ uint32\_t\ SlaveAddrSize,}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02134}02134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ TransferSize,\ uint32\_t\ EndMode,\ uint32\_t\ Request)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02135}02135\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02136}02136\ \ \ \mbox{\hyperlink{group__Exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1a0478d3d85fc6aba608390ee2ea2d1c}{I2C\_CR2\_SADD}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5454de5709c0e68a0068f9f5d39e5674}{I2C\_CR2\_ADD10}}\ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02137}02137\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga268ec714bbe4a75ea098c0e230a87697}{I2C\_CR2\_RD\_WRN}}\ \&\ (uint32\_t)(Request\ >>\ (31U\ -\/\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga163b3a97f88712d6315c82a9bf90bb9a}{I2C\_CR2\_RD\_WRN\_Pos}})))\ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02138}02138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ac78b87a12a9eaf564f5a3f99928478}{I2C\_CR2\_START}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga37007be453dd8a637be2d793d3b5f2a2}{I2C\_CR2\_STOP}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga21a796045451013c964ef8b12ca6c9bb}{I2C\_CR2\_RELOAD}}\ |}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02139}02139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga23a58895a897ccc34a8cbbe36b412b69}{I2C\_CR2\_NBYTES}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gabcf789c74e217ec8967bcabc156a6c54}{I2C\_CR2\_AUTOEND}}\ |\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga2de0f12e6fb297c2c29bee5504e54377}{I2C\_CR2\_HEAD10R}},}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02140}02140\ \ \ \ \ \ \ \ \ \ \ \ \ \ SlaveAddr\ |\ SlaveAddrSize\ |\ (TransferSize\ <<\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga543bf3506a45a9d3bd2f07a7381a27d0}{I2C\_CR2\_NBYTES\_Pos}})\ |\ EndMode\ |\ Request);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02141}02141\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02142}02142\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02153}02153\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetTransferDirection(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02154}02154\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02155}02155\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa4890d7deb94106f946b28a7309e22aa}{I2C\_ISR\_DIR}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02156}02156\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02157}02157\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02164}02164\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetAddressMatchCode(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02165}02165\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02166}02166\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ab3c49a96815fcbee63d95e1e74f20e75}{ISR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga9050a7e2c1d8777251352f51197e4c80}{I2C\_ISR\_ADDCODE}})\ >>\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga276e6692440e4c8afeafc013e56fa2bb}{I2C\_ISR\_ADDCODE\_Pos}}\ <<\ 1);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02167}02167\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02168}02168\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02181}02181\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_EnableSMBusPECCompare(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02182}02182\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02183}02183\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6989be2db6f3df41bf5cdb856b1a64c7}{I2C\_CR2\_PECBYTE}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02184}02184\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02185}02185\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02194}02194\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_IsEnabledSMBusPECCompare(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02195}02195\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02196}02196\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_afdfa307571967afb1d97943e982b6586}{CR2}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6989be2db6f3df41bf5cdb856b1a64c7}{I2C\_CR2\_PECBYTE}})\ ==\ (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6989be2db6f3df41bf5cdb856b1a64c7}{I2C\_CR2\_PECBYTE}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02197}02197\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02198}02198\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02207}02207\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_I2C\_GetSMBusPEC(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02208}02208\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02209}02209\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_af427631ab4515bb1f16bf5869682c18b}{PECR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac30a300f7bcd680b82263f4059f67a89}{I2C\_PECR\_PEC}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02210}02210\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02211}02211\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02218}02218\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint8\_t\ LL\_I2C\_ReceiveData8(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02219}02219\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02220}02220\ \ \ \textcolor{keywordflow}{return}\ (uint8\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_a9bf29a9104cb5569823ab892174f9c8c}{RXDR}},\ \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga54a8527f0da080debfb9cb25c02deaff}{I2C\_RXDR\_RXDATA}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02221}02221\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02222}02222\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02230}02230\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_I2C\_TransmitData8(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ uint8\_t\ Data)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02231}02231\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02232}02232\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(I2Cx-\/>\mbox{\hyperlink{structI2C__TypeDef_ad7e8d785fff2acfeb8814e43bda8dd72}{TXDR}},\ Data);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02233}02233\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02234}02234\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02239}02239\ \textcolor{preprocessor}{\#if\ defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02244}02244\ \mbox{\hyperlink{group__Exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{ErrorStatus}}\ LL\_I2C\_Init(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx,\ LL\_I2C\_InitTypeDef\ *I2C\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02245}02245\ \mbox{\hyperlink{group__Exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{ErrorStatus}}\ LL\_I2C\_DeInit(\mbox{\hyperlink{structI2C__TypeDef}{I2C\_TypeDef}}\ *I2Cx);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02246}02246\ \textcolor{keywordtype}{void}\ LL\_I2C\_StructInit(LL\_I2C\_InitTypeDef\ *I2C\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02247}02247\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02248}02248\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02252}02252\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_FULL\_LL\_DRIVER\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02253}02253\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02262}02262\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ I2C1\ ||\ I2C2\ ||\ I2C3\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02263}02263\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02268}02268\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02269}02269\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02270}02270\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02271}02271\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__i2c_8h_source_l02272}02272\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ STM32WLxx\_LL\_I2C\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

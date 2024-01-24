@@ -1,0 +1,26 @@
+var group__I2C__Private__Macro =
+[
+    [ "I2C_CHECK_FLAG", "group__I2C__Private__Macro.html#ga31873e0595e29c80cffe00c2d2e073ab", null ],
+    [ "I2C_CHECK_IT_SOURCE", "group__I2C__Private__Macro.html#gacc7c83a67d99d759923c6907f1a1751f", null ],
+    [ "I2C_GENERATE_START", "group__I2C__Private__Macro.html#ga5212d1dbe376d10b7ec3060032283a33", null ],
+    [ "I2C_GET_ADDR_MATCH", "group__I2C__Private__Macro.html#ga30d76b55c39e04efb077f47eb454261d", null ],
+    [ "I2C_GET_DIR", "group__I2C__Private__Macro.html#ga0359d435a6d984b3fefdc2da709e5764", null ],
+    [ "I2C_GET_OWN_ADDRESS1", "group__I2C__Private__Macro.html#gaa80106d084f4027f8f341f2c3c49dcfa", null ],
+    [ "I2C_GET_OWN_ADDRESS2", "group__I2C__Private__Macro.html#gad0b113e974debf6a9af783e1fe08ef23", null ],
+    [ "I2C_GET_STOP_MODE", "group__I2C__Private__Macro.html#ga1bc559a860da12ee5a7517548facbc57", null ],
+    [ "I2C_MEM_ADD_LSB", "group__I2C__Private__Macro.html#ga9c8f1a763307d0c37bb4e2dcfdf3bb9f", null ],
+    [ "I2C_MEM_ADD_MSB", "group__I2C__Private__Macro.html#ga2e42fa55be22240dc5a54a0304d01cfb", null ],
+    [ "I2C_RESET_CR2", "group__I2C__Private__Macro.html#ga84085a3fd5b43f29ec449d86560a9378", null ],
+    [ "IS_I2C_ADDRESSING_MODE", "group__I2C__Private__Macro.html#ga14b20c50be9fcafef1ce2f0b962b39a9", null ],
+    [ "IS_I2C_DUAL_ADDRESS", "group__I2C__Private__Macro.html#gae683c113d4088dfae90fbe6677f8296a", null ],
+    [ "IS_I2C_GENERAL_CALL", "group__I2C__Private__Macro.html#ga36a9a7855d7f35a6b03b05c6079bf149", null ],
+    [ "IS_I2C_MEMADD_SIZE", "group__I2C__Private__Macro.html#gace95d2b6add7feef5805f1fa6d2e46be", null ],
+    [ "IS_I2C_NO_STRETCH", "group__I2C__Private__Macro.html#gaf7d844f7c7f5c96067468ab47971d0fd", null ],
+    [ "IS_I2C_OWN_ADDRESS1", "group__I2C__Private__Macro.html#gad84e8b9523d45b6105b4d5cb68994a79", null ],
+    [ "IS_I2C_OWN_ADDRESS2", "group__I2C__Private__Macro.html#ga83001d53612b83ee90730d3bb2732537", null ],
+    [ "IS_I2C_OWN_ADDRESS2_MASK", "group__I2C__Private__Macro.html#ga4f5ba081bbab937fa5137340492def13", null ],
+    [ "IS_I2C_TRANSFER_OPTIONS_REQUEST", "group__I2C__Private__Macro.html#ga8f3522af9ffef268641698ac80f77859", null ],
+    [ "IS_I2C_TRANSFER_OTHER_OPTIONS_REQUEST", "group__I2C__Private__Macro.html#ga13a3986011ca018dd12ff39ea3bec11b", null ],
+    [ "IS_TRANSFER_MODE", "group__I2C__Private__Macro.html#gafaa6130d7e7e11240349d9e1476c7f06", null ],
+    [ "IS_TRANSFER_REQUEST", "group__I2C__Private__Macro.html#ga035522b30af949e6643a5c34bd07f9d2", null ]
+];

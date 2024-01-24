@@ -1,0 +1,26 @@
+var group__LSM6DSOX__Sensor__hub =
+[
+    [ "lsm6dsox_sh_cfg_write", "group__LSM6DSOX__Sensor__hub.html#ga43822872a251e6a4df8174e0ff216d4b", null ],
+    [ "lsm6dsox_sh_data_rate_get", "group__LSM6DSOX__Sensor__hub.html#gae1047c673b1920c4c92a150633a6f2fc", null ],
+    [ "lsm6dsox_sh_data_rate_set", "group__LSM6DSOX__Sensor__hub.html#gac9a7908715ccad89e4cfb112da1de17e", null ],
+    [ "lsm6dsox_sh_master_get", "group__LSM6DSOX__Sensor__hub.html#ga9b6cc508a916a3901432368ccb658c2e", null ],
+    [ "lsm6dsox_sh_master_set", "group__LSM6DSOX__Sensor__hub.html#gaff0d824743b6f2e630c2fd0820493b6d", null ],
+    [ "lsm6dsox_sh_pass_through_get", "group__LSM6DSOX__Sensor__hub.html#gaa66f82fa1603ffaec87450909ad7b944", null ],
+    [ "lsm6dsox_sh_pass_through_set", "group__LSM6DSOX__Sensor__hub.html#gabfcecd45fbefe5fd7f4b7e7745896199", null ],
+    [ "lsm6dsox_sh_pin_mode_get", "group__LSM6DSOX__Sensor__hub.html#ga24e64d67aa2ab7f29e00afe8808ddbdd", null ],
+    [ "lsm6dsox_sh_pin_mode_set", "group__LSM6DSOX__Sensor__hub.html#ga36ccf457fea62db10dc1c63ee35e97f5", null ],
+    [ "lsm6dsox_sh_read_data_raw_get", "group__LSM6DSOX__Sensor__hub.html#ga7d8b0dc100bfee2cc7c787f0188fc260", null ],
+    [ "lsm6dsox_sh_reset_get", "group__LSM6DSOX__Sensor__hub.html#ga665d3e0ae76104ec7c53d3d0fbe98e72", null ],
+    [ "lsm6dsox_sh_reset_set", "group__LSM6DSOX__Sensor__hub.html#ga0f53df78c2e02face82c985d5a1cd3a7", null ],
+    [ "lsm6dsox_sh_slave_connected_get", "group__LSM6DSOX__Sensor__hub.html#ga11fcfb4070a710f4cf514ec9c17b859e", null ],
+    [ "lsm6dsox_sh_slave_connected_set", "group__LSM6DSOX__Sensor__hub.html#gafef8da4d58e98351dca037621df6e954", null ],
+    [ "lsm6dsox_sh_slv0_cfg_read", "group__LSM6DSOX__Sensor__hub.html#ga763b34e99c9de6309bcc24ba1edf1e5d", null ],
+    [ "lsm6dsox_sh_slv1_cfg_read", "group__LSM6DSOX__Sensor__hub.html#ga322c34cee7f2e8f769594acba0cfc698", null ],
+    [ "lsm6dsox_sh_slv2_cfg_read", "group__LSM6DSOX__Sensor__hub.html#ga3aba8b5250a0a70517a28824144169e4", null ],
+    [ "lsm6dsox_sh_slv3_cfg_read", "group__LSM6DSOX__Sensor__hub.html#ga97c819a85d0ab5b63464fae8ee7e6fa7", null ],
+    [ "lsm6dsox_sh_status_get", "group__LSM6DSOX__Sensor__hub.html#gaf0e143a330a5ef500b6de6b2408cfd01", null ],
+    [ "lsm6dsox_sh_syncro_mode_get", "group__LSM6DSOX__Sensor__hub.html#gaf9f91a104e1767fb4cf537007e28a933", null ],
+    [ "lsm6dsox_sh_syncro_mode_set", "group__LSM6DSOX__Sensor__hub.html#ga8fe87bfe7fd1349b2fd45bdbbac4917b", null ],
+    [ "lsm6dsox_sh_write_mode_get", "group__LSM6DSOX__Sensor__hub.html#ga1247fe649c3df84c057153a5399b7235", null ],
+    [ "lsm6dsox_sh_write_mode_set", "group__LSM6DSOX__Sensor__hub.html#ga47889074459167213b304386cd315108", null ]
+];

@@ -1,0 +1,598 @@
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{Cache Functions}
+\hypertarget{group__CMSIS__Core__CacheFunctions}{}\label{group__CMSIS__Core__CacheFunctions}\index{Cache Functions@{Cache Functions}}
+
+
+Functions that configure Instruction and Data cache.  
+
+
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection*{Topics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__CMSIS__Core__SysTickFunctions}{Sys\+Tick Functions}}
+\begin{DoxyCompactList}\small\item\em Functions that configure the System. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga980ffe52af778f2535ccc52f25f9a7de}{SCB\+\_\+\+Enable\+ICache}} (void)
+\begin{DoxyCompactList}\small\item\em Enable I-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga56baa06298799dea5f207d4c12d9d4a6}{SCB\+\_\+\+Disable\+ICache}} (void)
+\begin{DoxyCompactList}\small\item\em Disable I-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga62419cb7e6773e3d9236f14e458c1b05}{SCB\+\_\+\+Invalidate\+ICache}} (void)
+\begin{DoxyCompactList}\small\item\em Invalidate I-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf6bed290ff6916337b0ce6c09131f699}{SCB\+\_\+\+Invalidate\+ICache\+\_\+by\+\_\+\+Addr}} (void \texorpdfstring{$\ast$}{*}addr, int32\+\_\+t isize)
+\begin{DoxyCompactList}\small\item\em I-\/\+Cache Invalidate by address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga3861db932100ccb53f994e2cc68ed79c}{SCB\+\_\+\+Enable\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Enable D-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gafe64b44d1a61483a947e44a77a9d3287}{SCB\+\_\+\+Disable\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Disable D-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga99fe43c224644881935de135ceaa2dd9}{SCB\+\_\+\+Invalidate\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Invalidate D-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf5585be5547cc60585d702a6129f4c17}{SCB\+\_\+\+Clean\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Clean D-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga5b22ca58709fadc326da83197a2f28bb}{SCB\+\_\+\+Clean\+Invalidate\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Clean \& Invalidate D-\/\+Cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga9945b206324ddbcd32818f1a4e49df83}{SCB\+\_\+\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr}} (void \texorpdfstring{$\ast$}{*}addr, int32\+\_\+t dsize)
+\begin{DoxyCompactList}\small\item\em D-\/\+Cache Invalidate by address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gab86b0b49bac2b14b21cc1590009efac5}{SCB\+\_\+\+Clean\+DCache\+\_\+by\+\_\+\+Addr}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}addr, int32\+\_\+t dsize)
+\begin{DoxyCompactList}\small\item\em D-\/\+Cache Clean by address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga853737b61ec075250d5991748fdd0e83}{SCB\+\_\+\+Clean\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}addr, int32\+\_\+t dsize)
+\begin{DoxyCompactList}\small\item\em D-\/\+Cache Clean and Invalidate by address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9}{CCSIDR\+\_\+\+WAYS}}(x)~(((x) \& \mbox{\hyperlink{group__CMSIS__CORE_gae093c4c635dad43845967512fa87173a}{SCB\+\_\+\+CCSIDR\+\_\+\+ASSOCIATIVITY\+\_\+\+Msk}}) $>$$>$ \mbox{\hyperlink{group__CMSIS__CORE_gae67f2f83976b819fb3039fc35cfef0fb}{SCB\+\_\+\+CCSIDR\+\_\+\+ASSOCIATIVITY\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932}{CCSIDR\+\_\+\+SETS}}(x)~(((x) \& \mbox{\hyperlink{group__CMSIS__CORE_ga47d1f01185d7a039334031008386c5a8}{SCB\+\_\+\+CCSIDR\+\_\+\+NUMSETS\+\_\+\+Msk}}      ) $>$$>$ \mbox{\hyperlink{group__CMSIS__CORE_ga1028d2c238f74d2aa021f53ffbe8d7ab}{SCB\+\_\+\+CCSIDR\+\_\+\+NUMSETS\+\_\+\+Pos}}      )
+\item 
+\#define \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\+\_\+\+\_\+\+SCB\+\_\+\+DCACHE\+\_\+\+LINE\+\_\+\+SIZE}}~32U
+\item 
+\#define \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gadd99421e7a7d7121063ef94b49f97e90}{\+\_\+\+\_\+\+SCB\+\_\+\+ICACHE\+\_\+\+LINE\+\_\+\+SIZE}}~32U
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{Detailed Description}
+Functions that configure Instruction and Data cache. 
+
+
+
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}\label{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12} 
+\index{Cache Functions@{Cache Functions}!\_\_SCB\_DCACHE\_LINE\_SIZE@{\_\_SCB\_DCACHE\_LINE\_SIZE}}
+\index{\_\_SCB\_DCACHE\_LINE\_SIZE@{\_\_SCB\_DCACHE\_LINE\_SIZE}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{\_\_SCB\_DCACHE\_LINE\_SIZE}{\_\_SCB\_DCACHE\_LINE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+SCB\+\_\+\+DCACHE\+\_\+\+LINE\+\_\+\+SIZE~32U}
+
+Cortex-\/\+M7 cache line size is fixed to 32 bytes (8 words). See also register SCB\+\_\+\+CCSIDR 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02234}{2234}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+\Hypertarget{group__CMSIS__Core__CacheFunctions_gadd99421e7a7d7121063ef94b49f97e90}\label{group__CMSIS__Core__CacheFunctions_gadd99421e7a7d7121063ef94b49f97e90} 
+\index{Cache Functions@{Cache Functions}!\_\_SCB\_ICACHE\_LINE\_SIZE@{\_\_SCB\_ICACHE\_LINE\_SIZE}}
+\index{\_\_SCB\_ICACHE\_LINE\_SIZE@{\_\_SCB\_ICACHE\_LINE\_SIZE}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{\_\_SCB\_ICACHE\_LINE\_SIZE}{\_\_SCB\_ICACHE\_LINE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+SCB\+\_\+\+ICACHE\+\_\+\+LINE\+\_\+\+SIZE~32U}
+
+Cortex-\/\+M7 cache line size is fixed to 32 bytes (8 words). See also register SCB\+\_\+\+CCSIDR 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02235}{2235}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+\Hypertarget{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932}\label{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932} 
+\index{Cache Functions@{Cache Functions}!CCSIDR\_SETS@{CCSIDR\_SETS}}
+\index{CCSIDR\_SETS@{CCSIDR\_SETS}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{CCSIDR\_SETS}{CCSIDR\_SETS}}
+{\footnotesize\ttfamily \#define CCSIDR\+\_\+\+SETS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& \mbox{\hyperlink{group__CMSIS__CORE_ga47d1f01185d7a039334031008386c5a8}{SCB\+\_\+\+CCSIDR\+\_\+\+NUMSETS\+\_\+\+Msk}}      ) $>$$>$ \mbox{\hyperlink{group__CMSIS__CORE_ga1028d2c238f74d2aa021f53ffbe8d7ab}{SCB\+\_\+\+CCSIDR\+\_\+\+NUMSETS\+\_\+\+Pos}}      )}
+
+
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02232}{2232}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9}\label{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9} 
+\index{Cache Functions@{Cache Functions}!CCSIDR\_WAYS@{CCSIDR\_WAYS}}
+\index{CCSIDR\_WAYS@{CCSIDR\_WAYS}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{CCSIDR\_WAYS}{CCSIDR\_WAYS}}
+{\footnotesize\ttfamily \#define CCSIDR\+\_\+\+WAYS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& \mbox{\hyperlink{group__CMSIS__CORE_gae093c4c635dad43845967512fa87173a}{SCB\+\_\+\+CCSIDR\+\_\+\+ASSOCIATIVITY\+\_\+\+Msk}}) $>$$>$ \mbox{\hyperlink{group__CMSIS__CORE_gae67f2f83976b819fb3039fc35cfef0fb}{SCB\+\_\+\+CCSIDR\+\_\+\+ASSOCIATIVITY\+\_\+\+Pos}})}
+
+
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02231}{2231}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{Function Documentation}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_gaf5585be5547cc60585d702a6129f4c17}\label{group__CMSIS__Core__CacheFunctions_gaf5585be5547cc60585d702a6129f4c17} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanDCache@{SCB\_CleanDCache}}
+\index{SCB\_CleanDCache@{SCB\_CleanDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_CleanDCache()}{SCB\_CleanDCache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Clean\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clean D-\/\+Cache. 
+
+Cleans D-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02438}{2438}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02439\ \{}
+\DoxyCodeLine{02440\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02441\ \ \ \ \ uint32\_t\ ccsidr;}
+\DoxyCodeLine{02442\ \ \ \ \ uint32\_t\ sets;}
+\DoxyCodeLine{02443\ \ \ \ \ uint32\_t\ ways;}
+\DoxyCodeLine{02444\ }
+\DoxyCodeLine{02445\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CSSELR\ =\ 0U;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ select\ Level\ 1\ data\ cache\ */}}
+\DoxyCodeLine{02446\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02447\ }
+\DoxyCodeLine{02448\ \ \ \ \ ccsidr\ =\ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCSIDR;}
+\DoxyCodeLine{02449\ }
+\DoxyCodeLine{02450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ clean\ D-\/Cache\ */}}
+\DoxyCodeLine{02451\ \ \ \ \ sets\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932}{CCSIDR\_SETS}}(ccsidr));}
+\DoxyCodeLine{02452\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02453\ \ \ \ \ \ \ ways\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9}{CCSIDR\_WAYS}}(ccsidr));}
+\DoxyCodeLine{02454\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02455\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCCSW\ =\ (((sets\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_gae93985adc38a127bc8dc909ac58e8fea}{SCB\_DCCSW\_SET\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_ga669e16d98c8ea0e66afb04641971d98c}{SCB\_DCCSW\_SET\_Msk}})\ |}
+\DoxyCodeLine{02456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ways\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_ga6cac2d69791e13af276d8306c796925f}{SCB\_DCCSW\_WAY\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_ga8374e67655ac524284c9bb59eb2efa23}{SCB\_DCCSW\_WAY\_Msk}})\ \ );}
+\DoxyCodeLine{02457\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ defined\ (\ \_\_CC\_ARM\ )}}
+\DoxyCodeLine{02458\ \ \ \ \ \ \ \ \ \ \ \_\_schedule\_barrier();}
+\DoxyCodeLine{02459\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{02460\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (ways-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02461\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(sets-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02462\ }
+\DoxyCodeLine{02463\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02464\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02465\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02466\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_gab86b0b49bac2b14b21cc1590009efac5}\label{group__CMSIS__Core__CacheFunctions_gab86b0b49bac2b14b21cc1590009efac5} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanDCache\_by\_Addr@{SCB\_CleanDCache\_by\_Addr}}
+\index{SCB\_CleanDCache\_by\_Addr@{SCB\_CleanDCache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_CleanDCache\_by\_Addr()}{SCB\_CleanDCache\_by\_Addr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Clean\+DCache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{addr,  }\item[{int32\+\_\+t}]{dsize }\end{DoxyParamCaption})}
+
+
+
+D-\/\+Cache Clean by address. 
+
+Cleans D-\/\+Cache for the given address D-\/\+Cache is cleaned starting from a 32 byte aligned address in 32 byte granularity. D-\/\+Cache memory blocks which are part of given address + given size are cleaned. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02542}{2542}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02543\ \{}
+\DoxyCodeLine{02544\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02545\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ dsize\ >\ 0\ )\ \{\ }
+\DoxyCodeLine{02546\ \ \ \ \ \ \ \ int32\_t\ op\_size\ =\ dsize\ +\ (((uint32\_t)addr)\ \&\ (\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}}\ -\/\ 1U));}
+\DoxyCodeLine{02547\ \ \ \ \ \ \ uint32\_t\ op\_addr\ =\ (uint32\_t)addr\ \textcolor{comment}{/*\ \&\ \string~(\_\_SCB\_DCACHE\_LINE\_SIZE\ -\/\ 1U)\ */};}
+\DoxyCodeLine{02548\ \ \ \ \ }
+\DoxyCodeLine{02549\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02550\ }
+\DoxyCodeLine{02551\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02552\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCCMVAC\ =\ op\_addr;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ register\ accepts\ only\ 32byte\ aligned\ values,\ only\ bits\ 31..5\ are\ valid\ */}}
+\DoxyCodeLine{02553\ \ \ \ \ \ \ \ \ op\_addr\ +=\ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02554\ \ \ \ \ \ \ \ \ op\_size\ -\/=\ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02555\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\ op\_size\ >\ 0\ );}
+\DoxyCodeLine{02556\ }
+\DoxyCodeLine{02557\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02558\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02559\ \ \ \ \ \}}
+\DoxyCodeLine{02560\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02561\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga5b22ca58709fadc326da83197a2f28bb}\label{group__CMSIS__Core__CacheFunctions_ga5b22ca58709fadc326da83197a2f28bb} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanInvalidateDCache@{SCB\_CleanInvalidateDCache}}
+\index{SCB\_CleanInvalidateDCache@{SCB\_CleanInvalidateDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_CleanInvalidateDCache()}{SCB\_CleanInvalidateDCache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Clean\+Invalidate\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clean \& Invalidate D-\/\+Cache. 
+
+Cleans and Invalidates D-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02473}{2473}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02474\ \{}
+\DoxyCodeLine{02475\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02476\ \ \ \ \ uint32\_t\ ccsidr;}
+\DoxyCodeLine{02477\ \ \ \ \ uint32\_t\ sets;}
+\DoxyCodeLine{02478\ \ \ \ \ uint32\_t\ ways;}
+\DoxyCodeLine{02479\ }
+\DoxyCodeLine{02480\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CSSELR\ =\ 0U;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ select\ Level\ 1\ data\ cache\ */}}
+\DoxyCodeLine{02481\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02482\ }
+\DoxyCodeLine{02483\ \ \ \ \ ccsidr\ =\ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCSIDR;}
+\DoxyCodeLine{02484\ }
+\DoxyCodeLine{02485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ clean\ \&\ invalidate\ D-\/Cache\ */}}
+\DoxyCodeLine{02486\ \ \ \ \ sets\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932}{CCSIDR\_SETS}}(ccsidr));}
+\DoxyCodeLine{02487\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02488\ \ \ \ \ \ \ ways\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9}{CCSIDR\_WAYS}}(ccsidr));}
+\DoxyCodeLine{02489\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02490\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCCISW\ =\ (((sets\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_ga525f1bb9849e89b3eafbd53dcd51e296}{SCB\_DCCISW\_SET\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gaf1b0bea5ab77d4ad7d5c21e77ca463ad}{SCB\_DCCISW\_SET\_Msk}})\ |}
+\DoxyCodeLine{02491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ways\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_gaa90bd0b36679219d6a2144eba6eb96cd}{SCB\_DCCISW\_WAY\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gaf2269bbe0bc7705e1da8f5ee0f581054}{SCB\_DCCISW\_WAY\_Msk}})\ \ );}
+\DoxyCodeLine{02492\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ defined\ (\ \_\_CC\_ARM\ )}}
+\DoxyCodeLine{02493\ \ \ \ \ \ \ \ \ \ \ \_\_schedule\_barrier();}
+\DoxyCodeLine{02494\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{02495\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (ways-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02496\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(sets-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02497\ }
+\DoxyCodeLine{02498\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02499\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02500\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02501\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga853737b61ec075250d5991748fdd0e83}\label{group__CMSIS__Core__CacheFunctions_ga853737b61ec075250d5991748fdd0e83} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanInvalidateDCache\_by\_Addr@{SCB\_CleanInvalidateDCache\_by\_Addr}}
+\index{SCB\_CleanInvalidateDCache\_by\_Addr@{SCB\_CleanInvalidateDCache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_CleanInvalidateDCache\_by\_Addr()}{SCB\_CleanInvalidateDCache\_by\_Addr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Clean\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{addr,  }\item[{int32\+\_\+t}]{dsize }\end{DoxyParamCaption})}
+
+
+
+D-\/\+Cache Clean and Invalidate by address. 
+
+Cleans and invalidates D\+\_\+\+Cache for the given address D-\/\+Cache is cleaned and invalidated starting from a 32 byte aligned address in 32 byte granularity. D-\/\+Cache memory blocks which are part of given address + given size are cleaned and invalidated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address (aligned to 32-\/byte boundary) \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02572}{2572}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02573\ \{}
+\DoxyCodeLine{02574\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02575\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ dsize\ >\ 0\ )\ \{\ }
+\DoxyCodeLine{02576\ \ \ \ \ \ \ \ int32\_t\ op\_size\ =\ dsize\ +\ (((uint32\_t)addr)\ \&\ (\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}}\ -\/\ 1U));}
+\DoxyCodeLine{02577\ \ \ \ \ \ \ uint32\_t\ op\_addr\ =\ (uint32\_t)addr\ \textcolor{comment}{/*\ \&\ \string~(\_\_SCB\_DCACHE\_LINE\_SIZE\ -\/\ 1U)\ */};}
+\DoxyCodeLine{02578\ \ \ \ \ }
+\DoxyCodeLine{02579\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02580\ }
+\DoxyCodeLine{02581\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02582\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCCIMVAC\ =\ op\_addr;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ register\ accepts\ only\ 32byte\ aligned\ values,\ only\ bits\ 31..5\ are\ valid\ */}}
+\DoxyCodeLine{02583\ \ \ \ \ \ \ \ \ op\_addr\ +=\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02584\ \ \ \ \ \ \ \ \ op\_size\ -\/=\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02585\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\ op\_size\ >\ 0\ );}
+\DoxyCodeLine{02586\ }
+\DoxyCodeLine{02587\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02588\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02589\ \ \ \ \ \}}
+\DoxyCodeLine{02590\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02591\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_gafe64b44d1a61483a947e44a77a9d3287}\label{group__CMSIS__Core__CacheFunctions_gafe64b44d1a61483a947e44a77a9d3287} 
+\index{Cache Functions@{Cache Functions}!SCB\_DisableDCache@{SCB\_DisableDCache}}
+\index{SCB\_DisableDCache@{SCB\_DisableDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_DisableDCache()}{SCB\_DisableDCache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Disable\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable D-\/\+Cache. 
+
+Turns off D-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02365}{2365}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02366\ \{}
+\DoxyCodeLine{02367\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02368\ \ \ \ \ uint32\_t\ ccsidr;}
+\DoxyCodeLine{02369\ \ \ \ \ uint32\_t\ sets;}
+\DoxyCodeLine{02370\ \ \ \ \ uint32\_t\ ways;}
+\DoxyCodeLine{02371\ }
+\DoxyCodeLine{02372\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CSSELR\ =\ 0U;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ select\ Level\ 1\ data\ cache\ */}}
+\DoxyCodeLine{02373\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02374\ }
+\DoxyCodeLine{02375\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCR\ \&=\ \string~(uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga57b3909dff40a9c28ec50991e4202678}{SCB\_CCR\_DC\_Msk}};\ \ \textcolor{comment}{/*\ disable\ D-\/Cache\ */}}
+\DoxyCodeLine{02376\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02377\ }
+\DoxyCodeLine{02378\ \ \ \ \ ccsidr\ =\ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCSIDR;}
+\DoxyCodeLine{02379\ }
+\DoxyCodeLine{02380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ clean\ \&\ invalidate\ D-\/Cache\ */}}
+\DoxyCodeLine{02381\ \ \ \ \ sets\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932}{CCSIDR\_SETS}}(ccsidr));}
+\DoxyCodeLine{02382\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02383\ \ \ \ \ \ \ ways\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9}{CCSIDR\_WAYS}}(ccsidr));}
+\DoxyCodeLine{02384\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02385\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCCISW\ =\ (((sets\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_ga525f1bb9849e89b3eafbd53dcd51e296}{SCB\_DCCISW\_SET\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gaf1b0bea5ab77d4ad7d5c21e77ca463ad}{SCB\_DCCISW\_SET\_Msk}})\ |}
+\DoxyCodeLine{02386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ways\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_gaa90bd0b36679219d6a2144eba6eb96cd}{SCB\_DCCISW\_WAY\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gaf2269bbe0bc7705e1da8f5ee0f581054}{SCB\_DCCISW\_WAY\_Msk}})\ \ );}
+\DoxyCodeLine{02387\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ defined\ (\ \_\_CC\_ARM\ )}}
+\DoxyCodeLine{02388\ \ \ \ \ \ \ \ \ \ \ \_\_schedule\_barrier();}
+\DoxyCodeLine{02389\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{02390\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (ways-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02391\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(sets-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02392\ }
+\DoxyCodeLine{02393\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02394\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02395\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02396\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga56baa06298799dea5f207d4c12d9d4a6}\label{group__CMSIS__Core__CacheFunctions_ga56baa06298799dea5f207d4c12d9d4a6} 
+\index{Cache Functions@{Cache Functions}!SCB\_DisableICache@{SCB\_DisableICache}}
+\index{SCB\_DisableICache@{SCB\_DisableICache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_DisableICache()}{SCB\_DisableICache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Disable\+ICache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable I-\/\+Cache. 
+
+Turns off I-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02262}{2262}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02263\ \{}
+\DoxyCodeLine{02264\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_ICACHE\_PRESENT)\ \&\&\ (\_\_ICACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02265\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02266\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02267\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCR\ \&=\ \string~(uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_gaf2ff8f5957edac919e28b536aa6c0a59}{SCB\_CCR\_IC\_Msk}};\ \ \textcolor{comment}{/*\ disable\ I-\/Cache\ */}}
+\DoxyCodeLine{02268\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>ICIALLU\ =\ 0UL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ invalidate\ I-\/Cache\ */}}
+\DoxyCodeLine{02269\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02270\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02271\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02272\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga3861db932100ccb53f994e2cc68ed79c}\label{group__CMSIS__Core__CacheFunctions_ga3861db932100ccb53f994e2cc68ed79c} 
+\index{Cache Functions@{Cache Functions}!SCB\_EnableDCache@{SCB\_EnableDCache}}
+\index{SCB\_EnableDCache@{SCB\_EnableDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_EnableDCache()}{SCB\_EnableDCache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Enable\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable D-\/\+Cache. 
+
+Turns on D-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02325}{2325}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02326\ \{}
+\DoxyCodeLine{02327\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02328\ \ \ \ \ uint32\_t\ ccsidr;}
+\DoxyCodeLine{02329\ \ \ \ \ uint32\_t\ sets;}
+\DoxyCodeLine{02330\ \ \ \ \ uint32\_t\ ways;}
+\DoxyCodeLine{02331\ }
+\DoxyCodeLine{02332\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCR\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_ga57b3909dff40a9c28ec50991e4202678}{SCB\_CCR\_DC\_Msk}})\ \textcolor{keywordflow}{return};\ \ \textcolor{comment}{/*\ return\ if\ DCache\ is\ already\ enabled\ */}}
+\DoxyCodeLine{02333\ }
+\DoxyCodeLine{02334\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CSSELR\ =\ 0U;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ select\ Level\ 1\ data\ cache\ */}}
+\DoxyCodeLine{02335\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02336\ }
+\DoxyCodeLine{02337\ \ \ \ \ ccsidr\ =\ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCSIDR;}
+\DoxyCodeLine{02338\ }
+\DoxyCodeLine{02339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ invalidate\ D-\/Cache\ */}}
+\DoxyCodeLine{02340\ \ \ \ \ sets\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932}{CCSIDR\_SETS}}(ccsidr));}
+\DoxyCodeLine{02341\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02342\ \ \ \ \ \ \ ways\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9}{CCSIDR\_WAYS}}(ccsidr));}
+\DoxyCodeLine{02343\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02344\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCISW\ =\ (((sets\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_gaea6bd5b7d1c47c7db06afdecc6e49281}{SCB\_DCISW\_SET\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gab08fbef94f7d068a7c0217e074c697f9}{SCB\_DCISW\_SET\_Msk}})\ |}
+\DoxyCodeLine{02345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ways\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_gaa6a2a5e1707c9ef277e67dacd4e247fd}{SCB\_DCISW\_WAY\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gabfe6096a36807e0b7e1d09a06ef1d750}{SCB\_DCISW\_WAY\_Msk}})\ \ );}
+\DoxyCodeLine{02346\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ defined\ (\ \_\_CC\_ARM\ )}}
+\DoxyCodeLine{02347\ \ \ \ \ \ \ \ \ \ \ \_\_schedule\_barrier();}
+\DoxyCodeLine{02348\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{02349\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (ways-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02350\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(sets-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02351\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02352\ }
+\DoxyCodeLine{02353\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCR\ |=\ \ (uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga57b3909dff40a9c28ec50991e4202678}{SCB\_CCR\_DC\_Msk}};\ \ \textcolor{comment}{/*\ enable\ D-\/Cache\ */}}
+\DoxyCodeLine{02354\ }
+\DoxyCodeLine{02355\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02356\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02357\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02358\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga980ffe52af778f2535ccc52f25f9a7de}\label{group__CMSIS__Core__CacheFunctions_ga980ffe52af778f2535ccc52f25f9a7de} 
+\index{Cache Functions@{Cache Functions}!SCB\_EnableICache@{SCB\_EnableICache}}
+\index{SCB\_EnableICache@{SCB\_EnableICache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_EnableICache()}{SCB\_EnableICache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Enable\+ICache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable I-\/\+Cache. 
+
+Turns on I-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02241}{2241}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02242\ \{}
+\DoxyCodeLine{02243\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_ICACHE\_PRESENT)\ \&\&\ (\_\_ICACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02244\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCR\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gaf2ff8f5957edac919e28b536aa6c0a59}{SCB\_CCR\_IC\_Msk}})\ \textcolor{keywordflow}{return};\ \ \textcolor{comment}{/*\ return\ if\ ICache\ is\ already\ enabled\ */}}
+\DoxyCodeLine{02245\ }
+\DoxyCodeLine{02246\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02247\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02248\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>ICIALLU\ =\ 0UL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ invalidate\ I-\/Cache\ */}}
+\DoxyCodeLine{02249\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02250\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02251\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCR\ |=\ \ (uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_gaf2ff8f5957edac919e28b536aa6c0a59}{SCB\_CCR\_IC\_Msk}};\ \ \textcolor{comment}{/*\ enable\ I-\/Cache\ */}}
+\DoxyCodeLine{02252\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02253\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02254\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02255\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga99fe43c224644881935de135ceaa2dd9}\label{group__CMSIS__Core__CacheFunctions_ga99fe43c224644881935de135ceaa2dd9} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateDCache@{SCB\_InvalidateDCache}}
+\index{SCB\_InvalidateDCache@{SCB\_InvalidateDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_InvalidateDCache()}{SCB\_InvalidateDCache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Invalidate\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Invalidate D-\/\+Cache. 
+
+Invalidates D-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02403}{2403}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02404\ \{}
+\DoxyCodeLine{02405\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02406\ \ \ \ \ uint32\_t\ ccsidr;}
+\DoxyCodeLine{02407\ \ \ \ \ uint32\_t\ sets;}
+\DoxyCodeLine{02408\ \ \ \ \ uint32\_t\ ways;}
+\DoxyCodeLine{02409\ }
+\DoxyCodeLine{02410\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CSSELR\ =\ 0U;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ select\ Level\ 1\ data\ cache\ */}}
+\DoxyCodeLine{02411\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02412\ }
+\DoxyCodeLine{02413\ \ \ \ \ ccsidr\ =\ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CCSIDR;}
+\DoxyCodeLine{02414\ }
+\DoxyCodeLine{02415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ invalidate\ D-\/Cache\ */}}
+\DoxyCodeLine{02416\ \ \ \ \ sets\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gaf20feee7c52fee32b48ee0d2ceaaf932}{CCSIDR\_SETS}}(ccsidr));}
+\DoxyCodeLine{02417\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02418\ \ \ \ \ \ \ ways\ =\ (uint32\_t)(\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga3d672529cd193537fe2a0141931c6ad9}{CCSIDR\_WAYS}}(ccsidr));}
+\DoxyCodeLine{02419\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02420\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCISW\ =\ (((sets\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_gaea6bd5b7d1c47c7db06afdecc6e49281}{SCB\_DCISW\_SET\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gab08fbef94f7d068a7c0217e074c697f9}{SCB\_DCISW\_SET\_Msk}})\ |}
+\DoxyCodeLine{02421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ways\ <<\ \mbox{\hyperlink{group__CMSIS__CORE_gaa6a2a5e1707c9ef277e67dacd4e247fd}{SCB\_DCISW\_WAY\_Pos}})\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_gabfe6096a36807e0b7e1d09a06ef1d750}{SCB\_DCISW\_WAY\_Msk}})\ \ );}
+\DoxyCodeLine{02422\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ defined\ (\ \_\_CC\_ARM\ )}}
+\DoxyCodeLine{02423\ \ \ \ \ \ \ \ \ \ \ \_\_schedule\_barrier();}
+\DoxyCodeLine{02424\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{02425\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (ways-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02426\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(sets-\/-\/\ !=\ 0U);}
+\DoxyCodeLine{02427\ }
+\DoxyCodeLine{02428\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02429\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02430\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02431\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga9945b206324ddbcd32818f1a4e49df83}\label{group__CMSIS__Core__CacheFunctions_ga9945b206324ddbcd32818f1a4e49df83} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateDCache\_by\_Addr@{SCB\_InvalidateDCache\_by\_Addr}}
+\index{SCB\_InvalidateDCache\_by\_Addr@{SCB\_InvalidateDCache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_InvalidateDCache\_by\_Addr()}{SCB\_InvalidateDCache\_by\_Addr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{addr,  }\item[{int32\+\_\+t}]{dsize }\end{DoxyParamCaption})}
+
+
+
+D-\/\+Cache Invalidate by address. 
+
+Invalidates D-\/\+Cache for the given address. D-\/\+Cache is invalidated starting from a 32 byte aligned address in 32 byte granularity. D-\/\+Cache memory blocks which are part of given address + given size are invalidated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02512}{2512}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02513\ \{}
+\DoxyCodeLine{02514\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_DCACHE\_PRESENT)\ \&\&\ (\_\_DCACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02515\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ dsize\ >\ 0\ )\ \{\ }
+\DoxyCodeLine{02516\ \ \ \ \ \ \ \ int32\_t\ op\_size\ =\ dsize\ +\ (((uint32\_t)addr)\ \&\ (\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}}\ -\/\ 1U));}
+\DoxyCodeLine{02517\ \ \ \ \ \ \ uint32\_t\ op\_addr\ =\ (uint32\_t)addr\ \textcolor{comment}{/*\ \&\ \string~(\_\_SCB\_DCACHE\_LINE\_SIZE\ -\/\ 1U)\ */};}
+\DoxyCodeLine{02518\ \ \ \ \ }
+\DoxyCodeLine{02519\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02520\ }
+\DoxyCodeLine{02521\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02522\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>DCIMVAC\ =\ op\_addr;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ register\ accepts\ only\ 32byte\ aligned\ values,\ only\ bits\ 31..5\ are\ valid\ */}}
+\DoxyCodeLine{02523\ \ \ \ \ \ \ \ \ op\_addr\ +=\ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02524\ \ \ \ \ \ \ \ \ op\_size\ -\/=\ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_ga8f36551f2593cd3715d1e68e37f97f12}{\_\_SCB\_DCACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02525\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\ op\_size\ >\ 0\ );}
+\DoxyCodeLine{02526\ }
+\DoxyCodeLine{02527\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02528\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02529\ \ \ \ \ \}}
+\DoxyCodeLine{02530\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02531\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_ga62419cb7e6773e3d9236f14e458c1b05}\label{group__CMSIS__Core__CacheFunctions_ga62419cb7e6773e3d9236f14e458c1b05} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateICache@{SCB\_InvalidateICache}}
+\index{SCB\_InvalidateICache@{SCB\_InvalidateICache}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_InvalidateICache()}{SCB\_InvalidateICache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Invalidate\+ICache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Invalidate I-\/\+Cache. 
+
+Invalidates I-\/\+Cache 
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02279}{2279}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02280\ \{}
+\DoxyCodeLine{02281\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_ICACHE\_PRESENT)\ \&\&\ (\_\_ICACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02282\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02283\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02284\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>ICIALLU\ =\ 0UL;}
+\DoxyCodeLine{02285\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02286\ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02287\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02288\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CMSIS__Core__CacheFunctions_gaf6bed290ff6916337b0ce6c09131f699}\label{group__CMSIS__Core__CacheFunctions_gaf6bed290ff6916337b0ce6c09131f699} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateICache\_by\_Addr@{SCB\_InvalidateICache\_by\_Addr}}
+\index{SCB\_InvalidateICache\_by\_Addr@{SCB\_InvalidateICache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsubsection{\texorpdfstring{SCB\_InvalidateICache\_by\_Addr()}{SCB\_InvalidateICache\_by\_Addr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_ab904513442afdf77d4f8c74f23cbb040}{\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE}} void SCB\+\_\+\+Invalidate\+ICache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{addr,  }\item[{int32\+\_\+t}]{isize }\end{DoxyParamCaption})}
+
+
+
+I-\/\+Cache Invalidate by address. 
+
+Invalidates I-\/\+Cache for the given address. I-\/\+Cache is invalidated starting from a 32 byte aligned address in 32 byte granularity. I-\/\+Cache memory blocks which are part of given address + given size are invalidated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address \\
+\hline
+\mbox{\texttt{ in}}  & {\em isize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{core__cm7_8h_source_l02299}{2299}} of file \mbox{\hyperlink{core__cm7_8h_source}{core\+\_\+cm7.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02300\ \{}
+\DoxyCodeLine{02301\ \textcolor{preprocessor}{\ \ \#if\ defined\ (\_\_ICACHE\_PRESENT)\ \&\&\ (\_\_ICACHE\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{02302\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ isize\ >\ 0\ )\ \{}
+\DoxyCodeLine{02303\ \ \ \ \ \ \ \ int32\_t\ op\_size\ =\ isize\ +\ (((uint32\_t)addr)\ \&\ (\mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gadd99421e7a7d7121063ef94b49f97e90}{\_\_SCB\_ICACHE\_LINE\_SIZE}}\ -\/\ 1U));}
+\DoxyCodeLine{02304\ \ \ \ \ \ \ uint32\_t\ op\_addr\ =\ (uint32\_t)addr\ \textcolor{comment}{/*\ \&\ \string~(\_\_SCB\_ICACHE\_LINE\_SIZE\ -\/\ 1U)\ */};}
+\DoxyCodeLine{02305\ }
+\DoxyCodeLine{02306\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02307\ }
+\DoxyCodeLine{02308\ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{02309\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>ICIMVAU\ =\ op\_addr;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ register\ accepts\ only\ 32byte\ aligned\ values,\ only\ bits\ 31..5\ are\ valid\ */}}
+\DoxyCodeLine{02310\ \ \ \ \ \ \ \ \ op\_addr\ +=\ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gadd99421e7a7d7121063ef94b49f97e90}{\_\_SCB\_ICACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02311\ \ \ \ \ \ \ \ \ op\_size\ -\/=\ \mbox{\hyperlink{group__CMSIS__Core__CacheFunctions_gadd99421e7a7d7121063ef94b49f97e90}{\_\_SCB\_ICACHE\_LINE\_SIZE}};}
+\DoxyCodeLine{02312\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\ op\_size\ >\ 0\ );}
+\DoxyCodeLine{02313\ }
+\DoxyCodeLine{02314\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{02315\ \ \ \ \ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{02316\ \ \ \ \ \}}
+\DoxyCodeLine{02317\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{02318\ \}}
+
+\end{DoxyCode}

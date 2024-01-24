@@ -1,0 +1,254 @@
+\doxysection{LSM6\+DSOX\+\_\+free\+\_\+fall}
+\hypertarget{group__LSM6DSOX__free__fall}{}\label{group__LSM6DSOX__free__fall}\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+
+
+This section group all the functions concerning the free fall detection.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_gaa6c61b67d77169e15fbfa4b08948d69e}{lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Free fall threshold setting.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_ga1c576bf3c7b2bb6a254c2b02551f21ad}{lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Free fall threshold setting.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_ga0aaddc9637582c43c3bcefcd76549b77}{lsm6dsox\+\_\+ff\+\_\+dur\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Free-\/fall duration event.\mbox{[}set\mbox{]} 1LSb = 1 / ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__free__fall_gaacdf903575f9ae5673a8683edded4fd8}{lsm6dsox\+\_\+ff\+\_\+dur\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Free-\/fall duration event.\mbox{[}get\mbox{]} 1LSb = 1 / ODR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section group all the functions concerning the free fall detection. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__free__fall_gaacdf903575f9ae5673a8683edded4fd8}\label{group__LSM6DSOX__free__fall_gaacdf903575f9ae5673a8683edded4fd8} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_dur\_get@{lsm6dsox\_ff\_dur\_get}}
+\index{lsm6dsox\_ff\_dur\_get@{lsm6dsox\_ff\_dur\_get}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_dur\_get()}{lsm6dsox\_ff\_dur\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+dur\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Free-\/fall duration event.\mbox{[}get\mbox{]} 1LSb = 1 / ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ff\+\_\+dur in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06397}{6397}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{06398\ \{}
+\DoxyCodeLine{06399\ \ \ \mbox{\hyperlink{structlsm6dsox__wake__up__dur__t}{lsm6dsox\_wake\_up\_dur\_t}}\ wake\_up\_dur;}
+\DoxyCodeLine{06400\ \ \ \mbox{\hyperlink{structlsm6dsox__free__fall__t}{lsm6dsox\_free\_fall\_t}}\ free\_fall;}
+\DoxyCodeLine{06401\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{06402\ }
+\DoxyCodeLine{06403\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gae28a0f064c76b1bcb120dbc19ef5d7f1}{LSM6DSOX\_WAKE\_UP\_DUR}},}
+\DoxyCodeLine{06404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&wake\_up\_dur,\ 1);}
+\DoxyCodeLine{06405\ }
+\DoxyCodeLine{06406\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{06407\ \ \ \{}
+\DoxyCodeLine{06408\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac7d8b5fd1d52ab7c826a16c2f9fdf0a7}{LSM6DSOX\_FREE\_FALL}},}
+\DoxyCodeLine{06409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&free\_fall,\ 1);}
+\DoxyCodeLine{06410\ \ \ \ \ *val\ =\ (wake\_up\_dur.\mbox{\hyperlink{structlsm6dsox__wake__up__dur__t_a57ee993cb4c23005c61ab579a3788d4f}{ff\_dur}}\ <<\ 5)\ +\ free\_fall.\mbox{\hyperlink{structlsm6dsox__free__fall__t_a57ee993cb4c23005c61ab579a3788d4f}{ff\_dur}};}
+\DoxyCodeLine{06411\ \ \ \}}
+\DoxyCodeLine{06412\ }
+\DoxyCodeLine{06413\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{06414\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__free__fall_ga0aaddc9637582c43c3bcefcd76549b77}\label{group__LSM6DSOX__free__fall_ga0aaddc9637582c43c3bcefcd76549b77} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_dur\_set@{lsm6dsox\_ff\_dur\_set}}
+\index{lsm6dsox\_ff\_dur\_set@{lsm6dsox\_ff\_dur\_set}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_dur\_set()}{lsm6dsox\_ff\_dur\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+dur\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Free-\/fall duration event.\mbox{[}set\mbox{]} 1LSb = 1 / ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ff\+\_\+dur in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06356}{6356}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{06357\ \{}
+\DoxyCodeLine{06358\ \ \ \mbox{\hyperlink{structlsm6dsox__wake__up__dur__t}{lsm6dsox\_wake\_up\_dur\_t}}\ wake\_up\_dur;}
+\DoxyCodeLine{06359\ \ \ \mbox{\hyperlink{structlsm6dsox__free__fall__t}{lsm6dsox\_free\_fall\_t}}\ free\_fall;}
+\DoxyCodeLine{06360\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{06361\ }
+\DoxyCodeLine{06362\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gae28a0f064c76b1bcb120dbc19ef5d7f1}{LSM6DSOX\_WAKE\_UP\_DUR}},}
+\DoxyCodeLine{06363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&wake\_up\_dur,\ 1);}
+\DoxyCodeLine{06364\ }
+\DoxyCodeLine{06365\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{06366\ \ \ \{}
+\DoxyCodeLine{06367\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac7d8b5fd1d52ab7c826a16c2f9fdf0a7}{LSM6DSOX\_FREE\_FALL}},}
+\DoxyCodeLine{06368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&free\_fall,\ 1);}
+\DoxyCodeLine{06369\ \ \ \}}
+\DoxyCodeLine{06370\ }
+\DoxyCodeLine{06371\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{06372\ \ \ \{}
+\DoxyCodeLine{06373\ \ \ \ \ wake\_up\_dur.\mbox{\hyperlink{structlsm6dsox__wake__up__dur__t_a57ee993cb4c23005c61ab579a3788d4f}{ff\_dur}}\ =\ ((uint8\_t)val\ \&\ 0x20U)\ >>\ 5;}
+\DoxyCodeLine{06374\ \ \ \ \ free\_fall.\mbox{\hyperlink{structlsm6dsox__free__fall__t_a57ee993cb4c23005c61ab579a3788d4f}{ff\_dur}}\ =\ (uint8\_t)val\ \&\ 0x1FU;}
+\DoxyCodeLine{06375\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gae28a0f064c76b1bcb120dbc19ef5d7f1}{LSM6DSOX\_WAKE\_UP\_DUR}},}
+\DoxyCodeLine{06376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&wake\_up\_dur,\ 1);}
+\DoxyCodeLine{06377\ \ \ \}}
+\DoxyCodeLine{06378\ }
+\DoxyCodeLine{06379\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{06380\ \ \ \{}
+\DoxyCodeLine{06381\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac7d8b5fd1d52ab7c826a16c2f9fdf0a7}{LSM6DSOX\_FREE\_FALL}},}
+\DoxyCodeLine{06382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&free\_fall,\ 1);}
+\DoxyCodeLine{06383\ \ \ \}}
+\DoxyCodeLine{06384\ }
+\DoxyCodeLine{06385\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{06386\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__free__fall_ga1c576bf3c7b2bb6a254c2b02551f21ad}\label{group__LSM6DSOX__free__fall_ga1c576bf3c7b2bb6a254c2b02551f21ad} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_threshold\_get@{lsm6dsox\_ff\_threshold\_get}}
+\index{lsm6dsox\_ff\_threshold\_get@{lsm6dsox\_ff\_threshold\_get}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_threshold\_get()}{lsm6dsox\_ff\_threshold\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Free fall threshold setting.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of ff\+\_\+ths in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06297}{6297}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{06299\ \{}
+\DoxyCodeLine{06300\ \ \ \mbox{\hyperlink{structlsm6dsox__free__fall__t}{lsm6dsox\_free\_fall\_t}}\ reg;}
+\DoxyCodeLine{06301\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{06302\ }
+\DoxyCodeLine{06303\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac7d8b5fd1d52ab7c826a16c2f9fdf0a7}{LSM6DSOX\_FREE\_FALL}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{06304\ }
+\DoxyCodeLine{06305\ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__free__fall__t_a571965cf0df09387c522c316295968c2}{ff\_ths}})}
+\DoxyCodeLine{06306\ \ \ \{}
+\DoxyCodeLine{06307\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da7c9ebb754f661fab91dd9e261d73d9ca}{LSM6DSOX\_FF\_TSH\_156mg}}:}
+\DoxyCodeLine{06308\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da7c9ebb754f661fab91dd9e261d73d9ca}{LSM6DSOX\_FF\_TSH\_156mg}};}
+\DoxyCodeLine{06309\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06310\ }
+\DoxyCodeLine{06311\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da9977930e54ca426e92c8f19293beb1fd}{LSM6DSOX\_FF\_TSH\_219mg}}:}
+\DoxyCodeLine{06312\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da9977930e54ca426e92c8f19293beb1fd}{LSM6DSOX\_FF\_TSH\_219mg}};}
+\DoxyCodeLine{06313\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06314\ }
+\DoxyCodeLine{06315\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da3e1992f90fcba6cd94c2aead14ca1cb8}{LSM6DSOX\_FF\_TSH\_250mg}}:}
+\DoxyCodeLine{06316\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da3e1992f90fcba6cd94c2aead14ca1cb8}{LSM6DSOX\_FF\_TSH\_250mg}};}
+\DoxyCodeLine{06317\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06318\ }
+\DoxyCodeLine{06319\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da78528abdbf60e531c65bee1c4ca8d269}{LSM6DSOX\_FF\_TSH\_312mg}}:}
+\DoxyCodeLine{06320\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da78528abdbf60e531c65bee1c4ca8d269}{LSM6DSOX\_FF\_TSH\_312mg}};}
+\DoxyCodeLine{06321\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06322\ }
+\DoxyCodeLine{06323\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506dab533f2bf09073a873e643f9e14ae2aca}{LSM6DSOX\_FF\_TSH\_344mg}}:}
+\DoxyCodeLine{06324\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506dab533f2bf09073a873e643f9e14ae2aca}{LSM6DSOX\_FF\_TSH\_344mg}};}
+\DoxyCodeLine{06325\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06326\ }
+\DoxyCodeLine{06327\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da4d60d76353d588d36d3e7a2d32f19113}{LSM6DSOX\_FF\_TSH\_406mg}}:}
+\DoxyCodeLine{06328\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da4d60d76353d588d36d3e7a2d32f19113}{LSM6DSOX\_FF\_TSH\_406mg}};}
+\DoxyCodeLine{06329\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06330\ }
+\DoxyCodeLine{06331\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506dac6befde854771a154f25e0bba2e48872}{LSM6DSOX\_FF\_TSH\_469mg}}:}
+\DoxyCodeLine{06332\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506dac6befde854771a154f25e0bba2e48872}{LSM6DSOX\_FF\_TSH\_469mg}};}
+\DoxyCodeLine{06333\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06334\ }
+\DoxyCodeLine{06335\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506dacc04653f8409830b8beaa15e2592ae2f}{LSM6DSOX\_FF\_TSH\_500mg}}:}
+\DoxyCodeLine{06336\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506dacc04653f8409830b8beaa15e2592ae2f}{LSM6DSOX\_FF\_TSH\_500mg}};}
+\DoxyCodeLine{06337\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06338\ }
+\DoxyCodeLine{06339\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{06340\ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_gga049c4e173b70067d4b0d5656e6a6506da7c9ebb754f661fab91dd9e261d73d9ca}{LSM6DSOX\_FF\_TSH\_156mg}};}
+\DoxyCodeLine{06341\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{06342\ \ \ \}}
+\DoxyCodeLine{06343\ }
+\DoxyCodeLine{06344\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{06345\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__LSM6DSOX__free__fall_gaa6c61b67d77169e15fbfa4b08948d69e}\label{group__LSM6DSOX__free__fall_gaa6c61b67d77169e15fbfa4b08948d69e} 
+\index{LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}!lsm6dsox\_ff\_threshold\_set@{lsm6dsox\_ff\_threshold\_set}}
+\index{lsm6dsox\_ff\_threshold\_set@{lsm6dsox\_ff\_threshold\_set}!LSM6DSOX\_free\_fall@{LSM6DSOX\_free\_fall}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ff\_threshold\_set()}{lsm6dsox\_ff\_threshold\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ff\+\_\+threshold\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga049c4e173b70067d4b0d5656e6a6506d}{lsm6dsox\+\_\+ff\+\_\+ths\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Free fall threshold setting.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ff\+\_\+ths in reg FREE\+\_\+\+FALL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06272}{6272}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{06274\ \{}
+\DoxyCodeLine{06275\ \ \ \mbox{\hyperlink{structlsm6dsox__free__fall__t}{lsm6dsox\_free\_fall\_t}}\ reg;}
+\DoxyCodeLine{06276\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{06277\ }
+\DoxyCodeLine{06278\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac7d8b5fd1d52ab7c826a16c2f9fdf0a7}{LSM6DSOX\_FREE\_FALL}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{06279\ }
+\DoxyCodeLine{06280\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{06281\ \ \ \{}
+\DoxyCodeLine{06282\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__free__fall__t_a571965cf0df09387c522c316295968c2}{ff\_ths}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{06283\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gac7d8b5fd1d52ab7c826a16c2f9fdf0a7}{LSM6DSOX\_FREE\_FALL}},\ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{06284\ \ \ \}}
+\DoxyCodeLine{06285\ }
+\DoxyCodeLine{06286\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{06287\ \}}
+
+\end{DoxyCode}

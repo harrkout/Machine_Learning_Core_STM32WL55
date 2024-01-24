@@ -1,0 +1,207 @@
+\doxysection{Drivers/\+BSP/\+Components/lsm6dsox/lsm6dsox.c File Reference}
+\hypertarget{lsm6dsox_8c}{}\label{lsm6dsox_8c}\index{Drivers/BSP/Components/lsm6dsox/lsm6dsox.c@{Drivers/BSP/Components/lsm6dsox/lsm6dsox.c}}
+
+
+LSM6\+DSOX driver file.  
+
+
+{\ttfamily \#include "{}lsm6dsox.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gafabfa32644c44d963c735c3f68e37599}{LSM6\+DSOX\+\_\+\+Register\+Bus\+IO}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__IO__t}{LSM6\+DSOX\+\_\+\+IO\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+IO)
+\begin{DoxyCompactList}\small\item\em Register Component Bus IO operations. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gade0e49dbb701538018932807c092c923}{LSM6\+DSOX\+\_\+\+Init}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Initialize the LSM6\+DSOX sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga7a46ddc79c9aaaec1b6b86f34e9f7a14}{LSM6\+DSOX\+\_\+\+De\+Init}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Deinitialize the LSM6\+DSOX sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga26b4b5131970c3e41d9d5fbe08896acf}{LSM6\+DSOX\+\_\+\+Read\+ID}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Id)
+\begin{DoxyCompactList}\small\item\em Read component ID. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga0b50d50a18b20fd63cbbe2b2a4e30c46}{LSM6\+DSOX\+\_\+\+Get\+Capabilities}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__Capabilities__t}{LSM6\+DSOX\+\_\+\+Capabilities\+\_\+t}} \texorpdfstring{$\ast$}{*}Capabilities)
+\begin{DoxyCompactList}\small\item\em Get LSM6\+DSOX sensor capabilities. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga80d85a7ff4773671e12628ae834c0368}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable the LSM6\+DSOX accelerometer sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga2d34dbaa9207c427f952cd675caefc8c}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable the LSM6\+DSOX accelerometer sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaf523c1217f63f3fbee95b900fa498357}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+Sensitivity}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float \texorpdfstring{$\ast$}{*}Sensitivity)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX accelerometer sensor sensitivity. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gacca53f6d21dd19d75b721d36019a44e6}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+Output\+Data\+Rate}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX accelerometer sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga89858111eb274b90bca301b7e6c61ed3}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX accelerometer sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga6838d223d0d69ecd2ea5c202cb7687db}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float Odr, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga8405aa1f71c250373a906918d7a3a136}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Operating\+\_\+\+Mode\+\_\+t}} Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX accelerometer sensor output data rate with operating mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaad97b144df07788592c405abf65857bc}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+Full\+Scale}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t \texorpdfstring{$\ast$}{*}Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX accelerometer sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gadbf86ea183723442187ff920dee3691a}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+Full\+Scale}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX accelerometer sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga485123270b54614e59820c9e26132f82}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+Axes\+Raw}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__AxesRaw__t}{LSM6\+DSOX\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX accelerometer sensor raw axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga4993c9d741c152887531a1eefaee5c5b}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+Axes}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__Axes__t}{LSM6\+DSOX\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Acceleration)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX accelerometer sensor axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga86e5032c653b05be9b1fa6f6fe4668d0}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Enable}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable the LSM6\+DSOX gyroscope sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gafb959c1c4bf7691cdc152797eb693f76}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Disable}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable the LSM6\+DSOX gyroscope sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaeab8900f08185bce9c7d238b641b71b3}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Get\+Sensitivity}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float \texorpdfstring{$\ast$}{*}Sensitivity)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX gyroscope sensor sensitivity. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga1dabf77a123d6683d07560e5feab2a9d}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Get\+Output\+Data\+Rate}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX gyroscope sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga8a97f80ae0c530afe2941df1e7a3ad5d}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX gyroscope sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gac68c923c582a7b54525d30789c649028}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float Odr, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_gacb017176b434a3c5a466de00f5f9da57}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Operating\+\_\+\+Mode\+\_\+t}} Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX gyroscope sensor output data rate with operating mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga7b5fe7298ff7002fb973608f542486d3}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Get\+Full\+Scale}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t \texorpdfstring{$\ast$}{*}Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX gyroscope sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga3df6b02dd71dee2a6136a69378e22267}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Set\+Full\+Scale}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX gyroscope sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga70ffc5cd8f7cc36eb85aeb4cb5e45423}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Get\+Axes\+Raw}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__AxesRaw__t}{LSM6\+DSOX\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX gyroscope sensor raw axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga387f72f4a69e1014064816b96d4a7a30}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Get\+Axes}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__Axes__t}{LSM6\+DSOX\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Angular\+Rate)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX gyroscope sensor axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga9dd1eaa1b4de962fb188cab67a105610}{LSM6\+DSOX\+\_\+\+Read\+\_\+\+Reg}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga0cbfc9c05878bb40d1dd86a394e95a1b}{LSM6\+DSOX\+\_\+\+Write\+\_\+\+Reg}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaf7c884a0d8c3c73d3e51b2f4892b6270}{LSM6\+DSOX\+\_\+\+Set\+\_\+\+Interrupt\+\_\+\+Latch}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Status)
+\begin{DoxyCompactList}\small\item\em Set the interrupt latch. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gabed2d6427cbf688f2cc0d4904965f22a}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga75159325c7ff497fc74be311bd9bbfce}{LSM6\+DSOX\+\_\+\+Sensor\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable free fall detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga33ef987578de55721d5779fbb727ffb7}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable free fall detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gab3da89c377c55553627c1f55d8766161}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Threshold}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set free fall threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga461100ce5063c58dd58eebfa8edb2954}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Duration}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Duration)
+\begin{DoxyCompactList}\small\item\em Set free fall duration. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaa1a344c89c7a7d11093654ce011bf824}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+Pedometer}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable pedometer. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga522410355b20cdf00af57190f191eae4}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+\+Pedometer}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable pedometer. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gae4cefec30d99927e42bc144aa50df80e}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+\+Step\+\_\+\+Count}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint16\+\_\+t \texorpdfstring{$\ast$}{*}Step\+Count)
+\begin{DoxyCompactList}\small\item\em Get step count. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaace769ba23adf0215721264e9da2a297}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Step\+\_\+\+Counter\+\_\+\+Reset}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable step counter reset. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga54ad308ee2990c9d741e1ae06f85838d}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+Tilt\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga75159325c7ff497fc74be311bd9bbfce}{LSM6\+DSOX\+\_\+\+Sensor\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable tilt detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga8a40141bdb1cfaf0c7d65baa45abc9d1}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+\+Tilt\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable tilt detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gac35288536b93b3006a2b2e50291bad32}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga75159325c7ff497fc74be311bd9bbfce}{LSM6\+DSOX\+\_\+\+Sensor\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable wake up detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gad23127d347732d2f8142defd91096929}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable wake up detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga38edb289ff4943cb031f6f4b4f4d8656}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Threshold}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set wake up threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga527041a1a56851a7cc1c83ab3ad81aa3}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Duration}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Duration)
+\begin{DoxyCompactList}\small\item\em Set wake up duration. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gae261b04fea5e1dcf65c90a092d89ca93}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+Single\+\_\+\+Tap\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga75159325c7ff497fc74be311bd9bbfce}{LSM6\+DSOX\+\_\+\+Sensor\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable single tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaaafabb16f4026ed4e108f063ab42c906}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+\+Single\+\_\+\+Tap\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable single tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga3db7891ed0e10c9fd27e8c92b342b6dc}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+Double\+\_\+\+Tap\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga75159325c7ff497fc74be311bd9bbfce}{LSM6\+DSOX\+\_\+\+Sensor\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable double tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga31593fa53d5ee393eebe93575144e451}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+\+Double\+\_\+\+Tap\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable double tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gadae7a3ea4b2ffcb47f700e61b43f7c2c}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Threshold}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set tap threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gad4ecb15fae992c11465dd9f312dbcebc}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Shock\+\_\+\+Time}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Time)
+\begin{DoxyCompactList}\small\item\em Set tap shock time. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga098b13198c26dc81af32c5c66ece51fa}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Quiet\+\_\+\+Time}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Time)
+\begin{DoxyCompactList}\small\item\em Set tap quiet time. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga45f95168bf6e94df234f97e6d1394d53}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Duration\+\_\+\+Time}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Time)
+\begin{DoxyCompactList}\small\item\em Set tap duration time. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaf13d0202f6c5b2bda289243a5d28e6f6}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+6\+D\+\_\+\+Orientation}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga75159325c7ff497fc74be311bd9bbfce}{LSM6\+DSOX\+\_\+\+Sensor\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable 6D orientation detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gad56b21aa6175be48427f71e3f22a614d}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+6\+D\+\_\+\+Orientation}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable 6D orientation detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga866a99edd196f471ae6375fd9016c32f}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+Threshold}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set 6D orientation threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gadf9dd8e36e39a36bf83fd11c1e6e500f}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+XL}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}XLow)
+\begin{DoxyCompactList}\small\item\em Get the status of XLow orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga998886a968fb1c86e17c23ac11ec68c3}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+XH}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}XHigh)
+\begin{DoxyCompactList}\small\item\em Get the status of XHigh orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga15ad93956f44185d6e94e955d33c5298}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+YL}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}YLow)
+\begin{DoxyCompactList}\small\item\em Get the status of YLow orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga25bc15771758cc9f57efb5079c6c5773}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+YH}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}YHigh)
+\begin{DoxyCompactList}\small\item\em Get the status of YHigh orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga250fc3651863b38e72102c04bbf89ea4}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+ZL}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}ZLow)
+\begin{DoxyCompactList}\small\item\em Get the status of ZLow orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gac4166ac0d25d8c2a86dd0d0005c6167e}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+ZH}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}ZHigh)
+\begin{DoxyCompactList}\small\item\em Get the status of ZHigh orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga42418de653cb8bcbd36e41c619f0f99d}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX ACC data ready bit value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga6f0227633dc5196173dae8657da8e1ec}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Get\+\_\+\+Event\+\_\+\+Status}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__Event__Status__t}{LSM6\+DSOX\+\_\+\+Event\+\_\+\+Status\+\_\+t}} \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the status of all hardware events. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaf5d7ae330bf5b30a46c17f4e05d3667b}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Self\+Test}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Set self test. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga642c2e995028c6c1bdf506104482caaa}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX GYRO data ready bit value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga274f1777727e7324655201d17e7284d8}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Set\+\_\+\+Self\+Test}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Set self test. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga31c3d92a8e58c32568c50515e705bb31}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Num\+\_\+\+Samples}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint16\+\_\+t \texorpdfstring{$\ast$}{*}Num\+Samples)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX FIFO number of samples. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga9a37ef99d370ac4fdb19f8a336b2f33c}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Full\+\_\+\+Status}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX FIFO full status. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga5dc0c9b063f7e9d969766abc51561aee}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+INT1\+\_\+\+FIFO\+\_\+\+Full}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Status)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX FIFO full interrupt on INT1 pin. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gac32f0c8c95aaa2d9f2067a204b377ebd}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Watermark\+\_\+\+Level}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint16\+\_\+t Watermark)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX FIFO watermark level. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gadd77c61d166370d6944dd15f5b44213e}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Stop\+\_\+\+On\+\_\+\+Fth}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Status)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX FIFO stop on watermark. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga02ea727a2b229031b6436caa71e6eefd}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Mode}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX FIFO mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga283880faf863b9ebfbd77e023cd1ea64}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Tag}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Tag)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX FIFO tag. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga937d6390607262b19fe93af577e328ab}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Data}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX FIFO raw data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_ga0e3ecc6e78b845a3bff09e0645ac593c}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+ACC\+\_\+\+Get\+\_\+\+Axes}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__Axes__t}{LSM6\+DSOX\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Acceleration)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX FIFO accelero single sample (16-\/bit data per 3 axes) and calculate acceleration \mbox{[}mg\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gade1c4b60f8244d5d240349b0c1a24d53}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+ACC\+\_\+\+Set\+\_\+\+BDR}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float Bdr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX FIFO accelero BDR value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gaebee5624280ba0248b640b9f2f149333}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+GYRO\+\_\+\+Get\+\_\+\+Axes}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{structLSM6DSOX__Axes__t}{LSM6\+DSOX\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Angular\+Velocity)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSOX FIFO gyro single sample (16-\/bit data per 3 axes) and calculate angular velocity \mbox{[}m\+DPS\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Exported__Functions_gadb1c5d89ca97d4f8e5a214b94b0ef0c8}{LSM6\+DSOX\+\_\+\+FIFO\+\_\+\+GYRO\+\_\+\+Set\+\_\+\+BDR}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float Bdr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX FIFO gyro BDR value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_ga3e22761fd2b01af783447253d9dfbf84}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+DRDY\+\_\+\+Interrupt}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable LSM6\+DSOX accelerometer DRDY interrupt mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_gaea20511d0a797b6674c14bbd2d4edfe5}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Enable\+\_\+\+DRDY\+\_\+\+Interrupt}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable LSM6\+DSOX gyroscope DRDY interrupt mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_gab6176ab53fccd5b3a3fafe8af239a471}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Power\+\_\+\+Mode}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Power\+Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX accelerometer power mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_gacbf23027f7c21ccb8f519356e74443b6}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Set\+\_\+\+Power\+\_\+\+Mode}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Power\+Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX gyroscope power mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_gadb7b7d645cd2a34560899b4282effbd4}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Filter\+\_\+\+Mode}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Low\+High\+Pass\+Flag, uint8\+\_\+t Filter\+Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX accelerometer filter mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_ga9bf07945e4841520aeda7921ed780db8}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Set\+\_\+\+Filter\+\_\+\+Mode}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Low\+High\+Pass\+Flag, uint8\+\_\+t Filter\+Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSOX gyroscope filter mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_gae5f35ec126b5baf6072df91910d45bee}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Enable\+\_\+\+Inactivity\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \mbox{\hyperlink{group__LSM6DSOX_ga77a62c0a11f925b4fd36245f0e4feac8}{lsm6dsox\+\_\+inact\+\_\+en\+\_\+t}} Inact\+Mode, \mbox{\hyperlink{group__LSM6DSOX__Exported__Types_ga75159325c7ff497fc74be311bd9bbfce}{LSM6\+DSOX\+\_\+\+Sensor\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable LSM6\+DSO accelerometer inactivity detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_gad21be5715c33454737b46b1e11b0437b}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Disable\+\_\+\+Inactivity\+\_\+\+Detection}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable LSM6\+DSO accelerometer inactivity detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Private__Functions_ga74ca3b9f0c919f32f4b904d2b5a8d80b}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Set\+\_\+\+Sleep\+\_\+\+Duration}} (\mbox{\hyperlink{structLSM6DSOX__Object__t}{LSM6\+DSOX\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Duration)
+\begin{DoxyCompactList}\small\item\em Set LSM6\+DSO accelerometer sleep duration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structLSM6DSOX__CommonDrv__t}{LSM6\+DSOX\+\_\+\+Common\+Drv\+\_\+t}} \mbox{\hyperlink{group__LSM6DSOX__Exported__Variables_ga071229d6caa854bcd794ba4bc8e08a76}{LSM6\+DSOX\+\_\+\+COMMON\+\_\+\+Driver}}
+\item 
+\mbox{\hyperlink{structLSM6DSOX__ACC__Drv__t}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Drv\+\_\+t}} \mbox{\hyperlink{group__LSM6DSOX__Exported__Variables_ga2201b1870967e1b707800a856c08ba98}{LSM6\+DSOX\+\_\+\+ACC\+\_\+\+Driver}}
+\item 
+\mbox{\hyperlink{structLSM6DSOX__GYRO__Drv__t}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Drv\+\_\+t}} \mbox{\hyperlink{group__LSM6DSOX__Exported__Variables_ga2f2c0bafa2677bc6c7bea153430dfd0b}{LSM6\+DSOX\+\_\+\+GYRO\+\_\+\+Driver}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LSM6\+DSOX driver file. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{lsm6dsox_8c_source}{lsm6dsox.\+c}}.
+

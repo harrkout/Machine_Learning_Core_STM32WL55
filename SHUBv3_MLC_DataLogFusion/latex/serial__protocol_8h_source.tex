@@ -1,0 +1,50 @@
+\doxysection{serial\+\_\+protocol.\+h}
+\hypertarget{serial__protocol_8h_source}{}\label{serial__protocol_8h_source}\index{MEMS/Target/serial\_protocol.h@{MEMS/Target/serial\_protocol.h}}
+\mbox{\hyperlink{serial__protocol_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00019}00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ SERIAL\_PROTOCOL\_H}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ SERIAL\_PROTOCOL\_H}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00023}00023\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00026}00026\ \textcolor{comment}{/*\ Exported\ defines\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00027}\mbox{\hyperlink{serial__protocol_8h_a062c6921a5a7c1c2c94fb9b5b26407ea}{00027}}\ \textcolor{preprocessor}{\#define\ TMsg\_EOF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF0}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00028}\mbox{\hyperlink{serial__protocol_8h_a48df04e2e133929add889e1e8d3575ed}{00028}}\ \textcolor{preprocessor}{\#define\ TMsg\_BS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF1}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00029}\mbox{\hyperlink{serial__protocol_8h_a09d3f408e7c0c8caa38b718de4f5b714}{00029}}\ \textcolor{preprocessor}{\#define\ TMsg\_BS\_EOF\ \ \ \ \ \ \ \ \ \ \ \ \ 0xF2}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifdef\ USE\_USB\_OTG\_HS}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ TMsg\_MaxLen\ \ \ \ \ \ \ \ \ \ \ \ \ 512}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00033}00033\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00034}\mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{00034}}\ \textcolor{preprocessor}{\#define\ TMsg\_MaxLen\ \ \ \ \ \ \ \ \ \ \ \ \ 256}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00035}00035\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00037}00037\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00041}\mbox{\hyperlink{structTMsg}{00041}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00043}\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{00043}}\ \ \ uint32\_t\ \mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}};}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00044}\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{00044}}\ \ \ uint8\_t\ Data[\mbox{\hyperlink{serial__protocol_8h_a8ab4f6ba0e096344144cef66521d0d66}{TMsg\_MaxLen}}];}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00045}00045\ \}\ \mbox{\hyperlink{structTMsg}{TMsg}};}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00047}00047\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00048}00048\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00049}00049\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00050}00050\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga01a28ff7c262d833418b799faaabb1f3}{ByteStuffCopyByte}}(uint8\_t\ *Dest,\ uint8\_t\ Source);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00051}00051\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga25ab7e28ed8848f9c01dacbcaf098ee8}{ReverseByteStuffCopyByte2}}(uint8\_t\ Source0,\ uint8\_t\ Source1,\ uint8\_t\ *Dest);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00052}00052\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf6e45bca9826260db57c60ae16416a74}{ByteStuffCopy}}(uint8\_t\ *Dest,\ \mbox{\hyperlink{structTMsg}{TMsg}}\ *Source);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00053}00053\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaae0bc6cd28e1428bf2eff428b0eb1768}{ReverseByteStuffCopyByte}}(uint8\_t\ *Source,\ uint8\_t\ *Dest);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00054}00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabf31baf1506c3e9c2d65283dae7bbdbb}{ReverseByteStuffCopy}}(\mbox{\hyperlink{structTMsg}{TMsg}}\ *Dest,\ uint8\_t\ *Source);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00055}00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e855d70731e181b4434206177b29583}{CHK\_ComputeAndAdd}}(\mbox{\hyperlink{structTMsg}{TMsg}}\ *Msg);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00056}00056\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga1d26d784869262c1b26e1575e243bb58}{CHK\_CheckAndRemove}}(\mbox{\hyperlink{structTMsg}{TMsg}}\ *Msg);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00057}00057\ uint32\_t\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga035bebfe269f424d70df46fb016df489}{Deserialize}}(uint8\_t\ *Source,\ uint32\_t\ Len);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00058}00058\ int32\_t\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e0f8016b226dacdb2f49091ad9cd543}{Deserialize\_s32}}(uint8\_t\ *Source,\ uint32\_t\ Len);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00059}00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gafcfd1af2fbe326e409de2714619638ab}{Serialize}}(uint8\_t\ *Dest,\ uint32\_t\ Source,\ uint32\_t\ Len);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00060}00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\_s32}}(uint8\_t\ *Dest,\ int32\_t\ Source,\ uint32\_t\ Len);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00061}00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga58aacda60a9822ef818fcec6f380e326}{FloatToArray}}(uint8\_t\ *Dest,\ \textcolor{keywordtype}{float}\ Data);}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SERIAL\_PROTOCOL\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{serial__protocol_8h_source_l00064}00064\ }
+
+\end{DoxyCode}

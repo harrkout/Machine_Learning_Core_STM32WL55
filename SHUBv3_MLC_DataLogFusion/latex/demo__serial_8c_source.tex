@@ -1,0 +1,453 @@
+\doxysection{demo\+\_\+serial.\+c}
+\hypertarget{demo__serial_8c_source}{}\label{demo__serial_8c_source}\index{MEMS/Target/demo\_serial.c@{MEMS/Target/demo\_serial.c}}
+\mbox{\hyperlink{demo__serial_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00019}00019\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__hal_8h}{stm32wlxx\_hal.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx__nucleo_8h}{stm32wlxx\_nucleo.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{com_8h}{com.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{demo__serial_8h}{demo\_serial.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fw__version_8h}{fw\_version.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{motion__fx__manager_8h}{motion\_fx\_manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00029}00029\ \textcolor{preprocessor}{\#ifdef\ USE\_CUSTOM\_BOARD}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__mems__conf__app_8h}{custom\_mems\_conf\_app.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00031}00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00037}00037\ \textcolor{comment}{/*\ Private\ defines\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00038}00038\ \textcolor{preprocessor}{\#ifndef\ ACC\_GYR\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00039}00039\ \textcolor{preprocessor}{\#define\ ACC\_GYR\_UNICLEO\_ID\ UNKNOWN\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00042}00042\ \textcolor{preprocessor}{\#ifndef\ MAG\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00043}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga23eb6a1aef31b57bc7d80df89543e8ab}{00043}}\ \textcolor{preprocessor}{\#define\ MAG\_UNICLEO\_ID\ UNKNOWN\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00044}00044\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00046}00046\ \textcolor{preprocessor}{\#ifndef\ HUM\_TEMP\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00047}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga39b337b3f942ac33af40252f5f315f21}{00047}}\ \textcolor{preprocessor}{\#define\ HUM\_TEMP\_UNICLEO\_ID\ UNKNOWN\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00048}00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00050}00050\ \textcolor{preprocessor}{\#ifndef\ PRESS\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00051}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga61936bef1bedb61a9925c66837ed37d3}{00051}}\ \textcolor{preprocessor}{\#define\ PRESS\_UNICLEO\_ID\ UNKNOWN\_UNICLEO\_ID}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00052}00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00054}00054\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00055}00055\ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ uint8\_t\ DataStreamingDest\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00057}00057\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00058}00058\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00064}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(\mbox{\hyperlink{structTMsg}{TMsg}}\ *Msg)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00065}00065\ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00066}00066\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[0]\ =\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[1];}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00067}00067\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[1]\ =\ \mbox{\hyperlink{demo__serial_8h_a68c4ed924017f3a22265a40cc4e34b18}{DEV\_ADDR}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00068}00068\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[2]\ +=\ \mbox{\hyperlink{serial__cmd_8h_af1b5f450c8f4227ced357f5660fde0d9}{CMD\_Reply\_Add}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00076}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga93e2f792c7ac7e088eaa2cf6bbc21028}{00076}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga93e2f792c7ac7e088eaa2cf6bbc21028}{INIT\_STREAMING\_HEADER}}(\mbox{\hyperlink{structTMsg}{TMsg}}\ *Msg)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00077}00077\ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00078}00078\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[0]\ =\ DataStreamingDest;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00079}00079\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[1]\ =\ \mbox{\hyperlink{demo__serial_8h_a68c4ed924017f3a22265a40cc4e34b18}{DEV\_ADDR}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00080}00080\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[2]\ =\ \mbox{\hyperlink{serial__cmd_8h_a69a50b1a9f5858dd888515e48bc596d2}{CMD\_Start\_Data\_Streaming}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00081}00081\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00089}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga140b99c6cfd3935acaeedec0e26d1950}{00089}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga140b99c6cfd3935acaeedec0e26d1950}{INIT\_STREAMING\_MSG}}(\mbox{\hyperlink{structTMsg}{TMsg}}\ *Msg)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00090}00090\ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00091}00091\ \ \ uint32\_t\ i;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00093}00093\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[0]\ =\ DataStreamingDest;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00094}00094\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[1]\ =\ \mbox{\hyperlink{demo__serial_8h_a68c4ed924017f3a22265a40cc4e34b18}{DEV\_ADDR}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00095}00095\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[2]\ =\ \mbox{\hyperlink{serial__cmd_8h_a69a50b1a9f5858dd888515e48bc596d2}{CMD\_Start\_Data\_Streaming}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00096}00096\ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 3;\ i\ <\ \mbox{\hyperlink{demo__serial_8h_aef04ecfab352f1fedcaa7e043f32c0fc}{STREAMING\_MSG\_LENGTH}}\ +\ 3;\ i++)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00097}00097\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00098}00098\ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[i]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00099}00099\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00101}00101\ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00109}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga4eb41985a5b7a732924e74891950c19e}{00109}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga4eb41985a5b7a732924e74891950c19e}{HandleMSG}}(\mbox{\hyperlink{structTMsg}{TMsg}}\ *Msg)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00110}00110\ \textcolor{comment}{/*\ \ DestAddr\ |\ SourceAddr\ |\ CMD\ |\ PAYLOAD}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00111}00111\ \textcolor{comment}{\ *\ \ \ \ \ \ 1\ \ \ \ \ \ \ \ \ \ 1\ \ \ \ \ \ \ \ \ 1\ \ \ \ \ \ \ N}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00112}00112\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00113}00113\ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00114}00114\ \ \ \textcolor{keywordtype}{int}\ ret\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00115}00115\ \ \ uint32\_t\ i;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00116}00116\ \ \ \textcolor{keywordtype}{char}\ ps[64];}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00117}00117\ \ \ uint32\_t\ ps\_len\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00118}00118\ \ \ \textcolor{keyword}{static}\ uint32\_t\ sensors\_enabled\_prev\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00119}00119\ \ \ int32\_t\ msg\_offset;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00120}00120\ \ \ uint32\_t\ msg\_count;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00122}00122\ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 2U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00123}00123\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00125}00125\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00127}00127\ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[0]\ !=\ \mbox{\hyperlink{demo__serial_8h_a68c4ed924017f3a22265a40cc4e34b18}{DEV\_ADDR}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00128}00128\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00130}00130\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00132}00132\ \ \ \textcolor{keywordflow}{switch}\ (Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[2])\ \ \ \textcolor{comment}{/*\ CMD\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00133}00133\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00134}00134\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_abc725c1ad8a9472e1c765b8f2e1b3e6b}{CMD\_Ping}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00135}00135\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ !=\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00136}00136\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00138}00138\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00140}00140\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00141}00141\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00142}00142\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00143}00143\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00145}00145\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_ac75539ca2f1186c76b12abf76912eb8f}{CMD\_Enter\_DFU\_Mode}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00146}00146\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ !=\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00147}00147\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00149}00149\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00151}00151\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00152}00152\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00153}00153\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00155}00155\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_abaaf165159e49796add4d5c17b06f33a}{CMD\_Read\_PresString}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00156}00156\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ !=\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00157}00157\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00159}00159\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00161}00161\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00163}00163\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77}{Get\_PresentationString}}(ps,\ \&ps\_len);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00165}00165\ \ \ \ \ \ \ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00166}00166\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ <\ ps\_len)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00167}00167\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00168}00168\ \ \ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3U\ +\ i]\ =\ ps[i];}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00169}00169\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00170}00170\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00172}00172\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3U\ +\ i;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00173}00173\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00174}00174\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00176}00176\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_a9c203304d8691f8f67c9c6e6bf8def92}{CMD\_PRESSURE\_Init}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00177}00177\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00178}00178\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00180}00180\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00182}00182\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00183}00183\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\_s32}}(\&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3],\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga61936bef1bedb61a9925c66837ed37d3}{PRESS\_UNICLEO\_ID}},\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00184}00184\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3\ +\ 4;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00185}00185\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00186}00186\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00188}00188\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_a6559603f3f7af605c4077c3e1aef095a}{CMD\_HUMIDITY\_TEMPERATURE\_Init}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00189}00189\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00190}00190\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00192}00192\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00194}00194\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00195}00195\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\_s32}}(\&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3],\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga39b337b3f942ac33af40252f5f315f21}{HUM\_TEMP\_UNICLEO\_ID}},\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00196}00196\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3\ +\ 4;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00197}00197\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00198}00198\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00200}00200\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_ae490fc6f71f7f3364e606efe10663276}{CMD\_ACCELERO\_GYRO\_Init}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00201}00201\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00202}00202\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00204}00204\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00206}00206\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00207}00207\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\_s32}}(\&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3],\ ACC\_GYR\_UNICLEO\_ID,\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00208}00208\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3\ +\ 4;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00209}00209\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00210}00210\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00212}00212\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_af04ced89747991467f4ddd7e6057b56b}{CMD\_MAGNETO\_Init}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00213}00213\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00214}00214\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00216}00216\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00218}00218\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00219}00219\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\_s32}}(\&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3],\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga23eb6a1aef31b57bc7d80df89543e8ab}{MAG\_UNICLEO\_ID}},\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00220}00220\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3\ +\ 4;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00221}00221\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00222}00222\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00224}00224\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_a69a50b1a9f5858dd888515e48bc596d2}{CMD\_Start\_Data\_Streaming}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00225}00225\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00226}00226\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00228}00228\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00230}00230\ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ =\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga035bebfe269f424d70df46fb016df489}{Deserialize}}(\&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00232}00232\ \ \ \ \ \ \ \textcolor{comment}{/*\ Start\ enabled\ sensors\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00233}00233\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ \&\ \mbox{\hyperlink{demo__serial_8h_a3ebd68dc2ee694f72cc2e51ee4cdce7c}{PRESSURE\_SENSOR}})\ ==\ \mbox{\hyperlink{demo__serial_8h_a3ebd68dc2ee694f72cc2e51ee4cdce7c}{PRESSURE\_SENSOR}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00234}00234\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00235}00235\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_ac31a534da603af82cbea2e81a5d8cbed}{BSP\_SENSOR\_PRESS\_Enable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00236}00236\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00238}00238\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ \&\ \mbox{\hyperlink{demo__serial_8h_a528da39d9618b46df97d266c87d43ad0}{TEMPERATURE\_SENSOR}})\ ==\ \mbox{\hyperlink{demo__serial_8h_a528da39d9618b46df97d266c87d43ad0}{TEMPERATURE\_SENSOR}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00239}00239\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00240}00240\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a7dc09986995f9f42107f5ebe8be8a212}{BSP\_SENSOR\_TEMP\_Enable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00241}00241\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00243}00243\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ \&\ \mbox{\hyperlink{demo__serial_8h_a502a41fc1bb8bfe48cc2bcd48dd2e41c}{HUMIDITY\_SENSOR}})\ ==\ \mbox{\hyperlink{demo__serial_8h_a502a41fc1bb8bfe48cc2bcd48dd2e41c}{HUMIDITY\_SENSOR}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00244}00244\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00245}00245\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a780139edfd8216665a27d69dbc40dee2}{BSP\_SENSOR\_HUM\_Enable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00246}00246\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00248}00248\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ \&\ \mbox{\hyperlink{demo__serial_8h_ab8518075a3036924ae4f0f107c07897b}{ACCELEROMETER\_SENSOR}})\ ==\ \mbox{\hyperlink{demo__serial_8h_ab8518075a3036924ae4f0f107c07897b}{ACCELEROMETER\_SENSOR}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00249}00249\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a7ae41a41e4dda79eefcdd415064e0e43}{BSP\_SENSOR\_ACC\_Enable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00251}00251\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00253}00253\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ \&\ \mbox{\hyperlink{demo__serial_8h_afb11fa2899b96e40c6a009469f239146}{GYROSCOPE\_SENSOR}})\ ==\ \mbox{\hyperlink{demo__serial_8h_afb11fa2899b96e40c6a009469f239146}{GYROSCOPE\_SENSOR}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00254}00254\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00255}00255\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a81d4189aa01109319783e561f8ff27ec}{BSP\_SENSOR\_GYR\_Enable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00256}00256\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00258}00258\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ \&\ \mbox{\hyperlink{demo__serial_8h_a4d825992de712f344187e8bcbed90d07}{MAGNETIC\_SENSOR}})\ ==\ \mbox{\hyperlink{demo__serial_8h_a4d825992de712f344187e8bcbed90d07}{MAGNETIC\_SENSOR}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00259}00259\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00260}00260\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_ab91da864b62db86ffe39dca34b809ef1}{BSP\_SENSOR\_MAG\_Enable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00261}00261\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00263}00263\ \ \ \ \ \ \ (void)\mbox{\hyperlink{group__TIM__Exported__Functions__Group1_gae517d80e2ac713069767df8e8915971e}{HAL\_TIM\_Base\_Start\_IT}}(\&\mbox{\hyperlink{bsp__ip__conf_8h_a56f2362dc2978ccddc8d6e773389bbe8}{BSP\_IP\_TIM\_Handle}});}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00264}00264\ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_ab54d52fbda5cdd117c7a755f454261de}{DataLoggerActive}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00266}00266\ \ \ \ \ \ \ DataStreamingDest\ =\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[1];}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00267}00267\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00268}00268\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00269}00269\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00270}00270\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00272}00272\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_a6468fe5ac0323aac5168632d9ca57730}{CMD\_Stop\_Data\_Streaming}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00273}00273\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00274}00274\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00275}00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00276}00276\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00278}00278\ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_ab54d52fbda5cdd117c7a755f454261de}{DataLoggerActive}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00279}00279\ \ \ \ \ \ \ (void)\mbox{\hyperlink{group__TIM__Exported__Functions__Group1_ga19443605c97f15b5ede7d8337534ece4}{HAL\_TIM\_Base\_Stop\_IT}}(\&\mbox{\hyperlink{bsp__ip__conf_8h_a56f2362dc2978ccddc8d6e773389bbe8}{BSP\_IP\_TIM\_Handle}});}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00281}00281\ \ \ \ \ \ \ \textcolor{comment}{/*\ Disable\ all\ sensors\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00282}00282\ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a4cf50c5fa6c19c128cfc7afd2c957c02}{BSP\_SENSOR\_ACC\_Disable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00283}00283\ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a52f6080f0eff84639dfdc809c06d2883}{BSP\_SENSOR\_GYR\_Disable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00284}00284\ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a06d959f0d05a71dc934cd86d75feb6f5}{BSP\_SENSOR\_MAG\_Disable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00285}00285\ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a17b1aaa450a71c9b000e1b8b89c21862}{BSP\_SENSOR\_PRESS\_Disable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00286}00286\ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_aa0976f6b6c526d8d2dfa157113d39310}{BSP\_SENSOR\_TEMP\_Disable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00287}00287\ \ \ \ \ \ \ \mbox{\hyperlink{custom__mems__control_8c_a32da60d14961a761841b86ca2fe9fa39}{BSP\_SENSOR\_HUM\_Disable}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00289}00289\ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00290}00290\ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d}{UseOfflineData}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00292}00292\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00293}00293\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00294}00294\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00296}00296\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_a81ad85768c6cf07b2a600e8943b3ed41}{CMD\_Set\_DateTime}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00297}00297\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00298}00298\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00299}00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00300}00300\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00302}00302\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00303}00303\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00304}00304\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5}{RTC\_TimeRegulate}}(Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3],\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[4],\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[5]);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00305}00305\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb}{RTC\_DateRegulate}}(Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[6],\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[7],\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[8],\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[9]);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00306}00306\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00307}00307\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00309}00309\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_aa30bfd00678d62ab9d227bd0abbade63}{CMD\_Offline\_Data}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00310}00310\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 55U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00311}00311\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00312}00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00313}00313\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00315}00315\ \ \ \ \ \ \ msg\_offset\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00316}00316\ \ \ \ \ \ \ msg\_count\ =\ (uint32\_t)Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3];}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00318}00318\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ msg\_count;\ i++)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00319}00319\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00320}00320\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].hours,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset],\ 1);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00321}00321\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].minutes,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 1],\ 1);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00322}00322\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].seconds,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 2],\ 1);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00323}00323\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].subsec,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 3],\ 1);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00325}00325\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].pressure,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 4],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00326}00326\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].temperature,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 8],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00327}00327\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].humidity,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 12],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00329}00329\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].acceleration\_x\_mg,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 16],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00330}00330\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].acceleration\_y\_mg,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 20],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00331}00331\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].acceleration\_z\_mg,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 24],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00332}00332\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00333}00333\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].angular\_rate\_x\_mdps,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 28],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00334}00334\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].angular\_rate\_y\_mdps,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 32],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00335}00335\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].angular\_rate\_z\_mdps,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 36],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00336}00336\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00337}00337\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].magnetic\_field\_x\_mgauss,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 40],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00338}00338\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].magnetic\_field\_y\_mgauss,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 44],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00339}00339\ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{app__mems_8c_a15062e472693f23c93a197f62398fe86}{OfflineData}}[\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}].magnetic\_field\_z\_mgauss,\ \&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[msg\_offset\ +\ 48],\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00340}00340\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00341}00341\ \ \ \ \ \ \ \ \ msg\_offset\ +=\ 52;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00342}00342\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00343}00343\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a326ea7f09480d172d9d51e2b126081d9}{OfflineDataCount}}++;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00344}00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{app__mems_8c_a326ea7f09480d172d9d51e2b126081d9}{OfflineDataCount}}\ >\ \mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\_DATA\_SIZE}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00345}00345\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a326ea7f09480d172d9d51e2b126081d9}{OfflineDataCount}}\ =\ \mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\_DATA\_SIZE}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00347}00347\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00348}00348\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00349}00349\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}++;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00350}00350\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}\ >=\ \mbox{\hyperlink{demo__serial_8h_adc1f1127deb2947f11be2ad6decb9199}{OFFLINE\_DATA\_SIZE}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00351}00351\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a4d9ec1fd2146797b6256cbc04b079313}{OfflineDataWriteIndex}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00353}00353\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00354}00354\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00356}00356\ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_ad278b2f8cb00c50b308dd75c344809d1}{SensorReadRequest}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00358}00358\ \ \ \ \ \ \ \textcolor{comment}{/*\ Mark\ Msg\ as\ read\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00359}00359\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00360}00360\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00361}00361\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00362}00362\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00363}00363\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_a907c549cf7c51df72aef970098a37ab5}{CMD\_Use\_Offline\_Data}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00364}00364\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 4U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00365}00365\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00366}00366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00367}00367\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00369}00369\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3]\ ==\ 1U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00370}00370\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00371}00371\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d}{UseOfflineData}}\ =\ 1U;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00372}00372\ \ \ \ \ \ \ \ \ sensors\_enabled\_prev\ =\ \mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00373}00373\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ =\ 0xFFFFFFFFU;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00374}00374\ \ \ \ \ \ \ \ \ (void)\mbox{\hyperlink{group__TIM__Exported__Functions__Group1_ga19443605c97f15b5ede7d8337534ece4}{HAL\_TIM\_Base\_Stop\_IT}}(\&\mbox{\hyperlink{bsp__ip__conf_8h_a56f2362dc2978ccddc8d6e773389bbe8}{BSP\_IP\_TIM\_Handle}});}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00375}00375\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00376}00376\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00377}00377\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00378}00378\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d}{UseOfflineData}}\ =\ 0U;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00379}00379\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_a05f95f1a8ed6463148a373140e469b1e}{SensorsEnabled}}\ =\ sensors\_enabled\_prev;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00380}00380\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00381}00381\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00382}00382\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00383}00383\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00384}00384\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00385}00385\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00386}00386\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_aff8798f3f487e51c1535bc78427c7e21}{CMD\_Get\_App\_Info}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00387}00387\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00388}00388\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00389}00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00390}00390\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00391}00391\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00392}00392\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\_s32}}(\&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3],\ \mbox{\hyperlink{app__mems_8c_ac4a4343c5345def8433286e074933a9c}{AlgoFreq}},\ 4);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00393}00393\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabfd750ea48a7b74f1dc8b75e53f5d9c2}{Serialize\_s32}}(\&Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[7],\ \mbox{\hyperlink{demo__serial_8h_a0edfe5584420f8eb787b5f9cf694c7f7}{REQUIRED\_DATA}},\ 1);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00394}00394\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00395}00395\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00396}00396\ \ \ \ \ \ \ Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ =\ 3\ +\ 5;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00397}00397\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00398}00398\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00399}00399\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00400}00400\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{serial__cmd_8h_aa2e5585319bd296e9b446531352ea691}{CMD\_ChangeSF}}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00401}00401\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Msg-\/>\mbox{\hyperlink{structTMsg_a1870ad3f3627e04db8097119051e4be8}{Len}}\ <\ 3U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00402}00402\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00403}00403\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00404}00404\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00405}00405\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00406}00406\ \ \ \ \ \ \ \mbox{\hyperlink{app__mems_8c_af985acaf29e3e7402e0eae16e022745f}{Enabled6X}}\ =\ Msg-\/>\mbox{\hyperlink{structTMsg_abeb9dd2364f6c65e10fcd75489b91edc}{Data}}[3];}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00407}00407\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00408}00408\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{app__mems_8c_af985acaf29e3e7402e0eae16e022745f}{Enabled6X}}\ ==\ 1U)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00409}00409\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00410}00410\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef}{MotionFX\_manager\_stop\_9X}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00411}00411\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b}{MotionFX\_manager\_start\_6X}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00412}00412\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00413}00413\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00414}00414\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00415}00415\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9}{MotionFX\_manager\_stop\_6X}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00416}00416\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03}{MotionFX\_manager\_start\_9X}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00417}00417\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00418}00418\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00419}00419\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\_REPLY\_HEADER}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00420}00420\ \ \ \ \ \ \ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabe69880be85af0d8396ca3620c0cfd45}{UART\_SendMsg}}(Msg);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00421}00421\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00422}00422\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00423}00423\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00424}00424\ \ \ \ \ \ \ ret\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00425}00425\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00426}00426\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00427}00427\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00428}00428\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00429}00429\ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00430}00430\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00439}\mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb}{00439}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb}{RTC\_DateRegulate}}(uint8\_t\ y,\ uint8\_t\ m,\ uint8\_t\ d,\ uint8\_t\ dw)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00440}00440\ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00441}00441\ \ \ \mbox{\hyperlink{structRTC__DateTypeDef}{RTC\_DateTypeDef}}\ sdatestructure;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00442}00442\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00443}00443\ \ \ sdatestructure.\mbox{\hyperlink{structRTC__DateTypeDef_ab1fa72fe40c7b93c140c766dec410e29}{Year}}\ \ \ \ =\ y;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00444}00444\ \ \ sdatestructure.\mbox{\hyperlink{structRTC__DateTypeDef_aee1e733c977d621eae2f655b3fd2a734}{Month}}\ \ \ =\ m;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00445}00445\ \ \ sdatestructure.\mbox{\hyperlink{structRTC__DateTypeDef_a784bb90289154f1c4b6724fed7265645}{Date}}\ \ \ \ =\ d;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00446}00446\ \ \ sdatestructure.\mbox{\hyperlink{structRTC__DateTypeDef_af39df3e46151584e8cb28dfb7de43dec}{WeekDay}}\ =\ dw;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00447}00447\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00448}00448\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__RTC__Exported__Functions__Group2_ga6cf6c70227337a564ccef82f64d6268f}{HAL\_RTC\_SetDate}}(\&\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}},\ \&sdatestructure,\ \mbox{\hyperlink{group__HAL__RTC__Aliased__Defines_ga1adf0882a1368a3cef0edc34dcf8d34e}{FORMAT\_BIN}})\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00449}00449\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00450}00450\ \ \ \ \ \textcolor{comment}{/*\ Initialization\ Error\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00451}00451\ \ \ \ \ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00452}00452\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00453}00453\ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00454}00454\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00462}\mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5}{00462}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5}{RTC\_TimeRegulate}}(uint8\_t\ hh,\ uint8\_t\ mm,\ uint8\_t\ ss)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00463}00463\ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00464}00464\ \ \ \mbox{\hyperlink{structRTC__TimeTypeDef}{RTC\_TimeTypeDef}}\ stimestructure;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00466}00466\ \ \ stimestructure.\mbox{\hyperlink{structRTC__TimeTypeDef_a836edba653a6aa73789d68e7bd2ee757}{Hours}}\ \ \ \ \ \ \ \ \ \ =\ hh;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00467}00467\ \ \ stimestructure.\mbox{\hyperlink{structRTC__TimeTypeDef_a37e1bd6f0ab1dcc18f95f8d0193cd26e}{Minutes}}\ \ \ \ \ \ \ \ =\ mm;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00468}00468\ \ \ stimestructure.\mbox{\hyperlink{structRTC__TimeTypeDef_a42120bdc40e6f49bb5b4dec78220c87b}{Seconds}}\ \ \ \ \ \ \ \ =\ ss;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00469}00469\ \ \ stimestructure.\mbox{\hyperlink{structRTC__TimeTypeDef_a8059189ca602372f4759497c776c8fbb}{SubSeconds}}\ \ \ \ \ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00470}00470\ \ \ stimestructure.\mbox{\hyperlink{structRTC__TimeTypeDef_a7ca2cf99b14ee49dae5c787b2800f482}{TimeFormat}}\ \ \ \ \ =\ \mbox{\hyperlink{group__RTC__AM__PM__Definitions_ga5be28b0dd8d5d12a6b055a70c46ce24a}{RTC\_HOURFORMAT12\_AM}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00471}00471\ \ \ stimestructure.\mbox{\hyperlink{structRTC__TimeTypeDef_a07a6bb22b53266f71c1b97b5e6aeb5e4}{DayLightSaving}}\ =\ \mbox{\hyperlink{group__RTC__DayLightSaving__Definitions_gafef31f6f6d924dededc4589d2dd16a5c}{RTC\_DAYLIGHTSAVING\_NONE}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00472}00472\ \ \ stimestructure.\mbox{\hyperlink{structRTC__TimeTypeDef_a26435214093d019db4d67a77a8ad99d1}{StoreOperation}}\ =\ \mbox{\hyperlink{group__RTC__StoreOperation__Definitions_ga0c0fb2efa26fd29872759f6162fafefa}{RTC\_STOREOPERATION\_RESET}};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00473}00473\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00474}00474\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__RTC__Exported__Functions__Group2_gafe0fed98171a564decd2a6c9be9781d8}{HAL\_RTC\_SetTime}}(\&\mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}},\ \&stimestructure,\ \mbox{\hyperlink{group__HAL__RTC__Aliased__Defines_ga1adf0882a1368a3cef0edc34dcf8d34e}{FORMAT\_BIN}})\ !=\ \mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{HAL\_OK}})}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00475}00475\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00476}00476\ \ \ \ \ \textcolor{comment}{/*\ Initialization\ Error\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00477}00477\ \ \ \ \ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00478}00478\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00479}00479\ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00487}\mbox{\hyperlink{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77}{00487}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77}{Get\_PresentationString}}(\textcolor{keywordtype}{char}\ *PresentationString,\ uint32\_t\ *Length)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00488}00488\ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00489}00489\ \ \ \textcolor{keyword}{const}\ uint8\_t\ string\_pointer\_shift\ =\ strlen(\textcolor{stringliteral}{"{}ST\ MotionXX\ v"{}});\ \textcolor{comment}{/*\ Shift\ string\ pointer\ by\ this\ amount\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00490}00490\ \ \ \textcolor{keywordtype}{char}\ *lib\_version\_num;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00491}00491\ \ \ \textcolor{keywordtype}{char}\ lib\_version\_string[64];}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00492}00492\ \ \ \textcolor{keywordtype}{int}\ lib\_version\_len\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00493}00493\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ps[]\ =\ \{\textcolor{stringliteral}{"{}MEMS\ shield\ demo,4,"{}}\mbox{\hyperlink{fw__version_8h_a80bd8a83eaaf4466b44c61321c39b11b}{FW\_VERSION}}\textcolor{stringliteral}{"{},\%s,"{}}\mbox{\hyperlink{bsp__ip__conf_8h_a02581754b212d533d96cde56c8145c9b}{BOARD\_NAME}}\};}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00494}00494\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00495}00495\ \ \ \mbox{\hyperlink{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e}{MotionFX\_manager\_get\_version}}(lib\_version\_string,\ \&lib\_version\_len);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00496}00496\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00497}00497\ \ \ \textcolor{comment}{/*\ Shorten\ library\ version\ string\ (e.g.:\ ST\ MotionXX\ v1.0.0\ resp.\ ST\ MotionXXX\ v1.0.0)\ to\ contain\ version\ number\ only\ (e.g.:\ 1.0.0)\ */}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00498}00498\ \ \ \textcolor{keywordflow}{if}\ (lib\_version\_len\ >\ string\_pointer\_shift)}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00499}00499\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00500}00500\ \ \ \ \ lib\_version\_num\ =\ lib\_version\_string\ +\ string\_pointer\_shift;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00501}00501\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00502}00502\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00503}00503\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00504}00504\ \ \ \ \ lib\_version\_num\ =\ lib\_version\_string;}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00505}00505\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00506}00506\ }
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00507}00507\ \ \ *Length\ =\ snprintf(PresentationString,\ 64,\ ps,\ lib\_version\_num);}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00508}00508\ \}}
+\DoxyCodeLine{\Hypertarget{demo__serial_8c_source_l00509}00509\ }
+
+\end{DoxyCode}

@@ -1,0 +1,1529 @@
+\doxysection{MEMS/\+Target/custom\+\_\+motion\+\_\+sensors\+\_\+ex.c File Reference}
+\hypertarget{custom__motion__sensors__ex_8c}{}\label{custom__motion__sensors__ex_8c}\index{MEMS/Target/custom\_motion\_sensors\_ex.c@{MEMS/Target/custom\_motion\_sensors\_ex.c}}
+
+
+This file provides BSP Motion Sensors Extended interface for custom boards.  
+
+
+{\ttfamily \#include "{}custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a0b42da71e3cf953c256a224a419977ef}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Read\+\_\+\+Register}} (uint32\+\_\+t Instance, uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a409a9c0db3493f24d6df0ed29efb4103}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Write\+\_\+\+Register}} (uint32\+\_\+t Instance, uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ad706931d26bed539bad68688d79d9ada}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the status of data ready bit. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a8938f298c8013e99a0ba385b976d4066}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Detection}} (uint32\+\_\+t Instance, \mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the free fall detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a0907e8c09b72cf31ec37f97200a5bdc5}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Detection}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable the free fall detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ab4f889e42d30a46e47eab09b242a9450}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Threshold}} (uint32\+\_\+t Instance, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set the free fall detection threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aee5aeb09e8920161eec8fa5c651b1653}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Duration}} (uint32\+\_\+t Instance, uint8\+\_\+t Duration)
+\begin{DoxyCompactList}\small\item\em Set the free fall detection duration. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aee792c98d5bd817506767a8a785cb08d}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Pedometer}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Enable the pedometer detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a442ae3592af3425ea6db86428f9c797c}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Pedometer}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable the pedometer detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a7de915b309f3a86f710f68a5afb56157}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Pedometer\+\_\+\+Threshold}} (uint32\+\_\+t Instance, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set the pedometer threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a8def492976e54bfe9a64978831c24530}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Reset\+\_\+\+Step\+\_\+\+Counter}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Reset step counter. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a0001313104fd4ed8735405dfb464b481}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+\+Step\+\_\+\+Count}} (uint32\+\_\+t Instance, uint16\+\_\+t \texorpdfstring{$\ast$}{*}Step\+Count)
+\begin{DoxyCompactList}\small\item\em Get step count. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_af9dbb5760b7c15bb2939cd121f09ff6b}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Single\+\_\+\+Tap\+\_\+\+Detection}} (uint32\+\_\+t Instance, \mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the single tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a283da0192043c71f3ea93e9393289d7f}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Single\+\_\+\+Tap\+\_\+\+Detection}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable the single tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a79e1a0d884992e8965dfd365b8430a65}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Double\+\_\+\+Tap\+\_\+\+Detection}} (uint32\+\_\+t Instance, \mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the double tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aabc0aeaf55c289b86ca6dce14d7989d3}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Double\+\_\+\+Tap\+\_\+\+Detection}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable the double tap detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aaec637644c2b7e1d015ab954daa645d6}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Threshold}} (uint32\+\_\+t Instance, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set the tap threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a3795ce3b03ac99ef1fb0bf6d3298fd4b}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Shock\+\_\+\+Time}} (uint32\+\_\+t Instance, uint8\+\_\+t Time)
+\begin{DoxyCompactList}\small\item\em Set the tap shock time. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a10591c7cab333ee2ef80a63ef42e2987}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Quiet\+\_\+\+Time}} (uint32\+\_\+t Instance, uint8\+\_\+t Time)
+\begin{DoxyCompactList}\small\item\em Set the tap quiet time. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a91b265edf161174981efee5f215b2899}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Duration\+\_\+\+Time}} (uint32\+\_\+t Instance, uint8\+\_\+t Time)
+\begin{DoxyCompactList}\small\item\em Set the tap duration time. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aefd12a925f1cb6647df58d4ded5e8378}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Tilt\+\_\+\+Detection}} (uint32\+\_\+t Instance, \mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the tilt detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a5c47a1fd81d4e1fc9204a21a4d40686f}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Tilt\+\_\+\+Detection}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable the tilt detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a7393951cc9582ba5a8c59d858b302469}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Detection}} (uint32\+\_\+t Instance, \mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the wake up detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ac8372e81877f606ae37cb01a5d26b87e}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Detection}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable the wake up detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ae9e8ed05629f775bc871be5bf247eb87}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Threshold}} (uint32\+\_\+t Instance, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set the wake up detection threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a1e0f265045774d5c2cbd1bc6745c43a2}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Duration}} (uint32\+\_\+t Instance, uint8\+\_\+t Duration)
+\begin{DoxyCompactList}\small\item\em Set the wake up detection duration. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a29d432c1b433305ecff8bbfbd79e096a}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Inactivity\+\_\+\+Detection}} (uint32\+\_\+t Instance, \mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the inactivity detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a386b3a7ed659020ab11380a1b7f109d4}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Inactivity\+\_\+\+Detection}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable the inactivity detection. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_af61cf3b36770f0a5dfcaf03fa1d514fb}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Sleep\+\_\+\+Duration}} (uint32\+\_\+t Instance, uint8\+\_\+t Duration)
+\begin{DoxyCompactList}\small\item\em Set the sleep duration. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a5a4dc5a2249d87c5bbb7e8c6482a6104}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+6\+D\+\_\+\+Orientation}} (uint32\+\_\+t Instance, \mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}} Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable 6D Orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a307cb3e8d6185e56852be28c186e3e02}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+6\+D\+\_\+\+Orientation}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Disable 6D Orientation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a2e3332e9f0f9633afa162297b20547e8}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+Threshold}} (uint32\+\_\+t Instance, uint8\+\_\+t Threshold)
+\begin{DoxyCompactList}\small\item\em Set the 6D orientation threshold. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aa49ae348a89c428da7bab96818be1111}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+XL}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}xl)
+\begin{DoxyCompactList}\small\item\em Get 6D Orientation XL. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a02d0b19d006f29dd5643d38b1bac7f2e}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+XH}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}xh)
+\begin{DoxyCompactList}\small\item\em Get 6D Orientation XH. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a75a21a838d951ad410347820f698da84}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+YL}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}yl)
+\begin{DoxyCompactList}\small\item\em Get 6D Orientation YL. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ac5fde524d89a614de90651d33536d00c}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+YH}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}yh)
+\begin{DoxyCompactList}\small\item\em Get 6D Orientation YH. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a62c09a2ce984195410a21e3dd71e7b05}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+ZL}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}zl)
+\begin{DoxyCompactList}\small\item\em Get 6D Orientation ZL. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aba8193cda77918d75bfcb21b57b7efc2}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+ZH}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}zh)
+\begin{DoxyCompactList}\small\item\em Get 6D Orientation ZH. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a32c2c5f8306321d39fdb47716c442a93}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+\+Event\+\_\+\+Status}} (uint32\+\_\+t Instance, \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Event__Status__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Event\+\_\+\+Status\+\_\+t}} \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the status of all hardware events. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a9656af077607d8f084b1ed948100681c}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Num\+\_\+\+Samples}} (uint32\+\_\+t Instance, uint16\+\_\+t \texorpdfstring{$\ast$}{*}Num\+Samples)
+\begin{DoxyCompactList}\small\item\em Get number of unread FIFO samples. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_afa9d94370fc3696e1cb543d6e3317435}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Full\+\_\+\+Status}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get FIFO full status. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a7582462364e08e898076b0e6fb8dcc35}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Decimation}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, uint8\+\_\+t Decimation)
+\begin{DoxyCompactList}\small\item\em Set FIFO decimation. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_af215a793d6e9f2ea9c5ca870da496c0e}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+ODR\+\_\+\+Value}} (uint32\+\_\+t Instance, float Odr)
+\begin{DoxyCompactList}\small\item\em Set FIFO ODR value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a0f859fb44ef5a57a719352263d72cfb5}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+INT1\+\_\+\+FIFO\+\_\+\+Full}} (uint32\+\_\+t Instance, uint8\+\_\+t Status)
+\begin{DoxyCompactList}\small\item\em Set FIFO full interrupt on INT1 pin. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_aabe4f994887ba8c56c408d42fe1787ce}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Watermark\+\_\+\+Level}} (uint32\+\_\+t Instance, uint16\+\_\+t Watermark)
+\begin{DoxyCompactList}\small\item\em Set FIFO watermark level. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a2b82f6dde5b13787c37fc920bdd9808f}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Stop\+\_\+\+On\+\_\+\+Fth}} (uint32\+\_\+t Instance, uint8\+\_\+t Status)
+\begin{DoxyCompactList}\small\item\em Set FIFO stop on watermark. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ae5f07575144f26c4307586176c5ccf5c}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Mode}} (uint32\+\_\+t Instance, uint8\+\_\+t Mode)
+\begin{DoxyCompactList}\small\item\em Set FIFO mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a8a4884012b665b272c6a7bb8c92e028a}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Pattern}} (uint32\+\_\+t Instance, uint16\+\_\+t \texorpdfstring{$\ast$}{*}Pattern)
+\begin{DoxyCompactList}\small\item\em Get FIFO pattern. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_abd2b9f614bcbb4b9800659f3c1658ef7}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Axis}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, int32\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get FIFO single axis data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ad74d7efe0406ca1391a618b1b7089262}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+BDR}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, float Bdr)
+\begin{DoxyCompactList}\small\item\em Set FIFO BDR value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_abe6aa638399ae4f4630cd75826f225e9}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Tag}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Tag)
+\begin{DoxyCompactList}\small\item\em Get FIFO tag. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_ab1a79316631a0486f41bd434bbb56bc4}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Axes}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get FIFO axes data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors__ex_8c_a79e7a616155ad851a2d81626d279952a}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Self\+Test}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, uint8\+\_\+t Status)
+\begin{DoxyCompactList}\small\item\em Set accelero self-\/test. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{custom__motion__sensors__ex_8c_a014a3a706dc94def52939ed4edc1963d}{Motion\+Comp\+Obj}} \mbox{[}\mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\+\_\+\+MOTION\+\_\+\+INSTANCES\+\_\+\+NBR}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides BSP Motion Sensors Extended interface for custom boards. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{custom__motion__sensors__ex_8c_a307cb3e8d6185e56852be28c186e3e02}\label{custom__motion__sensors__ex_8c_a307cb3e8d6185e56852be28c186e3e02} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_6D\_Orientation@{CUSTOM\_MOTION\_SENSOR\_Disable\_6D\_Orientation}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_6D\_Orientation@{CUSTOM\_MOTION\_SENSOR\_Disable\_6D\_Orientation}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_6D\_Orientation()}{CUSTOM\_MOTION\_SENSOR\_Disable\_6D\_Orientation()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+6\+D\+\_\+\+Orientation (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable 6D Orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00710}{710}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aabc0aeaf55c289b86ca6dce14d7989d3}\label{custom__motion__sensors__ex_8c_aabc0aeaf55c289b86ca6dce14d7989d3} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_Double\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Double\_Tap\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_Double\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Double\_Tap\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_Double\_Tap\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Disable\_Double\_Tap\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Double\+\_\+\+Tap\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable the double tap detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00399}{399}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a0907e8c09b72cf31ec37f97200a5bdc5}\label{custom__motion__sensors__ex_8c_a0907e8c09b72cf31ec37f97200a5bdc5} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_Free\_Fall\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Free\_Fall\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_Free\_Fall\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Free\_Fall\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_Free\_Fall\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Disable\_Free\_Fall\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable the free fall detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00173}{173}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a386b3a7ed659020ab11380a1b7f109d4}\label{custom__motion__sensors__ex_8c_a386b3a7ed659020ab11380a1b7f109d4} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_Inactivity\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Inactivity\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_Inactivity\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Inactivity\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_Inactivity\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Disable\_Inactivity\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Inactivity\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable the inactivity detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00648}{648}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a442ae3592af3425ea6db86428f9c797c}\label{custom__motion__sensors__ex_8c_a442ae3592af3425ea6db86428f9c797c} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_Pedometer@{CUSTOM\_MOTION\_SENSOR\_Disable\_Pedometer}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_Pedometer@{CUSTOM\_MOTION\_SENSOR\_Disable\_Pedometer}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_Pedometer()}{CUSTOM\_MOTION\_SENSOR\_Disable\_Pedometer()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Pedometer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable the pedometer detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00255}{255}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a283da0192043c71f3ea93e9393289d7f}\label{custom__motion__sensors__ex_8c_a283da0192043c71f3ea93e9393289d7f} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_Single\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Single\_Tap\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_Single\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Single\_Tap\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_Single\_Tap\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Disable\_Single\_Tap\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Single\+\_\+\+Tap\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable the single tap detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00358}{358}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a5c47a1fd81d4e1fc9204a21a4d40686f}\label{custom__motion__sensors__ex_8c_a5c47a1fd81d4e1fc9204a21a4d40686f} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_Tilt\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Tilt\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_Tilt\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Tilt\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_Tilt\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Disable\_Tilt\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Tilt\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable the tilt detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00524}{524}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ac8372e81877f606ae37cb01a5d26b87e}\label{custom__motion__sensors__ex_8c_ac8372e81877f606ae37cb01a5d26b87e} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Disable\_Wake\_Up\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Wake\_Up\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable\_Wake\_Up\_Detection@{CUSTOM\_MOTION\_SENSOR\_Disable\_Wake\_Up\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable\_Wake\_Up\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Disable\_Wake\_Up\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Disable the wake up detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00565}{565}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a5a4dc5a2249d87c5bbb7e8c6482a6104}\label{custom__motion__sensors__ex_8c_a5a4dc5a2249d87c5bbb7e8c6482a6104} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_6D\_Orientation@{CUSTOM\_MOTION\_SENSOR\_Enable\_6D\_Orientation}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_6D\_Orientation@{CUSTOM\_MOTION\_SENSOR\_Enable\_6D\_Orientation}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_6D\_Orientation()}{CUSTOM\_MOTION\_SENSOR\_Enable\_6D\_Orientation()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+6\+D\+\_\+\+Orientation (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}}}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable 6D Orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Int\+Pin} & the interrupt pin to be used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00690}{690}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a79e1a0d884992e8965dfd365b8430a65}\label{custom__motion__sensors__ex_8c_a79e1a0d884992e8965dfd365b8430a65} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_Double\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Double\_Tap\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_Double\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Double\_Tap\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_Double\_Tap\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Enable\_Double\_Tap\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Double\+\_\+\+Tap\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}}}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the double tap detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Int\+Pin} & the interrupt pin to be used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00379}{379}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a8938f298c8013e99a0ba385b976d4066}\label{custom__motion__sensors__ex_8c_a8938f298c8013e99a0ba385b976d4066} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_Free\_Fall\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Free\_Fall\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_Free\_Fall\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Free\_Fall\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_Free\_Fall\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Enable\_Free\_Fall\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}}}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the free fall detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Int\+Pin} & the interrupt pin to be used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00153}{153}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a29d432c1b433305ecff8bbfbd79e096a}\label{custom__motion__sensors__ex_8c_a29d432c1b433305ecff8bbfbd79e096a} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_Inactivity\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Inactivity\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_Inactivity\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Inactivity\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_Inactivity\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Enable\_Inactivity\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Inactivity\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}}}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the inactivity detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Int\+Pin} & the interrupt pin to be used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00628}{628}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aee792c98d5bd817506767a8a785cb08d}\label{custom__motion__sensors__ex_8c_aee792c98d5bd817506767a8a785cb08d} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_Pedometer@{CUSTOM\_MOTION\_SENSOR\_Enable\_Pedometer}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_Pedometer@{CUSTOM\_MOTION\_SENSOR\_Enable\_Pedometer}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_Pedometer()}{CUSTOM\_MOTION\_SENSOR\_Enable\_Pedometer()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Pedometer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Enable the pedometer detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00235}{235}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_af9dbb5760b7c15bb2939cd121f09ff6b}\label{custom__motion__sensors__ex_8c_af9dbb5760b7c15bb2939cd121f09ff6b} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_Single\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Single\_Tap\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_Single\_Tap\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Single\_Tap\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_Single\_Tap\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Enable\_Single\_Tap\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Single\+\_\+\+Tap\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}}}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the single tap detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Int\+Pin} & the interrupt pin to be used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00338}{338}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aefd12a925f1cb6647df58d4ded5e8378}\label{custom__motion__sensors__ex_8c_aefd12a925f1cb6647df58d4ded5e8378} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_Tilt\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Tilt\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_Tilt\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Tilt\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_Tilt\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Enable\_Tilt\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Tilt\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}}}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the tilt detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Int\+Pin} & the interrupt pin to be used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00504}{504}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a7393951cc9582ba5a8c59d858b302469}\label{custom__motion__sensors__ex_8c_a7393951cc9582ba5a8c59d858b302469} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Enable\_Wake\_Up\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Wake\_Up\_Detection}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable\_Wake\_Up\_Detection@{CUSTOM\_MOTION\_SENSOR\_Enable\_Wake\_Up\_Detection}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable\_Wake\_Up\_Detection()}{CUSTOM\_MOTION\_SENSOR\_Enable\_Wake\_Up\_Detection()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Detection (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{custom__motion__sensors__ex_8h_a430c8c28f129470ba130efbfef0b3280}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Int\+Pin\+\_\+t}}}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the wake up detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Int\+Pin} & the interrupt pin to be used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00545}{545}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ab1a79316631a0486f41bd434bbb56bc4}\label{custom__motion__sensors__ex_8c_ab1a79316631a0486f41bd434bbb56bc4} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axes@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axes}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axes@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axes}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axes()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axes()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Axes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get FIFO axes data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Function} & Motion sensor function \\
+\hline
+{\em Data} & FIFO axes data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01155}{1155}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_abd2b9f614bcbb4b9800659f3c1658ef7}\label{custom__motion__sensors__ex_8c_abd2b9f614bcbb4b9800659f3c1658ef7} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axis@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axis}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axis@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axis}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axis()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Axis()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Axis (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get FIFO single axis data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Function} & Motion sensor function \\
+\hline
+{\em Data} & FIFO single axis data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01090}{1090}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_afa9d94370fc3696e1cb543d6e3317435}\label{custom__motion__sensors__ex_8c_afa9d94370fc3696e1cb543d6e3317435} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Full\_Status@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Full\_Status}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Full\_Status@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Full\_Status}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Full\_Status()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Full\_Status()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Full\+\_\+\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Status }\end{DoxyParamCaption})}
+
+
+
+Get FIFO full status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Status} & FIFO full status \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00920}{920}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a9656af077607d8f084b1ed948100681c}\label{custom__motion__sensors__ex_8c_a9656af077607d8f084b1ed948100681c} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Num\_Samples@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Num\_Samples}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Num\_Samples@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Num\_Samples}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Num\_Samples()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Num\_Samples()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Num\+\_\+\+Samples (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{Num\+Samples }\end{DoxyParamCaption})}
+
+
+
+Get number of unread FIFO samples. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Num\+Samples} & number of unread FIFO samples \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00899}{899}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a8a4884012b665b272c6a7bb8c92e028a}\label{custom__motion__sensors__ex_8c_a8a4884012b665b272c6a7bb8c92e028a} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Pattern@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Pattern}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Pattern@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Pattern}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Pattern()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Pattern()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Pattern (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{Pattern }\end{DoxyParamCaption})}
+
+
+
+Get FIFO pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Pattern} & FIFO pattern \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01068}{1068}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_abe6aa638399ae4f4630cd75826f225e9}\label{custom__motion__sensors__ex_8c_abe6aa638399ae4f4630cd75826f225e9} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Tag@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Tag}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Tag@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Tag}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Tag()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Get\_Tag()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Get\+\_\+\+Tag (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Tag }\end{DoxyParamCaption})}
+
+
+
+Get FIFO tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Tag} & FIFO tag \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01133}{1133}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ad74d7efe0406ca1391a618b1b7089262}\label{custom__motion__sensors__ex_8c_ad74d7efe0406ca1391a618b1b7089262} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_BDR@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_BDR}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_BDR@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_BDR}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_BDR()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_BDR()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+BDR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{float}]{Bdr }\end{DoxyParamCaption})}
+
+
+
+Set FIFO BDR value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Function} & Motion sensor function \\
+\hline
+{\em Odr} & FIFO BDR value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01112}{1112}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a7582462364e08e898076b0e6fb8dcc35}\label{custom__motion__sensors__ex_8c_a7582462364e08e898076b0e6fb8dcc35} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Decimation@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Decimation}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Decimation@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Decimation}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Decimation()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Decimation()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Decimation (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{uint8\+\_\+t}]{Decimation }\end{DoxyParamCaption})}
+
+
+
+Set FIFO decimation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Function} & Motion sensor function \\
+\hline
+{\em Decimation} & FIFO decimation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00942}{942}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a0f859fb44ef5a57a719352263d72cfb5}\label{custom__motion__sensors__ex_8c_a0f859fb44ef5a57a719352263d72cfb5} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_INT1\_FIFO\_Full@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_INT1\_FIFO\_Full}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_INT1\_FIFO\_Full@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_INT1\_FIFO\_Full}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_INT1\_FIFO\_Full()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_INT1\_FIFO\_Full()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+INT1\+\_\+\+FIFO\+\_\+\+Full (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Status }\end{DoxyParamCaption})}
+
+
+
+Set FIFO full interrupt on INT1 pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Status} & FIFO full interrupt on INT1 pin \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00984}{984}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ae5f07575144f26c4307586176c5ccf5c}\label{custom__motion__sensors__ex_8c_ae5f07575144f26c4307586176c5ccf5c} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Mode@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Mode}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Mode@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Mode}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Mode()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Mode()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Mode }\end{DoxyParamCaption})}
+
+
+
+Set FIFO mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Mode} & FIFO mode \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01047}{1047}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_af215a793d6e9f2ea9c5ca870da496c0e}\label{custom__motion__sensors__ex_8c_af215a793d6e9f2ea9c5ca870da496c0e} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_ODR\_Value@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_ODR\_Value}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_ODR\_Value@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_ODR\_Value}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_ODR\_Value()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_ODR\_Value()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+ODR\+\_\+\+Value (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set FIFO ODR value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Odr} & FIFO ODR value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00963}{963}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a2b82f6dde5b13787c37fc920bdd9808f}\label{custom__motion__sensors__ex_8c_a2b82f6dde5b13787c37fc920bdd9808f} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Stop\_On\_Fth@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Stop\_On\_Fth}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Stop\_On\_Fth@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Stop\_On\_Fth}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Stop\_On\_Fth()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Stop\_On\_Fth()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Stop\+\_\+\+On\+\_\+\+Fth (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Status }\end{DoxyParamCaption})}
+
+
+
+Set FIFO stop on watermark. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Status} & FIFO stop on watermark status \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01026}{1026}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aabe4f994887ba8c56c408d42fe1787ce}\label{custom__motion__sensors__ex_8c_aabe4f994887ba8c56c408d42fe1787ce} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Watermark\_Level@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Watermark\_Level}}
+\index{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Watermark\_Level@{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Watermark\_Level}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Watermark\_Level()}{CUSTOM\_MOTION\_SENSOR\_FIFO\_Set\_Watermark\_Level()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+FIFO\+\_\+\+Set\+\_\+\+Watermark\+\_\+\+Level (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint16\+\_\+t}]{Watermark }\end{DoxyParamCaption})}
+
+
+
+Set FIFO watermark level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Watermark} & FIFO watermark level \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01005}{1005}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a02d0b19d006f29dd5643d38b1bac7f2e}\label{custom__motion__sensors__ex_8c_a02d0b19d006f29dd5643d38b1bac7f2e} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XH@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XH}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XH@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XH}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XH()}{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XH()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+XH (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{xh }\end{DoxyParamCaption})}
+
+
+
+Get 6D Orientation XH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em xh} & the pointer to the 6D orientation XH axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00773}{773}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aa49ae348a89c428da7bab96818be1111}\label{custom__motion__sensors__ex_8c_aa49ae348a89c428da7bab96818be1111} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XL@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XL}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XL@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XL}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XL()}{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_XL()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+XL (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{xl }\end{DoxyParamCaption})}
+
+
+
+Get 6D Orientation XL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em xl} & the pointer to the 6D orientation XL axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00752}{752}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ac5fde524d89a614de90651d33536d00c}\label{custom__motion__sensors__ex_8c_ac5fde524d89a614de90651d33536d00c} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YH@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YH}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YH@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YH}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YH()}{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YH()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+YH (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{yh }\end{DoxyParamCaption})}
+
+
+
+Get 6D Orientation YH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em yh} & the pointer to the 6D orientation YH axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00815}{815}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a75a21a838d951ad410347820f698da84}\label{custom__motion__sensors__ex_8c_a75a21a838d951ad410347820f698da84} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YL@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YL}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YL@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YL}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YL()}{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_YL()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+YL (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{yl }\end{DoxyParamCaption})}
+
+
+
+Get 6D Orientation YL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em yl} & the pointer to the 6D orientation YL axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00794}{794}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aba8193cda77918d75bfcb21b57b7efc2}\label{custom__motion__sensors__ex_8c_aba8193cda77918d75bfcb21b57b7efc2} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZH@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZH}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZH@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZH}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZH()}{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZH()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+ZH (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{zh }\end{DoxyParamCaption})}
+
+
+
+Get 6D Orientation ZH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em zh} & the pointer to the 6D orientation ZH axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00857}{857}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a62c09a2ce984195410a21e3dd71e7b05}\label{custom__motion__sensors__ex_8c_a62c09a2ce984195410a21e3dd71e7b05} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZL@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZL}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZL@{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZL}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZL()}{CUSTOM\_MOTION\_SENSOR\_Get\_6D\_Orientation\_ZL()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+ZL (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{zl }\end{DoxyParamCaption})}
+
+
+
+Get 6D Orientation ZL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em zl} & the pointer to the 6D orientation ZL axis \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00836}{836}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ad706931d26bed539bad68688d79d9ada}\label{custom__motion__sensors__ex_8c_ad706931d26bed539bad68688d79d9ada} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_DRDY\_Status@{CUSTOM\_MOTION\_SENSOR\_Get\_DRDY\_Status}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_DRDY\_Status@{CUSTOM\_MOTION\_SENSOR\_Get\_DRDY\_Status}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_DRDY\_Status()}{CUSTOM\_MOTION\_SENSOR\_Get\_DRDY\_Status()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Status }\end{DoxyParamCaption})}
+
+
+
+Get the status of data ready bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Function} & Motion sensor function \\
+\hline
+{\em Status} & the pointer to the status \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00101}{101}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a32c2c5f8306321d39fdb47716c442a93}\label{custom__motion__sensors__ex_8c_a32c2c5f8306321d39fdb47716c442a93} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_Event\_Status@{CUSTOM\_MOTION\_SENSOR\_Get\_Event\_Status}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_Event\_Status@{CUSTOM\_MOTION\_SENSOR\_Get\_Event\_Status}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_Event\_Status()}{CUSTOM\_MOTION\_SENSOR\_Get\_Event\_Status()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+\+Event\+\_\+\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Event__Status__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Event\+\_\+\+Status\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Status }\end{DoxyParamCaption})}
+
+
+
+Get the status of all hardware events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Status} & the pointer to the status of all hardware events \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00878}{878}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a0001313104fd4ed8735405dfb464b481}\label{custom__motion__sensors__ex_8c_a0001313104fd4ed8735405dfb464b481} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Get\_Step\_Count@{CUSTOM\_MOTION\_SENSOR\_Get\_Step\_Count}}
+\index{CUSTOM\_MOTION\_SENSOR\_Get\_Step\_Count@{CUSTOM\_MOTION\_SENSOR\_Get\_Step\_Count}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Get\_Step\_Count()}{CUSTOM\_MOTION\_SENSOR\_Get\_Step\_Count()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+\_\+\+Step\+\_\+\+Count (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{Step\+Count }\end{DoxyParamCaption})}
+
+
+
+Get step count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Step\+Count} & number of steps \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00317}{317}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a0b42da71e3cf953c256a224a419977ef}\label{custom__motion__sensors__ex_8c_a0b42da71e3cf953c256a224a419977ef} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Read\_Register@{CUSTOM\_MOTION\_SENSOR\_Read\_Register}}
+\index{CUSTOM\_MOTION\_SENSOR\_Read\_Register@{CUSTOM\_MOTION\_SENSOR\_Read\_Register}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Read\_Register()}{CUSTOM\_MOTION\_SENSOR\_Read\_Register()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Read\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get the register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00031}{31}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a8def492976e54bfe9a64978831c24530}\label{custom__motion__sensors__ex_8c_a8def492976e54bfe9a64978831c24530} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Reset\_Step\_Counter@{CUSTOM\_MOTION\_SENSOR\_Reset\_Step\_Counter}}
+\index{CUSTOM\_MOTION\_SENSOR\_Reset\_Step\_Counter@{CUSTOM\_MOTION\_SENSOR\_Reset\_Step\_Counter}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Reset\_Step\_Counter()}{CUSTOM\_MOTION\_SENSOR\_Reset\_Step\_Counter()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Reset\+\_\+\+Step\+\_\+\+Counter (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Reset step counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00296}{296}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a2e3332e9f0f9633afa162297b20547e8}\label{custom__motion__sensors__ex_8c_a2e3332e9f0f9633afa162297b20547e8} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_6D\_Orientation\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_6D\_Orientation\_Threshold}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_6D\_Orientation\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_6D\_Orientation\_Threshold}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_6D\_Orientation\_Threshold()}{CUSTOM\_MOTION\_SENSOR\_Set\_6D\_Orientation\_Threshold()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+6\+D\+\_\+\+Orientation\+\_\+\+Threshold (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Threshold }\end{DoxyParamCaption})}
+
+
+
+Set the 6D orientation threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Threshold} & the threshold to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00731}{731}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aee5aeb09e8920161eec8fa5c651b1653}\label{custom__motion__sensors__ex_8c_aee5aeb09e8920161eec8fa5c651b1653} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Duration@{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Duration}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Duration@{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Duration}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Duration()}{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Duration()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Duration (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Duration }\end{DoxyParamCaption})}
+
+
+
+Set the free fall detection duration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Duration} & the duration to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00215}{215}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ab4f889e42d30a46e47eab09b242a9450}\label{custom__motion__sensors__ex_8c_ab4f889e42d30a46e47eab09b242a9450} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Threshold}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Threshold}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Threshold()}{CUSTOM\_MOTION\_SENSOR\_Set\_Free\_Fall\_Threshold()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Free\+\_\+\+Fall\+\_\+\+Threshold (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Threshold }\end{DoxyParamCaption})}
+
+
+
+Set the free fall detection threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Threshold} & the threshold to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00194}{194}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a7de915b309f3a86f710f68a5afb56157}\label{custom__motion__sensors__ex_8c_a7de915b309f3a86f710f68a5afb56157} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Pedometer\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Pedometer\_Threshold}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Pedometer\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Pedometer\_Threshold}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Pedometer\_Threshold()}{CUSTOM\_MOTION\_SENSOR\_Set\_Pedometer\_Threshold()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Pedometer\+\_\+\+Threshold (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Threshold }\end{DoxyParamCaption})}
+
+
+
+Set the pedometer threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Threshold} & the threshold to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00276}{276}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a79e7a616155ad851a2d81626d279952a}\label{custom__motion__sensors__ex_8c_a79e7a616155ad851a2d81626d279952a} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_SelfTest@{CUSTOM\_MOTION\_SENSOR\_Set\_SelfTest}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_SelfTest@{CUSTOM\_MOTION\_SENSOR\_Set\_SelfTest}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_SelfTest()}{CUSTOM\_MOTION\_SENSOR\_Set\_SelfTest()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Self\+Test (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{uint8\+\_\+t}]{Status }\end{DoxyParamCaption})}
+
+
+
+Set accelero self-\/test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Function} & Motion sensor function \\
+\hline
+{\em Data} & FIFO single axis data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l01177}{1177}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_af61cf3b36770f0a5dfcaf03fa1d514fb}\label{custom__motion__sensors__ex_8c_af61cf3b36770f0a5dfcaf03fa1d514fb} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Sleep\_Duration@{CUSTOM\_MOTION\_SENSOR\_Set\_Sleep\_Duration}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Sleep\_Duration@{CUSTOM\_MOTION\_SENSOR\_Set\_Sleep\_Duration}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Sleep\_Duration()}{CUSTOM\_MOTION\_SENSOR\_Set\_Sleep\_Duration()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Sleep\+\_\+\+Duration (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Duration }\end{DoxyParamCaption})}
+
+
+
+Set the sleep duration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Duration} & the duration to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00669}{669}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a91b265edf161174981efee5f215b2899}\label{custom__motion__sensors__ex_8c_a91b265edf161174981efee5f215b2899} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Duration\_Time@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Duration\_Time}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Duration\_Time@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Duration\_Time}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Duration\_Time()}{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Duration\_Time()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Duration\+\_\+\+Time (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Time }\end{DoxyParamCaption})}
+
+
+
+Set the tap duration time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Time} & the tap duration time to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00483}{483}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a10591c7cab333ee2ef80a63ef42e2987}\label{custom__motion__sensors__ex_8c_a10591c7cab333ee2ef80a63ef42e2987} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Quiet\_Time@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Quiet\_Time}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Quiet\_Time@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Quiet\_Time}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Quiet\_Time()}{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Quiet\_Time()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Quiet\+\_\+\+Time (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Time }\end{DoxyParamCaption})}
+
+
+
+Set the tap quiet time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Time} & the tap quiet time to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00462}{462}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a3795ce3b03ac99ef1fb0bf6d3298fd4b}\label{custom__motion__sensors__ex_8c_a3795ce3b03ac99ef1fb0bf6d3298fd4b} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Shock\_Time@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Shock\_Time}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Shock\_Time@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Shock\_Time}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Shock\_Time()}{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Shock\_Time()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Shock\+\_\+\+Time (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Time }\end{DoxyParamCaption})}
+
+
+
+Set the tap shock time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Time} & the tap shock time to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00441}{441}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_aaec637644c2b7e1d015ab954daa645d6}\label{custom__motion__sensors__ex_8c_aaec637644c2b7e1d015ab954daa645d6} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Threshold}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Threshold}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Threshold()}{CUSTOM\_MOTION\_SENSOR\_Set\_Tap\_Threshold()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Tap\+\_\+\+Threshold (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Threshold }\end{DoxyParamCaption})}
+
+
+
+Set the tap threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Threshold} & the threshold to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00420}{420}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a1e0f265045774d5c2cbd1bc6745c43a2}\label{custom__motion__sensors__ex_8c_a1e0f265045774d5c2cbd1bc6745c43a2} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Duration@{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Duration}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Duration@{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Duration}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Duration()}{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Duration()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Duration (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Duration }\end{DoxyParamCaption})}
+
+
+
+Set the wake up detection duration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Duration} & the duration to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00607}{607}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_ae9e8ed05629f775bc871be5bf247eb87}\label{custom__motion__sensors__ex_8c_ae9e8ed05629f775bc871be5bf247eb87} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Threshold}}
+\index{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Threshold@{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Threshold}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Threshold()}{CUSTOM\_MOTION\_SENSOR\_Set\_Wake\_Up\_Threshold()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+\_\+\+Wake\+\_\+\+Up\+\_\+\+Threshold (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Threshold }\end{DoxyParamCaption})}
+
+
+
+Set the wake up detection threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Threshold} & the threshold to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00586}{586}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__motion__sensors__ex_8c_a409a9c0db3493f24d6df0ed29efb4103}\label{custom__motion__sensors__ex_8c_a409a9c0db3493f24d6df0ed29efb4103} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!CUSTOM\_MOTION\_SENSOR\_Write\_Register@{CUSTOM\_MOTION\_SENSOR\_Write\_Register}}
+\index{CUSTOM\_MOTION\_SENSOR\_Write\_Register@{CUSTOM\_MOTION\_SENSOR\_Write\_Register}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Write\_Register()}{CUSTOM\_MOTION\_SENSOR\_Write\_Register()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Write\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Set the register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & the device instance \\
+\hline
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors__ex_8c_source_l00066}{66}} of file \mbox{\hyperlink{custom__motion__sensors__ex_8c_source}{custom\+\_\+motion\+\_\+sensors\+\_\+ex.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{custom__motion__sensors__ex_8c_a014a3a706dc94def52939ed4edc1963d}\label{custom__motion__sensors__ex_8c_a014a3a706dc94def52939ed4edc1963d} 
+\index{custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}!MotionCompObj@{MotionCompObj}}
+\index{MotionCompObj@{MotionCompObj}!custom\_motion\_sensors\_ex.c@{custom\_motion\_sensors\_ex.c}}
+\doxysubsubsection{\texorpdfstring{MotionCompObj}{MotionCompObj}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} Motion\+Comp\+Obj\mbox{[}\mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\+\_\+\+MOTION\+\_\+\+INSTANCES\+\_\+\+NBR}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00023}{23}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+

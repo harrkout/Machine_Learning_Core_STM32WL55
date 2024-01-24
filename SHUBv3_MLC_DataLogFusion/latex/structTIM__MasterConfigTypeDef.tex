@@ -1,0 +1,73 @@
+\doxysection{TIM\+\_\+\+Master\+Config\+Type\+Def Struct Reference}
+\hypertarget{structTIM__MasterConfigTypeDef}{}\label{structTIM__MasterConfigTypeDef}\index{TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}}
+
+
+TIM Master configuration Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32wlxx\+\_\+hal\+\_\+tim.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structTIM__MasterConfigTypeDef_aafb70c2c7a9a93a3dad59a350df2b00f}{Master\+Output\+Trigger}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structTIM__MasterConfigTypeDef_a77efb471135bc618157fa16dac2ac502}{Master\+Output\+Trigger2}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structTIM__MasterConfigTypeDef_aa17903ecbee15ce7a6d51de5e9602d3f}{Master\+Slave\+Mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+TIM Master configuration Structure definition. 
+
+\begin{DoxyNote}{Note}
+Advanced timers provide TRGO2 internal line which is redirected to the ADC 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source_l00233}{233}} of file \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source}{stm32wlxx\+\_\+hal\+\_\+tim.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structTIM__MasterConfigTypeDef_aafb70c2c7a9a93a3dad59a350df2b00f}\label{structTIM__MasterConfigTypeDef_aafb70c2c7a9a93a3dad59a350df2b00f} 
+\index{TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}!MasterOutputTrigger@{MasterOutputTrigger}}
+\index{MasterOutputTrigger@{MasterOutputTrigger}!TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}}
+\doxysubsubsection{\texorpdfstring{MasterOutputTrigger}{MasterOutputTrigger}}
+{\footnotesize\ttfamily uint32\+\_\+t Master\+Output\+Trigger}
+
+Trigger output (TRGO) selection This parameter can be a value of \doxylink{group__TIM__Master__Mode__Selection}{TIM Master Mode Selection} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source_l00235}{235}} of file \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source}{stm32wlxx\+\_\+hal\+\_\+tim.\+h}}.
+
+\Hypertarget{structTIM__MasterConfigTypeDef_a77efb471135bc618157fa16dac2ac502}\label{structTIM__MasterConfigTypeDef_a77efb471135bc618157fa16dac2ac502} 
+\index{TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}!MasterOutputTrigger2@{MasterOutputTrigger2}}
+\index{MasterOutputTrigger2@{MasterOutputTrigger2}!TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}}
+\doxysubsubsection{\texorpdfstring{MasterOutputTrigger2}{MasterOutputTrigger2}}
+{\footnotesize\ttfamily uint32\+\_\+t Master\+Output\+Trigger2}
+
+Trigger output2 (TRGO2) selection This parameter can be a value of \doxylink{group__TIM__Master__Mode__Selection__2}{TIM Master Mode Selection 2 (TRGO2)} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source_l00237}{237}} of file \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source}{stm32wlxx\+\_\+hal\+\_\+tim.\+h}}.
+
+\Hypertarget{structTIM__MasterConfigTypeDef_aa17903ecbee15ce7a6d51de5e9602d3f}\label{structTIM__MasterConfigTypeDef_aa17903ecbee15ce7a6d51de5e9602d3f} 
+\index{TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}!MasterSlaveMode@{MasterSlaveMode}}
+\index{MasterSlaveMode@{MasterSlaveMode}!TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}}
+\doxysubsubsection{\texorpdfstring{MasterSlaveMode}{MasterSlaveMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Master\+Slave\+Mode}
+
+Master/slave mode selection This parameter can be a value of \doxylink{group__TIM__Master__Slave__Mode}{TIM Master/\+Slave Mode} \begin{DoxyNote}{Note}
+When the Master/slave mode is enabled, the effect of an event on the trigger input (TRGI) is delayed to allow a perfect synchronization between the current timer and its slaves (through TRGO). It is not mandatory in case of timer synchronization mode. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source_l00239}{239}} of file \mbox{\hyperlink{stm32wlxx__hal__tim_8h_source}{stm32wlxx\+\_\+hal\+\_\+tim.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32wlxx__hal__tim_8h}{stm32wlxx\+\_\+hal\+\_\+tim.\+h}}\end{DoxyCompactItemize}

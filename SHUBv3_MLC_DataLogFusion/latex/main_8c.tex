@@ -1,0 +1,191 @@
+\doxysection{Core/\+Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}app\+\_\+mems.\+h"{}}\newline
+{\ttfamily \#include "{}shub\+\_\+v3\+\_\+0.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a4b8ff887fd3fdf26605e35927e4ff202}{MX\+\_\+\+TIM2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM2 Initialization Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCRC__HandleTypeDef}{CRC\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_ae3358c54a01c6487322df1275618d6b1}{hcrc}}
+\item 
+\mbox{\hyperlink{group__UART__Exported__Types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+\mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}
+\item 
+\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a25fc663547539bc49fecc0011bd76ab5}{htim1}}
+\item 
+\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a2c80fd5510e2990a59a5c90d745c716c}{htim2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00515}{515}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00092}{92}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a4b8ff887fd3fdf26605e35927e4ff202}\label{main_8c_a4b8ff887fd3fdf26605e35927e4ff202} 
+\index{main.c@{main.c}!MX\_TIM2\_Init@{MX\_TIM2\_Init}}
+\index{MX\_TIM2\_Init@{MX\_TIM2\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM2\_Init()}{MX\_TIM2\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+TIM2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+TIM2 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00389}{389}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure LSE Drive Capability
+
+Configure the main internal regulator output voltage
+
+Initializes the CPU, AHB and APB buses clocks
+
+Configure the SYSCLKSource, HCLK, PCLK1 and PCLK2 clocks dividers
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00145}{145}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_ae3358c54a01c6487322df1275618d6b1}\label{main_8c_ae3358c54a01c6487322df1275618d6b1} 
+\index{main.c@{main.c}!hcrc@{hcrc}}
+\index{hcrc@{hcrc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hcrc}{hcrc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCRC__HandleTypeDef}{CRC\+\_\+\+Handle\+Type\+Def}} hcrc}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00058}{58}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}\label{main_8c_aa0c7fca836406ade332e1e3f1039d8ab} 
+\index{main.c@{main.c}!hrtc@{hrtc}}
+\index{hrtc@{hrtc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hrtc}{hrtc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRTC__HandleTypeDef}{RTC\+\_\+\+Handle\+Type\+Def}} hrtc}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5} 
+\index{main.c@{main.c}!htim1@{htim1}}
+\index{htim1@{htim1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim1}{htim1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} htim1}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00064}{64}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2c80fd5510e2990a59a5c90d745c716c}\label{main_8c_a2c80fd5510e2990a59a5c90d745c716c} 
+\index{main.c@{main.c}!htim2@{htim2}}
+\index{htim2@{htim2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim2}{htim2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} htim2}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00065}{65}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+\index{main.c@{main.c}!huart1@{huart1}}
+\index{huart1@{huart1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__UART__Exported__Types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} huart1}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00060}{60}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

@@ -1,0 +1,67 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+i2c\+\_\+ex.h File Reference}
+\hypertarget{stm32wlxx__hal__i2c__ex_8h}{}\label{stm32wlxx__hal__i2c__ex_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_i2c\_ex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_i2c\_ex.h}}
+
+
+Header file of I2C HAL Extended module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__Analog__Filter_gae13bf4e7efd918ab0d13d04472d12069}{I2\+C\+\_\+\+ANALOGFILTER\+\_\+\+ENABLE}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__Analog__Filter_gaa6abec6bc8906cae55371c8e953353b8}{I2\+C\+\_\+\+ANALOGFILTER\+\_\+\+DISABLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4b33b8e33fa18fd49d6d1d8a69777289}{I2\+C\+\_\+\+CR1\+\_\+\+ANFOFF}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__FastModePlus_ga9b3b77b0f00f09ee6d272d70dd5663f5}{I2\+C\+\_\+\+FASTMODEPLUS\+\_\+\+PB6}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaee5a1ca3b0408d359907fdc8ae1e44ae}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB6\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__FastModePlus_gaaa6d3f6c1d635a2f5e4dbe2ef66ce1c3}{I2\+C\+\_\+\+FASTMODEPLUS\+\_\+\+PB7}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga218ec7f8116e53121ba41a9a57f2ab9c}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB7\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__FastModePlus_gaf8d6aa219f041b552b3d3cd53cb78a26}{I2\+C\+\_\+\+FASTMODEPLUS\+\_\+\+PB8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1aa82a8f51624e4fa343996c0d6166c2}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB8\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__FastModePlus_gafab6e63d100bf337bf9f0bf6a607636d}{I2\+C\+\_\+\+FASTMODEPLUS\+\_\+\+PB9}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gadbc009692a61536e59a135d5a6b63afc}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB9\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__FastModePlus_ga3a8064ecfa3b33115f62123f7162770e}{I2\+C\+\_\+\+FASTMODEPLUS\+\_\+\+I2\+C1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga97e28a2c5e89597d5d447b3d206a3fd6}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C1\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__FastModePlus_gaa5c33513afa036a6f97e9cbf2d61f4b2}{I2\+C\+\_\+\+FASTMODEPLUS\+\_\+\+I2\+C2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga465e2f2a75b970e887cd2c8fb0b11e54}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C2\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__FastModePlus_gafeb5c46154f31ecf6ff77d4ab1d2ee7b}{I2\+C\+\_\+\+FASTMODEPLUS\+\_\+\+I2\+C3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf6d532c7b92bc3454f375f1792062a7a}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C3\+\_\+\+FMP}}
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__Private__Macro_ga2ca73a919482ef22e5f3bcd5e4a0c820}{IS\+\_\+\+I2\+C\+\_\+\+ANALOG\+\_\+\+FILTER}}(FILTER)
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__Private__Macro_gac10d26772d885184a7a30d9a2adee453}{IS\+\_\+\+I2\+C\+\_\+\+DIGITAL\+\_\+\+FILTER}}(FILTER)~((FILTER) $<$= 0x0000000\+FU)
+\item 
+\#define \mbox{\hyperlink{group__I2CEx__Private__Macro_ga834beb1e67c16ce8e161c6d4047665d1}{IS\+\_\+\+I2\+C\+\_\+\+FASTMODEPLUS}}(\+\_\+\+\_\+\+CONFIG\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group1_ga2f0b5fc42fca412214f3968e528e2b9e}{HAL\+\_\+\+I2\+CEx\+\_\+\+Config\+Analog\+Filter}} (\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hi2c, uint32\+\_\+t Analog\+Filter)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group1_ga474acc9b92626a0f690bf9aa8991a476}{HAL\+\_\+\+I2\+CEx\+\_\+\+Config\+Digital\+Filter}} (\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hi2c, uint32\+\_\+t Digital\+Filter)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group2_ga117747a05be1298f16154b9c4a526336}{HAL\+\_\+\+I2\+CEx\+\_\+\+Enable\+Wake\+Up}} (\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hi2c)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group2_ga8e761e304c77fa623824bb297ea626b3}{HAL\+\_\+\+I2\+CEx\+\_\+\+Disable\+Wake\+Up}} (\mbox{\hyperlink{group__I2C__handle__Structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hi2c)
+\item 
+void \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group3_ga4002aa7dd388a6c1a4d6a3ff27b65942}{HAL\+\_\+\+I2\+CEx\+\_\+\+Enable\+Fast\+Mode\+Plus}} (uint32\+\_\+t Config\+Fast\+Mode\+Plus)
+\item 
+void \mbox{\hyperlink{group__I2CEx__Exported__Functions__Group3_ga3ad1ae2b495e02f6c750871d283cef44}{HAL\+\_\+\+I2\+CEx\+\_\+\+Disable\+Fast\+Mode\+Plus}} (uint32\+\_\+t Config\+Fast\+Mode\+Plus)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of I2C HAL Extended module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__i2c__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+i2c\+\_\+ex.\+h}}.
+

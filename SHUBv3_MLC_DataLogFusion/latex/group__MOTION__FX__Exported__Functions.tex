@@ -1,0 +1,365 @@
+\doxysubsection{MOTION\+\_\+\+FX\+\_\+\+Exported\+\_\+\+Functions}
+\hypertarget{group__MOTION__FX__Exported__Functions}{}\label{group__MOTION__FX__Exported__Functions}\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gafc2170341216ce1d17cd96ba1606be87}{Motion\+FX\+\_\+\+Get\+State\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em Provide the size of motion\+FX to allocate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gaae3cd9bd35e95571829ea5995d1f7a55}{Motion\+FX\+\_\+initialize}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+FX engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga963567768fcb0f40699bb9efa0b71aaa}{Motion\+FX\+\_\+set\+Knobs}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__knobs__t}{MFX\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Set the internal knobs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gad58df3f3bbb9516938343d1f74ab5d81}{Motion\+FX\+\_\+get\+Knobs}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__knobs__t}{MFX\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}knobs)
+\begin{DoxyCompactList}\small\item\em Get the current internal knobs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga587ee7f0212aca8dce903ff49bf914c7}{Motion\+FX\+\_\+get\+Status\+\_\+6X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt)
+\begin{DoxyCompactList}\small\item\em Get the status of the 6 axes library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gade28e68801add6ea7a4418f03f99830f}{Motion\+FX\+\_\+get\+Status\+\_\+9X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt)
+\begin{DoxyCompactList}\small\item\em Get the status of the 9 axes library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga18e818a0e34144d57beae4f70f1c2191}{Motion\+FX\+\_\+enable\+\_\+6X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 6 axes function (ACC + GYRO) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga208aa120c91afe5cb9ccf768176ca177}{Motion\+FX\+\_\+enable\+\_\+9X}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 9 axes function (ACC + GYRO + MAG) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga87682c2efd1471c800f4c72adf9523a9}{Motion\+FX\+\_\+set\+Gbias}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Set the initial gbias in dps in enu frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga0e9f1d055e28698ac0aead1cc03a86a4}{Motion\+FX\+\_\+get\+Gbias}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Get the initial gbias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga8a4eb3522073e57a4fc14c6e59ce0da5}{Motion\+FX\+\_\+update}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, \mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, float \texorpdfstring{$\ast$}{*}eml\+\_\+deltatime, float \texorpdfstring{$\ast$}{*}eml\+\_\+q\+\_\+update)
+\begin{DoxyCompactList}\small\item\em Run the Kalman filter update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga88d1aefbe23f66b6f796addd4b41e8e2}{Motion\+FX\+\_\+propagate}} (\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}} mfxstate\+\_\+pt, \mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, \mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, float \texorpdfstring{$\ast$}{*}eml\+\_\+deltatime)
+\begin{DoxyCompactList}\small\item\em Run the Kalman filter propagate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga39bf37f63f88a5974572aefa968b5cfb}{Motion\+FX\+\_\+\+Mag\+Cal\+\_\+init}} (int sampletime, unsigned short int enable)
+\begin{DoxyCompactList}\small\item\em Initialize magnetic calibration library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gac96af641ca8f3e712dac259e4e53064b}{Motion\+FX\+\_\+\+Mag\+Cal\+\_\+run}} (\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Run magnetic calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga28e2067bdb75c7dd4c920dd4a92f99d4}{Motion\+FX\+\_\+\+Mag\+Cal\+\_\+get\+Params}} (\mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Get magnetic calibration parameters. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga8a02245df7367d338e2ea0a41780f9cd}{Motion\+FX\+\_\+\+Get\+Lib\+Version}} (char \texorpdfstring{$\ast$}{*}version)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+
+
+\doxysubsubsection{Function Documentation}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga18e818a0e34144d57beae4f70f1c2191}\label{group__MOTION__FX__Exported__Functions_ga18e818a0e34144d57beae4f70f1c2191} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_enable\_6X@{MotionFX\_enable\_6X}}
+\index{MotionFX\_enable\_6X@{MotionFX\_enable\_6X}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_enable\_6X()}{MotionFX\_enable\_6X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+enable\+\_\+6X (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{\mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}}}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the 6 axes function (ACC + GYRO) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & 1 to enable, 0 to disable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga208aa120c91afe5cb9ccf768176ca177}\label{group__MOTION__FX__Exported__Functions_ga208aa120c91afe5cb9ccf768176ca177} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_enable\_9X@{MotionFX\_enable\_9X}}
+\index{MotionFX\_enable\_9X@{MotionFX\_enable\_9X}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_enable\_9X()}{MotionFX\_enable\_9X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+enable\+\_\+9X (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{\mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}}}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the 9 axes function (ACC + GYRO + MAG) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & 1 to enable, 0 to disable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga0e9f1d055e28698ac0aead1cc03a86a4}\label{group__MOTION__FX__Exported__Functions_ga0e9f1d055e28698ac0aead1cc03a86a4} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_getGbias@{MotionFX\_getGbias}}
+\index{MotionFX\_getGbias@{MotionFX\_getGbias}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_getGbias()}{MotionFX\_getGbias()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+get\+Gbias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{float \texorpdfstring{$\ast$}{*}}]{gbias }\end{DoxyParamCaption})}
+
+
+
+Get the initial gbias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to a float array containing the 3 gbias values \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_gad58df3f3bbb9516938343d1f74ab5d81}\label{group__MOTION__FX__Exported__Functions_gad58df3f3bbb9516938343d1f74ab5d81} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_getKnobs@{MotionFX\_getKnobs}}
+\index{MotionFX\_getKnobs@{MotionFX\_getKnobs}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_getKnobs()}{MotionFX\_getKnobs()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+get\+Knobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{\mbox{\hyperlink{structMFX__knobs__t}{MFX\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{knobs }\end{DoxyParamCaption})}
+
+
+
+Get the current internal knobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em knobs} & knobs structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga8a02245df7367d338e2ea0a41780f9cd}\label{group__MOTION__FX__Exported__Functions_ga8a02245df7367d338e2ea0a41780f9cd} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_GetLibVersion@{MotionFX\_GetLibVersion}}
+\index{MotionFX\_GetLibVersion@{MotionFX\_GetLibVersion}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_GetLibVersion()}{MotionFX\_GetLibVersion()}}
+{\footnotesize\ttfamily uint8\+\_\+t Motion\+FX\+\_\+\+Get\+Lib\+Version (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{version }\end{DoxyParamCaption})}
+
+
+
+Get the library version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & pointer to an array of 35 char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Number} & of characters in the version string \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_gafc2170341216ce1d17cd96ba1606be87}\label{group__MOTION__FX__Exported__Functions_gafc2170341216ce1d17cd96ba1606be87} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_GetStateSize@{MotionFX\_GetStateSize}}
+\index{MotionFX\_GetStateSize@{MotionFX\_GetStateSize}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_GetStateSize()}{MotionFX\_GetStateSize()}}
+{\footnotesize\ttfamily size\+\_\+t Motion\+FX\+\_\+\+Get\+State\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the size of motion\+FX to allocate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em size\+\_\+t} & require for each instances This API should be called to get the size to allocate in RAM/stack each instances. MFXState\+\_\+t state pointer should point to same memory. \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga587ee7f0212aca8dce903ff49bf914c7}\label{group__MOTION__FX__Exported__Functions_ga587ee7f0212aca8dce903ff49bf914c7} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_getStatus\_6X@{MotionFX\_getStatus\_6X}}
+\index{MotionFX\_getStatus\_6X@{MotionFX\_getStatus\_6X}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_getStatus\_6X()}{MotionFX\_getStatus\_6X()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} Motion\+FX\+\_\+get\+Status\+\_\+6X (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt }\end{DoxyParamCaption})}
+
+
+
+Get the status of the 6 axes library. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if enabled, 0 if disabled \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_gade28e68801add6ea7a4418f03f99830f}\label{group__MOTION__FX__Exported__Functions_gade28e68801add6ea7a4418f03f99830f} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_getStatus\_9X@{MotionFX\_getStatus\_9X}}
+\index{MotionFX\_getStatus\_9X@{MotionFX\_getStatus\_9X}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_getStatus\_9X()}{MotionFX\_getStatus\_9X()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__MOTION__FX_gadee63da86c0e31de48e0ef7537bdaba6}{MFX\+\_\+engine\+\_\+state\+\_\+t}} Motion\+FX\+\_\+get\+Status\+\_\+9X (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt }\end{DoxyParamCaption})}
+
+
+
+Get the status of the 9 axes library. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if enabled, 0 if disabled \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_gaae3cd9bd35e95571829ea5995d1f7a55}\label{group__MOTION__FX__Exported__Functions_gaae3cd9bd35e95571829ea5995d1f7a55} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_initialize@{MotionFX\_initialize}}
+\index{MotionFX\_initialize@{MotionFX\_initialize}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_initialize()}{MotionFX\_initialize()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt }\end{DoxyParamCaption})}
+
+
+
+Initialize the Motion\+FX engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mfxstate\+\_\+pt} & Allocated memory for single instance of engine state \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga28e2067bdb75c7dd4c920dd4a92f99d4}\label{group__MOTION__FX__Exported__Functions_ga28e2067bdb75c7dd4c920dd4a92f99d4} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_MagCal\_getParams@{MotionFX\_MagCal\_getParams}}
+\index{MotionFX\_MagCal\_getParams@{MotionFX\_MagCal\_getParams}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_MagCal\_getParams()}{MotionFX\_MagCal\_getParams()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+Mag\+Cal\+\_\+get\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Get magnetic calibration parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & structure containing output data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga39bf37f63f88a5974572aefa968b5cfb}\label{group__MOTION__FX__Exported__Functions_ga39bf37f63f88a5974572aefa968b5cfb} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_MagCal\_init@{MotionFX\_MagCal\_init}}
+\index{MotionFX\_MagCal\_init@{MotionFX\_MagCal\_init}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_MagCal\_init()}{MotionFX\_MagCal\_init()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+Mag\+Cal\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{sampletime,  }\item[{unsigned short int}]{enable }\end{DoxyParamCaption})}
+
+
+
+Initialize magnetic calibration library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sampletime} & period in milliseconds \mbox{[}ms\mbox{]} between the update function call \\
+\hline
+{\em enable} & enable (1) or disable (0) library \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_gac96af641ca8f3e712dac259e4e53064b}\label{group__MOTION__FX__Exported__Functions_gac96af641ca8f3e712dac259e4e53064b} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_MagCal\_run@{MotionFX\_MagCal\_run}}
+\index{MotionFX\_MagCal\_run@{MotionFX\_MagCal\_run}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_MagCal\_run()}{MotionFX\_MagCal\_run()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+Mag\+Cal\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+Run magnetic calibration algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & structure containing input data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga88d1aefbe23f66b6f796addd4b41e8e2}\label{group__MOTION__FX__Exported__Functions_ga88d1aefbe23f66b6f796addd4b41e8e2} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_propagate@{MotionFX\_propagate}}
+\index{MotionFX\_propagate@{MotionFX\_propagate}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_propagate()}{MotionFX\_propagate()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+propagate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{\mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out,  }\item[{\mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in,  }\item[{float \texorpdfstring{$\ast$}{*}}]{eml\+\_\+deltatime }\end{DoxyParamCaption})}
+
+
+
+Run the Kalman filter propagate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & pointer to the \doxylink{structMFX__output__t}{MFX\+\_\+output\+\_\+t} structure \\
+\hline
+{\em data\+\_\+in} & pointer to the \doxylink{structMFX__input__t}{MFX\+\_\+input\+\_\+t} structure \\
+\hline
+{\em eml\+\_\+deltatime} & delta time between two propagate calls \mbox{[}sec\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga87682c2efd1471c800f4c72adf9523a9}\label{group__MOTION__FX__Exported__Functions_ga87682c2efd1471c800f4c72adf9523a9} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_setGbias@{MotionFX\_setGbias}}
+\index{MotionFX\_setGbias@{MotionFX\_setGbias}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_setGbias()}{MotionFX\_setGbias()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+set\+Gbias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{float \texorpdfstring{$\ast$}{*}}]{gbias }\end{DoxyParamCaption})}
+
+
+
+Set the initial gbias in dps in enu frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gbias} & pointer to a float array containing the 3 gbias values \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga963567768fcb0f40699bb9efa0b71aaa}\label{group__MOTION__FX__Exported__Functions_ga963567768fcb0f40699bb9efa0b71aaa} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_setKnobs@{MotionFX\_setKnobs}}
+\index{MotionFX\_setKnobs@{MotionFX\_setKnobs}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_setKnobs()}{MotionFX\_setKnobs()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+set\+Knobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{\mbox{\hyperlink{structMFX__knobs__t}{MFX\+\_\+knobs\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{knobs }\end{DoxyParamCaption})}
+
+
+
+Set the internal knobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em knobs} & knobs structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__Exported__Functions_ga8a4eb3522073e57a4fc14c6e59ce0da5}\label{group__MOTION__FX__Exported__Functions_ga8a4eb3522073e57a4fc14c6e59ce0da5} 
+\index{MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}!MotionFX\_update@{MotionFX\_update}}
+\index{MotionFX\_update@{MotionFX\_update}!MOTION\_FX\_Exported\_Functions@{MOTION\_FX\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_update()}{MotionFX\_update()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\+\_\+t}}}]{mfxstate\+\_\+pt,  }\item[{\mbox{\hyperlink{structMFX__output__t}{MFX\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out,  }\item[{\mbox{\hyperlink{structMFX__input__t}{MFX\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in,  }\item[{float \texorpdfstring{$\ast$}{*}}]{eml\+\_\+deltatime,  }\item[{float \texorpdfstring{$\ast$}{*}}]{eml\+\_\+q\+\_\+update }\end{DoxyParamCaption})}
+
+
+
+Run the Kalman filter update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & pointer to the \doxylink{structMFX__output__t}{MFX\+\_\+output\+\_\+t} structure \\
+\hline
+{\em data\+\_\+in} & pointer to the \doxylink{structMFX__input__t}{MFX\+\_\+input\+\_\+t} structure \\
+\hline
+{\em eml\+\_\+deltatime} & delta time between two propagate calls \mbox{[}sec\mbox{]} \\
+\hline
+{\em eml\+\_\+q\+\_\+update} & set to NULL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}

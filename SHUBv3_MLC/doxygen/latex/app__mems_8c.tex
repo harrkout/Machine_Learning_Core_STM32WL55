@@ -1,0 +1,128 @@
+\doxysection{MEMS/\+App/app\+\_\+mems.c File Reference}
+\hypertarget{app__mems_8c}{}\label{app__mems_8c}\index{MEMS/App/app\_mems.c@{MEMS/App/app\_mems.c}}
+{\ttfamily \#include "{}app\+\_\+mems.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}custom\+\_\+motion\+\_\+sensors.\+h"{}}\newline
+{\ttfamily \#include "{}lsm6dsox\+\_\+settings.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+nucleo.\+h"{}}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdisplayFloatToInt__s}{display\+Float\+To\+Int\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{app__mems_8c_a7244ab798f58214294b580ca0bb48552}{MAX\+\_\+\+BUF\+\_\+\+SIZE}}~256
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdisplayFloatToInt__s}{display\+Float\+To\+Int\+\_\+s}} \mbox{\hyperlink{app__mems_8c_a43fbd0b0c1c0ddb422b15cff59a3d298}{display\+Float\+To\+Int\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{app__mems_8c_a366fad6b5f3194944230fa746def0ef1}{MX\+\_\+\+MEMS\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9}{MX\+\_\+\+MEMS\+\_\+\+Process}} (void)
+\item 
+void \mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Functions_ga6b81100f595935ad2744a6b09a3e52e1}{BSP\+\_\+\+PB\+\_\+\+Callback}} (\mbox{\hyperlink{group__STM32WLXX__NUCLEO__LOW__LEVEL__Exported__Types_ga643816dfbad5c734fc25a29ce8d35bb1}{Button\+\_\+\+Type\+Def}} Button)
+\begin{DoxyCompactList}\small\item\em BSP Push Button callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{app__mems_8c_a7244ab798f58214294b580ca0bb48552}\label{app__mems_8c_a7244ab798f58214294b580ca0bb48552} 
+\index{app\_mems.c@{app\_mems.c}!MAX\_BUF\_SIZE@{MAX\_BUF\_SIZE}}
+\index{MAX\_BUF\_SIZE@{MAX\_BUF\_SIZE}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_BUF\_SIZE}{MAX\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+BUF\+\_\+\+SIZE~256}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00041}{41}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{app__mems_8c_a43fbd0b0c1c0ddb422b15cff59a3d298}\label{app__mems_8c_a43fbd0b0c1c0ddb422b15cff59a3d298} 
+\index{app\_mems.c@{app\_mems.c}!displayFloatToInt\_t@{displayFloatToInt\_t}}
+\index{displayFloatToInt\_t@{displayFloatToInt\_t}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{displayFloatToInt\_t}{displayFloatToInt\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdisplayFloatToInt__s}{display\+Float\+To\+Int\+\_\+s}} \mbox{\hyperlink{app__mems_8c_a43fbd0b0c1c0ddb422b15cff59a3d298}{display\+Float\+To\+Int\+\_\+t}}}
+
+File Name \+: \doxylink{app__mems_8c}{app\+\_\+mems.\+c} Description \+: This file provides code for the configuration of the STMicroelectronics.\+X-\/\+CUBE-\/\+MEMS1.\+9.\+3.\+0 instances.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{app__mems_8c_a366fad6b5f3194944230fa746def0ef1}\label{app__mems_8c_a366fad6b5f3194944230fa746def0ef1} 
+\index{app\_mems.c@{app\_mems.c}!MX\_MEMS\_Init@{MX\_MEMS\_Init}}
+\index{MX\_MEMS\_Init@{MX\_MEMS\_Init}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{MX\_MEMS\_Init()}{MX\_MEMS\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+MEMS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+File Name \+: \doxylink{app__mems_8h}{app\+\_\+mems.\+h} Description \+: This file provides code for the configuration of the STMicroelectronics.\+X-\/\+CUBE-\/\+MEMS1.\+9.\+3.\+0 instances.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00058}{58}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SV\ */}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SV\ */}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Init\_PreTreatment\ */}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Init\_PreTreatment\ */}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{comment}{/*\ Initialize\ the\ peripherals\ and\ the\ MEMS\ components\ */}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ MX\_DataLogTerminal\_Init();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Init\_PostTreatment\ */}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Init\_PostTreatment\ */}}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}
+\Hypertarget{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9}\label{app__mems_8c_ae9daf8101d01179cf9e47720c28cf7c9} 
+\index{app\_mems.c@{app\_mems.c}!MX\_MEMS\_Process@{MX\_MEMS\_Process}}
+\index{MX\_MEMS\_Process@{MX\_MEMS\_Process}!app\_mems.c@{app\_mems.c}}
+\doxysubsubsection{\texorpdfstring{MX\_MEMS\_Process()}{MX\_MEMS\_Process()}}
+{\footnotesize\ttfamily void MX\+\_\+\+MEMS\+\_\+\+Process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{app__mems_8c_source_l00080}{80}} of file \mbox{\hyperlink{app__mems_8c_source}{app\+\_\+mems.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Process\_PreTreatment\ */}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Process\_PreTreatment\ */}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ MX\_DataLogTerminal\_Process();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MEMS\_Process\_PostTreatment\ */}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MEMS\_Process\_PostTreatment\ */}}
+\DoxyCodeLine{00091\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,126 @@
+\doxysection{motion\+\_\+fx\+\_\+manager.\+c}
+\hypertarget{motion__fx__manager_8c_source}{}\label{motion__fx__manager_8c_source}\index{MEMS/Target/motion\_fx\_manager.c@{MEMS/Target/motion\_fx\_manager.c}}
+\mbox{\hyperlink{motion__fx__manager_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00019}00019\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{motion__fx__manager_8h}{motion\_fx\_manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__mems__control__ex_8h}{custom\_mems\_control\_ex.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00031}00031\ \textcolor{comment}{/*\ Extern\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00032}00032\ \textcolor{comment}{/*\ Private\ defines\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00033}\mbox{\hyperlink{group__DATALOG__FUSION_ga7e3ce397037c8f4f14f7adc0b969b662}{00033}}\ \textcolor{preprocessor}{\#define\ STATE\_SIZE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (size\_t)(2432)}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00035}\mbox{\hyperlink{group__DATALOG__FUSION_gac3ef1ff59e96c826b3a84f5ac5bb183a}{00035}}\ \textcolor{preprocessor}{\#define\ SAMPLETODISCARD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 15}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00037}\mbox{\hyperlink{group__DATALOG__FUSION_ga4feb7a541189f14fb935e9dd1e1ff771}{00037}}\ \textcolor{preprocessor}{\#define\ GBIAS\_ACC\_TH\_SC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2.0f*0.000765f)}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00038}\mbox{\hyperlink{group__DATALOG__FUSION_ga64e6a51843b13c7ba18f65085d659cfa}{00038}}\ \textcolor{preprocessor}{\#define\ GBIAS\_GYRO\_TH\_SC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2.0f*0.002f)}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00039}\mbox{\hyperlink{group__DATALOG__FUSION_gac1949c60468f6025fcd5d94abbf242ff}{00039}}\ \textcolor{preprocessor}{\#define\ GBIAS\_MAG\_TH\_SC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2.0f*0.001500f)}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00041}\mbox{\hyperlink{group__DATALOG__FUSION_ga8b0b0ebd19cb978bcd825b842558c31a}{00041}}\ \textcolor{preprocessor}{\#define\ DECIMATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1U}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00043}00043\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00044}00044\ \textcolor{keyword}{static}\ \mbox{\hyperlink{structMFX__knobs__t}{MFX\_knobs\_t}}\ iKnobs;}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00045}00045\ \textcolor{keyword}{static}\ \mbox{\hyperlink{structMFX__knobs__t}{MFX\_knobs\_t}}\ *ipKnobs\ =\ \&iKnobs;}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00047}00047\ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{int}\ sampleToDiscard\ =\ \mbox{\hyperlink{group__DATALOG__FUSION_gac3ef1ff59e96c826b3a84f5ac5bb183a}{SAMPLETODISCARD}};}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00048}00048\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ discardedCount\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00050}00050\ \textcolor{keyword}{static}\ uint8\_t\ mfxstate[\mbox{\hyperlink{group__DATALOG__FUSION_ga7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}}];}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00052}00052\ \textcolor{comment}{/*\ Private\ typedef\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00053}00053\ \textcolor{comment}{/*\ Exported\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00054}00054\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00060}\mbox{\hyperlink{group__DATALOG__FUSION_ga0ee2e2b7eb7d1b9a0e4ac6e9e76ec66c}{00060}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga0ee2e2b7eb7d1b9a0e4ac6e9e76ec66c}{MotionFX\_manager\_init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00062}00062\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group__DATALOG__FUSION_ga7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}}\ <\ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gafc2170341216ce1d17cd96ba1606be87}{MotionFX\_GetStateSize}}())}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00065}00065\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gaae3cd9bd35e95571829ea5995d1f7a55}{MotionFX\_initialize}}((\mbox{\hyperlink{group__MOTION__FX_ga529fbe8c33ec24ad68250448db72c708}{MFXState\_t}}\ *)mfxstate);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00067}00067\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gad58df3f3bbb9516938343d1f74ab5d81}{MotionFX\_getKnobs}}(mfxstate,\ ipKnobs);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00069}00069\ \ \ BSP\_SENSOR\_ACC\_GetOrientation(ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_aa23a441e79f53ff2ef293fbbff5256dc}{acc\_orientation}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00070}00070\ \ \ BSP\_SENSOR\_GYR\_GetOrientation(ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_a80bfcaf8327a05db5b295335abe1b45e}{gyro\_orientation}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00071}00071\ \ \ BSP\_SENSOR\_MAG\_GetOrientation(ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_a18fb8c7185044309e372a8f2ae0c7549}{mag\_orientation}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00073}00073\ \ \ ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_acbc285d37ece0d71a0ecd7f02813b4b2}{gbias\_acc\_th\_sc}}\ =\ \mbox{\hyperlink{group__DATALOG__FUSION_ga4feb7a541189f14fb935e9dd1e1ff771}{GBIAS\_ACC\_TH\_SC}};}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00074}00074\ \ \ ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_a6c6299838090c152efc4aaa0db15fc10}{gbias\_gyro\_th\_sc}}\ =\ \mbox{\hyperlink{group__DATALOG__FUSION_ga64e6a51843b13c7ba18f65085d659cfa}{GBIAS\_GYRO\_TH\_SC}};}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00075}00075\ \ \ ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_a17b6887e3efea528dc3ec397e8a81eb0}{gbias\_mag\_th\_sc}}\ =\ \mbox{\hyperlink{group__DATALOG__FUSION_gac1949c60468f6025fcd5d94abbf242ff}{GBIAS\_MAG\_TH\_SC}};}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00077}00077\ \ \ ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_ab68ad15295a305b3ea954a108b013c4a}{output\_type}}\ =\ \mbox{\hyperlink{group__MOTION__FX_gga50949c1a3f24196e44cec6536a1e0c6daa187671295faac43a3d5dd7be0ef1b86}{MFX\_ENGINE\_OUTPUT\_ENU}};}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00078}00078\ \ \ ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_a48a3067e828f9eeccf5cc3b01ceabfd0}{LMode}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00079}00079\ \ \ ipKnobs-\/>\mbox{\hyperlink{structMFX__knobs__t_a16bc33f78513d27a7002ab941f09aaf8}{modx}}\ =\ \mbox{\hyperlink{group__DATALOG__FUSION_ga8b0b0ebd19cb978bcd825b842558c31a}{DECIMATION}};}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00081}00081\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga963567768fcb0f40699bb9efa0b71aaa}{MotionFX\_setKnobs}}(mfxstate,\ ipKnobs);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00083}00083\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga18e818a0e34144d57beae4f70f1c2191}{MotionFX\_enable\_6X}}(mfxstate,\ \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a5b37dc702010f59d8730e23a3f2af560}{MFX\_ENGINE\_DISABLE}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00084}00084\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga208aa120c91afe5cb9ccf768176ca177}{MotionFX\_enable\_9X}}(mfxstate,\ \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a5b37dc702010f59d8730e23a3f2af560}{MFX\_ENGINE\_DISABLE}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00094}\mbox{\hyperlink{group__DATALOG__FUSION_gad0f84309b27041796341a83b4aaff5d7}{00094}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gad0f84309b27041796341a83b4aaff5d7}{MotionFX\_manager\_run}}(\mbox{\hyperlink{structMFX__input__t}{MFX\_input\_t}}\ *data\_in,\ \mbox{\hyperlink{structMFX__output__t}{MFX\_output\_t}}\ *data\_out,\ \textcolor{keywordtype}{float}\ delta\_time)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00095}00095\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00096}00096\ \ \ \textcolor{keywordflow}{if}\ (discardedCount\ ==\ sampleToDiscard)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00097}00097\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00098}00098\ \ \ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga88d1aefbe23f66b6f796addd4b41e8e2}{MotionFX\_propagate}}(mfxstate,\ data\_out,\ data\_in,\ \&delta\_time);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga8a4eb3522073e57a4fc14c6e59ce0da5}{MotionFX\_update}}(mfxstate,\ data\_out,\ data\_in,\ \&delta\_time,\ NULL);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00100}00100\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00101}00101\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00102}00102\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00103}00103\ \ \ \ \ discardedCount++;}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00104}00104\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00112}\mbox{\hyperlink{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b}{00112}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga6405d254c13a053991d69f752cc4150b}{MotionFX\_manager\_start\_6X}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00113}00113\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00114}00114\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga18e818a0e34144d57beae4f70f1c2191}{MotionFX\_enable\_6X}}(mfxstate,\ \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a344375b610df16a794b28c2497336c48}{MFX\_ENGINE\_ENABLE}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00115}00115\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00122}\mbox{\hyperlink{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9}{00122}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gaac3d90ada1a0b181c5518dd19af8d7f9}{MotionFX\_manager\_stop\_6X}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00123}00123\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00124}00124\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga18e818a0e34144d57beae4f70f1c2191}{MotionFX\_enable\_6X}}(mfxstate,\ \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a5b37dc702010f59d8730e23a3f2af560}{MFX\_ENGINE\_DISABLE}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00125}00125\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00132}\mbox{\hyperlink{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03}{00132}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga81a3557df060bdeb3de3652bae9aac03}{MotionFX\_manager\_start\_9X}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00133}00133\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00134}00134\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga208aa120c91afe5cb9ccf768176ca177}{MotionFX\_enable\_9X}}(mfxstate,\ \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a344375b610df16a794b28c2497336c48}{MFX\_ENGINE\_ENABLE}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00135}00135\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00142}\mbox{\hyperlink{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef}{00142}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga0922f6f9a4bb9b1ee83dee9c63bc3cef}{MotionFX\_manager\_stop\_9X}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00143}00143\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00144}00144\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga208aa120c91afe5cb9ccf768176ca177}{MotionFX\_enable\_9X}}(mfxstate,\ \mbox{\hyperlink{group__MOTION__FX_ggadee63da86c0e31de48e0ef7537bdaba6a5b37dc702010f59d8730e23a3f2af560}{MFX\_ENGINE\_DISABLE}});}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00145}00145\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00153}\mbox{\hyperlink{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e}{00153}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga62b9a6844062b98e62832ce0ad38fb2e}{MotionFX\_manager\_get\_version}}(\textcolor{keywordtype}{char}\ *version,\ \textcolor{keywordtype}{int}\ *length)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00154}00154\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00155}00155\ \ \ *length\ =\ (int)\mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga8a02245df7367d338e2ea0a41780f9cd}{MotionFX\_GetLibVersion}}(version);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00156}00156\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00163}\mbox{\hyperlink{group__DATALOG__FUSION_gabf081bdf9df90c8bf1341346c7186cd7}{00163}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gabf081bdf9df90c8bf1341346c7186cd7}{MotionFX\_manager\_MagCal\_run}}(\mbox{\hyperlink{structMFX__MagCal__input__t}{MFX\_MagCal\_input\_t}}\ *data\_in,\ \mbox{\hyperlink{structMFX__MagCal__output__t}{MFX\_MagCal\_output\_t}}\ *data\_out)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00164}00164\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00165}00165\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_gac96af641ca8f3e712dac259e4e53064b}{MotionFX\_MagCal\_run}}(data\_in);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00166}00166\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga28e2067bdb75c7dd4c920dd4a92f99d4}{MotionFX\_MagCal\_getParams}}(data\_out);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00167}00167\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00174}\mbox{\hyperlink{group__DATALOG__FUSION_ga6997aefa86be797fecde7d1221ef1703}{00174}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga6997aefa86be797fecde7d1221ef1703}{MotionFX\_manager\_MagCal\_start}}(\textcolor{keywordtype}{int}\ sampletime)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00175}00175\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00176}00176\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga39bf37f63f88a5974572aefa968b5cfb}{MotionFX\_MagCal\_init}}(sampletime,\ 1);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00177}00177\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00184}\mbox{\hyperlink{group__DATALOG__FUSION_gaf9afa8abcc8f404e2996c3fe9f5a92a5}{00184}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__DATALOG__FUSION_gaf9afa8abcc8f404e2996c3fe9f5a92a5}{MotionFX\_manager\_MagCal\_stop}}(\textcolor{keywordtype}{int}\ sampletime)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00185}00185\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00186}00186\ \ \ \mbox{\hyperlink{group__MOTION__FX__Exported__Functions_ga39bf37f63f88a5974572aefa968b5cfb}{MotionFX\_MagCal\_init}}(sampletime,\ 0);}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00187}00187\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00195}\mbox{\hyperlink{group__DATALOG__FUSION_gac63a393f1993db7c79e6a49b86bd2afc}{00195}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{group__DATALOG__FUSION_gac63a393f1993db7c79e6a49b86bd2afc}{MotionFX\_LoadMagCalFromNVM}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ dataSize,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *data)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00196}00196\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00197}00197\ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{char})1;}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00198}00198\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00206}\mbox{\hyperlink{group__DATALOG__FUSION_ga6e6d0d1a369699ba3281be0586586eab}{00206}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{group__DATALOG__FUSION_ga6e6d0d1a369699ba3281be0586586eab}{MotionFX\_SaveMagCalInNVM}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ dataSize,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *data)}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00207}00207\ \{}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00208}00208\ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{char})1;}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00209}00209\ \}}
+\DoxyCodeLine{\Hypertarget{motion__fx__manager_8c_source_l00210}00210\ }
+
+\end{DoxyCode}

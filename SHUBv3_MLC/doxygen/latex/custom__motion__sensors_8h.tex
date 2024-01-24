@@ -1,0 +1,963 @@
+\doxysection{MEMS/\+Target/custom\+\_\+motion\+\_\+sensors.h File Reference}
+\hypertarget{custom__motion__sensors_8h}{}\label{custom__motion__sensors_8h}\index{MEMS/Target/custom\_motion\_sensors.h@{MEMS/Target/custom\_motion\_sensors.h}}
+
+
+This file contains definitions for the BSP Motion Sensors interface for custom boards.  
+
+
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+conf.\+h"{}}\newline
+{\ttfamily \#include "{}motion\+\_\+sensor.\+h"{}}\newline
+{\ttfamily \#include "{}lsm6dsox.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__AxesRaw__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+Raw\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Capabilities__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Capabilities\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Ctx__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Ctx\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}{CUSTOM\+\_\+\+LSM6\+DSOX\+\_\+0}}~(0)
+\item 
+\#define \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\+\_\+\+GYRO}}~1U
+\item 
+\#define \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\+\_\+\+ACCELERO}}~2U
+\item 
+\#define \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\+\_\+\+MAGNETO}}~4U
+\item 
+\#define \mbox{\hyperlink{custom__motion__sensors_8h_a4e6e185c8157d873e9e1d5945e95508c}{CUSTOM\+\_\+\+MOTION\+\_\+\+FUNCTIONS\+\_\+\+NBR}}~3U
+\item 
+\#define \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\+\_\+\+MOTION\+\_\+\+INSTANCES\+\_\+\+NBR}}~(\mbox{\hyperlink{custom__mems__conf_8h_ac2ec9949063a6198640a6e3d30035efb}{USE\+\_\+\+CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+LSM6\+DSOX\+\_\+0}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_a95465dcb10737d67b068b6173a5a9542}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Init}} (uint32\+\_\+t Instance, uint32\+\_\+t Functions)
+\begin{DoxyCompactList}\small\item\em Initializes the motion sensors. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_af97158833b021e6ffaeda484ef75b13d}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+De\+Init}} (uint32\+\_\+t Instance)
+\begin{DoxyCompactList}\small\item\em Deinitialize Motion sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_a1b3c5213074969bec1a9a0e173d27cc7}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Capabilities}} (uint32\+\_\+t Instance, \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Capabilities__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Capabilities\+\_\+t}} \texorpdfstring{$\ast$}{*}Capabilities)
+\begin{DoxyCompactList}\small\item\em Get motion sensor instance capabilities. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_ac9d7795e06cf391c0f09d7fe81f672a9}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Read\+ID}} (uint32\+\_\+t Instance, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Id)
+\begin{DoxyCompactList}\small\item\em Get WHOAMI value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_accf1770cc2a24bed9c39dba335c0289b}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable}} (uint32\+\_\+t Instance, uint32\+\_\+t Function)
+\begin{DoxyCompactList}\small\item\em Enable Motion sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_aeafc990dca6e22133e2b3f8a92b733ae}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable}} (uint32\+\_\+t Instance, uint32\+\_\+t Function)
+\begin{DoxyCompactList}\small\item\em Disable Motion sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_a054f13f7bcc8962d8414309c90eebcf6}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Axes}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Axes)
+\begin{DoxyCompactList}\small\item\em Get motion sensor axes data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_a728888db1ef156afc3b2a6558f386420}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Axes\+Raw}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__AxesRaw__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}Axes)
+\begin{DoxyCompactList}\small\item\em Get motion sensor axes raw data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_a0ad267f8478243f37461511d4d286a14}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Sensitivity}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, float \texorpdfstring{$\ast$}{*}Sensitivity)
+\begin{DoxyCompactList}\small\item\em Get motion sensor sensitivity. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_a2cf70a22cb835bac74c53213f9a59c3f}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Output\+Data\+Rate}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get motion sensor Output Data Rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_aa2399dbd3d1183a1fafabf440c4cd93e}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+Output\+Data\+Rate}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, float Odr)
+\begin{DoxyCompactList}\small\item\em Set motion sensor Output Data Rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_a1f4a417a0e38fc846d5a9d4c4aaff41a}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Full\+Scale}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, int32\+\_\+t \texorpdfstring{$\ast$}{*}Fullscale)
+\begin{DoxyCompactList}\small\item\em Get motion sensor Full Scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{custom__motion__sensors_8h_aebdf0db01a505b7c788cba9f2ce749cb}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+Full\+Scale}} (uint32\+\_\+t Instance, uint32\+\_\+t Function, int32\+\_\+t Fullscale)
+\begin{DoxyCompactList}\small\item\em Set motion sensor Full Scale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains definitions for the BSP Motion Sensors interface for custom boards. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{custom__motion__sensors_8h_source}{custom\+\_\+motion\+\_\+sensors.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}\label{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_LSM6DSOX\_0@{CUSTOM\_LSM6DSOX\_0}}
+\index{CUSTOM\_LSM6DSOX\_0@{CUSTOM\_LSM6DSOX\_0}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_LSM6DSOX\_0}{CUSTOM\_LSM6DSOX\_0}}
+{\footnotesize\ttfamily \#define CUSTOM\+\_\+\+LSM6\+DSOX\+\_\+0~(0)}
+
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8h_source_l00038}{38}} of file \mbox{\hyperlink{custom__motion__sensors_8h_source}{custom\+\_\+motion\+\_\+sensors.\+h}}.
+
+\Hypertarget{custom__motion__sensors_8h_a4e6e185c8157d873e9e1d5945e95508c}\label{custom__motion__sensors_8h_a4e6e185c8157d873e9e1d5945e95508c} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_FUNCTIONS\_NBR@{CUSTOM\_MOTION\_FUNCTIONS\_NBR}}
+\index{CUSTOM\_MOTION\_FUNCTIONS\_NBR@{CUSTOM\_MOTION\_FUNCTIONS\_NBR}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_FUNCTIONS\_NBR}{CUSTOM\_MOTION\_FUNCTIONS\_NBR}}
+{\footnotesize\ttfamily \#define CUSTOM\+\_\+\+MOTION\+\_\+\+FUNCTIONS\+\_\+\+NBR~3U}
+
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8h_source_l00085}{85}} of file \mbox{\hyperlink{custom__motion__sensors_8h_source}{custom\+\_\+motion\+\_\+sensors.\+h}}.
+
+\Hypertarget{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}\label{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_INSTANCES\_NBR@{CUSTOM\_MOTION\_INSTANCES\_NBR}}
+\index{CUSTOM\_MOTION\_INSTANCES\_NBR@{CUSTOM\_MOTION\_INSTANCES\_NBR}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_INSTANCES\_NBR}{CUSTOM\_MOTION\_INSTANCES\_NBR}}
+{\footnotesize\ttfamily \#define CUSTOM\+\_\+\+MOTION\+\_\+\+INSTANCES\+\_\+\+NBR~(\mbox{\hyperlink{custom__mems__conf_8h_ac2ec9949063a6198640a6e3d30035efb}{USE\+\_\+\+CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+LSM6\+DSOX\+\_\+0}})}
+
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8h_source_l00086}{86}} of file \mbox{\hyperlink{custom__motion__sensors_8h_source}{custom\+\_\+motion\+\_\+sensors.\+h}}.
+
+\Hypertarget{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}\label{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!MOTION\_ACCELERO@{MOTION\_ACCELERO}}
+\index{MOTION\_ACCELERO@{MOTION\_ACCELERO}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{MOTION\_ACCELERO}{MOTION\_ACCELERO}}
+{\footnotesize\ttfamily \#define MOTION\+\_\+\+ACCELERO~2U}
+
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8h_source_l00079}{79}} of file \mbox{\hyperlink{custom__motion__sensors_8h_source}{custom\+\_\+motion\+\_\+sensors.\+h}}.
+
+\Hypertarget{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}\label{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!MOTION\_GYRO@{MOTION\_GYRO}}
+\index{MOTION\_GYRO@{MOTION\_GYRO}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{MOTION\_GYRO}{MOTION\_GYRO}}
+{\footnotesize\ttfamily \#define MOTION\+\_\+\+GYRO~1U}
+
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8h_source_l00076}{76}} of file \mbox{\hyperlink{custom__motion__sensors_8h_source}{custom\+\_\+motion\+\_\+sensors.\+h}}.
+
+\Hypertarget{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}\label{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!MOTION\_MAGNETO@{MOTION\_MAGNETO}}
+\index{MOTION\_MAGNETO@{MOTION\_MAGNETO}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{MOTION\_MAGNETO}{MOTION\_MAGNETO}}
+{\footnotesize\ttfamily \#define MOTION\+\_\+\+MAGNETO~4U}
+
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8h_source_l00082}{82}} of file \mbox{\hyperlink{custom__motion__sensors_8h_source}{custom\+\_\+motion\+\_\+sensors.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{custom__motion__sensors_8h_af97158833b021e6ffaeda484ef75b13d}\label{custom__motion__sensors_8h_af97158833b021e6ffaeda484ef75b13d} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_DeInit@{CUSTOM\_MOTION\_SENSOR\_DeInit}}
+\index{CUSTOM\_MOTION\_SENSOR\_DeInit@{CUSTOM\_MOTION\_SENSOR\_DeInit}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_DeInit()}{CUSTOM\_MOTION\_SENSOR\_DeInit()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance }\end{DoxyParamCaption})}
+
+
+
+Deinitialize Motion sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00109}{109}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00114\ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00116\ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (MotionDrv[Instance]-\/>DeInit(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance])\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00118\ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00120\ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00122\ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00124\ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_aeafc990dca6e22133e2b3f8a92b733ae}\label{custom__motion__sensors_8h_aeafc990dca6e22133e2b3f8a92b733ae} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_Disable@{CUSTOM\_MOTION\_SENSOR\_Disable}}
+\index{CUSTOM\_MOTION\_SENSOR\_Disable@{CUSTOM\_MOTION\_SENSOR\_Disable}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Disable()}{CUSTOM\_MOTION\_SENSOR\_Disable()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function }\end{DoxyParamCaption})}
+
+
+
+Disable Motion sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00229}{229}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00230\ \{}
+\DoxyCodeLine{00231\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00234\ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00236\ \ \ \}}
+\DoxyCodeLine{00237\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00238\ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00240\ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>Disable(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance])\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00251\ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00253\ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \ \ \}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00257\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_accf1770cc2a24bed9c39dba335c0289b}\label{custom__motion__sensors_8h_accf1770cc2a24bed9c39dba335c0289b} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_Enable@{CUSTOM\_MOTION\_SENSOR\_Enable}}
+\index{CUSTOM\_MOTION\_SENSOR\_Enable@{CUSTOM\_MOTION\_SENSOR\_Enable}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Enable()}{CUSTOM\_MOTION\_SENSOR\_Enable()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function }\end{DoxyParamCaption})}
+
+
+
+Enable Motion sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00190}{190}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191\ \{}
+\DoxyCodeLine{00192\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00195\ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00197\ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00199\ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00201\ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>Enable(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance])\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00212\ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00214\ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00218\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_a054f13f7bcc8962d8414309c90eebcf6}\label{custom__motion__sensors_8h_a054f13f7bcc8962d8414309c90eebcf6} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_GetAxes@{CUSTOM\_MOTION\_SENSOR\_GetAxes}}
+\index{CUSTOM\_MOTION\_SENSOR\_GetAxes@{CUSTOM\_MOTION\_SENSOR\_GetAxes}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_GetAxes()}{CUSTOM\_MOTION\_SENSOR\_GetAxes()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Axes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Axes__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Axes }\end{DoxyParamCaption})}
+
+
+
+Get motion sensor axes data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+{\em Axes} & pointer to axes data structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00269}{269}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270\ \{}
+\DoxyCodeLine{00271\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00274\ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00276\ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00278\ \ \ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00280\ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>GetAxes(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Axes)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ \}}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00291\ \ \ \ \ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00293\ \ \ \ \ \}}
+\DoxyCodeLine{00294\ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00297\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_a728888db1ef156afc3b2a6558f386420}\label{custom__motion__sensors_8h_a728888db1ef156afc3b2a6558f386420} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_GetAxesRaw@{CUSTOM\_MOTION\_SENSOR\_GetAxesRaw}}
+\index{CUSTOM\_MOTION\_SENSOR\_GetAxesRaw@{CUSTOM\_MOTION\_SENSOR\_GetAxesRaw}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_GetAxesRaw()}{CUSTOM\_MOTION\_SENSOR\_GetAxesRaw()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Axes\+Raw (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__AxesRaw__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Axes }\end{DoxyParamCaption})}
+
+
+
+Get motion sensor axes raw data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+{\em Axes} & pointer to axes raw data structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00309}{309}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00310\ \{}
+\DoxyCodeLine{00311\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00314\ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00316\ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00318\ \ \ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00320\ \ \ \ \ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>GetAxesRaw(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Axes)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00329\ \ \ \ \ \}}
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00331\ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \ \ \}}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00337\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_a1b3c5213074969bec1a9a0e173d27cc7}\label{custom__motion__sensors_8h_a1b3c5213074969bec1a9a0e173d27cc7} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_GetCapabilities@{CUSTOM\_MOTION\_SENSOR\_GetCapabilities}}
+\index{CUSTOM\_MOTION\_SENSOR\_GetCapabilities@{CUSTOM\_MOTION\_SENSOR\_GetCapabilities}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_GetCapabilities()}{CUSTOM\_MOTION\_SENSOR\_GetCapabilities()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Capabilities (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{\mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Capabilities__t}{CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Capabilities\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Capabilities }\end{DoxyParamCaption})}
+
+
+
+Get motion sensor instance capabilities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Capabilities} & pointer to motion sensor capabilities \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00135}{135}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136\ \{}
+\DoxyCodeLine{00137\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00140\ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00142\ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (MotionDrv[Instance]-\/>GetCapabilities(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Capabilities)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00144\ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a1da863c63526689e1e6f13d08a41b5c1}{BSP\_ERROR\_UNKNOWN\_COMPONENT}};}
+\DoxyCodeLine{00146\ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00148\ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00150\ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00153\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_a1f4a417a0e38fc846d5a9d4c4aaff41a}\label{custom__motion__sensors_8h_a1f4a417a0e38fc846d5a9d4c4aaff41a} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_GetFullScale@{CUSTOM\_MOTION\_SENSOR\_GetFullScale}}
+\index{CUSTOM\_MOTION\_SENSOR\_GetFullScale@{CUSTOM\_MOTION\_SENSOR\_GetFullScale}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_GetFullScale()}{CUSTOM\_MOTION\_SENSOR\_GetFullScale()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Full\+Scale (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Get motion sensor Full Scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+{\em Fullscale} & pointer to Fullscale read value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00429}{429}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00430\ \{}
+\DoxyCodeLine{00431\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00434\ \ \ \{}
+\DoxyCodeLine{00435\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00436\ \ \ \}}
+\DoxyCodeLine{00437\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00438\ \ \ \{}
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00440\ \ \ \ \ \{}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>GetFullScale(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Fullscale)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00449\ \ \ \ \ \}}
+\DoxyCodeLine{00450\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00451\ \ \ \ \ \{}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00453\ \ \ \ \ \}}
+\DoxyCodeLine{00454\ \ \ \}}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00457\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_a2cf70a22cb835bac74c53213f9a59c3f}\label{custom__motion__sensors_8h_a2cf70a22cb835bac74c53213f9a59c3f} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate@{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}}
+\index{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate@{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate()}{CUSTOM\_MOTION\_SENSOR\_GetOutputDataRate()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{float \texorpdfstring{$\ast$}{*}}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Get motion sensor Output Data Rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+{\em Odr} & pointer to Output Data Rate read value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00389}{389}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00390\ \{}
+\DoxyCodeLine{00391\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00394\ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00396\ \ \ \}}
+\DoxyCodeLine{00397\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00398\ \ \ \{}
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00400\ \ \ \ \ \{}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>GetOutputDataRate(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Odr)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00409\ \ \ \ \ \}}
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00411\ \ \ \ \ \{}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00413\ \ \ \ \ \}}
+\DoxyCodeLine{00414\ \ \ \}}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00417\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_a0ad267f8478243f37461511d4d286a14}\label{custom__motion__sensors_8h_a0ad267f8478243f37461511d4d286a14} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_GetSensitivity@{CUSTOM\_MOTION\_SENSOR\_GetSensitivity}}
+\index{CUSTOM\_MOTION\_SENSOR\_GetSensitivity@{CUSTOM\_MOTION\_SENSOR\_GetSensitivity}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_GetSensitivity()}{CUSTOM\_MOTION\_SENSOR\_GetSensitivity()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Get\+Sensitivity (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{float \texorpdfstring{$\ast$}{*}}]{Sensitivity }\end{DoxyParamCaption})}
+
+
+
+Get motion sensor sensitivity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+{\em Sensitivity} & pointer to sensitivity read value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00349}{349}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00350\ \{}
+\DoxyCodeLine{00351\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00354\ \ \ \{}
+\DoxyCodeLine{00355\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00356\ \ \ \}}
+\DoxyCodeLine{00357\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00358\ \ \ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00360\ \ \ \ \ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>GetSensitivity(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Sensitivity)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ \ \ \ \ \}}
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00371\ \ \ \ \ \{}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00373\ \ \ \ \ \}}
+\DoxyCodeLine{00374\ \ \ \}}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00377\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_a95465dcb10737d67b068b6173a5a9542}\label{custom__motion__sensors_8h_a95465dcb10737d67b068b6173a5a9542} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_Init@{CUSTOM\_MOTION\_SENSOR\_Init}}
+\index{CUSTOM\_MOTION\_SENSOR\_Init@{CUSTOM\_MOTION\_SENSOR\_Init}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_Init()}{CUSTOM\_MOTION\_SENSOR\_Init()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Functions }\end{DoxyParamCaption})}
+
+
+
+Initializes the motion sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Functions} & Motion sensor functions. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00045}{45}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ int32\_t\ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00048\ \ \ uint32\_t\ function\ =\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}};}
+\DoxyCodeLine{00049\ \ \ uint32\_t\ i;}
+\DoxyCodeLine{00050\ \ \ uint32\_t\ component\_functions\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{structCUSTOM__MOTION__SENSOR__Capabilities__t}{CUSTOM\_MOTION\_SENSOR\_Capabilities\_t}}\ cap;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordflow}{switch}\ (Instance)}
+\DoxyCodeLine{00054\ \ \ \{}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#if\ (USE\_CUSTOM\_MOTION\_SENSOR\_LSM6DSOX\_0\ ==\ 1)}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{custom__motion__sensors_8h_ab85e4eb72e69f9e171ceb5a531452801}{CUSTOM\_LSM6DSOX\_0}}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (LSM6DSOX\_0\_Probe(Functions)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af7857aec7bb8a740b5350db153345634}{BSP\_ERROR\_NO\_INIT}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionDrv[Instance]-\/>GetCapabilities(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ (\textcolor{keywordtype}{void}\ *)\&cap)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a1da863c63526689e1e6f13d08a41b5c1}{BSP\_ERROR\_UNKNOWN\_COMPONENT}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cap.Acc\ ==\ 1U)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ component\_functions\ |=\ \mbox{\hyperlink{custom__motion__sensors_8h_ae716a5d991e6b7b5e738e0362e5e4a3d}{MOTION\_ACCELERO}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cap.Gyro\ ==\ 1U)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ component\_functions\ |=\ \mbox{\hyperlink{custom__motion__sensors_8h_a2d92136cc47805be266ea3c6b842dc9b}{MOTION\_GYRO}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cap.Magneto\ ==\ 1U)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ component\_functions\ |=\ \mbox{\hyperlink{custom__motion__sensors_8h_ae942450541aec5024e9ae966745e1a41}{MOTION\_MAGNETO}};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordflow}{if}\ (ret\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00085\ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00087\ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{custom__motion__sensors_8h_a4e6e185c8157d873e9e1d5945e95508c}{CUSTOM\_MOTION\_FUNCTIONS\_NBR}};\ i++)}
+\DoxyCodeLine{00090\ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (((Functions\ \&\ function)\ ==\ function)\ \&\&\ ((component\_functions\ \&\ function)\ ==\ function))}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[function]]-\/>Enable(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance])\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ function\ =\ function\ <<\ 1;}
+\DoxyCodeLine{00099\ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_ac9d7795e06cf391c0f09d7fe81f672a9}\label{custom__motion__sensors_8h_ac9d7795e06cf391c0f09d7fe81f672a9} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_ReadID@{CUSTOM\_MOTION\_SENSOR\_ReadID}}
+\index{CUSTOM\_MOTION\_SENSOR\_ReadID@{CUSTOM\_MOTION\_SENSOR\_ReadID}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_ReadID()}{CUSTOM\_MOTION\_SENSOR\_ReadID()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Id }\end{DoxyParamCaption})}
+
+
+
+Get WHOAMI value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Id} & WHOAMI value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00161}{161}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00162\ \{}
+\DoxyCodeLine{00163\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00166\ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00168\ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (MotionDrv[Instance]-\/>ReadID(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Id)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00170\ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a1da863c63526689e1e6f13d08a41b5c1}{BSP\_ERROR\_UNKNOWN\_COMPONENT}};}
+\DoxyCodeLine{00172\ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00174\ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00176\ \ \ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00179\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_aebdf0db01a505b7c788cba9f2ce749cb}\label{custom__motion__sensors_8h_aebdf0db01a505b7c788cba9f2ce749cb} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_SetFullScale@{CUSTOM\_MOTION\_SENSOR\_SetFullScale}}
+\index{CUSTOM\_MOTION\_SENSOR\_SetFullScale@{CUSTOM\_MOTION\_SENSOR\_SetFullScale}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_SetFullScale()}{CUSTOM\_MOTION\_SENSOR\_SetFullScale()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+Full\+Scale (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{int32\+\_\+t}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Set motion sensor Full Scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+{\em Fullscale} & Fullscale value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00509}{509}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00510\ \{}
+\DoxyCodeLine{00511\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00512\ }
+\DoxyCodeLine{00513\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00514\ \ \ \{}
+\DoxyCodeLine{00515\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00516\ \ \ \}}
+\DoxyCodeLine{00517\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00518\ \ \ \{}
+\DoxyCodeLine{00519\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00520\ \ \ \ \ \{}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>SetFullScale(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Fullscale)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00529\ \ \ \ \ \}}
+\DoxyCodeLine{00530\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00531\ \ \ \ \ \{}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00533\ \ \ \ \ \}}
+\DoxyCodeLine{00534\ \ \ \}}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00537\ \}}
+
+\end{DoxyCode}
+\Hypertarget{custom__motion__sensors_8h_aa2399dbd3d1183a1fafabf440c4cd93e}\label{custom__motion__sensors_8h_aa2399dbd3d1183a1fafabf440c4cd93e} 
+\index{custom\_motion\_sensors.h@{custom\_motion\_sensors.h}!CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate@{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate}}
+\index{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate@{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate}!custom\_motion\_sensors.h@{custom\_motion\_sensors.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate()}{CUSTOM\_MOTION\_SENSOR\_SetOutputDataRate()}}
+{\footnotesize\ttfamily int32\+\_\+t CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Instance,  }\item[{uint32\+\_\+t}]{Function,  }\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set motion sensor Output Data Rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Instance} & Motion sensor instance \\
+\hline
+{\em Function} & Motion sensor function. Could be \+:
+\begin{DoxyItemize}
+\item MOTION\+\_\+\+GYRO
+\item MOTION\+\_\+\+ACCELERO
+\item MOTION\+\_\+\+MAGNETO 
+\end{DoxyItemize}\\
+\hline
+{\em Odr} & Output Data Rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em BSP} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__motion__sensors_8c_source_l00469}{469}} of file \mbox{\hyperlink{custom__motion__sensors_8c_source}{custom\+\_\+motion\+\_\+sensors.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00470\ \{}
+\DoxyCodeLine{00471\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \textcolor{keywordflow}{if}\ (Instance\ >=\ \mbox{\hyperlink{custom__motion__sensors_8h_a64db465f85141d84f423de06e114de23}{CUSTOM\_MOTION\_INSTANCES\_NBR}})}
+\DoxyCodeLine{00474\ \ \ \{}
+\DoxyCodeLine{00475\ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00476\ \ \ \}}
+\DoxyCodeLine{00477\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00478\ \ \ \{}
+\DoxyCodeLine{00479\ \ \ \ \ \textcolor{keywordflow}{if}\ ((MotionCtx[Instance].Functions\ \&\ Function)\ ==\ Function)}
+\DoxyCodeLine{00480\ \ \ \ \ \{}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MotionFuncDrv[Instance][FunctionIndex[Function]]-\/>SetOutputDataRate(\mbox{\hyperlink{custom__motion__sensors_8c_afc37ce1fe8c45386873007cac627263b}{MotionCompObj}}[Instance],\ Odr)\ !=\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}})}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_afd38304fe2091deed9a17a251e83c04a}{BSP\_ERROR\_COMPONENT\_FAILURE}};}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_af3b62c8846ef9b1215cde2142dac0bde}{BSP\_ERROR\_NONE}};}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00489\ \ \ \ \ \}}
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00491\ \ \ \ \ \{}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ ret\ =\ \mbox{\hyperlink{stm32wlxx__nucleo__errno_8h_a7cd4b207272b8a5aa02fe324694ae0b7}{BSP\_ERROR\_WRONG\_PARAM}};}
+\DoxyCodeLine{00493\ \ \ \ \ \}}
+\DoxyCodeLine{00494\ \ \ \}}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00497\ \}}
+
+\end{DoxyCode}

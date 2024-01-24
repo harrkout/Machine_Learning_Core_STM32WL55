@@ -1,0 +1,202 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+tim\+\_\+ex.h File Reference}
+\hypertarget{stm32wlxx__hal__tim__ex_8h}{}\label{stm32wlxx__hal__tim__ex_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_tim\_ex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_tim\_ex.h}}
+
+
+Header file of TIM HAL Extended module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTIM__HallSensor__InitTypeDef}{TIM\+\_\+\+Hall\+Sensor\+\_\+\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em TIM Hall sensor Configuration Structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structTIMEx__BreakInputConfigTypeDef}{TIMEx\+\_\+\+Break\+Input\+Config\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em TIM Break/\+Break2 input configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga5156e463b51b1a7d92e6d87c2be4563a}{TIM\+\_\+\+TIM1\+\_\+\+ETR\+\_\+\+GPIO}}~0x00000000U                                           /\texorpdfstring{$\ast$}{*} !$<$ TIM1\+\_\+\+ETR is not connected to I/O      \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga7ee505d5bb6597f4b9430e10ccc82029}{TIM\+\_\+\+TIM1\+\_\+\+ETR\+\_\+\+ADC\+\_\+\+AWD1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac17b92b42b255c92a9d082d421e7a7b3}{TIM1\+\_\+\+OR1\+\_\+\+ETR\+\_\+\+ADC\+\_\+\+RMP\+\_\+0}}                                /\texorpdfstring{$\ast$}{*} !$<$ TIM1\+\_\+\+ETR is connected to \mbox{\hyperlink{group__Peripheral__declaration_ga54d148b91f3d356713f7e367a2243bea}{ADC}} AWD1    \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga35f007160ef8ee4d2f0452bf676dbf25}{TIM\+\_\+\+TIM1\+\_\+\+ETR\+\_\+\+ADC\+\_\+\+AWD2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga641546126246186fd9010d1853bc9610}{TIM1\+\_\+\+OR1\+\_\+\+ETR\+\_\+\+ADC\+\_\+\+RMP\+\_\+1}}                                /\texorpdfstring{$\ast$}{*} !$<$ TIM1\+\_\+\+ETR is connected to \mbox{\hyperlink{group__Peripheral__declaration_ga54d148b91f3d356713f7e367a2243bea}{ADC}} AWD2    \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga3651aea15bad2cab82536fd5d3e9327d}{TIM\+\_\+\+TIM1\+\_\+\+ETR\+\_\+\+ADC\+\_\+\+AWD3}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac17b92b42b255c92a9d082d421e7a7b3}{TIM1\+\_\+\+OR1\+\_\+\+ETR\+\_\+\+ADC\+\_\+\+RMP\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga641546126246186fd9010d1853bc9610}{TIM1\+\_\+\+OR1\+\_\+\+ETR\+\_\+\+ADC\+\_\+\+RMP\+\_\+1}})     /\texorpdfstring{$\ast$}{*} !$<$ TIM1\+\_\+\+ETR is connected to \mbox{\hyperlink{group__Peripheral__declaration_ga54d148b91f3d356713f7e367a2243bea}{ADC}} AWD3    \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga2e3eb3f4f99db6c14b3ce91bebfe8d07}{TIM\+\_\+\+TIM1\+\_\+\+ETR\+\_\+\+COMP1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1e5c447a1de2571985f74ca5ee201c56}{TIM1\+\_\+\+AF1\+\_\+\+ETRSEL\+\_\+0}}                                     /\texorpdfstring{$\ast$}{*} !$<$ TIM1\+\_\+\+ETR is connected to \mbox{\hyperlink{group__Peripheral__declaration_gaf5713f83009027d48805b049d55bb01b}{COMP1}} output \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga734d16e8c8e368bedc159f97422e26b9}{TIM\+\_\+\+TIM1\+\_\+\+ETR\+\_\+\+COMP2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga269809ebc603562522c733f7b518bcc3}{TIM1\+\_\+\+AF1\+\_\+\+ETRSEL\+\_\+1}}                                     /\texorpdfstring{$\ast$}{*} !$<$ TIM1\+\_\+\+ETR is connected to \mbox{\hyperlink{group__Peripheral__declaration_ga6985fa7e9bb3c2edf15b29b7af210a2b}{COMP2}} output \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga4d3d7a7e977f98110d2833d2feb7236a}{TIM\+\_\+\+TIM1\+\_\+\+TI1\+\_\+\+GPIO}}~0x00000000U                                           /\texorpdfstring{$\ast$}{*} !$<$ \mbox{\hyperlink{group__Peripheral__declaration_ga2e87451fea8dc9380056d3cfc5ed81fb}{TIM1}} Input capture 1 is connected to I/0      \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_gabba4a562a6e0f83acf57807e50de0de4}{TIM\+\_\+\+TIM1\+\_\+\+TI1\+\_\+\+COMP1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga001fc39f08ec583f846e9d2c43ccad24}{TIM1\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP}}                                       /\texorpdfstring{$\ast$}{*} !$<$ \mbox{\hyperlink{group__Peripheral__declaration_ga2e87451fea8dc9380056d3cfc5ed81fb}{TIM1}} Input capture 1is connected to \mbox{\hyperlink{group__Peripheral__declaration_gaf5713f83009027d48805b049d55bb01b}{COMP1}} OUT \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga05e1c800a3f8e7eb60b50f446cf321f7}{TIM\+\_\+\+TIM2\+\_\+\+ETR\+\_\+\+GPIO}}~0x00000000U                                           /\texorpdfstring{$\ast$}{*} !$<$ \mbox{\hyperlink{group__Peripheral__declaration_ga3cfac9f2e43673f790f8668d48b4b92b}{TIM2}} External trigger ETR is connected to I/O \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga906f5f281fa8283e5574b5ec7cb95b62}{TIM\+\_\+\+TIM2\+\_\+\+ETR\+\_\+\+LSE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5c6f7b28b776edc9beac571f9b8f6ebe}{TIM2\+\_\+\+OR1\+\_\+\+ETR\+\_\+\+RMP}}                                      /\texorpdfstring{$\ast$}{*} !$<$ \mbox{\hyperlink{group__Peripheral__declaration_ga3cfac9f2e43673f790f8668d48b4b92b}{TIM2}} External trigger ETR is connected to LSE \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga79a125bc7559dc01f8de056e19f11972}{TIM\+\_\+\+TIM2\+\_\+\+ETR\+\_\+\+COMP1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaaa7a4ed17a8432d8c81e31e32dd87e20}{TIM2\+\_\+\+AF1\+\_\+\+ETRSEL\+\_\+0}}                                     /\texorpdfstring{$\ast$}{*} !$<$ TIM2\+\_\+\+ETR is connected to \mbox{\hyperlink{group__Peripheral__declaration_gaf5713f83009027d48805b049d55bb01b}{COMP1}} output         \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga76dfe019f143b4bff5ba2c2e1a38a387}{TIM\+\_\+\+TIM2\+\_\+\+ETR\+\_\+\+COMP2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6a1413b9834ebc2b96c8eb27b74b0fdc}{TIM2\+\_\+\+AF1\+\_\+\+ETRSEL\+\_\+1}}                                     /\texorpdfstring{$\ast$}{*} !$<$ TIM2\+\_\+\+ETR is connected to \mbox{\hyperlink{group__Peripheral__declaration_ga6985fa7e9bb3c2edf15b29b7af210a2b}{COMP2}} output         \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga11cd0b8d94b5ab46488aa3f2c3769d1f}{TIM\+\_\+\+TIM2\+\_\+\+TI4\+\_\+\+GPIO}}~0x00000000U                                           /\texorpdfstring{$\ast$}{*} !$<$ TIM2\+\_\+\+TI4 is connected to I/O                 \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga10665a31da680e9c23ff66b4e9f85b1e}{TIM\+\_\+\+TIM2\+\_\+\+TI4\+\_\+\+COMP1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7588d98b96a166d39ea3af92e1946719}{TIM2\+\_\+\+OR1\+\_\+\+TI4\+\_\+\+RMP\+\_\+0}}                                    /\texorpdfstring{$\ast$}{*} !$<$ TIM2\+\_\+\+TI4 is connected to \mbox{\hyperlink{group__Peripheral__declaration_gaf5713f83009027d48805b049d55bb01b}{COMP1}} OUT           \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga4d384c8a9c0687b64290b54c256a5152}{TIM\+\_\+\+TIM2\+\_\+\+TI4\+\_\+\+COMP2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4192bd67852ce52f4019a9d73078a9d3}{TIM2\+\_\+\+OR1\+\_\+\+TI4\+\_\+\+RMP\+\_\+1}}                                    /\texorpdfstring{$\ast$}{*} !$<$ TIM2\+\_\+\+TI4 is connected to \mbox{\hyperlink{group__Peripheral__declaration_gaf5713f83009027d48805b049d55bb01b}{COMP1}} OUT           \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga0449ea1c33b15b3f91222fcb3a239559}{TIM\+\_\+\+TIM2\+\_\+\+TI4\+\_\+\+COMP1\+\_\+\+COMP2}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7588d98b96a166d39ea3af92e1946719}{TIM2\+\_\+\+OR1\+\_\+\+TI4\+\_\+\+RMP\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga4192bd67852ce52f4019a9d73078a9d3}{TIM2\+\_\+\+OR1\+\_\+\+TI4\+\_\+\+RMP\+\_\+1}})             /\texorpdfstring{$\ast$}{*} !$<$ TIM2\+\_\+\+TI4 is connected to \mbox{\hyperlink{group__Peripheral__declaration_gaf5713f83009027d48805b049d55bb01b}{COMP1}} and \mbox{\hyperlink{group__Peripheral__declaration_ga6985fa7e9bb3c2edf15b29b7af210a2b}{COMP2}} OUT \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_gaf4435f9a5d0eb16d1b2b1192ad004392}{TIM\+\_\+\+TIM16\+\_\+\+TI1\+\_\+\+GPIO}}~0x00000000U                                           /\texorpdfstring{$\ast$}{*} !$<$ TIM16\+\_\+\+TI1 is connected to I/O       \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga671abe85f9feb1fcee7c2bf05e9245cd}{TIM\+\_\+\+TIM16\+\_\+\+TI1\+\_\+\+LSI}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7594e3dcaf59a34b5c6fdac1518a425e}{TIM16\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+0}}                                   /\texorpdfstring{$\ast$}{*} !$<$ TIM16\+\_\+\+TI1 is connected to LSI Clock \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_gabff23fbb0cd0a7f09de517b0469038b0}{TIM\+\_\+\+TIM16\+\_\+\+TI1\+\_\+\+LSE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga20ec6a97a69d7492a26cc6240d2d9f8f}{TIM16\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+1}}                                   /\texorpdfstring{$\ast$}{*} !$<$ TIM16\+\_\+\+TI1 is connected to LSE Clock \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga23533444072953152f7e9600db5437a6}{TIM\+\_\+\+TIM16\+\_\+\+TI1\+\_\+\+RTC}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7594e3dcaf59a34b5c6fdac1518a425e}{TIM16\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga20ec6a97a69d7492a26cc6240d2d9f8f}{TIM16\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+1}})           /\texorpdfstring{$\ast$}{*} !$<$ TIM16\+\_\+\+TI1 is connected to \mbox{\hyperlink{group__Peripheral__declaration_ga5359a088f5d8b20ce74d920e46059304}{RTC}}       \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_gab97c8da0527e5686a80a50f906225e02}{TIM\+\_\+\+TIM17\+\_\+\+TI1\+\_\+\+GPIO}}~0x00000000U                                           /\texorpdfstring{$\ast$}{*} !$<$ TIM17\+\_\+\+TI1 is connected to I/O       \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_gae0cb9d4bfcf7ea14d6999e5b4f6b137c}{TIM\+\_\+\+TIM17\+\_\+\+TI1\+\_\+\+MSI}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga19153e63351a1f8c36766d6f8e6b802c}{TIM17\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+0}}                                   /\texorpdfstring{$\ast$}{*} !$<$ TIM17\+\_\+\+TI1 is connected to MSI       \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga9ab23553152276bb3151f22fee9ba87b}{TIM\+\_\+\+TIM17\+\_\+\+TI1\+\_\+\+HSE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae0d8646efede31a45aaf957a1f1619e2}{TIM17\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+1}}                                   /\texorpdfstring{$\ast$}{*} !$<$ TIM17\+\_\+\+TI1 is connected to HSE/32    \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Remap_ga1d6fcc0f18c7208728ea9702d2caf434}{TIM\+\_\+\+TIM17\+\_\+\+TI1\+\_\+\+MCO}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga19153e63351a1f8c36766d6f8e6b802c}{TIM17\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+0}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae0d8646efede31a45aaf957a1f1619e2}{TIM17\+\_\+\+OR1\+\_\+\+TI1\+\_\+\+RMP\+\_\+1}})           /\texorpdfstring{$\ast$}{*} !$<$ TIM17\+\_\+\+TI1 is connected to MCO       \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input_ga729a1c5fd937111405416cb6dc216162}{TIM\+\_\+\+BREAKINPUT\+\_\+\+BRK}}~0x00000001U
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input_ga2473abcbfc87ad498da670688ae3573d}{TIM\+\_\+\+BREAKINPUT\+\_\+\+BRK2}}~0x00000002U
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input__Source_ga7c925e5a7769a9c0d3bbd15bde096985}{TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+BKIN}}~0x00000001U                               /\texorpdfstring{$\ast$}{*} !$<$ An external source (GPIO) is connected to the BKIN pin  \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input__Source_gaea744fc5a6aa81792611805716d82757}{TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+COMP1}}~0x00000002U                               /\texorpdfstring{$\ast$}{*} !$<$ The \mbox{\hyperlink{group__Peripheral__declaration_gaf5713f83009027d48805b049d55bb01b}{COMP1}} output is connected to the break input \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input__Source_ga0d172367f5a3845adfda70f2c9de4f46}{TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+COMP2}}~0x00000004U                               /\texorpdfstring{$\ast$}{*} !$<$ The \mbox{\hyperlink{group__Peripheral__declaration_ga6985fa7e9bb3c2edf15b29b7af210a2b}{COMP2}} output is connected to the break input \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input__Source__Enable_gaa95a5b76d66c123e6234803f73dcafdb}{TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+DISABLE}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input__Source__Enable_gaf955feb94df5918b6392c0b0a5dbfc45}{TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+ENABLE}}~0x00000001U
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input__Source__Polarity_ga74e8fc7221fa7e194acb39794b803334}{TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+POLARITY\+\_\+\+LOW}}~0x00000001U
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Break__Input__Source__Polarity_ga0157e9dfd27513767399b58ec78e0693}{TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+POLARITY\+\_\+\+HIGH}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Private__Macros_ga990f4b2287217a017ed8a68f48367985}{IS\+\_\+\+TIM\+\_\+\+REMAP}}(\+\_\+\+\_\+\+INSTANCE\+\_\+\+\_\+,  \+\_\+\+\_\+\+REMAP\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Private__Macros_gac11038f927b530ed9ff66cbf88b5fe48}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUT}}(\+\_\+\+\_\+\+BREAKINPUT\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Private__Macros_ga8206e59b599377ce8abb3d806ffcf5a1}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE}}(\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Private__Macros_gafea36303ed2332cea12b392d987649e3}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+STATE}}(\+\_\+\+\_\+\+STATE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__TIMEx__Private__Macros_ga350bdeccbe405fde9ab61b83a53321ea}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+POLARITY}}(\+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_ga9edc6a00a673eb7c07b0c3cf86a95169}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Init}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{structTIM__HallSensor__InitTypeDef}{TIM\+\_\+\+Hall\+Sensor\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_ga61f3c18eb8fe53b65b55ec855072631d}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+De\+Init}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_ga88d9e7c4bc86e1a1190fda06e04552ea}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Msp\+Init}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_gac19734439bdfa549b7fb5d85f3c0720d}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Msp\+De\+Init}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_ga9f4bfa2a4b890a2219ca927bbbb455fc}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Start}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_ga714c2a7a51f4ab61b04df84ab182eb86}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Stop}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_gaf3e7068c5bc6fc74e016cc8e990cbb02}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Start\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_gac6ab7ab0cada425a8d4deb637bd2ad71}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Stop\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_ga3d0d063498f6888d61411d56380f5211}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Start\+\_\+\+DMA}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group1_gab361d1aa6e0eb244886b93908beded6f}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Stop\+\_\+\+DMA}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group2_ga56d25f544564ef28a66dca7ec150de00}{HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Start}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group2_ga576cb1c3e40fc49555f232773cb2cdbc}{HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Stop}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group2_ga2f4d7c285095d5293b81d2e11cd991af}{HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Start\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group2_gabe91877781dbd7fb9fdd63262e6ea10f}{HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Stop\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group2_gacf9eba45624d72a463fd0f950cf72964}{HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Start\+\_\+\+DMA}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group2_ga09216649456d28828492740232b275fd}{HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Stop\+\_\+\+DMA}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group3_ga4f2b0bb4b66a5acd76eac4e8d32cc498}{HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Start}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group3_ga0f2e27f3fb6d8f42d998e2071e5f0482}{HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Stop}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group3_ga82f0b53f6b10e6aafc6835178662c488}{HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Start\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group3_ga13848e20df29fa552ef4f5b69fef20a6}{HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Stop\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group3_gac525533dc108ee4915ca93d5a43cb3b5}{HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Start\+\_\+\+DMA}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group3_ga10afdfdc5eed2e0288ccb969f48bc0e4}{HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Stop\+\_\+\+DMA}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group4_ga41e254708b0215a68acb6e0836d4f8ca}{HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Start}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Output\+Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group4_gaf42ab805f75ecece735d600e54cabf83}{HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Stop}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Output\+Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group4_ga297a97004076cee5734510a0dece7665}{HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Start\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Output\+Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group4_ga5b6f320c18f453054a5409db6b98254e}{HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Stop\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Output\+Channel)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_gab5802aa4b8b5a79b93b209b0277622ac}{HAL\+\_\+\+TIMEx\+\_\+\+Config\+Commut\+Event}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Input\+Trigger, uint32\+\_\+t Commutation\+Source)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_gad9f5f717a203adafb70e66451b4f0472}{HAL\+\_\+\+TIMEx\+\_\+\+Config\+Commut\+Event\+\_\+\+IT}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Input\+Trigger, uint32\+\_\+t Commutation\+Source)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga6ab2af489cfc5783e4ddd76a35edde31}{HAL\+\_\+\+TIMEx\+\_\+\+Config\+Commut\+Event\+\_\+\+DMA}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Input\+Trigger, uint32\+\_\+t Commutation\+Source)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga056fd97d3be6c60dcfa12963f6ec8aad}{HAL\+\_\+\+TIMEx\+\_\+\+Master\+Config\+Synchronization}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{structTIM__MasterConfigTypeDef}{TIM\+\_\+\+Master\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Master\+Config)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga4414f3b3dcbed3f21ee3b06d6db9ffa4}{HAL\+\_\+\+TIMEx\+\_\+\+Config\+Break\+Dead\+Time}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{structTIM__BreakDeadTimeConfigTypeDef}{TIM\+\_\+\+Break\+Dead\+Time\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Break\+Dead\+Time\+Config)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga7cd64073fccb41470171d9599ffb699c}{HAL\+\_\+\+TIMEx\+\_\+\+Config\+Break\+Input}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Break\+Input, \mbox{\hyperlink{structTIMEx__BreakInputConfigTypeDef}{TIMEx\+\_\+\+Break\+Input\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Break\+Input\+Config)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga8aef10325df17a0d17a3a0a7ebfae383}{HAL\+\_\+\+TIMEx\+\_\+\+Group\+Channel5}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channels)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga683118282daf3aa2e319eb8eea93af31}{HAL\+\_\+\+TIMEx\+\_\+\+Remap\+Config}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Remap)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga016cb04e175f5a27ce01f9d1802c1826}{HAL\+\_\+\+TIMEx\+\_\+\+Disarm\+Break\+Input}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Break\+Input)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group5_ga97991f186d084f95ea75410f2986333a}{HAL\+\_\+\+TIMEx\+\_\+\+Re\+Arm\+Break\+Input}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Break\+Input)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group6_gaa4189b31d2c006ee33f55f8c6eeba930}{HAL\+\_\+\+TIMEx\+\_\+\+Commut\+Callback}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group6_ga971ecdc215921771e56ed2c4944dc0b1}{HAL\+\_\+\+TIMEx\+\_\+\+Commut\+Half\+Cplt\+Callback}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group6_ga2d868a55ca7c62c4a5ef85dec514402c}{HAL\+\_\+\+TIMEx\+\_\+\+Break\+Callback}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group6_ga1efa3cf97c2c2a7b21a25b55ce2c67fa}{HAL\+\_\+\+TIMEx\+\_\+\+Break2\+Callback}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{group__TIM__Exported__Types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group7_ga69d56afa939909717370413d35311dbd}{HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Get\+State}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
+\mbox{\hyperlink{group__TIM__Exported__Types_ga1a70fcbe9952e18af5c890e216a15f34}{HAL\+\_\+\+TIM\+\_\+\+Channel\+State\+Type\+Def}} \mbox{\hyperlink{group__TIMEx__Exported__Functions__Group7_ga8869a865ab7b9572e5ff29ef920080a7}{HAL\+\_\+\+TIMEx\+\_\+\+Get\+Channel\+NState}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t ChannelN)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Private__Functions_gaf473fa38254d62a74a006a781fe0aeb8}{TIMEx\+\_\+\+DMACommutation\+Cplt}} (\mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)
+\item 
+void \mbox{\hyperlink{group__TIMEx__Private__Functions_ga65b7244a1ee94cf20081543377ba8d2a}{TIMEx\+\_\+\+DMACommutation\+Half\+Cplt}} (\mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hdma)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of TIM HAL Extended module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__tim__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+tim\+\_\+ex.\+h}}.
+

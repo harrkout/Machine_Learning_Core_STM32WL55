@@ -1,0 +1,358 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+pwr\+\_\+ex.h File Reference}
+\hypertarget{stm32wlxx__hal__pwr__ex_8h}{}\label{stm32wlxx__hal__pwr__ex_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_pwr\_ex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_pwr\_ex.h}}
+
+
+Header file of PWR HAL Extended module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPWR__PVMTypeDef}{PWR\+\_\+\+PVMType\+Def}}
+\begin{DoxyCompactList}\small\item\em PWR PVM configuration structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Constants_ga21257e8b8c5dd0d90f68aa5ac31c818b}{PWR\+\_\+\+WUP\+\_\+\+POLARITY\+\_\+\+SHIFT}}~0x05
+\item 
+\#define \mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}}~(0x20\+UL)   /\texorpdfstring{$\ast$}{*} Bitfield to indicate \mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}} flag located in register PWR\+\_\+\+SR1 \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}}~(0x40\+UL)   /\texorpdfstring{$\ast$}{*} Bitfield to indicate \mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}} flag located in register PWR\+\_\+\+SR2 \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__PWR__FLAG__REG_ga06165d132b35b848eddcad074dda3deb}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+EXTSCR}}~(0x60\+UL)   /\texorpdfstring{$\ast$}{*} Bitfield to indicate \mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}} flag located in register PWR\+\_\+\+EXTSCR \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__PWR__FLAG__REG_ga99ffdeae5c69d83a6bf3d36013aa9bfb}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+MASK\+\_\+\+POS}}~(5UL)      /\texorpdfstring{$\ast$}{*} Bitfield mask position to indicate \mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}} flag location in \mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}} register \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__PWR__FLAG__REG_gabbc0277f168690cc8545391ac94ffcf3}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+MASK}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__FLAG__REG_ga06165d132b35b848eddcad074dda3deb}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+EXTSCR}})   /\texorpdfstring{$\ast$}{*} Bitfield mask to indicate \mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}} flag location in \mbox{\hyperlink{group__Peripheral__declaration_ga04651c526497822a859942b928e57f8e}{PWR}} register \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__PWR__FLAG__REG_gaa4bb234689287bec1d3d988accb2db28}{PWR\+\_\+\+FLAG\+\_\+\+EXTSCR\+\_\+\+CLR\+\_\+\+POS}}~(16UL)     /\texorpdfstring{$\ast$}{*} Bitfield for register PWR\+\_\+\+EXTSCR clearable bits positions\+: position of bitfield in flag literals \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__PWR__FLAG__REG_ga103f27ad2d215cecf725f58714e737c8}{PWR\+\_\+\+FLAG\+\_\+\+EXTSCR\+\_\+\+CLR\+\_\+\+MASK}}~((\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga99a4231ad1f5c78ad4ab251316ce891b}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+CSSF\+\_\+\+Pos}}) $<$$<$ \mbox{\hyperlink{group__PWR__FLAG__REG_gaa4bb234689287bec1d3d988accb2db28}{PWR\+\_\+\+FLAG\+\_\+\+EXTSCR\+\_\+\+CLR\+\_\+\+POS}})  /\texorpdfstring{$\ast$}{*} Bitfield for register PWR\+\_\+\+EXTSCR clearable bits positions\+: mask of bitfield in flag literals \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gac5209faf43a32aad1185a39e9cd7e295}{PVM\+\_\+\+MODE\+\_\+\+IT}}~(0x00010000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_ga59a5f6af101fe282da71dc2416d9fdc9}{PVM\+\_\+\+RISING\+\_\+\+EDGE}}~(0x00000001\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gaec6b36d7562889101b7787a2d79e3916}{PVM\+\_\+\+FALLING\+\_\+\+EDGE}}~(0x00000002\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_ga5d1fc3cb38a58996e553db7ebf378597}{PVM\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}}~(0x00000003\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__WakeUp__Pins_gaeb626f09f1270e2a23729dac3fd269d1}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN1\+\_\+\+HIGH}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ba5b1bb0f7578bd4df5ffd485dad6f7}{PWR\+\_\+\+CR3\+\_\+\+EWUP1}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__WakeUp__Pins_ga1216218e63be4edd833ba66170266903}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN2\+\_\+\+HIGH}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga036dea83addcbda947918308749aef3e}{PWR\+\_\+\+CR3\+\_\+\+EWUP2}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__WakeUp__Pins_gacb7728048ff1fb42457c3b60cb5a8069}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN3\+\_\+\+HIGH}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga16bb381527e4565b3bd417c173bde522}{PWR\+\_\+\+CR3\+\_\+\+EWUP3}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__WakeUp__Pins_ga71106c9ef5fe0ce824983011cf5812db}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN1\+\_\+\+LOW}}~((\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafbb881b2131d164390abd9046375a465}{PWR\+\_\+\+CR4\+\_\+\+WP1}}$<$$<$\mbox{\hyperlink{group__PWREx__Private__Constants_ga21257e8b8c5dd0d90f68aa5ac31c818b}{PWR\+\_\+\+WUP\+\_\+\+POLARITY\+\_\+\+SHIFT}}) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ba5b1bb0f7578bd4df5ffd485dad6f7}{PWR\+\_\+\+CR3\+\_\+\+EWUP1}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__WakeUp__Pins_ga2fa3e2360a56cd447dd49de0b075313f}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN2\+\_\+\+LOW}}~((\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga633d809286b1e03055734e7eb447b00e}{PWR\+\_\+\+CR4\+\_\+\+WP2}}$<$$<$\mbox{\hyperlink{group__PWREx__Private__Constants_ga21257e8b8c5dd0d90f68aa5ac31c818b}{PWR\+\_\+\+WUP\+\_\+\+POLARITY\+\_\+\+SHIFT}}) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga036dea83addcbda947918308749aef3e}{PWR\+\_\+\+CR3\+\_\+\+EWUP2}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__WakeUp__Pins_gad1b726fce8345126b6bd9a38cc93de1a}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN3\+\_\+\+LOW}}~((\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5a3b7f0e80a3db7c58fcabcb4c6c0358}{PWR\+\_\+\+CR4\+\_\+\+WP3}}$<$$<$\mbox{\hyperlink{group__PWREx__Private__Constants_ga21257e8b8c5dd0d90f68aa5ac31c818b}{PWR\+\_\+\+WUP\+\_\+\+POLARITY\+\_\+\+SHIFT}}) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga16bb381527e4565b3bd417c173bde522}{PWR\+\_\+\+CR3\+\_\+\+EWUP3}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Constants_ga0da8e7cbe0826e93b777ae4419a1cd05}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ba5b1bb0f7578bd4df5ffd485dad6f7}{PWR\+\_\+\+CR3\+\_\+\+EWUP1}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Constants_ga0c718de5967a8d2cec63d0b5fe0b2ada}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga036dea83addcbda947918308749aef3e}{PWR\+\_\+\+CR3\+\_\+\+EWUP2}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Constants_ga0cd92601d07cf7594716c22a0aa3ba26}{PWR\+\_\+\+WAKEUP\+\_\+\+PIN3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga16bb381527e4565b3bd417c173bde522}{PWR\+\_\+\+CR3\+\_\+\+EWUP3}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__PVM__Type_ga9690d421376ae26081cb09a9cca14d29}{PWR\+\_\+\+PVM\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga80af65fcb8afdaf6bbe6c2effabbac8c}{PWR\+\_\+\+CR2\+\_\+\+PVME3}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__PVM__Mode_gad8229b40226586fb6ed0c5ed03e13192}{PWR\+\_\+\+PVM\+\_\+\+MODE\+\_\+\+NORMAL}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__PVM__Mode_ga14319471a3942f3366d75ac95016e2c8}{PWR\+\_\+\+PVM\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING}}~(\mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gac5209faf43a32aad1185a39e9cd7e295}{PVM\+\_\+\+MODE\+\_\+\+IT}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_ga59a5f6af101fe282da71dc2416d9fdc9}{PVM\+\_\+\+RISING\+\_\+\+EDGE}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__PVM__Mode_ga2fbc393dcad6eff93dbcc760c7105120}{PWR\+\_\+\+PVM\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING}}~(\mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gac5209faf43a32aad1185a39e9cd7e295}{PVM\+\_\+\+MODE\+\_\+\+IT}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gaec6b36d7562889101b7787a2d79e3916}{PVM\+\_\+\+FALLING\+\_\+\+EDGE}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__PVM__Mode_ga7f8bbfa985e2e882aed920ef1c8aeab6}{PWR\+\_\+\+PVM\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+FALLING}}~(\mbox{\hyperlink{group__PWR__PVM__Mode__Mask_gac5209faf43a32aad1185a39e9cd7e295}{PVM\+\_\+\+MODE\+\_\+\+IT}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__PVM__Mode__Mask_ga5d1fc3cb38a58996e553db7ebf378597}{PVM\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flash__PowerDown_ga09d759cd12585c2538a7a5ae6d26381c}{PWR\+\_\+\+FLASHPD\+\_\+\+LPRUN}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf9eef6d61446a71341488348cbe71414}{PWR\+\_\+\+CR1\+\_\+\+FPDR}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flash__PowerDown_ga6d65383a84498625b0e424dfa43b1100}{PWR\+\_\+\+FLASHPD\+\_\+\+LPSLEEP}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga07c7e0a09cbe9b8effd90818a2ee5241}{PWR\+\_\+\+CR1\+\_\+\+FPDS}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_ga3b5ca5ab9c19938a14d273825bcf840e}{PWR\+\_\+\+REGULATOR\+\_\+\+VOLTAGE\+\_\+\+SCALE1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7e74cd6e5c3d16efc03c27d75a4624cb}{PWR\+\_\+\+CR1\+\_\+\+VOS\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Regulator__Voltage__Scale_gaa0d38e304a0adfdbb58a61c96bdb95e9}{PWR\+\_\+\+REGULATOR\+\_\+\+VOLTAGE\+\_\+\+SCALE2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaacc72946b4e421a4279cd7340f3135db}{PWR\+\_\+\+CR1\+\_\+\+VOS\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__VBAT__Battery__Charging__Selection_ga27d3d5ee9e0fc78ecac6e41498a37916}{PWR\+\_\+\+BATTERY\+\_\+\+CHARGING\+\_\+\+RESISTOR\+\_\+5}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__VBAT__Battery__Charging__Selection_gacebb57480a111beaf8ca05f014cbd096}{PWR\+\_\+\+BATTERY\+\_\+\+CHARGING\+\_\+\+RESISTOR\+\_\+1\+\_\+5}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6932c5d73145f26e380271c73ac97a8f}{PWR\+\_\+\+CR4\+\_\+\+VBRS}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__VBAT__Battery__Charging_gaa79590498c19f4802f981d7b4b363418}{PWR\+\_\+\+BATTERY\+\_\+\+CHARGING\+\_\+\+DISABLE}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__VBAT__Battery__Charging_gafe6350c37e3ab56020d40edc71eedd4b}{PWR\+\_\+\+BATTERY\+\_\+\+CHARGING\+\_\+\+ENABLE}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga7cb65a447514614845b72f00250728cb}{PWR\+\_\+\+CR4\+\_\+\+VBE}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga1fa6087f4fa74f3b65462710a0e959ca}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+0}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga511b67a6d2a4745e92351a619b4aaa97}{PWR\+\_\+\+PUCRB\+\_\+\+PB0}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gaf2023d0967581927b0859e13d1a299f0}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+1}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac4868b26376c5ce38025c617d9a45a81}{PWR\+\_\+\+PUCRB\+\_\+\+PB1}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga96bbf59d35b1db690af6a5dc68544740}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+2}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6ee1eaf52a2e5d28819edc4c0de2e2bd}{PWR\+\_\+\+PUCRB\+\_\+\+PB2}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gaa656ee12dbb621b2263a8a4573725975}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+3}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga90577c39614de0671db781f5168a2086}{PWR\+\_\+\+PUCRB\+\_\+\+PB3}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga46c681a84ba69e0ec01eb1989f4aa655}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+4}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0ffa2061e37dad37437f5cb47be294a6}{PWR\+\_\+\+PUCRB\+\_\+\+PB4}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga72b3082415af11419cc44cbc93a686fa}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+5}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga9178627a0718dfff48a9adf6bc0f963b}{PWR\+\_\+\+PUCRB\+\_\+\+PB5}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gad62d178535498ea4cebdfbcb55138a98}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+6}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gafdeb9e492aedae104ed536c66f8603db}{PWR\+\_\+\+PUCRB\+\_\+\+PB6}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga6dd617d5f95dd04ab5aa28833ccf38e6}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+7}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga263cdba9a8ee852bb343a38ebab11833}{PWR\+\_\+\+PUCRB\+\_\+\+PB7}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gae1a99549c3ee84422febc7c0f89c1439}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+8}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga325bd47d4e80182dd0d4df86de234f08}{PWR\+\_\+\+PUCRB\+\_\+\+PB8}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gafa5d2bc0805d660550ef54dd2f4dd60b}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+9}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gacd07d527d46866c35a88f22f54f984b0}{PWR\+\_\+\+PUCRB\+\_\+\+PB9}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gad6dec1b7d168b59c1701e3dc01abfec4}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+10}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gac0656dd1959661573b20a5db7ac20708}{PWR\+\_\+\+PUCRB\+\_\+\+PB10}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga652acbecfc801fe6e6e32b23abaad253}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+11}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae7891d31a8e1a142f7b0fa18bda9e959}{PWR\+\_\+\+PUCRB\+\_\+\+PB11}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga7b9a90b33ac29fe6b89aa2faf1442316}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+12}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6bc4091b0e1fbab30f23af34741e3173}{PWR\+\_\+\+PUCRB\+\_\+\+PB12}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_ga18b050531d8313a5c33100662cc7dfd8}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+13}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga65b1ef48ac1593f33850cd9bf05343b3}{PWR\+\_\+\+PUCRB\+\_\+\+PB13}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gad479628a265d0bfcaaf854a53eefd4bf}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+14}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga1da678c53f34c77f39409eda53f793e2}{PWR\+\_\+\+PDCRB\+\_\+\+PB14}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO__Bit__Number_gac6c1915f32e6234822682795bc691e68}{PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+15}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga0a82158bc0e841126c7cf09e466d11ba}{PWR\+\_\+\+PUCRB\+\_\+\+PB15}}
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO_ga89e70f23992ce82aed435254a3a2436a}{PWR\+\_\+\+GPIO\+\_\+A}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO_ga56dd775ffa87ae1e07b84ff963b6f723}{PWR\+\_\+\+GPIO\+\_\+B}}~(0x00000001\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO_gaffb175dc1b426b66fc8334298dedfb2d}{PWR\+\_\+\+GPIO\+\_\+C}}~(0x00000002\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__GPIO_ga10094103008af7d266d57f501f795d75}{PWR\+\_\+\+GPIO\+\_\+H}}~(0x00000007\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__EOL__OPERATING__MODES_gab97f3da37f86ff46cc74530e2d55de6f}{PWR\+\_\+\+RADIO\+\_\+\+EOL\+\_\+\+DISABLE}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__EOL__OPERATING__MODES_ga1786e225bd6fad8b01f3746afe80ba4c}{PWR\+\_\+\+RADIO\+\_\+\+EOL\+\_\+\+ENABLE}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gab2a22fb7f751fe39d3536111af88756c}{PWR\+\_\+\+CR5\+\_\+\+RFEOLEN}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__SMPS__OPERATING__MODES_ga01d776b77a9ed6b366cd589e527e5177}{PWR\+\_\+\+SMPS\+\_\+\+BYPASS}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__SMPS__OPERATING__MODES_ga171f5accb909da9bea89cdb5b1278cbc}{PWR\+\_\+\+SMPS\+\_\+\+STEP\+\_\+\+DOWN}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad56cd8b6a4178a44439c09243b64703c}{PWR\+\_\+\+CR5\+\_\+\+SMPSEN}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__RADIO__BUSY__POLARITY_gafef03f323dd75ee3289ae7b2fe52ff69}{PWR\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+POLARITY\+\_\+\+RISING}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__RADIO__BUSY__POLARITY_gab54ce6f731218eb20dca9c399ff95959}{PWR\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+POLARITY\+\_\+\+FALLING}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaecb45e6a22ba24f145c886e893d0cdd4}{PWR\+\_\+\+CR4\+\_\+\+WRFBUSYP}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__RADIO__BUSY__TRIGGER_ga6b0b7bb050380d536c5b3cf5ef2ccaf1}{PWR\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+TRIGGER\+\_\+\+NONE}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__RADIO__BUSY__TRIGGER_ga5308ee9e939cd6a9a9bfdc6b532f1ea0}{PWR\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+TRIGGER\+\_\+\+WU\+\_\+\+IT}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5f77953264f982964b00f0d9e3ae02f9}{PWR\+\_\+\+CR3\+\_\+\+EWRFBUSY}})
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__RADIO__IRQ__TRIGGER_ga94276ecc27da06b549b8c5c258a19d54}{PWR\+\_\+\+RADIO\+\_\+\+IRQ\+\_\+\+TRIGGER\+\_\+\+NONE}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWR__EC__RADIO__IRQ__TRIGGER_ga9f7af84c6c96bfd271c489c23a0dc450}{PWR\+\_\+\+RADIO\+\_\+\+IRQ\+\_\+\+TRIGGER\+\_\+\+WU\+\_\+\+IT}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad1d40badb1307f58508af771580a5939}{PWR\+\_\+\+CR3\+\_\+\+EWRFIRQ}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gaa3527e755c08ac2b2d95edd7adc4ee70}{PWR\+\_\+\+FLAG\+\_\+\+WUF1}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5c48cb5a0f8b86dc09d5ce1d496d795c}{PWR\+\_\+\+SR1\+\_\+\+WUF1\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga6be7514eb20788bbd92e78eed13c551c}{PWR\+\_\+\+FLAG\+\_\+\+WUF2}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaebe957f4d65ef6b7f263b1f0924a30f8}{PWR\+\_\+\+SR1\+\_\+\+WUF2\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga76716079ff7849bddcbbe8f429d70db3}{PWR\+\_\+\+FLAG\+\_\+\+WUF3}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga848c1f7ed3fc5a18315fb48944fcc096}{PWR\+\_\+\+SR1\+\_\+\+WUF3\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga2d06760a5769e729b06d41e37036d58e}{PWR\+\_\+\+FLAG\+\_\+\+WU}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga3cee25727108665face0ac2f709fcb72}{PWR\+\_\+\+SR1\+\_\+\+WUF}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gaa8d92d29871f45b1acbd5abe71800731}{PWR\+\_\+\+FLAG\+\_\+\+WPVD}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gad437f61dfc852f21b3bbd440077e8e93}{PWR\+\_\+\+SR1\+\_\+\+WPVDF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gae121679d71bf4c0980094e8041f9c848}{PWR\+\_\+\+FLAG\+\_\+\+HOLDC2I}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga004bb090c39affe15cf9aa0a400b651e}{PWR\+\_\+\+SR1\+\_\+\+C2\+HF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga6be01d28369a777d1d372baa9ed5b488}{PWR\+\_\+\+FLAG\+\_\+\+WUFI}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa17e157e6252e1503b6c6bb528c8776e}{PWR\+\_\+\+SR1\+\_\+\+WUFI\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga946500132dce659c21ab499d30186998}{PWR\+\_\+\+FLAG\+\_\+\+WRFBUSY}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga878473edd2a2873080d0d2f662052f99}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR1}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaec4a4fafb2dd0331c0c513ec173743d3}{PWR\+\_\+\+SR1\+\_\+\+WRFBUSYF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gaf6d8938f2c783359d5928161100594e0}{PWR\+\_\+\+FLAG\+\_\+\+LDORDY}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa981b650cb50e500286405c2788ea2f7}{PWR\+\_\+\+SR2\+\_\+\+LDORDY\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga5c52ed8a1758ffed0f47e57b19a17898}{PWR\+\_\+\+FLAG\+\_\+\+SMPSRDY}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gadf027d4ae1d888ffa6aadee3dfa9d2f6}{PWR\+\_\+\+SR2\+\_\+\+SMPSRDY\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga83a0e30086ec21630b8a175ae48a2672}{PWR\+\_\+\+FLAG\+\_\+\+REGLPS}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaec5679fae132b06386690a6008210ab8}{PWR\+\_\+\+SR2\+\_\+\+REGLPS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga8ed9097fdb76809257ecc0e398a2904f}{PWR\+\_\+\+FLAG\+\_\+\+REGLPF}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaff23f66315da4c825502c360b7855988}{PWR\+\_\+\+SR2\+\_\+\+REGLPF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gacf40639ccc37047134236f3576c357d5}{PWR\+\_\+\+FLAG\+\_\+\+REGMRS}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae11f1f8e8216fb1472f2ad97cf1a8c9e}{PWR\+\_\+\+SR2\+\_\+\+REGMRS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gaf2e433473a2382cc4c752abaaeb1d3bc}{PWR\+\_\+\+FLAG\+\_\+\+FLASHRDY}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gadf53b0ecf9d437268ff9fe3bc773e228}{PWR\+\_\+\+SR2\+\_\+\+FLASHRDY\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gadad469c6c3a277918f869cd20613b3a9}{PWR\+\_\+\+FLAG\+\_\+\+VOSF}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gadb351da51286ac6ecef463e03c665e85}{PWR\+\_\+\+SR2\+\_\+\+VOSF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gaefd05d58cc050eeef83a1b5c520b2c2a}{PWR\+\_\+\+FLAG\+\_\+\+PVDO}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeee1497d70f726a937ae20688e75f23a}{PWR\+\_\+\+SR2\+\_\+\+PVDO\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga383cf87db3c18c7e15cf048ecc4a329e}{PWR\+\_\+\+FLAG\+\_\+\+PVMO3}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gae8f456297caa1bdf56316aeaeeb2eae4}{PWR\+\_\+\+SR2\+\_\+\+PVMO3\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga52b0d56fa90b07d7495ee544f79f34f1}{PWR\+\_\+\+FLAG\+\_\+\+RFEOL}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gadb45c348423b8662b0768e6886caf5bc}{PWR\+\_\+\+SR2\+\_\+\+RFEOLF\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga19e7388c109b5211fb4efef6860b6478}{PWR\+\_\+\+FLAG\+\_\+\+RFBUSYS}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga89b01f500621789caca89283dccaa5e6}{PWR\+\_\+\+SR2\+\_\+\+RFBUSYS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gae12f694849470ff6b579dfcb33c4d7cd}{PWR\+\_\+\+FLAG\+\_\+\+RFBUSYMS}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga75b5668f5effb0d9d1415ed1d11eb181}{PWR\+\_\+\+SR2\+\_\+\+RFBUSYMS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga93f5155b54198ad94729e62bdc4614c3}{PWR\+\_\+\+FLAG\+\_\+\+C2\+BOOTS}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_gaf998ce81a8491a45d47084069f9c599d}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+SR2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaeea9719ea888fbfaa014399a04e22c6a}{PWR\+\_\+\+SR2\+\_\+\+C2\+BOOTS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}{PWR\+\_\+\+FLAG\+\_\+\+SB}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga06165d132b35b848eddcad074dda3deb}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+EXTSCR}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaf96740b96b58c5cb9696c5ca1a62cefa}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+SBF\+\_\+\+Pos}} \texorpdfstring{$\vert$}{|} (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga99a4231ad1f5c78ad4ab251316ce891b}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+CSSF\+\_\+\+Pos}} $<$$<$ \mbox{\hyperlink{group__PWR__FLAG__REG_gaa4bb234689287bec1d3d988accb2db28}{PWR\+\_\+\+FLAG\+\_\+\+EXTSCR\+\_\+\+CLR\+\_\+\+POS}}))
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga9b4b3a082c0903f872ee9f19af3e29bc}{PWR\+\_\+\+FLAG\+\_\+\+STOP2}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga06165d132b35b848eddcad074dda3deb}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+EXTSCR}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6eaa453ab7127f1a916733ee64ea38e6}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+STOP2\+F\+\_\+\+Pos}} \texorpdfstring{$\vert$}{|} (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga99a4231ad1f5c78ad4ab251316ce891b}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+CSSF\+\_\+\+Pos}} $<$$<$ \mbox{\hyperlink{group__PWR__FLAG__REG_gaa4bb234689287bec1d3d988accb2db28}{PWR\+\_\+\+FLAG\+\_\+\+EXTSCR\+\_\+\+CLR\+\_\+\+POS}}))
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga57b0807c3ba84a4195679c06afc79ad2}{PWR\+\_\+\+FLAG\+\_\+\+STOP}}~(\mbox{\hyperlink{group__PWR__FLAG__REG_ga06165d132b35b848eddcad074dda3deb}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+EXTSCR}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga947c79ff9864f33d3def7b8f93c48d89}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+STOPF\+\_\+\+Pos}} \texorpdfstring{$\vert$}{|} (\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga99a4231ad1f5c78ad4ab251316ce891b}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+CSSF\+\_\+\+Pos}} $<$$<$ \mbox{\hyperlink{group__PWR__FLAG__REG_gaa4bb234689287bec1d3d988accb2db28}{PWR\+\_\+\+FLAG\+\_\+\+EXTSCR\+\_\+\+CLR\+\_\+\+POS}}))
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_gaef17b2925b605d3d32fc5e1bf4efb657}{PWR\+\_\+\+FLAG\+\_\+\+LPMODES}}~(\mbox{\hyperlink{group__PWREx__Flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}{PWR\+\_\+\+FLAG\+\_\+\+SB}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Flag_ga1236c74287e27b01dd1dffa49870b7aa}{PWR\+\_\+\+FLAG\+\_\+\+C1\+DEEPSLEEP}}~(\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_gaa4a374cf461e3d4aef4c1e189960fb47}{PWR\+\_\+\+EXTSCR\+\_\+\+C1\+DS\+\_\+\+Pos}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group__PWR__FLAG__REG_ga06165d132b35b848eddcad074dda3deb}{PWR\+\_\+\+FLAG\+\_\+\+REG\+\_\+\+EXTSCR}})
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Core__Select_ga3b463c61bb21ff0ea4d3d7c7df607b77}{PWR\+\_\+\+CORE\+\_\+\+CPU1}}~(0x00000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}}~(LL\+\_\+\+EXTI\+\_\+\+LINE\+\_\+34)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_gab3b372913143c1f67eb2e0329d1d72a2}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~LL\+\_\+\+EXTI\+\_\+\+Enable\+IT\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Enable the PVM3 Extended Interrupt line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga8c2594b9089a0b878aa7dfdf7b84e8db}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~LL\+\_\+\+EXTI\+\_\+\+Disable\+IT\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Disable the PVM3 Extended Interrupt line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga891a484cd03153eaf3a0fe3e49f8b624}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~LL\+\_\+\+EXTI\+\_\+\+Enable\+Event\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Enable the PVM3 Event line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga08575b1941c0e2ef17565ba079b3281a}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~LL\+\_\+\+EXTI\+\_\+\+Disable\+Event\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Disable the PVM3 Event line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga63d7fb72a47f5f94884b19d244d024e7}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Enable\+Falling\+Trig\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Enable the PVM3 Extended Interrupt Rising Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_gaac446f9119998abbf6d6c727e69229ee}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Disable\+Falling\+Trig\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Disable the PVM3 Extended Interrupt Rising Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_gae3ee5db9130faf21f6902a2f0e11ba62}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+FALLING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Enable\+Rising\+Trig\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Enable the PVM3 Extended Interrupt Falling Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga4c997b83049e40ba993babdc40f70154}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+FALLING\+\_\+\+EDGE}}()~LL\+\_\+\+EXTI\+\_\+\+Disable\+Rising\+Trig\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Disable the PVM3 Extended Interrupt Falling Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga68b1a9fd384a820743fa60be3053f096}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}}()
+\begin{DoxyCompactList}\small\item\em PVM3 EXTI line configuration\+: set rising \& falling edge trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga7b05eac4fa0417770c1820d3d4746e05}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}}()
+\begin{DoxyCompactList}\small\item\em Disable the PVM3 Extended Interrupt Rising \& Falling Trigger. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga9c71f477b883e0a718c820fe8091ec5d}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+GENERATE\+\_\+\+SWIT}}()~LL\+\_\+\+EXTI\+\_\+\+Generate\+SWI\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Generate a Software interrupt on selected EXTI line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga694cca021af0cb428a962525e773bb02}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+GET\+\_\+\+FLAG}}()~LL\+\_\+\+EXTI\+\_\+\+Read\+Flag\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Check whether the specified PVM3 EXTI interrupt flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga372d2bbe37a6db92ba6834ea7ceda508}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+PVM3\+\_\+\+EXTI\+\_\+\+CLEAR\+\_\+\+FLAG}}()~LL\+\_\+\+EXTI\+\_\+\+Clear\+Flag\+\_\+32\+\_\+63(\mbox{\hyperlink{group__PWREx__PVM__EXTI__LINE_ga26d9b5633a2f47978a01773324b23383}{PWR\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+PVM3}})
+\begin{DoxyCompactList}\small\item\em Clear the PVM3 EXTI flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Exported__Macros_ga1ee778f7ff494723bd0ef04ec44b0f77}{\+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+VOLTAGESCALING\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+REGULATOR\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Configure the main internal regulator output voltage. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_gac6fcc59d6ff95b8feda1b228517f9c3f}{IS\+\_\+\+PWR\+\_\+\+WAKEUP\+\_\+\+PIN}}(PIN)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga2ca346be5c7164d2f89e2d8c089163fa}{IS\+\_\+\+PWR\+\_\+\+PVM\+\_\+\+TYPE}}(\+\_\+\+\_\+\+TYPE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+TYPE\+\_\+\+\_\+) == \mbox{\hyperlink{group__PWREx__PVM__Type_ga9690d421376ae26081cb09a9cca14d29}{PWR\+\_\+\+PVM\+\_\+3}}))
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga3fdff82a86fc43bad8975e531ba14d19}{IS\+\_\+\+PWR\+\_\+\+PVM\+\_\+\+MODE}}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga0f2481ecabd15fce28fa073838985894}{IS\+\_\+\+PWR\+\_\+\+FLASH\+\_\+\+POWERDOWN}}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_gaf6e000967314ce201c4602b4555750e6}{IS\+\_\+\+PWR\+\_\+\+VOLTAGE\+\_\+\+SCALING\+\_\+\+RANGE}}(\+\_\+\+\_\+\+RANGE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga271976c1e479959e9f5a23c61745ab3a}{IS\+\_\+\+PWR\+\_\+\+BATTERY\+\_\+\+RESISTOR\+\_\+\+SELECT}}(\+\_\+\+\_\+\+RESISTOR\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_gaf374c5b84819c81980d9256efaa8139f}{IS\+\_\+\+PWR\+\_\+\+BATTERY\+\_\+\+CHARGING}}(\+\_\+\+\_\+\+CHARGING\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga63bba0938dd122a0a9d612fd473342dd}{IS\+\_\+\+PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+\+NUMBER}}(\+\_\+\+\_\+\+BIT\+\_\+\+NUMBER\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+BIT\+\_\+\+NUMBER\+\_\+\+\_\+) \& \mbox{\hyperlink{group__GPIO__pins_gab135afee57cdef0f647ab153f88b6d2f}{GPIO\+\_\+\+PIN\+\_\+\+MASK}}) != (uint32\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga993e3325f8c019aae05694e16afab13a}{IS\+\_\+\+PWR\+\_\+\+GPIO}}(\+\_\+\+\_\+\+GPIO\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga8b4dd9bc97cf7141bf38e8d88a4c6668}{IS\+\_\+\+PWR\+\_\+\+SMPS\+\_\+\+MODE}}(\+\_\+\+\_\+\+SMPS\+\_\+\+MODE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga0fa86a5bfcee5cebd33ff4fa55bc14a4}{IS\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+POLARITY}}(\+\_\+\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+POLARITY\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga3385f0b36f4059f17ff75e1fee5275b0}{IS\+\_\+\+PWR\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+TRIGGER}}(\+\_\+\+\_\+\+RADIO\+\_\+\+BUSY\+\_\+\+TRIGGER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga1496148f3b95191910b8f9351775194f}{IS\+\_\+\+RADIO\+\_\+\+IRQ\+\_\+\+TRIGGER}}(\+\_\+\+\_\+\+RADIO\+\_\+\+IRQ\+\_\+\+TRIGGER\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__PWREx__Private__Macros_ga70867c46ada43b316852f92f5aaf2a8f}{IS\+\_\+\+PWR\+\_\+\+CORE}}(\+\_\+\+\_\+\+CPU\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+CPU\+\_\+\+\_\+) == \mbox{\hyperlink{group__PWREx__Core__Select_ga3b463c61bb21ff0ea4d3d7c7df607b77}{PWR\+\_\+\+CORE\+\_\+\+CPU1}}))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga2978c7160c8d166f1bf2bf39e4bf33f7}{HAL\+\_\+\+PWREx\+\_\+\+Get\+Voltage\+Range}} (void)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga1a1e616641c2dc696681ace585d9afb5}{HAL\+\_\+\+PWREx\+\_\+\+Control\+Voltage\+Scaling}} (uint32\+\_\+t Voltage\+Scaling)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gabc3f2197ca4d8879dabb76d5cc4bc442}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+Battery\+Charging}} (uint32\+\_\+t Resistor\+Selection)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga808f86f6f56f380c9863dee7ddf5bff5}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+Battery\+Charging}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3cfe7616c39b0c8524bdad2290e508b0}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+Internal\+Wake\+Up\+Line}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga32380a9c44681d7a53212adf35cdc16f}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+Internal\+Wake\+Up\+Line}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga2afef3490d23c3c9b7ef08101796d494}{HAL\+\_\+\+PWREx\+\_\+\+Set\+Radio\+Busy\+Polarity}} (uint32\+\_\+t Radio\+Busy\+Polarity)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga81688a8f71fc419395661a2d516424ad}{HAL\+\_\+\+PWREx\+\_\+\+Set\+Radio\+Busy\+Trigger}} (uint32\+\_\+t Radio\+Busy\+Trigger)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaab43db11012e264b37bab04daaa27730}{HAL\+\_\+\+PWREx\+\_\+\+Set\+Radio\+IRQTrigger}} (uint32\+\_\+t Radio\+IRQTrigger)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gad59ef8202f89903edb81ec38b0e6147a}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+HOLDC2\+IT}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaf4eb271ed4809ff80c839561d62fafbe}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+HOLDC2\+IT}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gada1765504b5a6d0f5d13152693332f23}{HAL\+\_\+\+PWREx\+\_\+\+Hold\+Core}} (uint32\+\_\+t CPU)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gae914bc76331d51b678e02b81cdc633dc}{HAL\+\_\+\+PWREx\+\_\+\+Release\+Core}} (uint32\+\_\+t CPU)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga1c66e7444ac70938c6e7a107212c62f5}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+GPIOPull\+Up}} (uint32\+\_\+t GPIO, uint32\+\_\+t GPIONumber)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gad3e402154b79e7f56c4f526d3c9d12d3}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+GPIOPull\+Up}} (uint32\+\_\+t GPIO, uint32\+\_\+t GPIONumber)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaacf48e452bfd1b111fcb9dd4be19774e}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+GPIOPull\+Down}} (uint32\+\_\+t GPIO, uint32\+\_\+t GPIONumber)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3313d923ce8e87302a066fc5a31bf3dc}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+GPIOPull\+Down}} (uint32\+\_\+t GPIO, uint32\+\_\+t GPIONumber)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gac3b0e88b0d5af66f04a4fe79295f8a47}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+Pull\+Up\+Pull\+Down\+Config}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaac0bbd32fc0ef037024720692f190f64}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+Pull\+Up\+Pull\+Down\+Config}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga7160386fe526fbeb72d6d74f71f225c9}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+SRAMRetention}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga9eb7dac4f781b8e49ee4b1fd9d5af014}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+SRAMRetention}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3712f4a4b5b492864fbb206763426428}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+Flash\+Power\+Down}} (uint32\+\_\+t Power\+Mode)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga283979e2c9117c27dfacc38161ac100b}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+Flash\+Power\+Down}} (uint32\+\_\+t Power\+Mode)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga304c96c00856fa403922a589f206f742}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+WPVD}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga4ee59416a466348c2c58d27e756bca37}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+WPVD}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga70064db60f675e8e66e4dc5f31b0e2f7}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+BORPVD\+\_\+\+ULP}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga05f64d3c2091d5f5fbf3ce9bbe2e64c5}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+BORPVD\+\_\+\+ULP}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gae4cc99f355694c08c6550295cc098a80}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+PVM3}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga8a83216a3ae9f69d410b77c9b94bc383}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+PVM3}} (void)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga179ab0cb7ce421759273f0ab80a64f2f}{HAL\+\_\+\+PWREx\+\_\+\+Config\+PVM}} (\mbox{\hyperlink{structPWR__PVMTypeDef}{PWR\+\_\+\+PVMType\+Def}} \texorpdfstring{$\ast$}{*}s\+Config\+PVM)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gac2c18f97d5c335fdded411071e39daba}{HAL\+\_\+\+PWREx\+\_\+\+Set\+Radio\+EOL}} (uint32\+\_\+t Radio\+EOL)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga30dca54dfd1e54f1a9dd7e30dc6ec1d8}{HAL\+\_\+\+PWREx\+\_\+\+SMPS\+\_\+\+Set\+Mode}} (uint32\+\_\+t Operating\+Mode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga6f37d74248bcf03a835a96b6bc95e25f}{HAL\+\_\+\+PWREx\+\_\+\+SMPS\+\_\+\+Get\+Effective\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga03d018969b6940092bb32a3869b8c84e}{HAL\+\_\+\+PWREx\+\_\+\+Enable\+Low\+Power\+Run\+Mode}} (void)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga848ac532d5c69ae9357a8ebcd8bb82f1}{HAL\+\_\+\+PWREx\+\_\+\+Disable\+Low\+Power\+Run\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaaf42742d4b4331ef39167ce91872a6c8}{HAL\+\_\+\+PWREx\+\_\+\+Enter\+STOP0\+Mode}} (uint8\+\_\+t STOPEntry)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga3a51da1f13d37cb1aee7a08c5ec57fb2}{HAL\+\_\+\+PWREx\+\_\+\+Enter\+STOP1\+Mode}} (uint8\+\_\+t STOPEntry)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gaba025702128d5e2f1dc5f1aef3bbc360}{HAL\+\_\+\+PWREx\+\_\+\+Enter\+STOP2\+Mode}} (uint8\+\_\+t STOPEntry)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_gab51ca7c536b8afc1bae6b96e00a1949f}{HAL\+\_\+\+PWREx\+\_\+\+Enter\+SHUTDOWNMode}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga41c9c878f0029884898463e9fe6bdff2}{HAL\+\_\+\+PWREx\+\_\+\+PVD\+\_\+\+PVM\+\_\+\+IRQHandler}} (void)
+\item 
+void \mbox{\hyperlink{group__PWREx__Exported__Functions__Group1_ga6c2197cf7c7507a0b6ec689b5e9bcfbc}{HAL\+\_\+\+PWREx\+\_\+\+PVM3\+Callback}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of PWR HAL Extended module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__pwr__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h}}.
+

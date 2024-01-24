@@ -1,0 +1,369 @@
+\doxysection{MEMS/\+Target/custom\+\_\+mems\+\_\+control\+\_\+ex.c File Reference}
+\hypertarget{custom__mems__control__ex_8c}{}\label{custom__mems__control__ex_8c}\index{MEMS/Target/custom\_mems\_control\_ex.c@{MEMS/Target/custom\_mems\_control\_ex.c}}
+
+
+This file contains the MEMS sensors interface for custom board.  
+
+
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+conf.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+conf\+\_\+app.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+control\+\_\+ex.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_a92ae35af0f07798ef7e68b4101a6a152}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Read\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the register value from accelerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_afcb7fdf81649c5ffbb69c6cbdc6de944}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Read\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the register value from gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_ab1c7a4fb5cee2dca4083c868e2c9f293}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Read\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the register value from magnetometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_ae42b550130f82d7849434f8724bf45fb}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Read\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the register value from pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_a90a0c0e8719a2f1bf416bbedf7966acc}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Read\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the register value from temperature sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_a4ec00a04b18bfc3fc1f569e27bb5e9c8}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Read\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the register value from humidity sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_ae433bb5b1d71eb5b57759b68ccbf6584}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Write\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the register value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_afdd9036257f2a144effeb2b2fc76fdc6}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Write\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the register value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_a06ffe6fd0287d6e6942a712730737f92}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Write\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the register value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_aeded00e78776d208bd466eda83f5771f}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Write\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the register value in pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_a74f58a5218b3d016fa0c11787190785c}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Write\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the register value in temperature sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control__ex_8c_ab7d9bb462a4f89c6a239b1868272f91c}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Write\+\_\+\+Register}} (uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the register value in humidity sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the MEMS sensors interface for custom board. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{custom__mems__control__ex_8c_a92ae35af0f07798ef7e68b4101a6a152}\label{custom__mems__control__ex_8c_a92ae35af0f07798ef7e68b4101a6a152} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_ACC\_Read\_Register@{BSP\_SENSOR\_ACC\_Read\_Register}}
+\index{BSP\_SENSOR\_ACC\_Read\_Register@{BSP\_SENSOR\_ACC\_Read\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_Read\_Register()}{BSP\_SENSOR\_ACC\_Read\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Read\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get the register value from accelerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00030}{30}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_ae433bb5b1d71eb5b57759b68ccbf6584}\label{custom__mems__control__ex_8c_ae433bb5b1d71eb5b57759b68ccbf6584} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_ACC\_Write\_Register@{BSP\_SENSOR\_ACC\_Write\_Register}}
+\index{BSP\_SENSOR\_ACC\_Write\_Register@{BSP\_SENSOR\_ACC\_Write\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_Write\_Register()}{BSP\_SENSOR\_ACC\_Write\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Write\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Set the register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00132}{132}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_afcb7fdf81649c5ffbb69c6cbdc6de944}\label{custom__mems__control__ex_8c_afcb7fdf81649c5ffbb69c6cbdc6de944} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_GYR\_Read\_Register@{BSP\_SENSOR\_GYR\_Read\_Register}}
+\index{BSP\_SENSOR\_GYR\_Read\_Register@{BSP\_SENSOR\_GYR\_Read\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_Read\_Register()}{BSP\_SENSOR\_GYR\_Read\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Read\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get the register value from gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00051}{51}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_afdd9036257f2a144effeb2b2fc76fdc6}\label{custom__mems__control__ex_8c_afdd9036257f2a144effeb2b2fc76fdc6} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_GYR\_Write\_Register@{BSP\_SENSOR\_GYR\_Write\_Register}}
+\index{BSP\_SENSOR\_GYR\_Write\_Register@{BSP\_SENSOR\_GYR\_Write\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_Write\_Register()}{BSP\_SENSOR\_GYR\_Write\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Write\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Set the register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00153}{153}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_a4ec00a04b18bfc3fc1f569e27bb5e9c8}\label{custom__mems__control__ex_8c_a4ec00a04b18bfc3fc1f569e27bb5e9c8} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_HUM\_Read\_Register@{BSP\_SENSOR\_HUM\_Read\_Register}}
+\index{BSP\_SENSOR\_HUM\_Read\_Register@{BSP\_SENSOR\_HUM\_Read\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_Read\_Register()}{BSP\_SENSOR\_HUM\_Read\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Read\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get the register value from humidity sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00117}{117}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_ab7d9bb462a4f89c6a239b1868272f91c}\label{custom__mems__control__ex_8c_ab7d9bb462a4f89c6a239b1868272f91c} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_HUM\_Write\_Register@{BSP\_SENSOR\_HUM\_Write\_Register}}
+\index{BSP\_SENSOR\_HUM\_Write\_Register@{BSP\_SENSOR\_HUM\_Write\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_Write\_Register()}{BSP\_SENSOR\_HUM\_Write\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Write\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Set the register value in humidity sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00219}{219}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_ab1c7a4fb5cee2dca4083c868e2c9f293}\label{custom__mems__control__ex_8c_ab1c7a4fb5cee2dca4083c868e2c9f293} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_MAG\_Read\_Register@{BSP\_SENSOR\_MAG\_Read\_Register}}
+\index{BSP\_SENSOR\_MAG\_Read\_Register@{BSP\_SENSOR\_MAG\_Read\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_Read\_Register()}{BSP\_SENSOR\_MAG\_Read\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Read\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get the register value from magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00066}{66}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_a06ffe6fd0287d6e6942a712730737f92}\label{custom__mems__control__ex_8c_a06ffe6fd0287d6e6942a712730737f92} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_MAG\_Write\_Register@{BSP\_SENSOR\_MAG\_Write\_Register}}
+\index{BSP\_SENSOR\_MAG\_Write\_Register@{BSP\_SENSOR\_MAG\_Write\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_Write\_Register()}{BSP\_SENSOR\_MAG\_Write\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Write\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Set the register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00168}{168}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_ae42b550130f82d7849434f8724bf45fb}\label{custom__mems__control__ex_8c_ae42b550130f82d7849434f8724bf45fb} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_PRESS\_Read\_Register@{BSP\_SENSOR\_PRESS\_Read\_Register}}
+\index{BSP\_SENSOR\_PRESS\_Read\_Register@{BSP\_SENSOR\_PRESS\_Read\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_Read\_Register()}{BSP\_SENSOR\_PRESS\_Read\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Read\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get the register value from pressure sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00081}{81}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_aeded00e78776d208bd466eda83f5771f}\label{custom__mems__control__ex_8c_aeded00e78776d208bd466eda83f5771f} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_PRESS\_Write\_Register@{BSP\_SENSOR\_PRESS\_Write\_Register}}
+\index{BSP\_SENSOR\_PRESS\_Write\_Register@{BSP\_SENSOR\_PRESS\_Write\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_Write\_Register()}{BSP\_SENSOR\_PRESS\_Write\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Write\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Set the register value in pressure sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00183}{183}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_a90a0c0e8719a2f1bf416bbedf7966acc}\label{custom__mems__control__ex_8c_a90a0c0e8719a2f1bf416bbedf7966acc} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_TEMP\_Read\_Register@{BSP\_SENSOR\_TEMP\_Read\_Register}}
+\index{BSP\_SENSOR\_TEMP\_Read\_Register@{BSP\_SENSOR\_TEMP\_Read\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_Read\_Register()}{BSP\_SENSOR\_TEMP\_Read\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Read\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data }\end{DoxyParamCaption})}
+
+
+
+Get the register value from temperature sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00096}{96}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+
+\Hypertarget{custom__mems__control__ex_8c_a74f58a5218b3d016fa0c11787190785c}\label{custom__mems__control__ex_8c_a74f58a5218b3d016fa0c11787190785c} 
+\index{custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}!BSP\_SENSOR\_TEMP\_Write\_Register@{BSP\_SENSOR\_TEMP\_Write\_Register}}
+\index{BSP\_SENSOR\_TEMP\_Write\_Register@{BSP\_SENSOR\_TEMP\_Write\_Register}!custom\_mems\_control\_ex.c@{custom\_mems\_control\_ex.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_Write\_Register()}{BSP\_SENSOR\_TEMP\_Write\_Register()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Write\+\_\+\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Set the register value in temperature sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control__ex_8c_source_l00198}{198}} of file \mbox{\hyperlink{custom__mems__control__ex_8c_source}{custom\+\_\+mems\+\_\+control\+\_\+ex.\+c}}.
+

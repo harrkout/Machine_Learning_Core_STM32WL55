@@ -1,0 +1,294 @@
+\doxysubsubsubsection{RTCEx tamper}
+\hypertarget{group__RTCEx__Tamper}{}\label{group__RTCEx__Tamper}\index{RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga8a604eaec4fe8a5e7c3403d570e640b4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$CR1 \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the TAMP Tamper input detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga51dbacc8035bf3b5127e8d16282e2017}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$CR1 \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the TAMP Tamper input detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga5897843380c7fcf865131c6bdb0fc3a1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the TAMP Tamper interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga669a86ef4feb560e2059bf8cfe4fa253}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the TAMP Tamper interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga20424c15833e5665016e87d1c8a0fdf4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$MISR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Tamper interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gae1de3775214da8d45c4625d4ad2b6f28}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Tamper interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gafc2d73770375bd10cf6e4faa11adc7b1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$SR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Tampers flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gade364b4cf1214d66463c9fa4ce667095}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$SCR) = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Tamper\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga4aa5d8461ac922bea052db89234c623b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga0e88f257ee9ba052550d8b47ffc17369}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}}))
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_gaf5af2fdddc0aab72132dfc1c7b4a826a}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}})
+\item 
+\#define \mbox{\hyperlink{group__RTCEx__Tamper_ga3b25cfb5b0ff86d89a00732a5e5802ad}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}}()~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsubsection{Macro Definition Documentation}
+\Hypertarget{group__RTCEx__Tamper_gade364b4cf1214d66463c9fa4ce667095}\label{group__RTCEx__Tamper_gade364b4cf1214d66463c9fa4ce667095} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_CLEAR\_FLAG@{\_\_HAL\_RTC\_TAMPER\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_TAMPER\_CLEAR\_FLAG@{\_\_HAL\_RTC\_TAMPER\_CLEAR\_FLAG}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_CLEAR\_FLAG}{\_\_HAL\_RTC\_TAMPER\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$SCR) = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)))}
+
+
+
+Clear the RTC Tamper\textquotesingle{}s pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the RTC Tamper Flag to clear. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+\+ALL\+: All tampers flag \item RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+1\+: Tamper1 flag \item RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+2\+: Tamper2 flag \item RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+3\+: Tamper3 flag \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL\+: All Internal Tamper flags \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l01004}{1004}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga51dbacc8035bf3b5127e8d16282e2017}\label{group__RTCEx__Tamper_ga51dbacc8035bf3b5127e8d16282e2017} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_DISABLE@{\_\_HAL\_RTC\_TAMPER\_DISABLE}}
+\index{\_\_HAL\_RTC\_TAMPER\_DISABLE@{\_\_HAL\_RTC\_TAMPER\_DISABLE}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_DISABLE}{\_\_HAL\_RTC\_TAMPER\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$CR1 \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+))}
+
+
+
+Disable the TAMP Tamper input detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+} & specifies the RTC Tamper sources to be enabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+TAMPER\+\_\+\+ALL\+: All tampers \item RTC\+\_\+\+TAMPER\+\_\+1\+: Tamper1 \item RTC\+\_\+\+TAMPER\+\_\+2\+: Tamper2 \item RTC\+\_\+\+TAMPER\+\_\+3\+: Tamper3 \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL\+: All Internal Tamper interrupts \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00892}{892}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga669a86ef4feb560e2059bf8cfe4fa253}\label{group__RTCEx__Tamper_ga669a86ef4feb560e2059bf8cfe4fa253} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_DISABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_TAMPER\_DISABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_DISABLE\_IT}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_DISABLE\_IT}{\_\_HAL\_RTC\_TAMPER\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER \&= \texorpdfstring{$\sim$}{\string~}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable the TAMP Tamper interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Tamper interrupt sources to be disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+\+ALL\+: All tampers interrupts \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+1\+: Tamper1 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+2\+: Tamper2 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+3\+: Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL\+: All Internal Tamper interrupts \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00930}{930}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga8a604eaec4fe8a5e7c3403d570e640b4}\label{group__RTCEx__Tamper_ga8a604eaec4fe8a5e7c3403d570e640b4} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_ENABLE@{\_\_HAL\_RTC\_TAMPER\_ENABLE}}
+\index{\_\_HAL\_RTC\_TAMPER\_ENABLE@{\_\_HAL\_RTC\_TAMPER\_ENABLE}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_ENABLE}{\_\_HAL\_RTC\_TAMPER\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$CR1 \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+))}
+
+
+
+Enable the TAMP Tamper input detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+TAMPER\+\_\+\+\_\+} & specifies the RTC Tamper source to be enabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+TAMPER\+\_\+\+ALL\+: All tampers \item RTC\+\_\+\+TAMPER\+\_\+1\+: Tamper1 \item RTC\+\_\+\+TAMPER\+\_\+2\+: Tamper2 \item RTC\+\_\+\+TAMPER\+\_\+3\+: Tamper3 \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL\+: All Internal Tamper interrupts \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00875}{875}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga5897843380c7fcf865131c6bdb0fc3a1}\label{group__RTCEx__Tamper_ga5897843380c7fcf865131c6bdb0fc3a1} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_ENABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_TAMPER\_ENABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_ENABLE\_IT}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_ENABLE\_IT}{\_\_HAL\_RTC\_TAMPER\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER \texorpdfstring{$\vert$}{|}= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable the TAMP Tamper interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Tamper interrupt sources to be enabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+\+ALL\+: All tampers interrupts \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+1\+: Tamper1 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+2\+: Tamper2 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+3\+: Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL\+: All Internal Tamper interrupts \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00912}{912}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga3b25cfb5b0ff86d89a00732a5e5802ad}\label{group__RTCEx__Tamper_ga3b25cfb5b0ff86d89a00732a5e5802ad} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_EVENT}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_EVENT}{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_EVENT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l01017}{1017}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga0e88f257ee9ba052550d8b47ffc17369}\label{group__RTCEx__Tamper_ga0e88f257ee9ba052550d8b47ffc17369} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_IT}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_IT}{\_\_HAL\_RTC\_TAMPER\_EXTI\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \&= \texorpdfstring{$\sim$}{\string~}(\mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l01015}{1015}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_gaf5af2fdddc0aab72132dfc1c7b4a826a}\label{group__RTCEx__Tamper_gaf5af2fdddc0aab72132dfc1c7b4a826a} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_EVENT}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_EVENT}{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_EVENT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$EMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l01016}{1016}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga4aa5d8461ac922bea052db89234c623b}\label{group__RTCEx__Tamper_ga4aa5d8461ac922bea052db89234c623b} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_IT}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_IT}{\_\_HAL\_RTC\_TAMPER\_EXTI\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__Peripheral__declaration_ga9189e770cd9b63dadd36683eb9843cac}{EXTI}}-\/$>$IMR1 \texorpdfstring{$\vert$}{|}= \mbox{\hyperlink{group__RTCEx__Private__Constants_ga7e148b0a5e5964982aba483a5cc94831}{RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+TAMPER\+\_\+\+EVENT}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l01014}{1014}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_gafc2d73770375bd10cf6e4faa11adc7b1}\label{group__RTCEx__Tamper_gafc2d73770375bd10cf6e4faa11adc7b1} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_GET\_FLAG@{\_\_HAL\_RTC\_TAMPER\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_TAMPER\_GET\_FLAG@{\_\_HAL\_RTC\_TAMPER\_GET\_FLAG}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_GET\_FLAG}{\_\_HAL\_RTC\_TAMPER\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$SR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)}
+
+
+
+Get the selected RTC Tampers flag status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the RTC Tamper Flag is pending or not. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+1\+: Tamper1 flag \item RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+2\+: Tamper2 flag \item RTC\+\_\+\+FLAG\+\_\+\+TAMP\+\_\+3\+: Tamper3 flag \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+FLAG\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00986}{986}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_ga20424c15833e5665016e87d1c8a0fdf4}\label{group__RTCEx__Tamper_ga20424c15833e5665016e87d1c8a0fdf4} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_GET\_IT@{\_\_HAL\_RTC\_TAMPER\_GET\_IT}}
+\index{\_\_HAL\_RTC\_TAMPER\_GET\_IT@{\_\_HAL\_RTC\_TAMPER\_GET\_IT}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_GET\_IT}{\_\_HAL\_RTC\_TAMPER\_GET\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$MISR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)}
+
+
+
+Check whether the specified RTC Tamper interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Tamper interrupt to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+\+ALL\+: All tampers interrupts \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+1\+: Tamper1 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+2\+: Tamper2 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+3\+: Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL\+: All Internal Tamper interrupts \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00950}{950}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+
+\Hypertarget{group__RTCEx__Tamper_gae1de3775214da8d45c4625d4ad2b6f28}\label{group__RTCEx__Tamper_gae1de3775214da8d45c4625d4ad2b6f28} 
+\index{RTCEx tamper@{RTCEx tamper}!\_\_HAL\_RTC\_TAMPER\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_TAMPER\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_RTC\_TAMPER\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_TAMPER\_GET\_IT\_SOURCE}!RTCEx tamper@{RTCEx tamper}}
+\doxysubsubsubsubsubsection{\texorpdfstring{\_\_HAL\_RTC\_TAMPER\_GET\_IT\_SOURCE}{\_\_HAL\_RTC\_TAMPER\_GET\_IT\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\mbox{\hyperlink{group__Peripheral__declaration_gad3c4110792684d6735dab4cd8d25d5e6}{TAMP}}-\/$>$IER) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != 0U) ? 1UL \+: 0\+UL)}
+
+
+
+Check whether the specified RTC Tamper interrupt has been enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the RTC handle. \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the RTC Tamper interrupt source to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+\+ALL\+: All tampers interrupts \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+1\+: Tamper1 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+2\+: Tamper2 interrupt \item RTC\+\_\+\+IT\+\_\+\+TAMP\+\_\+3\+: Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+\+ALL\+: All internal tampers interrupts \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+3\+: Internal Tamper3 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+5\+: Internal Tamper5 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+6\+: Internal Tamper6 interrupt \item RTC\+\_\+\+IT\+\_\+\+INT\+\_\+\+TAMP\+\_\+8\+: Internal Tamper8 interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source_l00969}{969}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h}}.
+

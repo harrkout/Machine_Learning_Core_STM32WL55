@@ -1,0 +1,98 @@
+\doxysection{Middlewares/\+ST/\+STM32\+\_\+\+Motion\+FX\+\_\+\+Library/\+Inc/motion\+\_\+fx\+\_\+cm0p.h File Reference}
+\hypertarget{motion__fx__cm0p_8h}{}\label{motion__fx__cm0p_8h}\index{Middlewares/ST/STM32\_MotionFX\_Library/Inc/motion\_fx\_cm0p.h@{Middlewares/ST/STM32\_MotionFX\_Library/Inc/motion\_fx\_cm0p.h}}
+
+
+Header for motion\+\_\+fx\+\_\+cm0p module.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMFX__CM0P__input__t}{MFX\+\_\+\+CM0\+P\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMFX__CM0P__output__t}{MFX\+\_\+\+CM0\+P\+\_\+output\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMFX__CM0P__MagCal__input__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structMFX__CM0P__MagCal__output__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__MOTION__FX__CM0P_ga2fab98b1e5cf54cd7fc51a1061735456}{MFX\+\_\+\+CM0\+P\+\_\+mcu\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__FX__CM0P_gga2fab98b1e5cf54cd7fc51a1061735456a728c62a1f820d3c9839fa6cf2824e995}{MFX\+\_\+\+CM0\+P\+\_\+\+MCU\+\_\+\+STM32}} = 0
+, \mbox{\hyperlink{group__MOTION__FX__CM0P_gga2fab98b1e5cf54cd7fc51a1061735456a7f7ef2d80bfcdcaa9f8b3c8c1d08b561}{MFX\+\_\+\+CM0\+P\+\_\+\+MCU\+\_\+\+BLUE\+\_\+\+NRG1}}
+, \mbox{\hyperlink{group__MOTION__FX__CM0P_gga2fab98b1e5cf54cd7fc51a1061735456a537b91148481101d87bf437cb75cdcb1}{MFX\+\_\+\+CM0\+P\+\_\+\+MCU\+\_\+\+BLUE\+\_\+\+NRG2}}
+, \mbox{\hyperlink{group__MOTION__FX__CM0P_gga2fab98b1e5cf54cd7fc51a1061735456aa13ca13d748122ebac58f3d3f9dbe1e9}{MFX\+\_\+\+CM0\+P\+\_\+\+MCU\+\_\+\+BLUE\+\_\+\+NRG\+\_\+\+LP}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__FX__CM0P_ggabbe4061645b5a93d1a0f604d3b03576eaf264a9a69fdb140f73ff0e98b363e9ba}{MFX\+\_\+\+CM0\+P\+\_\+\+ENGINE\+\_\+\+DISABLE}} = 0
+, \mbox{\hyperlink{group__MOTION__FX__CM0P_ggabbe4061645b5a93d1a0f604d3b03576eaa9d2bd0a011f6fe1d804f18fc31437d9}{MFX\+\_\+\+CM0\+P\+\_\+\+ENGINE\+\_\+\+ENABLE}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{group__MOTION__FX__CM0P_ga01b0bd519875d360cab822c238d66c96}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+quality\+\_\+t}} \{ \mbox{\hyperlink{group__MOTION__FX__CM0P_gga01b0bd519875d360cab822c238d66c96a1c745a1dfbf64481cf41abfc54f6adb4}{MFX\+\_\+\+CM0\+P\+\_\+\+CALQSTATUSUNCALIBRATED}} = 0
+, \mbox{\hyperlink{group__MOTION__FX__CM0P_gga01b0bd519875d360cab822c238d66c96afbb81016dfd6947e0f27b4b7f6d42da4}{MFX\+\_\+\+CM0\+P\+\_\+\+CALQSTATUSPOOR}}
+, \mbox{\hyperlink{group__MOTION__FX__CM0P_gga01b0bd519875d360cab822c238d66c96a0e313cdf42fb86aa0c1d3af6cc5f4c28}{MFX\+\_\+\+CM0\+P\+\_\+\+CALQSTATUSGOOD}}
+, \mbox{\hyperlink{group__MOTION__FX__CM0P_gga01b0bd519875d360cab822c238d66c96acd3960f08e04496c3ba705c0a4a77956}{MFX\+\_\+\+CM0\+P\+\_\+\+CALQSTATUSBEST}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga8123d1276706a460225a478ac569f43e}{Motion\+FX\+\_\+\+CM0\+P\+\_\+initialize}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_ga2fab98b1e5cf54cd7fc51a1061735456}{MFX\+\_\+\+CM0\+P\+\_\+mcu\+\_\+type\+\_\+t}} mcu\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+FX\+\_\+\+CM0P engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaf93d85057a2d8f95a1d7d677b01d63e1}{Motion\+FX\+\_\+\+CM0\+P\+\_\+set\+Orientation}} (const char acc\+\_\+orientation\mbox{[}4\mbox{]}, const char gyro\+\_\+orientation\mbox{[}4\mbox{]}, const char mag\+\_\+orientation\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set sensor orientation, default orientation is ENU (x -\/ east, y -\/ north, z -\/ up) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gac9ecfc3200125777145e6508f9c207b7}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+6X}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the 6 axes library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga0f8177ac20ff2a23a56398ab26601541}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+9X}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the 9 axes library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga64babe5ade888f6991648a9645d33b84}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+euler}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the euler angles calculation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gafbeed2ddd8adae388ba46e5e6e7eb1ed}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+gbias}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the gyroscope calibration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaba38676cc8015b26fadf7c40ab918eab}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+6X}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 6 axes function (ACC + GYRO) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaddef529c333576b8daea68efb583b57e}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+9X}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 9 axes function (ACC + GYRO + MAG) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga7842b54c3cd0ffd807f0be72a0acbcb7}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+euler}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable euler angles calculation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gab010004e690a4e15c847a020d215f709}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+gbias}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable gyroscope calibration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gade0ea4e9e4ac0f7710b908a0189a397d}{Motion\+FX\+\_\+\+CM0\+P\+\_\+set\+Gbias}} (float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Set the initial gbias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga03a50865894bf5973eee339b346b365e}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Gbias}} (float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Get the initial gbias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaf81f34ad7094f2085df7880969b43fc6}{Motion\+FX\+\_\+\+CM0\+P\+\_\+update}} (\mbox{\hyperlink{structMFX__CM0P__output__t}{MFX\+\_\+\+CM0\+P\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, \mbox{\hyperlink{structMFX__CM0P__input__t}{MFX\+\_\+\+CM0\+P\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, float deltatime)
+\begin{DoxyCompactList}\small\item\em This function runs one step of the sensor fusion algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gae25cdadc43c5a3a3c360d394942d99bf}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+init}} (int sampletime, unsigned short int enable)
+\begin{DoxyCompactList}\small\item\em Initialize the compass calibration library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaae4fa9bfdfdd5148522cabd8246b430c}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+run}} (\mbox{\hyperlink{structMFX__CM0P__MagCal__input__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Run magnetic calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga28b0968da845893d3cc89e734803e338}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+get\+Params}} (\mbox{\hyperlink{structMFX__CM0P__MagCal__output__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Get magnetic calibration parameters. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga8bd3812eabe2680349203e0d491d6b9f}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Get\+Lib\+Version}} (char \texorpdfstring{$\ast$}{*}version)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for motion\+\_\+fx\+\_\+cm0p module. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+6.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10-\/August-\/2021 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2015-\/2017 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{motion__fx__cm0p_8h_source}{motion\+\_\+fx\+\_\+cm0p.\+h}}.
+

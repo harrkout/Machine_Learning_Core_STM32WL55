@@ -1,0 +1,102 @@
+\doxysection{Learning Core}
+\hypertarget{group__Machine}{}\label{group__Machine}\index{Learning Core@{Learning Core}}
+
+
+This section group all the functions concerning the usage of Machine Learning Core.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Machine_ga80e4be472244a23ee0dedcaaccb794ff}{lsm6dsox\+\_\+mlc\+\_\+status\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__mlc__status__mainpage__t}{lsm6dsox\+\_\+mlc\+\_\+status\+\_\+mainpage\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Machine Learning Core status register\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Machine_gac7778f1c6c8ddc1ac40b9122ad762f9c}{lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Machine Learning Core data rate selection.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Machine_ga20ff329837e8985dca729d3edffccd59}{lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Machine Learning Core data rate selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section group all the functions concerning the usage of Machine Learning Core. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__Machine_ga20ff329837e8985dca729d3edffccd59}\label{group__Machine_ga20ff329837e8985dca729d3edffccd59} 
+\index{Learning Core@{Learning Core}!lsm6dsox\_mlc\_data\_rate\_get@{lsm6dsox\_mlc\_data\_rate\_get}}
+\index{lsm6dsox\_mlc\_data\_rate\_get@{lsm6dsox\_mlc\_data\_rate\_get}!Learning Core@{Learning Core}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_data\_rate\_get()}{lsm6dsox\_mlc\_data\_rate\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Machine Learning Core data rate selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of mlc\+\_\+odr in reg EMB\+\_\+\+FUNC\+\_\+\+ODR\+\_\+\+CFG\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10034}{10034}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Machine_gac7778f1c6c8ddc1ac40b9122ad762f9c}\label{group__Machine_gac7778f1c6c8ddc1ac40b9122ad762f9c} 
+\index{Learning Core@{Learning Core}!lsm6dsox\_mlc\_data\_rate\_set@{lsm6dsox\_mlc\_data\_rate\_set}}
+\index{lsm6dsox\_mlc\_data\_rate\_set@{lsm6dsox\_mlc\_data\_rate\_set}!Learning Core@{Learning Core}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_data\_rate\_set()}{lsm6dsox\_mlc\_data\_rate\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Machine Learning Core data rate selection.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & get the values of mlc\+\_\+odr in reg EMB\+\_\+\+FUNC\+\_\+\+ODR\+\_\+\+CFG\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09996}{9996}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__Machine_ga80e4be472244a23ee0dedcaaccb794ff}\label{group__Machine_ga80e4be472244a23ee0dedcaaccb794ff} 
+\index{Learning Core@{Learning Core}!lsm6dsox\_mlc\_status\_get@{lsm6dsox\_mlc\_status\_get}}
+\index{lsm6dsox\_mlc\_status\_get@{lsm6dsox\_mlc\_status\_get}!Learning Core@{Learning Core}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_status\_get()}{lsm6dsox\_mlc\_status\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+status\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__mlc__status__mainpage__t}{lsm6dsox\+\_\+mlc\+\_\+status\+\_\+mainpage\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Machine Learning Core status register\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & register MLC\+\_\+\+STATUS\+\_\+\+MAINPAGE \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09980}{9980}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

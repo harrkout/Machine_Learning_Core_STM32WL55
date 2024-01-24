@@ -1,0 +1,1125 @@
+\doxysection{MEMS/\+Target/custom\+\_\+mems\+\_\+control.c File Reference}
+\hypertarget{custom__mems__control_8c}{}\label{custom__mems__control_8c}\index{MEMS/Target/custom\_mems\_control.c@{MEMS/Target/custom\_mems\_control.c}}
+
+
+This file contains the MEMS sensors interface for custom board.  
+
+
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+conf.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+conf\+\_\+app.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+control.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a493cf6d35e31a37b007a9d425db2084e}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes accelerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_aa74027284fbabf0a0df88993dd3cfe20}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a479a5b231946116c85e7a3abd16810b7}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes magnetometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ada0e34eb93d797b48b8455b87de6194d}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a6b8533a5553e2b34c4121d732a1f94bc}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes temperature sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a3fe0b96d3c068cc0e2959ac988fd26b1}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes humidity sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a7ae41a41e4dda79eefcdd415064e0e43}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables accelerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a81d4189aa01109319783e561f8ff27ec}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ab91da864b62db86ffe39dca34b809ef1}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables magnetometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ac31a534da603af82cbea2e81a5d8cbed}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a7dc09986995f9f42107f5ebe8be8a212}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables temperature sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a780139edfd8216665a27d69dbc40dee2}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables humidity sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a4cf50c5fa6c19c128cfc7afd2c957c02}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables accelerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a52f6080f0eff84639dfdc809c06d2883}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a06d959f0d05a71dc934cd86d75feb6f5}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables magnetometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a17b1aaa450a71c9b000e1b8b89c21862}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_aa0976f6b6c526d8d2dfa157113d39310}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables temperature sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a32da60d14961a761841b86ca2fe9fa39}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables humidity sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ad207eaa0dbebf93016a6b31bfe1abfe7}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Get\+Axes}} (\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Axes)
+\begin{DoxyCompactList}\small\item\em Get accelerometer data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a6ef6654b653c394442df4f5f1c75d6c9}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Get\+Axes}} (\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Axes)
+\begin{DoxyCompactList}\small\item\em Get gyroscope data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a84323cc59f9d8e1e071e730da1f8cc23}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Get\+Axes}} (\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Axes)
+\begin{DoxyCompactList}\small\item\em Get magnetometer data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a8fa35e3db752d729175dafde1dcf2282}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Get\+Value}} (float \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get pressure sensor data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a28dace814ef1c2d959a6d41aa0488d75}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Get\+Value}} (float \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get temperature sensor data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ae9e1ab33509258684c043c967adbe821}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Get\+Value}} (float \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get humidity sensor data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a03894cb736f2cbdc239bf1a967d03970}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate}} (float Odr)
+\begin{DoxyCompactList}\small\item\em Set output data rate for accelerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ab0c7a38b7d5380b147125d6eb396eb27}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Set\+Output\+Data\+Rate}} (float Odr)
+\begin{DoxyCompactList}\small\item\em Set output data rate for gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ae46d4df7e0ff8a25909619410b334e62}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Set\+Output\+Data\+Rate}} (float Odr)
+\begin{DoxyCompactList}\small\item\em Set output data rate for magnetometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_adc7336533ca8b940f14791e78c26679b}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Set\+Output\+Data\+Rate}} (float Odr)
+\begin{DoxyCompactList}\small\item\em Set output data rate for pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_af74731f0f34b02f663f7ad65930cd452}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Set\+Output\+Data\+Rate}} (float Odr)
+\begin{DoxyCompactList}\small\item\em Set output data rate for temperature sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a7b8226970a82503a56688781406ed47a}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Set\+Output\+Data\+Rate}} (float Odr)
+\begin{DoxyCompactList}\small\item\em Set output data rate for humidity sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_af29dafe2553cd8f48d6118dac09001b8}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Get\+Output\+Data\+Rate}} (float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get output data rate for accelerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a8816455d2acab67c1d0264f034bfe0c0}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Get\+Output\+Data\+Rate}} (float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get output data rate for gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a37882e578f5c2f692b164372412c7834}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Get\+Output\+Data\+Rate}} (float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get output data rate for magnetometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ae01439ba184da3ff2f4d68fe67f9b8f4}{BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Get\+Output\+Data\+Rate}} (float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get output data rate for pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a7e726dd34949f66b6b0b738d4825c636}{BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Get\+Output\+Data\+Rate}} (float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get output data rate for temperature sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a04c3347c5e5dc54ee2592c3dcdd73cfe}{BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Get\+Output\+Data\+Rate}} (float \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get output data rate for humidity sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_ac304f5b2aaa26e54363c24cc19058594}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Set\+Full\+Scale}} (int32\+\_\+t Fullscale)
+\begin{DoxyCompactList}\small\item\em Set full scale for acclerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a8bc32a702eef04a77a366b76d801e18b}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Set\+Full\+Scale}} (int32\+\_\+t Fullscale)
+\begin{DoxyCompactList}\small\item\em Set full scale for gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a9c40897f7081a12cbdd9674b39d9257f}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Set\+Full\+Scale}} (int32\+\_\+t Fullscale)
+\begin{DoxyCompactList}\small\item\em Set full scale for magnetometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_af2d791875a074ed66ea1448e2dafaceb}{BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Get\+Full\+Scale}} (int32\+\_\+t \texorpdfstring{$\ast$}{*}Fullscale)
+\begin{DoxyCompactList}\small\item\em Get full scale for acclerometer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a48808f6eeba73c5741e23afc7be0dc52}{BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Get\+Full\+Scale}} (int32\+\_\+t \texorpdfstring{$\ast$}{*}Fullscale)
+\begin{DoxyCompactList}\small\item\em Get full scale for gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{custom__mems__control_8c_a9d0624c1f1a0819401fd6b71f79fd808}{BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Get\+Full\+Scale}} (int32\+\_\+t \texorpdfstring{$\ast$}{*}Fullscale)
+\begin{DoxyCompactList}\small\item\em Get full scale for magnetometer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the MEMS sensors interface for custom board. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{custom__mems__control_8c_a4cf50c5fa6c19c128cfc7afd2c957c02}\label{custom__mems__control_8c_a4cf50c5fa6c19c128cfc7afd2c957c02} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_Disable@{BSP\_SENSOR\_ACC\_Disable}}
+\index{BSP\_SENSOR\_ACC\_Disable@{BSP\_SENSOR\_ACC\_Disable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_Disable()}{BSP\_SENSOR\_ACC\_Disable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables accelerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00220}{220}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a7ae41a41e4dda79eefcdd415064e0e43}\label{custom__mems__control_8c_a7ae41a41e4dda79eefcdd415064e0e43} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_Enable@{BSP\_SENSOR\_ACC\_Enable}}
+\index{BSP\_SENSOR\_ACC\_Enable@{BSP\_SENSOR\_ACC\_Enable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_Enable()}{BSP\_SENSOR\_ACC\_Enable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables accelerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00124}{124}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ad207eaa0dbebf93016a6b31bfe1abfe7}\label{custom__mems__control_8c_ad207eaa0dbebf93016a6b31bfe1abfe7} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_GetAxes@{BSP\_SENSOR\_ACC\_GetAxes}}
+\index{BSP\_SENSOR\_ACC\_GetAxes@{BSP\_SENSOR\_ACC\_GetAxes}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_GetAxes()}{BSP\_SENSOR\_ACC\_GetAxes()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Get\+Axes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Axes }\end{DoxyParamCaption})}
+
+
+
+Get accelerometer data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Axes} & pointer to axes data structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00316}{316}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_af2d791875a074ed66ea1448e2dafaceb}\label{custom__mems__control_8c_af2d791875a074ed66ea1448e2dafaceb} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_GetFullScale@{BSP\_SENSOR\_ACC\_GetFullScale}}
+\index{BSP\_SENSOR\_ACC\_GetFullScale@{BSP\_SENSOR\_ACC\_GetFullScale}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_GetFullScale()}{BSP\_SENSOR\_ACC\_GetFullScale()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Get\+Full\+Scale (\begin{DoxyParamCaption}\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Get full scale for acclerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fullscale} & Fullscale value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00676}{676}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_af29dafe2553cd8f48d6118dac09001b8}\label{custom__mems__control_8c_af29dafe2553cd8f48d6118dac09001b8} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_GetOutputDataRate@{BSP\_SENSOR\_ACC\_GetOutputDataRate}}
+\index{BSP\_SENSOR\_ACC\_GetOutputDataRate@{BSP\_SENSOR\_ACC\_GetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_GetOutputDataRate()}{BSP\_SENSOR\_ACC\_GetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Get output data rate for accelerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00532}{532}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a493cf6d35e31a37b007a9d425db2084e}\label{custom__mems__control_8c_a493cf6d35e31a37b007a9d425db2084e} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_Init@{BSP\_SENSOR\_ACC\_Init}}
+\index{BSP\_SENSOR\_ACC\_Init@{BSP\_SENSOR\_ACC\_Init}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_Init()}{BSP\_SENSOR\_ACC\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes accelerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00028}{28}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ac304f5b2aaa26e54363c24cc19058594}\label{custom__mems__control_8c_ac304f5b2aaa26e54363c24cc19058594} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_SetFullScale@{BSP\_SENSOR\_ACC\_SetFullScale}}
+\index{BSP\_SENSOR\_ACC\_SetFullScale@{BSP\_SENSOR\_ACC\_SetFullScale}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_SetFullScale()}{BSP\_SENSOR\_ACC\_SetFullScale()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Set\+Full\+Scale (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Set full scale for acclerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fullscale} & Fullscale value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00628}{628}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a03894cb736f2cbdc239bf1a967d03970}\label{custom__mems__control_8c_a03894cb736f2cbdc239bf1a967d03970} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_ACC\_SetOutputDataRate@{BSP\_SENSOR\_ACC\_SetOutputDataRate}}
+\index{BSP\_SENSOR\_ACC\_SetOutputDataRate@{BSP\_SENSOR\_ACC\_SetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_ACC\_SetOutputDataRate()}{BSP\_SENSOR\_ACC\_SetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set output data rate for accelerometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00436}{436}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a52f6080f0eff84639dfdc809c06d2883}\label{custom__mems__control_8c_a52f6080f0eff84639dfdc809c06d2883} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_Disable@{BSP\_SENSOR\_GYR\_Disable}}
+\index{BSP\_SENSOR\_GYR\_Disable@{BSP\_SENSOR\_GYR\_Disable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_Disable()}{BSP\_SENSOR\_GYR\_Disable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00240}{240}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a81d4189aa01109319783e561f8ff27ec}\label{custom__mems__control_8c_a81d4189aa01109319783e561f8ff27ec} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_Enable@{BSP\_SENSOR\_GYR\_Enable}}
+\index{BSP\_SENSOR\_GYR\_Enable@{BSP\_SENSOR\_GYR\_Enable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_Enable()}{BSP\_SENSOR\_GYR\_Enable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00144}{144}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a6ef6654b653c394442df4f5f1c75d6c9}\label{custom__mems__control_8c_a6ef6654b653c394442df4f5f1c75d6c9} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_GetAxes@{BSP\_SENSOR\_GYR\_GetAxes}}
+\index{BSP\_SENSOR\_GYR\_GetAxes@{BSP\_SENSOR\_GYR\_GetAxes}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_GetAxes()}{BSP\_SENSOR\_GYR\_GetAxes()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Get\+Axes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Axes }\end{DoxyParamCaption})}
+
+
+
+Get gyroscope data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Axes} & pointer to axes data structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00344}{344}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a48808f6eeba73c5741e23afc7be0dc52}\label{custom__mems__control_8c_a48808f6eeba73c5741e23afc7be0dc52} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_GetFullScale@{BSP\_SENSOR\_GYR\_GetFullScale}}
+\index{BSP\_SENSOR\_GYR\_GetFullScale@{BSP\_SENSOR\_GYR\_GetFullScale}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_GetFullScale()}{BSP\_SENSOR\_GYR\_GetFullScale()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Get\+Full\+Scale (\begin{DoxyParamCaption}\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Get full scale for gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fullscale} & Fullscale value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00696}{696}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a8816455d2acab67c1d0264f034bfe0c0}\label{custom__mems__control_8c_a8816455d2acab67c1d0264f034bfe0c0} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_GetOutputDataRate@{BSP\_SENSOR\_GYR\_GetOutputDataRate}}
+\index{BSP\_SENSOR\_GYR\_GetOutputDataRate@{BSP\_SENSOR\_GYR\_GetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_GetOutputDataRate()}{BSP\_SENSOR\_GYR\_GetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Get output data rate for gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00552}{552}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_aa74027284fbabf0a0df88993dd3cfe20}\label{custom__mems__control_8c_aa74027284fbabf0a0df88993dd3cfe20} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_Init@{BSP\_SENSOR\_GYR\_Init}}
+\index{BSP\_SENSOR\_GYR\_Init@{BSP\_SENSOR\_GYR\_Init}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_Init()}{BSP\_SENSOR\_GYR\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00048}{48}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a8bc32a702eef04a77a366b76d801e18b}\label{custom__mems__control_8c_a8bc32a702eef04a77a366b76d801e18b} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_SetFullScale@{BSP\_SENSOR\_GYR\_SetFullScale}}
+\index{BSP\_SENSOR\_GYR\_SetFullScale@{BSP\_SENSOR\_GYR\_SetFullScale}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_SetFullScale()}{BSP\_SENSOR\_GYR\_SetFullScale()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Set\+Full\+Scale (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Set full scale for gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fullscale} & Fullscale value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00648}{648}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ab0c7a38b7d5380b147125d6eb396eb27}\label{custom__mems__control_8c_ab0c7a38b7d5380b147125d6eb396eb27} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_GYR\_SetOutputDataRate@{BSP\_SENSOR\_GYR\_SetOutputDataRate}}
+\index{BSP\_SENSOR\_GYR\_SetOutputDataRate@{BSP\_SENSOR\_GYR\_SetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_GYR\_SetOutputDataRate()}{BSP\_SENSOR\_GYR\_SetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+GYR\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set output data rate for gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00456}{456}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a32da60d14961a761841b86ca2fe9fa39}\label{custom__mems__control_8c_a32da60d14961a761841b86ca2fe9fa39} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_HUM\_Disable@{BSP\_SENSOR\_HUM\_Disable}}
+\index{BSP\_SENSOR\_HUM\_Disable@{BSP\_SENSOR\_HUM\_Disable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_Disable()}{BSP\_SENSOR\_HUM\_Disable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables humidity sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00302}{302}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a780139edfd8216665a27d69dbc40dee2}\label{custom__mems__control_8c_a780139edfd8216665a27d69dbc40dee2} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_HUM\_Enable@{BSP\_SENSOR\_HUM\_Enable}}
+\index{BSP\_SENSOR\_HUM\_Enable@{BSP\_SENSOR\_HUM\_Enable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_Enable()}{BSP\_SENSOR\_HUM\_Enable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables humidity sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00206}{206}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a04c3347c5e5dc54ee2592c3dcdd73cfe}\label{custom__mems__control_8c_a04c3347c5e5dc54ee2592c3dcdd73cfe} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_HUM\_GetOutputDataRate@{BSP\_SENSOR\_HUM\_GetOutputDataRate}}
+\index{BSP\_SENSOR\_HUM\_GetOutputDataRate@{BSP\_SENSOR\_HUM\_GetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_GetOutputDataRate()}{BSP\_SENSOR\_HUM\_GetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Get output data rate for humidity sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00614}{614}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ae9e1ab33509258684c043c967adbe821}\label{custom__mems__control_8c_ae9e1ab33509258684c043c967adbe821} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_HUM\_GetValue@{BSP\_SENSOR\_HUM\_GetValue}}
+\index{BSP\_SENSOR\_HUM\_GetValue@{BSP\_SENSOR\_HUM\_GetValue}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_GetValue()}{BSP\_SENSOR\_HUM\_GetValue()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Get\+Value (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Value }\end{DoxyParamCaption})}
+
+
+
+Get humidity sensor data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & pointer to humidity value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00420}{420}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a3fe0b96d3c068cc0e2959ac988fd26b1}\label{custom__mems__control_8c_a3fe0b96d3c068cc0e2959ac988fd26b1} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_HUM\_Init@{BSP\_SENSOR\_HUM\_Init}}
+\index{BSP\_SENSOR\_HUM\_Init@{BSP\_SENSOR\_HUM\_Init}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_Init()}{BSP\_SENSOR\_HUM\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes humidity sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00110}{110}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a7b8226970a82503a56688781406ed47a}\label{custom__mems__control_8c_a7b8226970a82503a56688781406ed47a} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_HUM\_SetOutputDataRate@{BSP\_SENSOR\_HUM\_SetOutputDataRate}}
+\index{BSP\_SENSOR\_HUM\_SetOutputDataRate@{BSP\_SENSOR\_HUM\_SetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_HUM\_SetOutputDataRate()}{BSP\_SENSOR\_HUM\_SetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+HUM\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set output data rate for humidity sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00518}{518}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a06d959f0d05a71dc934cd86d75feb6f5}\label{custom__mems__control_8c_a06d959f0d05a71dc934cd86d75feb6f5} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_Disable@{BSP\_SENSOR\_MAG\_Disable}}
+\index{BSP\_SENSOR\_MAG\_Disable@{BSP\_SENSOR\_MAG\_Disable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_Disable()}{BSP\_SENSOR\_MAG\_Disable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00254}{254}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ab91da864b62db86ffe39dca34b809ef1}\label{custom__mems__control_8c_ab91da864b62db86ffe39dca34b809ef1} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_Enable@{BSP\_SENSOR\_MAG\_Enable}}
+\index{BSP\_SENSOR\_MAG\_Enable@{BSP\_SENSOR\_MAG\_Enable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_Enable()}{BSP\_SENSOR\_MAG\_Enable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00158}{158}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a84323cc59f9d8e1e071e730da1f8cc23}\label{custom__mems__control_8c_a84323cc59f9d8e1e071e730da1f8cc23} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_GetAxes@{BSP\_SENSOR\_MAG\_GetAxes}}
+\index{BSP\_SENSOR\_MAG\_GetAxes@{BSP\_SENSOR\_MAG\_GetAxes}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_GetAxes()}{BSP\_SENSOR\_MAG\_GetAxes()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Get\+Axes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMOTION__SENSOR__Axes__t}{MOTION\+\_\+\+SENSOR\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Axes }\end{DoxyParamCaption})}
+
+
+
+Get magnetometer data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Axes} & pointer to axes data structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00362}{362}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a9d0624c1f1a0819401fd6b71f79fd808}\label{custom__mems__control_8c_a9d0624c1f1a0819401fd6b71f79fd808} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_GetFullScale@{BSP\_SENSOR\_MAG\_GetFullScale}}
+\index{BSP\_SENSOR\_MAG\_GetFullScale@{BSP\_SENSOR\_MAG\_GetFullScale}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_GetFullScale()}{BSP\_SENSOR\_MAG\_GetFullScale()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Get\+Full\+Scale (\begin{DoxyParamCaption}\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Get full scale for magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fullscale} & Fullscale value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00710}{710}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a37882e578f5c2f692b164372412c7834}\label{custom__mems__control_8c_a37882e578f5c2f692b164372412c7834} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_GetOutputDataRate@{BSP\_SENSOR\_MAG\_GetOutputDataRate}}
+\index{BSP\_SENSOR\_MAG\_GetOutputDataRate@{BSP\_SENSOR\_MAG\_GetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_GetOutputDataRate()}{BSP\_SENSOR\_MAG\_GetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Get output data rate for magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00566}{566}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a479a5b231946116c85e7a3abd16810b7}\label{custom__mems__control_8c_a479a5b231946116c85e7a3abd16810b7} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_Init@{BSP\_SENSOR\_MAG\_Init}}
+\index{BSP\_SENSOR\_MAG\_Init@{BSP\_SENSOR\_MAG\_Init}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_Init()}{BSP\_SENSOR\_MAG\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00062}{62}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a9c40897f7081a12cbdd9674b39d9257f}\label{custom__mems__control_8c_a9c40897f7081a12cbdd9674b39d9257f} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_SetFullScale@{BSP\_SENSOR\_MAG\_SetFullScale}}
+\index{BSP\_SENSOR\_MAG\_SetFullScale@{BSP\_SENSOR\_MAG\_SetFullScale}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_SetFullScale()}{BSP\_SENSOR\_MAG\_SetFullScale()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Set\+Full\+Scale (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{Fullscale }\end{DoxyParamCaption})}
+
+
+
+Set full scale for magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fullscale} & Fullscale value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00662}{662}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ae46d4df7e0ff8a25909619410b334e62}\label{custom__mems__control_8c_ae46d4df7e0ff8a25909619410b334e62} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_MAG\_SetOutputDataRate@{BSP\_SENSOR\_MAG\_SetOutputDataRate}}
+\index{BSP\_SENSOR\_MAG\_SetOutputDataRate@{BSP\_SENSOR\_MAG\_SetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_MAG\_SetOutputDataRate()}{BSP\_SENSOR\_MAG\_SetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+MAG\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set output data rate for magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00470}{470}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a17b1aaa450a71c9b000e1b8b89c21862}\label{custom__mems__control_8c_a17b1aaa450a71c9b000e1b8b89c21862} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_PRESS\_Disable@{BSP\_SENSOR\_PRESS\_Disable}}
+\index{BSP\_SENSOR\_PRESS\_Disable@{BSP\_SENSOR\_PRESS\_Disable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_Disable()}{BSP\_SENSOR\_PRESS\_Disable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables pressure sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00268}{268}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ac31a534da603af82cbea2e81a5d8cbed}\label{custom__mems__control_8c_ac31a534da603af82cbea2e81a5d8cbed} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_PRESS\_Enable@{BSP\_SENSOR\_PRESS\_Enable}}
+\index{BSP\_SENSOR\_PRESS\_Enable@{BSP\_SENSOR\_PRESS\_Enable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_Enable()}{BSP\_SENSOR\_PRESS\_Enable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables pressure sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00172}{172}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ae01439ba184da3ff2f4d68fe67f9b8f4}\label{custom__mems__control_8c_ae01439ba184da3ff2f4d68fe67f9b8f4} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_PRESS\_GetOutputDataRate@{BSP\_SENSOR\_PRESS\_GetOutputDataRate}}
+\index{BSP\_SENSOR\_PRESS\_GetOutputDataRate@{BSP\_SENSOR\_PRESS\_GetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_GetOutputDataRate()}{BSP\_SENSOR\_PRESS\_GetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Get output data rate for pressure sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00580}{580}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a8fa35e3db752d729175dafde1dcf2282}\label{custom__mems__control_8c_a8fa35e3db752d729175dafde1dcf2282} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_PRESS\_GetValue@{BSP\_SENSOR\_PRESS\_GetValue}}
+\index{BSP\_SENSOR\_PRESS\_GetValue@{BSP\_SENSOR\_PRESS\_GetValue}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_GetValue()}{BSP\_SENSOR\_PRESS\_GetValue()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Get\+Value (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Value }\end{DoxyParamCaption})}
+
+
+
+Get pressure sensor data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & pointer to pressure value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00380}{380}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_ada0e34eb93d797b48b8455b87de6194d}\label{custom__mems__control_8c_ada0e34eb93d797b48b8455b87de6194d} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_PRESS\_Init@{BSP\_SENSOR\_PRESS\_Init}}
+\index{BSP\_SENSOR\_PRESS\_Init@{BSP\_SENSOR\_PRESS\_Init}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_Init()}{BSP\_SENSOR\_PRESS\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes pressure sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00076}{76}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_adc7336533ca8b940f14791e78c26679b}\label{custom__mems__control_8c_adc7336533ca8b940f14791e78c26679b} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_PRESS\_SetOutputDataRate@{BSP\_SENSOR\_PRESS\_SetOutputDataRate}}
+\index{BSP\_SENSOR\_PRESS\_SetOutputDataRate@{BSP\_SENSOR\_PRESS\_SetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_PRESS\_SetOutputDataRate()}{BSP\_SENSOR\_PRESS\_SetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+PRESS\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set output data rate for pressure sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00484}{484}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_aa0976f6b6c526d8d2dfa157113d39310}\label{custom__mems__control_8c_aa0976f6b6c526d8d2dfa157113d39310} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_TEMP\_Disable@{BSP\_SENSOR\_TEMP\_Disable}}
+\index{BSP\_SENSOR\_TEMP\_Disable@{BSP\_SENSOR\_TEMP\_Disable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_Disable()}{BSP\_SENSOR\_TEMP\_Disable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables temperature sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00282}{282}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a7dc09986995f9f42107f5ebe8be8a212}\label{custom__mems__control_8c_a7dc09986995f9f42107f5ebe8be8a212} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_TEMP\_Enable@{BSP\_SENSOR\_TEMP\_Enable}}
+\index{BSP\_SENSOR\_TEMP\_Enable@{BSP\_SENSOR\_TEMP\_Enable}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_Enable()}{BSP\_SENSOR\_TEMP\_Enable()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables temperature sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00186}{186}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a7e726dd34949f66b6b0b738d4825c636}\label{custom__mems__control_8c_a7e726dd34949f66b6b0b738d4825c636} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_TEMP\_GetOutputDataRate@{BSP\_SENSOR\_TEMP\_GetOutputDataRate}}
+\index{BSP\_SENSOR\_TEMP\_GetOutputDataRate@{BSP\_SENSOR\_TEMP\_GetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_GetOutputDataRate()}{BSP\_SENSOR\_TEMP\_GetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Get output data rate for temperature sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00594}{594}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a28dace814ef1c2d959a6d41aa0488d75}\label{custom__mems__control_8c_a28dace814ef1c2d959a6d41aa0488d75} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_TEMP\_GetValue@{BSP\_SENSOR\_TEMP\_GetValue}}
+\index{BSP\_SENSOR\_TEMP\_GetValue@{BSP\_SENSOR\_TEMP\_GetValue}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_GetValue()}{BSP\_SENSOR\_TEMP\_GetValue()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Get\+Value (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{Value }\end{DoxyParamCaption})}
+
+
+
+Get temperature sensor data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & pointer to temperature value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00396}{396}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_a6b8533a5553e2b34c4121d732a1f94bc}\label{custom__mems__control_8c_a6b8533a5553e2b34c4121d732a1f94bc} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_TEMP\_Init@{BSP\_SENSOR\_TEMP\_Init}}
+\index{BSP\_SENSOR\_TEMP\_Init@{BSP\_SENSOR\_TEMP\_Init}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_Init()}{BSP\_SENSOR\_TEMP\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes temperature sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00090}{90}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+
+\Hypertarget{custom__mems__control_8c_af74731f0f34b02f663f7ad65930cd452}\label{custom__mems__control_8c_af74731f0f34b02f663f7ad65930cd452} 
+\index{custom\_mems\_control.c@{custom\_mems\_control.c}!BSP\_SENSOR\_TEMP\_SetOutputDataRate@{BSP\_SENSOR\_TEMP\_SetOutputDataRate}}
+\index{BSP\_SENSOR\_TEMP\_SetOutputDataRate@{BSP\_SENSOR\_TEMP\_SetOutputDataRate}!custom\_mems\_control.c@{custom\_mems\_control.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SENSOR\_TEMP\_SetOutputDataRate()}{BSP\_SENSOR\_TEMP\_SetOutputDataRate()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SENSOR\+\_\+\+TEMP\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{float}]{Odr }\end{DoxyParamCaption})}
+
+
+
+Set output data rate for temperature sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Odr} & Output Data Rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{custom__mems__control_8c_source_l00498}{498}} of file \mbox{\hyperlink{custom__mems__control_8c_source}{custom\+\_\+mems\+\_\+control.\+c}}.
+

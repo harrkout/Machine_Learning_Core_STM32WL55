@@ -1,0 +1,306 @@
+\doxysection{MEMS/\+Target/serial\+\_\+cmd.h File Reference}
+\hypertarget{serial__cmd_8h}{}\label{serial__cmd_8h}\index{MEMS/Target/serial\_cmd.h@{MEMS/Target/serial\_cmd.h}}
+
+
+This file contains serial commands code.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_abc725c1ad8a9472e1c765b8f2e1b3e6b}{CMD\+\_\+\+Ping}}~0x01
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_abaaf165159e49796add4d5c17b06f33a}{CMD\+\_\+\+Read\+\_\+\+Pres\+String}}~0x02
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a309f891b5f9ad3460745fbaf11357a2e}{CMD\+\_\+\+NACK}}~0x03
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a1c75d08f88a43f15c7b9480fe6d5fa7e}{CMD\+\_\+\+Check\+Mode\+Support}}~0x04
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_acd214297697b56e54df9b3a21fbbb60d}{CMD\+\_\+\+Upload\+XX}}~0x05
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_aa2e5585319bd296e9b446531352ea691}{CMD\+\_\+\+Change\+SF}}~0x07
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a69a50b1a9f5858dd888515e48bc596d2}{CMD\+\_\+\+Start\+\_\+\+Data\+\_\+\+Streaming}}~0x08
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a6468fe5ac0323aac5168632d9ca57730}{CMD\+\_\+\+Stop\+\_\+\+Data\+\_\+\+Streaming}}~0x09
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_aa30bfd00678d62ab9d227bd0abbade63}{CMD\+\_\+\+Offline\+\_\+\+Data}}~0x10 /\texorpdfstring{$\ast$}{*} Offline data stream \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a907c549cf7c51df72aef970098a37ab5}{CMD\+\_\+\+Use\+\_\+\+Offline\+\_\+\+Data}}~0x11 /\texorpdfstring{$\ast$}{*} From Msg-\/$>$Data\mbox{[}3\mbox{]}\+: uint8\+\_\+t \mbox{\hyperlink{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d}{Use\+Offline\+Data}} (1 ON, 0 OFF) \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_aff8798f3f487e51c1535bc78427c7e21}{CMD\+\_\+\+Get\+\_\+\+App\+\_\+\+Info}}~0x12 /\texorpdfstring{$\ast$}{*} From Msg-\/$>$Data\mbox{[}3\mbox{]}\+: int \mbox{\hyperlink{app__mems_8c_ac4a4343c5345def8433286e074933a9c}{Algo\+Freq}}; uint8\+\_\+t Required\+Data; \texorpdfstring{$\ast$}{*}/
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a81ad85768c6cf07b2a600e8943b3ed41}{CMD\+\_\+\+Set\+\_\+\+Date\+Time}}~0x0C
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_ac75539ca2f1186c76b12abf76912eb8f}{CMD\+\_\+\+Enter\+\_\+\+DFU\+\_\+\+Mode}}~0x0E
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_aabf01ca723489c1352d4b946c3ad5f2c}{CMD\+\_\+\+Reset}}~0x0F
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_af1b5f450c8f4227ced357f5660fde0d9}{CMD\+\_\+\+Reply\+\_\+\+Add}}~0x80U
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a83e7f6c3d3fc342854511bd7db66299d}{CMD\+\_\+\+Algo\+\_\+\+Mode}}~0x51
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a4467d8a28271589a81f7fa072c0bc728}{CMD\+\_\+\+Angle\+\_\+\+Mode\+\_\+\+Cal\+\_\+\+Pos}}~0x52
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_ae63a6bd09c38eec5313ecdb5b5585a96}{CMD\+\_\+\+Calibration\+\_\+\+Mode}}~0x53
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_affa08aa528a84f98277ce92e3cd67fc1}{CMD\+\_\+\+Calibration\+\_\+\+Reset}}~0x54
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a9c203304d8691f8f67c9c6e6bf8def92}{CMD\+\_\+\+PRESSURE\+\_\+\+Init}}~0x60
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_a6559603f3f7af605c4077c3e1aef095a}{CMD\+\_\+\+HUMIDITY\+\_\+\+TEMPERATURE\+\_\+\+Init}}~0x62
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_ae490fc6f71f7f3364e606efe10663276}{CMD\+\_\+\+ACCELERO\+\_\+\+GYRO\+\_\+\+Init}}~0x76
+\item 
+\#define \mbox{\hyperlink{serial__cmd_8h_af04ced89747991467f4ddd7e6057b56b}{CMD\+\_\+\+MAGNETO\+\_\+\+Init}}~0x7A
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains serial commands code. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{serial__cmd_8h_ae490fc6f71f7f3364e606efe10663276}\label{serial__cmd_8h_ae490fc6f71f7f3364e606efe10663276} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_ACCELERO\_GYRO\_Init@{CMD\_ACCELERO\_GYRO\_Init}}
+\index{CMD\_ACCELERO\_GYRO\_Init@{CMD\_ACCELERO\_GYRO\_Init}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_ACCELERO\_GYRO\_Init}{CMD\_ACCELERO\_GYRO\_Init}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+ACCELERO\+\_\+\+GYRO\+\_\+\+Init~0x76}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00058}{58}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a83e7f6c3d3fc342854511bd7db66299d}\label{serial__cmd_8h_a83e7f6c3d3fc342854511bd7db66299d} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Algo\_Mode@{CMD\_Algo\_Mode}}
+\index{CMD\_Algo\_Mode@{CMD\_Algo\_Mode}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Algo\_Mode}{CMD\_Algo\_Mode}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Algo\+\_\+\+Mode~0x51}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00048}{48}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a4467d8a28271589a81f7fa072c0bc728}\label{serial__cmd_8h_a4467d8a28271589a81f7fa072c0bc728} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Angle\_Mode\_Cal\_Pos@{CMD\_Angle\_Mode\_Cal\_Pos}}
+\index{CMD\_Angle\_Mode\_Cal\_Pos@{CMD\_Angle\_Mode\_Cal\_Pos}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Angle\_Mode\_Cal\_Pos}{CMD\_Angle\_Mode\_Cal\_Pos}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Angle\+\_\+\+Mode\+\_\+\+Cal\+\_\+\+Pos~0x52}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00049}{49}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_ae63a6bd09c38eec5313ecdb5b5585a96}\label{serial__cmd_8h_ae63a6bd09c38eec5313ecdb5b5585a96} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Calibration\_Mode@{CMD\_Calibration\_Mode}}
+\index{CMD\_Calibration\_Mode@{CMD\_Calibration\_Mode}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Calibration\_Mode}{CMD\_Calibration\_Mode}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Calibration\+\_\+\+Mode~0x53}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00050}{50}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_affa08aa528a84f98277ce92e3cd67fc1}\label{serial__cmd_8h_affa08aa528a84f98277ce92e3cd67fc1} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Calibration\_Reset@{CMD\_Calibration\_Reset}}
+\index{CMD\_Calibration\_Reset@{CMD\_Calibration\_Reset}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Calibration\_Reset}{CMD\_Calibration\_Reset}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Calibration\+\_\+\+Reset~0x54}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00051}{51}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_aa2e5585319bd296e9b446531352ea691}\label{serial__cmd_8h_aa2e5585319bd296e9b446531352ea691} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_ChangeSF@{CMD\_ChangeSF}}
+\index{CMD\_ChangeSF@{CMD\_ChangeSF}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_ChangeSF}{CMD\_ChangeSF}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Change\+SF~0x07}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00035}{35}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a1c75d08f88a43f15c7b9480fe6d5fa7e}\label{serial__cmd_8h_a1c75d08f88a43f15c7b9480fe6d5fa7e} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_CheckModeSupport@{CMD\_CheckModeSupport}}
+\index{CMD\_CheckModeSupport@{CMD\_CheckModeSupport}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_CheckModeSupport}{CMD\_CheckModeSupport}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Check\+Mode\+Support~0x04}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00033}{33}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_ac75539ca2f1186c76b12abf76912eb8f}\label{serial__cmd_8h_ac75539ca2f1186c76b12abf76912eb8f} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Enter\_DFU\_Mode@{CMD\_Enter\_DFU\_Mode}}
+\index{CMD\_Enter\_DFU\_Mode@{CMD\_Enter\_DFU\_Mode}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Enter\_DFU\_Mode}{CMD\_Enter\_DFU\_Mode}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Enter\+\_\+\+DFU\+\_\+\+Mode~0x0E}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00043}{43}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_aff8798f3f487e51c1535bc78427c7e21}\label{serial__cmd_8h_aff8798f3f487e51c1535bc78427c7e21} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Get\_App\_Info@{CMD\_Get\_App\_Info}}
+\index{CMD\_Get\_App\_Info@{CMD\_Get\_App\_Info}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Get\_App\_Info}{CMD\_Get\_App\_Info}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Get\+\_\+\+App\+\_\+\+Info~0x12 /\texorpdfstring{$\ast$}{*} From Msg-\/$>$Data\mbox{[}3\mbox{]}\+: int \mbox{\hyperlink{app__mems_8c_ac4a4343c5345def8433286e074933a9c}{Algo\+Freq}}; uint8\+\_\+t Required\+Data; \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00040}{40}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a6559603f3f7af605c4077c3e1aef095a}\label{serial__cmd_8h_a6559603f3f7af605c4077c3e1aef095a} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_HUMIDITY\_TEMPERATURE\_Init@{CMD\_HUMIDITY\_TEMPERATURE\_Init}}
+\index{CMD\_HUMIDITY\_TEMPERATURE\_Init@{CMD\_HUMIDITY\_TEMPERATURE\_Init}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HUMIDITY\_TEMPERATURE\_Init}{CMD\_HUMIDITY\_TEMPERATURE\_Init}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HUMIDITY\+\_\+\+TEMPERATURE\+\_\+\+Init~0x62}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00055}{55}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_af04ced89747991467f4ddd7e6057b56b}\label{serial__cmd_8h_af04ced89747991467f4ddd7e6057b56b} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_MAGNETO\_Init@{CMD\_MAGNETO\_Init}}
+\index{CMD\_MAGNETO\_Init@{CMD\_MAGNETO\_Init}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_MAGNETO\_Init}{CMD\_MAGNETO\_Init}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+MAGNETO\+\_\+\+Init~0x7A}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00059}{59}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a309f891b5f9ad3460745fbaf11357a2e}\label{serial__cmd_8h_a309f891b5f9ad3460745fbaf11357a2e} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_NACK@{CMD\_NACK}}
+\index{CMD\_NACK@{CMD\_NACK}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_NACK}{CMD\_NACK}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+NACK~0x03}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00032}{32}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_aa30bfd00678d62ab9d227bd0abbade63}\label{serial__cmd_8h_aa30bfd00678d62ab9d227bd0abbade63} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Offline\_Data@{CMD\_Offline\_Data}}
+\index{CMD\_Offline\_Data@{CMD\_Offline\_Data}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Offline\_Data}{CMD\_Offline\_Data}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Offline\+\_\+\+Data~0x10 /\texorpdfstring{$\ast$}{*} Offline data stream \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00038}{38}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_abc725c1ad8a9472e1c765b8f2e1b3e6b}\label{serial__cmd_8h_abc725c1ad8a9472e1c765b8f2e1b3e6b} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Ping@{CMD\_Ping}}
+\index{CMD\_Ping@{CMD\_Ping}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Ping}{CMD\_Ping}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Ping~0x01}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00030}{30}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a9c203304d8691f8f67c9c6e6bf8def92}\label{serial__cmd_8h_a9c203304d8691f8f67c9c6e6bf8def92} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_PRESSURE\_Init@{CMD\_PRESSURE\_Init}}
+\index{CMD\_PRESSURE\_Init@{CMD\_PRESSURE\_Init}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_PRESSURE\_Init}{CMD\_PRESSURE\_Init}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+PRESSURE\+\_\+\+Init~0x60}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00054}{54}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_abaaf165159e49796add4d5c17b06f33a}\label{serial__cmd_8h_abaaf165159e49796add4d5c17b06f33a} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Read\_PresString@{CMD\_Read\_PresString}}
+\index{CMD\_Read\_PresString@{CMD\_Read\_PresString}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Read\_PresString}{CMD\_Read\_PresString}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Read\+\_\+\+Pres\+String~0x02}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00031}{31}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_af1b5f450c8f4227ced357f5660fde0d9}\label{serial__cmd_8h_af1b5f450c8f4227ced357f5660fde0d9} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Reply\_Add@{CMD\_Reply\_Add}}
+\index{CMD\_Reply\_Add@{CMD\_Reply\_Add}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Reply\_Add}{CMD\_Reply\_Add}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Reply\+\_\+\+Add~0x80U}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00045}{45}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_aabf01ca723489c1352d4b946c3ad5f2c}\label{serial__cmd_8h_aabf01ca723489c1352d4b946c3ad5f2c} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Reset@{CMD\_Reset}}
+\index{CMD\_Reset@{CMD\_Reset}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Reset}{CMD\_Reset}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Reset~0x0F}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00044}{44}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a81ad85768c6cf07b2a600e8943b3ed41}\label{serial__cmd_8h_a81ad85768c6cf07b2a600e8943b3ed41} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Set\_DateTime@{CMD\_Set\_DateTime}}
+\index{CMD\_Set\_DateTime@{CMD\_Set\_DateTime}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Set\_DateTime}{CMD\_Set\_DateTime}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Set\+\_\+\+Date\+Time~0x0C}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00042}{42}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a69a50b1a9f5858dd888515e48bc596d2}\label{serial__cmd_8h_a69a50b1a9f5858dd888515e48bc596d2} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Start\_Data\_Streaming@{CMD\_Start\_Data\_Streaming}}
+\index{CMD\_Start\_Data\_Streaming@{CMD\_Start\_Data\_Streaming}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Start\_Data\_Streaming}{CMD\_Start\_Data\_Streaming}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Start\+\_\+\+Data\+\_\+\+Streaming~0x08}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00036}{36}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a6468fe5ac0323aac5168632d9ca57730}\label{serial__cmd_8h_a6468fe5ac0323aac5168632d9ca57730} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Stop\_Data\_Streaming@{CMD\_Stop\_Data\_Streaming}}
+\index{CMD\_Stop\_Data\_Streaming@{CMD\_Stop\_Data\_Streaming}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Stop\_Data\_Streaming}{CMD\_Stop\_Data\_Streaming}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Stop\+\_\+\+Data\+\_\+\+Streaming~0x09}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00037}{37}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_acd214297697b56e54df9b3a21fbbb60d}\label{serial__cmd_8h_acd214297697b56e54df9b3a21fbbb60d} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_UploadXX@{CMD\_UploadXX}}
+\index{CMD\_UploadXX@{CMD\_UploadXX}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_UploadXX}{CMD\_UploadXX}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Upload\+XX~0x05}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00034}{34}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+
+\Hypertarget{serial__cmd_8h_a907c549cf7c51df72aef970098a37ab5}\label{serial__cmd_8h_a907c549cf7c51df72aef970098a37ab5} 
+\index{serial\_cmd.h@{serial\_cmd.h}!CMD\_Use\_Offline\_Data@{CMD\_Use\_Offline\_Data}}
+\index{CMD\_Use\_Offline\_Data@{CMD\_Use\_Offline\_Data}!serial\_cmd.h@{serial\_cmd.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_Use\_Offline\_Data}{CMD\_Use\_Offline\_Data}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+Use\+\_\+\+Offline\+\_\+\+Data~0x11 /\texorpdfstring{$\ast$}{*} From Msg-\/$>$Data\mbox{[}3\mbox{]}\+: uint8\+\_\+t \mbox{\hyperlink{app__mems_8c_a633d5490b22d0ec9437a5dc4d6a76f8d}{Use\+Offline\+Data}} (1 ON, 0 OFF) \texorpdfstring{$\ast$}{*}/}
+
+
+
+Definition at line \mbox{\hyperlink{serial__cmd_8h_source_l00039}{39}} of file \mbox{\hyperlink{serial__cmd_8h_source}{serial\+\_\+cmd.\+h}}.
+

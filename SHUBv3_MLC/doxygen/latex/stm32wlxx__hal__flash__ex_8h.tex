@@ -1,0 +1,63 @@
+\doxysection{Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32wlxx\+\_\+hal\+\_\+flash\+\_\+ex.h File Reference}
+\hypertarget{stm32wlxx__hal__flash__ex_8h}{}\label{stm32wlxx__hal__flash__ex_8h}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_flash\_ex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_hal\_flash\_ex.h}}
+
+
+Header file of FLASH HAL Extended module.  
+
+
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal\+\_\+def.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__FLASHEx__EMPTY__CHECK_ga4009670d557381dd548e31da68ac8ebf}{FLASH\+\_\+\+PROG\+\_\+\+NOT\+\_\+\+EMPTY}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__FLASHEx__EMPTY__CHECK_gac8b9cdc4d10feccc7e4ad5c5e3d5fe32}{FLASH\+\_\+\+PROG\+\_\+\+EMPTY}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga5ef510aed5b3fa267d41e8a07540bb7c}{FLASH\+\_\+\+ACR\+\_\+\+EMPTY}}
+\item 
+\#define \mbox{\hyperlink{group__FLASHEx__PRIV__MODE__CFG_gad529d7a222e3d9ed05ed25d5b128ce04}{FLASH\+\_\+\+PRIV\+\_\+\+GRANTED}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group__FLASHEx__PRIV__MODE__CFG_gac65f4f96d987cb9ff02b3d8cabe2cabc}{FLASH\+\_\+\+PRIV\+\_\+\+DENIED}}~\mbox{\hyperlink{group__Peripheral__Registers__Bits__Definition_ga6933327cc2d59e1e5e601e2ddaedb9bf}{FLASH\+\_\+\+ACR2\+\_\+\+PRIVMODE}}
+\item 
+\#define \mbox{\hyperlink{group__FLASHEx__Private__Macros_ga07fc54c971c43f2217c3a07cc8247759}{IS\+\_\+\+FLASH\+\_\+\+EMPTY\+\_\+\+CHECK}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASHEx__EMPTY__CHECK_gac8b9cdc4d10feccc7e4ad5c5e3d5fe32}{FLASH\+\_\+\+PROG\+\_\+\+EMPTY}}) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASHEx__EMPTY__CHECK_ga4009670d557381dd548e31da68ac8ebf}{FLASH\+\_\+\+PROG\+\_\+\+NOT\+\_\+\+EMPTY}}))
+\item 
+\#define \mbox{\hyperlink{group__FLASHEx__Private__Macros_gabc07d62840134abcc1d0a745dedeaaf8}{IS\+\_\+\+FLASH\+\_\+\+CFGPRIVMODE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASHEx__PRIV__MODE__CFG_gad529d7a222e3d9ed05ed25d5b128ce04}{FLASH\+\_\+\+PRIV\+\_\+\+GRANTED}}) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) == \mbox{\hyperlink{group__FLASHEx__PRIV__MODE__CFG_gac65f4f96d987cb9ff02b3d8cabe2cabc}{FLASH\+\_\+\+PRIV\+\_\+\+DENIED}}))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_ga9c4e0c7b4f528b7cccae6ad610eb5953}{HAL\+\_\+\+FLASHEx\+\_\+\+Erase}} (\mbox{\hyperlink{structFLASH__EraseInitTypeDef}{FLASH\+\_\+\+Erase\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}p\+Erase\+Init, uint32\+\_\+t \texorpdfstring{$\ast$}{*}Page\+Error)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_gaf58c6764859e4febc21abe462dfb2615}{HAL\+\_\+\+FLASHEx\+\_\+\+Erase\+\_\+\+IT}} (\mbox{\hyperlink{structFLASH__EraseInitTypeDef}{FLASH\+\_\+\+Erase\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}p\+Erase\+Init)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_ga479621962d2c3c479a41077bd6ca9252}{HAL\+\_\+\+FLASHEx\+\_\+\+Flash\+Empty\+Check}} (void)
+\item 
+void \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_ga69d8c505290f866fd8d818b674a41764}{HAL\+\_\+\+FLASHEx\+\_\+\+Force\+Flash\+Empty}} (uint32\+\_\+t Flash\+Empty)
+\item 
+\mbox{\hyperlink{stm32wlxx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_ga001dd4a8defa9eb24a17c4df5953a41d}{HAL\+\_\+\+FLASHEx\+\_\+\+OBProgram}} (\mbox{\hyperlink{structFLASH__OBProgramInitTypeDef}{FLASH\+\_\+\+OBProgram\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}p\+OBInit)
+\item 
+void \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_ga6d45d5442b8147533b1100ec40fe75d7}{HAL\+\_\+\+FLASHEx\+\_\+\+OBGet\+Config}} (\mbox{\hyperlink{structFLASH__OBProgramInitTypeDef}{FLASH\+\_\+\+OBProgram\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}p\+OBInit)
+\item 
+void \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_gae2bba30f23393cf6793f77bfd44307ee}{HAL\+\_\+\+FLASHEx\+\_\+\+Suspend\+Operation}} (void)
+\item 
+void \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_gae5ab76f1030c281621d02c4c4fca8e91}{HAL\+\_\+\+FLASHEx\+\_\+\+Allow\+Operation}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__FLASHEx__Exported__Functions__Group1_ga64b158cc9c7d777cba66e38a3e12c818}{HAL\+\_\+\+FLASHEx\+\_\+\+Is\+Operation\+Suspended}} (void)
+\item 
+void \mbox{\hyperlink{group__FLASHEx__Private__Functions_ga69aec976934e9dacc12f9ae865e75e9e}{FLASH\+\_\+\+Page\+Erase}} (uint32\+\_\+t Page)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of FLASH HAL Extended module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{stm32wlxx__hal__flash__ex_8h_source}{stm32wlxx\+\_\+hal\+\_\+flash\+\_\+ex.\+h}}.
+

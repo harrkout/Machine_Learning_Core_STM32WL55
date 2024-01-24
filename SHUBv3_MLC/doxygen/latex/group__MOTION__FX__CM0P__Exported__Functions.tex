@@ -1,0 +1,395 @@
+\doxysubsection{MOTION\+\_\+\+FX\+\_\+\+CM0\+P\+\_\+\+Exported\+\_\+\+Functions}
+\hypertarget{group__MOTION__FX__CM0P__Exported__Functions}{}\label{group__MOTION__FX__CM0P__Exported__Functions}\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga8123d1276706a460225a478ac569f43e}{Motion\+FX\+\_\+\+CM0\+P\+\_\+initialize}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_ga2fab98b1e5cf54cd7fc51a1061735456}{MFX\+\_\+\+CM0\+P\+\_\+mcu\+\_\+type\+\_\+t}} mcu\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Initialize the Motion\+FX\+\_\+\+CM0P engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaf93d85057a2d8f95a1d7d677b01d63e1}{Motion\+FX\+\_\+\+CM0\+P\+\_\+set\+Orientation}} (const char acc\+\_\+orientation\mbox{[}4\mbox{]}, const char gyro\+\_\+orientation\mbox{[}4\mbox{]}, const char mag\+\_\+orientation\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set sensor orientation, default orientation is ENU (x -\/ east, y -\/ north, z -\/ up) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gac9ecfc3200125777145e6508f9c207b7}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+6X}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the 6 axes library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga0f8177ac20ff2a23a56398ab26601541}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+9X}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the 9 axes library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga64babe5ade888f6991648a9645d33b84}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+euler}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the euler angles calculation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gafbeed2ddd8adae388ba46e5e6e7eb1ed}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+gbias}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the gyroscope calibration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaba38676cc8015b26fadf7c40ab918eab}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+6X}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 6 axes function (ACC + GYRO) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaddef529c333576b8daea68efb583b57e}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+9X}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable the 9 axes function (ACC + GYRO + MAG) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga7842b54c3cd0ffd807f0be72a0acbcb7}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+euler}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable euler angles calculation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gab010004e690a4e15c847a020d215f709}{Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+gbias}} (\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable gyroscope calibration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gade0ea4e9e4ac0f7710b908a0189a397d}{Motion\+FX\+\_\+\+CM0\+P\+\_\+set\+Gbias}} (float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Set the initial gbias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga03a50865894bf5973eee339b346b365e}{Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Gbias}} (float \texorpdfstring{$\ast$}{*}gbias)
+\begin{DoxyCompactList}\small\item\em Get the initial gbias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaf81f34ad7094f2085df7880969b43fc6}{Motion\+FX\+\_\+\+CM0\+P\+\_\+update}} (\mbox{\hyperlink{structMFX__CM0P__output__t}{MFX\+\_\+\+CM0\+P\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out, \mbox{\hyperlink{structMFX__CM0P__input__t}{MFX\+\_\+\+CM0\+P\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in, float deltatime)
+\begin{DoxyCompactList}\small\item\em This function runs one step of the sensor fusion algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gae25cdadc43c5a3a3c360d394942d99bf}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+init}} (int sampletime, unsigned short int enable)
+\begin{DoxyCompactList}\small\item\em Initialize the compass calibration library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_gaae4fa9bfdfdd5148522cabd8246b430c}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+run}} (\mbox{\hyperlink{structMFX__CM0P__MagCal__input__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Run magnetic calibration algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga28b0968da845893d3cc89e734803e338}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+get\+Params}} (\mbox{\hyperlink{structMFX__CM0P__MagCal__output__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Get magnetic calibration parameters. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOTION__FX__CM0P__Exported__Functions_ga8bd3812eabe2680349203e0d491d6b9f}{Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Get\+Lib\+Version}} (char \texorpdfstring{$\ast$}{*}version)
+\begin{DoxyCompactList}\small\item\em Get the library version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+
+
+\doxysubsubsection{Function Documentation}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gaba38676cc8015b26fadf7c40ab918eab}\label{group__MOTION__FX__CM0P__Exported__Functions_gaba38676cc8015b26fadf7c40ab918eab} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_enable\_6X@{MotionFX\_CM0P\_enable\_6X}}
+\index{MotionFX\_CM0P\_enable\_6X@{MotionFX\_CM0P\_enable\_6X}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_enable\_6X()}{MotionFX\_CM0P\_enable\_6X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+6X (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}}}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the 6 axes function (ACC + GYRO) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & 1 to enable, 0 to disable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gaddef529c333576b8daea68efb583b57e}\label{group__MOTION__FX__CM0P__Exported__Functions_gaddef529c333576b8daea68efb583b57e} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_enable\_9X@{MotionFX\_CM0P\_enable\_9X}}
+\index{MotionFX\_CM0P\_enable\_9X@{MotionFX\_CM0P\_enable\_9X}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_enable\_9X()}{MotionFX\_CM0P\_enable\_9X()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+9X (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}}}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enable or disable the 9 axes function (ACC + GYRO + MAG) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & 1 to enable, 0 to disable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_ga7842b54c3cd0ffd807f0be72a0acbcb7}\label{group__MOTION__FX__CM0P__Exported__Functions_ga7842b54c3cd0ffd807f0be72a0acbcb7} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_enable\_euler@{MotionFX\_CM0P\_enable\_euler}}
+\index{MotionFX\_CM0P\_enable\_euler@{MotionFX\_CM0P\_enable\_euler}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_enable\_euler()}{MotionFX\_CM0P\_enable\_euler()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+euler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}}}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enable or disable euler angles calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 1} & to enable, 0 to disable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gab010004e690a4e15c847a020d215f709}\label{group__MOTION__FX__CM0P__Exported__Functions_gab010004e690a4e15c847a020d215f709} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_enable\_gbias@{MotionFX\_CM0P\_enable\_gbias}}
+\index{MotionFX\_CM0P\_enable\_gbias@{MotionFX\_CM0P\_enable\_gbias}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_enable\_gbias()}{MotionFX\_CM0P\_enable\_gbias()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+enable\+\_\+gbias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}}}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enable or disable gyroscope calibration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 1} & to enable, 0 to disable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_ga03a50865894bf5973eee339b346b365e}\label{group__MOTION__FX__CM0P__Exported__Functions_ga03a50865894bf5973eee339b346b365e} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_getGbias@{MotionFX\_CM0P\_getGbias}}
+\index{MotionFX\_CM0P\_getGbias@{MotionFX\_CM0P\_getGbias}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_getGbias()}{MotionFX\_CM0P\_getGbias()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Gbias (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{gbias }\end{DoxyParamCaption})}
+
+
+
+Get the initial gbias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to a float array containing the 3 gbias values \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_ga8bd3812eabe2680349203e0d491d6b9f}\label{group__MOTION__FX__CM0P__Exported__Functions_ga8bd3812eabe2680349203e0d491d6b9f} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_GetLibVersion@{MotionFX\_CM0P\_GetLibVersion}}
+\index{MotionFX\_CM0P\_GetLibVersion@{MotionFX\_CM0P\_GetLibVersion}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_GetLibVersion()}{MotionFX\_CM0P\_GetLibVersion()}}
+{\footnotesize\ttfamily uint8\+\_\+t Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Get\+Lib\+Version (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{version }\end{DoxyParamCaption})}
+
+
+
+Get the library version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & pointer to an array of 35 char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Number} & of characters in the version string \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gac9ecfc3200125777145e6508f9c207b7}\label{group__MOTION__FX__CM0P__Exported__Functions_gac9ecfc3200125777145e6508f9c207b7} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_getStatus\_6X@{MotionFX\_CM0P\_getStatus\_6X}}
+\index{MotionFX\_CM0P\_getStatus\_6X@{MotionFX\_CM0P\_getStatus\_6X}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_getStatus\_6X()}{MotionFX\_CM0P\_getStatus\_6X()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+6X (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the status of the 6 axes library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if enabled, 0 if disabled \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_ga0f8177ac20ff2a23a56398ab26601541}\label{group__MOTION__FX__CM0P__Exported__Functions_ga0f8177ac20ff2a23a56398ab26601541} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_getStatus\_9X@{MotionFX\_CM0P\_getStatus\_9X}}
+\index{MotionFX\_CM0P\_getStatus\_9X@{MotionFX\_CM0P\_getStatus\_9X}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_getStatus\_9X()}{MotionFX\_CM0P\_getStatus\_9X()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+9X (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the status of the 9 axes library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if enabled, 0 if disabled \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_ga64babe5ade888f6991648a9645d33b84}\label{group__MOTION__FX__CM0P__Exported__Functions_ga64babe5ade888f6991648a9645d33b84} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_getStatus\_euler@{MotionFX\_CM0P\_getStatus\_euler}}
+\index{MotionFX\_CM0P\_getStatus\_euler@{MotionFX\_CM0P\_getStatus\_euler}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_getStatus\_euler()}{MotionFX\_CM0P\_getStatus\_euler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+euler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the status of the euler angles calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if enabled, 0 if disabled \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gafbeed2ddd8adae388ba46e5e6e7eb1ed}\label{group__MOTION__FX__CM0P__Exported__Functions_gafbeed2ddd8adae388ba46e5e6e7eb1ed} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_getStatus\_gbias@{MotionFX\_CM0P\_getStatus\_gbias}}
+\index{MotionFX\_CM0P\_getStatus\_gbias@{MotionFX\_CM0P\_getStatus\_gbias}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_getStatus\_gbias()}{MotionFX\_CM0P\_getStatus\_gbias()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__MOTION__FX__CM0P_gabbe4061645b5a93d1a0f604d3b03576e}{MFX\+\_\+\+CM0\+P\+\_\+engine\+\_\+state\+\_\+t}} Motion\+FX\+\_\+\+CM0\+P\+\_\+get\+Status\+\_\+gbias (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the status of the gyroscope calibration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if enabled, 0 if disabled \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_ga8123d1276706a460225a478ac569f43e}\label{group__MOTION__FX__CM0P__Exported__Functions_ga8123d1276706a460225a478ac569f43e} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_initialize@{MotionFX\_CM0P\_initialize}}
+\index{MotionFX\_CM0P\_initialize@{MotionFX\_CM0P\_initialize}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_initialize()}{MotionFX\_CM0P\_initialize()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__MOTION__FX__CM0P_ga2fab98b1e5cf54cd7fc51a1061735456}{MFX\+\_\+\+CM0\+P\+\_\+mcu\+\_\+type\+\_\+t}}}]{mcu\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Initialize the Motion\+FX\+\_\+\+CM0P engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mcu\+\_\+type} & MCU type \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_ga28b0968da845893d3cc89e734803e338}\label{group__MOTION__FX__CM0P__Exported__Functions_ga28b0968da845893d3cc89e734803e338} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_MagCal\_getParams@{MotionFX\_CM0P\_MagCal\_getParams}}
+\index{MotionFX\_CM0P\_MagCal\_getParams@{MotionFX\_CM0P\_MagCal\_getParams}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_MagCal\_getParams()}{MotionFX\_CM0P\_MagCal\_getParams()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+get\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMFX__CM0P__MagCal__output__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Get magnetic calibration parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & structure containing output data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gae25cdadc43c5a3a3c360d394942d99bf}\label{group__MOTION__FX__CM0P__Exported__Functions_gae25cdadc43c5a3a3c360d394942d99bf} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_MagCal\_init@{MotionFX\_CM0P\_MagCal\_init}}
+\index{MotionFX\_CM0P\_MagCal\_init@{MotionFX\_CM0P\_MagCal\_init}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_MagCal\_init()}{MotionFX\_CM0P\_MagCal\_init()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{sampletime,  }\item[{unsigned short int}]{enable }\end{DoxyParamCaption})}
+
+
+
+Initialize the compass calibration library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sampletime} & period in milliseconds \mbox{[}ms\mbox{]} between the update function call \\
+\hline
+{\em enable} & enable (1) or disable (0) library \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gaae4fa9bfdfdd5148522cabd8246b430c}\label{group__MOTION__FX__CM0P__Exported__Functions_gaae4fa9bfdfdd5148522cabd8246b430c} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_MagCal\_run@{MotionFX\_CM0P\_MagCal\_run}}
+\index{MotionFX\_CM0P\_MagCal\_run@{MotionFX\_CM0P\_MagCal\_run}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_MagCal\_run()}{MotionFX\_CM0P\_MagCal\_run()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMFX__CM0P__MagCal__input__t}{MFX\+\_\+\+CM0\+P\+\_\+\+Mag\+Cal\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+Run magnetic calibration algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & structure containing input data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gade0ea4e9e4ac0f7710b908a0189a397d}\label{group__MOTION__FX__CM0P__Exported__Functions_gade0ea4e9e4ac0f7710b908a0189a397d} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_setGbias@{MotionFX\_CM0P\_setGbias}}
+\index{MotionFX\_CM0P\_setGbias@{MotionFX\_CM0P\_setGbias}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_setGbias()}{MotionFX\_CM0P\_setGbias()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+set\+Gbias (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{gbias }\end{DoxyParamCaption})}
+
+
+
+Set the initial gbias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gbias} & pointer to a float array containing the 3 gbias values \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gaf93d85057a2d8f95a1d7d677b01d63e1}\label{group__MOTION__FX__CM0P__Exported__Functions_gaf93d85057a2d8f95a1d7d677b01d63e1} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_setOrientation@{MotionFX\_CM0P\_setOrientation}}
+\index{MotionFX\_CM0P\_setOrientation@{MotionFX\_CM0P\_setOrientation}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_setOrientation()}{MotionFX\_CM0P\_setOrientation()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+set\+Orientation (\begin{DoxyParamCaption}\item[{const char}]{acc\+\_\+orientation\mbox{[}4\mbox{]},  }\item[{const char}]{gyro\+\_\+orientation\mbox{[}4\mbox{]},  }\item[{const char}]{mag\+\_\+orientation\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Set sensor orientation, default orientation is ENU (x -\/ east, y -\/ north, z -\/ up) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em acc\+\_\+orientation} & string with reference to set \\
+\hline
+{\em gyr\+\_\+orientation} & string with reference to set \\
+\hline
+{\em mag\+\_\+orientation} & string with reference to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group__MOTION__FX__CM0P__Exported__Functions_gaf81f34ad7094f2085df7880969b43fc6}\label{group__MOTION__FX__CM0P__Exported__Functions_gaf81f34ad7094f2085df7880969b43fc6} 
+\index{MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}!MotionFX\_CM0P\_update@{MotionFX\_CM0P\_update}}
+\index{MotionFX\_CM0P\_update@{MotionFX\_CM0P\_update}!MOTION\_FX\_CM0P\_Exported\_Functions@{MOTION\_FX\_CM0P\_Exported\_Functions}}
+\doxysubsubsubsection{\texorpdfstring{MotionFX\_CM0P\_update()}{MotionFX\_CM0P\_update()}}
+{\footnotesize\ttfamily void Motion\+FX\+\_\+\+CM0\+P\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMFX__CM0P__output__t}{MFX\+\_\+\+CM0\+P\+\_\+output\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+out,  }\item[{\mbox{\hyperlink{structMFX__CM0P__input__t}{MFX\+\_\+\+CM0\+P\+\_\+input\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+in,  }\item[{float}]{deltatime }\end{DoxyParamCaption})}
+
+
+
+This function runs one step of the sensor fusion algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & pointer to the MFX\+\_\+\+CM0\+P\+\_\+output structure \\
+\hline
+{\em data\+\_\+in} & pointer to the MFX\+\_\+\+CM0\+P\+\_\+input structure \\
+\hline
+{\em deltatime} & delta time between two propagate calls \mbox{[}sec\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}

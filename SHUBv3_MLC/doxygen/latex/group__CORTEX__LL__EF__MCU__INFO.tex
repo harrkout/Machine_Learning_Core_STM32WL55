@@ -1,0 +1,151 @@
+\doxysubsubsubsection{MCU INFO}
+\hypertarget{group__CORTEX__LL__EF__MCU__INFO}{}\label{group__CORTEX__LL__EF__MCU__INFO}\index{MCU INFO@{MCU INFO}}
+\doxysubsubsubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga648a5236b7fa08786086fcc4ce42b4b9}{LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer}} (void)
+\begin{DoxyCompactList}\small\item\em Get Implementer code @rmtoll SCB\+\_\+\+CPUID IMPLEMENTER LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga1f843da5f8524bace7fcf8dcce7996cb}{LL\+\_\+\+CPUID\+\_\+\+Get\+Variant}} (void)
+\begin{DoxyCompactList}\small\item\em Get Variant number (The r value in the rnpn product revision identifier) @rmtoll SCB\+\_\+\+CPUID VARIANT LL\+\_\+\+CPUID\+\_\+\+Get\+Variant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_gadc6dc3055d2a192ac1218e09a1e8fd19}{LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture}} (void)
+\begin{DoxyCompactList}\small\item\em Get Architecture number @rmtoll SCB\+\_\+\+CPUID ARCHITECTURE LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_gac98fd56ad9162c3f372004bd07038bdb}{LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No}} (void)
+\begin{DoxyCompactList}\small\item\em Get Part number @rmtoll SCB\+\_\+\+CPUID PARTNO LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga7372821defd92c49ea4563da407acd01}{LL\+\_\+\+CPUID\+\_\+\+Get\+Revision}} (void)
+\begin{DoxyCompactList}\small\item\em Get Revision number (The p value in the rnpn product revision identifier, indicates patch release) @rmtoll SCB\+\_\+\+CPUID REVISION LL\+\_\+\+CPUID\+\_\+\+Get\+Revision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsubsection{Function Documentation}
+\Hypertarget{group__CORTEX__LL__EF__MCU__INFO_gadc6dc3055d2a192ac1218e09a1e8fd19}\label{group__CORTEX__LL__EF__MCU__INFO_gadc6dc3055d2a192ac1218e09a1e8fd19} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetArchitecture@{LL\_CPUID\_GetArchitecture}}
+\index{LL\_CPUID\_GetArchitecture@{LL\_CPUID\_GetArchitecture}!MCU INFO@{MCU INFO}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_CPUID\_GetArchitecture()}{LL\_CPUID\_GetArchitecture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Architecture number @rmtoll SCB\+\_\+\+CPUID ARCHITECTURE LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & should be equal to 0xF for Cortex-\/\+M4 devices \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source_l00452}{452}} of file \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source}{stm32wlxx\+\_\+ll\+\_\+cortex.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00453\ \{}
+\DoxyCodeLine{00454\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_gafae4a1f27a927338ae9dc51a0e146213}{SCB\_CPUID\_ARCHITECTURE\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_gaf8b3236b08fb8e840efb682645fb0e98}{SCB\_CPUID\_ARCHITECTURE\_Pos}});}
+\DoxyCodeLine{00455\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CORTEX__LL__EF__MCU__INFO_ga648a5236b7fa08786086fcc4ce42b4b9}\label{group__CORTEX__LL__EF__MCU__INFO_ga648a5236b7fa08786086fcc4ce42b4b9} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetImplementer@{LL\_CPUID\_GetImplementer}}
+\index{LL\_CPUID\_GetImplementer@{LL\_CPUID\_GetImplementer}!MCU INFO@{MCU INFO}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_CPUID\_GetImplementer()}{LL\_CPUID\_GetImplementer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Implementer code @rmtoll SCB\+\_\+\+CPUID IMPLEMENTER LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & should be equal to 0x41 for ARM \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source_l00432}{432}} of file \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source}{stm32wlxx\+\_\+ll\+\_\+cortex.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00433\ \{}
+\DoxyCodeLine{00434\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_ga0932b31faafd47656a03ced75a31d99b}{SCB\_CPUID\_IMPLEMENTER\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga58686b88f94f789d4e6f429fe1ff58cf}{SCB\_CPUID\_IMPLEMENTER\_Pos}});}
+\DoxyCodeLine{00435\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CORTEX__LL__EF__MCU__INFO_gac98fd56ad9162c3f372004bd07038bdb}\label{group__CORTEX__LL__EF__MCU__INFO_gac98fd56ad9162c3f372004bd07038bdb} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetParNo@{LL\_CPUID\_GetParNo}}
+\index{LL\_CPUID\_GetParNo@{LL\_CPUID\_GetParNo}!MCU INFO@{MCU INFO}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_CPUID\_GetParNo()}{LL\_CPUID\_GetParNo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Part number @rmtoll SCB\+\_\+\+CPUID PARTNO LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & should be equal to 0x\+C24 for Cortex-\/\+M4 \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source_l00462}{462}} of file \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source}{stm32wlxx\+\_\+ll\+\_\+cortex.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00463\ \{}
+\DoxyCodeLine{00464\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_ga98e581423ca016680c238c469aba546d}{SCB\_CPUID\_PARTNO\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga705f68eaa9afb042ca2407dc4e4629ac}{SCB\_CPUID\_PARTNO\_Pos}});}
+\DoxyCodeLine{00465\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CORTEX__LL__EF__MCU__INFO_ga7372821defd92c49ea4563da407acd01}\label{group__CORTEX__LL__EF__MCU__INFO_ga7372821defd92c49ea4563da407acd01} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetRevision@{LL\_CPUID\_GetRevision}}
+\index{LL\_CPUID\_GetRevision@{LL\_CPUID\_GetRevision}!MCU INFO@{MCU INFO}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_CPUID\_GetRevision()}{LL\_CPUID\_GetRevision()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Revision (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Revision number (The p value in the rnpn product revision identifier, indicates patch release) @rmtoll SCB\+\_\+\+CPUID REVISION LL\+\_\+\+CPUID\+\_\+\+Get\+Revision. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & between 0 and 255 (0x1\+: patch 1) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source_l00472}{472}} of file \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source}{stm32wlxx\+\_\+ll\+\_\+cortex.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00473\ \{}
+\DoxyCodeLine{00474\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_ga2ec0448b6483f77e7f5d08b4b81d85df}{SCB\_CPUID\_REVISION\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga3c3d9071e574de11fb27ba57034838b1}{SCB\_CPUID\_REVISION\_Pos}});}
+\DoxyCodeLine{00475\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__CORTEX__LL__EF__MCU__INFO_ga1f843da5f8524bace7fcf8dcce7996cb}\label{group__CORTEX__LL__EF__MCU__INFO_ga1f843da5f8524bace7fcf8dcce7996cb} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetVariant@{LL\_CPUID\_GetVariant}}
+\index{LL\_CPUID\_GetVariant@{LL\_CPUID\_GetVariant}!MCU INFO@{MCU INFO}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_CPUID\_GetVariant()}{LL\_CPUID\_GetVariant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Variant (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Variant number (The r value in the rnpn product revision identifier) @rmtoll SCB\+\_\+\+CPUID VARIANT LL\+\_\+\+CPUID\+\_\+\+Get\+Variant. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & between 0 and 255 (0x0\+: revision 0) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source_l00442}{442}} of file \mbox{\hyperlink{stm32wlxx__ll__cortex_8h_source}{stm32wlxx\+\_\+ll\+\_\+cortex.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00443\ \{}
+\DoxyCodeLine{00444\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_gad358dfbd04300afc1824329d128b99e8}{SCB\_CPUID\_VARIANT\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga104462bd0815391b4044a70bd15d3a71}{SCB\_CPUID\_VARIANT\_Pos}});}
+\DoxyCodeLine{00445\ \}}
+
+\end{DoxyCode}

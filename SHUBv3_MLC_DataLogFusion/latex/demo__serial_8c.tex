@@ -1,0 +1,59 @@
+\doxysection{MEMS/\+Target/demo\+\_\+serial.c File Reference}
+\hypertarget{demo__serial_8c}{}\label{demo__serial_8c}\index{MEMS/Target/demo\_serial.c@{MEMS/Target/demo\_serial.c}}
+
+
+Handle the Serial Protocol.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}stm32wlxx\+\_\+nucleo.\+h"{}}\newline
+{\ttfamily \#include "{}com.\+h"{}}\newline
+{\ttfamily \#include "{}demo\+\_\+serial.\+h"{}}\newline
+{\ttfamily \#include "{}fw\+\_\+version.\+h"{}}\newline
+{\ttfamily \#include "{}motion\+\_\+fx\+\_\+manager.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+mems\+\_\+conf\+\_\+app.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga23eb6a1aef31b57bc7d80df89543e8ab}{MAG\+\_\+\+UNICLEO\+\_\+\+ID}}~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga39b337b3f942ac33af40252f5f315f21}{HUM\+\_\+\+TEMP\+\_\+\+UNICLEO\+\_\+\+ID}}~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}
+\item 
+\#define \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga61936bef1bedb61a9925c66837ed37d3}{PRESS\+\_\+\+UNICLEO\+\_\+\+ID}}~\mbox{\hyperlink{sensor__unicleo__id_8h_aec4bbcecaea28fb45f7cc117bcc31fb1}{UNKNOWN\+\_\+\+UNICLEO\+\_\+\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga56da948a388347774dcc7d2ca5fcccff}{BUILD\+\_\+\+REPLY\+\_\+\+HEADER}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Build the reply header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga93e2f792c7ac7e088eaa2cf6bbc21028}{INIT\+\_\+\+STREAMING\+\_\+\+HEADER}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Initialize the streaming header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga140b99c6cfd3935acaeedec0e26d1950}{INIT\+\_\+\+STREAMING\+\_\+\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Initialize the streaming message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga4eb41985a5b7a732924e74891950c19e}{Handle\+MSG}} (\mbox{\hyperlink{structTMsg}{TMsg}} \texorpdfstring{$\ast$}{*}Msg)
+\begin{DoxyCompactList}\small\item\em Handle a message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_ga5e7a789f5c53b90d8949630c953cb1fb}{RTC\+\_\+\+Date\+Regulate}} (uint8\+\_\+t y, uint8\+\_\+t m, uint8\+\_\+t d, uint8\+\_\+t dw)
+\begin{DoxyCompactList}\small\item\em Configures the current date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gaf62c8372ca6f26badbf73d63c6697fb5}{RTC\+\_\+\+Time\+Regulate}} (uint8\+\_\+t hh, uint8\+\_\+t mm, uint8\+\_\+t ss)
+\begin{DoxyCompactList}\small\item\em Configures the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOTION__APPLICATIONS_gabdc4e43782aeead7a2ed6a8ad311da77}{Get\+\_\+\+Presentation\+String}} (char \texorpdfstring{$\ast$}{*}Presentation\+String, uint32\+\_\+t \texorpdfstring{$\ast$}{*}Length)
+\begin{DoxyCompactList}\small\item\em Gets Presentation string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handle the Serial Protocol. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+Definition in file \mbox{\hyperlink{demo__serial_8c_source}{demo\+\_\+serial.\+c}}.
+

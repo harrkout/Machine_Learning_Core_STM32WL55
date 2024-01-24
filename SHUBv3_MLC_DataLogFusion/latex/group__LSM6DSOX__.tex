@@ -1,0 +1,1928 @@
+\doxysection{Auxiliary\+\_\+interface}
+\hypertarget{group__LSM6DSOX__}{}\label{group__LSM6DSOX__}\index{Auxiliary\_interface@{Auxiliary\_interface}}
+
+
+This section groups all the functions concerning auxiliary interface.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga1a140d643a0ad932171311208b9bb4bd}{lsm6dsox\+\_\+ois\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gafb7941175aa0e2d33691ea5f286af3ab}{lsm6dsox\+\_\+spi2\+\_\+read\+\_\+en\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em OIS data reading from Auxiliary / Main SPI.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga3d49002f93a81d396c2a5116614ea100}{lsm6dsox\+\_\+ois\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gafb7941175aa0e2d33691ea5f286af3ab}{lsm6dsox\+\_\+spi2\+\_\+read\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em aux\+\_\+ois\+\_\+data\+: \mbox{[}get\mbox{]} OIS data reading from Auxiliary / Main SPI \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga61caec6033f40155b8045ed9855c8375}{lsm6dsox\+\_\+aux\+\_\+sdo\+\_\+ocs\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga764878a30502969950b35061c79524ad}{lsm6dsox\+\_\+ois\+\_\+pu\+\_\+dis\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em a\+On auxiliary interface connect/disconnect SDO and OCS internal pull-\/up.\mbox{[}set\mbox{]} \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga53fd177430b457925ab3bab1163afe3b}{lsm6dsox\+\_\+aux\+\_\+sdo\+\_\+ocs\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga764878a30502969950b35061c79524ad}{lsm6dsox\+\_\+ois\+\_\+pu\+\_\+dis\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em On auxiliary interface connect/disconnect SDO and OCS internal pull-\/up.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaab9d8ffc4f9cc000809ea6cccc2fc652}{lsm6dsox\+\_\+aux\+\_\+pw\+\_\+on\+\_\+ctrl\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga772ab8d77ba5548c6ea508aa7856b3ce}{lsm6dsox\+\_\+ois\+\_\+on\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em OIS chain on aux interface power on mode.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga9ff0230401234bfb727471427b00127b}{lsm6dsox\+\_\+aux\+\_\+pw\+\_\+on\+\_\+ctrl\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga772ab8d77ba5548c6ea508aa7856b3ce}{lsm6dsox\+\_\+ois\+\_\+on\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em aux\+\_\+pw\+\_\+on\+\_\+ctrl\+: \mbox{[}get\mbox{]} OIS chain on aux interface power on mode \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga95f4ab0a9045a7e472938f7e25e74991}{lsm6dsox\+\_\+aux\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab25741f38ab728495091807aec7f44fb}{lsm6dsox\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Accelerometer full-\/scale management between UI chain and OIS chain. When XL UI is on, the full scale is the same between UI/\+OIS and is chosen by the UI CTRL registers; when XL UI is in PD, the OIS can choose the FS. Full scales are independent between the UI/\+OIS chain but both bound to 8 g.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga859b9aab4caba6044560776e4f5bfd17}{lsm6dsox\+\_\+aux\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab25741f38ab728495091807aec7f44fb}{lsm6dsox\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer full-\/scale management between UI chain and OIS chain. When XL UI is on, the full scale is the same between UI/\+OIS and is chosen by the UI CTRL registers; when XL UI is in PD, the OIS can choose the FS. Full scales are independent between the UI/\+OIS chain but both bound to 8 g.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga03eb916edb8dea3b28cc720eef09802b}{lsm6dsox\+\_\+aux\+\_\+status\+\_\+reg\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__spi2__status__reg__ois__t}{lsm6dsox\+\_\+spi2\+\_\+status\+\_\+reg\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em The STATUS\+\_\+\+SPIAux register is read by the auxiliary SPI.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga94a14b203320b5d0ce6c66cd0d403463}{lsm6dsox\+\_\+aux\+\_\+xl\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em aux\+\_\+xl\+\_\+flag\+\_\+data\+\_\+ready\+: \mbox{[}get\mbox{]} AUX accelerometer data available \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga0e2204a23b8b8e857c15f0dabba356cb}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em aux\+\_\+gy\+\_\+flag\+\_\+data\+\_\+ready\+: \mbox{[}get\mbox{]} AUX gyroscope data available. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga082e3f97e247d48484f907ef784e5266}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+flag\+\_\+settling\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em High when the gyroscope output is in the settling phase.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga5108bbb6b9d8b001842bb872204e2424}{lsm6dsox\+\_\+aux\+\_\+den\+\_\+polarity\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gadbbef31fc741ad376e8207ada8d3f650}{lsm6dsox\+\_\+den\+\_\+lh\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Indicates polarity of DEN signal on OIS chain.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga0aea8b47b860410c9e808afb708b3a9a}{lsm6dsox\+\_\+aux\+\_\+den\+\_\+polarity\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gadbbef31fc741ad376e8207ada8d3f650}{lsm6dsox\+\_\+den\+\_\+lh\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Indicates polarity of DEN signal on OIS chain.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gae078509728b962d8d160a05e2905506c}{lsm6dsox\+\_\+aux\+\_\+den\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gac7530dafd8d3ea2108bbafe4a7f00ebc}{lsm6dsox\+\_\+lvl2\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Configure DEN mode on the OIS chain.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga52ef34ab5ab18a65b0c084259fa1ac70}{lsm6dsox\+\_\+aux\+\_\+den\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gac7530dafd8d3ea2108bbafe4a7f00ebc}{lsm6dsox\+\_\+lvl2\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure DEN mode on the OIS chain.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaba6883dd4fe891a71d92e721d2b41029}{lsm6dsox\+\_\+aux\+\_\+drdy\+\_\+on\+\_\+int2\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables/\+Disable OIS chain DRDY on INT2 pin. This setting has priority over all other INT2 settings.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gae9b8761efcc88189c589a0e3630f5d42}{lsm6dsox\+\_\+aux\+\_\+drdy\+\_\+on\+\_\+int2\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables/\+Disable OIS chain DRDY on INT2 pin. This setting has priority over all other INT2 settings.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga072c466535af1af930c88570ad6d4555}{lsm6dsox\+\_\+aux\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga47368b98e6e1afbbd2d1e92cb093239d}{lsm6dsox\+\_\+ois\+\_\+en\+\_\+spi2\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Enables OIS chain data processing for gyro in Mode 3 and Mode 4 (mode4\+\_\+en = 1) and accelerometer data in and Mode 4 (mode4\+\_\+en = 1). When the OIS chain is enabled, the OIS outputs are available through the SPI2 in registers OUTX\+\_\+\+L\+\_\+G (22h) through OUTZ\+\_\+\+H\+\_\+G (27h) and STATUS\+\_\+\+REG (1Eh) / STATUS\+\_\+\+SPIAux, and LPF1 is dedicated to this chain.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga1fdc466b363b6c4bd92d43e10627c503}{lsm6dsox\+\_\+aux\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga47368b98e6e1afbbd2d1e92cb093239d}{lsm6dsox\+\_\+ois\+\_\+en\+\_\+spi2\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables OIS chain data processing for gyro in Mode 3 and Mode 4 (mode4\+\_\+en = 1) and accelerometer data in and Mode 4 (mode4\+\_\+en = 1). When the OIS chain is enabled, the OIS outputs are available through the SPI2 in registers OUTX\+\_\+\+L\+\_\+G (22h) through OUTZ\+\_\+\+H\+\_\+G (27h) and STATUS\+\_\+\+REG (1Eh) / STATUS\+\_\+\+SPIAux, and LPF1 is dedicated to this chain.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaf6dd96761292013954b7e3118c92b895}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+full\+\_\+scale\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga512e14d6a4ef6fa2fcb6498d528b4583}{lsm6dsox\+\_\+fs\+\_\+g\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects gyroscope OIS chain full-\/scale.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga16ae60f99eb4304f1a24949f74379f40}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+full\+\_\+scale\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga512e14d6a4ef6fa2fcb6498d528b4583}{lsm6dsox\+\_\+fs\+\_\+g\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects gyroscope OIS chain full-\/scale.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga40f249807504bcff8f8c829fbfdf4c30}{lsm6dsox\+\_\+aux\+\_\+spi\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga7667a9bd824dbf4e8eb327eb6402561a}{lsm6dsox\+\_\+sim\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em SPI2 3-\/ or 4-\/wire interface.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaf387f44e8f29b86ff80ec7d793b13eff}{lsm6dsox\+\_\+aux\+\_\+spi\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga7667a9bd824dbf4e8eb327eb6402561a}{lsm6dsox\+\_\+sim\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em SPI2 3-\/ or 4-\/wire interface.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga5184bb9270d450f39a5f6e96108030b6}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0e652e0d60816df7e3f38c527cef208f}{lsm6dsox\+\_\+ftype\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects gyroscope digital LPF1 filter bandwidth.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gad42fffaee17b8de0193fa84a343b7d8c}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0e652e0d60816df7e3f38c527cef208f}{lsm6dsox\+\_\+ftype\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects gyroscope digital LPF1 filter bandwidth.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gac59495c9f26ac61ec466912fb93c4e86}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+hp\+\_\+bandwidth\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gabc3da8998c95bc811b3b161de342b7ab}{lsm6dsox\+\_\+hpm\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects gyroscope OIS chain digital high-\/pass filter cutoff.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga27cb7652ee36ce42a94bf5ad8158ded1}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+hp\+\_\+bandwidth\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gabc3da8998c95bc811b3b161de342b7ab}{lsm6dsox\+\_\+hpm\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects gyroscope OIS chain digital high-\/pass filter cutoff.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga894181d2cd38bb83e19dbc685b62de4c}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+clamp\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0e0bcb3d6537ad385e2e78783d52fc40}{lsm6dsox\+\_\+st\+\_\+ois\+\_\+clampdis\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Enable / Disables OIS chain clamp. Enable\+: All OIS chain outputs = 8000h during self-\/test; Disable\+: OIS chain self-\/test outputs dependent from the aux gyro full scale selected.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga9da96b5c331142dc0deba8552e9b1946}{lsm6dsox\+\_\+aux\+\_\+gy\+\_\+clamp\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga0e0bcb3d6537ad385e2e78783d52fc40}{lsm6dsox\+\_\+st\+\_\+ois\+\_\+clampdis\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable / Disables OIS chain clamp. Enable\+: All OIS chain outputs = 8000h during self-\/test; Disable\+: OIS chain self-\/test outputs dependent from the aux gyro full scale selected.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gabdb7f95700d18d500464ba4266a911f5}{lsm6dsox\+\_\+aux\+\_\+xl\+\_\+bandwidth\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab5947f534eb54a67100dec0e23a04e74}{lsm6dsox\+\_\+filter\+\_\+xl\+\_\+conf\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects accelerometer OIS channel bandwidth.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga834011d9247f596728b416cbd8f64e79}{lsm6dsox\+\_\+aux\+\_\+xl\+\_\+bandwidth\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab5947f534eb54a67100dec0e23a04e74}{lsm6dsox\+\_\+filter\+\_\+xl\+\_\+conf\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects accelerometer OIS channel bandwidth.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga758fa6610849868089bed3253fe2e549}{lsm6dsox\+\_\+aux\+\_\+xl\+\_\+full\+\_\+scale\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab0428f3b6ee3b1fa7addb176c5440e08}{lsm6dsox\+\_\+fs\+\_\+xl\+\_\+ois\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Selects accelerometer OIS channel full-\/scale.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gab1a6c3b58e71e9b773e64b4d96599a17}{lsm6dsox\+\_\+aux\+\_\+xl\+\_\+full\+\_\+scale\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab0428f3b6ee3b1fa7addb176c5440e08}{lsm6dsox\+\_\+fs\+\_\+xl\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects accelerometer OIS channel full-\/scale.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaee71abfbead00d37c9124872115909a0}{lsm6dsox\+\_\+sdo\+\_\+sa0\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga37102e7b3f8512f973da626570d9743f}{lsm6dsox\+\_\+sdo\+\_\+pu\+\_\+en\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Connect/\+Disconnect SDO/\+SA0 internal pull-\/up.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga9b8e377ca36957b7eb8ac102d765888b}{lsm6dsox\+\_\+sdo\+\_\+sa0\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga37102e7b3f8512f973da626570d9743f}{lsm6dsox\+\_\+sdo\+\_\+pu\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Connect/\+Disconnect SDO/\+SA0 internal pull-\/up.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaaddc5fe3efe5f7c90285a72995d90ea3}{lsm6dsox\+\_\+spi\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga3f500693a941b1d7fed89a2661620ed9}{lsm6dsox\+\_\+sim\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em SPI Serial Interface Mode selection.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga6b47f95b20b4c851fa7a3d18397f8d6c}{lsm6dsox\+\_\+spi\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga3f500693a941b1d7fed89a2661620ed9}{lsm6dsox\+\_\+sim\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em SPI Serial Interface Mode selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga6fedb50e46ff3aabf03a2e91584b77b3}{lsm6dsox\+\_\+i2c\+\_\+interface\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gade34ac2d6151782ae66f27370b6f2bef}{lsm6dsox\+\_\+i2c\+\_\+disable\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Disable / Enable I2C interface.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gacd3041229a021468095ff2423c351c7e}{lsm6dsox\+\_\+i2c\+\_\+interface\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gade34ac2d6151782ae66f27370b6f2bef}{lsm6dsox\+\_\+i2c\+\_\+disable\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Disable / Enable I2C interface.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga07b520ca6f8429e8eed1e4795f29b979}{lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gaa6cc937a08c85e293438747d76f9e5ce}{lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em I3C Enable/\+Disable communication protocol\mbox{[}.set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaf13523d0c71328e7c33c51b8b2c560be}{lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gaa6cc937a08c85e293438747d76f9e5ce}{lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em I3C Enable/\+Disable communication protocol.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga924988cb715194c2ed72c2dc90288319}{lsm6dsox\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope Sleep mode.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gad2495881c79d6b28c33a01010be1dd9c}{lsm6dsox\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope Sleep mode.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gadf055c18cb2db8766fc966457c937380}{lsm6dsox\+\_\+act\+\_\+pin\+\_\+notification\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga2d910787dea44471958b013e2f5ea473}{lsm6dsox\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga23c5530c17744de88d7125a7abb883c0}{lsm6dsox\+\_\+act\+\_\+pin\+\_\+notification\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga2d910787dea44471958b013e2f5ea473}{lsm6dsox\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga745692c8d5ad8b14df36b11bfa22169b}{lsm6dsox\+\_\+act\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga77a62c0a11f925b4fd36245f0e4feac8}{lsm6dsox\+\_\+inact\+\_\+en\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Enable inactivity function.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga2faca83ab84570d7ffb71d760dd07e92}{lsm6dsox\+\_\+act\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga77a62c0a11f925b4fd36245f0e4feac8}{lsm6dsox\+\_\+inact\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable inactivity function.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga0112b020bb9b7146dac51cc82b8da59b}{lsm6dsox\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Duration to go in sleep mode.\mbox{[}set\mbox{]} 1 LSb = 512 / ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga37780f35f681cd6a0f786a9454465fdd}{lsm6dsox\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Duration to go in sleep mode.\mbox{[}get\mbox{]} 1 LSb = 512 / ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga885e98cffe42fbc1ca97db086c87c733}{lsm6dsox\+\_\+6d\+\_\+threshold\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga555f9d45c3871948d87a044ce5f77129}{lsm6dsox\+\_\+sixd\+\_\+ths\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Threshold for 4D/6D function.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gabe94e4d434c6924bb3800992670e32a1}{lsm6dsox\+\_\+6d\+\_\+threshold\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga555f9d45c3871948d87a044ce5f77129}{lsm6dsox\+\_\+sixd\+\_\+ths\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Threshold for 4D/6D function.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaff8fb981f430ba4cd7da2bbc87457a8f}{lsm6dsox\+\_\+4d\+\_\+mode\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em 4D orientation detection enable.\mbox{[}set\mbox{]} \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gab875c2de33fdec19d407a7bf2003fbba}{lsm6dsox\+\_\+4d\+\_\+mode\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em 4D orientation detection enable.\mbox{[}get\mbox{]} \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga6729d0c318d8ab931a85c976e8fd12b6}{lsm6dsox\+\_\+sh\+\_\+mag\+\_\+sensitivity\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register for Sensor hub.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga7e0c980fd93f6955be4978bbfc567b4b}{lsm6dsox\+\_\+sh\+\_\+mag\+\_\+sensitivity\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register for Sensor hub.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga975cce5457c7ab1607e08315c576a75f}{lsm6dsox\+\_\+mlc\+\_\+mag\+\_\+sensitivity\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register for Machine Learning Core.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga71f4ad1153d5b0dfe29ae238593e48b8}{lsm6dsox\+\_\+mlc\+\_\+mag\+\_\+sensitivity\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register for Machine Learning Core.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gabcaa4c6507c1968440136b4a075de6c7}{lsm6dsox\+\_\+mag\+\_\+offset\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Offset for hard-\/iron compensation register (r/w).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga647e5c0fa985927ca9eaff688f2aa069}{lsm6dsox\+\_\+mag\+\_\+offset\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Offset for hard-\/iron compensation register (r/w).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga13d94d277b9374df0eaadb5da66534ce}{lsm6dsox\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Soft-\/iron (3x3 symmetric) matrix correction register (r/w). The value is expressed as half-\/precision floating-\/point format\+: SEEEEEFFFFFFFFFF S\+: 1 sign bit; E\+: 5 exponent bits; F\+: 10 fraction bits).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga2a01bb134c2f046d821892ab33661d55}{lsm6dsox\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Soft-\/iron (3x3 symmetric) matrix correction register (r/w). The value is expressed as half-\/precision floating-\/point format\+: SEEEEEFFFFFFFFFF S\+: 1 sign bit; E\+: 5 exponent bits; F\+: 10 fraction bits.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga3b57edc9df57c13934335dccccd02b55}{lsm6dsox\+\_\+mag\+\_\+z\+\_\+orient\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga22bc34194eddf7b08a08d16639ec3577}{lsm6dsox\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga230da27b573beb55a6baea4bbb603d2b}{lsm6dsox\+\_\+mag\+\_\+z\+\_\+orient\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_ga22bc34194eddf7b08a08d16639ec3577}{lsm6dsox\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gaa25ce34e6d5f9f102613dc4ddf00a6dd}{lsm6dsox\+\_\+mag\+\_\+y\+\_\+orient\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gae223fdc69eec03b57d447a2503e7b21c}{lsm6dsox\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga563ba6ba404fac55598b52aaee579a3d}{lsm6dsox\+\_\+mag\+\_\+y\+\_\+orient\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gae223fdc69eec03b57d447a2503e7b21c}{lsm6dsox\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___ga23610f4120439984abd0168ab171e1e7}{lsm6dsox\+\_\+mag\+\_\+x\+\_\+orient\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gae962abdaf4869516ca83a64dad1a64ca}{lsm6dsox\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX___gad71d235278b589cc7951bc495c02f024}{lsm6dsox\+\_\+mag\+\_\+x\+\_\+orient\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gae962abdaf4869516ca83a64dad1a64ca}{lsm6dsox\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions concerning auxiliary interface. 
+
+This section groups all the functions that manage additional magnetometer sensor.
+
+This section groups all the functions concerning six position detection (6D).
+
+This section groups all the functions concerning activity/inactivity detection.
+
+This section groups all the functions concerning main serial interface management (not auxiliary)
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX___gab875c2de33fdec19d407a7bf2003fbba}\label{group__LSM6DSOX___gab875c2de33fdec19d407a7bf2003fbba} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_4d\_mode\_get@{lsm6dsox\_4d\_mode\_get}}
+\index{lsm6dsox\_4d\_mode\_get@{lsm6dsox\_4d\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_4d\_mode\_get()}{lsm6dsox\_4d\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+4d\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+4D orientation detection enable.\mbox{[}get\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of d4d\+\_\+en in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06241}{6241}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaff8fb981f430ba4cd7da2bbc87457a8f}\label{group__LSM6DSOX___gaff8fb981f430ba4cd7da2bbc87457a8f} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_4d\_mode\_set@{lsm6dsox\_4d\_mode\_set}}
+\index{lsm6dsox\_4d\_mode\_set@{lsm6dsox\_4d\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_4d\_mode\_set()}{lsm6dsox\_4d\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+4d\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+4D orientation detection enable.\mbox{[}set\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of d4d\+\_\+en in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06217}{6217}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gabe94e4d434c6924bb3800992670e32a1}\label{group__LSM6DSOX___gabe94e4d434c6924bb3800992670e32a1} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_6d\_threshold\_get@{lsm6dsox\_6d\_threshold\_get}}
+\index{lsm6dsox\_6d\_threshold\_get@{lsm6dsox\_6d\_threshold\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_6d\_threshold\_get()}{lsm6dsox\_6d\_threshold\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+6d\+\_\+threshold\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga555f9d45c3871948d87a044ce5f77129}{lsm6dsox\+\_\+sixd\+\_\+ths\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Threshold for 4D/6D function.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of sixd\+\_\+ths in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06175}{6175}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga885e98cffe42fbc1ca97db086c87c733}\label{group__LSM6DSOX___ga885e98cffe42fbc1ca97db086c87c733} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_6d\_threshold\_set@{lsm6dsox\_6d\_threshold\_set}}
+\index{lsm6dsox\_6d\_threshold\_set@{lsm6dsox\_6d\_threshold\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_6d\_threshold\_set()}{lsm6dsox\_6d\_threshold\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+6d\+\_\+threshold\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga555f9d45c3871948d87a044ce5f77129}{lsm6dsox\+\_\+sixd\+\_\+ths\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Threshold for 4D/6D function.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sixd\+\_\+ths in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l06150}{6150}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga2faca83ab84570d7ffb71d760dd07e92}\label{group__LSM6DSOX___ga2faca83ab84570d7ffb71d760dd07e92} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_act\_mode\_get@{lsm6dsox\_act\_mode\_get}}
+\index{lsm6dsox\_act\_mode\_get@{lsm6dsox\_act\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_act\_mode\_get()}{lsm6dsox\_act\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+act\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga77a62c0a11f925b4fd36245f0e4feac8}{lsm6dsox\+\_\+inact\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable inactivity function.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of inact\+\_\+en in reg TAP\+\_\+\+CFG2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05472}{5472}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga745692c8d5ad8b14df36b11bfa22169b}\label{group__LSM6DSOX___ga745692c8d5ad8b14df36b11bfa22169b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_act\_mode\_set@{lsm6dsox\_act\_mode\_set}}
+\index{lsm6dsox\_act\_mode\_set@{lsm6dsox\_act\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_act\_mode\_set()}{lsm6dsox\_act\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+act\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga77a62c0a11f925b4fd36245f0e4feac8}{lsm6dsox\+\_\+inact\+\_\+en\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable inactivity function.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of inact\+\_\+en in reg TAP\+\_\+\+CFG2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05447}{5447}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga23c5530c17744de88d7125a7abb883c0}\label{group__LSM6DSOX___ga23c5530c17744de88d7125a7abb883c0} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_act\_pin\_notification\_get@{lsm6dsox\_act\_pin\_notification\_get}}
+\index{lsm6dsox\_act\_pin\_notification\_get@{lsm6dsox\_act\_pin\_notification\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_act\_pin\_notification\_get()}{lsm6dsox\_act\_pin\_notification\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+act\+\_\+pin\+\_\+notification\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga2d910787dea44471958b013e2f5ea473}{lsm6dsox\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of sleep\+\_\+status\+\_\+on\+\_\+int in reg TAP\+\_\+\+CFG0 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05413}{5413}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gadf055c18cb2db8766fc966457c937380}\label{group__LSM6DSOX___gadf055c18cb2db8766fc966457c937380} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_act\_pin\_notification\_set@{lsm6dsox\_act\_pin\_notification\_set}}
+\index{lsm6dsox\_act\_pin\_notification\_set@{lsm6dsox\_act\_pin\_notification\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_act\_pin\_notification\_set()}{lsm6dsox\_act\_pin\_notification\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+act\+\_\+pin\+\_\+notification\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga2d910787dea44471958b013e2f5ea473}{lsm6dsox\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+status\+\_\+on\+\_\+int in reg TAP\+\_\+\+CFG0 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05385}{5385}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga37780f35f681cd6a0f786a9454465fdd}\label{group__LSM6DSOX___ga37780f35f681cd6a0f786a9454465fdd} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_act\_sleep\_dur\_get@{lsm6dsox\_act\_sleep\_dur\_get}}
+\index{lsm6dsox\_act\_sleep\_dur\_get@{lsm6dsox\_act\_sleep\_dur\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_act\_sleep\_dur\_get()}{lsm6dsox\_act\_sleep\_dur\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Duration to go in sleep mode.\mbox{[}get\mbox{]} 1 LSb = 512 / ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+dur in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05540}{5540}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga0112b020bb9b7146dac51cc82b8da59b}\label{group__LSM6DSOX___ga0112b020bb9b7146dac51cc82b8da59b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_act\_sleep\_dur\_set@{lsm6dsox\_act\_sleep\_dur\_set}}
+\index{lsm6dsox\_act\_sleep\_dur\_set@{lsm6dsox\_act\_sleep\_dur\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_act\_sleep\_dur\_set()}{lsm6dsox\_act\_sleep\_dur\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Duration to go in sleep mode.\mbox{[}set\mbox{]} 1 LSb = 512 / ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+dur in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05515}{5515}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga52ef34ab5ab18a65b0c084259fa1ac70}\label{group__LSM6DSOX___ga52ef34ab5ab18a65b0c084259fa1ac70} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_den\_mode\_get@{lsm6dsox\_aux\_den\_mode\_get}}
+\index{lsm6dsox\_aux\_den\_mode\_get@{lsm6dsox\_aux\_den\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_den\_mode\_get()}{lsm6dsox\_aux\_den\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+den\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gac7530dafd8d3ea2108bbafe4a7f00ebc}{lsm6dsox\+\_\+lvl2\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configure DEN mode on the OIS chain.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of lvl2\+\_\+ois in reg INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03844}{3844}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gae078509728b962d8d160a05e2905506c}\label{group__LSM6DSOX___gae078509728b962d8d160a05e2905506c} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_den\_mode\_set@{lsm6dsox\_aux\_den\_mode\_set}}
+\index{lsm6dsox\_aux\_den\_mode\_set@{lsm6dsox\_aux\_den\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_den\_mode\_set()}{lsm6dsox\_aux\_den\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+den\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gac7530dafd8d3ea2108bbafe4a7f00ebc}{lsm6dsox\+\_\+lvl2\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Configure DEN mode on the OIS chain.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of lvl2\+\_\+ois in reg INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03803}{3803}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga0aea8b47b860410c9e808afb708b3a9a}\label{group__LSM6DSOX___ga0aea8b47b860410c9e808afb708b3a9a} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_den\_polarity\_get@{lsm6dsox\_aux\_den\_polarity\_get}}
+\index{lsm6dsox\_aux\_den\_polarity\_get@{lsm6dsox\_aux\_den\_polarity\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_den\_polarity\_get()}{lsm6dsox\_aux\_den\_polarity\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+den\+\_\+polarity\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gadbbef31fc741ad376e8207ada8d3f650}{lsm6dsox\+\_\+den\+\_\+lh\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Indicates polarity of DEN signal on OIS chain.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of den\+\_\+lh\+\_\+ois in reg INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03769}{3769}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga5108bbb6b9d8b001842bb872204e2424}\label{group__LSM6DSOX___ga5108bbb6b9d8b001842bb872204e2424} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_den\_polarity\_set@{lsm6dsox\_aux\_den\_polarity\_set}}
+\index{lsm6dsox\_aux\_den\_polarity\_set@{lsm6dsox\_aux\_den\_polarity\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_den\_polarity\_set()}{lsm6dsox\_aux\_den\_polarity\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+den\+\_\+polarity\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gadbbef31fc741ad376e8207ada8d3f650}{lsm6dsox\+\_\+den\+\_\+lh\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Indicates polarity of DEN signal on OIS chain.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of den\+\_\+lh\+\_\+ois in reg INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03744}{3744}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gae9b8761efcc88189c589a0e3630f5d42}\label{group__LSM6DSOX___gae9b8761efcc88189c589a0e3630f5d42} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_drdy\_on\_int2\_get@{lsm6dsox\_aux\_drdy\_on\_int2\_get}}
+\index{lsm6dsox\_aux\_drdy\_on\_int2\_get@{lsm6dsox\_aux\_drdy\_on\_int2\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_drdy\_on\_int2\_get()}{lsm6dsox\_aux\_drdy\_on\_int2\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+drdy\+\_\+on\+\_\+int2\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables/\+Disable OIS chain DRDY on INT2 pin. This setting has priority over all other INT2 settings.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of int2\+\_\+drdy\+\_\+ois in reg INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03916}{3916}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaba6883dd4fe891a71d92e721d2b41029}\label{group__LSM6DSOX___gaba6883dd4fe891a71d92e721d2b41029} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_drdy\_on\_int2\_set@{lsm6dsox\_aux\_drdy\_on\_int2\_set}}
+\index{lsm6dsox\_aux\_drdy\_on\_int2\_set@{lsm6dsox\_aux\_drdy\_on\_int2\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_drdy\_on\_int2\_set()}{lsm6dsox\_aux\_drdy\_on\_int2\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+drdy\+\_\+on\+\_\+int2\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables/\+Disable OIS chain DRDY on INT2 pin. This setting has priority over all other INT2 settings.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of int2\+\_\+drdy\+\_\+ois in reg INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03891}{3891}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga9da96b5c331142dc0deba8552e9b1946}\label{group__LSM6DSOX___ga9da96b5c331142dc0deba8552e9b1946} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_clamp\_get@{lsm6dsox\_aux\_gy\_clamp\_get}}
+\index{lsm6dsox\_aux\_gy\_clamp\_get@{lsm6dsox\_aux\_gy\_clamp\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_clamp\_get()}{lsm6dsox\_aux\_gy\_clamp\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+clamp\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0e0bcb3d6537ad385e2e78783d52fc40}{lsm6dsox\+\_\+st\+\_\+ois\+\_\+clampdis\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable / Disables OIS chain clamp. Enable\+: All OIS chain outputs = 8000h during self-\/test; Disable\+: OIS chain self-\/test outputs dependent from the aux gyro full scale selected.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of st\+\_\+ois\+\_\+clampdis in reg CTRL3\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04316}{4316}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga894181d2cd38bb83e19dbc685b62de4c}\label{group__LSM6DSOX___ga894181d2cd38bb83e19dbc685b62de4c} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_clamp\_set@{lsm6dsox\_aux\_gy\_clamp\_set}}
+\index{lsm6dsox\_aux\_gy\_clamp\_set@{lsm6dsox\_aux\_gy\_clamp\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_clamp\_set()}{lsm6dsox\_aux\_gy\_clamp\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+clamp\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0e0bcb3d6537ad385e2e78783d52fc40}{lsm6dsox\+\_\+st\+\_\+ois\+\_\+clampdis\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enable / Disables OIS chain clamp. Enable\+: All OIS chain outputs = 8000h during self-\/test; Disable\+: OIS chain self-\/test outputs dependent from the aux gyro full scale selected.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of st\+\_\+ois\+\_\+clampdis in reg CTRL3\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04286}{4286}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga0e2204a23b8b8e857c15f0dabba356cb}\label{group__LSM6DSOX___ga0e2204a23b8b8e857c15f0dabba356cb} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_flag\_data\_ready\_get@{lsm6dsox\_aux\_gy\_flag\_data\_ready\_get}}
+\index{lsm6dsox\_aux\_gy\_flag\_data\_ready\_get@{lsm6dsox\_aux\_gy\_flag\_data\_ready\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_flag\_data\_ready\_get()}{lsm6dsox\_aux\_gy\_flag\_data\_ready\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+aux\+\_\+gy\+\_\+flag\+\_\+data\+\_\+ready\+: \mbox{[}get\mbox{]} AUX gyroscope data available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of gda in reg STATUS\+\_\+\+SPIAUX \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03701}{3701}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga082e3f97e247d48484f907ef784e5266}\label{group__LSM6DSOX___ga082e3f97e247d48484f907ef784e5266} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_flag\_settling\_get@{lsm6dsox\_aux\_gy\_flag\_settling\_get}}
+\index{lsm6dsox\_aux\_gy\_flag\_settling\_get@{lsm6dsox\_aux\_gy\_flag\_settling\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_flag\_settling\_get()}{lsm6dsox\_aux\_gy\_flag\_settling\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+flag\+\_\+settling\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+High when the gyroscope output is in the settling phase.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of gyro\+\_\+settling in reg STATUS\+\_\+\+SPIAUX \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03722}{3722}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga16ae60f99eb4304f1a24949f74379f40}\label{group__LSM6DSOX___ga16ae60f99eb4304f1a24949f74379f40} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_full\_scale\_get@{lsm6dsox\_aux\_gy\_full\_scale\_get}}
+\index{lsm6dsox\_aux\_gy\_full\_scale\_get@{lsm6dsox\_aux\_gy\_full\_scale\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_full\_scale\_get()}{lsm6dsox\_aux\_gy\_full\_scale\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+full\+\_\+scale\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga512e14d6a4ef6fa2fcb6498d528b4583}{lsm6dsox\+\_\+fs\+\_\+g\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects gyroscope OIS chain full-\/scale.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of fs\+\_\+g\+\_\+ois in reg CTRL1\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04036}{4036}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaf6dd96761292013954b7e3118c92b895}\label{group__LSM6DSOX___gaf6dd96761292013954b7e3118c92b895} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_full\_scale\_set@{lsm6dsox\_aux\_gy\_full\_scale\_set}}
+\index{lsm6dsox\_aux\_gy\_full\_scale\_set@{lsm6dsox\_aux\_gy\_full\_scale\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_full\_scale\_set()}{lsm6dsox\_aux\_gy\_full\_scale\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+full\+\_\+scale\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga512e14d6a4ef6fa2fcb6498d528b4583}{lsm6dsox\+\_\+fs\+\_\+g\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects gyroscope OIS chain full-\/scale.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fs\+\_\+g\+\_\+ois in reg CTRL1\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04011}{4011}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga27cb7652ee36ce42a94bf5ad8158ded1}\label{group__LSM6DSOX___ga27cb7652ee36ce42a94bf5ad8158ded1} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_hp\_bandwidth\_get@{lsm6dsox\_aux\_gy\_hp\_bandwidth\_get}}
+\index{lsm6dsox\_aux\_gy\_hp\_bandwidth\_get@{lsm6dsox\_aux\_gy\_hp\_bandwidth\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_hp\_bandwidth\_get()}{lsm6dsox\_aux\_gy\_hp\_bandwidth\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+hp\+\_\+bandwidth\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gabc3da8998c95bc811b3b161de342b7ab}{lsm6dsox\+\_\+hpm\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects gyroscope OIS chain digital high-\/pass filter cutoff.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of hpm\+\_\+ois in reg CTRL2\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04235}{4235}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gac59495c9f26ac61ec466912fb93c4e86}\label{group__LSM6DSOX___gac59495c9f26ac61ec466912fb93c4e86} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_hp\_bandwidth\_set@{lsm6dsox\_aux\_gy\_hp\_bandwidth\_set}}
+\index{lsm6dsox\_aux\_gy\_hp\_bandwidth\_set@{lsm6dsox\_aux\_gy\_hp\_bandwidth\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_hp\_bandwidth\_set()}{lsm6dsox\_aux\_gy\_hp\_bandwidth\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+hp\+\_\+bandwidth\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gabc3da8998c95bc811b3b161de342b7ab}{lsm6dsox\+\_\+hpm\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects gyroscope OIS chain digital high-\/pass filter cutoff.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of hpm\+\_\+ois in reg CTRL2\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04209}{4209}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gad42fffaee17b8de0193fa84a343b7d8c}\label{group__LSM6DSOX___gad42fffaee17b8de0193fa84a343b7d8c} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_lp1\_bandwidth\_get@{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_get}}
+\index{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_get@{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_get()}{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0e652e0d60816df7e3f38c527cef208f}{lsm6dsox\+\_\+ftype\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects gyroscope digital LPF1 filter bandwidth.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of ftype\+\_\+ois in reg CTRL2\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04167}{4167}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga5184bb9270d450f39a5f6e96108030b6}\label{group__LSM6DSOX___ga5184bb9270d450f39a5f6e96108030b6} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_gy\_lp1\_bandwidth\_set@{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_set}}
+\index{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_set@{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_set()}{lsm6dsox\_aux\_gy\_lp1\_bandwidth\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga0e652e0d60816df7e3f38c527cef208f}{lsm6dsox\+\_\+ftype\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects gyroscope digital LPF1 filter bandwidth.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ftype\+\_\+ois in reg CTRL2\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04142}{4142}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga1fdc466b363b6c4bd92d43e10627c503}\label{group__LSM6DSOX___ga1fdc466b363b6c4bd92d43e10627c503} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_mode\_get@{lsm6dsox\_aux\_mode\_get}}
+\index{lsm6dsox\_aux\_mode\_get@{lsm6dsox\_aux\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_mode\_get()}{lsm6dsox\_aux\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga47368b98e6e1afbbd2d1e92cb093239d}{lsm6dsox\+\_\+ois\+\_\+en\+\_\+spi2\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables OIS chain data processing for gyro in Mode 3 and Mode 4 (mode4\+\_\+en = 1) and accelerometer data in and Mode 4 (mode4\+\_\+en = 1). When the OIS chain is enabled, the OIS outputs are available through the SPI2 in registers OUTX\+\_\+\+L\+\_\+G (22h) through OUTZ\+\_\+\+H\+\_\+G (27h) and STATUS\+\_\+\+REG (1Eh) / STATUS\+\_\+\+SPIAux, and LPF1 is dedicated to this chain.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of ois\+\_\+en\+\_\+spi2 in reg CTRL1\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03973}{3973}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga072c466535af1af930c88570ad6d4555}\label{group__LSM6DSOX___ga072c466535af1af930c88570ad6d4555} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_mode\_set@{lsm6dsox\_aux\_mode\_set}}
+\index{lsm6dsox\_aux\_mode\_set@{lsm6dsox\_aux\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_mode\_set()}{lsm6dsox\_aux\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga47368b98e6e1afbbd2d1e92cb093239d}{lsm6dsox\+\_\+ois\+\_\+en\+\_\+spi2\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables OIS chain data processing for gyro in Mode 3 and Mode 4 (mode4\+\_\+en = 1) and accelerometer data in and Mode 4 (mode4\+\_\+en = 1). When the OIS chain is enabled, the OIS outputs are available through the SPI2 in registers OUTX\+\_\+\+L\+\_\+G (22h) through OUTZ\+\_\+\+H\+\_\+G (27h) and STATUS\+\_\+\+REG (1Eh) / STATUS\+\_\+\+SPIAux, and LPF1 is dedicated to this chain.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ois\+\_\+en\+\_\+spi2 in reg CTRL1\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03941}{3941}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga9ff0230401234bfb727471427b00127b}\label{group__LSM6DSOX___ga9ff0230401234bfb727471427b00127b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_pw\_on\_ctrl\_get@{lsm6dsox\_aux\_pw\_on\_ctrl\_get}}
+\index{lsm6dsox\_aux\_pw\_on\_ctrl\_get@{lsm6dsox\_aux\_pw\_on\_ctrl\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_pw\_on\_ctrl\_get()}{lsm6dsox\_aux\_pw\_on\_ctrl\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+pw\+\_\+on\+\_\+ctrl\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga772ab8d77ba5548c6ea508aa7856b3ce}{lsm6dsox\+\_\+ois\+\_\+on\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+aux\+\_\+pw\+\_\+on\+\_\+ctrl\+: \mbox{[}get\mbox{]} OIS chain on aux interface power on mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of ois\+\_\+on in reg CTRL7\+\_\+G \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03557}{3557}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaab9d8ffc4f9cc000809ea6cccc2fc652}\label{group__LSM6DSOX___gaab9d8ffc4f9cc000809ea6cccc2fc652} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_pw\_on\_ctrl\_set@{lsm6dsox\_aux\_pw\_on\_ctrl\_set}}
+\index{lsm6dsox\_aux\_pw\_on\_ctrl\_set@{lsm6dsox\_aux\_pw\_on\_ctrl\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_pw\_on\_ctrl\_set()}{lsm6dsox\_aux\_pw\_on\_ctrl\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+pw\+\_\+on\+\_\+ctrl\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga772ab8d77ba5548c6ea508aa7856b3ce}{lsm6dsox\+\_\+ois\+\_\+on\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+OIS chain on aux interface power on mode.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ois\+\_\+on in reg CTRL7\+\_\+G \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03531}{3531}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga53fd177430b457925ab3bab1163afe3b}\label{group__LSM6DSOX___ga53fd177430b457925ab3bab1163afe3b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_sdo\_ocs\_mode\_get@{lsm6dsox\_aux\_sdo\_ocs\_mode\_get}}
+\index{lsm6dsox\_aux\_sdo\_ocs\_mode\_get@{lsm6dsox\_aux\_sdo\_ocs\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_sdo\_ocs\_mode\_get()}{lsm6dsox\_aux\_sdo\_ocs\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+sdo\+\_\+ocs\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga764878a30502969950b35061c79524ad}{lsm6dsox\+\_\+ois\+\_\+pu\+\_\+dis\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+On auxiliary interface connect/disconnect SDO and OCS internal pull-\/up.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of ois\+\_\+pu\+\_\+dis in reg PIN\+\_\+\+CTRL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03497}{3497}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga61caec6033f40155b8045ed9855c8375}\label{group__LSM6DSOX___ga61caec6033f40155b8045ed9855c8375} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_sdo\_ocs\_mode\_set@{lsm6dsox\_aux\_sdo\_ocs\_mode\_set}}
+\index{lsm6dsox\_aux\_sdo\_ocs\_mode\_set@{lsm6dsox\_aux\_sdo\_ocs\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_sdo\_ocs\_mode\_set()}{lsm6dsox\_aux\_sdo\_ocs\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+sdo\+\_\+ocs\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga764878a30502969950b35061c79524ad}{lsm6dsox\+\_\+ois\+\_\+pu\+\_\+dis\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+a\+On auxiliary interface connect/disconnect SDO and OCS internal pull-\/up.\mbox{[}set\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of ois\+\_\+pu\+\_\+dis in reg PIN\+\_\+\+CTRL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03471}{3471}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaf387f44e8f29b86ff80ec7d793b13eff}\label{group__LSM6DSOX___gaf387f44e8f29b86ff80ec7d793b13eff} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_spi\_mode\_get@{lsm6dsox\_aux\_spi\_mode\_get}}
+\index{lsm6dsox\_aux\_spi\_mode\_get@{lsm6dsox\_aux\_spi\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_spi\_mode\_get()}{lsm6dsox\_aux\_spi\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+spi\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga7667a9bd824dbf4e8eb327eb6402561a}{lsm6dsox\+\_\+sim\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+SPI2 3-\/ or 4-\/wire interface.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of sim\+\_\+ois in reg CTRL1\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04107}{4107}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga40f249807504bcff8f8c829fbfdf4c30}\label{group__LSM6DSOX___ga40f249807504bcff8f8c829fbfdf4c30} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_spi\_mode\_set@{lsm6dsox\_aux\_spi\_mode\_set}}
+\index{lsm6dsox\_aux\_spi\_mode\_set@{lsm6dsox\_aux\_spi\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_spi\_mode\_set()}{lsm6dsox\_aux\_spi\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+spi\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga7667a9bd824dbf4e8eb327eb6402561a}{lsm6dsox\+\_\+sim\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+SPI2 3-\/ or 4-\/wire interface.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sim\+\_\+ois in reg CTRL1\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04082}{4082}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga03eb916edb8dea3b28cc720eef09802b}\label{group__LSM6DSOX___ga03eb916edb8dea3b28cc720eef09802b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_status\_reg\_get@{lsm6dsox\_aux\_status\_reg\_get}}
+\index{lsm6dsox\_aux\_status\_reg\_get@{lsm6dsox\_aux\_status\_reg\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_status\_reg\_get()}{lsm6dsox\_aux\_status\_reg\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+status\+\_\+reg\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__spi2__status__reg__ois__t}{lsm6dsox\+\_\+spi2\+\_\+status\+\_\+reg\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+The STATUS\+\_\+\+SPIAux register is read by the auxiliary SPI.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get registers STATUS\+\_\+\+SPIAUX \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03661}{3661}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga834011d9247f596728b416cbd8f64e79}\label{group__LSM6DSOX___ga834011d9247f596728b416cbd8f64e79} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_xl\_bandwidth\_get@{lsm6dsox\_aux\_xl\_bandwidth\_get}}
+\index{lsm6dsox\_aux\_xl\_bandwidth\_get@{lsm6dsox\_aux\_xl\_bandwidth\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_xl\_bandwidth\_get()}{lsm6dsox\_aux\_xl\_bandwidth\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+xl\+\_\+bandwidth\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab5947f534eb54a67100dec0e23a04e74}{lsm6dsox\+\_\+filter\+\_\+xl\+\_\+conf\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects accelerometer OIS channel bandwidth.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of filter\+\_\+xl\+\_\+conf\+\_\+ois in reg CTRL3\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04377}{4377}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gabdb7f95700d18d500464ba4266a911f5}\label{group__LSM6DSOX___gabdb7f95700d18d500464ba4266a911f5} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_xl\_bandwidth\_set@{lsm6dsox\_aux\_xl\_bandwidth\_set}}
+\index{lsm6dsox\_aux\_xl\_bandwidth\_set@{lsm6dsox\_aux\_xl\_bandwidth\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_xl\_bandwidth\_set()}{lsm6dsox\_aux\_xl\_bandwidth\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+xl\+\_\+bandwidth\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab5947f534eb54a67100dec0e23a04e74}{lsm6dsox\+\_\+filter\+\_\+xl\+\_\+conf\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects accelerometer OIS channel bandwidth.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of filter\+\_\+xl\+\_\+conf\+\_\+ois in reg CTRL3\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04351}{4351}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga94a14b203320b5d0ce6c66cd0d403463}\label{group__LSM6DSOX___ga94a14b203320b5d0ce6c66cd0d403463} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_xl\_flag\_data\_ready\_get@{lsm6dsox\_aux\_xl\_flag\_data\_ready\_get}}
+\index{lsm6dsox\_aux\_xl\_flag\_data\_ready\_get@{lsm6dsox\_aux\_xl\_flag\_data\_ready\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_xl\_flag\_data\_ready\_get()}{lsm6dsox\_aux\_xl\_flag\_data\_ready\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+xl\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+aux\+\_\+xl\+\_\+flag\+\_\+data\+\_\+ready\+: \mbox{[}get\mbox{]} AUX accelerometer data available 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of xlda in reg STATUS\+\_\+\+SPIAUX \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03680}{3680}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga859b9aab4caba6044560776e4f5bfd17}\label{group__LSM6DSOX___ga859b9aab4caba6044560776e4f5bfd17} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_xl\_fs\_mode\_get@{lsm6dsox\_aux\_xl\_fs\_mode\_get}}
+\index{lsm6dsox\_aux\_xl\_fs\_mode\_get@{lsm6dsox\_aux\_xl\_fs\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_xl\_fs\_mode\_get()}{lsm6dsox\_aux\_xl\_fs\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab25741f38ab728495091807aec7f44fb}{lsm6dsox\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Accelerometer full-\/scale management between UI chain and OIS chain. When XL UI is on, the full scale is the same between UI/\+OIS and is chosen by the UI CTRL registers; when XL UI is in PD, the OIS can choose the FS. Full scales are independent between the UI/\+OIS chain but both bound to 8 g.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of xl\+\_\+fs\+\_\+mode in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03627}{3627}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga95f4ab0a9045a7e472938f7e25e74991}\label{group__LSM6DSOX___ga95f4ab0a9045a7e472938f7e25e74991} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_xl\_fs\_mode\_set@{lsm6dsox\_aux\_xl\_fs\_mode\_set}}
+\index{lsm6dsox\_aux\_xl\_fs\_mode\_set@{lsm6dsox\_aux\_xl\_fs\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_xl\_fs\_mode\_set()}{lsm6dsox\_aux\_xl\_fs\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab25741f38ab728495091807aec7f44fb}{lsm6dsox\+\_\+xl\+\_\+fs\+\_\+mode\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Accelerometer full-\/scale management between UI chain and OIS chain. When XL UI is on, the full scale is the same between UI/\+OIS and is chosen by the UI CTRL registers; when XL UI is in PD, the OIS can choose the FS. Full scales are independent between the UI/\+OIS chain but both bound to 8 g.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of xl\+\_\+fs\+\_\+mode in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03597}{3597}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gab1a6c3b58e71e9b773e64b4d96599a17}\label{group__LSM6DSOX___gab1a6c3b58e71e9b773e64b4d96599a17} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_xl\_full\_scale\_get@{lsm6dsox\_aux\_xl\_full\_scale\_get}}
+\index{lsm6dsox\_aux\_xl\_full\_scale\_get@{lsm6dsox\_aux\_xl\_full\_scale\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_xl\_full\_scale\_get()}{lsm6dsox\_aux\_xl\_full\_scale\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+xl\+\_\+full\+\_\+scale\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab0428f3b6ee3b1fa7addb176c5440e08}{lsm6dsox\+\_\+fs\+\_\+xl\+\_\+ois\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects accelerometer OIS channel full-\/scale.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of fs\+\_\+xl\+\_\+ois in reg CTRL3\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04461}{4461}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga758fa6610849868089bed3253fe2e549}\label{group__LSM6DSOX___ga758fa6610849868089bed3253fe2e549} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_aux\_xl\_full\_scale\_set@{lsm6dsox\_aux\_xl\_full\_scale\_set}}
+\index{lsm6dsox\_aux\_xl\_full\_scale\_set@{lsm6dsox\_aux\_xl\_full\_scale\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_aux\_xl\_full\_scale\_set()}{lsm6dsox\_aux\_xl\_full\_scale\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+aux\+\_\+xl\+\_\+full\+\_\+scale\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab0428f3b6ee3b1fa7addb176c5440e08}{lsm6dsox\+\_\+fs\+\_\+xl\+\_\+ois\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Selects accelerometer OIS channel full-\/scale.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of fs\+\_\+xl\+\_\+ois in reg CTRL3\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04436}{4436}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gad2495881c79d6b28c33a01010be1dd9c}\label{group__LSM6DSOX___gad2495881c79d6b28c33a01010be1dd9c} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_gy\_sleep\_mode\_get@{lsm6dsox\_gy\_sleep\_mode\_get}}
+\index{lsm6dsox\_gy\_sleep\_mode\_get@{lsm6dsox\_gy\_sleep\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_gy\_sleep\_mode\_get()}{lsm6dsox\_gy\_sleep\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope Sleep mode.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+g in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05363}{5363}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga924988cb715194c2ed72c2dc90288319}\label{group__LSM6DSOX___ga924988cb715194c2ed72c2dc90288319} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_gy\_sleep\_mode\_set@{lsm6dsox\_gy\_sleep\_mode\_set}}
+\index{lsm6dsox\_gy\_sleep\_mode\_set@{lsm6dsox\_gy\_sleep\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_gy\_sleep\_mode\_set()}{lsm6dsox\_gy\_sleep\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope Sleep mode.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+g in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l05339}{5339}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gacd3041229a021468095ff2423c351c7e}\label{group__LSM6DSOX___gacd3041229a021468095ff2423c351c7e} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_i2c\_interface\_get@{lsm6dsox\_i2c\_interface\_get}}
+\index{lsm6dsox\_i2c\_interface\_get@{lsm6dsox\_i2c\_interface\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_i2c\_interface\_get()}{lsm6dsox\_i2c\_interface\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+i2c\+\_\+interface\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gade34ac2d6151782ae66f27370b6f2bef}{lsm6dsox\+\_\+i2c\+\_\+disable\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Disable / Enable I2C interface.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of i2c\+\_\+disable in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04660}{4660}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga6fedb50e46ff3aabf03a2e91584b77b3}\label{group__LSM6DSOX___ga6fedb50e46ff3aabf03a2e91584b77b3} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_i2c\_interface\_set@{lsm6dsox\_i2c\_interface\_set}}
+\index{lsm6dsox\_i2c\_interface\_set@{lsm6dsox\_i2c\_interface\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_i2c\_interface\_set()}{lsm6dsox\_i2c\_interface\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+i2c\+\_\+interface\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gade34ac2d6151782ae66f27370b6f2bef}{lsm6dsox\+\_\+i2c\+\_\+disable\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Disable / Enable I2C interface.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of i2c\+\_\+disable in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04634}{4634}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaf13523d0c71328e7c33c51b8b2c560be}\label{group__LSM6DSOX___gaf13523d0c71328e7c33c51b8b2c560be} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_i3c\_disable\_get@{lsm6dsox\_i3c\_disable\_get}}
+\index{lsm6dsox\_i3c\_disable\_get@{lsm6dsox\_i3c\_disable\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_i3c\_disable\_get()}{lsm6dsox\_i3c\_disable\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gaa6cc937a08c85e293438747d76f9e5ce}{lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+I3C Enable/\+Disable communication protocol.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of i3c\+\_\+disable in reg CTRL9\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04735}{4735}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga07b520ca6f8429e8eed1e4795f29b979}\label{group__LSM6DSOX___ga07b520ca6f8429e8eed1e4795f29b979} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_i3c\_disable\_set@{lsm6dsox\_i3c\_disable\_set}}
+\index{lsm6dsox\_i3c\_disable\_set@{lsm6dsox\_i3c\_disable\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_i3c\_disable\_set()}{lsm6dsox\_i3c\_disable\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gaa6cc937a08c85e293438747d76f9e5ce}{lsm6dsox\+\_\+i3c\+\_\+disable\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+I3C Enable/\+Disable communication protocol\mbox{[}.set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of i3c\+\_\+disable in reg CTRL9\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04695}{4695}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga647e5c0fa985927ca9eaff688f2aa069}\label{group__LSM6DSOX___ga647e5c0fa985927ca9eaff688f2aa069} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_offset\_get@{lsm6dsox\_mag\_offset\_get}}
+\index{lsm6dsox\_mag\_offset\_get@{lsm6dsox\_mag\_offset\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_offset\_get()}{lsm6dsox\_mag\_offset\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+offset\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Offset for hard-\/iron compensation register (r/w).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08810}{8810}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gabcaa4c6507c1968440136b4a075de6c7}\label{group__LSM6DSOX___gabcaa4c6507c1968440136b4a075de6c7} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_offset\_set@{lsm6dsox\_mag\_offset\_set}}
+\index{lsm6dsox\_mag\_offset\_set@{lsm6dsox\_mag\_offset\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_offset\_set()}{lsm6dsox\_mag\_offset\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+offset\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Offset for hard-\/iron compensation register (r/w).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08748}{8748}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga2a01bb134c2f046d821892ab33661d55}\label{group__LSM6DSOX___ga2a01bb134c2f046d821892ab33661d55} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_soft\_iron\_get@{lsm6dsox\_mag\_soft\_iron\_get}}
+\index{lsm6dsox\_mag\_soft\_iron\_get@{lsm6dsox\_mag\_soft\_iron\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_soft\_iron\_get()}{lsm6dsox\_mag\_soft\_iron\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Soft-\/iron (3x3 symmetric) matrix correction register (r/w). The value is expressed as half-\/precision floating-\/point format\+: SEEEEEFFFFFFFFFF S\+: 1 sign bit; E\+: 5 exponent bits; F\+: 10 fraction bits.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08996}{8996}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga13d94d277b9374df0eaadb5da66534ce}\label{group__LSM6DSOX___ga13d94d277b9374df0eaadb5da66534ce} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_soft\_iron\_set@{lsm6dsox\_mag\_soft\_iron\_set}}
+\index{lsm6dsox\_mag\_soft\_iron\_set@{lsm6dsox\_mag\_soft\_iron\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_soft\_iron\_set()}{lsm6dsox\_mag\_soft\_iron\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Soft-\/iron (3x3 symmetric) matrix correction register (r/w). The value is expressed as half-\/precision floating-\/point format\+: SEEEEEFFFFFFFFFF S\+: 1 sign bit; E\+: 5 exponent bits; F\+: 10 fraction bits).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08879}{8879}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gad71d235278b589cc7951bc495c02f024}\label{group__LSM6DSOX___gad71d235278b589cc7951bc495c02f024} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_x\_orient\_get@{lsm6dsox\_mag\_x\_orient\_get}}
+\index{lsm6dsox\_mag\_x\_orient\_get@{lsm6dsox\_mag\_x\_orient\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_x\_orient\_get()}{lsm6dsox\_mag\_x\_orient\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+x\+\_\+orient\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gae962abdaf4869516ca83a64dad1a64ca}{lsm6dsox\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of mag\+\_\+x\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09308}{9308}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga23610f4120439984abd0168ab171e1e7}\label{group__LSM6DSOX___ga23610f4120439984abd0168ab171e1e7} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_x\_orient\_set@{lsm6dsox\_mag\_x\_orient\_set}}
+\index{lsm6dsox\_mag\_x\_orient\_set@{lsm6dsox\_mag\_x\_orient\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_x\_orient\_set()}{lsm6dsox\_mag\_x\_orient\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+x\+\_\+orient\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gae962abdaf4869516ca83a64dad1a64ca}{lsm6dsox\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of mag\+\_\+x\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09278}{9278}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga563ba6ba404fac55598b52aaee579a3d}\label{group__LSM6DSOX___ga563ba6ba404fac55598b52aaee579a3d} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_y\_orient\_get@{lsm6dsox\_mag\_y\_orient\_get}}
+\index{lsm6dsox\_mag\_y\_orient\_get@{lsm6dsox\_mag\_y\_orient\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_y\_orient\_get()}{lsm6dsox\_mag\_y\_orient\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+y\+\_\+orient\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gae223fdc69eec03b57d447a2503e7b21c}{lsm6dsox\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of mag\+\_\+y\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09224}{9224}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaa25ce34e6d5f9f102613dc4ddf00a6dd}\label{group__LSM6DSOX___gaa25ce34e6d5f9f102613dc4ddf00a6dd} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_y\_orient\_set@{lsm6dsox\_mag\_y\_orient\_set}}
+\index{lsm6dsox\_mag\_y\_orient\_set@{lsm6dsox\_mag\_y\_orient\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_y\_orient\_set()}{lsm6dsox\_mag\_y\_orient\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+y\+\_\+orient\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gae223fdc69eec03b57d447a2503e7b21c}{lsm6dsox\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of mag\+\_\+y\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09194}{9194}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga230da27b573beb55a6baea4bbb603d2b}\label{group__LSM6DSOX___ga230da27b573beb55a6baea4bbb603d2b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_z\_orient\_get@{lsm6dsox\_mag\_z\_orient\_get}}
+\index{lsm6dsox\_mag\_z\_orient\_get@{lsm6dsox\_mag\_z\_orient\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_z\_orient\_get()}{lsm6dsox\_mag\_z\_orient\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+z\+\_\+orient\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga22bc34194eddf7b08a08d16639ec3577}{lsm6dsox\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of mag\+\_\+z\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09140}{9140}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga3b57edc9df57c13934335dccccd02b55}\label{group__LSM6DSOX___ga3b57edc9df57c13934335dccccd02b55} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mag\_z\_orient\_set@{lsm6dsox\_mag\_z\_orient\_set}}
+\index{lsm6dsox\_mag\_z\_orient\_set@{lsm6dsox\_mag\_z\_orient\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mag\_z\_orient\_set()}{lsm6dsox\_mag\_z\_orient\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mag\+\_\+z\+\_\+orient\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga22bc34194eddf7b08a08d16639ec3577}{lsm6dsox\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/gyroscope axes orientation).\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of mag\+\_\+z\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09110}{9110}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga71f4ad1153d5b0dfe29ae238593e48b8}\label{group__LSM6DSOX___ga71f4ad1153d5b0dfe29ae238593e48b8} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mlc\_mag\_sensitivity\_get@{lsm6dsox\_mlc\_mag\_sensitivity\_get}}
+\index{lsm6dsox\_mlc\_mag\_sensitivity\_get@{lsm6dsox\_mlc\_mag\_sensitivity\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_mag\_sensitivity\_get()}{lsm6dsox\_mlc\_mag\_sensitivity\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+mag\+\_\+sensitivity\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+External magnetometer sensitivity value register for Machine Learning Core.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08719}{8719}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga975cce5457c7ab1607e08315c576a75f}\label{group__LSM6DSOX___ga975cce5457c7ab1607e08315c576a75f} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_mlc\_mag\_sensitivity\_set@{lsm6dsox\_mlc\_mag\_sensitivity\_set}}
+\index{lsm6dsox\_mlc\_mag\_sensitivity\_set@{lsm6dsox\_mlc\_mag\_sensitivity\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_mag\_sensitivity\_set()}{lsm6dsox\_mlc\_mag\_sensitivity\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+mag\+\_\+sensitivity\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+External magnetometer sensitivity value register for Machine Learning Core.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08690}{8690}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga3d49002f93a81d396c2a5116614ea100}\label{group__LSM6DSOX___ga3d49002f93a81d396c2a5116614ea100} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_ois\_mode\_get@{lsm6dsox\_ois\_mode\_get}}
+\index{lsm6dsox\_ois\_mode\_get@{lsm6dsox\_ois\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ois\_mode\_get()}{lsm6dsox\_ois\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ois\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gafb7941175aa0e2d33691ea5f286af3ab}{lsm6dsox\+\_\+spi2\+\_\+read\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+aux\+\_\+ois\+\_\+data\+: \mbox{[}get\mbox{]} OIS data reading from Auxiliary / Main SPI 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of spi2\+\_\+read\+\_\+en in reg UI\+\_\+\+INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03418}{3418}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga1a140d643a0ad932171311208b9bb4bd}\label{group__LSM6DSOX___ga1a140d643a0ad932171311208b9bb4bd} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_ois\_mode\_set@{lsm6dsox\_ois\_mode\_set}}
+\index{lsm6dsox\_ois\_mode\_set@{lsm6dsox\_ois\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_ois\_mode\_set()}{lsm6dsox\_ois\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+ois\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gafb7941175aa0e2d33691ea5f286af3ab}{lsm6dsox\+\_\+spi2\+\_\+read\+\_\+en\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+OIS data reading from Auxiliary / Main SPI.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of spi2\+\_\+read\+\_\+en in reg UI\+\_\+\+INT\+\_\+\+OIS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l03376}{3376}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga9b8e377ca36957b7eb8ac102d765888b}\label{group__LSM6DSOX___ga9b8e377ca36957b7eb8ac102d765888b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_sdo\_sa0\_mode\_get@{lsm6dsox\_sdo\_sa0\_mode\_get}}
+\index{lsm6dsox\_sdo\_sa0\_mode\_get@{lsm6dsox\_sdo\_sa0\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sdo\_sa0\_mode\_get()}{lsm6dsox\_sdo\_sa0\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sdo\+\_\+sa0\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga37102e7b3f8512f973da626570d9743f}{lsm6dsox\+\_\+sdo\+\_\+pu\+\_\+en\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Connect/\+Disconnect SDO/\+SA0 internal pull-\/up.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of sdo\+\_\+pu\+\_\+en in reg PIN\+\_\+\+CTRL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04542}{4542}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaee71abfbead00d37c9124872115909a0}\label{group__LSM6DSOX___gaee71abfbead00d37c9124872115909a0} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_sdo\_sa0\_mode\_set@{lsm6dsox\_sdo\_sa0\_mode\_set}}
+\index{lsm6dsox\_sdo\_sa0\_mode\_set@{lsm6dsox\_sdo\_sa0\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sdo\_sa0\_mode\_set()}{lsm6dsox\_sdo\_sa0\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sdo\+\_\+sa0\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga37102e7b3f8512f973da626570d9743f}{lsm6dsox\+\_\+sdo\+\_\+pu\+\_\+en\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Connect/\+Disconnect SDO/\+SA0 internal pull-\/up.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sdo\+\_\+pu\+\_\+en in reg PIN\+\_\+\+CTRL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04517}{4517}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga7e0c980fd93f6955be4978bbfc567b4b}\label{group__LSM6DSOX___ga7e0c980fd93f6955be4978bbfc567b4b} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_sh\_mag\_sensitivity\_get@{lsm6dsox\_sh\_mag\_sensitivity\_get}}
+\index{lsm6dsox\_sh\_mag\_sensitivity\_get@{lsm6dsox\_sh\_mag\_sensitivity\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_mag\_sensitivity\_get()}{lsm6dsox\_sh\_mag\_sensitivity\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+mag\+\_\+sensitivity\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+External magnetometer sensitivity value register for Sensor hub.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08661}{8661}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga6729d0c318d8ab931a85c976e8fd12b6}\label{group__LSM6DSOX___ga6729d0c318d8ab931a85c976e8fd12b6} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_sh\_mag\_sensitivity\_set@{lsm6dsox\_sh\_mag\_sensitivity\_set}}
+\index{lsm6dsox\_sh\_mag\_sensitivity\_set@{lsm6dsox\_sh\_mag\_sensitivity\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_sh\_mag\_sensitivity\_set()}{lsm6dsox\_sh\_mag\_sensitivity\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+sh\+\_\+mag\+\_\+sensitivity\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+External magnetometer sensitivity value register for Sensor hub.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l08632}{8632}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___ga6b47f95b20b4c851fa7a3d18397f8d6c}\label{group__LSM6DSOX___ga6b47f95b20b4c851fa7a3d18397f8d6c} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_spi\_mode\_get@{lsm6dsox\_spi\_mode\_get}}
+\index{lsm6dsox\_spi\_mode\_get@{lsm6dsox\_spi\_mode\_get}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_spi\_mode\_get()}{lsm6dsox\_spi\_mode\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+spi\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga3f500693a941b1d7fed89a2661620ed9}{lsm6dsox\+\_\+sim\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+SPI Serial Interface Mode selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & Get the values of sim in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04600}{4600}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX___gaaddc5fe3efe5f7c90285a72995d90ea3}\label{group__LSM6DSOX___gaaddc5fe3efe5f7c90285a72995d90ea3} 
+\index{Auxiliary\_interface@{Auxiliary\_interface}!lsm6dsox\_spi\_mode\_set@{lsm6dsox\_spi\_mode\_set}}
+\index{lsm6dsox\_spi\_mode\_set@{lsm6dsox\_spi\_mode\_set}!Auxiliary\_interface@{Auxiliary\_interface}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_spi\_mode\_set()}{lsm6dsox\_spi\_mode\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+spi\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_ga3f500693a941b1d7fed89a2661620ed9}{lsm6dsox\+\_\+sim\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+SPI Serial Interface Mode selection.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of sim in reg CTRL3\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l04576}{4576}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

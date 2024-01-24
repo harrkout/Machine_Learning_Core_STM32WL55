@@ -1,0 +1,128 @@
+\doxysection{LSM6\+DSOX\+\_\+\+Timestamp}
+\hypertarget{group__LSM6DSOX__Timestamp}{}\label{group__LSM6DSOX__Timestamp}\index{LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}}
+
+
+This section groups all the functions that manage the timestamp generation.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Timestamp_ga8dd0d6768c00aa24d5417f472c98d8ee}{lsm6dsox\+\_\+timestamp\+\_\+rst}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Reset timestamp counter.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Timestamp_ga694eaeb6d98c23cc682ade2896a7c6c2}{lsm6dsox\+\_\+timestamp\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables timestamp counter.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Timestamp_ga15b02d8d41ee642997480c95354aadf4}{lsm6dsox\+\_\+timestamp\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables timestamp counter.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__LSM6DSOX__Timestamp_ga5f3c382586913230a2fc76744b1a0f21}{lsm6dsox\+\_\+timestamp\+\_\+raw\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint32\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Timestamp first data output register (r). The value is expressed as a 32-\/bit word and the bit resolution is 25 μs.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions that manage the timestamp generation. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__LSM6DSOX__Timestamp_ga15b02d8d41ee642997480c95354aadf4}\label{group__LSM6DSOX__Timestamp_ga15b02d8d41ee642997480c95354aadf4} 
+\index{LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}!lsm6dsox\_timestamp\_get@{lsm6dsox\_timestamp\_get}}
+\index{lsm6dsox\_timestamp\_get@{lsm6dsox\_timestamp\_get}!LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_timestamp\_get()}{lsm6dsox\_timestamp\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+timestamp\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables timestamp counter.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of timestamp\+\_\+en in reg CTRL10\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01511}{1511}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Timestamp_ga5f3c382586913230a2fc76744b1a0f21}\label{group__LSM6DSOX__Timestamp_ga5f3c382586913230a2fc76744b1a0f21} 
+\index{LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}!lsm6dsox\_timestamp\_raw\_get@{lsm6dsox\_timestamp\_raw\_get}}
+\index{lsm6dsox\_timestamp\_raw\_get@{lsm6dsox\_timestamp\_raw\_get}!LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_timestamp\_raw\_get()}{lsm6dsox\_timestamp\_raw\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+timestamp\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Timestamp first data output register (r). The value is expressed as a 32-\/bit word and the bit resolution is 25 μs.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01532}{1532}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Timestamp_ga8dd0d6768c00aa24d5417f472c98d8ee}\label{group__LSM6DSOX__Timestamp_ga8dd0d6768c00aa24d5417f472c98d8ee} 
+\index{LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}!lsm6dsox\_timestamp\_rst@{lsm6dsox\_timestamp\_rst}}
+\index{lsm6dsox\_timestamp\_rst@{lsm6dsox\_timestamp\_rst}!LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_timestamp\_rst()}{lsm6dsox\_timestamp\_rst()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+timestamp\+\_\+rst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Reset timestamp counter.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Read / write interface definitions.(ptr) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01473}{1473}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+\Hypertarget{group__LSM6DSOX__Timestamp_ga694eaeb6d98c23cc682ade2896a7c6c2}\label{group__LSM6DSOX__Timestamp_ga694eaeb6d98c23cc682ade2896a7c6c2} 
+\index{LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}!lsm6dsox\_timestamp\_set@{lsm6dsox\_timestamp\_set}}
+\index{lsm6dsox\_timestamp\_set@{lsm6dsox\_timestamp\_set}!LSM6DSOX\_Timestamp@{LSM6DSOX\_Timestamp}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_timestamp\_set()}{lsm6dsox\_timestamp\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+timestamp\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables timestamp counter.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of timestamp\+\_\+en in reg CTRL10\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l01487}{1487}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+

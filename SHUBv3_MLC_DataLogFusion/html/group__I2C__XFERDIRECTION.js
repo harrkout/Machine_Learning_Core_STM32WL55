@@ -1,0 +1,5 @@
+var group__I2C__XFERDIRECTION =
+[
+    [ "I2C_DIRECTION_RECEIVE", "group__I2C__XFERDIRECTION.html#gacfbbd511a4f68bbd9965d0e5a192e261", null ],
+    [ "I2C_DIRECTION_TRANSMIT", "group__I2C__XFERDIRECTION.html#ga4995d0291421b538d7859e998803c567", null ]
+];

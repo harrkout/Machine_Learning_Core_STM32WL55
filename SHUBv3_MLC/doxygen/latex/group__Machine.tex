@@ -1,0 +1,186 @@
+\doxysection{Learning Core}
+\hypertarget{group__Machine}{}\label{group__Machine}\index{Learning Core@{Learning Core}}
+
+
+This section group all the functions concerning the usage of Machine Learning Core.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Machine_ga80e4be472244a23ee0dedcaaccb794ff}{lsm6dsox\+\_\+mlc\+\_\+status\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{structlsm6dsox__mlc__status__mainpage__t}{lsm6dsox\+\_\+mlc\+\_\+status\+\_\+mainpage\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Machine Learning Core status register\mbox{[}get\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Machine_gac7778f1c6c8ddc1ac40b9122ad762f9c}{lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+set}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}} val)
+\begin{DoxyCompactList}\small\item\em Machine Learning Core data rate selection.\mbox{[}set\mbox{]}. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Machine_ga20ff329837e8985dca729d3edffccd59}{lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+get}} (\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Machine Learning Core data rate selection.\mbox{[}get\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section group all the functions concerning the usage of Machine Learning Core. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__Machine_ga20ff329837e8985dca729d3edffccd59}\label{group__Machine_ga20ff329837e8985dca729d3edffccd59} 
+\index{Learning Core@{Learning Core}!lsm6dsox\_mlc\_data\_rate\_get@{lsm6dsox\_mlc\_data\_rate\_get}}
+\index{lsm6dsox\_mlc\_data\_rate\_get@{lsm6dsox\_mlc\_data\_rate\_get}!Learning Core@{Learning Core}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_data\_rate\_get()}{lsm6dsox\_mlc\_data\_rate\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Machine Learning Core data rate selection.\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & change the values of mlc\+\_\+odr in reg EMB\+\_\+\+FUNC\+\_\+\+ODR\+\_\+\+CFG\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l10034}{10034}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10036\ \{}
+\DoxyCodeLine{10037\ \ \ \mbox{\hyperlink{structlsm6dsox__emb__func__odr__cfg__c__t}{lsm6dsox\_emb\_func\_odr\_cfg\_c\_t}}\ reg;}
+\DoxyCodeLine{10038\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10039\ }
+\DoxyCodeLine{10040\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56ae2847a572de7062ce4a04c21bb78c891}{LSM6DSOX\_EMBEDDED\_FUNC\_BANK}});}
+\DoxyCodeLine{10041\ }
+\DoxyCodeLine{10042\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10043\ \ \ \{}
+\DoxyCodeLine{10044\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gad95219b47e1d5179dfbaef28f27826b9}{LSM6DSOX\_EMB\_FUNC\_ODR\_CFG\_C}},}
+\DoxyCodeLine{10045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10046\ \ \ \}}
+\DoxyCodeLine{10047\ }
+\DoxyCodeLine{10048\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10049\ \ \ \{}
+\DoxyCodeLine{10050\ \ \ \ \ \textcolor{keywordflow}{switch}\ (reg.\mbox{\hyperlink{structlsm6dsox__emb__func__odr__cfg__c__t_ac6cf439d77ffed6e06e622d1b5c61906}{mlc\_odr}})}
+\DoxyCodeLine{10051\ \ \ \ \ \{}
+\DoxyCodeLine{10052\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24a31344af51ec5199bc7c80ca7a1c4af15}{LSM6DSOX\_ODR\_PRGS\_12Hz5}}:}
+\DoxyCodeLine{10053\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24a31344af51ec5199bc7c80ca7a1c4af15}{LSM6DSOX\_ODR\_PRGS\_12Hz5}};}
+\DoxyCodeLine{10054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10055\ }
+\DoxyCodeLine{10056\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24ae6ea0caff4a4e93edee3c653f411eb7a}{LSM6DSOX\_ODR\_PRGS\_26Hz}}:}
+\DoxyCodeLine{10057\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24ae6ea0caff4a4e93edee3c653f411eb7a}{LSM6DSOX\_ODR\_PRGS\_26Hz}};}
+\DoxyCodeLine{10058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10059\ }
+\DoxyCodeLine{10060\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24ae1ea7090821091f4942959a8c6a722be}{LSM6DSOX\_ODR\_PRGS\_52Hz}}:}
+\DoxyCodeLine{10061\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24ae1ea7090821091f4942959a8c6a722be}{LSM6DSOX\_ODR\_PRGS\_52Hz}};}
+\DoxyCodeLine{10062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10063\ }
+\DoxyCodeLine{10064\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24a87ba13fded803096ca85c80230a3018c}{LSM6DSOX\_ODR\_PRGS\_104Hz}}:}
+\DoxyCodeLine{10065\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24a87ba13fded803096ca85c80230a3018c}{LSM6DSOX\_ODR\_PRGS\_104Hz}};}
+\DoxyCodeLine{10066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10067\ }
+\DoxyCodeLine{10068\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{10069\ \ \ \ \ \ \ \ \ *val\ =\ \mbox{\hyperlink{group__LSM6DSOX_ggab99c8554582eb02f969ee415dad9ef24a31344af51ec5199bc7c80ca7a1c4af15}{LSM6DSOX\_ODR\_PRGS\_12Hz5}};}
+\DoxyCodeLine{10070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{10071\ \ \ \ \ \}}
+\DoxyCodeLine{10072\ }
+\DoxyCodeLine{10073\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10074\ \ \ \}}
+\DoxyCodeLine{10075\ }
+\DoxyCodeLine{10076\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10077\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__Machine_gac7778f1c6c8ddc1ac40b9122ad762f9c}\label{group__Machine_gac7778f1c6c8ddc1ac40b9122ad762f9c} 
+\index{Learning Core@{Learning Core}!lsm6dsox\_mlc\_data\_rate\_set@{lsm6dsox\_mlc\_data\_rate\_set}}
+\index{lsm6dsox\_mlc\_data\_rate\_set@{lsm6dsox\_mlc\_data\_rate\_set}!Learning Core@{Learning Core}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_data\_rate\_set()}{lsm6dsox\_mlc\_data\_rate\_set()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+data\+\_\+rate\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{group__LSM6DSOX_gab99c8554582eb02f969ee415dad9ef24}{lsm6dsox\+\_\+mlc\+\_\+odr\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Machine Learning Core data rate selection.\mbox{[}set\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & get the values of mlc\+\_\+odr in reg EMB\+\_\+\+FUNC\+\_\+\+ODR\+\_\+\+CFG\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09996}{9996}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{09998\ \{}
+\DoxyCodeLine{09999\ \ \ \mbox{\hyperlink{structlsm6dsox__emb__func__odr__cfg__c__t}{lsm6dsox\_emb\_func\_odr\_cfg\_c\_t}}\ reg;}
+\DoxyCodeLine{10000\ \ \ int32\_t\ ret;}
+\DoxyCodeLine{10001\ }
+\DoxyCodeLine{10002\ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56ae2847a572de7062ce4a04c21bb78c891}{LSM6DSOX\_EMBEDDED\_FUNC\_BANK}});}
+\DoxyCodeLine{10003\ }
+\DoxyCodeLine{10004\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10005\ \ \ \{}
+\DoxyCodeLine{10006\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gad95219b47e1d5179dfbaef28f27826b9}{LSM6DSOX\_EMB\_FUNC\_ODR\_CFG\_C}},}
+\DoxyCodeLine{10007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10008\ \ \ \}}
+\DoxyCodeLine{10009\ }
+\DoxyCodeLine{10010\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10011\ \ \ \{}
+\DoxyCodeLine{10012\ \ \ \ \ reg.\mbox{\hyperlink{structlsm6dsox__emb__func__odr__cfg__c__t_ac6cf439d77ffed6e06e622d1b5c61906}{mlc\_odr}}\ =\ (uint8\_t)val;}
+\DoxyCodeLine{10013\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga285d22cfbac5b651c49011ff8dbc589d}{lsm6dsox\_write\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gad95219b47e1d5179dfbaef28f27826b9}{LSM6DSOX\_EMB\_FUNC\_ODR\_CFG\_C}},}
+\DoxyCodeLine{10014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\&reg,\ 1);}
+\DoxyCodeLine{10015\ \ \ \}}
+\DoxyCodeLine{10016\ }
+\DoxyCodeLine{10017\ \ \ \textcolor{keywordflow}{if}\ (ret\ ==\ 0)}
+\DoxyCodeLine{10018\ \ \ \{}
+\DoxyCodeLine{10019\ \ \ \ \ ret\ =\ \mbox{\hyperlink{group__LSM6DSOX__common_ga681d1e464885216321fd5bf76a34263a}{lsm6dsox\_mem\_bank\_set}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_gga2f33e8710fca0e1326aabd5112fe2b56a0419535ffa238aa377c881c34214cb2d}{LSM6DSOX\_USER\_BANK}});}
+\DoxyCodeLine{10020\ \ \ \}}
+\DoxyCodeLine{10021\ }
+\DoxyCodeLine{10022\ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{10023\ \}}
+
+\end{DoxyCode}
+\Hypertarget{group__Machine_ga80e4be472244a23ee0dedcaaccb794ff}\label{group__Machine_ga80e4be472244a23ee0dedcaaccb794ff} 
+\index{Learning Core@{Learning Core}!lsm6dsox\_mlc\_status\_get@{lsm6dsox\_mlc\_status\_get}}
+\index{lsm6dsox\_mlc\_status\_get@{lsm6dsox\_mlc\_status\_get}!Learning Core@{Learning Core}}
+\doxysubsubsection{\texorpdfstring{lsm6dsox\_mlc\_status\_get()}{lsm6dsox\_mlc\_status\_get()}}
+{\footnotesize\ttfamily int32\+\_\+t lsm6dsox\+\_\+mlc\+\_\+status\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{\mbox{\hyperlink{structlsm6dsox__mlc__status__mainpage__t}{lsm6dsox\+\_\+mlc\+\_\+status\+\_\+mainpage\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val }\end{DoxyParamCaption})}
+
+
+
+Machine Learning Core status register\mbox{[}get\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read / write interface definitions \\
+\hline
+{\em val} & register MLC\+\_\+\+STATUS\+\_\+\+MAINPAGE \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY\+: return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{lsm6dsox__reg_8c_source_l09980}{9980}} of file \mbox{\hyperlink{lsm6dsox__reg_8c_source}{lsm6dsox\+\_\+reg.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{09982\ \{}
+\DoxyCodeLine{09983\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__LSM6DSOX__Interfaces__Functions_ga1d8e7f0a210fe019591e4f1d91de65f2}{lsm6dsox\_read\_reg}}(ctx,\ \mbox{\hyperlink{group__LSM6DSOX_ga2484aa8ffa4b653f6390208e8487378d}{LSM6DSOX\_MLC\_STATUS\_MAINPAGE}},}
+\DoxyCodeLine{09984\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (uint8\_t\ *)\ val,\ 1);}
+\DoxyCodeLine{09985\ \}}
+
+\end{DoxyCode}

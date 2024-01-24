@@ -1,0 +1,270 @@
+\doxysection{stm32wlxx\+\_\+ll\+\_\+cortex.\+h}
+\hypertarget{stm32wlxx__ll__cortex_8h_source}{}\label{stm32wlxx__ll__cortex_8h_source}\index{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_cortex.h@{Drivers/STM32WLxx\_HAL\_Driver/Inc/stm32wlxx\_ll\_cortex.h}}
+\mbox{\hyperlink{stm32wlxx__ll__cortex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00035}00035\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00036}00036\ \textcolor{preprocessor}{\#ifndef\ \_\_STM32WLxx\_LL\_CORTEX\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00037}00037\ \textcolor{preprocessor}{\#define\ \_\_STM32WLxx\_LL\_CORTEX\_H}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00039}00039\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00040}00040\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00041}00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00043}00043\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00044}00044\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32wlxx_8h}{stm32wlxx.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00054}00054\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00055}00055\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00057}00057\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00059}00059\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00061}00061\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00062}00062\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00070}\mbox{\hyperlink{group__CORTEX__LL__EC__CLKSOURCE__HCLK_gab13c4588c1b1a8b867541a4ad928d205}{00070}}\ \textcolor{preprocessor}{\#define\ LL\_SYSTICK\_CLKSOURCE\_HCLK\_DIV8\ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00071}\mbox{\hyperlink{group__CORTEX__LL__EC__CLKSOURCE__HCLK_gaa92530d2f2cd8ce785297e4aed960ff0}{00071}}\ \textcolor{preprocessor}{\#define\ LL\_SYSTICK\_CLKSOURCE\_HCLK\ \ \ \ \ \ \ \ \ \ SysTick\_CTRL\_CLKSOURCE\_Msk\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00076}00076\ \textcolor{preprocessor}{\#if\ !defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00080}\mbox{\hyperlink{group__CORTEX__LL__EC__FAULT_gadbac946ab3d6ddf6e039f892f15777d9}{00080}}\ \textcolor{preprocessor}{\#define\ LL\_HANDLER\_FAULT\_USG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCB\_SHCSR\_USGFAULTENA\_Msk\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00081}\mbox{\hyperlink{group__CORTEX__LL__EC__FAULT_ga115d536ac8df55563b54b89397fdf465}{00081}}\ \textcolor{preprocessor}{\#define\ LL\_HANDLER\_FAULT\_BUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCB\_SHCSR\_BUSFAULTENA\_Msk\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00082}\mbox{\hyperlink{group__CORTEX__LL__EC__FAULT_ga6d126af175425807712344e17d75152b}{00082}}\ \textcolor{preprocessor}{\#define\ LL\_HANDLER\_FAULT\_MEM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SCB\_SHCSR\_MEMFAULTENA\_Msk\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00086}00086\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00088}00088\ \textcolor{preprocessor}{\#if\ \_\_MPU\_PRESENT}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00092}00092\ \textcolor{preprocessor}{\#define\ LL\_MPU\_CTRL\_HFNMI\_PRIVDEF\_NONE\ \ \ \ \ 0x00000000U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00093}00093\ \textcolor{preprocessor}{\#define\ LL\_MPU\_CTRL\_HARDFAULT\_NMI\ \ \ \ \ \ \ \ \ \ MPU\_CTRL\_HFNMIENA\_Msk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00094}00094\ \textcolor{preprocessor}{\#define\ LL\_MPU\_CTRL\_PRIVILEGED\_DEFAULT\ \ \ \ \ MPU\_CTRL\_PRIVDEFENA\_Msk\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00095}00095\ \textcolor{preprocessor}{\#define\ LL\_MPU\_CTRL\_HFNMI\_PRIVDEF\ \ \ \ \ \ \ \ \ \ (MPU\_CTRL\_HFNMIENA\_Msk\ |\ MPU\_CTRL\_PRIVDEFENA\_Msk)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00103}00103\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER0\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00104}00104\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER1\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00105}00105\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER2\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00106}00106\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER3\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x03U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00107}00107\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER4\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x04U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00108}00108\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER5\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x05U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00109}00109\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER6\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x06U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00110}00110\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NUMBER7\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x07U\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00118}00118\ \textcolor{preprocessor}{\#if\ defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00119}00119\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00120}00120\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_32B\ \ \ \ \ \ \ \ \ \ \ \ \ (0x04U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00121}00121\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_64B\ \ \ \ \ \ \ \ \ \ \ \ \ (0x05U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00122}00122\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_128B\ \ \ \ \ \ \ \ \ \ \ \ (0x06U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00123}00123\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00124}00124\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_256B\ \ \ \ \ \ \ \ \ \ \ \ (0x07U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00125}00125\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_512B\ \ \ \ \ \ \ \ \ \ \ \ (0x08U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00126}00126\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_1KB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x09U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00127}00127\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_2KB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x0AU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00128}00128\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_4KB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x0BU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00129}00129\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_8KB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x0CU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00130}00130\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_16KB\ \ \ \ \ \ \ \ \ \ \ \ (0x0DU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00131}00131\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_32KB\ \ \ \ \ \ \ \ \ \ \ \ (0x0EU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00132}00132\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_64KB\ \ \ \ \ \ \ \ \ \ \ \ (0x0FU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00133}00133\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_128KB\ \ \ \ \ \ \ \ \ \ \ (0x10U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00134}00134\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_256KB\ \ \ \ \ \ \ \ \ \ \ (0x11U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00135}00135\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_512KB\ \ \ \ \ \ \ \ \ \ \ (0x12U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00136}00136\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_1MB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x13U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00137}00137\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_2MB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x14U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00138}00138\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_4MB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x15U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00139}00139\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_8MB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x16U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00140}00140\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_16MB\ \ \ \ \ \ \ \ \ \ \ \ (0x17U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00141}00141\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_32MB\ \ \ \ \ \ \ \ \ \ \ \ (0x18U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00142}00142\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_64MB\ \ \ \ \ \ \ \ \ \ \ \ (0x19U\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00143}00143\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_128MB\ \ \ \ \ \ \ \ \ \ \ (0x1AU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00144}00144\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_256MB\ \ \ \ \ \ \ \ \ \ \ (0x1BU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00145}00145\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_512MB\ \ \ \ \ \ \ \ \ \ \ (0x1CU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00146}00146\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_1GB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x1DU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00147}00147\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_2GB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x1EU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00148}00148\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_SIZE\_4GB\ \ \ \ \ \ \ \ \ \ \ \ \ (0x1FU\ <<\ MPU\_RASR\_SIZE\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00156}00156\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_NO\_ACCESS\ \ \ \ \ \ \ \ \ \ \ \ (0x00U\ <<\ MPU\_RASR\_AP\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00157}00157\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_PRIV\_RW\ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x01U\ <<\ MPU\_RASR\_AP\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00158}00158\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_PRIV\_RW\_URO\ \ \ \ \ \ \ \ \ \ (0x02U\ <<\ MPU\_RASR\_AP\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00159}00159\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_FULL\_ACCESS\ \ \ \ \ \ \ \ \ \ (0x03U\ <<\ MPU\_RASR\_AP\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00160}00160\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_PRIV\_RO\ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x05U\ <<\ MPU\_RASR\_AP\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00161}00161\ \textcolor{preprocessor}{\#define\ LL\_MPU\_REGION\_PRIV\_RO\_URO\ \ \ \ \ \ \ \ \ \ (0x06U\ <<\ MPU\_RASR\_AP\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00169}00169\ \textcolor{preprocessor}{\#define\ LL\_MPU\_TEX\_LEVEL0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x00U\ <<\ MPU\_RASR\_TEX\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00170}00170\ \textcolor{preprocessor}{\#define\ LL\_MPU\_TEX\_LEVEL1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x01U\ <<\ MPU\_RASR\_TEX\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00171}00171\ \textcolor{preprocessor}{\#define\ LL\_MPU\_TEX\_LEVEL2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x02U\ <<\ MPU\_RASR\_TEX\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00172}00172\ \textcolor{preprocessor}{\#define\ LL\_MPU\_TEX\_LEVEL4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x04U\ <<\ MPU\_RASR\_TEX\_Pos)\ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00180}00180\ \textcolor{preprocessor}{\#define\ LL\_MPU\_INSTRUCTION\_ACCESS\_ENABLE\ \ \ 0x00U\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00181}00181\ \textcolor{preprocessor}{\#define\ LL\_MPU\_INSTRUCTION\_ACCESS\_DISABLE\ \ MPU\_RASR\_XN\_Msk\ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00189}00189\ \textcolor{preprocessor}{\#define\ LL\_MPU\_ACCESS\_SHAREABLE\ \ \ \ \ \ \ \ \ \ \ \ MPU\_RASR\_S\_Msk\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00190}00190\ \textcolor{preprocessor}{\#define\ LL\_MPU\_ACCESS\_NOT\_SHAREABLE\ \ \ \ \ \ \ \ 0x00U\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00198}00198\ \textcolor{preprocessor}{\#define\ LL\_MPU\_ACCESS\_CACHEABLE\ \ \ \ \ \ \ \ \ \ \ \ MPU\_RASR\_C\_Msk\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00199}00199\ \textcolor{preprocessor}{\#define\ LL\_MPU\_ACCESS\_NOT\_CACHEABLE\ \ \ \ \ \ \ \ 0x00U\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00207}00207\ \textcolor{preprocessor}{\#define\ LL\_MPU\_ACCESS\_BUFFERABLE\ \ \ \ \ \ \ \ \ \ \ MPU\_RASR\_B\_Msk\ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00208}00208\ \textcolor{preprocessor}{\#define\ LL\_MPU\_ACCESS\_NOT\_BUFFERABLE\ \ \ \ \ \ \ 0x00U\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00212}00212\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MPU\_PRESENT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00217}00217\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00219}00219\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00234}\mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_gaf5dfb37d859552753594f9cc66431ba6}{00234}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_gaf5dfb37d859552753594f9cc66431ba6}{LL\_SYSTICK\_IsActiveCounterFlag}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00235}00235\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00236}00236\ \ \ \textcolor{keywordflow}{return}\ (((\mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL\ \&\ \mbox{\hyperlink{group__CMSIS__CORE_ga1bf3033ecccf200f59baefe15dbb367c}{SysTick\_CTRL\_COUNTFLAG\_Msk}})\ ==\ (\mbox{\hyperlink{group__CMSIS__CORE_ga1bf3033ecccf200f59baefe15dbb367c}{SysTick\_CTRL\_COUNTFLAG\_Msk}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00237}00237\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00247}\mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_gaaf98ae8e0298b44c5d58a3ba9ef358f7}{00247}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_gaaf98ae8e0298b44c5d58a3ba9ef358f7}{LL\_SYSTICK\_SetClkSource}}(uint32\_t\ Source)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00248}00248\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00249}00249\ \ \ \textcolor{keywordflow}{if}\ (Source\ ==\ \mbox{\hyperlink{group__CORTEX__LL__EC__CLKSOURCE__HCLK_gaa92530d2f2cd8ce785297e4aed960ff0}{LL\_SYSTICK\_CLKSOURCE\_HCLK}})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00250}00250\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00251}00251\ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL,\ \mbox{\hyperlink{group__CORTEX__LL__EC__CLKSOURCE__HCLK_gaa92530d2f2cd8ce785297e4aed960ff0}{LL\_SYSTICK\_CLKSOURCE\_HCLK}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00252}00252\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00253}00253\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00254}00254\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00255}00255\ \ \ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL,\ \mbox{\hyperlink{group__CORTEX__LL__EC__CLKSOURCE__HCLK_gaa92530d2f2cd8ce785297e4aed960ff0}{LL\_SYSTICK\_CLKSOURCE\_HCLK}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00256}00256\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00257}00257\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00266}\mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_ga2cfeb1396db13a9fbc208cc659064b19}{00266}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_ga2cfeb1396db13a9fbc208cc659064b19}{LL\_SYSTICK\_GetClkSource}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00267}00267\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00268}00268\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL,\ \mbox{\hyperlink{group__CORTEX__LL__EC__CLKSOURCE__HCLK_gaa92530d2f2cd8ce785297e4aed960ff0}{LL\_SYSTICK\_CLKSOURCE\_HCLK}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00269}00269\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00276}\mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_ga770fac4394ddde9a53e1a236c81538f0}{00276}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_ga770fac4394ddde9a53e1a236c81538f0}{LL\_SYSTICK\_EnableIT}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00277}00277\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00278}00278\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL,\ \mbox{\hyperlink{group__CMSIS__CORE_ga95bb984266ca764024836a870238a027}{SysTick\_CTRL\_TICKINT\_Msk}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00279}00279\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00286}\mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_ga11d0d066050805c9e8d24718d8a15e4d}{00286}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_ga11d0d066050805c9e8d24718d8a15e4d}{LL\_SYSTICK\_DisableIT}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00287}00287\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00288}00288\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL,\ \mbox{\hyperlink{group__CMSIS__CORE_ga95bb984266ca764024836a870238a027}{SysTick\_CTRL\_TICKINT\_Msk}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00289}00289\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00296}\mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_gab34484042fd5a82aa80ba94223b6fbde}{00296}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__SYSTICK_gab34484042fd5a82aa80ba94223b6fbde}{LL\_SYSTICK\_IsEnabledIT}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00297}00297\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00298}00298\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL,\ \mbox{\hyperlink{group__CMSIS__CORE_ga95bb984266ca764024836a870238a027}{SysTick\_CTRL\_TICKINT\_Msk}})\ ==\ (\mbox{\hyperlink{group__CMSIS__CORE_ga95bb984266ca764024836a870238a027}{SysTick\_CTRL\_TICKINT\_Msk}}))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00299}00299\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00314}\mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gab55eabc37e5abe00df558c0ba1c37508}{00314}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gab55eabc37e5abe00df558c0ba1c37508}{LL\_LPM\_EnableSleep}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00315}00315\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00316}00316\ \ \ \textcolor{comment}{/*\ Clear\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00317}00317\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00318}00318\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00325}\mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_ga37d70238e98ca1214e3fe4113b119474}{00325}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_ga37d70238e98ca1214e3fe4113b119474}{LL\_LPM\_EnableDeepSleep}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00326}00326\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00327}00327\ \ \ \textcolor{comment}{/*\ Set\ SLEEPDEEP\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00328}00328\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga77c06a69c63f4b3f6ec1032e911e18e7}{SCB\_SCR\_SLEEPDEEP\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00329}00329\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00330}00330\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00338}\mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gabb2b2648dff19d88209af8761fc34c30}{00338}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gabb2b2648dff19d88209af8761fc34c30}{LL\_LPM\_EnableSleepOnExit}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00339}00339\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00340}00340\ \ \ \textcolor{comment}{/*\ Set\ SLEEPONEXIT\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00341}00341\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga50a243e317b9a70781b02758d45b05ee}{SCB\_SCR\_SLEEPONEXIT\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00342}00342\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00343}00343\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00349}\mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_ga88768c6c5f53de30a647123241451eb9}{00349}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_ga88768c6c5f53de30a647123241451eb9}{LL\_LPM\_DisableSleepOnExit}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00350}00350\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00351}00351\ \ \ \textcolor{comment}{/*\ Clear\ SLEEPONEXIT\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00352}00352\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_ga50a243e317b9a70781b02758d45b05ee}{SCB\_SCR\_SLEEPONEXIT\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00353}00353\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00354}00354\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00361}\mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gaf1c01ae00b4a13c5b6531f82a9677b90}{00361}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gaf1c01ae00b4a13c5b6531f82a9677b90}{LL\_LPM\_EnableEventOnPend}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00362}00362\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00363}00363\ \ \ \textcolor{comment}{/*\ Set\ SEVEONPEND\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00364}00364\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_gafb98656644a14342e467505f69a997c9}{SCB\_SCR\_SEVONPEND\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00365}00365\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00366}00366\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00373}\mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gaf4ebb8351f09676067aa0ce1fe08321b}{00373}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__LOW__POWER__MODE_gaf4ebb8351f09676067aa0ce1fe08321b}{LL\_LPM\_DisableEventOnPend}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00374}00374\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00375}00375\ \ \ \textcolor{comment}{/*\ Clear\ SEVEONPEND\ bit\ of\ Cortex\ System\ Control\ Register\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00376}00376\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SCR,\ ((uint32\_t)\mbox{\hyperlink{group__CMSIS__CORE_gafb98656644a14342e467505f69a997c9}{SCB\_SCR\_SEVONPEND\_Msk}}));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00377}00377\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00378}00378\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00383}00383\ \textcolor{preprocessor}{\#if\ !defined(CORE\_CM0PLUS)}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00397}\mbox{\hyperlink{group__CORTEX__LL__EF__HANDLER_ga904eb6ce46a723dd47b468241c6b0a2c}{00397}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__HANDLER_ga904eb6ce46a723dd47b468241c6b0a2c}{LL\_HANDLER\_EnableFault}}(uint32\_t\ Fault)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00398}00398\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00399}00399\ \ \ \textcolor{comment}{/*\ Enable\ the\ system\ handler\ fault\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00400}00400\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHCSR,\ Fault);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00401}00401\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00412}\mbox{\hyperlink{group__CORTEX__LL__EF__HANDLER_ga8b6826c996c587651a651a6138c44e1e}{00412}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__CORTEX__LL__EF__HANDLER_ga8b6826c996c587651a651a6138c44e1e}{LL\_HANDLER\_DisableFault}}(uint32\_t\ Fault)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00413}00413\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00414}00414\ \ \ \textcolor{comment}{/*\ Disable\ the\ system\ handler\ fault\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00415}00415\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHCSR,\ Fault);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00416}00416\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00417}00417\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00422}00422\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CORE\_CM0PLUS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00432}\mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga648a5236b7fa08786086fcc4ce42b4b9}{00432}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga648a5236b7fa08786086fcc4ce42b4b9}{LL\_CPUID\_GetImplementer}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00433}00433\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00434}00434\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_ga0932b31faafd47656a03ced75a31d99b}{SCB\_CPUID\_IMPLEMENTER\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga58686b88f94f789d4e6f429fe1ff58cf}{SCB\_CPUID\_IMPLEMENTER\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00435}00435\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00442}\mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga1f843da5f8524bace7fcf8dcce7996cb}{00442}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga1f843da5f8524bace7fcf8dcce7996cb}{LL\_CPUID\_GetVariant}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00443}00443\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00444}00444\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_gad358dfbd04300afc1824329d128b99e8}{SCB\_CPUID\_VARIANT\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga104462bd0815391b4044a70bd15d3a71}{SCB\_CPUID\_VARIANT\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00445}00445\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00446}00446\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00452}\mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_gadc6dc3055d2a192ac1218e09a1e8fd19}{00452}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_gadc6dc3055d2a192ac1218e09a1e8fd19}{LL\_CPUID\_GetArchitecture}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00453}00453\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00454}00454\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_gafae4a1f27a927338ae9dc51a0e146213}{SCB\_CPUID\_ARCHITECTURE\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_gaf8b3236b08fb8e840efb682645fb0e98}{SCB\_CPUID\_ARCHITECTURE\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00455}00455\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00456}00456\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00462}\mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_gac98fd56ad9162c3f372004bd07038bdb}{00462}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_gac98fd56ad9162c3f372004bd07038bdb}{LL\_CPUID\_GetParNo}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00463}00463\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00464}00464\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_ga98e581423ca016680c238c469aba546d}{SCB\_CPUID\_PARTNO\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga705f68eaa9afb042ca2407dc4e4629ac}{SCB\_CPUID\_PARTNO\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00465}00465\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00466}00466\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00472}\mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga7372821defd92c49ea4563da407acd01}{00472}}\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ \mbox{\hyperlink{group__CORTEX__LL__EF__MCU__INFO_ga7372821defd92c49ea4563da407acd01}{LL\_CPUID\_GetRevision}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00473}00473\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00474}00474\ \ \ \textcolor{keywordflow}{return}\ (uint32\_t)(\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group__CMSIS__CORE_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPUID,\ \mbox{\hyperlink{group__CMSIS__CORE_ga2ec0448b6483f77e7f5d08b4b81d85df}{SCB\_CPUID\_REVISION\_Msk}})\ >>\ \mbox{\hyperlink{group__CMSIS__CORE_ga3c3d9071e574de11fb27ba57034838b1}{SCB\_CPUID\_REVISION\_Pos}});}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00475}00475\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00476}00476\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00481}00481\ \textcolor{preprocessor}{\#if\ \_\_MPU\_PRESENT}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00496}00496\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_MPU\_Enable(uint32\_t\ Options)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00497}00497\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00498}00498\ \ \ \textcolor{comment}{/*\ Enable\ the\ MPU*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00499}00499\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(MPU-\/>CTRL,\ (MPU\_CTRL\_ENABLE\_Msk\ |\ Options));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00500}00500\ \ \ \textcolor{comment}{/*\ Ensure\ MPU\ settings\ take\ effects\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00501}00501\ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00502}00502\ \ \ \textcolor{comment}{/*\ Sequence\ instruction\ fetches\ using\ update\ settings\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00503}00503\ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00504}00504\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00505}00505\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00511}00511\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_MPU\_Disable(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00512}00512\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00513}00513\ \ \ \textcolor{comment}{/*\ Make\ sure\ outstanding\ transfers\ are\ done\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00514}00514\ \ \ \mbox{\hyperlink{group__CMSIS__Core__InstructionInterface_ga671101179b5943990785f36f8c1e2269}{\_\_DMB}}();}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00515}00515\ \ \ \textcolor{comment}{/*\ Disable\ MPU*/}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00516}00516\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(MPU-\/>CTRL,\ 0U);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00517}00517\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00518}00518\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00524}00524\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ uint32\_t\ LL\_MPU\_IsEnabled(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00525}00525\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00526}00526\ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{group__Exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(MPU-\/>CTRL,\ MPU\_CTRL\_ENABLE\_Msk)\ ==\ (MPU\_CTRL\_ENABLE\_Msk))\ ?\ 1UL\ :\ 0UL);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00527}00527\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00528}00528\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00543}00543\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_MPU\_EnableRegion(uint32\_t\ Region)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00544}00544\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00545}00545\ \ \ \textcolor{comment}{/*\ Set\ Region\ number\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00546}00546\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(MPU-\/>RNR,\ Region);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00547}00547\ \ \ \textcolor{comment}{/*\ Enable\ the\ MPU\ region\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00548}00548\ \ \ \mbox{\hyperlink{group__Exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(MPU-\/>RASR,\ MPU\_RASR\_ENABLE\_Msk);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00549}00549\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00550}00550\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00594}00594\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_MPU\_ConfigRegion(uint32\_t\ Region,\ uint32\_t\ SubRegionDisable,\ uint32\_t\ Address,}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00595}00595\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ Attributes)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00596}00596\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00597}00597\ \ \ \textcolor{comment}{/*\ Set\ Region\ number\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00598}00598\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(MPU-\/>RNR,\ Region);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00599}00599\ \ \ \textcolor{comment}{/*\ Set\ base\ address\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00600}00600\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(MPU-\/>RBAR,\ (Address\ \&\ 0xFFFFFFE0U));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00601}00601\ \ \ \textcolor{comment}{/*\ Configure\ MPU\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00602}00602\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(MPU-\/>RASR,\ (MPU\_RASR\_ENABLE\_Msk\ |\ Attributes\ |\ (SubRegionDisable\ <<\ MPU\_RASR\_SRD\_Pos)));}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00603}00603\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00604}00604\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00620}00620\ \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}}\ \textcolor{keywordtype}{void}\ LL\_MPU\_DisableRegion(uint32\_t\ Region)}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00621}00621\ \{}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00622}00622\ \ \ \textcolor{comment}{/*\ Set\ Region\ number\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00623}00623\ \ \ \mbox{\hyperlink{group__Exported__macros_ga32f78bffcaf6d13023dcd7f05e0c4d57}{WRITE\_REG}}(MPU-\/>RNR,\ Region);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00624}00624\ \ \ \textcolor{comment}{/*\ Disable\ the\ MPU\ region\ */}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00625}00625\ \ \ \mbox{\hyperlink{group__Exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(MPU-\/>RASR,\ MPU\_RASR\_ENABLE\_Msk);}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00626}00626\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00627}00627\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00632}00632\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MPU\_PRESENT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00645}00645\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00646}00646\ \}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00647}00647\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00648}00648\ }
+\DoxyCodeLine{\Hypertarget{stm32wlxx__ll__cortex_8h_source_l00649}00649\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_STM32WLxx\_LL\_CORTEX\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,61 @@
+\doxysubsubsubsection{DELAY}
+\hypertarget{group__UTILS__LL__EF__DELAY}{}\label{group__UTILS__LL__EF__DELAY}\index{DELAY@{DELAY}}
+\doxysubsubsubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga170d1d651b46544daf571fb6b4e3b850}{LL\+\_\+\+Init\+Tick}} (uint32\+\_\+t HCLKFrequency, uint32\+\_\+t Ticks)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source of the time base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4}{LL\+\_\+\+Init1ms\+Tick}} (uint32\+\_\+t HCLKFrequency)
+\item 
+void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga7b7ca6d9cbec320c3e9f326b203807aa}{LL\+\_\+m\+Delay}} (uint32\+\_\+t Delay)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+
+
+\doxysubsubsubsubsection{Function Documentation}
+\Hypertarget{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4}\label{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4} 
+\index{DELAY@{DELAY}!LL\_Init1msTick@{LL\_Init1msTick}}
+\index{LL\_Init1msTick@{LL\_Init1msTick}!DELAY@{DELAY}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_Init1msTick()}{LL\_Init1msTick()}}
+{\footnotesize\ttfamily void LL\+\_\+\+Init1ms\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{HCLKFrequency }\end{DoxyParamCaption})}
+
+\Hypertarget{group__UTILS__LL__EF__DELAY_ga170d1d651b46544daf571fb6b4e3b850}\label{group__UTILS__LL__EF__DELAY_ga170d1d651b46544daf571fb6b4e3b850} 
+\index{DELAY@{DELAY}!LL\_InitTick@{LL\_InitTick}}
+\index{LL\_InitTick@{LL\_InitTick}!DELAY@{DELAY}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_InitTick()}{LL\_InitTick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}} void LL\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{HCLKFrequency,  }\item[{uint32\+\_\+t}]{Ticks }\end{DoxyParamCaption})}
+
+
+
+This function configures the Cortex-\/M Sys\+Tick source of the time base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HCLKFrequency} & HCLK frequency in Hz (can be calculated thanks to RCC helper macro or function LL\+\_\+\+RCC\+\_\+\+Get\+System\+Clocks\+Freq (HCLK1\+\_\+\+Frequency field)) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When a RTOS is used, it is recommended to avoid changing the Sys\+Tick configuration by calling this function, for a delay use rather os\+Delay RTOS service. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Ticks} & Number of ticks \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32wlxx__ll__utils_8h_source_l00279}{279}} of file \mbox{\hyperlink{stm32wlxx__ll__utils_8h_source}{stm32wlxx\+\_\+ll\+\_\+utils.\+h}}.
+
+\Hypertarget{group__UTILS__LL__EF__DELAY_ga7b7ca6d9cbec320c3e9f326b203807aa}\label{group__UTILS__LL__EF__DELAY_ga7b7ca6d9cbec320c3e9f326b203807aa} 
+\index{DELAY@{DELAY}!LL\_mDelay@{LL\_mDelay}}
+\index{LL\_mDelay@{LL\_mDelay}!DELAY@{DELAY}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LL\_mDelay()}{LL\_mDelay()}}
+{\footnotesize\ttfamily void LL\+\_\+m\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+

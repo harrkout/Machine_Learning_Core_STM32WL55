@@ -1,0 +1,129 @@
+\doxysection{RTC\+\_\+\+Time\+Type\+Def Struct Reference}
+\hypertarget{structRTC__TimeTypeDef}{}\label{structRTC__TimeTypeDef}\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+
+
+RTC Time structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32wlxx\+\_\+hal\+\_\+rtc.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a836edba653a6aa73789d68e7bd2ee757}{Hours}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a37e1bd6f0ab1dcc18f95f8d0193cd26e}{Minutes}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a42120bdc40e6f49bb5b4dec78220c87b}{Seconds}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a7ca2cf99b14ee49dae5c787b2800f482}{Time\+Format}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a8059189ca602372f4759497c776c8fbb}{Sub\+Seconds}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a0a6d7b93d51459e83607fd65d86aa497}{Second\+Fraction}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a07a6bb22b53266f71c1b97b5e6aeb5e4}{Day\+Light\+Saving}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__TimeTypeDef_a26435214093d019db4d67a77a8ad99d1}{Store\+Operation}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RTC Time structure definition. 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00106}{106}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structRTC__TimeTypeDef_a07a6bb22b53266f71c1b97b5e6aeb5e4}\label{structRTC__TimeTypeDef_a07a6bb22b53266f71c1b97b5e6aeb5e4} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!DayLightSaving@{DayLightSaving}}
+\index{DayLightSaving@{DayLightSaving}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{DayLightSaving}{DayLightSaving}}
+{\footnotesize\ttfamily uint32\+\_\+t Day\+Light\+Saving}
+
+This interface is deprecated. To manage Daylight Saving Time, please use HAL\+\_\+\+RTC\+\_\+\+DST\+\_\+xxx functions 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00134}{134}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__TimeTypeDef_a836edba653a6aa73789d68e7bd2ee757}\label{structRTC__TimeTypeDef_a836edba653a6aa73789d68e7bd2ee757} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!Hours@{Hours}}
+\index{Hours@{Hours}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{Hours}{Hours}}
+{\footnotesize\ttfamily uint8\+\_\+t Hours}
+
+Specifies the RTC Time Hour. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 12 if the RTC\+\_\+\+Hour\+Format\+\_\+12 is selected. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 23 if the RTC\+\_\+\+Hour\+Format\+\_\+24 is selected 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00108}{108}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__TimeTypeDef_a37e1bd6f0ab1dcc18f95f8d0193cd26e}\label{structRTC__TimeTypeDef_a37e1bd6f0ab1dcc18f95f8d0193cd26e} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!Minutes@{Minutes}}
+\index{Minutes@{Minutes}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{Minutes}{Minutes}}
+{\footnotesize\ttfamily uint8\+\_\+t Minutes}
+
+Specifies the RTC Time Minutes. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 59 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00112}{112}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__TimeTypeDef_a0a6d7b93d51459e83607fd65d86aa497}\label{structRTC__TimeTypeDef_a0a6d7b93d51459e83607fd65d86aa497} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!SecondFraction@{SecondFraction}}
+\index{SecondFraction@{SecondFraction}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{SecondFraction}{SecondFraction}}
+{\footnotesize\ttfamily uint32\+\_\+t Second\+Fraction}
+
+Specifies the range or granularity of Sub Second register content corresponding to Synchronous pre-\/scaler factor value (PREDIV\+\_\+S) This parameter corresponds to a time unit range between \mbox{[}0-\/1\mbox{]} Second with \mbox{[}1 Sec / Second\+Fraction +1\mbox{]} granularity. This field will be used only by HAL\+\_\+\+RTC\+\_\+\+Get\+Time function 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00128}{128}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__TimeTypeDef_a42120bdc40e6f49bb5b4dec78220c87b}\label{structRTC__TimeTypeDef_a42120bdc40e6f49bb5b4dec78220c87b} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!Seconds@{Seconds}}
+\index{Seconds@{Seconds}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{Seconds}{Seconds}}
+{\footnotesize\ttfamily uint8\+\_\+t Seconds}
+
+Specifies the RTC Time Seconds. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 59 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00115}{115}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__TimeTypeDef_a26435214093d019db4d67a77a8ad99d1}\label{structRTC__TimeTypeDef_a26435214093d019db4d67a77a8ad99d1} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!StoreOperation@{StoreOperation}}
+\index{StoreOperation@{StoreOperation}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{StoreOperation}{StoreOperation}}
+{\footnotesize\ttfamily uint32\+\_\+t Store\+Operation}
+
+This interface is deprecated. To manage Daylight Saving Time, please use HAL\+\_\+\+RTC\+\_\+\+DST\+\_\+xxx functions 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00136}{136}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__TimeTypeDef_a8059189ca602372f4759497c776c8fbb}\label{structRTC__TimeTypeDef_a8059189ca602372f4759497c776c8fbb} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!SubSeconds@{SubSeconds}}
+\index{SubSeconds@{SubSeconds}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{SubSeconds}{SubSeconds}}
+{\footnotesize\ttfamily uint32\+\_\+t Sub\+Seconds}
+
+Specifies the RTC\+\_\+\+SSR RTC Sub Second register content. This field is not used by HAL\+\_\+\+RTC\+\_\+\+Set\+Time. If the free running 32 bit counter is not activated (mode binary none)
+\begin{DoxyItemize}
+\item This parameter corresponds to a time unit range between \mbox{[}0-\/1\mbox{]} Second with \mbox{[}1 Sec / Second\+Fraction +1\mbox{]} granularity else
+\item This parameter corresponds to the free running 32 bit counter. 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00121}{121}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+\Hypertarget{structRTC__TimeTypeDef_a7ca2cf99b14ee49dae5c787b2800f482}\label{structRTC__TimeTypeDef_a7ca2cf99b14ee49dae5c787b2800f482} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!TimeFormat@{TimeFormat}}
+\index{TimeFormat@{TimeFormat}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{\texorpdfstring{TimeFormat}{TimeFormat}}
+{\footnotesize\ttfamily uint8\+\_\+t Time\+Format}
+
+Specifies the RTC AM/\+PM Time. This parameter can be a value of \doxylink{group__RTC__AM__PM__Definitions}{RTC AM PM Definitions} 
+
+Definition at line \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source_l00118}{118}} of file \mbox{\hyperlink{stm32wlxx__hal__rtc_8h_source}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+WLxx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32wlxx__hal__rtc_8h}{stm32wlxx\+\_\+hal\+\_\+rtc.\+h}}\end{DoxyCompactItemize}

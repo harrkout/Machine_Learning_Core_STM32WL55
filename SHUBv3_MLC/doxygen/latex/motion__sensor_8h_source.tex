@@ -1,0 +1,44 @@
+\doxysection{motion\+\_\+sensor.\+h}
+\hypertarget{motion__sensor_8h_source}{}\label{motion__sensor_8h_source}\index{Drivers/BSP/Components/Common/motion\_sensor.h@{Drivers/BSP/Components/Common/motion\_sensor.h}}
+\mbox{\hyperlink{motion__sensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00020}00020\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00021}00021\ \textcolor{preprocessor}{\#ifndef\ MOTION\_SENSOR\_H}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00022}00022\ \textcolor{preprocessor}{\#define\ MOTION\_SENSOR\_H}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00024}00024\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00025}00025\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00026}00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00028}00028\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00054}\mbox{\hyperlink{structMOTION__SENSOR__CommonDrv__t}{00054}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00056}\mbox{\hyperlink{structMOTION__SENSOR__CommonDrv__t_a2dd3f8c4202dca1df768042cc0e64399}{00056}}\ \ \ int32\_t\ (*Init)(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00057}\mbox{\hyperlink{structMOTION__SENSOR__CommonDrv__t_ae54fe76f104286cad4480359ff8955d7}{00057}}\ \ \ int32\_t\ (*DeInit)(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00058}\mbox{\hyperlink{structMOTION__SENSOR__CommonDrv__t_ad81b0a29fb16406892ebdfaf25b3cc1b}{00058}}\ \ \ int32\_t\ (*ReadID)(\textcolor{keywordtype}{void}\ *,\ uint8\_t\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00059}\mbox{\hyperlink{structMOTION__SENSOR__CommonDrv__t_a939c7db9dabee57a13240b71953051d0}{00059}}\ \ \ int32\_t\ (*GetCapabilities)(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00060}00060\ \}\ \mbox{\hyperlink{structMOTION__SENSOR__CommonDrv__t}{MOTION\_SENSOR\_CommonDrv\_t}};}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00062}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t}{00062}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00063}00063\ \{}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00064}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_ad384019d8003f87d992acfac2bdb3735}{00064}}\ \ \ int32\_t\ (*Enable)(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00065}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_add7387680315e22d48e86ae31c73510e}{00065}}\ \ \ int32\_t\ (*Disable)(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00066}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_a9e57cab8ee34a9398f7145eb1cb23064}{00066}}\ \ \ int32\_t\ (*GetSensitivity)(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{float}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00067}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_aa72fbaa357732dfdea3f709c202c9d2d}{00067}}\ \ \ int32\_t\ (*GetOutputDataRate)(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{float}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00068}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_aec0f81a5b518c843641c025ce4ae9a45}{00068}}\ \ \ int32\_t\ (*SetOutputDataRate)(\textcolor{keywordtype}{void}\ *,\ float);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00069}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_aac8245731b90a6849a8598687c6cc18f}{00069}}\ \ \ int32\_t\ (*GetFullScale)(\textcolor{keywordtype}{void}\ *,\ int32\_t\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00070}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_a691ec5170d5a13a293f13a1982e92c44}{00070}}\ \ \ int32\_t\ (*SetFullScale)(\textcolor{keywordtype}{void}\ *,\ int32\_t);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00071}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_a4ce8d653cbff60aca3e2c71eb52a616e}{00071}}\ \ \ int32\_t\ (*GetAxes)(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00072}\mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t_ac05b11d73d5e45c26316173cf8221ea7}{00072}}\ \ \ int32\_t\ (*GetAxesRaw)(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00073}00073\ \}\ \mbox{\hyperlink{structMOTION__SENSOR__FuncDrv__t}{MOTION\_SENSOR\_FuncDrv\_t}};}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00095}00095\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00097}00097\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{motion__sensor_8h_source_l00099}00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MOTION\_SENSOR\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
